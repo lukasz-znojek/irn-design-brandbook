@@ -41,7 +41,8 @@ Do wyceny konkretnej oferty **wymagana jest karta parametrów właściwego opera
 - Podstawa: Wytyczne dotyczące realizacji projektów z udziałem środków Europejskiego Funduszu Społecznego Plus w programach regionalnych na lata 2021-2027 (wersja z lipca 2025, obowiązuje od 30.06.2025) — rozdział o PSF nie określa parametrów finansowych, odsyła do instytucji zarządzającej programem regionalnym.
 - Decyzja o przyznaniu dofinansowania i jego poziomie należy do operatora regionalnego — komunikacja zewnętrzna nie powinna sugerować gwarancji dofinansowania.
 - Wybór usługi z BUR jest warunkiem koniecznym, niezależnie od regionu.
-- TODO: wymaga potwierdzenia — czy i które regiony wymagają dodatkowego wpisu/akredytacji dostawcy usługi poza samym wpisem do BUR.
+- **Dostawca usługi musi mieć aktywny profil „Dostawcy Usług" w BUR** (konto dostawcy + akceptacja regulaminu — ten sam wymóg, co opisany w `./bur.md`, sekcja „Warunek wpisu do BUR"). To nie jest wymóg specyficzny dla PSF: usługa nie może zostać opublikowana w BUR bez zarejestrowanego za nią dostawcy, więc skoro PSF wymaga usługi z BUR, wymaga też pośrednio dostawcy z BUR. Wpis jest warunkiem **koniecznym, ale niewystarczającym** — możliwość finansowania w konkretnym naborze zależy dodatkowo od kryteriów projektowych i regulaminu operatora regionalnego.
+- TODO: wymaga potwierdzenia — czy poszczególni operatorzy PSF nakładają na dostawcę dodatkowe kryteria ponad bazowy wpis do BUR (np. akredytację regionalną, wpis na listę uznanych realizatorów). Regionalne dokumenty „Zasady udzielania wsparcia" mogą to regulować, ale nie były dostępne do bezpośredniego odczytu w tej sesji — dostęp do domen `parp.gov.pl` i do regionalnych plików PDF był zablokowany przez proxy sesji, w której powstał ten zapis.
 
 ## Powiązane dokumenty
 
@@ -63,9 +64,11 @@ W większości regionów operator to podmiot wybrany w konkursie (agencja rozwoj
 ## Źródła (publiczne lub sanitized)
 
 - Wytyczne dotyczące realizacji projektów z udziałem środków EFS+ w programach regionalnych: https://www.gov.pl/web/fundusze-regiony/wytyczne-na-lata-2021-2027
+- Regulamin Bazy Usług Rozwojowych, Załącznik nr 4 „Zasady funkcjonowania Dostawców usług": https://www.parp.gov.pl/storage/site/files/1319/Za.-4--Zasady-funkcjonowania-Dostawcw-usug.pdf — podstawa wymogu profilu dostawcy w BUR; treść niezweryfikowana bezpośrednim odczytem (dostęp do domeny zablokowany w sesji, w której powstał ten zapis), ustalenie oparte na syntezie wyników wyszukiwania.
+- „Dostawca usług w BUR: definicja, odpowiedzialność i zasady działania" — Scheelite: https://scheelite.eu/dostawca-uslug-bur-definicja/ (źródło wtórne, potwierdza: wpis do BUR jest warunkiem koniecznym, ale niewystarczającym do świadczenia usług współfinansowanych).
 - `01-baza-wiedzy/prawo/kontekst-psf-sanitized.md` (materiał źródłowy sanitized, ten sam katalog).
 
 ## Notatka o niepewności
 
-- Podstawa prawna wpisu dostawcy do BUR jako warunku udziału w PSF (analogicznego do wymogu w KFS) — **TODO: wymaga potwierdzenia**, w wytycznych EFS+ nie znaleziono wprost takiego przepisu dla PSF; obowiązek wyboru usługi z BUR jest potwierdzony, obowiązek wpisu dostawcy — nie.
+- Podstawa ogólnego wymogu wpisu dostawcy do BUR jest ustalona (Regulamin BUR i jego Załącznik nr 4 — patrz Źródła) i nie jest specyficzna dla PSF, tylko wynika z mechaniki samego BUR. **Nadal TODO: wymaga potwierdzenia** — czy konkretni operatorzy PSF nakładają dodatkowe kryteria na dostawcę ponad ten bazowy wpis; brak dostępu do regionalnych dokumentów „Zasady udzielania wsparcia" w tej sesji nie pozwolił tego sprawdzić.
 - Aktualność listy operatorów PSF w serwisie BUR — data w nazwie pliku źródłowego jest niepotwierdzona (nie występuje w treści dokumentu); każdy konkretny operator wymaga weryfikacji przy pierwszym kontakcie.
