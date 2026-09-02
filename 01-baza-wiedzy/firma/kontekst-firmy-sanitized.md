@@ -6,9 +6,11 @@
 
 Nazwa prawna: **Instytut Rozwoju i Nauki sp. z o.o.**, marka IRIN.
 
-Dane rejestrowe (jawne w Krajowym Rejestrze Sądowym, publikowane też na dokumentach firmowych): KRS 0001032499 · NIP 9592061542 · REGON 525113640 · ul. Karola Olszewskiego 6, 25-663 Kielce · biuro@irin.pl · +48 453 049 912 · www.irin.pl.
+Dane rejestrowe (jawne w Krajowym Rejestrze Sądowym): KRS 0001032499 · NIP 9592061542 · REGON 525113640 · ul. Karola Olszewskiego 6, 25-663 Kielce.
 
-Te dane trafiają do stopki dokumentu wydawanego uczestnikowi szkolenia i do danych dostawcy w karcie usługi. Numer wpisu do rejestru podmiotów świadczących usługi rozwojowe (BUR) nie jest tu podawany — każdy dokument, który go wymaga, powinien odczytać go z aktualnego profilu dostawcy w BUR, nie wpisywać z pamięci ani z tego pliku.
+Te dane trafiają do stopki dokumentu wydawanego uczestnikowi szkolenia i do danych dostawcy w karcie usługi — bo tego wymaga jednoznaczna identyfikacja realizatora na dokumencie formalnym (patrz `../prawo/kfs.md`, `../prawo/bur.md`). Numer wpisu do rejestru podmiotów świadczących usługi rozwojowe (BUR) nie jest tu podawany — każdy dokument, który go wymaga, powinien odczytać go z aktualnego profilu dostawcy w BUR, nie wpisywać z pamięci ani z tego pliku.
+
+**Zasada minimalizacji:** ten plik publikuje wyłącznie dane jawne (KRS) i niezbędne do formalnej identyfikacji dostawcy na dokumencie. Dane kontaktowe o charakterze operacyjnym (adres e-mail, numer telefonu, adres strony) nie są tu powielane — nie są potrzebne do identyfikacji dostawcy na dokumencie formalnym, a ich miejsce jest w materiałach, których to dotyczy (np. papier firmowy, wizytówka), nie w karcie kontekstu firmy.
 
 ## Trzy linie biznesowe
 
@@ -56,4 +58,4 @@ Usunięto lub uogólniono:
 - **identyfikatory systemowe** — odwołania do konkretnych plików wewnętrznego systemu/skilla (ścieżki takie jak `wymogi-bur.md`, `../assets/`), którego nie ma w tym repozytorium,
 - **nazwę własną mechanizmu lojalnościowego** — zastąpiono opisem ogólnym („program lojalnościowy / bonowy”), bez nazwy handlowej.
 
-Zachowano jako dane jawne: numer KRS, NIP, REGON, adres siedziby, e-mail i telefon biura — są to dane rejestrowe publikowane w Krajowym Rejestrze Sądowym i standardowo umieszczane na dokumentach firmowych (fakturach, umowach), więc ich obecność w publicznym repozytorium nie stanowi ujawnienia tajemnicy handlowej. **Do potwierdzenia przez foundera**, jeśli te dane mają jednak nie trafiać do publicznego repo.
+Zastosowano dodatkowo zasadę minimalizacji (2026-09-02): usunięto adres e-mail, numer telefonu i adres strony biura — to dane kontaktowe o charakterze operacyjnym, niepotrzebne do jednoznacznej identyfikacji dostawcy na dokumencie formalnym (jedynej funkcji, jaką ten plik przypisuje danym rejestrowym). Pozostawiono wyłącznie KRS, NIP, REGON i adres siedziby: są to dane jawne w Krajowym Rejestrze Sądowym i niezbędne do identyfikacji realizatora, którą wprost wymagają `../prawo/kfs.md` i `../prawo/bur.md`. Ich obecność w publicznym repozytorium nie stanowi ujawnienia tajemnicy handlowej.
