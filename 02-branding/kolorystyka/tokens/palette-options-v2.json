@@ -1,7 +1,7 @@
 {
   "schemat": "irin-palette-options",
   "wersja": "v2",
-  "status": "propozycja do wyboru - żaden wariant nie jest zatwierdzony",
+  "status": "ROZSTRZYGNIĘTE 2026-09-02 - wybrany wariant W2 (Kaszmir Wyciszony); pozostałe sześć zachowane jako zapis porównania",
   "data": "2026-09-02",
   "typografia": {
     "zrodlo": "brandbook.dc.html - sekcja 04 Typografia; niezmieniana w tej propozycji",
@@ -1944,5 +1944,8 @@
       ],
       "falsyfikator": "Ten wniosek obala decyzja, że portal sprzedaży szkoleń dostaje własną, jawnie oddzieloną paletę produktową - wtedy „rozdwojenie marki” jest zamierzone, a nie ryzykowne."
     }
-  }
+  },
+  "wybrany": "W2",
+  "specyfikacja-wybranego": "03-pakiet-claude-design/format-paczki.md",
+  "tokeny-wybranego": "02-branding/kolorystyka/tokens/palette-irin.json"
 }

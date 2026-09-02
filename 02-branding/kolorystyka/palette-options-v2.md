@@ -1,6 +1,12 @@
 # Paleta barw IRIN - 7 wariantów do wyboru (v2)
 
-**Status: PROPOZYCJA. Żaden z siedmiu wariantów nie jest zatwierdzony.** Ten dokument nie zmienia ani nie unieważnia niczego, co zostało rozstrzygnięte wcześniej - paleta zatwierdzona 2026-09-02 i wpisana do `../../03-pakiet-claude-design/format-paczki.md` obowiązuje do chwili, w której founder wskaże numer wariantu z tej listy. Historia poprzedniej decyzji zostaje nienaruszona w `../../03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
+**Status: ROZSTRZYGNIĘTE (2026-09-02). Founder wybrał wariant 2 - Kaszmir Wyciszony.**
+
+Obowiązująca specyfikacja wybranego wariantu: [`../../03-pakiet-claude-design/format-paczki.md`](../../03-pakiet-claude-design/format-paczki.md). Dane maszynowe wybranej palety: [`tokens/palette-irin.json`](./tokens/palette-irin.json).
+
+Pozostałe sześć wariantów **zostaje w tym dokumencie w całości** - to zapis tego, co zostało zmierzone i odrzucone, a więc materiał na wypadek powrotu do decyzji. Nic tu nie zostało usunięte ani przepisane po wyborze; zmieniła się wyłącznie ta ramka statusu i notatka pod rekomendacją.
+
+**Uwaga wdrożeniowa:** wybrany wariant został w `format-paczki.md` zmapowany na nazwany system 14 kolorów (Kaszmir, Aksamit, Miedź, Onyks...) i na regułę 80/15/5, żeby trzy akcenty dziedzinowe nie zniknęły - 15 tokenów semantycznych z tego dokumentu to ta sama paleta widziana od strony roli w dokumencie, nie osobny zestaw kolorów. Ten dokument nie zmienia ani nie unieważnia niczego, co zostało rozstrzygnięte wcześniej - paleta zatwierdzona 2026-09-02 i wpisana do `../../03-pakiet-claude-design/format-paczki.md` obowiązuje do chwili, w której founder wskaże numer wariantu z tej listy. Historia poprzedniej decyzji zostaje nienaruszona w `../../03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
 
 Podgląd wszystkich siedmiu wariantów na identycznym układzie demonstracyjnym: [`palette-preview-v2.md`](./palette-preview-v2.md) (opis) oraz [`palette-preview-v2.dc.html`](./palette-preview-v2.dc.html) (wersja renderowana, z realną typografią).
 
@@ -796,7 +802,7 @@ Powód jest w pomiarach, nie w guście. Wariant zatwierdzony 2026-09-02 ma trzy 
 
 **Rekomendacja dodatkowa, niezależna od wyboru numeru:** wariant 6 warto przyjąć nie jako paletę główną, tylko jako **obowiązkowy tryb mono** obok wybranego wariantu - dla zaświadczeń KFS i certyfikatów, które realnie bywają kserowane i skanowane. To nie konkuruje z wyborem 1-7, tylko go uzupełnia.
 
-**Żaden z wariantów nie zostaje wpisany jako obowiązujący, dopóki founder nie wskaże numeru.**
+**Rozstrzygnięcie (2026-09-02): founder wybrał wariant 2.** Rekomendacja została przyjęta. Wariant 2 jest wpisany jako obowiązujący w `../../03-pakiet-claude-design/format-paczki.md`; otwarte pozostają trzy sprawy poboczne: czy wariant 6 wchodzi jako obowiązkowy tryb mono, czy katalog `02-branding/` zostaje pod tym numerem, i czy poziom H3 zostaje na wadze 600.
 
 ---
 

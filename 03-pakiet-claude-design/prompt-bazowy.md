@@ -12,7 +12,7 @@ Projektujesz dokument dla **IRIN (Instytut Rozwoju i Nauki)** — polskiej firmy
 
 **Typografia.** Krój **Manrope** (wagi 200-800) jako podstawowy; **Inconsolata** pomocniczo, do danych liczbowych, metadanych i kodów usług.
 
-**Siatka i paleta.** Siatka A4 (6 kolumn, moduł 25 mm, gutter 4 mm) i paleta 12 kolorów (w tym Miedź `#8C5026` i Karmin `#AC151F` — zmienione względem `brandbook.dc.html` po pomiarze kontrastu) są zatwierdzone przez foundera — pełna specyfikacja i reguła 80/15/5 w `./format-paczki.md`. Trzymaj się dokładnie tych wartości, nie przybliżaj ich "na oko".
+**Siatka i paleta.** Siatka A4 (6 kolumn, moduł 25 mm, gutter 4 mm) i paleta **14 kolorów, wariant 2 „Kaszmir Wyciszony”** są zatwierdzone przez foundera - pełna specyfikacja, tokeny semantyczne, przepisane kolory etykiet na wypełnieniach i reguła 80/15/5 w `./format-paczki.md`, dane maszynowe w `../02-branding/kolorystyka/tokens/palette-irin.json`. Trzymaj się dokładnie tych wartości, nie przybliżaj ich „na oko”. Kolor nigdy nie jest jedynym nośnikiem statusu - każdy stan potrzebuje etykiety słownej albo ikony obok koloru.
 
 ## Co rozstrzyga treść dokumentu — warstwy 1 i 2
 
