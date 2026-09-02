@@ -10,3 +10,4 @@ Obowiązujące przepisy i regulacje, którym podlegają dokumenty IRIN: Krajowy 
 - [`psf.md`](psf.md) — karta produktu PSF, wg `../_szablony/karta-produktu.md`.
 - [`kontekst-kfs-sanitized.md`](kontekst-kfs-sanitized.md) — materiał źródłowy uzupełniający `kfs.md` o priorytety 2026, limity roczne wg wielkości firmy i checklistę załączników wniosku.
 - [`kontekst-psf-sanitized.md`](kontekst-psf-sanitized.md) — materiał źródłowy, na którym oparta jest `psf.md`.
+- [`weryfikacja-u-zrodla.md`](weryfikacja-u-zrodla.md) - osiem dokumentów pierwotnych do dostarczenia (Regulamin BUR z załącznikami, rozporządzenie i ustawa o KFS, regulaminy PUP i operatora PSF, Księga FE), z zapisem, które zdanie w którym pliku zmieni każdy odczyt.

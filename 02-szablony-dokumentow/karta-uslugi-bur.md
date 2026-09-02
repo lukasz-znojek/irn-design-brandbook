@@ -8,7 +8,7 @@ Materiał prezentujący jedną konkretną usługę szkoleniową zarejestrowaną 
 
 ## Elementy prawnie obowiązkowe
 
-Wynikają z `/01-baza-wiedzy/prawo/bur.md` — z zastrzeżeniem, że część z nich ma tam status "do potwierdzenia bezpośrednim odczytem regulaminu BUR" (dostęp do domen PARP był zablokowany w sesji, w której powstał ten plik):
+Wynikają z `/01-baza-wiedzy/prawo/bur.md` — z zastrzeżeniem, że część z nich ma tam status "do potwierdzenia bezpośrednim odczytem regulaminu BUR" (dostęp do domen PARP był zablokowany; lista dokumentów do dostarczenia: `/01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`, pozycje 1 i 3):
 
 1. **Kod usługi BUR** — unikalny numer nadany usłudze przez system przy publikacji, musi być widoczny na dokumencie i zgodny z rzeczywistym wpisem. Format zaobserwowany w `brandbook.dc.html` (`2025/00817/PPUR`) jest niepotwierdzony — nie zakładać tej struktury jako reguły, wstawiać rzeczywisty kod usługi wygenerowany przez system BUR.
 2. **Tytuł i opis usługi** — zgodne z opublikowaną Kartą Usługi.
@@ -20,7 +20,7 @@ Wynikają z `/01-baza-wiedzy/prawo/bur.md` — z zastrzeżeniem, że część z 
 
 ## Konwencja organizacyjna IRIN
 
-- Przypisanie usługi do jednej z dziedzin działalności szkoleniowej IRIN (np. Pedagogika, Akademia AI — obserwacja z `brandbook.dc.html`, **[do potwierdzenia przez foundera]**, patrz też `./viewbook.md`).
+- Przypisanie usługi do jednej z trzech dziedzin IRIN: Pedagogika, Akademia AI, Pożyczki UE/BGK. Same dziedziny i ich kolory są zatwierdzone (`/01-baza-wiedzy/identyfikacja/paleta-barw.md`, reguła jednego koloru dziedzinowego na dokument), więc karta usługi zawsze niesie dokładnie jedną dziedzinę. **Otwarte do pierwszego zlecenia:** czy przypisanie ma być także wypisane słownie na karcie, czy wystarczy kolor plus nazwa usługi (obserwacja z `brandbook.dc.html`, patrz też `./viewbook.md`); rozstrzyga founder przy pierwszym zleceniu.
 - Informacja o powiązaniu z KFS, jeśli usługa kwalifikuje się też do tej ścieżki dofinansowania (patrz `/01-baza-wiedzy/prawo/kfs.md`) — to nie jest pole systemu BUR, tylko dodatkowa informacja, którą IRIN może chcieć umieścić dla klienta.
 - Informacja o kwalifikowalności do PSF (Podmiotowy System Finansowania), jeśli usługa jest dostępna w regionie klienta u właściwego operatora (patrz `/01-baza-wiedzy/prawo/psf.md`) — podobnie jak przy KFS, to dodatkowa informacja dla klienta, nie pole systemu BUR. Poziom dofinansowania i limity PSF są regionalne, więc karta nie powinna podawać ich jako liczby stałej — patrz karta produktu PSF.
 

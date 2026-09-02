@@ -29,6 +29,7 @@ Zatwierdzone specyfikacje identyfikacji wizualnej: wartości, nie kompozycja.
 - [`prawo/psf.md`](./prawo/psf.md) — Podmiotowy System Finansowania (PSF): brak parametrów krajowych, wszystko ustala regulamin operatora regionalnego.
 - [`prawo/kontekst-kfs-sanitized.md`](./prawo/kontekst-kfs-sanitized.md) — materiał źródłowy uzupełniający `kfs.md`: priorytety wydatkowania 2026, limity roczne wg wielkości firmy, checklista załączników wniosku.
 - [`prawo/kontekst-psf-sanitized.md`](./prawo/kontekst-psf-sanitized.md) — materiał źródłowy, na którym oparta jest `psf.md`.
+- [`prawo/weryfikacja-u-zrodla.md`](./prawo/weryfikacja-u-zrodla.md) - lista ośmiu dokumentów pierwotnych do dostarczenia przez foundera albo do odczytu po odblokowaniu domen PARP i Dziennika Ustaw; przy każdym: co odczytać i które zdanie się zmieni.
 
 ## uslugi/
 

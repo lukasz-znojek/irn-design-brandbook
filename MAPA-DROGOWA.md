@@ -64,7 +64,7 @@ Dwie pozycje wymagane przez art. 206 KSH, których repozytorium nie zawiera (ozn
 
 ### Grupa III - weryfikacja prawna u źródła pierwotnego
 
-Wszystkie ustalenia prawne w warstwie 1 pochodzą ze źródeł wtórnych, bo w sesjach, w których powstały, dostęp do domen PARP i Dziennika Ustaw był zablokowany. Każda pozycja ma wpisany falsyfikator; zamknięcie oznacza odczyt dokumentu i wpisanie wyniku.
+Wszystkie ustalenia prawne w warstwie 1 pochodzą ze źródeł wtórnych, bo w sesjach, w których powstały, dostęp do domen PARP i Dziennika Ustaw był zablokowany. Każda pozycja ma wpisany falsyfikator; zamknięcie oznacza odczyt dokumentu i wpisanie wyniku. **Lista do dostarczenia, z adresami i sposobem przekazania: `01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`** (gotowa 2026-09-02). Tabela niżej to skrót.
 
 | Co sprawdzić | Dokument źródłowy | Który plik czeka |
 |---|---|---|
@@ -93,12 +93,12 @@ flowchart TD
     S0["Etap 0 - higiena - ZROBIONE<br/>4 zdania poprawione, PLAN 17-23,<br/>PR #4 scalony, PR #6 zamknięty"]
     S1["Etap 1 - decyzje foundera - ZROBIONE<br/>3 blokujące pilota podjęte,<br/>6 odłożonych do pierwszego użycia"]
     S2["Etap 2 - weryfikacja prawna<br/>BUR zał. 2 i 12, kod usługi,<br/>KFS z Dz.U., operatorzy PSF"]
-    S3["Etap 3 - domknięcie kart warstwy 2<br/>każde „do potwierdzenia” zamienione<br/>na decyzję albo status niesprawdzone"]
-    S4["Etap 4 - pilot w Claude Design<br/>papier firmowy i wizytówka:<br/>paczka, prompt, wynik, wnioski do warstwy 1"]
+    S3["Etap 3 - karty warstwy 2 - ZROBIONE<br/>zero znaczników, 4 pozycje<br/>otwarte do pierwszego zlecenia"]
+    S4["Etap 4 - pilot w Claude Design<br/>paczka i zlecenie GOTOWE,<br/>founder wypełnia 5 pól i prowadzi w Claude Design"]
     S5["Etap 5 - zamknięcie<br/>PLAN.md domknięty, README ze stanem,<br/>tag v1.0, procedura domknięcia okna"]
 
     G1{"Bramka A<br/>brak „do potwierdzenia”<br/>w kartach warstwy 2"}
-    G2{"Bramka B<br/>4 falsyfikatory identyfikacji<br/>sprawdzone na realnym dokumencie"}
+    G2{"Bramka B<br/>protokół pomiaru pilota wpisany<br/>do warstwy 1"}
 
     S0 --> S1
     S0 --> S2
@@ -127,8 +127,8 @@ Etapy 1 i 2 były niezależne; etap 1 jest zamknięty. Etap 2 wymaga dostępu do
 | 0 - higiena | Claude Code | **Spełnione 2026-09-02:** `grep` po czterech nieaktualnych zdaniach zwraca zero trafień; `PLAN.md` ma zadania 17-23; na GitHubie nie ma otwartego PR poza #9. Poza bramką zostało ręczne usunięcie gałęzi. |
 | 1 - decyzje foundera | Founder, Claude Code wpisuje | **Spełnione 2026-09-02:** trzy decyzje blokujące pilota wpisane do `PLAN.md` w sekcji „rozstrzygnięte”; sprzeczność o siedzibę i formę prawną ma jedną wersję w trzech plikach. |
 | 2 - weryfikacja prawna | Claude Code przy dostępie do PARP i Dz.U., inaczej founder dostarcza dokumenty | Każde z siedmiu ustaleń ma wpisane: odczytane u źródła albo status niesprawdzone z nazwanym powodem. Zero pozycji „do potwierdzenia przy dostępie do PARP”. |
-| 3 - karty warstwy 2 | Claude Code | `grep -i "do potwierdzenia przez foundera" 02-szablony-dokumentow/` zwraca zero trafień; pozycje odłożone mają status „otwarte do pierwszego użycia” z nazwą dokumentu. |
-| 4 - pilot | Founder w Claude Design, Claude Code buduje paczkę i spisuje wnioski | Cztery falsyfikatory z warstwy 1 (polskie znaki na 500 i 600, Karmin obok Aksamitu, siatka 25 mm z treścią, H3 obok leadu) mają wpisany wynik pomiaru w swoich plikach. |
+| 3 - karty warstwy 2 | Claude Code | **Spełnione 2026-09-02:** `grep -i "do potwierdzenia przez foundera" 02-szablony-dokumentow/` zwraca zero trafień; cztery pozycje mają status „otwarte do pierwszego zlecenia” z nazwą dokumentu. Zastrzeżenia o niepobranych załącznikach BUR zostają do etapu 2. |
+| 4 - pilot | Founder w Claude Design, Claude Code buduje paczkę i spisuje wnioski | Paczka gotowa (`03-pakiet-claude-design/zlecenia/pilot-papier-firmowy.md`). Bramka: pięć pomiarów z protokołu (polskie znaki na wagach 400-600, siatka 25 mm z treścią, H3 obok leadu, sygnet na rewersie, dokument bez koloru dziedzinowego) ma wpisany wynik w plikach warstwy 1. **Korekta wobec pierwszej wersji tej mapy:** kontrastu Karminu obok Aksamitu ten pilot nie sprawdzi, bo papier firmowy nie ma stanu błędu; ten falsyfikator przechodzi na pierwszy dokument ze statusami (certyfikat albo karta usługi BUR) i nie blokuje bramki B. |
 | 5 - zamknięcie | Claude Code, founder zatwierdza | `PLAN.md` bez pozycji otwartych, `README.md` podaje stan „gotowe do użycia” z datą, tag `v1.0` na `main`. |
 
 ## Dlaczego pilotem jest papier firmowy, a nie certyfikat
