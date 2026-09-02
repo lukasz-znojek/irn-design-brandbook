@@ -5,7 +5,11 @@
   "status": "ZATWIERDZONA - wariant 2 wybrany przez foundera",
   "data-wyboru": "2026-09-02",
   "zrodlo-wyboru": "_robocze/paleta-v2/palette-options-v2.md (wariant 2 z siedmiu; archiwum)",
-  "specyfikacja-obowiazujaca": "01-baza-wiedzy/identyfikacja/paleta-barw.md",
+  "specyfikacja-obowiazujaca": {
+    "kolor": "01-baza-wiedzy/identyfikacja/paleta-barw.md",
+    "siatka": "01-baza-wiedzy/identyfikacja/siatka-a4.md",
+    "typografia": "01-baza-wiedzy/identyfikacja/typografia.md"
+  },
   "typografia": {
     "rodzina-podstawowa": "Manrope",
     "wagi": [
@@ -93,7 +97,10 @@
       170,
       251
     ],
-    "zmieniona": false
+    "zmieniona": false,
+    "pole-tresci-sprawdzone": "6x25 + 5x4 = 170 mm = 210 - 18 - 22; dopasowanie dokładne",
+    "jednostka-odstepu-mm": 6,
+    "jednostka-odstepu-uwaga": "Jednostka odstępu, nie siatka linii bazowych tekstu. Interlinia korpusu to 5,54 mm (13,5 px x 1,55), czyli nie jest wielokrotnością 6 mm - rozjazd 0,46 mm na linię, 19 mm na pełnej kolumnie. Wymierzaj nią odstępy między blokami, nie linie tekstu. Rozstrzygnięte 2026-09-02."
   },
   "metodologia-kontrastu": "WCAG 2.1, luminancja względna sRGB. Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 3:1. Każda para w tej palecie przechodzi próg.",
   "tokeny": {

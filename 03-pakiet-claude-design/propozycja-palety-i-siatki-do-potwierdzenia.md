@@ -2,7 +2,7 @@
 
 > **Aktualizacja 2026-09-02 (późniejsza tego samego dnia): paleta z tego dokumentu została wstrzymana i zastąpiona.**
 > Founder wstrzymał automatyczne przyjęcie palety opisanej niżej, uznając, że wymaga dopracowania. Powstało siedem wariantów do wyboru (`../_robocze/paleta-v2/palette-options-v2.md`), z których **wybrany został wariant 2 „Kaszmir Wyciszony”** - i to on jest teraz obowiązującą specyfikacją w `./format-paczki.md`.
-> Ten dokument **zostaje w całości i bez zmian** jako zapis pierwszej decyzji: pomiaru siatki A4, wykrytego błędu wymiarów, pogłębienia Miedzi i zmiany Karminu. Siatka A4 uzgodniona tutaj (6 kolumn, moduł 25 mm) **obowiązuje nadal** - wstrzymanie dotyczyło wyłącznie palety barw.
+> Ten dokument **zostaje w całości i bez zmian** jako zapis pierwszej decyzji: pomiaru siatki A4, wykrytego błędu wymiarów, pogłębienia Miedzi i zmiany Karminu. Siatka A4 uzgodniona tutaj (6 kolumn, moduł 25 mm) **obowiązuje nadal** - wstrzymanie dotyczyło wyłącznie palety barw. Jej obowiązująca specyfikacja jest od 2026-09-02 w `../01-baza-wiedzy/identyfikacja/siatka-a4.md`.
 > Czego wariant 2 nie unieważnia: metodologii pomiaru, wniosku o błędzie wymiarów siatki, ani zasady, że przy każdej zmianie palety kontrast liczy się na nowo, a nie kopiuje starych liczb.
 
 **Status: ZATWIERDZONE w całości przez foundera (2026-09-02)** — siatka A4 (Opcja 1) i paleta barw (Miedź pogłębiona, Karmin zmieniony na wyrazistą karmazynową czerwień). Obie specyfikacje są już wpisane jako obowiązujące w `./format-paczki.md`. Ten plik zostaje jako zapis pomiaru i uzasadnienia decyzji — nie jest już "do potwierdzenia".
@@ -53,7 +53,7 @@ Miedź w nowym odcieniu można używać jako kolor tekstu normalnego, nie tylko 
 
 ## Siatka A4 — ZATWIERDZONA (Opcja 1)
 
-**Founder wybrał Opcję 1, zgodnie z rekomendacją niżej.** Obowiązująca siatka A4: 6 kolumn, moduł 25 mm, gutter 4 mm, marginesy 18 mm góra / 18 mm lewy / 22 mm prawy / 28 mm dół — treść 170 × 251 mm. Wpisana jako obowiązująca specyfikacja w `./format-paczki.md`. Historia decyzji i uzasadnienie pomiaru — niżej, bez zmian.
+**Founder wybrał Opcję 1, zgodnie z rekomendacją niżej.** Obowiązująca siatka A4 (specyfikacja: `../01-baza-wiedzy/identyfikacja/siatka-a4.md`): 6 kolumn, moduł 25 mm, gutter 4 mm, marginesy 18 mm góra / 18 mm lewy / 22 mm prawy / 28 mm dół — treść 170 × 251 mm. Obowiązująca specyfikacja: `../01-baza-wiedzy/identyfikacja/siatka-a4.md`. Historia decyzji i uzasadnienie pomiaru — niżej, bez zmian.
 
 ### Błąd w wymiarach, który doprowadził do tej decyzji
 

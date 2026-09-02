@@ -4,7 +4,7 @@
 
 Dane maszynowe: [`tokeny/palette-irin.json`](./tokeny/palette-irin.json).
 Jak paleta wchodzi do zlecenia dla Claude Design: [`../../03-pakiet-claude-design/format-paczki.md`](../../03-pakiet-claude-design/format-paczki.md).
-Siatka A4 i skala typograficzna: tamże - ten plik opisuje wyłącznie kolor.
+Siatka A4: [`siatka-a4.md`](./siatka-a4.md). Typografia: [`typografia.md`](./typografia.md). Ten plik opisuje wyłącznie kolor.
 Porównanie siedmiu wariantów, pomiar i uzasadnienie wyboru (archiwum, nie źródło prawdy): [`../../_robocze/paleta-v2/palette-options-v2.md`](../../_robocze/paleta-v2/palette-options-v2.md).
 Historia pierwszej decyzji z 2026-09-02, zastąpionej tą: [`../../03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`](../../03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md).
 
