@@ -1,5 +1,10 @@
 # Propozycja dopracowanej palety i siatki A4
 
+> **Aktualizacja 2026-09-02 (późniejsza tego samego dnia): paleta z tego dokumentu została wstrzymana i zastąpiona.**
+> Founder wstrzymał automatyczne przyjęcie palety opisanej niżej, uznając, że wymaga dopracowania. Powstało siedem wariantów do wyboru (`../_robocze/paleta-v2/palette-options-v2.md`), z których **wybrany został wariant 2 „Kaszmir Wyciszony”** - i to on jest teraz obowiązującą specyfikacją w `./format-paczki.md`.
+> Ten dokument **zostaje w całości i bez zmian** jako zapis pierwszej decyzji: pomiaru siatki A4, wykrytego błędu wymiarów, pogłębienia Miedzi i zmiany Karminu. Siatka A4 uzgodniona tutaj (6 kolumn, moduł 25 mm) **obowiązuje nadal** - wstrzymanie dotyczyło wyłącznie palety barw.
+> Czego wariant 2 nie unieważnia: metodologii pomiaru, wniosku o błędzie wymiarów siatki, ani zasady, że przy każdej zmianie palety kontrast liczy się na nowo, a nie kopiuje starych liczb.
+
 **Status: ZATWIERDZONE w całości przez foundera (2026-09-02)** — siatka A4 (Opcja 1) i paleta barw (Miedź pogłębiona, Karmin zmieniony na wyrazistą karmazynową czerwień). Obie specyfikacje są już wpisane jako obowiązujące w `./format-paczki.md`. Ten plik zostaje jako zapis pomiaru i uzasadnienia decyzji — nie jest już "do potwierdzenia".
 
 ## Punkt wyjścia

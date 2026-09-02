@@ -36,3 +36,13 @@ To jest **wstępne canvas foundera** — punkt inspiracji i dowód zamierzonego 
 - Przestrzeń ochronna logotypu opisana jako "x = wysokość liter sygnetu" — jednostka względna, nie stała miara. Minimalna szerokość podana w pliku: 18 mm / 90 px.
 - Przykładowe zastosowania pokazane w pliku: okładka viewbooka, karta usługi BUR, dwie wersje certyfikatu (kolumnowa, pieczęć), papier firmowy, wizytówka.
 - **Rozbieżność do potwierdzenia z founderem**: 12-barwna paleta i moduły siatki w pliku to jego robocza propozycja, a nie coś zmierzonego z geometrii logotypu — każda z tych wartości musi zostać przez niego świadomie zatwierdzona, zanim stanie się obowiązującą specyfikacją w `01-baza-wiedzy/`.
+
+## Paleta barw - stan obowiązujący
+
+Wartości hex wypisane wyżej opisują **plik `brandbook.dc.html`**, a nie obowiązującą paletę - to zapis tego, co jest w kanwie foundera, i pozostaje prawdziwy jako opis tego pliku.
+
+Obowiązująca paleta to **14 kolorów, wariant 2 „Kaszmir Wyciszony”**, wybrany przez foundera spośród siedmiu wariantów. Jedyne źródło prawdy: `01-baza-wiedzy/identyfikacja/paleta-barw.md`. Jak paleta wchodzi do zlecenia dla Claude Design: `03-pakiet-claude-design/format-paczki.md`. Dane maszynowe: `01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json`. Porównanie siedmiu wariantów i uzasadnienie wyboru (archiwum): `_robocze/paleta-v2/palette-options-v2.md`. Historia pierwszej decyzji: `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
+
+Rozbieżność opisana w punkcie wyżej jest **rozstrzygnięta**: paleta i siatka przeszły pomiar i świadomą decyzję foundera. Zapis zostaje jako historia, nie jako otwarta sprawa.
+
+Dwie zasady, które muszą przetrwać każdą przyszłą zmianę palety: kontrast liczy się na nowo wzorem WCAG 2.1, nigdy nie kopiuje się starych liczb; kolor nigdy nie jest jedynym nośnikiem statusu - każdy stan potrzebuje etykiety słownej albo ikony obok koloru.

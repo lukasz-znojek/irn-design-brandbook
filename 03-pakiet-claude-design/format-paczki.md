@@ -2,34 +2,23 @@
 
 Ten plik definiuje, co powinna zawierać paczka wejściowa przekazywana do Claude Design dla dowolnego dokumentu IRIN. Sama kompozycja, layout i grafika powstają w Claude Design — ten plik tylko określa, jakie materiały i informacje muszą się tam znaleźć, żeby to było możliwe.
 
-## Paleta i siatka — zatwierdzone przez foundera (2026-09-02)
-
-Pełny pomiar, uzasadnienie i historia decyzji: `./propozycja-palety-i-siatki-do-potwierdzenia.md`.
+## Siatka i paleta - zatwierdzone przez foundera
 
 ### Siatka dokumentu A4
 
-6 kolumn, moduł 25 mm, gutter 4 mm. Marginesy: 18 mm góra, 18 mm lewy, 22 mm prawy, 28 mm dół. Treść: 170 × 251 mm. Zastępuje wersję z `brandbook.dc.html` (moduł 32 mm), która nie mieściła się fizycznie na stronie A4.
+6 kolumn, moduł 25 mm, gutter 4 mm. Marginesy: 18 mm góra, 18 mm lewy, 22 mm prawy, 28 mm dół. Treść: 170 × 251 mm. Zastępuje wersję z `brandbook.dc.html` (moduł 32 mm), która nie mieściła się fizycznie na stronie A4. **Bez zmian względem decyzji z 2026-09-02.**
 
-### Paleta — 12 kolorów
+### Paleta barw
 
-Dwa kolory zostały zmienione względem `brandbook.dc.html` po pomiarze kontrastu WCAG — **Miedź** i **Karmin** niżej mają nowy hex, wszystkie pozostałe kolory są bez zmian względem canvasu.
+**Pełna specyfikacja jest w warstwie 1: [`../01-baza-wiedzy/identyfikacja/paleta-barw.md`](../01-baza-wiedzy/identyfikacja/paleta-barw.md).** Tam są wszystkie 14 kolorów z hexami, tokenami semantycznymi, zmierzonymi kontrastami i przepisanymi kolorami etykiet na wypełnieniach. Dane maszynowe: [`../01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json`](../01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json). Ten plik świadomie jej nie powtarza - jedna paleta ma jedno miejsce, żeby nie dało się rozjechać dwóch kopii.
 
-| Kolor | Hex | Rola | Kontrast na Kaszmir |
-|---|---|---|---|
-| Kaszmir | `#F2ECE1` | papier / tło karty | — |
-| Espresso | `#1E1611` | tusz uniwersalny / tekst korpusu | 15,16:1 |
-| Złoto foliowe | `#B58540` | pieczęć, sygnatura — nigdy tekst ani tło większej powierzchni | nie dotyczy |
-| Aksamit | `#4A1D26` | akcent dziedziny: Pedagogika | 11,95:1 |
-| **Miedź** | **`#8C5026`** | akcent dziedziny: Akademia AI | 5,42:1 |
-| Onyks | `#1B2B26` | akcent dziedziny: Pożyczki UE/BGK | 12,58:1 |
-| Pergamin | `#E4DACB` | drugi neutral (tło) | — |
-| Sepia | `#5B4837` | tekst pomocniczy | 7,36:1 |
-| **Karmin** | **`#AC151F`** | link, stan aktywny | 6,17:1 |
-| Muślin | `#F7F3EA` | tło strony | — |
-| Werdykt | `#2F4A32` | stan potwierdzony (tło, z tekstem Kaszmir) | 8,32:1 (tekst) |
-| Rubryka | `#D9AC4A` | marker w CMYK (tło, z tekstem Espresso) | 6,38:1 (tekst) |
+Trzy zasady, które **muszą** trafić do każdego zlecenia dla Claude Design razem z paletą, bo bez nich sama lista hexów jest niekompletna:
 
-**Reguła proporcji 80/15/5:** 80% powierzchni dokumentu — Kaszmir/Muślin/Pergamin (tła) i Espresso/Sepia (tekst); 15% — dokładnie jeden kolor dziedziny (Aksamit / Miedź / Onyks) na dokument, nigdy dwa naraz; 5% — Karmin wyłącznie do linków/stanów aktywnych, Werdykt do stanu potwierdzonego, Rubryka jako marker, Złoto foliowe wyłącznie jako pieczęć/sygnatura.
+1. **Jeden kolor dziedziny na dokument.** Aksamit (Pedagogika), Miedź (Akademia AI) albo Onyks (Pożyczki UE/BGK) - nigdy dwa naraz. To warstwa 15% reguły 80/15/5.
+2. **Kolor etykiety na wypełnieniu nie jest wyborem projektowym.** Na każdym kolorze, który bywa tłem przycisku albo plakietki, kolor napisu jest przepisany w tabeli w warstwie 1. Nie dobieraj go „na oko”.
+3. **Kolor nigdy nie jest jedynym nośnikiem statusu.** Każdy stan potrzebuje etykiety słownej albo ikony obok koloru. Po konwersji do skali szarości Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność, a osobny tryb monochromatyczny został odrzucony - więc to jest jedyne zabezpieczenie czytelności, nie jedno z dwóch.
+
+Trzymaj się dokładnie wartości z warstwy 1, nie przybliżaj ich.
 
 ## Elementy paczki, potwierdzone i gotowe do użycia
 
@@ -44,7 +33,24 @@ Zasady **potwierdzone jako obowiązujące** (`/PLAN.md`, "Decyzje foundera — r
 
 ### 2. Typografia
 
-Krój: **Manrope**, wagi 200-800; pomocniczo **Inconsolata** (np. do danych liczbowych, metadanych, kodów usług). Źródło: `brandbook.dc.html` — nie jest na liście rozbieżności wymagających potwierdzenia w `/CLAUDE.md` (w przeciwieństwie do palety i siatki), więc traktowany tu jako przyjęty kierunek, nie tylko inspiracja. Oba kroje są darmowe i dostępne przez Google Fonts.
+Krój: **Manrope**, wagi 200-800; pomocniczo **Inconsolata** (dane liczbowe, metadane, kody usług). Oba kroje są darmowe i dostępne przez Google Fonts. Źródło skali: `brandbook.dc.html`, sekcja 04.
+
+Hierarchię buduje **waga jednego kroju**, nie zmiana rodziny - to zasada systemu, nie szczegół. Obowiązująca skala:
+
+| Poziom | Krój | Waga | Stopień | Interlinia | Tracking |
+|---|---|---|---|---|---|
+| Display (okładka) | Manrope | 200 | 72 px | 0,92 | -0,03em |
+| H1 - rozdział | Manrope | 300 | 40 px | 1,0 | -0,02em |
+| H2 - sekcja | Manrope | 600 | 24 px | 1,1 | -0,01em |
+| **H3 - podsekcja** | Manrope | 600 | 16 px | 1,3 | 0 |
+| Lead akapitu | Manrope | 500 | 16 px | 1,4 | 0 |
+| Korpus | Manrope | 400 | 13,5 px | 1,55 | 0 |
+| Przypis, metadane | Manrope | 400 | 10 px | 1,5 | 0 |
+| Kicker - drogowskaz sekcji | Manrope | 700 | 14 px | 1,2 | 0,22em, wersaliki |
+| Liczba prowadząca | Manrope | 800 | 52 px | 0,95 | -0,02em |
+| Dane techniczne, kody usług | Inconsolata | 300-700 | 10,5 px | 1,5 | 0 |
+
+**H3 - zatwierdzony przez foundera (2026-09-02).** Kanwa nie definiowała tego poziomu; H3 to stopień leadu (16 px) z wagą podniesioną do 600. Ruch zgodny z własną logiką systemu - różnicuje wagą, nie wprowadza nowego stopnia do skali. Odróżnia się od leadu wyłącznie wagą, więc H3 i lead nigdy nie powinny stać bezpośrednio obok siebie.
 
 ### 3. Treść merytoryczna — z warstwy 1 i 2
 

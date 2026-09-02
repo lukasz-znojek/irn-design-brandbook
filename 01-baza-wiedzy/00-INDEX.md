@@ -7,6 +7,12 @@ Szablony do pisania kart tej warstwy, nie dokumentów wydawanych na zewnątrz.
 
 - [`karta-produktu.md`](_szablony/karta-produktu.md) — szablon karty pojedynczego produktu/kanału finansowania albo wsparcia.
 
+## identyfikacja/
+Zatwierdzone specyfikacje identyfikacji wizualnej: wartości, nie kompozycja.
+
+- [`identyfikacja/paleta-barw.md`](./identyfikacja/paleta-barw.md) - obowiązująca paleta „Kaszmir Wyciszony”: 14 kolorów z nazwami i tokenami semantycznymi, zmierzone kontrasty WCAG, reguła 80/15/5, przypisanie trzech dziedzin.
+- [`identyfikacja/tokeny/palette-irin.json`](./identyfikacja/tokeny/palette-irin.json) - te same dane maszynowo, wraz ze skalą typograficzną i siatką A4.
+
 ## firma/
 
 - [`firma/kontekst-firmy.md`](./firma/kontekst-firmy.md) — pełna nazwa IRIN, trzy linie biznesowe i planowany portal szkoleń; model organizacyjny i historia firmy oznaczone jako brak danych, do potwierdzenia przez foundera.

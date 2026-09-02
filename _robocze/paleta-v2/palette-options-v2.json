@@ -1,0 +1,1951 @@
+{
+  "schemat": "irin-palette-options",
+  "wersja": "v2",
+  "status": "ROZSTRZYGNIĘTE 2026-09-02 - wybrany wariant W2 (Kaszmir Wyciszony); pozostałe sześć zachowane jako zapis porównania; ten plik jest archiwum w _robocze/, nie źródłem prawdy",
+  "data": "2026-09-02",
+  "typografia": {
+    "zrodlo": "brandbook.dc.html - sekcja 04 Typografia; niezmieniana w tej propozycji",
+    "rodzina-podstawowa": "Manrope",
+    "rodzina-pomocnicza": "Inconsolata",
+    "wagi": [
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800
+    ],
+    "skala": {
+      "display": {
+        "waga": 200,
+        "rozmiar-px": 72,
+        "interlinia": 0.92,
+        "tracking": "-0.03em"
+      },
+      "h1": {
+        "waga": 300,
+        "rozmiar-px": 40,
+        "interlinia": 1.0,
+        "tracking": "-0.02em"
+      },
+      "h2": {
+        "waga": 600,
+        "rozmiar-px": 24,
+        "interlinia": 1.1,
+        "tracking": "-0.01em"
+      },
+      "h3": {
+        "waga": 600,
+        "rozmiar-px": 16,
+        "interlinia": 1.3,
+        "tracking": "0em",
+        "uwaga": "wyprowadzone ze stopnia lead 16 px / waga 500 z kanwy przez podniesienie wagi do 600; kanwa nie definiuje H3 wprost"
+      },
+      "lead": {
+        "waga": 500,
+        "rozmiar-px": 16,
+        "interlinia": 1.4
+      },
+      "body": {
+        "waga": 400,
+        "rozmiar-px": 13.5,
+        "interlinia": 1.55
+      },
+      "footnote": {
+        "waga": 400,
+        "rozmiar-px": 10,
+        "interlinia": 1.5
+      },
+      "kicker": {
+        "waga": 700,
+        "rozmiar-px": 14,
+        "tracking": "0.22em",
+        "transform": "uppercase"
+      },
+      "numeral": {
+        "waga": 800,
+        "rozmiar-px": 52,
+        "interlinia": 0.95,
+        "tracking": "-0.02em"
+      },
+      "mono": {
+        "rodzina": "Inconsolata",
+        "rozmiar-px": 10.5,
+        "zastosowanie": "metadane, kody usług, dane liczbowe"
+      }
+    }
+  },
+  "metodologia-kontrastu": "WCAG 2.1, luminancja względna sRGB, wzór (L_jasniejszy+0,05)/(L_ciemniejszy+0,05). Wszystkie wartości policzone skryptem w sesji, żadna nie przepisana z innego dokumentu. Progi: tekst normalny AA 4,5:1, tekst normalny AAA 7:1, tekst duży AA 3:1, element interfejsu i grafika znacząca 3:1.",
+  "nazwy-tokenow": [
+    "primary",
+    "secondary",
+    "accent",
+    "neutral-dark",
+    "neutral-light",
+    "success",
+    "warning",
+    "error",
+    "info",
+    "background",
+    "surface",
+    "border",
+    "text-primary",
+    "text-secondary",
+    "link"
+  ],
+  "rekomendacja": "W2",
+  "warianty": {
+    "W1": {
+      "numer": 1,
+      "id": "W1",
+      "nazwa": "Kaszmir Aksamit (bazowy)",
+      "kierunek": "Zatwierdzona 12-barwna paleta „Colorbook Kaszmir Aksamit” przemapowana bez zmiany odcieni na 15 tokenów semantycznych. Nie jest propozycją zmiany - jest punktem odniesienia, wobec którego mierzy się sześć pozostałych wariantów.",
+      "tokeny": {
+        "primary": "#4A1D26",
+        "secondary": "#8C5026",
+        "accent": "#B58540",
+        "neutral-dark": "#1E1611",
+        "neutral-light": "#E4DACB",
+        "success": "#2F4A32",
+        "warning": "#D9AC4A",
+        "error": "#AC151F",
+        "info": "#1B2B26",
+        "background": "#F7F3EA",
+        "surface": "#F2ECE1",
+        "border": "#1E1611",
+        "text-primary": "#1E1611",
+        "text-secondary": "#5B4837",
+        "link": "#AC151F"
+      },
+      "etykieta-na-wypelnieniu": {
+        "primary": {
+          "token": "neutral-light",
+          "hex": "#E4DACB",
+          "kontrast": 10.16
+        },
+        "secondary": {
+          "token": "neutral-light",
+          "hex": "#E4DACB",
+          "kontrast": 4.62
+        },
+        "accent": {
+          "token": "neutral-dark",
+          "hex": "#1E1611",
+          "kontrast": 5.43
+        },
+        "success": {
+          "token": "neutral-light",
+          "hex": "#E4DACB",
+          "kontrast": 7.08
+        },
+        "warning": {
+          "token": "neutral-dark",
+          "hex": "#1E1611",
+          "kontrast": 8.45
+        },
+        "error": {
+          "token": "neutral-light",
+          "hex": "#E4DACB",
+          "kontrast": 5.27
+        },
+        "info": {
+          "token": "neutral-light",
+          "hex": "#E4DACB",
+          "kontrast": 10.7
+        }
+      },
+      "kontrasty": [
+        {
+          "para": "text-primary na background",
+          "fg": "#1E1611",
+          "bg": "#F7F3EA",
+          "kontrast": 16.1,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na surface",
+          "fg": "#1E1611",
+          "bg": "#F2ECE1",
+          "kontrast": 15.16,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na background",
+          "fg": "#5B4837",
+          "bg": "#F7F3EA",
+          "kontrast": 7.81,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na surface",
+          "fg": "#5B4837",
+          "bg": "#F2ECE1",
+          "kontrast": 7.36,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary (H1/H2) na surface",
+          "fg": "#4A1D26",
+          "bg": "#F2ECE1",
+          "kontrast": 11.95,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "secondary (H3) na surface",
+          "fg": "#8C5026",
+          "bg": "#F2ECE1",
+          "kontrast": 5.43,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na surface",
+          "fg": "#AC151F",
+          "bg": "#F2ECE1",
+          "kontrast": 6.2,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na background",
+          "fg": "#AC151F",
+          "bg": "#F7F3EA",
+          "kontrast": 6.58,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na neutral-light (callout)",
+          "fg": "#1E1611",
+          "bg": "#E4DACB",
+          "kontrast": 12.89,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary na neutral-light (naglowek callouta)",
+          "fg": "#4A1D26",
+          "bg": "#E4DACB",
+          "kontrast": 10.16,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na primary",
+          "fg": "#E4DACB",
+          "bg": "#4A1D26",
+          "kontrast": 10.16,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-dark na accent",
+          "fg": "#1E1611",
+          "bg": "#B58540",
+          "kontrast": 5.43,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na success",
+          "fg": "#E4DACB",
+          "bg": "#2F4A32",
+          "kontrast": 7.08,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-dark na warning",
+          "fg": "#1E1611",
+          "bg": "#D9AC4A",
+          "kontrast": 8.45,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na error",
+          "fg": "#E4DACB",
+          "bg": "#AC151F",
+          "kontrast": 5.27,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na info",
+          "fg": "#E4DACB",
+          "bg": "#1B2B26",
+          "kontrast": 10.7,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na surface",
+          "fg": "#1E1611",
+          "bg": "#F2ECE1",
+          "kontrast": 15.16,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na background",
+          "fg": "#1E1611",
+          "bg": "#F7F3EA",
+          "kontrast": 16.1,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "accent jako linia/ikona na surface",
+          "fg": "#B58540",
+          "bg": "#F2ECE1",
+          "kontrast": 2.79,
+          "ocena": "PONIZEJ 3:1",
+          "przechodzi-prog": false
+        }
+      ],
+      "ponizej-progu": [
+        {
+          "para": "accent jako linia/ikona na surface",
+          "kontrast": 2.79,
+          "ocena": "PONIZEJ 3:1"
+        }
+      ],
+      "rozroznialnosc": [
+        {
+          "a": "link",
+          "b": "error",
+          "kontrast": 1.0
+        },
+        {
+          "a": "link",
+          "b": "primary",
+          "kontrast": 1.93
+        },
+        {
+          "a": "primary",
+          "b": "secondary",
+          "kontrast": 2.2
+        },
+        {
+          "a": "success",
+          "b": "primary",
+          "kontrast": 1.44
+        },
+        {
+          "a": "accent",
+          "b": "warning",
+          "kontrast": 1.56
+        },
+        {
+          "a": "info",
+          "b": "primary",
+          "kontrast": 1.05
+        }
+      ],
+      "rekomendowane-uzycie": "Nagłówki: Aksamit (`primary`). CTA: wypełnienie Aksamit z etykietą Pergamin. Tła: Muślin (strona) i Kaszmir (karta). Tabele: linie pełnym Espresso, nagłówek kolumny Sepia wersalikami. Callouty: tło Pergamin, nagłówek Aksamit. Link: Karmin.",
+      "plusy": [
+        "Zero kosztu decyzyjnego - specyfikacja jest już zatwierdzona (2026-09-02) i wpisana do `03-pakiet-claude-design/format-paczki.md`.",
+        "Najwyższy kontrast tekstu korpusu w całym zestawie po wariancie 6.",
+        "Ciepły papier i bordo odróżniają IRIN od granatowo-białego standardu rynku szkoleniowego."
+      ],
+      "minusy": [
+        "`link` i `error` to fizycznie ten sam kolor `#AC151F` - kontrast wzajemny 1,00:1. Czytelnik nie odróżni odnośnika od komunikatu błędu inaczej niż z kontekstu zdania.",
+        "`info` (Onyks `#1B2B26`) i `text-primary` (Espresso `#1E1611`) różnią się o 1,05:1 - token informacyjny nie niesie żadnego sygnału, bo wygląda jak zwykły tekst.",
+        "`border` to pełne Espresso: każda linia w tabeli ma wagę ramki, nie ma miejsca na hierarchię linii cienkiej i grubej.",
+        "Złoto foliowe jako linia lub ikona daje 2,79:1 - poniżej progu 3:1 dla elementów interfejsu (zgodnie zresztą z własnym zastrzeżeniem palety, że złoto jest pieczęcią, nie kreską)."
+      ],
+      "ryzyka": [
+        "Ciepłe tła `#F7F3EA` i `#F2ECE1` w konwersji do CMYK potrafią żółknąć różnie na różnych maszynach - różnica papieru strony i karty (16,10 wobec 15,16) jest na tyle mała, że przy druku może zniknąć zupełnie.",
+        "Brak osobnego koloru linku blokuje planowany portal sprzedaży szkoleń - w interfejsie odnośnik w kolorze błędu to defekt użyteczności, nie kwestia gustu."
+      ],
+      "falsyfikator": "Ten wniosek obala pokazanie dokumentu, w którym link i komunikat błędu występują obok siebie i są rozróżniane - jeśli w realnych dokumentach IRIN link nigdy nie sąsiaduje ze stanem błędu, zarzut traci moc."
+    },
+    "W2": {
+      "numer": 2,
+      "id": "W2",
+      "nazwa": "Kaszmir Wyciszony",
+      "kierunek": "Ten sam papier i ta sama rodzina bordo co w wariancie zatwierdzonym, ale z obniżonym nasyceniem akcentów, osobnym półtonem na obramowania i linkiem przesuniętym w głęboką morską zieleń, żeby przestał być tym samym kolorem co błąd.",
+      "tokeny": {
+        "primary": "#452430",
+        "secondary": "#7A5638",
+        "accent": "#A8874E",
+        "neutral-dark": "#221A15",
+        "neutral-light": "#E7DFD2",
+        "success": "#2E5241",
+        "warning": "#8A6110",
+        "error": "#9E2B2B",
+        "info": "#33474F",
+        "background": "#F6F2E9",
+        "surface": "#FBF8F2",
+        "border": "#938978",
+        "text-primary": "#221A15",
+        "text-secondary": "#5E4E40",
+        "link": "#2F5A63"
+      },
+      "etykieta-na-wypelnieniu": {
+        "primary": {
+          "token": "neutral-light",
+          "hex": "#E7DFD2",
+          "kontrast": 10.26
+        },
+        "secondary": {
+          "token": "neutral-light",
+          "hex": "#E7DFD2",
+          "kontrast": 4.94
+        },
+        "accent": {
+          "token": "neutral-dark",
+          "hex": "#221A15",
+          "kontrast": 5.09
+        },
+        "success": {
+          "token": "neutral-light",
+          "hex": "#E7DFD2",
+          "kontrast": 6.62
+        },
+        "warning": {
+          "token": "#FFFFFF",
+          "hex": "#FFFFFF",
+          "kontrast": 5.53
+        },
+        "error": {
+          "token": "neutral-light",
+          "hex": "#E7DFD2",
+          "kontrast": 5.6
+        },
+        "info": {
+          "token": "neutral-light",
+          "hex": "#E7DFD2",
+          "kontrast": 7.37
+        }
+      },
+      "kontrasty": [
+        {
+          "para": "text-primary na background",
+          "fg": "#221A15",
+          "bg": "#F6F2E9",
+          "kontrast": 15.32,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na surface",
+          "fg": "#221A15",
+          "bg": "#FBF8F2",
+          "kontrast": 16.15,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na background",
+          "fg": "#5E4E40",
+          "bg": "#F6F2E9",
+          "kontrast": 7.12,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na surface",
+          "fg": "#5E4E40",
+          "bg": "#FBF8F2",
+          "kontrast": 7.5,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary (H1/H2) na surface",
+          "fg": "#452430",
+          "bg": "#FBF8F2",
+          "kontrast": 12.8,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "secondary (H3) na surface",
+          "fg": "#7A5638",
+          "bg": "#FBF8F2",
+          "kontrast": 6.16,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na surface",
+          "fg": "#2F5A63",
+          "bg": "#FBF8F2",
+          "kontrast": 7.17,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na background",
+          "fg": "#2F5A63",
+          "bg": "#F6F2E9",
+          "kontrast": 6.8,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na neutral-light (callout)",
+          "fg": "#221A15",
+          "bg": "#E7DFD2",
+          "kontrast": 12.95,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary na neutral-light (naglowek callouta)",
+          "fg": "#452430",
+          "bg": "#E7DFD2",
+          "kontrast": 10.26,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na primary",
+          "fg": "#E7DFD2",
+          "bg": "#452430",
+          "kontrast": 10.26,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-dark na accent",
+          "fg": "#221A15",
+          "bg": "#A8874E",
+          "kontrast": 5.09,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na success",
+          "fg": "#E7DFD2",
+          "bg": "#2E5241",
+          "kontrast": 6.62,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta #FFFFFF na warning",
+          "fg": "#FFFFFF",
+          "bg": "#8A6110",
+          "kontrast": 5.53,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na error",
+          "fg": "#E7DFD2",
+          "bg": "#9E2B2B",
+          "kontrast": 5.6,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na info",
+          "fg": "#E7DFD2",
+          "bg": "#33474F",
+          "kontrast": 7.37,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na surface",
+          "fg": "#938978",
+          "bg": "#FBF8F2",
+          "kontrast": 3.25,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na background",
+          "fg": "#938978",
+          "bg": "#F6F2E9",
+          "kontrast": 3.09,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "accent jako linia/ikona na surface",
+          "fg": "#A8874E",
+          "bg": "#FBF8F2",
+          "kontrast": 3.17,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        }
+      ],
+      "ponizej-progu": [],
+      "rozroznialnosc": [
+        {
+          "a": "link",
+          "b": "error",
+          "kontrast": 1.03
+        },
+        {
+          "a": "link",
+          "b": "primary",
+          "kontrast": 1.79
+        },
+        {
+          "a": "primary",
+          "b": "secondary",
+          "kontrast": 2.08
+        },
+        {
+          "a": "success",
+          "b": "primary",
+          "kontrast": 1.55
+        },
+        {
+          "a": "accent",
+          "b": "warning",
+          "kontrast": 1.64
+        },
+        {
+          "a": "info",
+          "b": "primary",
+          "kontrast": 1.39
+        }
+      ],
+      "rekomendowane-uzycie": "Nagłówki: `primary #452430`. H3 i podtytuły: `secondary #7A5638`. CTA: wypełnienie `primary`, etykieta `neutral-light`. Tabele: linie `border #938978`, nagłówek kolumny `text-secondary` wersalikami. Callouty: tło `neutral-light`, nagłówek `primary`. Link: `#2F5A63`. Złoto `#A8874E` wyłącznie jako cienka linia sygnaturowa.",
+      "plusy": [
+        "Naprawia wszystkie trzy zmierzone defekty wariantu zatwierdzonego: link przestaje być kolorem błędu, `border` dostaje własny półton 3,25:1, `info` przestaje udawać tekst korpusu.",
+        "Zachowuje to, co founder już zatwierdził - ciepły papier, bordo jako kolor wiodący, złoto jako sygnaturę - więc koszt ponownego zatwierdzania jest najmniejszy z sześciu propozycji zmiany.",
+        "Komplet par tekstowych na poziomie AA lub wyżej, zero wyjątków, zero pozycji poniżej progu."
+      ],
+      "minusy": [
+        "Chłodny morski link w całkowicie ciepłym systemie jest tonem obcym - to świadomy kompromis na rzecz rozróżnialności, ale widać go.",
+        "Wyciszenie odbiera Aksamitowi część charakteru: `#452430` jest spokojniejszy i mniej rozpoznawalny niż `#4A1D26`.",
+        "Różnica wizualna wobec wariantu 1 jest niewielka - jeśli oczekujesz widocznej zmiany kierunku, ten wariant jej nie da."
+      ],
+      "ryzyka": [
+        "„Wyciszenie” może zostać odczytane jako brak decyzji, a nie jako decyzja.",
+        "Link `#2F5A63` i `info #33474F` różnią się o 1,15:1 - jeśli oba pojawią się na jednej karcie (odnośnik wewnątrz boksu informacyjnego), zleją się."
+      ],
+      "falsyfikator": "Ten wniosek obala sytuacja, w której niezadowolenie z obecnej palety dotyczy samego kierunku „ciepły papier plus bordo”, a nie jego szczegółów - wtedy poprawianie detali jest pracą w złą stronę, a odpowiedzią jest wariant 4 albo 7."
+    },
+    "W3": {
+      "numer": 3,
+      "id": "W3",
+      "nazwa": "Papier i Grafit",
+      "kierunek": "Ciepły papier zostaje, ale tusz przestaje być brązowy: cały szkielet typograficzny przechodzi na grafit, a jedynym kolorem pozostaje miedź. System przestaje wyglądać jak stara księga, zaczyna wyglądać jak dokument techniczny na dobrym papierze.",
+      "tokeny": {
+        "primary": "#2B3138",
+        "secondary": "#5A6470",
+        "accent": "#A85E28",
+        "neutral-dark": "#16191D",
+        "neutral-light": "#E6E2DA",
+        "success": "#26614A",
+        "warning": "#8A5D0F",
+        "error": "#A32D2A",
+        "info": "#2A5670",
+        "background": "#F6F3ED",
+        "surface": "#FCFAF6",
+        "border": "#8F8B83",
+        "text-primary": "#16191D",
+        "text-secondary": "#515961",
+        "link": "#1F5B7A"
+      },
+      "etykieta-na-wypelnieniu": {
+        "primary": {
+          "token": "neutral-light",
+          "hex": "#E6E2DA",
+          "kontrast": 10.17
+        },
+        "secondary": {
+          "token": "neutral-light",
+          "hex": "#E6E2DA",
+          "kontrast": 4.66
+        },
+        "accent": {
+          "token": "#FFFFFF",
+          "hex": "#FFFFFF",
+          "kontrast": 4.89
+        },
+        "success": {
+          "token": "neutral-light",
+          "hex": "#E6E2DA",
+          "kontrast": 5.62
+        },
+        "warning": {
+          "token": "#FFFFFF",
+          "hex": "#FFFFFF",
+          "kontrast": 5.75
+        },
+        "error": {
+          "token": "neutral-light",
+          "hex": "#E6E2DA",
+          "kontrast": 5.48
+        },
+        "info": {
+          "token": "neutral-light",
+          "hex": "#E6E2DA",
+          "kontrast": 6.1
+        }
+      },
+      "kontrasty": [
+        {
+          "para": "text-primary na background",
+          "fg": "#16191D",
+          "bg": "#F6F3ED",
+          "kontrast": 15.92,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na surface",
+          "fg": "#16191D",
+          "bg": "#FCFAF6",
+          "kontrast": 16.91,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na background",
+          "fg": "#515961",
+          "bg": "#F6F3ED",
+          "kontrast": 6.42,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na surface",
+          "fg": "#515961",
+          "bg": "#FCFAF6",
+          "kontrast": 6.83,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary (H1/H2) na surface",
+          "fg": "#2B3138",
+          "bg": "#FCFAF6",
+          "kontrast": 12.6,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "secondary (H3) na surface",
+          "fg": "#5A6470",
+          "bg": "#FCFAF6",
+          "kontrast": 5.77,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na surface",
+          "fg": "#1F5B7A",
+          "bg": "#FCFAF6",
+          "kontrast": 7.1,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na background",
+          "fg": "#1F5B7A",
+          "bg": "#F6F3ED",
+          "kontrast": 6.69,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na neutral-light (callout)",
+          "fg": "#16191D",
+          "bg": "#E6E2DA",
+          "kontrast": 13.65,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary na neutral-light (naglowek callouta)",
+          "fg": "#2B3138",
+          "bg": "#E6E2DA",
+          "kontrast": 10.17,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na primary",
+          "fg": "#E6E2DA",
+          "bg": "#2B3138",
+          "kontrast": 10.17,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta #FFFFFF na accent",
+          "fg": "#FFFFFF",
+          "bg": "#A85E28",
+          "kontrast": 4.89,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na success",
+          "fg": "#E6E2DA",
+          "bg": "#26614A",
+          "kontrast": 5.62,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta #FFFFFF na warning",
+          "fg": "#FFFFFF",
+          "bg": "#8A5D0F",
+          "kontrast": 5.75,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na error",
+          "fg": "#E6E2DA",
+          "bg": "#A32D2A",
+          "kontrast": 5.48,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na info",
+          "fg": "#E6E2DA",
+          "bg": "#2A5670",
+          "kontrast": 6.1,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na surface",
+          "fg": "#8F8B83",
+          "bg": "#FCFAF6",
+          "kontrast": 3.25,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na background",
+          "fg": "#8F8B83",
+          "bg": "#F6F3ED",
+          "kontrast": 3.06,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "accent jako linia/ikona na surface",
+          "fg": "#A85E28",
+          "bg": "#FCFAF6",
+          "kontrast": 4.69,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        }
+      ],
+      "ponizej-progu": [],
+      "rozroznialnosc": [
+        {
+          "a": "link",
+          "b": "error",
+          "kontrast": 1.05
+        },
+        {
+          "a": "link",
+          "b": "primary",
+          "kontrast": 1.77
+        },
+        {
+          "a": "primary",
+          "b": "secondary",
+          "kontrast": 2.18
+        },
+        {
+          "a": "success",
+          "b": "primary",
+          "kontrast": 1.81
+        },
+        {
+          "a": "accent",
+          "b": "warning",
+          "kontrast": 1.18
+        },
+        {
+          "a": "info",
+          "b": "primary",
+          "kontrast": 1.67
+        }
+      ],
+      "rekomendowane-uzycie": "Nagłówki: grafit `#2B3138`. Podtytuły i metadane: `#5A6470`. CTA: wypełnienie grafit z etykietą `neutral-light`; wariant alternatywny - wypełnienie miedź `#A85E28` z etykietą białą. Tabele: linie `#8F8B83`. Callouty: tło `#E6E2DA`. Link: `#1F5B7A`.",
+      "plusy": [
+        "Najczytelniejsze tabele w zestawie: neutralny grafit nie wnosi własnej temperatury, więc dane nie „ciepleją”.",
+        "Miedź jako linia i ikona daje 4,69:1 - jedyny akcent w ciepłej rodzinie, który realnie nadaje się na cienką kreskę, a nie tylko na plamę.",
+        "Najtańszy i najbardziej przewidywalny druk: grafit wychodzi tak samo na każdej maszynie, w odróżnieniu od bordo."
+      ],
+      "minusy": [
+        "Grafit jest neutralny, więc nie niesie żadnego znaczenia marki - to najłatwiejszy wariant do pomylenia z dowolną inną firmą doradczą.",
+        "`accent` (miedź `#A85E28`) i `warning` (`#8A5D0F`) różnią się o 1,18:1 - akcent marki i ostrzeżenie to praktycznie ta sama plama.",
+        "Znika Aksamit, czyli jedyny kolor, który w kanwie foundera miał własną nazwę i przypisaną dziedzinę (Pedagogika)."
+      ],
+      "ryzyka": [
+        "To wariant, w którym najłatwiej wyjść „jak każdy” - cała różnica trzyma się na jednym akcencie, więc wystarczy użyć go oszczędnie i marka znika.",
+        "Trzy dziedziny IRIN tracą kolory dziedzinowe - reguła 80/15/5 wymaga wtedy przebudowy, bo nie ma trzech akcentów dziedzinowych, tylko jeden akcent w ogóle."
+      ],
+      "falsyfikator": "Ten wniosek obala pokazanie, że trzy dziedziny IRIN nie muszą być rozróżniane kolorem - jeśli rozróżnia je układ albo piktogram, zarzut o utracie kolorów dziedzinowych upada."
+    },
+    "W4": {
+      "numer": 4,
+      "id": "W4",
+      "nazwa": "Instytut",
+      "kierunek": "Granat dokumentu urzędowego jako kolor wiodący, przy zachowanym ciepłym papierze. Dokument ma wyglądać wiarygodnie na biurku operatora dofinansowania, w PARP i w BGK, a nie w portfolio agencji.",
+      "tokeny": {
+        "primary": "#1B3A5C",
+        "secondary": "#3E6285",
+        "accent": "#B07A2E",
+        "neutral-dark": "#131A21",
+        "neutral-light": "#E6E1D6",
+        "success": "#1F6B4F",
+        "warning": "#8F6412",
+        "error": "#A32F30",
+        "info": "#1F5F7D",
+        "background": "#F6F4EF",
+        "surface": "#FDFCF9",
+        "border": "#878C90",
+        "text-primary": "#131A21",
+        "text-secondary": "#47525D",
+        "link": "#14507E"
+      },
+      "etykieta-na-wypelnieniu": {
+        "primary": {
+          "token": "neutral-light",
+          "hex": "#E6E1D6",
+          "kontrast": 8.92
+        },
+        "secondary": {
+          "token": "neutral-light",
+          "hex": "#E6E1D6",
+          "kontrast": 4.89
+        },
+        "accent": {
+          "token": "neutral-dark",
+          "hex": "#131A21",
+          "kontrast": 4.73
+        },
+        "success": {
+          "token": "neutral-light",
+          "hex": "#E6E1D6",
+          "kontrast": 4.92
+        },
+        "warning": {
+          "token": "#FFFFFF",
+          "hex": "#FFFFFF",
+          "kontrast": 5.25
+        },
+        "error": {
+          "token": "neutral-light",
+          "hex": "#E6E1D6",
+          "kontrast": 5.36
+        },
+        "info": {
+          "token": "neutral-light",
+          "hex": "#E6E1D6",
+          "kontrast": 5.38
+        }
+      },
+      "kontrasty": [
+        {
+          "para": "text-primary na background",
+          "fg": "#131A21",
+          "bg": "#F6F4EF",
+          "kontrast": 15.96,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na surface",
+          "fg": "#131A21",
+          "bg": "#FDFCF9",
+          "kontrast": 17.09,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na background",
+          "fg": "#47525D",
+          "bg": "#F6F4EF",
+          "kontrast": 7.26,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na surface",
+          "fg": "#47525D",
+          "bg": "#FDFCF9",
+          "kontrast": 7.77,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary (H1/H2) na surface",
+          "fg": "#1B3A5C",
+          "bg": "#FDFCF9",
+          "kontrast": 11.33,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "secondary (H3) na surface",
+          "fg": "#3E6285",
+          "bg": "#FDFCF9",
+          "kontrast": 6.22,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na surface",
+          "fg": "#14507E",
+          "bg": "#FDFCF9",
+          "kontrast": 8.26,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na background",
+          "fg": "#14507E",
+          "bg": "#F6F4EF",
+          "kontrast": 7.71,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na neutral-light (callout)",
+          "fg": "#131A21",
+          "bg": "#E6E1D6",
+          "kontrast": 13.45,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary na neutral-light (naglowek callouta)",
+          "fg": "#1B3A5C",
+          "bg": "#E6E1D6",
+          "kontrast": 8.92,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na primary",
+          "fg": "#E6E1D6",
+          "bg": "#1B3A5C",
+          "kontrast": 8.92,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-dark na accent",
+          "fg": "#131A21",
+          "bg": "#B07A2E",
+          "kontrast": 4.73,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na success",
+          "fg": "#E6E1D6",
+          "bg": "#1F6B4F",
+          "kontrast": 4.92,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta #FFFFFF na warning",
+          "fg": "#FFFFFF",
+          "bg": "#8F6412",
+          "kontrast": 5.25,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na error",
+          "fg": "#E6E1D6",
+          "bg": "#A32F30",
+          "kontrast": 5.36,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na info",
+          "fg": "#E6E1D6",
+          "bg": "#1F5F7D",
+          "kontrast": 5.38,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na surface",
+          "fg": "#878C90",
+          "bg": "#FDFCF9",
+          "kontrast": 3.31,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na background",
+          "fg": "#878C90",
+          "bg": "#F6F4EF",
+          "kontrast": 3.09,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "accent jako linia/ikona na surface",
+          "fg": "#B07A2E",
+          "bg": "#FDFCF9",
+          "kontrast": 3.61,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        }
+      ],
+      "ponizej-progu": [],
+      "rozroznialnosc": [
+        {
+          "a": "link",
+          "b": "error",
+          "kontrast": 1.21
+        },
+        {
+          "a": "link",
+          "b": "primary",
+          "kontrast": 1.37
+        },
+        {
+          "a": "primary",
+          "b": "secondary",
+          "kontrast": 1.82
+        },
+        {
+          "a": "success",
+          "b": "primary",
+          "kontrast": 1.81
+        },
+        {
+          "a": "accent",
+          "b": "warning",
+          "kontrast": 1.42
+        },
+        {
+          "a": "info",
+          "b": "primary",
+          "kontrast": 1.66
+        }
+      ],
+      "rekomendowane-uzycie": "Nagłówki: granat `#1B3A5C`. Podtytuły: `#3E6285`. CTA: wypełnienie granat, etykieta `neutral-light`. Tabele: linie `#878C90`, nagłówek kolumny granatem wersalikami. Callouty prawne: tło `#E6E1D6`, lewa krawędź granatowa. Link: `#14507E`. Złoto `#B07A2E` na pieczęć i sygnaturę certyfikatu.",
+      "plusy": [
+        "Najwyższy kontrast linku w zestawie po wariancie 6 - 8,26:1 na karcie i 7,71:1 na tle strony.",
+        "Granat na ciepłym papierze to połączenie nietypowe: daje powagę urzędową bez chłodu, który niesie granat na bieli.",
+        "Najlepiej ze wszystkich wariantów obsługuje dokumenty regulowane - kartę usługi BUR, zaświadczenie KFS, wniosek pożyczkowy - bo mówi kodem wizualnym, który ich odbiorca już zna."
+      ],
+      "minusy": [
+        "Granat jest najbardziej obsadzonym kolorem w polskim B2B i w finansach - ryzyko nierozróżnialności jest tu najwyższe z całego zestawu.",
+        "`link` i `primary` różnią się o 1,37:1 - odnośnik wewnątrz nagłówka albo tuż pod nim praktycznie ginie.",
+        "Odchodzi najdalej od tego, co zostało zatwierdzone 2026-09-02: Aksamit znika całkowicie, a z 12 barw zostaje sam ciepły papier i złoto."
+      ],
+      "ryzyka": [
+        "Ton może wyjść „bank albo urząd” zamiast „instytut” - to trafia w Pożyczki UE/BGK, ale rozmija się z Akademią AI, która ma brzmieć współcześnie.",
+        "Przy druku offsetowym głębokie granaty często zbijają się w czerń - różnica `#1B3A5C` i `text-primary #131A21` wynosi 1,50:1 i może zniknąć."
+      ],
+      "falsyfikator": "Ten wniosek obala sprawdzenie, kto faktycznie czyta dokumenty IRIN - jeśli główną publicznością są działy HR firm, a nie operatorzy dofinansowania, argument o kodzie urzędowym przestaje działać."
+    },
+    "W5": {
+      "numer": 5,
+      "id": "W5",
+      "nazwa": "Werdykt",
+      "kierunek": "Kolor Werdykt, który w zatwierdzonej palecie pełnił funkcję stanu potwierdzonego, awansuje na kolor wiodący. Zieleń instytucjonalna niesie rozwój i staranność bez fintechowego granatu, a złoto zostaje jako sygnatura.",
+      "tokeny": {
+        "primary": "#1E4A38",
+        "secondary": "#3C6B54",
+        "accent": "#B08237",
+        "neutral-dark": "#14201A",
+        "neutral-light": "#E2E4DC",
+        "success": "#226B45",
+        "warning": "#8B6212",
+        "error": "#A22E2C",
+        "info": "#26596B",
+        "background": "#F5F4EE",
+        "surface": "#FCFBF6",
+        "border": "#898D87",
+        "text-primary": "#14201A",
+        "text-secondary": "#455249",
+        "link": "#1D5A6B"
+      },
+      "etykieta-na-wypelnieniu": {
+        "primary": {
+          "token": "neutral-light",
+          "hex": "#E2E4DC",
+          "kontrast": 7.82
+        },
+        "secondary": {
+          "token": "neutral-light",
+          "hex": "#E2E4DC",
+          "kontrast": 4.78
+        },
+        "accent": {
+          "token": "neutral-dark",
+          "hex": "#14201A",
+          "kontrast": 4.87
+        },
+        "success": {
+          "token": "neutral-light",
+          "hex": "#E2E4DC",
+          "kontrast": 5.02
+        },
+        "warning": {
+          "token": "#FFFFFF",
+          "hex": "#FFFFFF",
+          "kontrast": 5.45
+        },
+        "error": {
+          "token": "neutral-light",
+          "hex": "#E2E4DC",
+          "kontrast": 5.52
+        },
+        "info": {
+          "token": "neutral-light",
+          "hex": "#E2E4DC",
+          "kontrast": 6.01
+        }
+      },
+      "kontrasty": [
+        {
+          "para": "text-primary na background",
+          "fg": "#14201A",
+          "bg": "#F5F4EE",
+          "kontrast": 15.23,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na surface",
+          "fg": "#14201A",
+          "bg": "#FCFBF6",
+          "kontrast": 16.2,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na background",
+          "fg": "#455249",
+          "bg": "#F5F4EE",
+          "kontrast": 7.46,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na surface",
+          "fg": "#455249",
+          "bg": "#FCFBF6",
+          "kontrast": 7.93,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary (H1/H2) na surface",
+          "fg": "#1E4A38",
+          "bg": "#FCFBF6",
+          "kontrast": 9.69,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "secondary (H3) na surface",
+          "fg": "#3C6B54",
+          "bg": "#FCFBF6",
+          "kontrast": 5.92,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na surface",
+          "fg": "#1D5A6B",
+          "bg": "#FCFBF6",
+          "kontrast": 7.43,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na background",
+          "fg": "#1D5A6B",
+          "bg": "#F5F4EE",
+          "kontrast": 6.99,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na neutral-light (callout)",
+          "fg": "#14201A",
+          "bg": "#E2E4DC",
+          "kontrast": 13.08,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary na neutral-light (naglowek callouta)",
+          "fg": "#1E4A38",
+          "bg": "#E2E4DC",
+          "kontrast": 7.82,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na primary",
+          "fg": "#E2E4DC",
+          "bg": "#1E4A38",
+          "kontrast": 7.82,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-dark na accent",
+          "fg": "#14201A",
+          "bg": "#B08237",
+          "kontrast": 4.87,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na success",
+          "fg": "#E2E4DC",
+          "bg": "#226B45",
+          "kontrast": 5.02,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta #FFFFFF na warning",
+          "fg": "#FFFFFF",
+          "bg": "#8B6212",
+          "kontrast": 5.45,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na error",
+          "fg": "#E2E4DC",
+          "bg": "#A22E2C",
+          "kontrast": 5.52,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na info",
+          "fg": "#E2E4DC",
+          "bg": "#26596B",
+          "kontrast": 6.01,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na surface",
+          "fg": "#898D87",
+          "bg": "#FCFBF6",
+          "kontrast": 3.26,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na background",
+          "fg": "#898D87",
+          "bg": "#F5F4EE",
+          "kontrast": 3.06,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "accent jako linia/ikona na surface",
+          "fg": "#B08237",
+          "bg": "#FCFBF6",
+          "kontrast": 3.33,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        }
+      ],
+      "ponizej-progu": [],
+      "rozroznialnosc": [
+        {
+          "a": "link",
+          "b": "error",
+          "kontrast": 1.09
+        },
+        {
+          "a": "link",
+          "b": "primary",
+          "kontrast": 1.3
+        },
+        {
+          "a": "primary",
+          "b": "secondary",
+          "kontrast": 1.64
+        },
+        {
+          "a": "success",
+          "b": "primary",
+          "kontrast": 1.56
+        },
+        {
+          "a": "accent",
+          "b": "warning",
+          "kontrast": 1.58
+        },
+        {
+          "a": "info",
+          "b": "primary",
+          "kontrast": 1.3
+        }
+      ],
+      "rekomendowane-uzycie": "Nagłówki: zieleń `#1E4A38`. Podtytuły: `#3C6B54`. CTA: wypełnienie zieleń, etykieta `neutral-light`. Tabele: linie `#898D87`. Callouty: tło `#E2E4DC`. Link: `#1D5A6B`. Złoto `#B08237` na pieczęć certyfikatu.",
+      "plusy": [
+        "Wyrasta z koloru, który jest już w zatwierdzonej palecie - to nie import z zewnątrz, tylko przesunięcie akcentu.",
+        "Odróżnia IRIN od granatowego standardu branży finansowej przy zachowaniu powagi.",
+        "Ciepła zieleń dobrze znosi papier - lepiej niż granat, który na kremowym podłożu szarzeje."
+      ],
+      "minusy": [
+        "`success` (`#226B45`) i `primary` (`#1E4A38`) różnią się o 1,56:1 - kolor marki i kolor „potwierdzone” należą do tej samej rodziny, więc stan potwierdzenia przestaje być sygnałem i staje się tłem.",
+        "`link` (`#1D5A6B`) wobec `primary` to 1,30:1 - najniższa rozróżnialność linku w całym zestawie.",
+        "Zieleń w kontekście dofinansowań bywa odczytana jako obietnica tematyczna („zielone dotacje”, ESG), której IRIN nie składa."
+      ],
+      "ryzyka": [
+        "Kolizja semantyczna `primary` z `success` jest tu problemem strukturalnym, nie kosmetycznym - każdy dokument ze statusem „zatwierdzone” traci na czytelności.",
+        "Ryzyko odczytu branżowego: odbiorca może założyć, że IRIN specjalizuje się w dofinansowaniach środowiskowych."
+      ],
+      "falsyfikator": "Ten wniosek obala rozstrzygnięcie, że stan „potwierdzone” będzie w dokumentach IRIN sygnalizowany ikoną i etykietą słowną, a nie samą plamą koloru - wtedy kolizja `primary` z `success` przestaje mieć znaczenie."
+    },
+    "W6": {
+      "numer": 6,
+      "id": "W6",
+      "nazwa": "Druk Ekonomiczny",
+      "kierunek": "Prawie monochromatyczny system z jednym ceglanym akcentem, zaprojektowany pod najgorszy realny scenariusz dystrybucji: zaświadczenie KFS skserowane, zeskanowane i wydrukowane mono w dziale kadr. Nie jest propozycją tożsamości - jest trybem przetrwania.",
+      "tokeny": {
+        "primary": "#111111",
+        "secondary": "#3D3D3D",
+        "accent": "#7A2418",
+        "neutral-dark": "#0A0A0A",
+        "neutral-light": "#E8E6E1",
+        "success": "#2A4F35",
+        "warning": "#6B5307",
+        "error": "#8E1B1B",
+        "info": "#2E4560",
+        "background": "#FBFAF7",
+        "surface": "#FFFFFF",
+        "border": "#928F89",
+        "text-primary": "#0A0A0A",
+        "text-secondary": "#4A4A4A",
+        "link": "#7A2418"
+      },
+      "etykieta-na-wypelnieniu": {
+        "primary": {
+          "token": "neutral-light",
+          "hex": "#E8E6E1",
+          "kontrast": 15.14
+        },
+        "secondary": {
+          "token": "neutral-light",
+          "hex": "#E8E6E1",
+          "kontrast": 8.71
+        },
+        "accent": {
+          "token": "neutral-light",
+          "hex": "#E8E6E1",
+          "kontrast": 8.04
+        },
+        "success": {
+          "token": "neutral-light",
+          "hex": "#E8E6E1",
+          "kontrast": 7.42
+        },
+        "warning": {
+          "token": "neutral-light",
+          "hex": "#E8E6E1",
+          "kontrast": 5.88
+        },
+        "error": {
+          "token": "neutral-light",
+          "hex": "#E8E6E1",
+          "kontrast": 7.25
+        },
+        "info": {
+          "token": "neutral-light",
+          "hex": "#E8E6E1",
+          "kontrast": 7.88
+        }
+      },
+      "kontrasty": [
+        {
+          "para": "text-primary na background",
+          "fg": "#0A0A0A",
+          "bg": "#FBFAF7",
+          "kontrast": 18.97,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na surface",
+          "fg": "#0A0A0A",
+          "bg": "#FFFFFF",
+          "kontrast": 19.8,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na background",
+          "fg": "#4A4A4A",
+          "bg": "#FBFAF7",
+          "kontrast": 8.49,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na surface",
+          "fg": "#4A4A4A",
+          "bg": "#FFFFFF",
+          "kontrast": 8.86,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary (H1/H2) na surface",
+          "fg": "#111111",
+          "bg": "#FFFFFF",
+          "kontrast": 18.88,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "secondary (H3) na surface",
+          "fg": "#3D3D3D",
+          "bg": "#FFFFFF",
+          "kontrast": 10.86,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na surface",
+          "fg": "#7A2418",
+          "bg": "#FFFFFF",
+          "kontrast": 10.03,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na background",
+          "fg": "#7A2418",
+          "bg": "#FBFAF7",
+          "kontrast": 9.61,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na neutral-light (callout)",
+          "fg": "#0A0A0A",
+          "bg": "#E8E6E1",
+          "kontrast": 15.87,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary na neutral-light (naglowek callouta)",
+          "fg": "#111111",
+          "bg": "#E8E6E1",
+          "kontrast": 15.14,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na primary",
+          "fg": "#E8E6E1",
+          "bg": "#111111",
+          "kontrast": 15.14,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na accent",
+          "fg": "#E8E6E1",
+          "bg": "#7A2418",
+          "kontrast": 8.04,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na success",
+          "fg": "#E8E6E1",
+          "bg": "#2A4F35",
+          "kontrast": 7.42,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na warning",
+          "fg": "#E8E6E1",
+          "bg": "#6B5307",
+          "kontrast": 5.88,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na error",
+          "fg": "#E8E6E1",
+          "bg": "#8E1B1B",
+          "kontrast": 7.25,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na info",
+          "fg": "#E8E6E1",
+          "bg": "#2E4560",
+          "kontrast": 7.88,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na surface",
+          "fg": "#928F89",
+          "bg": "#FFFFFF",
+          "kontrast": 3.22,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na background",
+          "fg": "#928F89",
+          "bg": "#FBFAF7",
+          "kontrast": 3.09,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "accent jako linia/ikona na surface",
+          "fg": "#7A2418",
+          "bg": "#FFFFFF",
+          "kontrast": 10.03,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        }
+      ],
+      "ponizej-progu": [],
+      "rozroznialnosc": [
+        {
+          "a": "link",
+          "b": "error",
+          "kontrast": 1.11
+        },
+        {
+          "a": "link",
+          "b": "primary",
+          "kontrast": 1.88
+        },
+        {
+          "a": "primary",
+          "b": "secondary",
+          "kontrast": 1.74
+        },
+        {
+          "a": "success",
+          "b": "primary",
+          "kontrast": 2.04
+        },
+        {
+          "a": "accent",
+          "b": "warning",
+          "kontrast": 1.37
+        },
+        {
+          "a": "info",
+          "b": "primary",
+          "kontrast": 1.92
+        }
+      ],
+      "rekomendowane-uzycie": "Nagłówki: `#111111`. Podtytuły: `#3D3D3D`. CTA: wypełnienie `#111111` albo obrys 2 px z etykietą `#7A2418`. Tabele: linie `#928F89`, nagłówek kolumny czernią wersalikami. Callouty: tło `#E8E6E1` z lewą krawędzią 3 px. Link: `#7A2418` z obowiązkowym podkreśleniem.",
+      "plusy": [
+        "Najwyższe kontrasty w całym zestawie: 18,97:1 dla tekstu na tle strony i 19,80:1 na karcie.",
+        "Każda para przechodzi AA, większość AAA - to jedyny wariant, w którym żaden token nie wymaga zastrzeżenia.",
+        "Zaświadczenie w tej palecie przetrwa kserowanie, skan i druk laserowy bez utraty jakiegokolwiek znaczenia niesionego kolorem."
+      ],
+      "minusy": [
+        "Nie jest tożsamością marki - po odjęciu koloru IRIN wygląda jak dowolny formularz urzędowy.",
+        "Po konwersji do skali szarości `success`, `error` i `info` mają zbliżoną jasność - kolor przestaje nieść znaczenie i wymusza etykietę słowną oraz ikonę przy każdym stanie.",
+        "`accent` i `warning` różnią się o 1,37:1 - w druku mono zleją się całkowicie."
+      ],
+      "ryzyka": [
+        "Największe ryzyko tego wariantu to jego zaleta: jest tak bezpieczny, że łatwo przyjąć go na stałe i stracić markę.",
+        "Zerowe ciepło - traci się jedyny element, który w kanwie foundera był nazwany wprost (papier Kaszmir)."
+      ],
+      "falsyfikator": "Ten wniosek obala pomiar realnego kanału dystrybucji zaświadczeń - jeśli zaświadczenia KFS trafiają do odbiorcy wyłącznie jako kolorowy PDF i nikt ich nie kseruje, cała przewaga tego wariantu znika."
+    },
+    "W7": {
+      "numer": 7,
+      "id": "W7",
+      "nazwa": "Portal Cyfrowy",
+      "kierunek": "Jedyny wariant zaprojektowany pod ekran, a nie pod papier: chłodna biel jako powierzchnia, morski `primary` i żywy miedziano-pomarańczowy przycisk akcji. Adresuje planowany portal sprzedaży szkoleń, który w żadnym z pozostałych wariantów nie ma właściwego CTA.",
+      "tokeny": {
+        "primary": "#10505F",
+        "secondary": "#2A7F93",
+        "accent": "#C2410C",
+        "neutral-dark": "#0F172A",
+        "neutral-light": "#E7EDF0",
+        "success": "#15803D",
+        "warning": "#B45309",
+        "error": "#B91C1C",
+        "info": "#0369A1",
+        "background": "#F7F9FA",
+        "surface": "#FFFFFF",
+        "border": "#8A9093",
+        "text-primary": "#0F172A",
+        "text-secondary": "#4B5563",
+        "link": "#0369A1"
+      },
+      "etykieta-na-wypelnieniu": {
+        "primary": {
+          "token": "neutral-light",
+          "hex": "#E7EDF0",
+          "kontrast": 7.61
+        },
+        "secondary": {
+          "token": "#FFFFFF",
+          "hex": "#FFFFFF",
+          "kontrast": 4.61
+        },
+        "accent": {
+          "token": "#FFFFFF",
+          "hex": "#FFFFFF",
+          "kontrast": 5.18
+        },
+        "success": {
+          "token": "#FFFFFF",
+          "hex": "#FFFFFF",
+          "kontrast": 5.02
+        },
+        "warning": {
+          "token": "#FFFFFF",
+          "hex": "#FFFFFF",
+          "kontrast": 5.02
+        },
+        "error": {
+          "token": "neutral-light",
+          "hex": "#E7EDF0",
+          "kontrast": 5.47
+        },
+        "info": {
+          "token": "neutral-light",
+          "hex": "#E7EDF0",
+          "kontrast": 5.02
+        }
+      },
+      "kontrasty": [
+        {
+          "para": "text-primary na background",
+          "fg": "#0F172A",
+          "bg": "#F7F9FA",
+          "kontrast": 16.91,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na surface",
+          "fg": "#0F172A",
+          "bg": "#FFFFFF",
+          "kontrast": 17.85,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na background",
+          "fg": "#4B5563",
+          "bg": "#F7F9FA",
+          "kontrast": 7.16,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-secondary na surface",
+          "fg": "#4B5563",
+          "bg": "#FFFFFF",
+          "kontrast": 7.56,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary (H1/H2) na surface",
+          "fg": "#10505F",
+          "bg": "#FFFFFF",
+          "kontrast": 8.99,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "secondary (H3) na surface",
+          "fg": "#2A7F93",
+          "bg": "#FFFFFF",
+          "kontrast": 4.61,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na surface",
+          "fg": "#0369A1",
+          "bg": "#FFFFFF",
+          "kontrast": 5.93,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "link na background",
+          "fg": "#0369A1",
+          "bg": "#F7F9FA",
+          "kontrast": 5.62,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "text-primary na neutral-light (callout)",
+          "fg": "#0F172A",
+          "bg": "#E7EDF0",
+          "kontrast": 15.11,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "primary na neutral-light (naglowek callouta)",
+          "fg": "#10505F",
+          "bg": "#E7EDF0",
+          "kontrast": 7.61,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na primary",
+          "fg": "#E7EDF0",
+          "bg": "#10505F",
+          "kontrast": 7.61,
+          "ocena": "AAA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta #FFFFFF na accent",
+          "fg": "#FFFFFF",
+          "bg": "#C2410C",
+          "kontrast": 5.18,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta #FFFFFF na success",
+          "fg": "#FFFFFF",
+          "bg": "#15803D",
+          "kontrast": 5.02,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta #FFFFFF na warning",
+          "fg": "#FFFFFF",
+          "bg": "#B45309",
+          "kontrast": 5.02,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na error",
+          "fg": "#E7EDF0",
+          "bg": "#B91C1C",
+          "kontrast": 5.47,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "etykieta neutral-light na info",
+          "fg": "#E7EDF0",
+          "bg": "#0369A1",
+          "kontrast": 5.02,
+          "ocena": "AA",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na surface",
+          "fg": "#8A9093",
+          "bg": "#FFFFFF",
+          "kontrast": 3.24,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "border na background",
+          "fg": "#8A9093",
+          "bg": "#F7F9FA",
+          "kontrast": 3.06,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        },
+        {
+          "para": "accent jako linia/ikona na surface",
+          "fg": "#C2410C",
+          "bg": "#FFFFFF",
+          "kontrast": 5.18,
+          "ocena": "OK (>=3:1)",
+          "przechodzi-prog": true
+        }
+      ],
+      "ponizej-progu": [],
+      "rozroznialnosc": [
+        {
+          "a": "link",
+          "b": "error",
+          "kontrast": 1.09
+        },
+        {
+          "a": "link",
+          "b": "primary",
+          "kontrast": 1.52
+        },
+        {
+          "a": "primary",
+          "b": "secondary",
+          "kontrast": 1.95
+        },
+        {
+          "a": "success",
+          "b": "primary",
+          "kontrast": 1.79
+        },
+        {
+          "a": "accent",
+          "b": "warning",
+          "kontrast": 1.03
+        },
+        {
+          "a": "info",
+          "b": "primary",
+          "kontrast": 1.52
+        }
+      ],
+      "rekomendowane-uzycie": "Nagłówki: `#10505F`. Podtytuły: `#2A7F93`. CTA: wypełnienie `#C2410C` z etykietą białą - jedyny naprawdę „klikalny” przycisk w całym zestawie. Tabele: linie `#8A9093`, wiersz naprzemienny `#F7F9FA`. Callouty: tło `#E7EDF0`. Link: `#0369A1` z podkreśleniem.",
+      "plusy": [
+        "Jedyny wariant z realnym kolorem akcji - `#C2410C` na bieli daje 5,18:1 i działa też jako ikona oraz obrys.",
+        "Komplet stanów semantycznych czytelnych na ekranie w standardzie, który zna każdy użytkownik sklepu internetowego.",
+        "Najlepsza podstawa pod tryb ciemny, bo neutralne tło `#0F172A` jest już w palecie jako `neutral-dark`."
+      ],
+      "minusy": [
+        "Zrywa z ciepłym papierem, czyli z jedynym elementem tożsamości nazwanym w kanwie po imieniu - dokument drukowany w tej palecie nie wygląda jak IRIN.",
+        "`accent` (`#C2410C`) i `warning` (`#B45309`) różnią się o 1,03:1 - przycisk akcji i ostrzeżenie są nierozróżnialne, co w interfejsie sprzedażowym jest defektem poważnym.",
+        "Najbardziej „domyślnie SaaS” ze wszystkich siedmiu - paleta rozpoznawalna jako biblioteka komponentów, nie jako marka."
+      ],
+      "ryzyka": [
+        "Rozdwojenie marki na wersję papierową i ekranową - to najdroższy długoterminowo skutek w całym zestawie.",
+        "Biały `#FFFFFF` jako `surface` w druku oznacza brak papieru Kaszmir, czyli rezygnację z nazwy własnej całego systemu."
+      ],
+      "falsyfikator": "Ten wniosek obala decyzja, że portal sprzedaży szkoleń dostaje własną, jawnie oddzieloną paletę produktową - wtedy „rozdwojenie marki” jest zamierzone, a nie ryzykowne."
+    }
+  },
+  "wybrany": "W2",
+  "specyfikacja-wybranego": "01-baza-wiedzy/identyfikacja/paleta-barw.md",
+  "tokeny-wybranego": "01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json"
+}
