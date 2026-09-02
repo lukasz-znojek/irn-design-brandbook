@@ -6,7 +6,8 @@
 # Jednorazowe przygotowanie (founder, ok. 2 minuty):
 #   1. github.com → Settings → Developer settings → Personal access tokens → Tokens (classic)
 #      → Generate new token (classic). Note: PROJECTS_TOKEN, Expiration wg uznania,
-#      Scopes: zaznaczyć wyłącznie „project” (Full control of projects). Nic więcej.
+#      Scopes: zaznaczyć „project” (Full control of projects) oraz „read:org”; ten drugi
+#      jest potrzebny poleceniom gh project do rozpoznania właściciela tablicy.
 #      Dlaczego klasyczny: tokeny fine-grained nie mają uprawnienia do tablic Projects
 #      na koncie osobistym (tylko organizacyjnych), więc w ich formularzu pozycja
 #      „Projects” w zakładce Account nie występuje.
@@ -63,13 +64,25 @@ jobs:
         env:
           GH_TOKEN: ${{ env.TOKEN_PROJECTS }}
         run: |
-          NUM=$(gh project list --owner "$OWNER" --limit 100 --format json \
-            | jq -r --arg t "$TYTUL" '.projects[] | select(.title == $t) | .number' | head -n 1)
+          # "@me" = właściciel tokenu; omija rozpoznawanie typu właściciela po loginie.
+          if ! LISTA=$(gh project list --owner "@me" --limit 100 --format json 2>&1); then
+            echo "::error::gh project list nie zadziałał: $LISTA. Najczęstsza przyczyna: token nie jest klasyczny albo nie ma zakresów project i read:org. Token klasyczny zaczyna się od ghp_, fine-grained od github_pat_ i nie obsługuje tablic na koncie osobistym."
+            exit 1
+          fi
+          NUM=$(echo "$LISTA" | jq -r --arg t "$TYTUL" '.projects[] | select(.title == $t) | .number' | head -n 1)
           if [ -z "$NUM" ]; then
-            NUM=$(gh project create --owner "$OWNER" --title "$TYTUL" --format json | jq -r '.number')
+            if ! WYNIK=$(gh project create --owner "@me" --title "$TYTUL" --format json 2>&1); then
+              echo "::error::gh project create nie zadziałał: $WYNIK"
+              exit 1
+            fi
+            NUM=$(echo "$WYNIK" | jq -r '.number')
             echo "Utworzono tablicę nr $NUM"
           else
             echo "Tablica istnieje: nr $NUM"
+          fi
+          if [ -z "$NUM" ] || [ "$NUM" = "null" ]; then
+            echo "::error::Nie udało się ustalić numeru tablicy."
+            exit 1
           fi
           echo "num=$NUM" >> "$GITHUB_OUTPUT"
           echo "Adres: https://github.com/users/$OWNER/projects/$NUM"
@@ -79,7 +92,7 @@ jobs:
           GH_TOKEN: ${{ env.TOKEN_PROJECTS }}
           NUM: ${{ steps.tablica.outputs.num }}
         run: |
-          FIELD=$(gh project field-list "$NUM" --owner "$OWNER" --format json \
+          FIELD=$(gh project field-list "$NUM" --owner "@me" --format json \
             | jq -c '.fields[] | select(.name == "Status")')
           FID=$(echo "$FIELD" | jq -r '.id')
           if echo "$FIELD" | jq -e '.options[] | select(.name == "Todo" or .name == "In Progress" or .name == "Done")' >/dev/null; then
@@ -123,10 +136,10 @@ jobs:
         run: |
           while read -r URL; do
             [ -z "$URL" ] && continue
-            if gh project item-add "$NUM" --owner "$OWNER" --url "$URL" >/dev/null 2>&1; then
+            if BLAD=$(gh project item-add "$NUM" --owner "@me" --url "$URL" 2>&1 >/dev/null); then
               echo "dodano  $URL"
             else
-              echo "::warning::nie dodano $URL"
+              echo "::warning::nie dodano $URL: $BLAD"
             fi
           done < adresy.txt
           echo "Tablica: https://github.com/users/$OWNER/projects/$NUM"
