@@ -8,15 +8,18 @@ Materiał prezentujący jedną konkretną usługę szkoleniową zarejestrowaną 
 
 ## Elementy prawnie obowiązkowe
 
-Wynikają z `/01-baza-wiedzy/prawo/bur.md` — z zastrzeżeniem, że część z nich ma tam status "do potwierdzenia bezpośrednim odczytem regulaminu BUR" (dostęp do domen PARP był zablokowany; lista dokumentów do dostarczenia: `/01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`, pozycje 1 i 3):
+Odczytane u źródła 2026-09-02 z Załącznika nr 2g do Regulaminu Bazy Usług Rozwojowych (wersja obowiązująca od 6 lipca 2026 r.) - pełna lista pól z numerami paragrafów i stron: `/01-baza-wiedzy/prawo/bur.md`, sekcja „Karta Usługi”. Skrót dla tej karty specyfikacji:
 
-1. **Kod usługi BUR** — unikalny numer nadany usłudze przez system przy publikacji, musi być widoczny na dokumencie i zgodny z rzeczywistym wpisem. Format zaobserwowany w `brandbook.dc.html` (`2025/00817/PPUR`) jest niepotwierdzony — nie zakładać tej struktury jako reguły, wstawiać rzeczywisty kod usługi wygenerowany przez system BUR.
-2. **Tytuł i opis usługi** — zgodne z opublikowaną Kartą Usługi.
-3. **Efekty uczenia się** — obowiązkowe pole Karty Usługi; muszą się pojawić w dokumencie w formie zgodnej z rejestracją, nie w wersji skróconej zmieniającej sens.
-4. **Grupa docelowa** — do kogo kierowana jest usługa; obowiązkowe pole Karty Usługi.
-5. **Liczba godzin zegarowych usługi** i — od zmiany Regulaminu BUR z 5 maja 2026 r. — **wariant zajęć** (tam gdzie dotyczy) oraz dane **osób prowadzących** — jeśli dokument podaje wymiar godzinowy czy prowadzącego, musi być zgodny z tym, co zadeklarowano w systemie.
-
-**Status weryfikacji:** lista wynika z `/01-baza-wiedzy/prawo/bur.md`, gdzie jest oznaczona jako oparta na źródłach wtórnych. Przed uznaniem tej karty za zamkniętą specyfikację, warto zweryfikować bezpośrednio w Załączniku nr 2 do Regulaminu BUR, czy nie ma dodatkowych pól obowiązkowych pominiętych tutaj.
+1. **Kod usługi BUR** (numer identyfikacyjny Usługi rozwojowej) - nadany przez system przy publikacji, musi być widoczny na dokumencie i zgodny z rzeczywistym wpisem. Regulamin BUR nie definiuje wewnętrznej struktury tego numeru - zapis `2025/00817/PPUR` z `brandbook.dc.html` pozostaje niepotwierdzonym formatem; nie zakładać żadnej struktury, wstawiać rzeczywisty numer wygenerowany przez system BUR.
+2. **Rodzaj, podrodzaj i forma świadczenia usługi** (poz. 1.2-1.4) oraz **wariant zajęć** (poz. 1.5, nie występuje dla formy zdalnej).
+3. **Tytuł, kategoria i podkategoria usługi** (poz. 2.1-2.3).
+4. **Grupa docelowa** i minimalna/maksymalna liczba uczestników (poz. 2.6-2.8).
+5. **Cel edukacyjny i efekty uczenia się** (poz. 3.1, 3.1.4) - muszą się pojawić w dokumencie w formie zgodnej z rejestracją, nie w wersji skróconej zmieniającej sens.
+6. **Liczba godzin zegarowych usługi** (poz. 4.1) i pochodne pola dla wariantów mieszanych/z praktyką indywidualną (poz. 4.1.1-4.1.2).
+7. **Lokalizacja usługi** (poz. 5).
+8. **Osoby prowadzące** (poz. 6, nie występuje dla formy zdalnej) - imię i nazwisko, adres e-mail, opis doświadczenia dla każdej osoby.
+9. **Program i harmonogram usługi** (poz. 7.1-7.2) - suma godzin harmonogramu musi być zgodna z liczbą godzin zegarowych z poz. 4.1.
+10. **Dane kontaktowe** (poz. 8) i **warunki techniczne** (poz. 10, dla usług zdalnych/mieszanych).
 
 ## Konwencja organizacyjna IRIN
 

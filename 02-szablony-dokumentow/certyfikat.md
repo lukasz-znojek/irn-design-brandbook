@@ -8,14 +8,20 @@ Dokument potwierdzający uczestnikowi ukończenie konkretnego szkolenia — jedn
 
 ## Elementy prawnie obowiązkowe
 
-Z `/01-baza-wiedzy/prawo/kfs.md`:
-- jednoznaczna identyfikacja uczestnika, szkolenia, realizatora (IRIN) i zakresu/liczby godzin szkolenia — wymóg rozliczeniowy wobec PUP.
+Z `/01-baza-wiedzy/prawo/kfs.md` (ze źródeł wtórnych, nieodczytane wprost w tej sesji):
+- jednoznaczna identyfikacja uczestnika, szkolenia, realizatora (IRIN) i zakresu/liczby godzin szkolenia - wymóg rozliczeniowy wobec PUP.
 
-Z `/01-baza-wiedzy/prawo/bur.md`:
-- wskazanie osiągniętych efektów uczenia się (lub innych efektów usługi),
-- jednoznaczna identyfikacja usługi (w tym kodu usługi BUR) i uczestnika.
+Odczytane u źródła 2026-09-02 z `/01-baza-wiedzy/prawo/bur.md`, sekcja „Zaświadczenie" (Załącznik 4 do Regulaminu BUR, Rozdział 2, pkt 3, wersja obowiązująca od 31 marca 2026 r.) - **nie jest to już osobny wzór graficzny „Załącznik nr 12"** (ten w aktualnym Regulaminie nie istnieje, patrz `bur.md` dla wyjaśnienia rozbieżności), tylko lista treści minimalnej. Dostawca Usług wydaje uczestnikowi zaświadczenie zawierające co najmniej:
+1. tytuł Usługi rozwojowej,
+2. numer identyfikacyjny Usługi rozwojowej (kod BUR - struktura numeru nieokreślona w źródłach, wstawić rzeczywisty numer z systemu),
+3. datę świadczenia Usługi rozwojowej,
+4. liczbę godzin Usługi rozwojowej,
+5. informację o nabytych przez uczestnika efektach uczenia się lub innych osiągniętych efektach usługi,
+6. dane uczestnika,
+7. numer identyfikacyjny wsparcia (ID wsparcia) - dotyczy usług z dofinansowaniem, np. KFS/PSF,
+8. kod kwalifikacji w Zintegrowanym Rejestrze Kwalifikacji - tylko jeżeli uczestnik nabył tę kwalifikację.
 
-**Status weryfikacji — ważne zastrzeżenie:** oficjalny wzór "Zaświadczenia o zakończeniu udziału w usłudze rozwojowej" (Załącznik nr 12 do Regulaminu BUR) istnieje, ale **jego treści nie udało się pobrać** w sesji, w której powstał `/01-baza-wiedzy/prawo/bur.md` — domena hostująca dokument była zablokowana przez proxy. Dokładna, kompletna lista pól tego wzoru **nie jest tu potwierdzona**. Zanim ta karta specyfikacji zostanie potraktowana jako zamknięta co do treści prawnie obowiązkowej, należy odczytać ten załącznik wprost i ewentualnie skorygować listę pól powyżej (lista dokumentów do dostarczenia: `/01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`, pozycja 2).
+Dostawca ma też obowiązek wystawić korektę zaświadczenia w ciągu 7 dni od uzasadnionego wezwania uczestnika. Żaden z przejrzanych dokumentów PARP nie narzuca układu graficznego - powyższe to wymóg treści, nie wzoru wizualnego.
 
 ## Konwencja organizacyjna IRIN
 

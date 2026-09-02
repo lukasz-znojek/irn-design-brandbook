@@ -8,7 +8,7 @@ Użycie:
 
 Zależność: biblioteka `pypdf`. W tym repozytorium narzędzia typu `poppler`
 (`pdftotext`) nie są zainstalowane, a wcześniejszy brief tej sesji zakładał,
-że `pip` też jest niedostępny — w praktyce (sesja 2026-09-02, Etap 2) `pip3`
+że `pip` też jest niedostępny - w praktyce (sesja 2026-09-02, Etap 2) `pip3`
 działał, ale `import pypdf` sam z siebie zawodził, bo jego zależność
 `cryptography` nie mogła znaleźć `_cffi_backend`. Skrypt instaluje `pypdf`
 automatycznie, jeśli import się nie powiedzie, a jeśli to nie wystarczy,
@@ -18,7 +18,7 @@ stronę.
 
 Każdy cytat wzięty z wyniku tego skryptu trzeba porównać z oryginałem PDF
 (otwartym wizualnie, np. przez narzędzie Read) przed wpisaniem do repozytorium
-— ekstrakcja tekstu z PDF czasem gubi łamanie wierszy, myli kolejność kolumn
+- ekstrakcja tekstu z PDF czasem gubi łamanie wierszy, myli kolejność kolumn
 w tabelach albo pomija tekst w polach formularza.
 """
 import subprocess
@@ -35,7 +35,7 @@ def pip_install(*pakiety):
 def upewnij_pypdf():
     """Importuje pypdf, naprawiając po drodze dwa znane problemy tego środowiska:
     brak pakietu (ImportError) i zepsuty import `cryptography` przez brakujący
-    `_cffi_backend` (kończy się `pyo3_runtime.PanicException`, nie ImportError —
+    `_cffi_backend` (kończy się `pyo3_runtime.PanicException`, nie ImportError -
     stąd łapiemy tu Exception, nie tylko ImportError).
     """
     try:
@@ -44,11 +44,11 @@ def upewnij_pypdf():
     except Exception:
         pass
 
-    print("pypdf niedostępny lub zepsuty — próbuję `pip3 install pypdf`...", file=sys.stderr)
+    print("pypdf niedostępny lub zepsuty - próbuję `pip3 install pypdf`...", file=sys.stderr)
     wynik = pip_install("pypdf")
     if wynik.returncode != 0:
         sys.exit(
-            "Nie udało się zainstalować pypdf — pip niedostępny w tym środowisku.\n"
+            "Nie udało się zainstalować pypdf - pip niedostępny w tym środowisku.\n"
             f"stdout: {wynik.stdout}\nstderr: {wynik.stderr}\n"
             "Odczyt PDF wymaga ręcznego dostarczenia tekstu albo innego środowiska."
         )
@@ -60,7 +60,7 @@ def upewnij_pypdf():
         # Typowy przypadek w tym środowisku: `cryptography` (zależność pypdf)
         # nie może zaimportować `_cffi_backend`, bo `cffi` brakuje albo jest
         # niespójny z zainstalowanym `cryptography`. Naprawia to reinstalacja `cffi`.
-        print(f"Import pypdf nadal zawodzi ({e}) — próbuję `pip3 install --force-reinstall cffi`...", file=sys.stderr)
+        print(f"Import pypdf nadal zawodzi ({e}) - próbuję `pip3 install --force-reinstall cffi`...", file=sys.stderr)
         wynik = pip_install("--force-reinstall", "cffi")
         if wynik.returncode != 0:
             sys.exit(
@@ -96,7 +96,7 @@ def main():
     for i in zakres_stron(arg_stron, liczba_stron):
         if i < 0 or i >= liczba_stron:
             continue
-        tekst = reader.pages[i].extract_text() or "(brak tekstu na tej stronie — może być skan/obraz)"
+        tekst = reader.pages[i].extract_text() or "(brak tekstu na tej stronie - może być skan/obraz)"
         print(f"\n===== strona {i + 1} / {liczba_stron} =====")
         print(tekst)
 
