@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#EFEBE3; color:#1E1611; font-family:'Manrope', system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  table { border-collapse:collapse; }
+</style>
+</helmet>
+
+<div style="max-width:1180px; margin:0 auto; padding:48px 32px 80px;">
+
+  <section data-screen-label="00 · Jak czytać ten podgląd" style="background:#FFFFFF; border:1px solid #1E1611; padding:36px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837; margin-bottom:16px;">IRIN · podgląd palety v2 · propozycja, nic nie zatwierdzone</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:300; font-size:40px; line-height:1.0; letter-spacing:-0.02em; margin:0 0 16px;">Siedem wariantów, jeden układ</div>
+    <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; max-width:760px; margin:0 0 12px;">Każda z siedmiu sekcji poniżej ma identyczną treść, identyczny układ i identyczną typografię - Manrope 200-800 plus Inconsolata, skala ze <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">brandbook.dc.html</code> sekcja 04. Jedyną zmienną jest kolor. Dzięki temu różnica, którą widzisz, jest wyłącznie różnicą palety.</p>
+    <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; max-width:760px; margin:0 0 12px;">Każdy wariant pokazuje kolejno: pasek 15 próbek tokenów, stronę tytułową, hierarchię H1/H2/H3, akapit korpusu i tekstu pomocniczego, boks informacyjny z plakietkami stanów, tabelę, przyciski CTA i link samodzielny oraz sekcję „prawo i zgodność”.</p>
+    <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; max-width:760px; margin:0 0 20px; color:#5B4837;">Pełna specyfikacja, zmierzone kontrasty i trade-offs: <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">palette-options-v2.md</code>. Rekomendacja: <b>wariant 2 - Kaszmir Wyciszony</b>, ale żaden wariant nie jest ustawiony jako finalny.</p>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding-top:16px; border-top:1px solid #1E1611;"><a href="#w1" style="color:#1E1611;">1. Kaszmir Aksamit (bazowy)</a> · <a href="#w2" style="color:#1E1611;">2. Kaszmir Wyciszony</a> · <a href="#w3" style="color:#1E1611;">3. Papier i Grafit</a> · <a href="#w4" style="color:#1E1611;">4. Instytut</a> · <a href="#w5" style="color:#1E1611;">5. Werdykt</a> · <a href="#w6" style="color:#1E1611;">6. Druk Ekonomiczny</a> · <a href="#w7" style="color:#1E1611;">7. Portal Cyfrowy</a></div>
+  </section>
+
+
+<section id="w1" data-screen-label="01 · Wariant 1 · Kaszmir Aksamit (bazowy)" style="margin-top:40px; background:#F7F3EA; border:1px solid #1E1611; overflow:hidden;">
+
+  <!-- pasek identyfikacyjny wariantu -->
+  <div style="background:#1E1611; color:#E4DACB; padding:14px 32px; display:flex; justify-content:space-between; align-items:baseline; gap:24px; flex-wrap:wrap;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase;">Wariant 1 · Kaszmir Aksamit (bazowy)</div>
+    <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.85;">primary #4A1D26 · accent #B58540 · link #AC151F · par poniżej progu: 1</div>
+  </div>
+
+  <!-- pasek próbek -->
+  <div style="padding:16px 32px; background:#F2ECE1; border-bottom:1px solid #1E1611; display:flex; gap:4px;"><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#4A1D26; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">primary<br>#4A1D26</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#8C5026; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">secondary<br>#8C5026</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#B58540; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">accent<br>#B58540</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#1E1611; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-dark<br>#1E1611</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#E4DACB; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-light<br>#E4DACB</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#2F4A32; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">success<br>#2F4A32</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#D9AC4A; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">warning<br>#D9AC4A</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#AC151F; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">error<br>#AC151F</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#1B2B26; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">info<br>#1B2B26</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#F7F3EA; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">background<br>#F7F3EA</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#F2ECE1; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">surface<br>#F2ECE1</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#1E1611; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">border<br>#1E1611</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#1E1611; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-primary<br>#1E1611</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#5B4837; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-secondary<br>#5B4837</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#AC151F; border:1px solid #1E1611;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">link<br>#AC151F</div></div></div>
+
+  <!-- 1. STRONA TYTUŁOWA -->
+  <div style="background:#F2ECE1; padding:44px 32px 36px; border-bottom:1px solid #1E1611;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837; margin-bottom:18px;">Instytut Rozwoju i Nauki · dokument demonstracyjny</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:200; font-size:72px; line-height:0.92; letter-spacing:-0.03em; color:#4A1D26; margin:0;">Akademia AI.</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:500; font-size:16px; line-height:1.4; color:#5B4837; margin-top:18px; max-width:760px;">Szkolenie dofinansowane z Krajowego Funduszu Szkoleniowego. Karta usługi opublikowana w Bazie Usług Rozwojowych.</div>
+    <div style="margin-top:26px; height:2px; background:#B58540;"></div>
+    <div style="margin-top:22px; display:flex; gap:40px; flex-wrap:wrap; align-items:flex-end;">
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#4A1D26;">40</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:6px;">godzin dydaktycznych</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#4A1D26;">12</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:6px;">uczestników w grupie</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#B58540;">80%</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5B4837; margin-top:6px;">poziom dofinansowania</div></div>
+    </div>
+  </div>
+
+  <!-- 2. HIERARCHIA NAGŁÓWKÓW + AKAPIT -->
+  <div style="padding:32px; display:grid; grid-template-columns:1.55fr 1fr; gap:36px;">
+    <div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#5B4837; margin-bottom:14px;">§ 01 · Program</div>
+      <h1 style="font-family:'Manrope', system-ui, sans-serif; font-weight:300; font-size:40px; line-height:1.0; letter-spacing:-0.02em; color:#4A1D26; margin:0 0 16px;">Nagłówek H1 rozdziału</h1>
+      <h2 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-0.01em; color:#4A1D26; margin:0 0 12px;">Nagłówek H2 sekcji</h2>
+      <h3 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; color:#8C5026; margin:0 0 10px;">Nagłówek H3 podsekcji</h3>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#1E1611; margin:0 0 12px; max-width:640px;">Akapit korpusu w kroju Manrope 400, stopień 13,5 px, interlinia 1,55 - dokładnie tak, jak definiuje to sekcja 04 kanwy. Ten sam tekst powtarza się we wszystkich siedmiu wariantach, żeby jedyną zmienną pozostał kolor. Uczestnik szkolenia otrzymuje zaświadczenie o ukończeniu, a przedsiębiorca rozlicza koszt usługi w ramach przyznanego limitu.</p>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#5B4837; margin:0; max-width:640px;">Tekst pomocniczy w kolorze <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">text-secondary</code>: metadane, opisy i przypisy. Odnośnik w treści wygląda tak - <a href="#w1" style="color:#AC151F; text-decoration:underline; text-underline-offset:2px;">karta usługi w Bazie Usług Rozwojowych</a> - i musi być odróżnialny od komunikatu błędu.</p>
+    </div>
+
+    <!-- 3. BOX INFORMACYJNY -->
+    <div>
+      <div style="background:#E4DACB; border-left:4px solid #1B2B26; padding:18px 20px;">
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#4A1D26; margin-bottom:10px;">Boks informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#1E1611; margin:0 0 10px;">Limit dofinansowania na uczestnika liczony jest od ceny usługi wskazanej w karcie BUR, nie od ceny katalogowej.</p>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#5B4837;">tło <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">neutral-light #E4DACB</code> · krawędź <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">info #1B2B26</code></div>
+      </div>
+      <div style="margin-top:12px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#2F4A32; color:#E4DACB; padding:5px 10px; font-weight:700;">ZATWIERDZONE</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#D9AC4A; color:#1E1611; padding:5px 10px; font-weight:700;">TERMIN NABORU</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#AC151F; color:#E4DACB; padding:5px 10px; font-weight:700;">BRAK ZAŁĄCZNIKA</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#1B2B26; color:#E4DACB; padding:5px 10px; font-weight:700;">NOTA</span>
+      </div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#5B4837; margin-top:8px;">Każda plakietka niesie etykietę słowną, bo w druku mono te cztery kolory mają zbliżoną jasność.</div>
+    </div>
+  </div>
+
+  <!-- 4. TABELA -->
+  <div style="padding:0 32px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#5B4837; margin-bottom:12px;">§ 02 · Tabela</div>
+    <table style="width:100%; border-collapse:collapse; background:#F2ECE1;">
+      <thead>
+        <tr style="background:#E4DACB;">
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8C5026; border-bottom:2px solid #1E1611;">Moduł</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8C5026; border-bottom:2px solid #1E1611;">Efekt uczenia się</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8C5026; border-bottom:2px solid #1E1611;">Godz.</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#8C5026; border-bottom:2px solid #1E1611;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#1E1611; border-bottom:1px solid #1E1611;">01</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#1E1611; border-bottom:1px solid #1E1611;">Rozpoznaje zastosowania modeli językowych w pracy biurowej</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#1E1611; border-bottom:1px solid #1E1611;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#2F4A32; font-weight:700; border-bottom:1px solid #1E1611;">✓ gotowe</td></tr>
+        <tr style="background:#F7F3EA;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#1E1611; border-bottom:1px solid #1E1611;">02</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#1E1611; border-bottom:1px solid #1E1611;">Formułuje polecenia dające powtarzalny wynik</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#1E1611; border-bottom:1px solid #1E1611;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#2F4A32; font-weight:700; border-bottom:1px solid #1E1611;">✓ gotowe</td></tr>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#1E1611; border-bottom:1px solid #1E1611;">03</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#1E1611; border-bottom:1px solid #1E1611;">Weryfikuje wynik pod kątem zgodności z RODO</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#1E1611; border-bottom:1px solid #1E1611;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#D9AC4A; font-weight:700; border-bottom:1px solid #1E1611;">! w opracowaniu</td></tr>
+        <tr style="background:#F7F3EA;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#1E1611; border-bottom:2px solid #1E1611;">04</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#1E1611; border-bottom:2px solid #1E1611;">Walidacja efektów uczenia się</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#1E1611; border-bottom:2px solid #1E1611;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#AC151F; font-weight:700; border-bottom:2px solid #1E1611;">✕ brak kryteriów</td></tr>
+      </tbody>
+    </table>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#5B4837; margin-top:8px;">Linie tabeli: <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">border #1E1611</code>, kontrast na karcie 15,16:1.</div>
+  </div>
+
+  <!-- 5. CTA + LINK -->
+  <div style="padding:0 32px 32px; display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+    <a href="#w1" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#4A1D26; color:#E4DACB; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">Zapisz się na szkolenie</a>
+    <a href="#w1" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#B58540; color:#1E1611; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">CTA na akcencie</a>
+    <a href="#w1" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:transparent; color:#4A1D26; border:2px solid #4A1D26; padding:10px 24px; text-decoration:none; font-weight:600; display:inline-block;">Pobierz program</a>
+    <a href="#w1" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#AC151F; text-decoration:underline; text-underline-offset:3px;">Link samodzielny w stopce</a>
+  </div>
+
+  <!-- 6. PRAWO / COMPLIANCE -->
+  <div style="background:#1E1611; color:#E4DACB; padding:26px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#B58540; margin-bottom:12px;">§ 03 · Prawo i zgodność</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Podstawa prawna usługi</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; margin:0; opacity:0.92;">Zaświadczenie wydawane na podstawie rozporządzenia w sprawie kształcenia ustawicznego w formach pozaszkolnych. Usługa zarejestrowana w Bazie Usług Rozwojowych prowadzonej przez PARP.</p>
+      </div>
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Obowiązek informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; margin:0 0 10px; opacity:0.85;">Dane uczestnika przetwarzane wyłącznie w celu realizacji usługi rozwojowej i jej rozliczenia u operatora. Podanie danych jest warunkiem wydania zaświadczenia.</p>
+        <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.7;">nr usługi: <span style="color:#B58540;">2026/09/IRIN/AI-40</span></div>
+      </div>
+    </div>
+    <div style="margin-top:20px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.22); display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Najniższa para tekstowa w tym wariancie: 5,27:1 (etykieta neutral-light na error).</div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Kierunek: Zatwierdzona 12-barwna paleta „Colorbook Kaszmir Aksamit” przemapowana bez zmiany odcieni na 15 tokenów semantycznych.</div>
+    </div>
+  </div>
+</section>
+
+<section id="w2" data-screen-label="02 · Wariant 2 · Kaszmir Wyciszony" style="margin-top:40px; background:#F6F2E9; border:1px solid #938978; overflow:hidden;">
+
+  <!-- pasek identyfikacyjny wariantu -->
+  <div style="background:#221A15; color:#E7DFD2; padding:14px 32px; display:flex; justify-content:space-between; align-items:baseline; gap:24px; flex-wrap:wrap;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase;">Wariant 2 · Kaszmir Wyciszony</div>
+    <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.85;">primary #452430 · accent #A8874E · link #2F5A63 · par poniżej progu: 0</div>
+  </div>
+
+  <!-- pasek próbek -->
+  <div style="padding:16px 32px; background:#FBF8F2; border-bottom:1px solid #938978; display:flex; gap:4px;"><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#452430; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">primary<br>#452430</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#7A5638; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">secondary<br>#7A5638</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#A8874E; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">accent<br>#A8874E</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#221A15; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-dark<br>#221A15</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#E7DFD2; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-light<br>#E7DFD2</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#2E5241; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">success<br>#2E5241</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#8A6110; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">warning<br>#8A6110</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#9E2B2B; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">error<br>#9E2B2B</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#33474F; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">info<br>#33474F</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#F6F2E9; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">background<br>#F6F2E9</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#FBF8F2; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">surface<br>#FBF8F2</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#938978; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">border<br>#938978</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#221A15; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-primary<br>#221A15</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#5E4E40; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-secondary<br>#5E4E40</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#2F5A63; border:1px solid #938978;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">link<br>#2F5A63</div></div></div>
+
+  <!-- 1. STRONA TYTUŁOWA -->
+  <div style="background:#FBF8F2; padding:44px 32px 36px; border-bottom:1px solid #938978;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5E4E40; margin-bottom:18px;">Instytut Rozwoju i Nauki · dokument demonstracyjny</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:200; font-size:72px; line-height:0.92; letter-spacing:-0.03em; color:#452430; margin:0;">Akademia AI.</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:500; font-size:16px; line-height:1.4; color:#5E4E40; margin-top:18px; max-width:760px;">Szkolenie dofinansowane z Krajowego Funduszu Szkoleniowego. Karta usługi opublikowana w Bazie Usług Rozwojowych.</div>
+    <div style="margin-top:26px; height:2px; background:#A8874E;"></div>
+    <div style="margin-top:22px; display:flex; gap:40px; flex-wrap:wrap; align-items:flex-end;">
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#452430;">40</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:6px;">godzin dydaktycznych</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#452430;">12</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:6px;">uczestników w grupie</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#A8874E;">80%</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#5E4E40; margin-top:6px;">poziom dofinansowania</div></div>
+    </div>
+  </div>
+
+  <!-- 2. HIERARCHIA NAGŁÓWKÓW + AKAPIT -->
+  <div style="padding:32px; display:grid; grid-template-columns:1.55fr 1fr; gap:36px;">
+    <div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#5E4E40; margin-bottom:14px;">§ 01 · Program</div>
+      <h1 style="font-family:'Manrope', system-ui, sans-serif; font-weight:300; font-size:40px; line-height:1.0; letter-spacing:-0.02em; color:#452430; margin:0 0 16px;">Nagłówek H1 rozdziału</h1>
+      <h2 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-0.01em; color:#452430; margin:0 0 12px;">Nagłówek H2 sekcji</h2>
+      <h3 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; color:#7A5638; margin:0 0 10px;">Nagłówek H3 podsekcji</h3>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#221A15; margin:0 0 12px; max-width:640px;">Akapit korpusu w kroju Manrope 400, stopień 13,5 px, interlinia 1,55 - dokładnie tak, jak definiuje to sekcja 04 kanwy. Ten sam tekst powtarza się we wszystkich siedmiu wariantach, żeby jedyną zmienną pozostał kolor. Uczestnik szkolenia otrzymuje zaświadczenie o ukończeniu, a przedsiębiorca rozlicza koszt usługi w ramach przyznanego limitu.</p>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#5E4E40; margin:0; max-width:640px;">Tekst pomocniczy w kolorze <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">text-secondary</code>: metadane, opisy i przypisy. Odnośnik w treści wygląda tak - <a href="#w2" style="color:#2F5A63; text-decoration:underline; text-underline-offset:2px;">karta usługi w Bazie Usług Rozwojowych</a> - i musi być odróżnialny od komunikatu błędu.</p>
+    </div>
+
+    <!-- 3. BOX INFORMACYJNY -->
+    <div>
+      <div style="background:#E7DFD2; border-left:4px solid #33474F; padding:18px 20px;">
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#452430; margin-bottom:10px;">Boks informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#221A15; margin:0 0 10px;">Limit dofinansowania na uczestnika liczony jest od ceny usługi wskazanej w karcie BUR, nie od ceny katalogowej.</p>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#5E4E40;">tło <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">neutral-light #E7DFD2</code> · krawędź <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">info #33474F</code></div>
+      </div>
+      <div style="margin-top:12px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#2E5241; color:#E7DFD2; padding:5px 10px; font-weight:700;">ZATWIERDZONE</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#8A6110; color:#FFFFFF; padding:5px 10px; font-weight:700;">TERMIN NABORU</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#9E2B2B; color:#E7DFD2; padding:5px 10px; font-weight:700;">BRAK ZAŁĄCZNIKA</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#33474F; color:#E7DFD2; padding:5px 10px; font-weight:700;">NOTA</span>
+      </div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#5E4E40; margin-top:8px;">Każda plakietka niesie etykietę słowną, bo w druku mono te cztery kolory mają zbliżoną jasność.</div>
+    </div>
+  </div>
+
+  <!-- 4. TABELA -->
+  <div style="padding:0 32px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#5E4E40; margin-bottom:12px;">§ 02 · Tabela</div>
+    <table style="width:100%; border-collapse:collapse; background:#FBF8F2;">
+      <thead>
+        <tr style="background:#E7DFD2;">
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#7A5638; border-bottom:2px solid #938978;">Moduł</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#7A5638; border-bottom:2px solid #938978;">Efekt uczenia się</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#7A5638; border-bottom:2px solid #938978;">Godz.</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#7A5638; border-bottom:2px solid #938978;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#221A15; border-bottom:1px solid #938978;">01</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#221A15; border-bottom:1px solid #938978;">Rozpoznaje zastosowania modeli językowych w pracy biurowej</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#221A15; border-bottom:1px solid #938978;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#2E5241; font-weight:700; border-bottom:1px solid #938978;">✓ gotowe</td></tr>
+        <tr style="background:#F6F2E9;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#221A15; border-bottom:1px solid #938978;">02</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#221A15; border-bottom:1px solid #938978;">Formułuje polecenia dające powtarzalny wynik</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#221A15; border-bottom:1px solid #938978;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#2E5241; font-weight:700; border-bottom:1px solid #938978;">✓ gotowe</td></tr>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#221A15; border-bottom:1px solid #938978;">03</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#221A15; border-bottom:1px solid #938978;">Weryfikuje wynik pod kątem zgodności z RODO</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#221A15; border-bottom:1px solid #938978;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#8A6110; font-weight:700; border-bottom:1px solid #938978;">! w opracowaniu</td></tr>
+        <tr style="background:#F6F2E9;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#221A15; border-bottom:2px solid #938978;">04</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#221A15; border-bottom:2px solid #938978;">Walidacja efektów uczenia się</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#221A15; border-bottom:2px solid #938978;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#9E2B2B; font-weight:700; border-bottom:2px solid #938978;">✕ brak kryteriów</td></tr>
+      </tbody>
+    </table>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#5E4E40; margin-top:8px;">Linie tabeli: <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">border #938978</code>, kontrast na karcie 3,25:1.</div>
+  </div>
+
+  <!-- 5. CTA + LINK -->
+  <div style="padding:0 32px 32px; display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+    <a href="#w2" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#452430; color:#E7DFD2; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">Zapisz się na szkolenie</a>
+    <a href="#w2" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#A8874E; color:#221A15; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">CTA na akcencie</a>
+    <a href="#w2" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:transparent; color:#452430; border:2px solid #452430; padding:10px 24px; text-decoration:none; font-weight:600; display:inline-block;">Pobierz program</a>
+    <a href="#w2" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#2F5A63; text-decoration:underline; text-underline-offset:3px;">Link samodzielny w stopce</a>
+  </div>
+
+  <!-- 6. PRAWO / COMPLIANCE -->
+  <div style="background:#221A15; color:#E7DFD2; padding:26px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#A8874E; margin-bottom:12px;">§ 03 · Prawo i zgodność</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Podstawa prawna usługi</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; margin:0; opacity:0.92;">Zaświadczenie wydawane na podstawie rozporządzenia w sprawie kształcenia ustawicznego w formach pozaszkolnych. Usługa zarejestrowana w Bazie Usług Rozwojowych prowadzonej przez PARP.</p>
+      </div>
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Obowiązek informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; margin:0 0 10px; opacity:0.85;">Dane uczestnika przetwarzane wyłącznie w celu realizacji usługi rozwojowej i jej rozliczenia u operatora. Podanie danych jest warunkiem wydania zaświadczenia.</p>
+        <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.7;">nr usługi: <span style="color:#A8874E;">2026/09/IRIN/AI-40</span></div>
+      </div>
+    </div>
+    <div style="margin-top:20px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.22); display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Najniższa para tekstowa w tym wariancie: 5,09:1 (etykieta neutral-dark na accent).</div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Kierunek: Ten sam papier i ta sama rodzina bordo co w wariancie zatwierdzonym, ale z obniżonym nasyceniem akcentów, osobnym półtonem na obramowania i linkiem przesuniętym w głęboką morską zieleń, żeby przestał być tym samym kolorem co błąd.</div>
+    </div>
+  </div>
+</section>
+
+<section id="w3" data-screen-label="03 · Wariant 3 · Papier i Grafit" style="margin-top:40px; background:#F6F3ED; border:1px solid #8F8B83; overflow:hidden;">
+
+  <!-- pasek identyfikacyjny wariantu -->
+  <div style="background:#16191D; color:#E6E2DA; padding:14px 32px; display:flex; justify-content:space-between; align-items:baseline; gap:24px; flex-wrap:wrap;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase;">Wariant 3 · Papier i Grafit</div>
+    <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.85;">primary #2B3138 · accent #A85E28 · link #1F5B7A · par poniżej progu: 0</div>
+  </div>
+
+  <!-- pasek próbek -->
+  <div style="padding:16px 32px; background:#FCFAF6; border-bottom:1px solid #8F8B83; display:flex; gap:4px;"><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#2B3138; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">primary<br>#2B3138</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#5A6470; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">secondary<br>#5A6470</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#A85E28; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">accent<br>#A85E28</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#16191D; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-dark<br>#16191D</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#E6E2DA; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-light<br>#E6E2DA</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#26614A; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">success<br>#26614A</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#8A5D0F; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">warning<br>#8A5D0F</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#A32D2A; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">error<br>#A32D2A</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#2A5670; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">info<br>#2A5670</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#F6F3ED; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">background<br>#F6F3ED</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#FCFAF6; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">surface<br>#FCFAF6</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#8F8B83; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">border<br>#8F8B83</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#16191D; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-primary<br>#16191D</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#515961; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-secondary<br>#515961</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#1F5B7A; border:1px solid #8F8B83;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">link<br>#1F5B7A</div></div></div>
+
+  <!-- 1. STRONA TYTUŁOWA -->
+  <div style="background:#FCFAF6; padding:44px 32px 36px; border-bottom:1px solid #8F8B83;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#515961; margin-bottom:18px;">Instytut Rozwoju i Nauki · dokument demonstracyjny</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:200; font-size:72px; line-height:0.92; letter-spacing:-0.03em; color:#2B3138; margin:0;">Akademia AI.</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:500; font-size:16px; line-height:1.4; color:#515961; margin-top:18px; max-width:760px;">Szkolenie dofinansowane z Krajowego Funduszu Szkoleniowego. Karta usługi opublikowana w Bazie Usług Rozwojowych.</div>
+    <div style="margin-top:26px; height:2px; background:#A85E28;"></div>
+    <div style="margin-top:22px; display:flex; gap:40px; flex-wrap:wrap; align-items:flex-end;">
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#2B3138;">40</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:6px;">godzin dydaktycznych</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#2B3138;">12</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:6px;">uczestników w grupie</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#A85E28;">80%</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#515961; margin-top:6px;">poziom dofinansowania</div></div>
+    </div>
+  </div>
+
+  <!-- 2. HIERARCHIA NAGŁÓWKÓW + AKAPIT -->
+  <div style="padding:32px; display:grid; grid-template-columns:1.55fr 1fr; gap:36px;">
+    <div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#515961; margin-bottom:14px;">§ 01 · Program</div>
+      <h1 style="font-family:'Manrope', system-ui, sans-serif; font-weight:300; font-size:40px; line-height:1.0; letter-spacing:-0.02em; color:#2B3138; margin:0 0 16px;">Nagłówek H1 rozdziału</h1>
+      <h2 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-0.01em; color:#2B3138; margin:0 0 12px;">Nagłówek H2 sekcji</h2>
+      <h3 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; color:#5A6470; margin:0 0 10px;">Nagłówek H3 podsekcji</h3>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#16191D; margin:0 0 12px; max-width:640px;">Akapit korpusu w kroju Manrope 400, stopień 13,5 px, interlinia 1,55 - dokładnie tak, jak definiuje to sekcja 04 kanwy. Ten sam tekst powtarza się we wszystkich siedmiu wariantach, żeby jedyną zmienną pozostał kolor. Uczestnik szkolenia otrzymuje zaświadczenie o ukończeniu, a przedsiębiorca rozlicza koszt usługi w ramach przyznanego limitu.</p>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#515961; margin:0; max-width:640px;">Tekst pomocniczy w kolorze <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">text-secondary</code>: metadane, opisy i przypisy. Odnośnik w treści wygląda tak - <a href="#w3" style="color:#1F5B7A; text-decoration:underline; text-underline-offset:2px;">karta usługi w Bazie Usług Rozwojowych</a> - i musi być odróżnialny od komunikatu błędu.</p>
+    </div>
+
+    <!-- 3. BOX INFORMACYJNY -->
+    <div>
+      <div style="background:#E6E2DA; border-left:4px solid #2A5670; padding:18px 20px;">
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#2B3138; margin-bottom:10px;">Boks informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#16191D; margin:0 0 10px;">Limit dofinansowania na uczestnika liczony jest od ceny usługi wskazanej w karcie BUR, nie od ceny katalogowej.</p>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#515961;">tło <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">neutral-light #E6E2DA</code> · krawędź <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">info #2A5670</code></div>
+      </div>
+      <div style="margin-top:12px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#26614A; color:#E6E2DA; padding:5px 10px; font-weight:700;">ZATWIERDZONE</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#8A5D0F; color:#FFFFFF; padding:5px 10px; font-weight:700;">TERMIN NABORU</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#A32D2A; color:#E6E2DA; padding:5px 10px; font-weight:700;">BRAK ZAŁĄCZNIKA</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#2A5670; color:#E6E2DA; padding:5px 10px; font-weight:700;">NOTA</span>
+      </div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#515961; margin-top:8px;">Każda plakietka niesie etykietę słowną, bo w druku mono te cztery kolory mają zbliżoną jasność.</div>
+    </div>
+  </div>
+
+  <!-- 4. TABELA -->
+  <div style="padding:0 32px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#515961; margin-bottom:12px;">§ 02 · Tabela</div>
+    <table style="width:100%; border-collapse:collapse; background:#FCFAF6;">
+      <thead>
+        <tr style="background:#E6E2DA;">
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#5A6470; border-bottom:2px solid #8F8B83;">Moduł</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#5A6470; border-bottom:2px solid #8F8B83;">Efekt uczenia się</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#5A6470; border-bottom:2px solid #8F8B83;">Godz.</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#5A6470; border-bottom:2px solid #8F8B83;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#16191D; border-bottom:1px solid #8F8B83;">01</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#16191D; border-bottom:1px solid #8F8B83;">Rozpoznaje zastosowania modeli językowych w pracy biurowej</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#16191D; border-bottom:1px solid #8F8B83;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#26614A; font-weight:700; border-bottom:1px solid #8F8B83;">✓ gotowe</td></tr>
+        <tr style="background:#F6F3ED;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#16191D; border-bottom:1px solid #8F8B83;">02</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#16191D; border-bottom:1px solid #8F8B83;">Formułuje polecenia dające powtarzalny wynik</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#16191D; border-bottom:1px solid #8F8B83;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#26614A; font-weight:700; border-bottom:1px solid #8F8B83;">✓ gotowe</td></tr>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#16191D; border-bottom:1px solid #8F8B83;">03</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#16191D; border-bottom:1px solid #8F8B83;">Weryfikuje wynik pod kątem zgodności z RODO</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#16191D; border-bottom:1px solid #8F8B83;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#8A5D0F; font-weight:700; border-bottom:1px solid #8F8B83;">! w opracowaniu</td></tr>
+        <tr style="background:#F6F3ED;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#16191D; border-bottom:2px solid #8F8B83;">04</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#16191D; border-bottom:2px solid #8F8B83;">Walidacja efektów uczenia się</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#16191D; border-bottom:2px solid #8F8B83;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#A32D2A; font-weight:700; border-bottom:2px solid #8F8B83;">✕ brak kryteriów</td></tr>
+      </tbody>
+    </table>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#515961; margin-top:8px;">Linie tabeli: <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">border #8F8B83</code>, kontrast na karcie 3,25:1.</div>
+  </div>
+
+  <!-- 5. CTA + LINK -->
+  <div style="padding:0 32px 32px; display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+    <a href="#w3" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#2B3138; color:#E6E2DA; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">Zapisz się na szkolenie</a>
+    <a href="#w3" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#A85E28; color:#FFFFFF; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">CTA na akcencie</a>
+    <a href="#w3" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:transparent; color:#2B3138; border:2px solid #2B3138; padding:10px 24px; text-decoration:none; font-weight:600; display:inline-block;">Pobierz program</a>
+    <a href="#w3" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#1F5B7A; text-decoration:underline; text-underline-offset:3px;">Link samodzielny w stopce</a>
+  </div>
+
+  <!-- 6. PRAWO / COMPLIANCE -->
+  <div style="background:#16191D; color:#E6E2DA; padding:26px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#A85E28; margin-bottom:12px;">§ 03 · Prawo i zgodność</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Podstawa prawna usługi</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; margin:0; opacity:0.92;">Zaświadczenie wydawane na podstawie rozporządzenia w sprawie kształcenia ustawicznego w formach pozaszkolnych. Usługa zarejestrowana w Bazie Usług Rozwojowych prowadzonej przez PARP.</p>
+      </div>
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Obowiązek informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; margin:0 0 10px; opacity:0.85;">Dane uczestnika przetwarzane wyłącznie w celu realizacji usługi rozwojowej i jej rozliczenia u operatora. Podanie danych jest warunkiem wydania zaświadczenia.</p>
+        <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.7;">nr usługi: <span style="color:#A85E28;">2026/09/IRIN/AI-40</span></div>
+      </div>
+    </div>
+    <div style="margin-top:20px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.22); display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Najniższa para tekstowa w tym wariancie: 4,89:1 (etykieta #FFFFFF na accent).</div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Kierunek: Ciepły papier zostaje, ale tusz przestaje być brązowy: cały szkielet typograficzny przechodzi na grafit, a jedynym kolorem pozostaje miedź.</div>
+    </div>
+  </div>
+</section>
+
+<section id="w4" data-screen-label="04 · Wariant 4 · Instytut" style="margin-top:40px; background:#F6F4EF; border:1px solid #878C90; overflow:hidden;">
+
+  <!-- pasek identyfikacyjny wariantu -->
+  <div style="background:#131A21; color:#E6E1D6; padding:14px 32px; display:flex; justify-content:space-between; align-items:baseline; gap:24px; flex-wrap:wrap;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase;">Wariant 4 · Instytut</div>
+    <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.85;">primary #1B3A5C · accent #B07A2E · link #14507E · par poniżej progu: 0</div>
+  </div>
+
+  <!-- pasek próbek -->
+  <div style="padding:16px 32px; background:#FDFCF9; border-bottom:1px solid #878C90; display:flex; gap:4px;"><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#1B3A5C; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">primary<br>#1B3A5C</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#3E6285; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">secondary<br>#3E6285</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#B07A2E; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">accent<br>#B07A2E</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#131A21; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-dark<br>#131A21</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#E6E1D6; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-light<br>#E6E1D6</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#1F6B4F; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">success<br>#1F6B4F</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#8F6412; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">warning<br>#8F6412</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#A32F30; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">error<br>#A32F30</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#1F5F7D; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">info<br>#1F5F7D</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#F6F4EF; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">background<br>#F6F4EF</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#FDFCF9; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">surface<br>#FDFCF9</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#878C90; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">border<br>#878C90</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#131A21; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-primary<br>#131A21</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#47525D; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-secondary<br>#47525D</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#14507E; border:1px solid #878C90;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">link<br>#14507E</div></div></div>
+
+  <!-- 1. STRONA TYTUŁOWA -->
+  <div style="background:#FDFCF9; padding:44px 32px 36px; border-bottom:1px solid #878C90;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#47525D; margin-bottom:18px;">Instytut Rozwoju i Nauki · dokument demonstracyjny</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:200; font-size:72px; line-height:0.92; letter-spacing:-0.03em; color:#1B3A5C; margin:0;">Akademia AI.</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:500; font-size:16px; line-height:1.4; color:#47525D; margin-top:18px; max-width:760px;">Szkolenie dofinansowane z Krajowego Funduszu Szkoleniowego. Karta usługi opublikowana w Bazie Usług Rozwojowych.</div>
+    <div style="margin-top:26px; height:2px; background:#B07A2E;"></div>
+    <div style="margin-top:22px; display:flex; gap:40px; flex-wrap:wrap; align-items:flex-end;">
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#1B3A5C;">40</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:6px;">godzin dydaktycznych</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#1B3A5C;">12</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:6px;">uczestników w grupie</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#B07A2E;">80%</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#47525D; margin-top:6px;">poziom dofinansowania</div></div>
+    </div>
+  </div>
+
+  <!-- 2. HIERARCHIA NAGŁÓWKÓW + AKAPIT -->
+  <div style="padding:32px; display:grid; grid-template-columns:1.55fr 1fr; gap:36px;">
+    <div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#47525D; margin-bottom:14px;">§ 01 · Program</div>
+      <h1 style="font-family:'Manrope', system-ui, sans-serif; font-weight:300; font-size:40px; line-height:1.0; letter-spacing:-0.02em; color:#1B3A5C; margin:0 0 16px;">Nagłówek H1 rozdziału</h1>
+      <h2 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-0.01em; color:#1B3A5C; margin:0 0 12px;">Nagłówek H2 sekcji</h2>
+      <h3 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; color:#3E6285; margin:0 0 10px;">Nagłówek H3 podsekcji</h3>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#131A21; margin:0 0 12px; max-width:640px;">Akapit korpusu w kroju Manrope 400, stopień 13,5 px, interlinia 1,55 - dokładnie tak, jak definiuje to sekcja 04 kanwy. Ten sam tekst powtarza się we wszystkich siedmiu wariantach, żeby jedyną zmienną pozostał kolor. Uczestnik szkolenia otrzymuje zaświadczenie o ukończeniu, a przedsiębiorca rozlicza koszt usługi w ramach przyznanego limitu.</p>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#47525D; margin:0; max-width:640px;">Tekst pomocniczy w kolorze <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">text-secondary</code>: metadane, opisy i przypisy. Odnośnik w treści wygląda tak - <a href="#w4" style="color:#14507E; text-decoration:underline; text-underline-offset:2px;">karta usługi w Bazie Usług Rozwojowych</a> - i musi być odróżnialny od komunikatu błędu.</p>
+    </div>
+
+    <!-- 3. BOX INFORMACYJNY -->
+    <div>
+      <div style="background:#E6E1D6; border-left:4px solid #1F5F7D; padding:18px 20px;">
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#1B3A5C; margin-bottom:10px;">Boks informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#131A21; margin:0 0 10px;">Limit dofinansowania na uczestnika liczony jest od ceny usługi wskazanej w karcie BUR, nie od ceny katalogowej.</p>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#47525D;">tło <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">neutral-light #E6E1D6</code> · krawędź <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">info #1F5F7D</code></div>
+      </div>
+      <div style="margin-top:12px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#1F6B4F; color:#E6E1D6; padding:5px 10px; font-weight:700;">ZATWIERDZONE</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#8F6412; color:#FFFFFF; padding:5px 10px; font-weight:700;">TERMIN NABORU</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#A32F30; color:#E6E1D6; padding:5px 10px; font-weight:700;">BRAK ZAŁĄCZNIKA</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#1F5F7D; color:#E6E1D6; padding:5px 10px; font-weight:700;">NOTA</span>
+      </div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#47525D; margin-top:8px;">Każda plakietka niesie etykietę słowną, bo w druku mono te cztery kolory mają zbliżoną jasność.</div>
+    </div>
+  </div>
+
+  <!-- 4. TABELA -->
+  <div style="padding:0 32px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#47525D; margin-bottom:12px;">§ 02 · Tabela</div>
+    <table style="width:100%; border-collapse:collapse; background:#FDFCF9;">
+      <thead>
+        <tr style="background:#E6E1D6;">
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3E6285; border-bottom:2px solid #878C90;">Moduł</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3E6285; border-bottom:2px solid #878C90;">Efekt uczenia się</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3E6285; border-bottom:2px solid #878C90;">Godz.</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3E6285; border-bottom:2px solid #878C90;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#131A21; border-bottom:1px solid #878C90;">01</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#131A21; border-bottom:1px solid #878C90;">Rozpoznaje zastosowania modeli językowych w pracy biurowej</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#131A21; border-bottom:1px solid #878C90;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#1F6B4F; font-weight:700; border-bottom:1px solid #878C90;">✓ gotowe</td></tr>
+        <tr style="background:#F6F4EF;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#131A21; border-bottom:1px solid #878C90;">02</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#131A21; border-bottom:1px solid #878C90;">Formułuje polecenia dające powtarzalny wynik</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#131A21; border-bottom:1px solid #878C90;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#1F6B4F; font-weight:700; border-bottom:1px solid #878C90;">✓ gotowe</td></tr>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#131A21; border-bottom:1px solid #878C90;">03</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#131A21; border-bottom:1px solid #878C90;">Weryfikuje wynik pod kątem zgodności z RODO</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#131A21; border-bottom:1px solid #878C90;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#8F6412; font-weight:700; border-bottom:1px solid #878C90;">! w opracowaniu</td></tr>
+        <tr style="background:#F6F4EF;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#131A21; border-bottom:2px solid #878C90;">04</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#131A21; border-bottom:2px solid #878C90;">Walidacja efektów uczenia się</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#131A21; border-bottom:2px solid #878C90;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#A32F30; font-weight:700; border-bottom:2px solid #878C90;">✕ brak kryteriów</td></tr>
+      </tbody>
+    </table>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#47525D; margin-top:8px;">Linie tabeli: <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">border #878C90</code>, kontrast na karcie 3,31:1.</div>
+  </div>
+
+  <!-- 5. CTA + LINK -->
+  <div style="padding:0 32px 32px; display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+    <a href="#w4" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#1B3A5C; color:#E6E1D6; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">Zapisz się na szkolenie</a>
+    <a href="#w4" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#B07A2E; color:#131A21; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">CTA na akcencie</a>
+    <a href="#w4" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:transparent; color:#1B3A5C; border:2px solid #1B3A5C; padding:10px 24px; text-decoration:none; font-weight:600; display:inline-block;">Pobierz program</a>
+    <a href="#w4" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#14507E; text-decoration:underline; text-underline-offset:3px;">Link samodzielny w stopce</a>
+  </div>
+
+  <!-- 6. PRAWO / COMPLIANCE -->
+  <div style="background:#131A21; color:#E6E1D6; padding:26px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#B07A2E; margin-bottom:12px;">§ 03 · Prawo i zgodność</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Podstawa prawna usługi</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; margin:0; opacity:0.92;">Zaświadczenie wydawane na podstawie rozporządzenia w sprawie kształcenia ustawicznego w formach pozaszkolnych. Usługa zarejestrowana w Bazie Usług Rozwojowych prowadzonej przez PARP.</p>
+      </div>
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Obowiązek informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; margin:0 0 10px; opacity:0.85;">Dane uczestnika przetwarzane wyłącznie w celu realizacji usługi rozwojowej i jej rozliczenia u operatora. Podanie danych jest warunkiem wydania zaświadczenia.</p>
+        <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.7;">nr usługi: <span style="color:#B07A2E;">2026/09/IRIN/AI-40</span></div>
+      </div>
+    </div>
+    <div style="margin-top:20px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.22); display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Najniższa para tekstowa w tym wariancie: 4,73:1 (etykieta neutral-dark na accent).</div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Kierunek: Granat dokumentu urzędowego jako kolor wiodący, przy zachowanym ciepłym papierze.</div>
+    </div>
+  </div>
+</section>
+
+<section id="w5" data-screen-label="05 · Wariant 5 · Werdykt" style="margin-top:40px; background:#F5F4EE; border:1px solid #898D87; overflow:hidden;">
+
+  <!-- pasek identyfikacyjny wariantu -->
+  <div style="background:#14201A; color:#E2E4DC; padding:14px 32px; display:flex; justify-content:space-between; align-items:baseline; gap:24px; flex-wrap:wrap;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase;">Wariant 5 · Werdykt</div>
+    <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.85;">primary #1E4A38 · accent #B08237 · link #1D5A6B · par poniżej progu: 0</div>
+  </div>
+
+  <!-- pasek próbek -->
+  <div style="padding:16px 32px; background:#FCFBF6; border-bottom:1px solid #898D87; display:flex; gap:4px;"><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#1E4A38; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">primary<br>#1E4A38</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#3C6B54; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">secondary<br>#3C6B54</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#B08237; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">accent<br>#B08237</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#14201A; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-dark<br>#14201A</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#E2E4DC; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-light<br>#E2E4DC</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#226B45; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">success<br>#226B45</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#8B6212; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">warning<br>#8B6212</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#A22E2C; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">error<br>#A22E2C</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#26596B; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">info<br>#26596B</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#F5F4EE; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">background<br>#F5F4EE</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#FCFBF6; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">surface<br>#FCFBF6</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#898D87; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">border<br>#898D87</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#14201A; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-primary<br>#14201A</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#455249; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-secondary<br>#455249</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#1D5A6B; border:1px solid #898D87;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">link<br>#1D5A6B</div></div></div>
+
+  <!-- 1. STRONA TYTUŁOWA -->
+  <div style="background:#FCFBF6; padding:44px 32px 36px; border-bottom:1px solid #898D87;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#455249; margin-bottom:18px;">Instytut Rozwoju i Nauki · dokument demonstracyjny</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:200; font-size:72px; line-height:0.92; letter-spacing:-0.03em; color:#1E4A38; margin:0;">Akademia AI.</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:500; font-size:16px; line-height:1.4; color:#455249; margin-top:18px; max-width:760px;">Szkolenie dofinansowane z Krajowego Funduszu Szkoleniowego. Karta usługi opublikowana w Bazie Usług Rozwojowych.</div>
+    <div style="margin-top:26px; height:2px; background:#B08237;"></div>
+    <div style="margin-top:22px; display:flex; gap:40px; flex-wrap:wrap; align-items:flex-end;">
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#1E4A38;">40</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:6px;">godzin dydaktycznych</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#1E4A38;">12</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:6px;">uczestników w grupie</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#B08237;">80%</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#455249; margin-top:6px;">poziom dofinansowania</div></div>
+    </div>
+  </div>
+
+  <!-- 2. HIERARCHIA NAGŁÓWKÓW + AKAPIT -->
+  <div style="padding:32px; display:grid; grid-template-columns:1.55fr 1fr; gap:36px;">
+    <div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#455249; margin-bottom:14px;">§ 01 · Program</div>
+      <h1 style="font-family:'Manrope', system-ui, sans-serif; font-weight:300; font-size:40px; line-height:1.0; letter-spacing:-0.02em; color:#1E4A38; margin:0 0 16px;">Nagłówek H1 rozdziału</h1>
+      <h2 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-0.01em; color:#1E4A38; margin:0 0 12px;">Nagłówek H2 sekcji</h2>
+      <h3 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; color:#3C6B54; margin:0 0 10px;">Nagłówek H3 podsekcji</h3>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#14201A; margin:0 0 12px; max-width:640px;">Akapit korpusu w kroju Manrope 400, stopień 13,5 px, interlinia 1,55 - dokładnie tak, jak definiuje to sekcja 04 kanwy. Ten sam tekst powtarza się we wszystkich siedmiu wariantach, żeby jedyną zmienną pozostał kolor. Uczestnik szkolenia otrzymuje zaświadczenie o ukończeniu, a przedsiębiorca rozlicza koszt usługi w ramach przyznanego limitu.</p>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#455249; margin:0; max-width:640px;">Tekst pomocniczy w kolorze <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">text-secondary</code>: metadane, opisy i przypisy. Odnośnik w treści wygląda tak - <a href="#w5" style="color:#1D5A6B; text-decoration:underline; text-underline-offset:2px;">karta usługi w Bazie Usług Rozwojowych</a> - i musi być odróżnialny od komunikatu błędu.</p>
+    </div>
+
+    <!-- 3. BOX INFORMACYJNY -->
+    <div>
+      <div style="background:#E2E4DC; border-left:4px solid #26596B; padding:18px 20px;">
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#1E4A38; margin-bottom:10px;">Boks informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#14201A; margin:0 0 10px;">Limit dofinansowania na uczestnika liczony jest od ceny usługi wskazanej w karcie BUR, nie od ceny katalogowej.</p>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#455249;">tło <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">neutral-light #E2E4DC</code> · krawędź <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">info #26596B</code></div>
+      </div>
+      <div style="margin-top:12px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#226B45; color:#E2E4DC; padding:5px 10px; font-weight:700;">ZATWIERDZONE</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#8B6212; color:#FFFFFF; padding:5px 10px; font-weight:700;">TERMIN NABORU</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#A22E2C; color:#E2E4DC; padding:5px 10px; font-weight:700;">BRAK ZAŁĄCZNIKA</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#26596B; color:#E2E4DC; padding:5px 10px; font-weight:700;">NOTA</span>
+      </div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#455249; margin-top:8px;">Każda plakietka niesie etykietę słowną, bo w druku mono te cztery kolory mają zbliżoną jasność.</div>
+    </div>
+  </div>
+
+  <!-- 4. TABELA -->
+  <div style="padding:0 32px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#455249; margin-bottom:12px;">§ 02 · Tabela</div>
+    <table style="width:100%; border-collapse:collapse; background:#FCFBF6;">
+      <thead>
+        <tr style="background:#E2E4DC;">
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3C6B54; border-bottom:2px solid #898D87;">Moduł</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3C6B54; border-bottom:2px solid #898D87;">Efekt uczenia się</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3C6B54; border-bottom:2px solid #898D87;">Godz.</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3C6B54; border-bottom:2px solid #898D87;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#14201A; border-bottom:1px solid #898D87;">01</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#14201A; border-bottom:1px solid #898D87;">Rozpoznaje zastosowania modeli językowych w pracy biurowej</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#14201A; border-bottom:1px solid #898D87;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#226B45; font-weight:700; border-bottom:1px solid #898D87;">✓ gotowe</td></tr>
+        <tr style="background:#F5F4EE;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#14201A; border-bottom:1px solid #898D87;">02</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#14201A; border-bottom:1px solid #898D87;">Formułuje polecenia dające powtarzalny wynik</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#14201A; border-bottom:1px solid #898D87;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#226B45; font-weight:700; border-bottom:1px solid #898D87;">✓ gotowe</td></tr>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#14201A; border-bottom:1px solid #898D87;">03</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#14201A; border-bottom:1px solid #898D87;">Weryfikuje wynik pod kątem zgodności z RODO</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#14201A; border-bottom:1px solid #898D87;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#8B6212; font-weight:700; border-bottom:1px solid #898D87;">! w opracowaniu</td></tr>
+        <tr style="background:#F5F4EE;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#14201A; border-bottom:2px solid #898D87;">04</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#14201A; border-bottom:2px solid #898D87;">Walidacja efektów uczenia się</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#14201A; border-bottom:2px solid #898D87;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#A22E2C; font-weight:700; border-bottom:2px solid #898D87;">✕ brak kryteriów</td></tr>
+      </tbody>
+    </table>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#455249; margin-top:8px;">Linie tabeli: <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">border #898D87</code>, kontrast na karcie 3,26:1.</div>
+  </div>
+
+  <!-- 5. CTA + LINK -->
+  <div style="padding:0 32px 32px; display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+    <a href="#w5" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#1E4A38; color:#E2E4DC; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">Zapisz się na szkolenie</a>
+    <a href="#w5" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#B08237; color:#14201A; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">CTA na akcencie</a>
+    <a href="#w5" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:transparent; color:#1E4A38; border:2px solid #1E4A38; padding:10px 24px; text-decoration:none; font-weight:600; display:inline-block;">Pobierz program</a>
+    <a href="#w5" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#1D5A6B; text-decoration:underline; text-underline-offset:3px;">Link samodzielny w stopce</a>
+  </div>
+
+  <!-- 6. PRAWO / COMPLIANCE -->
+  <div style="background:#14201A; color:#E2E4DC; padding:26px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#B08237; margin-bottom:12px;">§ 03 · Prawo i zgodność</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Podstawa prawna usługi</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; margin:0; opacity:0.92;">Zaświadczenie wydawane na podstawie rozporządzenia w sprawie kształcenia ustawicznego w formach pozaszkolnych. Usługa zarejestrowana w Bazie Usług Rozwojowych prowadzonej przez PARP.</p>
+      </div>
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Obowiązek informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; margin:0 0 10px; opacity:0.85;">Dane uczestnika przetwarzane wyłącznie w celu realizacji usługi rozwojowej i jej rozliczenia u operatora. Podanie danych jest warunkiem wydania zaświadczenia.</p>
+        <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.7;">nr usługi: <span style="color:#B08237;">2026/09/IRIN/AI-40</span></div>
+      </div>
+    </div>
+    <div style="margin-top:20px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.22); display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Najniższa para tekstowa w tym wariancie: 4,87:1 (etykieta neutral-dark na accent).</div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Kierunek: Kolor Werdykt, który w zatwierdzonej palecie pełnił funkcję stanu potwierdzonego, awansuje na kolor wiodący.</div>
+    </div>
+  </div>
+</section>
+
+<section id="w6" data-screen-label="06 · Wariant 6 · Druk Ekonomiczny" style="margin-top:40px; background:#FBFAF7; border:1px solid #928F89; overflow:hidden;">
+
+  <!-- pasek identyfikacyjny wariantu -->
+  <div style="background:#0A0A0A; color:#E8E6E1; padding:14px 32px; display:flex; justify-content:space-between; align-items:baseline; gap:24px; flex-wrap:wrap;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase;">Wariant 6 · Druk Ekonomiczny</div>
+    <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.85;">primary #111111 · accent #7A2418 · link #7A2418 · par poniżej progu: 0</div>
+  </div>
+
+  <!-- pasek próbek -->
+  <div style="padding:16px 32px; background:#FFFFFF; border-bottom:1px solid #928F89; display:flex; gap:4px;"><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#111111; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">primary<br>#111111</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#3D3D3D; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">secondary<br>#3D3D3D</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#7A2418; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">accent<br>#7A2418</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#0A0A0A; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-dark<br>#0A0A0A</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#E8E6E1; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-light<br>#E8E6E1</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#2A4F35; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">success<br>#2A4F35</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#6B5307; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">warning<br>#6B5307</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#8E1B1B; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">error<br>#8E1B1B</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#2E4560; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">info<br>#2E4560</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#FBFAF7; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">background<br>#FBFAF7</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#FFFFFF; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">surface<br>#FFFFFF</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#928F89; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">border<br>#928F89</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#0A0A0A; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-primary<br>#0A0A0A</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#4A4A4A; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-secondary<br>#4A4A4A</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#7A2418; border:1px solid #928F89;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">link<br>#7A2418</div></div></div>
+
+  <!-- 1. STRONA TYTUŁOWA -->
+  <div style="background:#FFFFFF; padding:44px 32px 36px; border-bottom:1px solid #928F89;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#4A4A4A; margin-bottom:18px;">Instytut Rozwoju i Nauki · dokument demonstracyjny</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:200; font-size:72px; line-height:0.92; letter-spacing:-0.03em; color:#111111; margin:0;">Akademia AI.</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:500; font-size:16px; line-height:1.4; color:#4A4A4A; margin-top:18px; max-width:760px;">Szkolenie dofinansowane z Krajowego Funduszu Szkoleniowego. Karta usługi opublikowana w Bazie Usług Rozwojowych.</div>
+    <div style="margin-top:26px; height:2px; background:#7A2418;"></div>
+    <div style="margin-top:22px; display:flex; gap:40px; flex-wrap:wrap; align-items:flex-end;">
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#111111;">40</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:6px;">godzin dydaktycznych</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#111111;">12</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:6px;">uczestników w grupie</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#7A2418;">80%</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4A4A4A; margin-top:6px;">poziom dofinansowania</div></div>
+    </div>
+  </div>
+
+  <!-- 2. HIERARCHIA NAGŁÓWKÓW + AKAPIT -->
+  <div style="padding:32px; display:grid; grid-template-columns:1.55fr 1fr; gap:36px;">
+    <div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#4A4A4A; margin-bottom:14px;">§ 01 · Program</div>
+      <h1 style="font-family:'Manrope', system-ui, sans-serif; font-weight:300; font-size:40px; line-height:1.0; letter-spacing:-0.02em; color:#111111; margin:0 0 16px;">Nagłówek H1 rozdziału</h1>
+      <h2 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-0.01em; color:#111111; margin:0 0 12px;">Nagłówek H2 sekcji</h2>
+      <h3 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; color:#3D3D3D; margin:0 0 10px;">Nagłówek H3 podsekcji</h3>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#0A0A0A; margin:0 0 12px; max-width:640px;">Akapit korpusu w kroju Manrope 400, stopień 13,5 px, interlinia 1,55 - dokładnie tak, jak definiuje to sekcja 04 kanwy. Ten sam tekst powtarza się we wszystkich siedmiu wariantach, żeby jedyną zmienną pozostał kolor. Uczestnik szkolenia otrzymuje zaświadczenie o ukończeniu, a przedsiębiorca rozlicza koszt usługi w ramach przyznanego limitu.</p>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#4A4A4A; margin:0; max-width:640px;">Tekst pomocniczy w kolorze <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">text-secondary</code>: metadane, opisy i przypisy. Odnośnik w treści wygląda tak - <a href="#w6" style="color:#7A2418; text-decoration:underline; text-underline-offset:2px;">karta usługi w Bazie Usług Rozwojowych</a> - i musi być odróżnialny od komunikatu błędu.</p>
+    </div>
+
+    <!-- 3. BOX INFORMACYJNY -->
+    <div>
+      <div style="background:#E8E6E1; border-left:4px solid #2E4560; padding:18px 20px;">
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#111111; margin-bottom:10px;">Boks informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#0A0A0A; margin:0 0 10px;">Limit dofinansowania na uczestnika liczony jest od ceny usługi wskazanej w karcie BUR, nie od ceny katalogowej.</p>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#4A4A4A;">tło <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">neutral-light #E8E6E1</code> · krawędź <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">info #2E4560</code></div>
+      </div>
+      <div style="margin-top:12px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#2A4F35; color:#E8E6E1; padding:5px 10px; font-weight:700;">ZATWIERDZONE</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#6B5307; color:#E8E6E1; padding:5px 10px; font-weight:700;">TERMIN NABORU</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#8E1B1B; color:#E8E6E1; padding:5px 10px; font-weight:700;">BRAK ZAŁĄCZNIKA</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#2E4560; color:#E8E6E1; padding:5px 10px; font-weight:700;">NOTA</span>
+      </div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#4A4A4A; margin-top:8px;">Każda plakietka niesie etykietę słowną, bo w druku mono te cztery kolory mają zbliżoną jasność.</div>
+    </div>
+  </div>
+
+  <!-- 4. TABELA -->
+  <div style="padding:0 32px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#4A4A4A; margin-bottom:12px;">§ 02 · Tabela</div>
+    <table style="width:100%; border-collapse:collapse; background:#FFFFFF;">
+      <thead>
+        <tr style="background:#E8E6E1;">
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3D3D3D; border-bottom:2px solid #928F89;">Moduł</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3D3D3D; border-bottom:2px solid #928F89;">Efekt uczenia się</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3D3D3D; border-bottom:2px solid #928F89;">Godz.</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#3D3D3D; border-bottom:2px solid #928F89;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0A0A0A; border-bottom:1px solid #928F89;">01</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0A0A0A; border-bottom:1px solid #928F89;">Rozpoznaje zastosowania modeli językowych w pracy biurowej</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#0A0A0A; border-bottom:1px solid #928F89;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#2A4F35; font-weight:700; border-bottom:1px solid #928F89;">✓ gotowe</td></tr>
+        <tr style="background:#FBFAF7;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0A0A0A; border-bottom:1px solid #928F89;">02</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0A0A0A; border-bottom:1px solid #928F89;">Formułuje polecenia dające powtarzalny wynik</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#0A0A0A; border-bottom:1px solid #928F89;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#2A4F35; font-weight:700; border-bottom:1px solid #928F89;">✓ gotowe</td></tr>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0A0A0A; border-bottom:1px solid #928F89;">03</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0A0A0A; border-bottom:1px solid #928F89;">Weryfikuje wynik pod kątem zgodności z RODO</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#0A0A0A; border-bottom:1px solid #928F89;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#6B5307; font-weight:700; border-bottom:1px solid #928F89;">! w opracowaniu</td></tr>
+        <tr style="background:#FBFAF7;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0A0A0A; border-bottom:2px solid #928F89;">04</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0A0A0A; border-bottom:2px solid #928F89;">Walidacja efektów uczenia się</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#0A0A0A; border-bottom:2px solid #928F89;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#8E1B1B; font-weight:700; border-bottom:2px solid #928F89;">✕ brak kryteriów</td></tr>
+      </tbody>
+    </table>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#4A4A4A; margin-top:8px;">Linie tabeli: <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">border #928F89</code>, kontrast na karcie 3,22:1.</div>
+  </div>
+
+  <!-- 5. CTA + LINK -->
+  <div style="padding:0 32px 32px; display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+    <a href="#w6" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#111111; color:#E8E6E1; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">Zapisz się na szkolenie</a>
+    <a href="#w6" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#7A2418; color:#E8E6E1; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">CTA na akcencie</a>
+    <a href="#w6" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:transparent; color:#111111; border:2px solid #111111; padding:10px 24px; text-decoration:none; font-weight:600; display:inline-block;">Pobierz program</a>
+    <a href="#w6" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#7A2418; text-decoration:underline; text-underline-offset:3px;">Link samodzielny w stopce</a>
+  </div>
+
+  <!-- 6. PRAWO / COMPLIANCE -->
+  <div style="background:#0A0A0A; color:#E8E6E1; padding:26px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#7A2418; margin-bottom:12px;">§ 03 · Prawo i zgodność</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Podstawa prawna usługi</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; margin:0; opacity:0.92;">Zaświadczenie wydawane na podstawie rozporządzenia w sprawie kształcenia ustawicznego w formach pozaszkolnych. Usługa zarejestrowana w Bazie Usług Rozwojowych prowadzonej przez PARP.</p>
+      </div>
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Obowiązek informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; margin:0 0 10px; opacity:0.85;">Dane uczestnika przetwarzane wyłącznie w celu realizacji usługi rozwojowej i jej rozliczenia u operatora. Podanie danych jest warunkiem wydania zaświadczenia.</p>
+        <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.7;">nr usługi: <span style="color:#7A2418;">2026/09/IRIN/AI-40</span></div>
+      </div>
+    </div>
+    <div style="margin-top:20px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.22); display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Najniższa para tekstowa w tym wariancie: 5,88:1 (etykieta neutral-light na warning).</div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Kierunek: Prawie monochromatyczny system z jednym ceglanym akcentem, zaprojektowany pod najgorszy realny scenariusz dystrybucji: zaświadczenie KFS skserowane, zeskanowane i wydrukowane mono w dziale kadr.</div>
+    </div>
+  </div>
+</section>
+
+<section id="w7" data-screen-label="07 · Wariant 7 · Portal Cyfrowy" style="margin-top:40px; background:#F7F9FA; border:1px solid #8A9093; overflow:hidden;">
+
+  <!-- pasek identyfikacyjny wariantu -->
+  <div style="background:#0F172A; color:#E7EDF0; padding:14px 32px; display:flex; justify-content:space-between; align-items:baseline; gap:24px; flex-wrap:wrap;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase;">Wariant 7 · Portal Cyfrowy</div>
+    <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.85;">primary #10505F · accent #C2410C · link #0369A1 · par poniżej progu: 0</div>
+  </div>
+
+  <!-- pasek próbek -->
+  <div style="padding:16px 32px; background:#FFFFFF; border-bottom:1px solid #8A9093; display:flex; gap:4px;"><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#10505F; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">primary<br>#10505F</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#2A7F93; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">secondary<br>#2A7F93</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#C2410C; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">accent<br>#C2410C</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#0F172A; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-dark<br>#0F172A</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#E7EDF0; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">neutral-light<br>#E7EDF0</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#15803D; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">success<br>#15803D</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#B45309; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">warning<br>#B45309</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#B91C1C; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">error<br>#B91C1C</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#0369A1; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">info<br>#0369A1</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#F7F9FA; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">background<br>#F7F9FA</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#FFFFFF; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">surface<br>#FFFFFF</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#8A9093; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">border<br>#8A9093</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#0F172A; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-primary<br>#0F172A</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#4B5563; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">text-secondary<br>#4B5563</div></div><div style="flex:1 1 0; min-width:0;"><div style="height:34px; background:#0369A1; border:1px solid #8A9093;"></div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:4px; font-size:9px; overflow:hidden; text-overflow:ellipsis;">link<br>#0369A1</div></div></div>
+
+  <!-- 1. STRONA TYTUŁOWA -->
+  <div style="background:#FFFFFF; padding:44px 32px 36px; border-bottom:1px solid #8A9093;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#4B5563; margin-bottom:18px;">Instytut Rozwoju i Nauki · dokument demonstracyjny</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:200; font-size:72px; line-height:0.92; letter-spacing:-0.03em; color:#10505F; margin:0;">Akademia AI.</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:500; font-size:16px; line-height:1.4; color:#4B5563; margin-top:18px; max-width:760px;">Szkolenie dofinansowane z Krajowego Funduszu Szkoleniowego. Karta usługi opublikowana w Bazie Usług Rozwojowych.</div>
+    <div style="margin-top:26px; height:2px; background:#C2410C;"></div>
+    <div style="margin-top:22px; display:flex; gap:40px; flex-wrap:wrap; align-items:flex-end;">
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#10505F;">40</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:6px;">godzin dydaktycznych</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#10505F;">12</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:6px;">uczestników w grupie</div></div>
+      <div><div style="font-family:'Manrope', system-ui, sans-serif; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; color:#C2410C;">80%</div><div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; color:#4B5563; margin-top:6px;">poziom dofinansowania</div></div>
+    </div>
+  </div>
+
+  <!-- 2. HIERARCHIA NAGŁÓWKÓW + AKAPIT -->
+  <div style="padding:32px; display:grid; grid-template-columns:1.55fr 1fr; gap:36px;">
+    <div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#4B5563; margin-bottom:14px;">§ 01 · Program</div>
+      <h1 style="font-family:'Manrope', system-ui, sans-serif; font-weight:300; font-size:40px; line-height:1.0; letter-spacing:-0.02em; color:#10505F; margin:0 0 16px;">Nagłówek H1 rozdziału</h1>
+      <h2 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-0.01em; color:#10505F; margin:0 0 12px;">Nagłówek H2 sekcji</h2>
+      <h3 style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; color:#2A7F93; margin:0 0 10px;">Nagłówek H3 podsekcji</h3>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#0F172A; margin:0 0 12px; max-width:640px;">Akapit korpusu w kroju Manrope 400, stopień 13,5 px, interlinia 1,55 - dokładnie tak, jak definiuje to sekcja 04 kanwy. Ten sam tekst powtarza się we wszystkich siedmiu wariantach, żeby jedyną zmienną pozostał kolor. Uczestnik szkolenia otrzymuje zaświadczenie o ukończeniu, a przedsiębiorca rozlicza koszt usługi w ramach przyznanego limitu.</p>
+      <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#4B5563; margin:0; max-width:640px;">Tekst pomocniczy w kolorze <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">text-secondary</code>: metadane, opisy i przypisy. Odnośnik w treści wygląda tak - <a href="#w7" style="color:#0369A1; text-decoration:underline; text-underline-offset:2px;">karta usługi w Bazie Usług Rozwojowych</a> - i musi być odróżnialny od komunikatu błędu.</p>
+    </div>
+
+    <!-- 3. BOX INFORMACYJNY -->
+    <div>
+      <div style="background:#E7EDF0; border-left:4px solid #0369A1; padding:18px 20px;">
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#10505F; margin-bottom:10px;">Boks informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#0F172A; margin:0 0 10px;">Limit dofinansowania na uczestnika liczony jest od ceny usługi wskazanej w karcie BUR, nie od ceny katalogowej.</p>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#4B5563;">tło <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">neutral-light #E7EDF0</code> · krawędź <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">info #0369A1</code></div>
+      </div>
+      <div style="margin-top:12px; display:flex; gap:6px; flex-wrap:wrap;">
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#15803D; color:#FFFFFF; padding:5px 10px; font-weight:700;">ZATWIERDZONE</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#B45309; color:#FFFFFF; padding:5px 10px; font-weight:700;">TERMIN NABORU</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#B91C1C; color:#E7EDF0; padding:5px 10px; font-weight:700;">BRAK ZAŁĄCZNIKA</span>
+        <span style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; background:#0369A1; color:#E7EDF0; padding:5px 10px; font-weight:700;">NOTA</span>
+      </div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#4B5563; margin-top:8px;">Każda plakietka niesie etykietę słowną, bo w druku mono te cztery kolory mają zbliżoną jasność.</div>
+    </div>
+  </div>
+
+  <!-- 4. TABELA -->
+  <div style="padding:0 32px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase; color:#4B5563; margin-bottom:12px;">§ 02 · Tabela</div>
+    <table style="width:100%; border-collapse:collapse; background:#FFFFFF;">
+      <thead>
+        <tr style="background:#E7EDF0;">
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#2A7F93; border-bottom:2px solid #8A9093;">Moduł</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:left; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#2A7F93; border-bottom:2px solid #8A9093;">Efekt uczenia się</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#2A7F93; border-bottom:2px solid #8A9093;">Godz.</th>
+          <th style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; text-align:right; padding:9px 12px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#2A7F93; border-bottom:2px solid #8A9093;">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0F172A; border-bottom:1px solid #8A9093;">01</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0F172A; border-bottom:1px solid #8A9093;">Rozpoznaje zastosowania modeli językowych w pracy biurowej</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#0F172A; border-bottom:1px solid #8A9093;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#15803D; font-weight:700; border-bottom:1px solid #8A9093;">✓ gotowe</td></tr>
+        <tr style="background:#F7F9FA;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0F172A; border-bottom:1px solid #8A9093;">02</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0F172A; border-bottom:1px solid #8A9093;">Formułuje polecenia dające powtarzalny wynik</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#0F172A; border-bottom:1px solid #8A9093;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#15803D; font-weight:700; border-bottom:1px solid #8A9093;">✓ gotowe</td></tr>
+        <tr><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0F172A; border-bottom:1px solid #8A9093;">03</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0F172A; border-bottom:1px solid #8A9093;">Weryfikuje wynik pod kątem zgodności z RODO</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#0F172A; border-bottom:1px solid #8A9093;">12</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#B45309; font-weight:700; border-bottom:1px solid #8A9093;">! w opracowaniu</td></tr>
+        <tr style="background:#F7F9FA;"><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0F172A; border-bottom:2px solid #8A9093;">04</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; padding:9px 12px; color:#0F172A; border-bottom:2px solid #8A9093;">Walidacja efektów uczenia się</td><td style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; padding:9px 12px; text-align:right; color:#0F172A; border-bottom:2px solid #8A9093;">8</td><td style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; padding:9px 12px; text-align:right; color:#B91C1C; font-weight:700; border-bottom:2px solid #8A9093;">✕ brak kryteriów</td></tr>
+      </tbody>
+    </table>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; color:#4B5563; margin-top:8px;">Linie tabeli: <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">border #8A9093</code>, kontrast na karcie 3,24:1.</div>
+  </div>
+
+  <!-- 5. CTA + LINK -->
+  <div style="padding:0 32px 32px; display:flex; gap:14px; align-items:center; flex-wrap:wrap;">
+    <a href="#w7" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#10505F; color:#E7EDF0; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">Zapisz się na szkolenie</a>
+    <a href="#w7" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:#C2410C; color:#FFFFFF; padding:12px 26px; text-decoration:none; font-weight:600; display:inline-block;">CTA na akcencie</a>
+    <a href="#w7" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; background:transparent; color:#10505F; border:2px solid #10505F; padding:10px 24px; text-decoration:none; font-weight:600; display:inline-block;">Pobierz program</a>
+    <a href="#w7" style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; color:#0369A1; text-decoration:underline; text-underline-offset:3px;">Link samodzielny w stopce</a>
+  </div>
+
+  <!-- 6. PRAWO / COMPLIANCE -->
+  <div style="background:#0F172A; color:#E7EDF0; padding:26px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#C2410C; margin-bottom:12px;">§ 03 · Prawo i zgodność</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px;">
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Podstawa prawna usługi</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; margin:0; opacity:0.92;">Zaświadczenie wydawane na podstawie rozporządzenia w sprawie kształcenia ustawicznego w formach pozaszkolnych. Usługa zarejestrowana w Bazie Usług Rozwojowych prowadzonej przez PARP.</p>
+      </div>
+      <div>
+        <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:16px; line-height:1.3; margin:0 0 8px;">Obowiązek informacyjny</div>
+        <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; margin:0 0 10px; opacity:0.85;">Dane uczestnika przetwarzane wyłącznie w celu realizacji usługi rozwojowej i jej rozliczenia u operatora. Podanie danych jest warunkiem wydania zaświadczenia.</p>
+        <div style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5; opacity:0.7;">nr usługi: <span style="color:#C2410C;">2026/09/IRIN/AI-40</span></div>
+      </div>
+    </div>
+    <div style="margin-top:20px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.22); display:flex; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Najniższa para tekstowa w tym wariancie: 4,61:1 (secondary (H3) na surface).</div>
+      <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:10px; line-height:1.5; opacity:0.8;">Kierunek: Jedyny wariant zaprojektowany pod ekran, a nie pod papier: chłodna biel jako powierzchnia, morski `primary` i żywy miedziano-pomarańczowy przycisk akcji.</div>
+    </div>
+  </div>
+</section>
+
+  <section style="margin-top:40px; background:#FFFFFF; border:1px solid #1E1611; padding:28px 32px;">
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837; margin-bottom:12px;">Pytanie do decyzji</div>
+    <div style="font-family:'Manrope', system-ui, sans-serif; font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-0.01em; margin:0 0 10px;">Który wariant wybierasz (1-7)?</div>
+    <p style="font-family:'Manrope', system-ui, sans-serif; font-weight:400; font-size:13.5px; line-height:1.55; max-width:760px; margin:0; color:#3A2C1E;">Do czasu wskazania numeru obowiązuje paleta zatwierdzona 2026-09-02, wpisana w <code style="font-family:'Inconsolata', ui-monospace, monospace; font-size:10.5px; line-height:1.5;">03-pakiet-claude-design/format-paczki.md</code>. Ten podgląd niczego tam nie nadpisał.</p>
+  </section>
+
+</div>
+</x-dc>
+</body>
+</html>
