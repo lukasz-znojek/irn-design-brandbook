@@ -17,7 +17,7 @@ Wpis do BUR jest bezpłatny; kosztem po stronie IRIN jest uzyskanie i utrzymanie
 
 **Powiązanie z KFS:** od 1 stycznia 2026 r. wpis do BUR jest też warunkiem prowadzenia szkoleń finansowanych z Krajowego Funduszu Szkoleniowego — patrz `./kfs.md`. Dla IRIN oznacza to jeden wspólny wymóg rejestrowy dla obu ścieżek szkoleniowych, nie dwa osobne.
 
-**Powiązanie z PSF:** dla Podmiotowego Systemu Finansowania (PSF, patrz `./psf.md`) potwierdzone jest tylko, że **usługa** musi być wybrana z BUR — to jest warunek konieczny mechanizmu PSF niezależnie od regionu. Czy dodatkowo wymagany jest wpis **dostawcy** do BUR (analogicznie do KFS) — nie znaleziono tego wprost w wytycznych EFS+ dla programów regionalnych; **status: do potwierdzenia**, nie zakładać automatycznie tego samego wymogu co przy KFS.
+**Powiązanie z PSF:** dla Podmiotowego Systemu Finansowania (PSF, patrz `./psf.md`) potwierdzone jest, że **usługa** musi być wybrana z BUR — warunek konieczny mechanizmu PSF niezależnie od regionu. Wpis **dostawcy** do BUR (konto + regulamin, jak w sekcji wyżej) jest tu wymagany pośrednio, tą samą drogą co dla każdej usługi w BUR — bo usługa nie może być opublikowana bez zarejestrowanego za nią dostawcy (Regulamin BUR, Załącznik nr 4 „Zasady funkcjonowania Dostawców usług"; źródła w `./psf.md`). To nie jest osobny, PSF-specyficzny przepis analogiczny do KFS — wynika z ogólnej mechaniki BUR. **Status: do potwierdzenia pozostaje** tylko węższe pytanie, czy poszczególni operatorzy regionalni PSF nakładają na dostawcę dodatkowe kryteria ponad ten bazowy wpis.
 
 ## Karta Usługi — obowiązkowe pola
 
