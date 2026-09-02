@@ -78,7 +78,7 @@ Poprzednia paleta miała 12 kolorów; ta ma 14. Żaden kolor nie został usunię
 | **Popiół** | *nie istniał* | `#938978` | **kolor nowy**. Powód: wcześniej linie tabeli rysowało się pełnym Espresso, więc każda kreska miała wagę ramki i tabela nie miała hierarchii linii cienkiej i grubej. |
 | **Patyna** | *nie istniał* | `#2F5A63` | **kolor nowy**. Powód: wcześniej odnośnik i komunikat błędu były fizycznie tym samym kolorem (Karmin, kontrast wzajemny 1,00:1), więc czytelnik nie mógł ich odróżnić inaczej niż z kontekstu zdania. |
 
-**Dwie nazwy do potwierdzenia:** „Popiół” i „Patyna” to propozycja nazewnicza, nie decyzja foundera. Trzymają się konwencji pozostałych dwunastu (materiał albo barwnik: Kaszmir, Aksamit, Sepia, Karmin, Miedź, Onyks), a „Patyna” dodatkowo wiąże się znaczeniowo z Miedzią. Jeśli mają brzmieć inaczej, zmiana dotyczy wyłącznie nazwy - hexy i role zostają.
+**Dwie nazwy nowe, zatwierdzone przez foundera (2026-09-02):** „Popiół” (`border`) i „Patyna” (`link`). Trzymają się konwencji pozostałych dwunastu - materiał albo barwnik, jak Kaszmir, Aksamit, Sepia, Karmin, Miedź, Onyks - a „Patyna” wiąże się dodatkowo znaczeniowo z Miedzią. Obie nazwy są obowiązujące na równi z pozostałymi dwunastoma.
 
 **Jedno ryzyko, które zostaje w tej palecie:** Patyna (`#2F5A63`) i Onyks (`#33474F`) mają kontrast wzajemny 1,28:1. Jeśli odnośnik trafi do wnętrza boksu informacyjnego rysowanego Onyksem, oba kolory się zleją. Zabezpieczenie: odnośnik wewnątrz boksu `info` zawsze z podkreśleniem.
 

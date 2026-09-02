@@ -135,7 +135,8 @@
     "border": {
       "hex": "#938978",
       "nazwa": "Popiół",
-      "rola": "linie tabeli, obrys karty i pola formularza"
+      "rola": "linie tabeli, obrys karty i pola formularza",
+      "nazwa-zatwierdzona": "2026-09-02"
     },
     "text-primary": {
       "hex": "#221A15",
@@ -150,7 +151,8 @@
     "link": {
       "hex": "#2F5A63",
       "nazwa": "Patyna",
-      "rola": "odnośnik w treści i w interfejsie"
+      "rola": "odnośnik w treści i w interfejsie",
+      "nazwa-zatwierdzona": "2026-09-02"
     }
   },
   "kontrasty": [
@@ -258,7 +260,6 @@
   "ograniczenia": [
     "Kolor nigdy nie jest jedynym nośnikiem statusu - każdy stan wymaga etykiety słownej albo ikony (WCAG 1.4.1). Po konwersji do skali szarości Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność.",
     "Odnośnik wewnątrz boksu informacyjnego zawsze z podkreśleniem - Patyna i Onyks mają kontrast wzajemny 1,28:1.",
-    "Złoto foliowe nigdy jako tło większej powierzchni ani jako kolor tekstu korpusu.",
-    "Nazwy „Popiół” i „Patyna” to propozycja nazewnicza, nie decyzja foundera - do potwierdzenia."
+    "Złoto foliowe nigdy jako tło większej powierzchni ani jako kolor tekstu korpusu."
   ]
 }
