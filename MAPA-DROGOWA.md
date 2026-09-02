@@ -135,6 +135,20 @@ Etapy 1 i 2 były niezależne; etap 1 jest zamknięty. Etap 2 wymaga dostępu do
 
 Papier firmowy i wizytówka wymagają wszystkich czterech specyfikacji identyfikacji (logotyp, paleta, siatka, typografia) i mają najmniej zależności prawnych: jedyny wymóg to komplet danych rejestrowych, który zależy od jednej decyzji foundera. Certyfikat i karta usługi BUR zależą od Załączników 2 i 12 Regulaminu BUR, których odczyt jest w grupie III i może się przeciągnąć. Falsyfikator tego wyboru: jeśli founder potrzebuje pilnie zaświadczenia KFS na najbliższe szkolenie, pilotem staje się certyfikat, a papier firmowy idzie jako drugi.
 
+## Śledzenie w GitHub
+
+Od 2026-09-02 wykonanie śledzą issues w repozytorium; decyzje i specyfikacja zostają w `PLAN.md` i w plikach warstw. Zasada podziału: **issue mówi, co jest do zrobienia i przez kogo, plik mówi, co zostało ustalone.** Treści się nie kopiuje, issue odsyła do pozycji w `PLAN.md` albo do pliku.
+
+| Co | Gdzie w GitHubie |
+|---|---|
+| Etapy 0-3, zadania 1-19 (zrealizowane) | milestone „Etapy 0-3: budowa repozytorium”, zamknięty; issues #10-#28 zamknięte jako zapis historyczny |
+| Etap 2, osiem dokumentów | milestone „Etap 2”, issue nadrzędny #29, podzadania #30-#37 |
+| Etap 4, pilot | milestone „Etap 4”, issue nadrzędny #38, podzadania #39-#45 |
+| Etap 5, zamknięcie | milestone „Etap 5”, issue nadrzędny #46, podzadania #47-#51 (w tym martwe gałęzie i falsyfikator Karmin obok Aksamitu) |
+| Sześć decyzji odłożonych plus reguła kontrastu znaku | issue nadrzędny #52, podzadania #53-#59, bez milestone |
+
+Etykiety: `warstwa-1`, `warstwa-2`, `warstwa-3` (której warstwy dotyczy praca) i `czeka-na-foundera` (nie ruszy bez decyzji albo danych od foundera). Tablica Projects nie została założona: z sesji Claude Code nie da się jej utworzyć (Projects działa tylko przez GraphQL, który proxy sesji odrzuca), a milestones i podzadania dają ten sam widok postępu bez niej. Jeśli tablica ma powstać, zakłada ją founder w UI i dodaje do niej cztery issues nadrzędne.
+
 ## Czego ta mapa nie rozstrzyga
 
 - Czy repozytorium ma zostać publiczne. Od tego zależy decyzja o danych rejestrowych, nie odwrotnie.

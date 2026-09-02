@@ -37,6 +37,8 @@ Nie były ponumerowane wyżej, bo PLAN.md nie przewidywał jeszcze tych plików 
 
 ## Domknięcie projektu
 
+Wykonanie zadań 20-23 śledzą issues w GitHubie (nadrzędne: #29 etap 2, #38 etap 4, #46 etap 5, #52 decyzje odłożone); ten plik zostaje źródłem decyzji i specyfikacji. Mapa zależności: `MAPA-DROGOWA.md`, sekcja „Śledzenie w GitHub”.
+
 17. Etapy 0-5 z bramkami, podział na to, co robi Claude Code, co rozstrzyga founder i co wymaga odczytu dokumentów u źródła → `MAPA-DROGOWA.md`. Zrealizowane.
 18. Etap 0, higiena: poprawić nieaktualne zdania w `00-INDEX.md`, `01-baza-wiedzy/README.md` i tym pliku; scalić PR #4, zamknąć PR #6. Zrealizowane 2026-09-02, poza usunięciem dwóch martwych gałęzi (blokuje to proxy sesji; do zrobienia w GitHubie ręcznie).
 19. Etap 1, decyzje foundera blokujące pilota: forma prawna, siedziba i dane rejestrowe oraz konwencja papieru firmowego i wizytówki → `01-baza-wiedzy/firma/`, `02-szablony-dokumentow/papier-firmowy.md`. Zrealizowane 2026-09-02; sześć decyzji odłożonych do pierwszego użycia dokumentu zostaje w `MAPA-DROGOWA.md`.
