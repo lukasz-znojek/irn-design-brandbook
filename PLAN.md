@@ -32,13 +32,12 @@ Nie były ponumerowane wyżej, bo PLAN.md nie przewidywał jeszcze tych plików 
 
 ## Warstwa 3 — pakiet Claude Design
 
-15. Zdefiniować format paczki wejściowej dla Claude Design → `03-pakiet-claude-design/format-paczki.md`. **[FOUNDER] — częściowo rozstrzygnięte:** siatka A4 zatwierdzona (2026-09-02: 6 kolumn, moduł 25 mm, gutter 4 mm — poprawka błędu wymiarów z kanwy, gdzie moduł 32 mm fizycznie nie mieścił się na stronie) i wpisana do `format-paczki.md`. Paleta barw nadal czeka na decyzję (użycie koloru Miedź, ryzyko zbliżenia Karmin/Aksamit) — `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
+15. Zdefiniować format paczki wejściowej dla Claude Design → `03-pakiet-claude-design/format-paczki.md`. **[FOUNDER] — w pełni rozstrzygnięte (2026-09-02):** siatka A4 (6 kolumn, moduł 25 mm, gutter 4 mm — poprawka błędu wymiarów z kanwy) i paleta 12 kolorów (Miedź pogłębiona do `#8C5026`, Karmin zmieniony na `#AC151F`) zatwierdzone przez foundera i wpisane do `format-paczki.md`. Historia decyzji: `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
 16. Napisać prompt bazowy dla Claude Design, odwołujący się do warstw 1 i 2 → `03-pakiet-claude-design/prompt-bazowy.md`.
 
 ## Decyzje foundera — rozstrzygnięte
 
-- **Siatka A4**: zatwierdzona (2026-09-02) — 6 kolumn, moduł 25 mm, gutter 4 mm; poprawka błędu wymiarów z `brandbook.dc.html` (moduł 32 mm fizycznie nie mieścił się na stronie). Wpisana jako obowiązująca w `format-paczki.md`.
-- **Paleta barw** (12 kolorów, "Colorbook Kaszmir Aksamit", reguła 80/15/5) z `brandbook.dc.html`: zaakceptowany kierunek, ale jeszcze nie wiążąca specyfikacja — dwa punkty czekają na decyzję foundera (użycie koloru Miedź, ryzyko zbliżenia Karmin/Aksamit), patrz `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`. Zadanie 15 pozostaje otwarte do tego czasu.
+- **Paleta barw** (12 kolorów, "Colorbook Kaszmir Aksamit", reguła 80/15/5) i **siatka A4**: kierunek z `brandbook.dc.html` zaakceptowany, dopracowany i **w pełni zatwierdzony (2026-09-02)** — siatka 6 kolumn / moduł 25 mm / gutter 4 mm (poprawka błędu wymiarów oryginału), Miedź pogłębiona do `#8C5026`, Karmin zmieniony na `#AC151F`. Specyfikacja: `03-pakiet-claude-design/format-paczki.md`.
 - **Minimalny rozmiar i przestrzeń ochronna logotypu** (18 mm / 90 px, x = wysokość liter sygnetu): **potwierdzone jako obowiązujące**.
 - **Aplikacje dla przedstawicieli handlowych**: narzędzie wewnętrzne IRIN — CRM/aplikacja dla własnych handlowców (lead-y, prowizje, raportowanie sprzedaży szkoleń i pożyczek), nie produkt na sprzedaż zewnętrzną.
 - **Usługi pozyskiwania pożyczek UE/BGK**: pośrednictwo finansowania rozwojowego dla firm (B2B) — doradztwo i pośrednictwo w pozyskiwaniu dotacji UE i pożyczek BGK dla małych i średnich przedsiębiorstw.

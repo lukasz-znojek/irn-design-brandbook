@@ -2,13 +2,34 @@
 
 Ten plik definiuje, co powinna zawierać paczka wejściowa przekazywana do Claude Design dla dowolnego dokumentu IRIN. Sama kompozycja, layout i grafika powstają w Claude Design — ten plik tylko określa, jakie materiały i informacje muszą się tam znaleźć, żeby to było możliwe.
 
-## Status palety i siatki
+## Paleta i siatka — zatwierdzone przez foundera (2026-09-02)
 
-**Siatka A4 — zatwierdzona przez foundera (2026-09-02).** Paleta barw — **nadal nie jest wpisana jako ostateczna specyfikacja**, dwa punkty czekają na decyzję (użycie koloru Miedź, ryzyko wizualnego zbliżenia Karminu i Aksamitu) — patrz `./propozycja-palety-i-siatki-do-potwierdzenia.md`. **Dopóki paleta nie zostanie zatwierdzona, paczka wejściowa do Claude Design nie powinna zawierać stałej listy kolorów jako wiążącej specyfikacji** — Claude Design powinien pracować z logo, typografią i siatką niżej, a kolor albo zostawić nieokreślony, albo zapytać foundera wprost, jeśli zlecenie tego wymaga.
+Pełny pomiar, uzasadnienie i historia decyzji: `./propozycja-palety-i-siatki-do-potwierdzenia.md`.
 
-### Siatka dokumentu A4 (zatwierdzona)
+### Siatka dokumentu A4
 
-6 kolumn, moduł 25 mm, gutter 4 mm. Marginesy: 18 mm góra, 18 mm lewy, 22 mm prawy, 28 mm dół. Treść: 170 × 251 mm. Zastępuje wersję z `brandbook.dc.html` (moduł 32 mm), która nie mieściła się fizycznie na stronie A4 — pomiar i uzasadnienie w `./propozycja-palety-i-siatki-do-potwierdzenia.md`.
+6 kolumn, moduł 25 mm, gutter 4 mm. Marginesy: 18 mm góra, 18 mm lewy, 22 mm prawy, 28 mm dół. Treść: 170 × 251 mm. Zastępuje wersję z `brandbook.dc.html` (moduł 32 mm), która nie mieściła się fizycznie na stronie A4.
+
+### Paleta — 12 kolorów
+
+Dwa kolory zostały zmienione względem `brandbook.dc.html` po pomiarze kontrastu WCAG — **Miedź** i **Karmin** niżej mają nowy hex, wszystkie pozostałe kolory są bez zmian względem canvasu.
+
+| Kolor | Hex | Rola | Kontrast na Kaszmir |
+|---|---|---|---|
+| Kaszmir | `#F2ECE1` | papier / tło karty | — |
+| Espresso | `#1E1611` | tusz uniwersalny / tekst korpusu | 15,16:1 |
+| Złoto foliowe | `#B58540` | pieczęć, sygnatura — nigdy tekst ani tło większej powierzchni | nie dotyczy |
+| Aksamit | `#4A1D26` | akcent dziedziny: Pedagogika | 11,95:1 |
+| **Miedź** | **`#8C5026`** | akcent dziedziny: Akademia AI | 5,42:1 |
+| Onyks | `#1B2B26` | akcent dziedziny: Pożyczki UE/BGK | 12,58:1 |
+| Pergamin | `#E4DACB` | drugi neutral (tło) | — |
+| Sepia | `#5B4837` | tekst pomocniczy | 7,36:1 |
+| **Karmin** | **`#AC151F`** | link, stan aktywny | 6,17:1 |
+| Muślin | `#F7F3EA` | tło strony | — |
+| Werdykt | `#2F4A32` | stan potwierdzony (tło, z tekstem Kaszmir) | 8,32:1 (tekst) |
+| Rubryka | `#D9AC4A` | marker w CMYK (tło, z tekstem Espresso) | 6,38:1 (tekst) |
+
+**Reguła proporcji 80/15/5:** 80% powierzchni dokumentu — Kaszmir/Muślin/Pergamin (tła) i Espresso/Sepia (tekst); 15% — dokładnie jeden kolor dziedziny (Aksamit / Miedź / Onyks) na dokument, nigdy dwa naraz; 5% — Karmin wyłącznie do linków/stanów aktywnych, Werdykt do stanu potwierdzonego, Rubryka jako marker, Złoto foliowe wyłącznie jako pieczęć/sygnatura.
 
 ## Elementy paczki, potwierdzone i gotowe do użycia
 
