@@ -28,17 +28,17 @@ Falsyfikator zapisany w `weryfikacja-u-zrodla.md`: pomiar `curl -sS http://127.0
 - **`_robocze/narzedzia/pobierz-strone-chromium.mjs`** (nowy plik) - pobranie strony/pliku przez headless Chromium, dla przypadków gdy `curl` trafia na wyzwanie JS-owe zamiast zwykłej blokady sieciowej. Przetestowany na `github.com` (działa; wymagał `ignoreHTTPSErrors: true`, bo serwer pośredniczący w tym środowisku podmienia certyfikat na własny) i na zablokowanej domenie PARP (poprawnie zgłasza `ERR_TUNNEL_CONNECTION_FAILED`, ten sam mechanizm co `curl`, więc narzędzie nie omija blokady polityki sieciowej - tylko wyzwania na poziomie strony).
 - **`01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`** - dodana kolumna Status do tabeli (pozycje 1, 2, 3, 7, 8: **niesprawdzone**, z odsyłaczem do sekcji z dokładną diagnozą; pozycje 4-6: poza zakresem tej sesji) i nowa sekcja „Co się nie udało w tej sesji” z metodologią i wnioskiem wyżej.
 
-## Czego nie zrobiono i dlaczego
+## Czego nie zrobiono i dlaczego (stan na koniec części 1 - część 2 niżej to zmienia)
 
-- **`bur.md`, `karta-uslugi-bur.md`, `certyfikat.md`** - bez zmian treściowych. Żaden PDF nie został pobrany, więc nie było z czego przepisywać cytatów z numerem paragrafu; te trzy pliki już poprawnie oznaczały odpowiednie fragmenty jako niesprawdzone, z nazwanym powodem i falsyfikatorem - nadpisywanie ich samą datą kolejnej nieudanej próby nie wnosiłoby nic ponad to, co już mówi zaktualizowany `weryfikacja-u-zrodla.md`.
-- **Pozycja 3** (format kodu usługi BUR) i **zadanie „sprawdź, czy po 6 lipca 2026 nie ma nowszej wersji regulaminu”** - niewykonalne bez dostępu do `uslugirozwojowe.parp.gov.pl`.
+- **`bur.md`, `karta-uslugi-bur.md`, `certyfikat.md`** - bez zmian treściowych *(nieaktualne od części 2: po dostarczeniu plików przez foundera wszystkie trzy zostały zaktualizowane)*. Żaden PDF nie został pobrany, więc nie było z czego przepisywać cytatów z numerem paragrafu; te trzy pliki już poprawnie oznaczały odpowiednie fragmenty jako niesprawdzone, z nazwanym powodem i falsyfikatorem - nadpisywanie ich samą datą kolejnej nieudanej próby nie wnosiłoby nic ponad to, co już mówi zaktualizowany `weryfikacja-u-zrodla.md`.
+- **Pozycja 3** (format kodu usługi BUR) i **zadanie „sprawdź, czy po 6 lipca 2026 nie ma nowszej wersji regulaminu”** - niewykonalne bez dostępu do `uslugirozwojowe.parp.gov.pl` *(w części 2 pozycja 3 została odczytana z dostarczonych plików; pytanie o nowszą wersję regulaminu pozostaje niesprawdzone)*.
 - **Zadanie 3** (pozycja 7 - regulamin ŚCITT, pozycja 8 - podręcznik FE) - te same domeny (`it.kielce.pl`, `gov.pl`) zablokowane tym samym mechanizmem; zmierzone i wpisane do tabeli statusów, treść nieodczytana.
 
 ## Gałąź
 
 Brief harnessu tej sesji wskazywał gałąź `claude/etap-2-weryfikacja-zrodla-v05npm`; treść zlecenia w wiadomości od użytkownika wskazywała `claude/etap-2-regulamin-bur` i wyraźnie poleciła ją utworzyć z `main`. Potraktowano to jako jawne zezwolenie na odstępstwo od domyślnej gałęzi harnessu - praca poszła na `claude/etap-2-regulamin-bur`.
 
-## Następny krok (jedyna droga naprzód zgodna z „nie próbuj obchodzić zabezpieczenia")
+## Następny krok postulowany na koniec części 1 - **wykonany**, patrz część 2
 
 Founder wkleja do czatu trzy pliki PDF: aktualny Regulamin BUR, Załącznik nr 2, Załącznik nr 12 (albo dopuszcza wymienione domeny w polityce sieciowej środowiska). Po dostarczeniu - narzędzia z tej sesji (`tekst-z-pdf.py`) są gotowe do użycia bez dodatkowego przygotowania.
 
