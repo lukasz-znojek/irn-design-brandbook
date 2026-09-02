@@ -2,7 +2,7 @@
 
 **Status: ROZSTRZYGNIĘTE (2026-09-02). Founder wybrał wariant 2 - Kaszmir Wyciszony.**
 
-Obowiązująca specyfikacja wybranego wariantu: [`../../03-pakiet-claude-design/format-paczki.md`](../../03-pakiet-claude-design/format-paczki.md). Dane maszynowe wybranej palety: [`tokens/palette-irin.json`](./tokens/palette-irin.json).
+Obowiązująca specyfikacja wybranego wariantu: [`../../01-baza-wiedzy/identyfikacja/paleta-barw.md`](../../01-baza-wiedzy/identyfikacja/paleta-barw.md). Dane maszynowe wybranej palety: [`tokens/palette-irin.json`](../../01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json).
 
 Pozostałe sześć wariantów **zostaje w tym dokumencie w całości** - to zapis tego, co zostało zmierzone i odrzucone, a więc materiał na wypadek powrotu do decyzji. Nic tu nie zostało usunięte ani przepisane po wyborze; zmieniła się wyłącznie ta ramka statusu i notatka pod rekomendacją.
 
@@ -10,7 +10,7 @@ Pozostałe sześć wariantów **zostaje w tym dokumencie w całości** - to zapi
 
 Podgląd wszystkich siedmiu wariantów na identycznym układzie demonstracyjnym: [`palette-preview-v2.md`](./palette-preview-v2.md) (opis) oraz [`palette-preview-v2.dc.html`](./palette-preview-v2.dc.html) (wersja renderowana, z realną typografią).
 
-Dane maszynowe: [`tokens/palette-options-v2.json`](./tokens/palette-options-v2.json).
+Dane maszynowe: [`palette-options-v2.json`](./palette-options-v2.json).
 
 ## Typografia - wykryta z repozytorium, niezmieniana
 
@@ -802,7 +802,7 @@ Powód jest w pomiarach, nie w guście. Wariant zatwierdzony 2026-09-02 ma trzy 
 
 **Rekomendacja dodatkowa - ODRZUCONA przez foundera (2026-09-02).** Proponowałem przyjąć wariant 6 jako obowiązkowy tryb mono obok wybranego, dla zaświadczeń KFS i certyfikatów, które bywają kserowane. Founder wybrał jedną paletę na wszystko. Skutek do zapamiętania: w druku mono Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność, więc jedynym zabezpieczeniem czytelności statusu pozostaje obowiązkowa etykieta słowna albo ikona - ta zasada obowiązuje tym bardziej, im mniej mamy trybów.
 
-**Rozstrzygnięcie (2026-09-02): founder wybrał wariant 2.** Rekomendacja została przyjęta. Wariant 2 jest wpisany jako obowiązujący w `../../03-pakiet-claude-design/format-paczki.md`; otwarte pozostają trzy sprawy poboczne: czy wariant 6 wchodzi jako obowiązkowy tryb mono, czy katalog `02-branding/` zostaje pod tym numerem, i czy poziom H3 zostaje na wadze 600.
+**Rozstrzygnięcie (2026-09-02): founder wybrał wariant 2.** Rekomendacja została przyjęta. Wariant 2 jest wpisany jako obowiązujący w `../../01-baza-wiedzy/identyfikacja/paleta-barw.md`; otwarte pozostają trzy sprawy poboczne: czy wariant 6 wchodzi jako obowiązkowy tryb mono, gdzie ostatecznie leży specyfikacja, i czy poziom H3 zostaje na wadze 600.
 
 ---
 

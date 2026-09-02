@@ -41,7 +41,7 @@ To jest **wstępne canvas foundera** — punkt inspiracji i dowód zamierzonego 
 
 Wartości hex wypisane wyżej opisują **plik `brandbook.dc.html`**, a nie obowiązującą paletę - to zapis tego, co jest w kanwie foundera, i pozostaje prawdziwy jako opis tego pliku.
 
-Obowiązująca paleta to **14 kolorów, wariant 2 „Kaszmir Wyciszony”**, wybrany przez foundera spośród siedmiu wariantów. Jedyne źródło prawdy: `03-pakiet-claude-design/format-paczki.md`. Dane maszynowe: `02-branding/kolorystyka/tokens/palette-irin.json`. Porównanie siedmiu wariantów i uzasadnienie wyboru: `02-branding/kolorystyka/palette-options-v2.md`. Historia pierwszej decyzji: `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
+Obowiązująca paleta to **14 kolorów, wariant 2 „Kaszmir Wyciszony”**, wybrany przez foundera spośród siedmiu wariantów. Jedyne źródło prawdy: `01-baza-wiedzy/identyfikacja/paleta-barw.md`. Jak paleta wchodzi do zlecenia dla Claude Design: `03-pakiet-claude-design/format-paczki.md`. Dane maszynowe: `01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json`. Porównanie siedmiu wariantów i uzasadnienie wyboru (archiwum): `_robocze/paleta-v2/palette-options-v2.md`. Historia pierwszej decyzji: `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
 
 Rozbieżność opisana w punkcie wyżej jest **rozstrzygnięta**: paleta i siatka przeszły pomiar i świadomą decyzję foundera. Zapis zostaje jako historia, nie jako otwarta sprawa.
 

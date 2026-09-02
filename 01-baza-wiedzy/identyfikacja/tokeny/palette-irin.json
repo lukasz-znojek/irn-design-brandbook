@@ -4,8 +4,8 @@
   "nazwa": "Kaszmir Wyciszony",
   "status": "ZATWIERDZONA - wariant 2 wybrany przez foundera",
   "data-wyboru": "2026-09-02",
-  "zrodlo-wyboru": "02-branding/kolorystyka/palette-options-v2.md (wariant 2 z siedmiu)",
-  "specyfikacja-obowiazujaca": "03-pakiet-claude-design/format-paczki.md",
+  "zrodlo-wyboru": "_robocze/paleta-v2/palette-options-v2.md (wariant 2 z siedmiu; archiwum)",
+  "specyfikacja-obowiazujaca": "01-baza-wiedzy/identyfikacja/paleta-barw.md",
   "typografia": {
     "rodzina-podstawowa": "Manrope",
     "wagi": [

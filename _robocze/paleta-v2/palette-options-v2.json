@@ -1,7 +1,7 @@
 {
   "schemat": "irin-palette-options",
   "wersja": "v2",
-  "status": "ROZSTRZYGNIĘTE 2026-09-02 - wybrany wariant W2 (Kaszmir Wyciszony); pozostałe sześć zachowane jako zapis porównania",
+  "status": "ROZSTRZYGNIĘTE 2026-09-02 - wybrany wariant W2 (Kaszmir Wyciszony); pozostałe sześć zachowane jako zapis porównania; ten plik jest archiwum w _robocze/, nie źródłem prawdy",
   "data": "2026-09-02",
   "typografia": {
     "zrodlo": "brandbook.dc.html - sekcja 04 Typografia; niezmieniana w tej propozycji",
@@ -1946,6 +1946,6 @@
     }
   },
   "wybrany": "W2",
-  "specyfikacja-wybranego": "03-pakiet-claude-design/format-paczki.md",
-  "tokeny-wybranego": "02-branding/kolorystyka/tokens/palette-irin.json"
+  "specyfikacja-wybranego": "01-baza-wiedzy/identyfikacja/paleta-barw.md",
+  "tokeny-wybranego": "01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json"
 }

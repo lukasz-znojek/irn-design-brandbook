@@ -2,7 +2,7 @@
 
 **Status: ROZSTRZYGNIĘTE (2026-09-02). Wybrany wariant 2 - Kaszmir Wyciszony.**
 
-Ten podgląd zostaje bez zmian, ze wszystkimi siedmioma wariantami - służy teraz jako zapis porównania, na podstawie którego zapadła decyzja. Obowiązująca specyfikacja: [`../../03-pakiet-claude-design/format-paczki.md`](../../03-pakiet-claude-design/format-paczki.md).
+Ten podgląd zostaje bez zmian, ze wszystkimi siedmioma wariantami - służy teraz jako zapis porównania, na podstawie którego zapadła decyzja. Obowiązująca specyfikacja: [`../../01-baza-wiedzy/identyfikacja/paleta-barw.md`](../../01-baza-wiedzy/identyfikacja/paleta-barw.md).
 
 Ten dokument pokazuje siedem wariantów palety z [`palette-options-v2.md`](./palette-options-v2.md) na **identycznym układzie demonstracyjnym**: ta sama treść, ten sam układ, ta sama typografia. Jedyną zmienną jest kolor.
 
@@ -529,4 +529,4 @@ Pełne trade-offs tego wariantu: [`palette-options-v2.md`](./palette-options-v2.
 
 ## Wybrany wariant
 
-**Wariant 2 - Kaszmir Wyciszony.** Wpisany jako obowiązujący w `../../03-pakiet-claude-design/format-paczki.md` wraz z mapowaniem na nazwany system 14 kolorów i regułę 80/15/5. Żadna wcześniejsza decyzja nie została usunięta.
+**Wariant 2 - Kaszmir Wyciszony.** Wpisany jako obowiązujący w `../../01-baza-wiedzy/identyfikacja/paleta-barw.md` wraz z mapowaniem na nazwany system 14 kolorów i regułę 80/15/5. Żadna wcześniejsza decyzja nie została usunięta.
