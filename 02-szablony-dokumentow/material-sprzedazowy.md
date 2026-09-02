@@ -22,4 +22,4 @@ Format (dokument, prezentacja, krótka karta referencyjna), układ, kolorystyka 
 
 ## Dane wejściowe wymagane przed przekazaniem do Claude Design
 
-Zgodnie z lukami zidentyfikowanymi w `/01-baza-wiedzy/uslugi/aplikacje-sprzedazowe.md`: platforma aplikacji, jej stan wdrożenia, konkretne ekrany/procesy do opisania — żadne z nich nie są tu zgadywane, muszą przyjść od foundera.
+Ustalenia foundera: aplikacja będzie webowa i mobilna, jest dopiero budowana, a materiał jest przeznaczony dla całego zespołu. Należy opisać: przegląd aktualnych naborów, generator ofert i treści wiadomości e-mail, stronę konkretnego naboru oraz dokumenty. Przed zleceniem trzeba dostarczyć rzeczywiste nazwy ekranów, role użytkowników i dane demonstracyjne.

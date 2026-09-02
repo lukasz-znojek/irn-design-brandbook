@@ -18,7 +18,7 @@ Zatwierdzone specyfikacje identyfikacji wizualnej: wartości, nie kompozycja.
 
 ## firma/
 
-- [`firma/kontekst-firmy.md`](./firma/kontekst-firmy.md) — pełna nazwa i forma prawna IRIN (sp. z o.o., siedziba w Kielcach, potwierdzone przez foundera 2026-09-02), trzy linie biznesowe i planowany portal szkoleń; struktura zespołu i historia firmy nadal oznaczone jako brak danych.
+- [`firma/kontekst-firmy.md`](./firma/kontekst-firmy.md) — pełna nazwa i forma prawna IRIN, siedziba w Kielcach, rok założenia 2023, struktura zespołu, trzy linie biznesowe i planowany portal szkoleń.
 - [`firma/kontekst-firmy-sanitized.md`](./firma/kontekst-firmy-sanitized.md) — uzupełnienie o mechanikę nieopisaną w karcie wyżej: dane rejestrowe dostawcy, modele rozliczenia dofinansowania, granica compliance dot. wkładu własnego.
 
 ## prawo/

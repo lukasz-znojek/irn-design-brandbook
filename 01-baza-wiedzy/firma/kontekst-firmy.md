@@ -1,6 +1,6 @@
 # Kontekst firmy — IRIN (Instytut Rozwoju i Nauki)
 
-Status: fakty poniżej pochodzą z `/CLAUDE.md`, z sekcji "Decyzje foundera — rozstrzygnięte" w `/PLAN.md` oraz z `kontekst-firmy-sanitized.md` (forma prawna i dane rejestrowe, potwierdzone przez foundera 2026-09-02). Tam, gdzie repozytorium nie zawiera danych (historia, struktura zespołu), sekcja jest oznaczona jawnie jako brak, nie jako założenie.
+Status: fakty poniżej pochodzą z `/CLAUDE.md`, z sekcji "Decyzje foundera — rozstrzygnięte" w `/PLAN.md` oraz z `kontekst-firmy-sanitized.md`. Ustalenia ankiety foundera z 2026-09-02 uzupełniają strukturę zespołu i rok założenia.
 
 ## Nazwa i forma
 
@@ -30,6 +30,8 @@ Portal **jeszcze nie istnieje** — jest w fazie planowania. Model ustalony w `/
 
 ## Model organizacyjny i historia firmy
 
-**Brak danych w repozytorium.** Żaden plik nie zawiera informacji o strukturze zespołu IRIN (liczba osób, działy) ani o historii firmy (data założenia, kluczowe etapy rozwoju). Te dwie pozycje zostaną uzupełnione, gdy founder dostarczy dane; nie zostały tu zgadnięte. Nie blokują żadnej karty warstwy 2, więc ich brak nie wstrzymuje domknięcia projektu (patrz `/MAPA-DROGOWA.md`, decyzje do odłożenia).
+Firma została założona w **2023 roku**. Historia kluczowych etapów nie jest obecnie opisywana.
+
+IRIN ma ponad 15 osób. Struktura obejmuje oddział gdański i kielecki (sprzedaż), administrację oraz dział obsługi szkoleń. W dokumentach można podawać imiona, nazwiska i stanowiska członków zespołu, jeśli zostaną przekazane jako dane wejściowe do konkretnego dokumentu.
 
 **Siedziba - rozstrzygnięta.** `brandbook.dc.html` zawiera w jednej z makiet napis "Instytut Rozwoju i Nauki · Warszawa". To element wstępnej kanwy foundera, nie fakt firmowy: siedziba spółki według KRS jest w Kielcach (potwierdzone przez foundera 2026-09-02, dane w `kontekst-firmy-sanitized.md`). Napis z kanwy nie wchodzi do żadnego dokumentu.

@@ -19,7 +19,7 @@ Z `/01-baza-wiedzy/prawo/bur.md`:
 
 ## Konwencja organizacyjna IRIN
 
-**Status: otwarte do pierwszego zlecenia certyfikatu.** `brandbook.dc.html` (kanwa foundera, materiał inspiracyjny) pokazuje **dwie wersje wdrożeniowe** dokumentu — "kolumnową" i z "pieczęcią" (panelem metryk jako blokiem kontrastowym) — z sugerowaną regułą doboru wg kanału dystrybucji: wersja z pieczęcią/panelem metryk dla dystrybucji mailem lub skanu do teczki operatora dotacji, bo numer zaświadczenia i kod BUR pozostają czytelne po kopii czarno-białej. To obserwacja z kanwy, nie ustalona konwencja IRIN. Founder rozstrzyga ją przy pierwszym zleceniu certyfikatu i decyzja trafia tutaj jako reguła doboru wersji; Claude Design nie rozstrzyga jej od siebie. Argument za regułą z kanwy: tryb monochromatyczny został odrzucony (`/PLAN.md`), więc czytelność po kopii czarno-białej musi zapewnić sama kompozycja, a panel metryk jest tego narzędziem.
+Founder zatwierdził 2026-09-02 obie wersje wdrożeniowe: **kolumnową** oraz z **panelem/pieczęcią**. Wersję z panelem stosować przede wszystkim do wysyłki e-mailem, skanu i dokumentacji KFS/PSF/BUR przekazywanej operatorowi, ponieważ grupuje numer zaświadczenia, kod usługi BUR i pozostałe dane identyfikacyjne w bloku odpornym na kopiowanie. Wersję kolumnową stosować przede wszystkim jako dokument drukowany wręczany uczestnikowi. Obie wersje muszą zawierać ten sam kompletny zakres prawny; różnica jest wyłącznie konwencją prezentacji i nie zastępuje wymogów KFS, PSF ani BUR.
 
 ## Swobodny wybór projektowy
 
@@ -27,4 +27,4 @@ Układ graficzny, typografia, kolorystyka w ramach palety IRIN, sposób wyekspon
 
 ## Dane wejściowe wymagane przed przekazaniem do Claude Design
 
-Dla konkretnego zaświadczenia: dane uczestnika, nazwa i zakres szkolenia, liczba godzin, data i miejsce, kod usługi BUR (jeśli dotyczy), efekty uczenia się, dane osoby podpisującej w imieniu IRIN. Którą z dwóch wersji wdrożeniowych użyć: rozstrzygnięcie foundera przy pierwszym zleceniu, jak wyżej.
+Dla konkretnego zaświadczenia: dane uczestnika, nazwa i zakres szkolenia, liczba godzin, data i miejsce, kod usługi BUR (jeśli dotyczy), efekty uczenia się, dane osoby podpisującej w imieniu IRIN oraz kanał dystrybucji, który determinuje wybór wersji zgodnie z konwencją powyżej.

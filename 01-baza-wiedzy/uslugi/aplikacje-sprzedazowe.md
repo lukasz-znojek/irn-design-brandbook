@@ -23,4 +23,4 @@ Skoro adresatem jest zespół własny, a nie klient zewnętrzny:
 
 ## Braki — do potwierdzenia przez foundera
 
-Repozytorium **nie zawiera** danych o: platformie aplikacji (web / mobile / oba), jej obecnym stanie wdrożenia (istnieje i jest używana, czy dopiero planowana — inaczej niż portal szkoleń, `/CLAUDE.md` nie precyzuje tego wprost dla tej linii), ani o konkretnych ekranach/procesach, które miałyby zostać opisane w materiałach szkoleniowych dla handlowców. Karta specyfikacji materiału sprzedażowego (zadanie 12) powinna te braki uwzględnić, nie zgadywać za foundera.
+Ustalenia foundera z 2026-09-02: aplikacja będzie webowa i mobilna, ale dopiero powstaje. Materiał dla całego zespołu ma obejmować przegląd aktualnych naborów, generator ofert i treści wiadomości e-mail, stronę konkretnego naboru oraz dokumenty. Przed przekazaniem do Claude Design trzeba dostarczyć aktualne nazwy ekranów, role użytkowników i rzeczywiste zrzuty lub dane demonstracyjne.

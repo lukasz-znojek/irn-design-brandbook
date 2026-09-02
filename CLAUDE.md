@@ -2,7 +2,7 @@
 
 ## Czym jest IRIN
 
-IRIN (Instytut Rozwoju i Nauki) to polska firma działająca w trzech obszarach: aplikacje dla przedstawicieli handlowych, usługi pozyskiwania pożyczek, oraz dofinansowane szkolenia zawodowe wydające zaświadczenia KFS (Krajowy Fundusz Szkoleniowy) i certyfikaty BUR (Baza Usług Rozwojowych, PARP). Planowany jest też portal sprzedaży szkoleń online.
+IRIN (Instytut Rozwoju i Nauki) to polska firma założona w 2023 roku, działająca w trzech obszarach: aplikacje dla przedstawicieli handlowych, usługi pozyskiwania pożyczek oraz dofinansowane szkolenia zawodowe wydające zaświadczenia KFS i certyfikaty BUR. Planowany jest też portal sprzedaży szkoleń online.
 
 ## Architektura trójwarstwowa
 
