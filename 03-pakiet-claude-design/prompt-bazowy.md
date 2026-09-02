@@ -8,7 +8,7 @@ Projektujesz dokument dla **IRIN (Instytut Rozwoju i Nauki)** — polskiej firmy
 
 ## Co musisz zachować bez zmian
 
-**Logotyp.** Użyj wyłącznie plików źródłowych: `logo_irin_poziom.svg` (podstawowy), `logo_irin_pion.svg` (pola wąskie/wysokie), `logo_irin_sygnet.svg` (samodzielny znak) — wszystkie jednokolorowe. Minimalny rozmiar 18 mm / 90 px. Przestrzeń ochronna: x = wysokość liter sygnetu, mierzona od krawędzi znaku we wszystkich kierunkach. Nie zmieniaj koloru logotypu, nie obracaj go, nie pochylaj, nie odbijaj lustrzanie, nie dodawaj cienia ani obrysu, nie rozciągaj nieproporcjonalnie.
+**Logotyp.** Użyj wyłącznie plików źródłowych: `logo_irin_poziom.svg` (podstawowy), `logo_irin_pion.svg` (pola wąskie i wysokie), `logo_irin_sygnet.svg` (znak samodzielny) - wszystkie jednokolorowe. Minimalny rozmiar 18 mm w druku, 90 px na ekranie. Przestrzeń ochronna: x = wysokość liter sygnetu, mierzona od krawędzi znaku we wszystkich kierunkach; to miara względna, skalująca się ze znakiem. Znaku się nie modyfikuje: bez zmiany koloru, bez obracania, pochylania i odbijania, bez cienia, poświaty i obrysu, bez nieproporcjonalnego rozciągania - na ciemnym tle stosuj wersję odwróconą, nie przebarwioną. Pełna specyfikacja: `../01-baza-wiedzy/identyfikacja/logotyp.md`.
 
 **Typografia.** Krój **Manrope** (wagi 200-800) jako podstawowy; **Inconsolata** pomocniczo, do danych liczbowych, metadanych i kodów usług.
 

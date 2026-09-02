@@ -11,6 +11,7 @@ Kolor, siatka i typografia mają jedno miejsce każde, w `../01-baza-wiedzy/iden
 | Paleta barw, 14 kolorów | [`paleta-barw.md`](../01-baza-wiedzy/identyfikacja/paleta-barw.md) | [`palette-irin.json`](../01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json) |
 | Siatka A4 | [`siatka-a4.md`](../01-baza-wiedzy/identyfikacja/siatka-a4.md) | ten sam plik, klucz `siatka-a4` |
 | Typografia i skala | [`typografia.md`](../01-baza-wiedzy/identyfikacja/typografia.md) | ten sam plik, klucz `typografia` |
+| Logotyp: rozmiary, przestrzeń ochronna, zakazy | [`logotyp.md`](../01-baza-wiedzy/identyfikacja/logotyp.md) | ten sam plik, klucz `logotyp` |
 
 Trzymaj się dokładnie wartości z warstwy 1, nie przybliżaj ich „na oko”.
 
@@ -30,12 +31,15 @@ Poniższe **muszą** trafić do każdego zlecenia dla Claude Design razem z wart
 
 ### 1. Logotyp
 
-Trzy pliki źródłowe w korzeniu repozytorium: `logo_irin_poziom.svg` (podstawowy, proporcja ok. 1,773:1), `logo_irin_pion.svg` (pola wąskie/wysokie, proporcja ok. 1,135:1), `logo_irin_sygnet.svg` (samodzielny znak). Wszystkie trzy są jednokolorowe (czarne na przezroczystym tle) — same w sobie nie definiują żadnej palety barw (patrz `/CLAUDE.md`).
+Trzy pliki źródłowe leżą w korzeniu repozytorium i **wchodzą do paczki bez modyfikacji**: `logo_irin_poziom.svg` (podstawowy), `logo_irin_pion.svg` (pola wąskie i wysokie), `logo_irin_sygnet.svg` (znak samodzielny).
 
-Zasady **potwierdzone jako obowiązujące** (`/PLAN.md`, "Decyzje foundera — rozstrzygnięte"):
-- minimalny rozmiar: 18 mm / 90 px,
-- przestrzeń ochronna: x = wysokość liter sygnetu (jednostka względna, nie stała miara),
-- zakaz zmiany koloru logotypu, zakaz obracania/pochylania/odbijania lustrzanego, zakaz cienia/poświaty/obrysu, zakaz nieproporcjonalnego rozciągania (te ostatnie cztery zasady są obserwacją z `brandbook.dc.html`, spójną z ogólną praktyką ochrony znaku — ale nie były oddzielnie potwierdzone przez foundera jak dwie pierwsze; do potwierdzenia przy pierwszym realnym użyciu, jeśli founder chce je uznać za wiążące, a nie tylko inspirację).
+Pełna specyfikacja - proporcje, minimalne rozmiary, przestrzeń ochronna i zakazy - jest w warstwie 1: [`../01-baza-wiedzy/identyfikacja/logotyp.md`](../01-baza-wiedzy/identyfikacja/logotyp.md).
+
+Trzy rzeczy, które muszą trafić do zlecenia razem z plikami:
+
+- **Minimalny rozmiar: 18 mm w druku, 90 px na ekranie.** Poniżej znak nie wchodzi.
+- **Przestrzeń ochronna x = wysokość liter sygnetu**, mierzona z każdej strony. Miara względna, skaluje się ze znakiem - nie da się jej zastąpić stałym marginesem strony.
+- **Znaku się nie modyfikuje.** Bez zmiany koloru, bez obracania, pochylania i odbijania, bez cienia, poświaty i obrysu, bez nieproporcjonalnego rozciągania. Na ciemnym tle stosuje się wersję odwróconą, nie przebarwioną.
 
 ### 2. Treść merytoryczna — z warstwy 1 i 2
 
