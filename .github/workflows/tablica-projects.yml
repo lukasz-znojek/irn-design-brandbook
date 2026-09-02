@@ -39,11 +39,21 @@ jobs:
       TOKEN_REPO: ${{ github.token }}
     steps:
       - name: Sprawdź sekret
+        env:
+          # Tylko fakt istnienia, nigdy wartość: zmienne Actions nie są maskowane w logu.
+          JEST_JAKO_VARIABLE: ${{ vars.PROJECTS_TOKEN != '' }}
         run: |
-          if [ -z "$TOKEN_PROJECTS" ]; then
-            echo "::error::Brak sekretu PROJECTS_TOKEN. Instrukcja w komentarzu na górze tego pliku."
-            exit 1
+          if [ -n "$TOKEN_PROJECTS" ]; then
+            echo "Sekret PROJECTS_TOKEN jest widoczny."
+            exit 0
           fi
+          REPO_URL="https://github.com/${{ github.repository }}"
+          if [ "$JEST_JAKO_VARIABLE" = "true" ]; then
+            echo "::error::PROJECTS_TOKEN jest zapisany jako Variable (zakładka Variables), a workflow czyta Secrets. Usuń zmienną: $REPO_URL/settings/variables/actions i dodaj sekret: $REPO_URL/settings/secrets/actions → New repository secret."
+          else
+            echo "::error::Brak sekretu repozytorium PROJECTS_TOKEN. Dodaj go tutaj: $REPO_URL/settings/secrets/actions → New repository secret (nie Environment secrets, nie Codespaces, nie Dependabot). Nazwa dokładnie: PROJECTS_TOKEN."
+          fi
+          exit 1
 
       - name: Znajdź albo utwórz tablicę
         id: tablica
