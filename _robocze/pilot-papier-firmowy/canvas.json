@@ -1,0 +1,12 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "Papier firmowy · strona 1", "x": 0, "y": 0, "w": 794, "h": 1123, "print": "fixed" },
+    { "file": "StronaKolejna.dc.html", "title": "Papier firmowy · strona kolejna", "x": 900, "y": 0, "w": 794, "h": 1123, "print": "fixed" },
+    { "file": "WizytowkaAwers.dc.html", "title": "Wizytówka · awers 85 × 55 mm", "x": 0, "y": 1280, "w": 321, "h": 208, "print": "fixed" },
+    { "file": "WizytowkaRewers.dc.html", "title": "Wizytówka · rewers 85 × 55 mm", "x": 420, "y": 1280, "w": 321, "h": 208, "print": "fixed" }
+  ],
+  "annotations": [
+    { "id": "pomiary", "x": 900, "y": 1280, "w": 560, "text": "Pilot papieru firmowego IRIN. Co sprawdzić po otwarciu:\n1. Polskie znaki w zdaniu z żółcią i gęsią na trzech wagach: lead (500), nagłówek (600), tekst (400). Brak ogonków albo zamiennik z innego kroju = wynik ujemny.\n2. Włącz przełącznik „siatka” nad stroną 1: czy blok danych, logotyp i kolumna tekstu siadają na sześciu kolumnach po 25 mm.\n3. Nagłówek stoi celowo bezpośrednio pod leadem: czy różnica wagi 500/600 przy tym samym stopniu jest widoczna.\n4. Sygnet na rewersie ma 12 mm szerokości: czytelny czy nie.\n5. Dokument bez koloru dziedzinowego, tylko Aksamit jako kolor wiodący: czy czyta się spójnie.\nWpisane z dokumentów foundera: sąd rejestrowy, biuro@irin.pl, www.irin.pl. Do uzupełnienia: kapitał zakładowy (z odpisu KRS), telefon, data, imię i stanowisko podpisującego." }
+  ],
+  "launch": { "view": "canvas" }
+}

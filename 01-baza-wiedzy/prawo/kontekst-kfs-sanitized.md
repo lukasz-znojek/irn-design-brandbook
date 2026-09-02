@@ -27,7 +27,7 @@ Parametry odczytane 2026-08-10 z wytycznych ministerstwa dla urzędów pracy (ak
 
 Zmiana wobec lat wcześniejszych: było 100% i 80%, więc od 2026 wkład własny dotyczy również mikroprzedsiębiorców. Komunikacja oparta na „za darmo dla mikrofirm" jest nieaktualna.
 
-**Wymaga potwierdzenia:** przepis ustawy ustanawiający te wartości procentowe. Wytyczne wskazują artykuł o limicie dofinansowania, ale nie cytują ustępu z procentami wprost. Wartości są zgodne w wytycznych i w dokumentach urzędów, więc do planowania wystarczają — do pisma wychodzącego na zewnątrz potwierdź brzmienie przepisu źródłowego.
+**Potwierdzone u źródła 2026-09-02:** art. 126 ust. 1 i 2 ustawy z 20 marca 2025 r. o rynku pracy i służbach zatrudnienia (Dz.U. 2025 poz. 620): do 70 % kosztów, a dla podmiotów zatrudniających nie więcej niż 9 osób do 90 %, w obu przypadkach nie więcej niż 200 % przeciętnego wynagrodzenia na uczestnika. Roczne limity na wnioskodawcę: art. 126 ust. 3. Pełny odczyt w `./kfs.md`, kopia aktu w `./zrodla/`.
 
 ## Dwa limity, nie jeden
 
