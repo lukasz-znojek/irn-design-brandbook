@@ -6,8 +6,10 @@
 # Jednorazowe przygotowanie (founder, ok. 2 minuty):
 #   1. github.com → Settings → Developer settings → Personal access tokens → Tokens (classic)
 #      → Generate new token (classic). Note: PROJECTS_TOKEN, Expiration wg uznania,
-#      Scopes: zaznaczyć „project” (Full control of projects) oraz „read:org”; ten drugi
-#      jest potrzebny poleceniom gh project do rozpoznania właściciela tablicy.
+#      Scopes: zaznaczyć trzy: „project” (Full control of projects), „read:org” (pod
+#      admin:org) i „read:discussion” (pod write:discussion). Dwa ostatnie wymaga gh project
+#      do rozpoznania właściciela tablicy; bez nich: „missing required scopes”.
+#      Istniejący token klasyczny można edytować i dograć zakresy bez zmiany wartości.
 #      Dlaczego klasyczny: tokeny fine-grained nie mają uprawnienia do tablic Projects
 #      na koncie osobistym (tylko organizacyjnych), więc w ich formularzu pozycja
 #      „Projects” w zakładce Account nie występuje.
@@ -66,7 +68,7 @@ jobs:
         run: |
           # "@me" = właściciel tokenu; omija rozpoznawanie typu właściciela po loginie.
           if ! LISTA=$(gh project list --owner "@me" --limit 100 --format json 2>&1); then
-            echo "::error::gh project list nie zadziałał: $LISTA. Najczęstsza przyczyna: token nie jest klasyczny albo nie ma zakresów project i read:org. Token klasyczny zaczyna się od ghp_, fine-grained od github_pat_ i nie obsługuje tablic na koncie osobistym."
+            echo "::error::gh project list nie zadziałał: $LISTA. Najczęstsza przyczyna: token nie jest klasyczny albo nie ma zakresów project, read:org i read:discussion. Token klasyczny zaczyna się od ghp_, fine-grained od github_pat_ i nie obsługuje tablic na koncie osobistym."
             exit 1
           fi
           NUM=$(echo "$LISTA" | jq -r --arg t "$TYTUL" '.projects[] | select(.title == $t) | .number' | head -n 1)
