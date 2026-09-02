@@ -22,6 +22,7 @@ Wynikają z `/01-baza-wiedzy/prawo/bur.md` — z zastrzeżeniem, że część z 
 
 - Przypisanie usługi do jednej z dziedzin działalności szkoleniowej IRIN (np. Pedagogika, Akademia AI — obserwacja z `brandbook.dc.html`, **[do potwierdzenia przez foundera]**, patrz też `./viewbook.md`).
 - Informacja o powiązaniu z KFS, jeśli usługa kwalifikuje się też do tej ścieżki dofinansowania (patrz `/01-baza-wiedzy/prawo/kfs.md`) — to nie jest pole systemu BUR, tylko dodatkowa informacja, którą IRIN może chcieć umieścić dla klienta.
+- Informacja o kwalifikowalności do PSF (Podmiotowy System Finansowania), jeśli usługa jest dostępna w regionie klienta u właściwego operatora (patrz `/01-baza-wiedzy/prawo/psf.md`) — podobnie jak przy KFS, to dodatkowa informacja dla klienta, nie pole systemu BUR. Poziom dofinansowania i limity PSF są regionalne, więc karta nie powinna podawać ich jako liczby stałej — patrz karta produktu PSF.
 
 ## Swobodny wybór projektowy
 
