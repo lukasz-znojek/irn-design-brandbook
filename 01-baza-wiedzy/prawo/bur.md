@@ -99,6 +99,6 @@ Wtórne (kontekst ogólny, sekcja „Warunek wpisu do BUR” wyżej - nieodczyta
 - [Certyfikacja SUS 2.0 — DEKRA](https://www.dekra-certification.com.pl/pl/certyfikacja-sus-2-0/)
 - [SUS 3.0 — Standard Usług Szkoleniowo-Rozwojowych — PIFS](https://sus.pifs.org.pl/)
 - [Rejestracja w Bazie Usług Rozwojowych z certyfikatem ISO 9001 — Multicert](https://multicert.pl/blog/rejestracja-baza-uslug-rozwojowych-iso-9001/)
-- [Standard usługi rozwojowej od 5 maja 2026 r. — najważniejsze zmiany — PARP](https://www.parp.gov.pl/component/content/article/90425:standard-uslugi-rozwojowej-od-5-maja-2026-r-najwazniejsze-zmiany) *(nie pobrano bezpośrednio — domena zablokowana)*
+- [Standard usługi rozwojowej od 5 maja 2026 r. — najważniejsze zmiany — PARP](https://www.parp.gov.pl/component/content/article/90425:standard-uslugi-rozwojowej-od-5-maja-2026-r-najwazniejsze-zmiany) *(nie pobrano bezpośrednio - domena zablokowana)*
 - [Usługa rozwojowa: definicja i co musi zawierać opis usługi w BUR — Scheelite](https://scheelite.eu/usluga-rozwojowa-definicja-bur/)
 - [Ocena usługi w BUR: na czym polega i jak wpływa na rynek usług — Scheelite](https://scheelite.eu/ocena-uslugi-w-bur-czym-jest-jak-dziala/)
