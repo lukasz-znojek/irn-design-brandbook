@@ -39,7 +39,7 @@ Nie były ponumerowane wyżej, bo PLAN.md nie przewidywał jeszcze tych plików 
 
 17. Etapy 0-5 z bramkami, podział na to, co robi Claude Code, co rozstrzyga founder i co wymaga odczytu dokumentów u źródła → `MAPA-DROGOWA.md`. Zrealizowane.
 18. Etap 0, higiena: poprawić nieaktualne zdania w `00-INDEX.md`, `01-baza-wiedzy/README.md` i tym pliku; scalić PR #4, zamknąć PR #6. Zrealizowane 2026-09-02, poza usunięciem dwóch martwych gałęzi (blokuje to proxy sesji; do zrobienia w GitHubie ręcznie).
-19. Etap 1, decyzje foundera: wpisać do plików rozstrzygnięcia o formie prawnej, siedzibie i danych rejestrowych (zrobione 2026-09-02) oraz o konwencji papieru firmowego i wizytówki (e-mail, telefon, adres strony, format 85 × 55 mm) → `02-szablony-dokumentow/papier-firmowy.md`. **[FOUNDER]** dla drugiej części.
+19. Etap 1, decyzje foundera blokujące pilota: forma prawna, siedziba i dane rejestrowe oraz konwencja papieru firmowego i wizytówki → `01-baza-wiedzy/firma/`, `02-szablony-dokumentow/papier-firmowy.md`. Zrealizowane 2026-09-02; sześć decyzji odłożonych do pierwszego użycia dokumentu zostaje w `MAPA-DROGOWA.md`.
 20. Etap 2, weryfikacja prawna u źródła: siedem ustaleń z tabeli w `MAPA-DROGOWA.md` (Załączniki 2 i 12 Regulaminu BUR, format kodu usługi, rozporządzenie KFS z Dziennika Ustaw, kryteria operatorów PSF, karta usługi na etapie wniosku KFS, Księga FE) → pliki w `01-baza-wiedzy/prawo/` i karty w `02-szablony-dokumentow/`. Wymaga dostępu do domen PARP i Dziennika Ustaw albo dokumentów dostarczonych przez foundera.
 21. Etap 3, karty warstwy 2: każde „do potwierdzenia przez foundera” zamienić na decyzję albo na status „otwarte do pierwszego użycia” z nazwą dokumentu → wszystkie pliki w `02-szablony-dokumentow/`.
 22. Etap 4, pilot: zbudować paczkę dla papieru firmowego i wizytówki wg `03-pakiet-claude-design/format-paczki.md`, przeprowadzić przez Claude Design, wpisać wyniki czterech falsyfikatorów (polskie znaki na wagach 500 i 600, Karmin obok Aksamitu, siatka 25 mm z treścią, H3 obok leadu) → `01-baza-wiedzy/identyfikacja/`. **[FOUNDER]** wykonuje część w Claude Design.
@@ -61,9 +61,9 @@ Nie były ponumerowane wyżej, bo PLAN.md nie przewidywał jeszcze tych plików 
 
 - **Dane rejestrowe i forma prawna (2026-09-02, wieczór)**: founder potwierdził, że dane z `01-baza-wiedzy/firma/kontekst-firmy-sanitized.md` (Instytut Rozwoju i Nauki sp. z o.o., siedziba w Kielcach, KRS, NIP, REGON) są poprawne i zostają w publicznym repozytorium. Dane kontaktowe (e-mail, telefon, adres strony) zostały wcześniej usunięte zasadą minimalizacji (PR #4). Sprzeczność między `kontekst-firmy.md` (brak danych) a wersją sanitized rozstrzygnięta na rzecz sanitized; napis „Warszawa” z kanwy nie obowiązuje. Wpisane do `kontekst-firmy.md` i `02-szablony-dokumentow/papier-firmowy.md`.
 - **Wariant zamknięcia projektu: B (2026-09-02)**: repozytorium plus jeden dokument pilotażowy (papier firmowy i wizytówka) przeprowadzony przez Claude Design, żeby sprawdzić cztery falsyfikatory identyfikacji na realnym dokumencie. Etapy i bramki: `MAPA-DROGOWA.md`.
+- **Konwencja papieru firmowego i wizytówki (2026-09-02)**: papier zawiera e-mail, telefon i adres strony; wizytówka 85 × 55 mm, awers i rewers. Obserwacja z kanwy przyjęta w całości jako konwencja IRIN. Wpisane do `02-szablony-dokumentow/papier-firmowy.md`; pilot (zadanie 22) nie ma już blokad decyzyjnych.
 - **Porządek w PR-ach (2026-09-02)**: PR #4 scalony, PR #6 zamknięty jako zastąpiony przez PR #5, gałęzie `copilot/irin-brandbook-os` i `claude/irin-color-palette-variants-tjjnza` do usunięcia ręcznie w GitHubie.
 
 ## Decyzje do potwierdzenia przez foundera
 
-- Konwencja papieru firmowego i wizytówki z kanwy: e-mail, telefon i adres strony na papierze, wizytówka 85 × 55 mm awers i rewers → `02-szablony-dokumentow/papier-firmowy.md`. Blokuje pilota (zadanie 22).
-- Pozycje do odłożenia do pierwszego użycia dokumentu: tabela w `MAPA-DROGOWA.md`, grupa II.
+- Żadna nie blokuje pilota. Sześć pozycji odłożonych do pierwszego użycia dokumentu, którego dotyczą (viewbook, certyfikat, struktura zespołu i historia, aplikacja sprzedażowa, portal, sygnet): tabela w `MAPA-DROGOWA.md`, grupa II.

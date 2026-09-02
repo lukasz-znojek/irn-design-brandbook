@@ -47,7 +47,7 @@ Każda pozycja to jedno zdanie, z plikiem, który na nią czeka. Podział na to,
 |---|---|---|
 | Czy dane rejestrowe (KRS, NIP, REGON, adres) zostają w publicznym repozytorium. | **Rozstrzygnięte 2026-09-02: tak.** Dane wchodzą do paczki papieru firmowego. | Wpisane do `kontekst-firmy-sanitized.md`, `kontekst-firmy.md`, `PLAN.md`. |
 | Forma prawna i siedziba IRIN. | **Rozstrzygnięte 2026-09-02:** sp. z o.o., siedziba w Kielcach. Sprzeczność między `kontekst-firmy.md` (brak danych, napis „Warszawa” z kanwy odrzucony) a `kontekst-firmy-sanitized.md` (sp. z o.o., Kielce, KRS) rozstrzygnięta na rzecz sanitized; jedna wersja w trzech plikach. | Wpisane do `kontekst-firmy.md` i `02-szablony-dokumentow/papier-firmowy.md`. |
-| Czy papier firmowy zawiera e-mail, telefon i adres strony, a wizytówka ma format 85 × 55 mm, awers i rewers. | **Otwarte.** Z obserwacji z kanwy staje się konwencją IRIN albo zostaje swobodnym wyborem projektowym. | `02-szablony-dokumentow/papier-firmowy.md` |
+| Czy papier firmowy zawiera e-mail, telefon i adres strony, a wizytówka ma format 85 × 55 mm, awers i rewers. | **Rozstrzygnięte 2026-09-02: tak, w całości jako konwencja IRIN.** | Wpisane do `02-szablony-dokumentow/papier-firmowy.md`. |
 
 Dwie pozycje wymagane przez art. 206 KSH, których repozytorium nie zawiera (oznaczenie sądu rejestrowego, wysokość kapitału zakładowego), founder odczytuje z KRS przy zleceniu pilota; to dane wejściowe, nie decyzja.
 
@@ -91,7 +91,7 @@ Jeśli dostęp do tych domen nadal będzie zablokowany, dokumenty musi dostarczy
 ```mermaid
 flowchart TD
     S0["Etap 0 - higiena - ZROBIONE<br/>4 zdania poprawione, PLAN 17-23,<br/>PR #4 scalony, PR #6 zamknięty"]
-    S1["Etap 1 - decyzje foundera<br/>2 z 3 blokujących pilota podjęte,<br/>1 otwarta + 6 do odłożenia"]
+    S1["Etap 1 - decyzje foundera - ZROBIONE<br/>3 blokujące pilota podjęte,<br/>6 odłożonych do pierwszego użycia"]
     S2["Etap 2 - weryfikacja prawna<br/>BUR zał. 2 i 12, kod usługi,<br/>KFS z Dz.U., operatorzy PSF"]
     S3["Etap 3 - domknięcie kart warstwy 2<br/>każde „do potwierdzenia” zamienione<br/>na decyzję albo status niesprawdzone"]
     S4["Etap 4 - pilot w Claude Design<br/>papier firmowy i wizytówka:<br/>paczka, prompt, wynik, wnioski do warstwy 1"]
@@ -120,12 +120,12 @@ flowchart TD
     style G2 fill:#E4DACB,stroke:#1E1611,color:#1E1611
 ```
 
-Etapy 1 i 2 są niezależne i mogą iść równolegle: pierwszy wymaga foundera, drugi dostępu do dokumentów źródłowych. Etap 3 czeka na oba.
+Etapy 1 i 2 były niezależne; etap 1 jest zamknięty. Etap 2 wymaga dostępu do dokumentów źródłowych: pomiar z 2026-09-02 wieczorem pokazał, że z sesji Claude Code cztery domeny (parp.gov.pl, uslugirozwojowe.parp.gov.pl, dziennikustaw.gov.pl, isap.sejm.gov.pl) zwracają błąd połączenia, więc dokumenty muszą przyjść od foundera albo polityka sieciowa środowiska musi je dopuścić. Etap 4 (pilot) nie zależy od etapu 2 i może ruszyć równolegle.
 
 | Etap | Kto wykonuje | Warunek wyjścia (mierzalny) |
 |---|---|---|
 | 0 - higiena | Claude Code | **Spełnione 2026-09-02:** `grep` po czterech nieaktualnych zdaniach zwraca zero trafień; `PLAN.md` ma zadania 17-23; na GitHubie nie ma otwartego PR poza #9. Poza bramką zostało ręczne usunięcie gałęzi. |
-| 1 - decyzje foundera | Founder, Claude Code wpisuje | Trzy decyzje blokujące pilota wpisane do `PLAN.md` w sekcji „rozstrzygnięte” (dwie już są); sprzeczność o siedzibę i formę prawną ma jedną wersję w trzech plikach (zrobione). Zostaje konwencja papieru firmowego i wizytówki. |
+| 1 - decyzje foundera | Founder, Claude Code wpisuje | **Spełnione 2026-09-02:** trzy decyzje blokujące pilota wpisane do `PLAN.md` w sekcji „rozstrzygnięte”; sprzeczność o siedzibę i formę prawną ma jedną wersję w trzech plikach. |
 | 2 - weryfikacja prawna | Claude Code przy dostępie do PARP i Dz.U., inaczej founder dostarcza dokumenty | Każde z siedmiu ustaleń ma wpisane: odczytane u źródła albo status niesprawdzone z nazwanym powodem. Zero pozycji „do potwierdzenia przy dostępie do PARP”. |
 | 3 - karty warstwy 2 | Claude Code | `grep -i "do potwierdzenia przez foundera" 02-szablony-dokumentow/` zwraca zero trafień; pozycje odłożone mają status „otwarte do pierwszego użycia” z nazwą dokumentu. |
 | 4 - pilot | Founder w Claude Design, Claude Code buduje paczkę i spisuje wnioski | Cztery falsyfikatory z warstwy 1 (polskie znaki na 500 i 600, Karmin obok Aksamitu, siatka 25 mm z treścią, H3 obok leadu) mają wpisany wynik pomiaru w swoich plikach. |

@@ -22,7 +22,12 @@ Wizytówka **nie jest** "pismem ani zamówieniem handlowym" w rozumieniu art. 20
 
 ## Konwencja organizacyjna IRIN
 
-Z `brandbook.dc.html` (do potwierdzenia): papier firmowy zawiera dodatkowo dane kontaktowe (e-mail, telefon) i adres strony (`irin.pl`); wizytówka w formacie 85×55 mm, w wersji awers/rewers. **[do potwierdzenia przez foundera]** jako wiążąca konwencja, a nie tylko obserwacja z materiału inspiracyjnego.
+**Zatwierdzone przez foundera 2026-09-02** jako wiążąca konwencja IRIN (wcześniej obserwacja z `brandbook.dc.html`):
+
+- papier firmowy zawiera, poza danymi z art. 206 KSH, dane kontaktowe: adres e-mail, numer telefonu i adres strony internetowej; konkretne wartości przychodzą od foundera przy zleceniu, nie są powielane w warstwie 1;
+- wizytówka ma format 85 × 55 mm i dwie strony: awers i rewers; podział treści między strony pozostaje swobodnym wyborem projektowym.
+
+Zmiana tej konwencji wymaga zgody foundera i wpisu tutaj, nie decyzji w Claude Design.
 
 ## Swobodny wybór projektowy
 
@@ -30,7 +35,7 @@ Układ graficzny, typografia, kolorystyka w ramach palety IRIN, rozmieszczenie d
 
 ## Dane wejściowe wymagane przed przekazaniem do Claude Design
 
-Z repozytorium: forma prawna, adres siedziby, KRS, NIP, REGON (`/01-baza-wiedzy/firma/kontekst-firmy-sanitized.md`). Od foundera przy zleceniu: oznaczenie sądu rejestrowego, wysokość kapitału zakładowego, dane kontaktowe do umieszczenia (e-mail, telefon, adres strony) - te ostatnie celowo nie są powielane w warstwie 1. Żadne z nich nie są tu zgadywane.
+Z repozytorium: forma prawna, adres siedziby, KRS, NIP, REGON (`/01-baza-wiedzy/firma/kontekst-firmy-sanitized.md`). Od foundera przy zleceniu: oznaczenie sądu rejestrowego, wysokość kapitału zakładowego, wartości danych kontaktowych (e-mail, telefon, adres strony) - te ostatnie celowo nie są powielane w warstwie 1. Żadne z nich nie są tu zgadywane.
 
 ## Źródła
 
