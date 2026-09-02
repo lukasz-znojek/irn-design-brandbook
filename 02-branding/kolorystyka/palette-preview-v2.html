@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IRIN - podgląd wariantów palety v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#EDEBE6; color:#1E1611; font-family:'Manrope', system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  .spis { max-width:1000px; margin:0 auto; padding:32px 24px 8px; font-size:13px; line-height:1.6; }
+  .spis .kicker { font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837; margin-bottom:10px; }
+  .spis a { color:#1E1611; margin-right:16px; }
+  .wariant { max-width:1000px; margin:32px auto; padding:24px; background:var(--background); color:var(--text-primary); }
+  .wariant a { color:var(--link); text-decoration:underline; text-underline-offset:2px; }
+  .wariant a:hover { color:var(--primary); }
+  .naglowek-wariantu { display:flex; justify-content:space-between; align-items:baseline; gap:16px; padding:0 0 12px; border-bottom:1px solid var(--neutral-dark); margin-bottom:24px; }
+  .naglowek-wariantu .nr { font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; font-variant-numeric:tabular-nums; color:var(--primary); }
+  .naglowek-wariantu .nazwa { font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-0.01em; }
+  .naglowek-wariantu .kierunek { font-weight:400; font-size:13.5px; line-height:1.55; color:var(--text-secondary); max-width:560px; }
+  .probki { display:grid; grid-template-columns:repeat(15,1fr); gap:4px; margin-bottom:24px; }
+  .probki div { height:64px; padding:6px; display:flex; flex-direction:column; justify-content:flex-end; font-family:'Inconsolata', ui-monospace, monospace; font-size:9px; line-height:1.3; border:1px solid var(--border); overflow:hidden; }
+  .probki b { font-family:'Manrope'; font-weight:700; font-size:8.5px; letter-spacing:0.02em; }
+
+  /* Komponenty przepisane z brandbook.dc.html */
+  .sekcja { background:var(--surface); border:1px solid var(--neutral-dark); padding:48px; margin-top:16px; }
+  .kicker { font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:var(--text-secondary); }
+  .pas { background:var(--neutral-dark); color:var(--neutral-light); padding:22px 40px 26px; }
+  .pas .siatka { display:grid; grid-template-columns:auto 1fr auto; gap:24px; align-items:center; }
+  .pas img { height:20px; width:auto; filter:invert(1) brightness(1.6); }
+  .pas .linia { height:1px; background:var(--accent); opacity:0.55; }
+  .pas .meta { font-weight:700; font-size:10.5px; letter-spacing:0.26em; text-transform:uppercase; color:var(--accent); }
+  .pasy { margin-top:20px; display:grid; grid-template-columns:repeat(5,1fr); gap:10px; height:12px; }
+  .okladka { padding:56px 48px 40px; display:grid; grid-template-columns:1.4fr 1fr; gap:56px; }
+  .display { font-weight:200; font-size:72px; line-height:0.92; letter-spacing:-0.03em; margin:0; color:var(--primary); }
+  .lead { font-weight:500; font-size:16px; line-height:1.4; margin:20px 0 0; color:var(--text-secondary); }
+  .okladka .prawa { border-left:1px solid var(--neutral-dark); padding-left:32px; }
+  .okladka ol { list-style:none; margin:0; padding:0; font-weight:400; font-size:15px; line-height:1.5; }
+  .okladka li { display:grid; grid-template-columns:minmax(130px,auto) 1fr; gap:12px; padding:9px 0; border-bottom:1px solid var(--border); }
+  .okladka li span { color:var(--secondary); font-weight:600; }
+  .okladka li a { color:var(--text-primary); text-decoration:none; }
+  .stopka { padding:12px 28px; border-top:1px solid var(--neutral-dark); display:grid; grid-template-columns:1fr auto; font-size:8.5px; color:var(--text-secondary); }
+
+  h1.h1 { font-weight:300; font-size:40px; line-height:1.0; letter-spacing:-0.02em; margin:0 0 16px; color:var(--primary); }
+  h2.h2 { font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-0.01em; margin:28px 0 12px; color:var(--secondary); }
+  h3.h3 { font-weight:700; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; margin:20px 0 10px; color:var(--accent); }
+  p.korpus { font-weight:400; font-size:13.5px; line-height:1.55; margin:0 0 12px; max-width:720px; color:var(--text-primary); }
+  p.przypis { font-weight:400; font-size:10px; line-height:1.5; margin:8px 0 0; color:var(--text-secondary); }
+  .mono { font-family:'Inconsolata', ui-monospace, monospace; }
+
+  .box { border:1px solid var(--border); border-left:3px solid var(--info); background:var(--background); padding:16px 20px; margin:20px 0; max-width:720px; }
+  .box .kicker { color:var(--info); margin-bottom:8px; }
+  .box p { font-size:12.5px; line-height:1.55; margin:0; }
+  .box.ostrzezenie { border-left-color:var(--warning); }
+  .box.ostrzezenie .kicker { color:var(--text-primary); }
+
+  table.tab { width:100%; border-collapse:collapse; font-size:13px; margin:12px 0 4px; }
+  table.tab th { text-align:left; padding:8px 10px 8px 0; font-weight:700; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:var(--secondary); border-bottom:1px solid var(--neutral-dark); }
+  table.tab td { padding:9px 10px 9px 0; border-top:1px solid var(--border); vertical-align:top; }
+  table.tab tr:nth-child(even) td { background:var(--neutral-light); }
+  table.tab td.l { text-align:right; font-family:'Inconsolata', ui-monospace, monospace; font-weight:600; }
+  .etykieta { display:inline-block; padding:3px 8px; font-weight:700; font-size:8.5px; letter-spacing:0.14em; text-transform:uppercase; }
+
+  .cta { display:inline-block; padding:12px 20px; font-weight:700; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; text-decoration:none !important; margin:0 10px 10px 0; }
+  .cta.podstawowy { background:var(--primary); color:var(--background) !important; }
+  .cta.drugi { background:transparent; color:var(--primary) !important; border:1px solid var(--primary); }
+  .cta.akcent { background:var(--accent); }
+
+  .compliance { border-top:1px solid var(--neutral-dark); margin-top:32px; padding-top:20px; }
+  .compliance ul { margin:8px 0 0; padding-left:0; list-style:none; font-size:12.5px; line-height:1.6; max-width:720px; }
+  .compliance li { display:grid; grid-template-columns:1fr auto; gap:12px; padding:6px 0; border-top:1px solid var(--border); }
+  .cyfra { font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em; font-variant-numeric:tabular-nums; color:var(--accent); }
+  @media (max-width:760px) { .okladka { grid-template-columns:1fr; } .probki { grid-template-columns:repeat(5,1fr); } .display { font-size:52px; } }
+</style>
+</head>
+<body>
+<div class="spis">
+  <div class="kicker">IRIN · podgląd 7 wariantów palety v2 · typografia bez zmian (Manrope 200-800, Inconsolata)</div>
+  <div><a href="#wariant-1">1 · Kaszmir Aksamit</a> <a href="#wariant-2">2 · Atrament i Papier</a> <a href="#wariant-3">3 · Zieleń Instytutu</a> <a href="#wariant-4">4 · Grafit techniczny</a> <a href="#wariant-5">5 · Terakota i piasek</a> <a href="#wariant-6">6 · Bordo akademickie</a> <a href="#wariant-7">7 · Sygnał</a></div>
+  <div style="margin-top:8px; font-size:11px; color:#5B4837;">Wygenerowano z <span style="font-family:'Inconsolata', monospace">tokens/palette-options-v2.json</span>. Status: propozycja do wyboru, żaden wariant nie jest finalny. Krój ładuje się z Google Fonts - bez połączenia z internetem zobaczysz krój zastępczy.</div>
+</div>
+
+<article class="wariant" id="wariant-1" style="--primary:#4A1D26; --secondary:#1B2B26; --accent:#8C5026; --neutral-dark:#1E1611; --neutral-light:#E4DACB; --success:#2F4A32; --warning:#D9AC4A; --error:#AC151F; --info:#2E4F4A; --background:#F7F3EA; --surface:#F2ECE1; --border:#C3BDB3; --text-primary:#1E1611; --text-secondary:#5B4837; --link:#AC151F;">
+  <div class="naglowek-wariantu">
+    <div style="display:flex; gap:20px; align-items:baseline;">
+      <div class="nr">1</div>
+      <div><div class="nazwa">Kaszmir Aksamit (obecna, uporządkowana)</div></div>
+    </div>
+    <div class="kierunek">Obecna zatwierdzona paleta 12 barw przepisana na 15 tokenów, bez zmiany żadnej zatwierdzonej wartości - punkt odniesienia dla pozostałych sześciu. Jedyny dodatek to token info, którego obecna paleta nie miała.</div>
+  </div>
+  <div class="probki"><div style="background:#4A1D26; color:#FFFFFF"><b>primary</b>#4A1D26</div><div style="background:#1B2B26; color:#FFFFFF"><b>secondary</b>#1B2B26</div><div style="background:#8C5026; color:#FFFFFF"><b>accent</b>#8C5026</div><div style="background:#1E1611; color:#FFFFFF"><b>neutral-dark</b>#1E1611</div><div style="background:#E4DACB; color:#111111"><b>neutral-light</b>#E4DACB</div><div style="background:#2F4A32; color:#FFFFFF"><b>success</b>#2F4A32</div><div style="background:#D9AC4A; color:#111111"><b>warning</b>#D9AC4A</div><div style="background:#AC151F; color:#FFFFFF"><b>error</b>#AC151F</div><div style="background:#2E4F4A; color:#FFFFFF"><b>info</b>#2E4F4A</div><div style="background:#F7F3EA; color:#111111"><b>background</b>#F7F3EA</div><div style="background:#F2ECE1; color:#111111"><b>surface</b>#F2ECE1</div><div style="background:#C3BDB3; color:#111111"><b>border</b>#C3BDB3</div><div style="background:#1E1611; color:#FFFFFF"><b>text-primary</b>#1E1611</div><div style="background:#5B4837; color:#FFFFFF"><b>text-secondary</b>#5B4837</div><div style="background:#AC151F; color:#FFFFFF"><b>link</b>#AC151F</div></div>
+
+  <!-- 1. Strona tytułowa (komponent okładki z brandbook.dc.html, § 00) -->
+  <section class="sekcja" style="padding:0;">
+    <div class="pas">
+      <div class="siatka">
+        <img src="../../logo_irin_poziom.svg" alt="IRIN">
+        <div class="linia"></div>
+        <div class="meta">Brandbook · wariant palety 1</div>
+      </div>
+      <div class="pasy">
+        <div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div>
+      </div>
+    </div>
+    <div class="okladka">
+      <div>
+        <div class="kicker" style="margin-bottom:20px;">Instytut Rozwoju i Nauki · księga marki</div>
+        <h1 class="display">Brandbook.</h1>
+        <div class="lead">Manrope × siatka sześciokolumnowa × paleta „Kaszmir Aksamit” - jeden system dla trzech dziedzin.</div>
+        <div style="margin-top:32px; height:1px; background:var(--neutral-dark);"></div>
+        <p class="korpus" style="margin-top:20px;">Ta strona pokazuje wariant 1 palety na identycznym układzie co pozostałe sześć. Typografia, siatka i komponenty są wspólne - jedyną zmienną jest kolor i jego zastosowanie.</p>
+      </div>
+      <div class="prawa">
+        <div class="kicker" style="margin-bottom:16px;">§ Mapowanie dziedzin (propozycja)</div>
+        <ol><li><span>Pedagogika</span><span style='color:var(--text-primary); font-weight:400'>primary (Aksamit)</span></li><li><span>Akademia AI</span><span style='color:var(--text-primary); font-weight:400'>accent (Miedź)</span></li><li><span>Pożyczki UE/BGK</span><span style='color:var(--text-primary); font-weight:400'>secondary (Onyks)</span></li></ol>
+      </div>
+    </div>
+    <div class="stopka"><div>Instytut Rozwoju i Nauki</div><div>podgląd palety v2 · wariant 1</div></div>
+  </section>
+
+  <!-- 2. Hierarchia nagłówków (skala z brandbook.dc.html, § 04) -->
+  <section class="sekcja">
+    <div class="kicker" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--neutral-dark);">§ 01 · Hierarchia nagłówków i akapit</div>
+    <h1 class="h1">Nagłówek H1 - rozdział dokumentu</h1>
+    <h2 class="h2">Nagłówek H2 - sekcja</h2>
+    <h3 class="h3">Nagłówek H3 · drogowskaz sekcji</h3>
+    <p class="korpus">IRIN mówi z pozycji doradcy biznesowego, nie urzędu i nie startupu. Ten sam dokument czyta dział HR korporacji, zarząd firmy i pracownik operatora dotacji, bez zmiany rejestru. Pedagogika, Akademia AI i Pożyczki UE/BGK są rozróżniane kolorem dziedziny, struktura i krój pozostają identyczne. Więcej: <a href="#wariant-1">karta usługi w Bazie Usług Rozwojowych</a>.</p>
+    <p class="przypis">Przypis i metadane: Manrope Regular 10 pt, kolor text-secondary. Kod usługi <span class="mono">2026/00000/PPUR</span> [do potwierdzenia].</p>
+
+    <!-- 3. Box informacyjny -->
+    <div class="box">
+      <div class="kicker">Informacja</div>
+      <p>Szkolenie może być dofinansowane ze środków Krajowego Funduszu Szkoleniowego (KFS) lub przez Bazę Usług Rozwojowych (BUR). Wysokość dofinansowania zależy od wielkości firmy i regulaminu operatora - patrz <a href="#wariant-1">01-baza-wiedzy/prawo/kfs.md</a>.</p>
+    </div>
+
+    <!-- 4. Tabela -->
+    <h2 class="h2">Tabela - program i rozliczenie</h2>
+    <table class="tab">
+      <thead><tr><th>Moduł szkolenia</th><th>Forma</th><th style="text-align:right">Godziny</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Diagnoza potrzeb rozwojowych</td><td>warsztat</td><td class="l">8</td><td><span class="etykieta" style="background:var(--success); color:#F7F3EA">potwierdzone</span></td></tr>
+        <tr><td>Wniosek KFS i dokumentacja</td><td>ćwiczenia</td><td class="l">6</td><td><span class="etykieta" style="background:var(--warning); color:#1E1611">do potwierdzenia</span></td></tr>
+        <tr><td>Walidacja efektów uczenia się</td><td>test</td><td class="l">2</td><td><span class="etykieta" style="background:var(--error); color:#F7F3EA">brak danych</span></td></tr>
+        <tr><td>Konsultacja poszkoleniowa</td><td>zdalnie</td><td class="l">2</td><td><span class="etykieta" style="background:var(--info); color:#F7F3EA">informacja</span></td></tr>
+      </tbody>
+    </table>
+    <p class="przypis">Wiersze naprzemienne: neutral-light. Linie: border. Nagłówki kolumn: secondary, styl drogowskazu (700, wersaliki, tracking 0,2 em).</p>
+
+    <!-- 5. CTA i link -->
+    <h2 class="h2">Przycisk / CTA i link</h2>
+    <div style="margin:12px 0 4px;">
+      <a class="cta podstawowy" href="#wariant-1">Zapisz się na szkolenie</a>
+      <a class="cta drugi" href="#wariant-1">Pobierz program</a>
+      <a class="cta akcent" href="#wariant-1" style="color:#F7F3EA !important">Sprawdź dofinansowanie</a>
+    </div>
+    <p class="korpus">Link w tekście: <a href="#wariant-1">regulamin Bazy Usług Rozwojowych</a> oraz <a href="#wariant-1">limity KFS na rok bieżący</a>. Podkreślenie z odsunięciem 2 px jak w brandbook.dc.html; kolor: link, po najechaniu: primary.</p>
+    <div style="display:flex; gap:32px; align-items:baseline; margin-top:16px;">
+      <div><div class="cyfra">3 128</div><div class="przypis">liczba prowadząca · Manrope 800 · accent</div></div>
+      <div><div class="cyfra" style="color:var(--primary)">80%</div><div class="przypis">liczba prowadząca · primary</div></div>
+    </div>
+
+    <!-- 6. Sekcja prawo / compliance -->
+    <div class="compliance">
+      <div class="kicker" style="margin-bottom:8px;">§ 02 · Prawo i zgodność - elementy obowiązkowe zaświadczenia</div>
+      <h2 class="h2" style="margin-top:8px;">Wymogi formalne wobec PUP i BUR</h2>
+      <p class="korpus">Lista pól wynika z karty specyfikacji <a href="#wariant-1">02-szablony-dokumentow/certyfikat.md</a>. Status każdego pola pokazuje, jak paleta oznacza stan potwierdzony, do potwierdzenia i brak danych.</p>
+      <ul>
+        <li><span>Identyfikacja uczestnika, szkolenia, realizatora (IRIN) i liczby godzin - wymóg rozliczeniowy wobec PUP (ścieżka KFS)</span><span class="etykieta" style="background:var(--success); color:#F7F3EA">potwierdzone</span></li>
+        <li><span>Osiągnięte efekty uczenia się - wymóg BUR</span><span class="etykieta" style="background:var(--success); color:#F7F3EA">potwierdzone</span></li>
+        <li><span>Kod usługi BUR w formie zgodnej z rejestracją</span><span class="etykieta" style="background:var(--warning); color:#1E1611">do potwierdzenia</span></li>
+        <li><span>Komplet pól wzoru z Załącznika nr 12 do Regulaminu BUR - treść wzoru nie została odczytana</span><span class="etykieta" style="background:var(--error); color:#F7F3EA">brak danych</span></li>
+      </ul>
+      <div class="box ostrzezenie">
+        <div class="kicker">Zastrzeżenie</div>
+        <p>Oficjalny wzór zaświadczenia BUR istnieje, ale jego treści nie udało się pobrać w sesji, w której powstała baza wiedzy. Zanim karta specyfikacji zostanie uznana za zamkniętą, należy odczytać załącznik wprost.</p>
+      </div>
+      <p class="przypis mono">Podstawa: ustawa o promocji zatrudnienia i instytucjach rynku pracy (KFS) · Regulamin BUR (PARP) · dane rejestrowe realizatora [do potwierdzenia]</p>
+    </div>
+  </section>
+</article>
+
+<article class="wariant" id="wariant-2" style="--primary:#1F2D4F; --secondary:#7A5A36; --accent:#875512; --neutral-dark:#141A26; --neutral-light:#E5E0D5; --success:#2E6B4F; --warning:#C98F1B; --error:#B0322E; --info:#2B5F8E; --background:#F8F5EE; --surface:#F2EEE4; --border:#C9C2B4; --text-primary:#141A26; --text-secondary:#56544F; --link:#1F5AA6;">
+  <div class="naglowek-wariantu">
+    <div style="display:flex; gap:20px; align-items:baseline;">
+      <div class="nr">2</div>
+      <div><div class="nazwa">Atrament i Papier (granat instytucjonalny na ciepłym papierze)</div></div>
+    </div>
+    <div class="kierunek">Zachowuje ciepły papier i edytorski charakter obecnego kierunku, ale główny kolor przesuwa z bordo na głęboki granat atramentu - ton instytutu i doradcy finansowego, czytelny w kopii czarno-białej. Brąz zamiast złota utrzymuje wątek pieczęci bez efektu folii.</div>
+  </div>
+  <div class="probki"><div style="background:#1F2D4F; color:#FFFFFF"><b>primary</b>#1F2D4F</div><div style="background:#7A5A36; color:#FFFFFF"><b>secondary</b>#7A5A36</div><div style="background:#875512; color:#FFFFFF"><b>accent</b>#875512</div><div style="background:#141A26; color:#FFFFFF"><b>neutral-dark</b>#141A26</div><div style="background:#E5E0D5; color:#111111"><b>neutral-light</b>#E5E0D5</div><div style="background:#2E6B4F; color:#FFFFFF"><b>success</b>#2E6B4F</div><div style="background:#C98F1B; color:#111111"><b>warning</b>#C98F1B</div><div style="background:#B0322E; color:#FFFFFF"><b>error</b>#B0322E</div><div style="background:#2B5F8E; color:#FFFFFF"><b>info</b>#2B5F8E</div><div style="background:#F8F5EE; color:#111111"><b>background</b>#F8F5EE</div><div style="background:#F2EEE4; color:#111111"><b>surface</b>#F2EEE4</div><div style="background:#C9C2B4; color:#111111"><b>border</b>#C9C2B4</div><div style="background:#141A26; color:#FFFFFF"><b>text-primary</b>#141A26</div><div style="background:#56544F; color:#FFFFFF"><b>text-secondary</b>#56544F</div><div style="background:#1F5AA6; color:#FFFFFF"><b>link</b>#1F5AA6</div></div>
+
+  <!-- 1. Strona tytułowa (komponent okładki z brandbook.dc.html, § 00) -->
+  <section class="sekcja" style="padding:0;">
+    <div class="pas">
+      <div class="siatka">
+        <img src="../../logo_irin_poziom.svg" alt="IRIN">
+        <div class="linia"></div>
+        <div class="meta">Brandbook · wariant palety 2</div>
+      </div>
+      <div class="pasy">
+        <div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div>
+      </div>
+    </div>
+    <div class="okladka">
+      <div>
+        <div class="kicker" style="margin-bottom:20px;">Instytut Rozwoju i Nauki · księga marki</div>
+        <h1 class="display">Brandbook.</h1>
+        <div class="lead">Manrope × siatka sześciokolumnowa × paleta „Atrament i Papier” - jeden system dla trzech dziedzin.</div>
+        <div style="margin-top:32px; height:1px; background:var(--neutral-dark);"></div>
+        <p class="korpus" style="margin-top:20px;">Ta strona pokazuje wariant 2 palety na identycznym układzie co pozostałe sześć. Typografia, siatka i komponenty są wspólne - jedyną zmienną jest kolor i jego zastosowanie.</p>
+      </div>
+      <div class="prawa">
+        <div class="kicker" style="margin-bottom:16px;">§ Mapowanie dziedzin (propozycja)</div>
+        <ol><li><span>Pedagogika</span><span style='color:var(--text-primary); font-weight:400'>secondary (brąz umbra)</span></li><li><span>Akademia AI</span><span style='color:var(--text-primary); font-weight:400'>info (błękit stalowy)</span></li><li><span>Pożyczki UE/BGK</span><span style='color:var(--text-primary); font-weight:400'>primary (granat)</span></li></ol>
+      </div>
+    </div>
+    <div class="stopka"><div>Instytut Rozwoju i Nauki</div><div>podgląd palety v2 · wariant 2</div></div>
+  </section>
+
+  <!-- 2. Hierarchia nagłówków (skala z brandbook.dc.html, § 04) -->
+  <section class="sekcja">
+    <div class="kicker" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--neutral-dark);">§ 01 · Hierarchia nagłówków i akapit</div>
+    <h1 class="h1">Nagłówek H1 - rozdział dokumentu</h1>
+    <h2 class="h2">Nagłówek H2 - sekcja</h2>
+    <h3 class="h3">Nagłówek H3 · drogowskaz sekcji</h3>
+    <p class="korpus">IRIN mówi z pozycji doradcy biznesowego, nie urzędu i nie startupu. Ten sam dokument czyta dział HR korporacji, zarząd firmy i pracownik operatora dotacji, bez zmiany rejestru. Pedagogika, Akademia AI i Pożyczki UE/BGK są rozróżniane kolorem dziedziny, struktura i krój pozostają identyczne. Więcej: <a href="#wariant-2">karta usługi w Bazie Usług Rozwojowych</a>.</p>
+    <p class="przypis">Przypis i metadane: Manrope Regular 10 pt, kolor text-secondary. Kod usługi <span class="mono">2026/00000/PPUR</span> [do potwierdzenia].</p>
+
+    <!-- 3. Box informacyjny -->
+    <div class="box">
+      <div class="kicker">Informacja</div>
+      <p>Szkolenie może być dofinansowane ze środków Krajowego Funduszu Szkoleniowego (KFS) lub przez Bazę Usług Rozwojowych (BUR). Wysokość dofinansowania zależy od wielkości firmy i regulaminu operatora - patrz <a href="#wariant-2">01-baza-wiedzy/prawo/kfs.md</a>.</p>
+    </div>
+
+    <!-- 4. Tabela -->
+    <h2 class="h2">Tabela - program i rozliczenie</h2>
+    <table class="tab">
+      <thead><tr><th>Moduł szkolenia</th><th>Forma</th><th style="text-align:right">Godziny</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Diagnoza potrzeb rozwojowych</td><td>warsztat</td><td class="l">8</td><td><span class="etykieta" style="background:var(--success); color:#F8F5EE">potwierdzone</span></td></tr>
+        <tr><td>Wniosek KFS i dokumentacja</td><td>ćwiczenia</td><td class="l">6</td><td><span class="etykieta" style="background:var(--warning); color:#141A26">do potwierdzenia</span></td></tr>
+        <tr><td>Walidacja efektów uczenia się</td><td>test</td><td class="l">2</td><td><span class="etykieta" style="background:var(--error); color:#F8F5EE">brak danych</span></td></tr>
+        <tr><td>Konsultacja poszkoleniowa</td><td>zdalnie</td><td class="l">2</td><td><span class="etykieta" style="background:var(--info); color:#F8F5EE">informacja</span></td></tr>
+      </tbody>
+    </table>
+    <p class="przypis">Wiersze naprzemienne: neutral-light. Linie: border. Nagłówki kolumn: secondary, styl drogowskazu (700, wersaliki, tracking 0,2 em).</p>
+
+    <!-- 5. CTA i link -->
+    <h2 class="h2">Przycisk / CTA i link</h2>
+    <div style="margin:12px 0 4px;">
+      <a class="cta podstawowy" href="#wariant-2">Zapisz się na szkolenie</a>
+      <a class="cta drugi" href="#wariant-2">Pobierz program</a>
+      <a class="cta akcent" href="#wariant-2" style="color:#F8F5EE !important">Sprawdź dofinansowanie</a>
+    </div>
+    <p class="korpus">Link w tekście: <a href="#wariant-2">regulamin Bazy Usług Rozwojowych</a> oraz <a href="#wariant-2">limity KFS na rok bieżący</a>. Podkreślenie z odsunięciem 2 px jak w brandbook.dc.html; kolor: link, po najechaniu: primary.</p>
+    <div style="display:flex; gap:32px; align-items:baseline; margin-top:16px;">
+      <div><div class="cyfra">3 128</div><div class="przypis">liczba prowadząca · Manrope 800 · accent</div></div>
+      <div><div class="cyfra" style="color:var(--primary)">80%</div><div class="przypis">liczba prowadząca · primary</div></div>
+    </div>
+
+    <!-- 6. Sekcja prawo / compliance -->
+    <div class="compliance">
+      <div class="kicker" style="margin-bottom:8px;">§ 02 · Prawo i zgodność - elementy obowiązkowe zaświadczenia</div>
+      <h2 class="h2" style="margin-top:8px;">Wymogi formalne wobec PUP i BUR</h2>
+      <p class="korpus">Lista pól wynika z karty specyfikacji <a href="#wariant-2">02-szablony-dokumentow/certyfikat.md</a>. Status każdego pola pokazuje, jak paleta oznacza stan potwierdzony, do potwierdzenia i brak danych.</p>
+      <ul>
+        <li><span>Identyfikacja uczestnika, szkolenia, realizatora (IRIN) i liczby godzin - wymóg rozliczeniowy wobec PUP (ścieżka KFS)</span><span class="etykieta" style="background:var(--success); color:#F8F5EE">potwierdzone</span></li>
+        <li><span>Osiągnięte efekty uczenia się - wymóg BUR</span><span class="etykieta" style="background:var(--success); color:#F8F5EE">potwierdzone</span></li>
+        <li><span>Kod usługi BUR w formie zgodnej z rejestracją</span><span class="etykieta" style="background:var(--warning); color:#141A26">do potwierdzenia</span></li>
+        <li><span>Komplet pól wzoru z Załącznika nr 12 do Regulaminu BUR - treść wzoru nie została odczytana</span><span class="etykieta" style="background:var(--error); color:#F8F5EE">brak danych</span></li>
+      </ul>
+      <div class="box ostrzezenie">
+        <div class="kicker">Zastrzeżenie</div>
+        <p>Oficjalny wzór zaświadczenia BUR istnieje, ale jego treści nie udało się pobrać w sesji, w której powstała baza wiedzy. Zanim karta specyfikacji zostanie uznana za zamkniętą, należy odczytać załącznik wprost.</p>
+      </div>
+      <p class="przypis mono">Podstawa: ustawa o promocji zatrudnienia i instytucjach rynku pracy (KFS) · Regulamin BUR (PARP) · dane rejestrowe realizatora [do potwierdzenia]</p>
+    </div>
+  </section>
+</article>
+
+<article class="wariant" id="wariant-3" style="--primary:#1F3D2E; --secondary:#5A6B54; --accent:#8F5C16; --neutral-dark:#16201A; --neutral-light:#E2E5DB; --success:#2F7A4E; --warning:#D19B2C; --error:#A9302C; --info:#2C6B85; --background:#F6F5EF; --surface:#EFEFE6; --border:#C6CBBE; --text-primary:#16201A; --text-secondary:#4F5A52; --link:#8A5814;">
+  <div class="naglowek-wariantu">
+    <div style="display:flex; gap:20px; align-items:baseline;">
+      <div class="nr">3</div>
+      <div><div class="nazwa">Zieleń Instytutu (leśna zieleń i mosiądz)</div></div>
+    </div>
+    <div class="kierunek">Głęboka zieleń jako kolor rozwoju i stabilności finansowej, mosiądz jako ciepły akcent honorowy; neutrale lekko zszarzałe, żeby zieleń nie wpadała w ton ekologiczny. Kierunek najbardziej odległy od czerwieni, więc najbezpieczniejszy dla osób z deuteranopią w połączeniu z czerwienią błędu.</div>
+  </div>
+  <div class="probki"><div style="background:#1F3D2E; color:#FFFFFF"><b>primary</b>#1F3D2E</div><div style="background:#5A6B54; color:#FFFFFF"><b>secondary</b>#5A6B54</div><div style="background:#8F5C16; color:#FFFFFF"><b>accent</b>#8F5C16</div><div style="background:#16201A; color:#FFFFFF"><b>neutral-dark</b>#16201A</div><div style="background:#E2E5DB; color:#111111"><b>neutral-light</b>#E2E5DB</div><div style="background:#2F7A4E; color:#FFFFFF"><b>success</b>#2F7A4E</div><div style="background:#D19B2C; color:#111111"><b>warning</b>#D19B2C</div><div style="background:#A9302C; color:#FFFFFF"><b>error</b>#A9302C</div><div style="background:#2C6B85; color:#FFFFFF"><b>info</b>#2C6B85</div><div style="background:#F6F5EF; color:#111111"><b>background</b>#F6F5EF</div><div style="background:#EFEFE6; color:#111111"><b>surface</b>#EFEFE6</div><div style="background:#C6CBBE; color:#111111"><b>border</b>#C6CBBE</div><div style="background:#16201A; color:#FFFFFF"><b>text-primary</b>#16201A</div><div style="background:#4F5A52; color:#FFFFFF"><b>text-secondary</b>#4F5A52</div><div style="background:#8A5814; color:#FFFFFF"><b>link</b>#8A5814</div></div>
+
+  <!-- 1. Strona tytułowa (komponent okładki z brandbook.dc.html, § 00) -->
+  <section class="sekcja" style="padding:0;">
+    <div class="pas">
+      <div class="siatka">
+        <img src="../../logo_irin_poziom.svg" alt="IRIN">
+        <div class="linia"></div>
+        <div class="meta">Brandbook · wariant palety 3</div>
+      </div>
+      <div class="pasy">
+        <div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div>
+      </div>
+    </div>
+    <div class="okladka">
+      <div>
+        <div class="kicker" style="margin-bottom:20px;">Instytut Rozwoju i Nauki · księga marki</div>
+        <h1 class="display">Brandbook.</h1>
+        <div class="lead">Manrope × siatka sześciokolumnowa × paleta „Zieleń Instytutu” - jeden system dla trzech dziedzin.</div>
+        <div style="margin-top:32px; height:1px; background:var(--neutral-dark);"></div>
+        <p class="korpus" style="margin-top:20px;">Ta strona pokazuje wariant 3 palety na identycznym układzie co pozostałe sześć. Typografia, siatka i komponenty są wspólne - jedyną zmienną jest kolor i jego zastosowanie.</p>
+      </div>
+      <div class="prawa">
+        <div class="kicker" style="margin-bottom:16px;">§ Mapowanie dziedzin (propozycja)</div>
+        <ol><li><span>Pedagogika</span><span style='color:var(--text-primary); font-weight:400'>accent (mosiądz)</span></li><li><span>Akademia AI</span><span style='color:var(--text-primary); font-weight:400'>info (morski)</span></li><li><span>Pożyczki UE/BGK</span><span style='color:var(--text-primary); font-weight:400'>primary (leśna zieleń)</span></li></ol>
+      </div>
+    </div>
+    <div class="stopka"><div>Instytut Rozwoju i Nauki</div><div>podgląd palety v2 · wariant 3</div></div>
+  </section>
+
+  <!-- 2. Hierarchia nagłówków (skala z brandbook.dc.html, § 04) -->
+  <section class="sekcja">
+    <div class="kicker" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--neutral-dark);">§ 01 · Hierarchia nagłówków i akapit</div>
+    <h1 class="h1">Nagłówek H1 - rozdział dokumentu</h1>
+    <h2 class="h2">Nagłówek H2 - sekcja</h2>
+    <h3 class="h3">Nagłówek H3 · drogowskaz sekcji</h3>
+    <p class="korpus">IRIN mówi z pozycji doradcy biznesowego, nie urzędu i nie startupu. Ten sam dokument czyta dział HR korporacji, zarząd firmy i pracownik operatora dotacji, bez zmiany rejestru. Pedagogika, Akademia AI i Pożyczki UE/BGK są rozróżniane kolorem dziedziny, struktura i krój pozostają identyczne. Więcej: <a href="#wariant-3">karta usługi w Bazie Usług Rozwojowych</a>.</p>
+    <p class="przypis">Przypis i metadane: Manrope Regular 10 pt, kolor text-secondary. Kod usługi <span class="mono">2026/00000/PPUR</span> [do potwierdzenia].</p>
+
+    <!-- 3. Box informacyjny -->
+    <div class="box">
+      <div class="kicker">Informacja</div>
+      <p>Szkolenie może być dofinansowane ze środków Krajowego Funduszu Szkoleniowego (KFS) lub przez Bazę Usług Rozwojowych (BUR). Wysokość dofinansowania zależy od wielkości firmy i regulaminu operatora - patrz <a href="#wariant-3">01-baza-wiedzy/prawo/kfs.md</a>.</p>
+    </div>
+
+    <!-- 4. Tabela -->
+    <h2 class="h2">Tabela - program i rozliczenie</h2>
+    <table class="tab">
+      <thead><tr><th>Moduł szkolenia</th><th>Forma</th><th style="text-align:right">Godziny</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Diagnoza potrzeb rozwojowych</td><td>warsztat</td><td class="l">8</td><td><span class="etykieta" style="background:var(--success); color:#F6F5EF">potwierdzone</span></td></tr>
+        <tr><td>Wniosek KFS i dokumentacja</td><td>ćwiczenia</td><td class="l">6</td><td><span class="etykieta" style="background:var(--warning); color:#16201A">do potwierdzenia</span></td></tr>
+        <tr><td>Walidacja efektów uczenia się</td><td>test</td><td class="l">2</td><td><span class="etykieta" style="background:var(--error); color:#F6F5EF">brak danych</span></td></tr>
+        <tr><td>Konsultacja poszkoleniowa</td><td>zdalnie</td><td class="l">2</td><td><span class="etykieta" style="background:var(--info); color:#F6F5EF">informacja</span></td></tr>
+      </tbody>
+    </table>
+    <p class="przypis">Wiersze naprzemienne: neutral-light. Linie: border. Nagłówki kolumn: secondary, styl drogowskazu (700, wersaliki, tracking 0,2 em).</p>
+
+    <!-- 5. CTA i link -->
+    <h2 class="h2">Przycisk / CTA i link</h2>
+    <div style="margin:12px 0 4px;">
+      <a class="cta podstawowy" href="#wariant-3">Zapisz się na szkolenie</a>
+      <a class="cta drugi" href="#wariant-3">Pobierz program</a>
+      <a class="cta akcent" href="#wariant-3" style="color:#F6F5EF !important">Sprawdź dofinansowanie</a>
+    </div>
+    <p class="korpus">Link w tekście: <a href="#wariant-3">regulamin Bazy Usług Rozwojowych</a> oraz <a href="#wariant-3">limity KFS na rok bieżący</a>. Podkreślenie z odsunięciem 2 px jak w brandbook.dc.html; kolor: link, po najechaniu: primary.</p>
+    <div style="display:flex; gap:32px; align-items:baseline; margin-top:16px;">
+      <div><div class="cyfra">3 128</div><div class="przypis">liczba prowadząca · Manrope 800 · accent</div></div>
+      <div><div class="cyfra" style="color:var(--primary)">80%</div><div class="przypis">liczba prowadząca · primary</div></div>
+    </div>
+
+    <!-- 6. Sekcja prawo / compliance -->
+    <div class="compliance">
+      <div class="kicker" style="margin-bottom:8px;">§ 02 · Prawo i zgodność - elementy obowiązkowe zaświadczenia</div>
+      <h2 class="h2" style="margin-top:8px;">Wymogi formalne wobec PUP i BUR</h2>
+      <p class="korpus">Lista pól wynika z karty specyfikacji <a href="#wariant-3">02-szablony-dokumentow/certyfikat.md</a>. Status każdego pola pokazuje, jak paleta oznacza stan potwierdzony, do potwierdzenia i brak danych.</p>
+      <ul>
+        <li><span>Identyfikacja uczestnika, szkolenia, realizatora (IRIN) i liczby godzin - wymóg rozliczeniowy wobec PUP (ścieżka KFS)</span><span class="etykieta" style="background:var(--success); color:#F6F5EF">potwierdzone</span></li>
+        <li><span>Osiągnięte efekty uczenia się - wymóg BUR</span><span class="etykieta" style="background:var(--success); color:#F6F5EF">potwierdzone</span></li>
+        <li><span>Kod usługi BUR w formie zgodnej z rejestracją</span><span class="etykieta" style="background:var(--warning); color:#16201A">do potwierdzenia</span></li>
+        <li><span>Komplet pól wzoru z Załącznika nr 12 do Regulaminu BUR - treść wzoru nie została odczytana</span><span class="etykieta" style="background:var(--error); color:#F6F5EF">brak danych</span></li>
+      </ul>
+      <div class="box ostrzezenie">
+        <div class="kicker">Zastrzeżenie</div>
+        <p>Oficjalny wzór zaświadczenia BUR istnieje, ale jego treści nie udało się pobrać w sesji, w której powstała baza wiedzy. Zanim karta specyfikacji zostanie uznana za zamkniętą, należy odczytać załącznik wprost.</p>
+      </div>
+      <p class="przypis mono">Podstawa: ustawa o promocji zatrudnienia i instytucjach rynku pracy (KFS) · Regulamin BUR (PARP) · dane rejestrowe realizatora [do potwierdzenia]</p>
+    </div>
+  </section>
+</article>
+
+<article class="wariant" id="wariant-4" style="--primary:#22272E; --secondary:#4A5563; --accent:#B84A0B; --neutral-dark:#15181C; --neutral-light:#E6E8EB; --success:#1E7B4B; --warning:#B7791F; --error:#B42318; --info:#175CD3; --background:#F7F8FA; --surface:#FFFFFF; --border:#D0D5DB; --text-primary:#15181C; --text-secondary:#4B5563; --link:#175CD3;">
+  <div class="naglowek-wariantu">
+    <div style="display:flex; gap:20px; align-items:baseline;">
+      <div class="nr">4</div>
+      <div><div class="nazwa">Grafit techniczny (chłodne neutrale, jeden ciepły akcent)</div></div>
+    </div>
+    <div class="kierunek">Chłodny grafit i biel zamiast papieru - ton produktu cyfrowego, dopasowany do Akademii AI, aplikacji handlowej i przyszłego portalu; jeden palony akcent pomarańczowy ociepla całość. Świadomie najbardziej korporacyjny wariant zestawu.</div>
+  </div>
+  <div class="probki"><div style="background:#22272E; color:#FFFFFF"><b>primary</b>#22272E</div><div style="background:#4A5563; color:#FFFFFF"><b>secondary</b>#4A5563</div><div style="background:#B84A0B; color:#FFFFFF"><b>accent</b>#B84A0B</div><div style="background:#15181C; color:#FFFFFF"><b>neutral-dark</b>#15181C</div><div style="background:#E6E8EB; color:#111111"><b>neutral-light</b>#E6E8EB</div><div style="background:#1E7B4B; color:#FFFFFF"><b>success</b>#1E7B4B</div><div style="background:#B7791F; color:#111111"><b>warning</b>#B7791F</div><div style="background:#B42318; color:#FFFFFF"><b>error</b>#B42318</div><div style="background:#175CD3; color:#FFFFFF"><b>info</b>#175CD3</div><div style="background:#F7F8FA; color:#111111"><b>background</b>#F7F8FA</div><div style="background:#FFFFFF; color:#111111"><b>surface</b>#FFFFFF</div><div style="background:#D0D5DB; color:#111111"><b>border</b>#D0D5DB</div><div style="background:#15181C; color:#FFFFFF"><b>text-primary</b>#15181C</div><div style="background:#4B5563; color:#FFFFFF"><b>text-secondary</b>#4B5563</div><div style="background:#175CD3; color:#FFFFFF"><b>link</b>#175CD3</div></div>
+
+  <!-- 1. Strona tytułowa (komponent okładki z brandbook.dc.html, § 00) -->
+  <section class="sekcja" style="padding:0;">
+    <div class="pas">
+      <div class="siatka">
+        <img src="../../logo_irin_poziom.svg" alt="IRIN">
+        <div class="linia"></div>
+        <div class="meta">Brandbook · wariant palety 4</div>
+      </div>
+      <div class="pasy">
+        <div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div>
+      </div>
+    </div>
+    <div class="okladka">
+      <div>
+        <div class="kicker" style="margin-bottom:20px;">Instytut Rozwoju i Nauki · księga marki</div>
+        <h1 class="display">Brandbook.</h1>
+        <div class="lead">Manrope × siatka sześciokolumnowa × paleta „Grafit techniczny” - jeden system dla trzech dziedzin.</div>
+        <div style="margin-top:32px; height:1px; background:var(--neutral-dark);"></div>
+        <p class="korpus" style="margin-top:20px;">Ta strona pokazuje wariant 4 palety na identycznym układzie co pozostałe sześć. Typografia, siatka i komponenty są wspólne - jedyną zmienną jest kolor i jego zastosowanie.</p>
+      </div>
+      <div class="prawa">
+        <div class="kicker" style="margin-bottom:16px;">§ Mapowanie dziedzin (propozycja)</div>
+        <ol><li><span>Pedagogika</span><span style='color:var(--text-primary); font-weight:400'>accent (palony pomarańcz)</span></li><li><span>Akademia AI</span><span style='color:var(--text-primary); font-weight:400'>info (błękit)</span></li><li><span>Pożyczki UE/BGK</span><span style='color:var(--text-primary); font-weight:400'>secondary (grafit średni)</span></li></ol>
+      </div>
+    </div>
+    <div class="stopka"><div>Instytut Rozwoju i Nauki</div><div>podgląd palety v2 · wariant 4</div></div>
+  </section>
+
+  <!-- 2. Hierarchia nagłówków (skala z brandbook.dc.html, § 04) -->
+  <section class="sekcja">
+    <div class="kicker" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--neutral-dark);">§ 01 · Hierarchia nagłówków i akapit</div>
+    <h1 class="h1">Nagłówek H1 - rozdział dokumentu</h1>
+    <h2 class="h2">Nagłówek H2 - sekcja</h2>
+    <h3 class="h3">Nagłówek H3 · drogowskaz sekcji</h3>
+    <p class="korpus">IRIN mówi z pozycji doradcy biznesowego, nie urzędu i nie startupu. Ten sam dokument czyta dział HR korporacji, zarząd firmy i pracownik operatora dotacji, bez zmiany rejestru. Pedagogika, Akademia AI i Pożyczki UE/BGK są rozróżniane kolorem dziedziny, struktura i krój pozostają identyczne. Więcej: <a href="#wariant-4">karta usługi w Bazie Usług Rozwojowych</a>.</p>
+    <p class="przypis">Przypis i metadane: Manrope Regular 10 pt, kolor text-secondary. Kod usługi <span class="mono">2026/00000/PPUR</span> [do potwierdzenia].</p>
+
+    <!-- 3. Box informacyjny -->
+    <div class="box">
+      <div class="kicker">Informacja</div>
+      <p>Szkolenie może być dofinansowane ze środków Krajowego Funduszu Szkoleniowego (KFS) lub przez Bazę Usług Rozwojowych (BUR). Wysokość dofinansowania zależy od wielkości firmy i regulaminu operatora - patrz <a href="#wariant-4">01-baza-wiedzy/prawo/kfs.md</a>.</p>
+    </div>
+
+    <!-- 4. Tabela -->
+    <h2 class="h2">Tabela - program i rozliczenie</h2>
+    <table class="tab">
+      <thead><tr><th>Moduł szkolenia</th><th>Forma</th><th style="text-align:right">Godziny</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Diagnoza potrzeb rozwojowych</td><td>warsztat</td><td class="l">8</td><td><span class="etykieta" style="background:var(--success); color:#F7F8FA">potwierdzone</span></td></tr>
+        <tr><td>Wniosek KFS i dokumentacja</td><td>ćwiczenia</td><td class="l">6</td><td><span class="etykieta" style="background:var(--warning); color:#15181C">do potwierdzenia</span></td></tr>
+        <tr><td>Walidacja efektów uczenia się</td><td>test</td><td class="l">2</td><td><span class="etykieta" style="background:var(--error); color:#F7F8FA">brak danych</span></td></tr>
+        <tr><td>Konsultacja poszkoleniowa</td><td>zdalnie</td><td class="l">2</td><td><span class="etykieta" style="background:var(--info); color:#F7F8FA">informacja</span></td></tr>
+      </tbody>
+    </table>
+    <p class="przypis">Wiersze naprzemienne: neutral-light. Linie: border. Nagłówki kolumn: secondary, styl drogowskazu (700, wersaliki, tracking 0,2 em).</p>
+
+    <!-- 5. CTA i link -->
+    <h2 class="h2">Przycisk / CTA i link</h2>
+    <div style="margin:12px 0 4px;">
+      <a class="cta podstawowy" href="#wariant-4">Zapisz się na szkolenie</a>
+      <a class="cta drugi" href="#wariant-4">Pobierz program</a>
+      <a class="cta akcent" href="#wariant-4" style="color:#F7F8FA !important">Sprawdź dofinansowanie</a>
+    </div>
+    <p class="korpus">Link w tekście: <a href="#wariant-4">regulamin Bazy Usług Rozwojowych</a> oraz <a href="#wariant-4">limity KFS na rok bieżący</a>. Podkreślenie z odsunięciem 2 px jak w brandbook.dc.html; kolor: link, po najechaniu: primary.</p>
+    <div style="display:flex; gap:32px; align-items:baseline; margin-top:16px;">
+      <div><div class="cyfra">3 128</div><div class="przypis">liczba prowadząca · Manrope 800 · accent</div></div>
+      <div><div class="cyfra" style="color:var(--primary)">80%</div><div class="przypis">liczba prowadząca · primary</div></div>
+    </div>
+
+    <!-- 6. Sekcja prawo / compliance -->
+    <div class="compliance">
+      <div class="kicker" style="margin-bottom:8px;">§ 02 · Prawo i zgodność - elementy obowiązkowe zaświadczenia</div>
+      <h2 class="h2" style="margin-top:8px;">Wymogi formalne wobec PUP i BUR</h2>
+      <p class="korpus">Lista pól wynika z karty specyfikacji <a href="#wariant-4">02-szablony-dokumentow/certyfikat.md</a>. Status każdego pola pokazuje, jak paleta oznacza stan potwierdzony, do potwierdzenia i brak danych.</p>
+      <ul>
+        <li><span>Identyfikacja uczestnika, szkolenia, realizatora (IRIN) i liczby godzin - wymóg rozliczeniowy wobec PUP (ścieżka KFS)</span><span class="etykieta" style="background:var(--success); color:#F7F8FA">potwierdzone</span></li>
+        <li><span>Osiągnięte efekty uczenia się - wymóg BUR</span><span class="etykieta" style="background:var(--success); color:#F7F8FA">potwierdzone</span></li>
+        <li><span>Kod usługi BUR w formie zgodnej z rejestracją</span><span class="etykieta" style="background:var(--warning); color:#15181C">do potwierdzenia</span></li>
+        <li><span>Komplet pól wzoru z Załącznika nr 12 do Regulaminu BUR - treść wzoru nie została odczytana</span><span class="etykieta" style="background:var(--error); color:#F7F8FA">brak danych</span></li>
+      </ul>
+      <div class="box ostrzezenie">
+        <div class="kicker">Zastrzeżenie</div>
+        <p>Oficjalny wzór zaświadczenia BUR istnieje, ale jego treści nie udało się pobrać w sesji, w której powstała baza wiedzy. Zanim karta specyfikacji zostanie uznana za zamkniętą, należy odczytać załącznik wprost.</p>
+      </div>
+      <p class="przypis mono">Podstawa: ustawa o promocji zatrudnienia i instytucjach rynku pracy (KFS) · Regulamin BUR (PARP) · dane rejestrowe realizatora [do potwierdzenia]</p>
+    </div>
+  </section>
+</article>
+
+<article class="wariant" id="wariant-5" style="--primary:#8E3B1E; --secondary:#5C6A3B; --accent:#914A14; --neutral-dark:#2B1F17; --neutral-light:#EBDFCC; --success:#377033; --warning:#D9A441; --error:#B3261E; --info:#3B6D8C; --background:#FAF5EC; --surface:#F4EBDC; --border:#D6C7B0; --text-primary:#2B1F17; --text-secondary:#6A5646; --link:#3B6D8C;">
+  <div class="naglowek-wariantu">
+    <div style="display:flex; gap:20px; align-items:baseline;">
+      <div class="nr">5</div>
+      <div><div class="nazwa">Terakota i piasek (ciepły, ziemisty, ludzki)</div></div>
+    </div>
+    <div class="kierunek">Najcieplejszy wariant: terakota jako główny kolor, oliwka jako przeciwwaga, piaskowe tła. Buduje ton szkoleń dla ludzi (Pedagogika, HR), kosztem powagi finansowej. Najbliższy obecnej Miedzi, ale rozjaśniony i bez bordo.</div>
+  </div>
+  <div class="probki"><div style="background:#8E3B1E; color:#FFFFFF"><b>primary</b>#8E3B1E</div><div style="background:#5C6A3B; color:#FFFFFF"><b>secondary</b>#5C6A3B</div><div style="background:#914A14; color:#FFFFFF"><b>accent</b>#914A14</div><div style="background:#2B1F17; color:#FFFFFF"><b>neutral-dark</b>#2B1F17</div><div style="background:#EBDFCC; color:#111111"><b>neutral-light</b>#EBDFCC</div><div style="background:#377033; color:#FFFFFF"><b>success</b>#377033</div><div style="background:#D9A441; color:#111111"><b>warning</b>#D9A441</div><div style="background:#B3261E; color:#FFFFFF"><b>error</b>#B3261E</div><div style="background:#3B6D8C; color:#FFFFFF"><b>info</b>#3B6D8C</div><div style="background:#FAF5EC; color:#111111"><b>background</b>#FAF5EC</div><div style="background:#F4EBDC; color:#111111"><b>surface</b>#F4EBDC</div><div style="background:#D6C7B0; color:#111111"><b>border</b>#D6C7B0</div><div style="background:#2B1F17; color:#FFFFFF"><b>text-primary</b>#2B1F17</div><div style="background:#6A5646; color:#FFFFFF"><b>text-secondary</b>#6A5646</div><div style="background:#3B6D8C; color:#FFFFFF"><b>link</b>#3B6D8C</div></div>
+
+  <!-- 1. Strona tytułowa (komponent okładki z brandbook.dc.html, § 00) -->
+  <section class="sekcja" style="padding:0;">
+    <div class="pas">
+      <div class="siatka">
+        <img src="../../logo_irin_poziom.svg" alt="IRIN">
+        <div class="linia"></div>
+        <div class="meta">Brandbook · wariant palety 5</div>
+      </div>
+      <div class="pasy">
+        <div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div>
+      </div>
+    </div>
+    <div class="okladka">
+      <div>
+        <div class="kicker" style="margin-bottom:20px;">Instytut Rozwoju i Nauki · księga marki</div>
+        <h1 class="display">Brandbook.</h1>
+        <div class="lead">Manrope × siatka sześciokolumnowa × paleta „Terakota i piasek” - jeden system dla trzech dziedzin.</div>
+        <div style="margin-top:32px; height:1px; background:var(--neutral-dark);"></div>
+        <p class="korpus" style="margin-top:20px;">Ta strona pokazuje wariant 5 palety na identycznym układzie co pozostałe sześć. Typografia, siatka i komponenty są wspólne - jedyną zmienną jest kolor i jego zastosowanie.</p>
+      </div>
+      <div class="prawa">
+        <div class="kicker" style="margin-bottom:16px;">§ Mapowanie dziedzin (propozycja)</div>
+        <ol><li><span>Pedagogika</span><span style='color:var(--text-primary); font-weight:400'>primary (terakota)</span></li><li><span>Akademia AI</span><span style='color:var(--text-primary); font-weight:400'>info (błękit przygaszony)</span></li><li><span>Pożyczki UE/BGK</span><span style='color:var(--text-primary); font-weight:400'>secondary (oliwka)</span></li></ol>
+      </div>
+    </div>
+    <div class="stopka"><div>Instytut Rozwoju i Nauki</div><div>podgląd palety v2 · wariant 5</div></div>
+  </section>
+
+  <!-- 2. Hierarchia nagłówków (skala z brandbook.dc.html, § 04) -->
+  <section class="sekcja">
+    <div class="kicker" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--neutral-dark);">§ 01 · Hierarchia nagłówków i akapit</div>
+    <h1 class="h1">Nagłówek H1 - rozdział dokumentu</h1>
+    <h2 class="h2">Nagłówek H2 - sekcja</h2>
+    <h3 class="h3">Nagłówek H3 · drogowskaz sekcji</h3>
+    <p class="korpus">IRIN mówi z pozycji doradcy biznesowego, nie urzędu i nie startupu. Ten sam dokument czyta dział HR korporacji, zarząd firmy i pracownik operatora dotacji, bez zmiany rejestru. Pedagogika, Akademia AI i Pożyczki UE/BGK są rozróżniane kolorem dziedziny, struktura i krój pozostają identyczne. Więcej: <a href="#wariant-5">karta usługi w Bazie Usług Rozwojowych</a>.</p>
+    <p class="przypis">Przypis i metadane: Manrope Regular 10 pt, kolor text-secondary. Kod usługi <span class="mono">2026/00000/PPUR</span> [do potwierdzenia].</p>
+
+    <!-- 3. Box informacyjny -->
+    <div class="box">
+      <div class="kicker">Informacja</div>
+      <p>Szkolenie może być dofinansowane ze środków Krajowego Funduszu Szkoleniowego (KFS) lub przez Bazę Usług Rozwojowych (BUR). Wysokość dofinansowania zależy od wielkości firmy i regulaminu operatora - patrz <a href="#wariant-5">01-baza-wiedzy/prawo/kfs.md</a>.</p>
+    </div>
+
+    <!-- 4. Tabela -->
+    <h2 class="h2">Tabela - program i rozliczenie</h2>
+    <table class="tab">
+      <thead><tr><th>Moduł szkolenia</th><th>Forma</th><th style="text-align:right">Godziny</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Diagnoza potrzeb rozwojowych</td><td>warsztat</td><td class="l">8</td><td><span class="etykieta" style="background:var(--success); color:#FAF5EC">potwierdzone</span></td></tr>
+        <tr><td>Wniosek KFS i dokumentacja</td><td>ćwiczenia</td><td class="l">6</td><td><span class="etykieta" style="background:var(--warning); color:#2B1F17">do potwierdzenia</span></td></tr>
+        <tr><td>Walidacja efektów uczenia się</td><td>test</td><td class="l">2</td><td><span class="etykieta" style="background:var(--error); color:#FAF5EC">brak danych</span></td></tr>
+        <tr><td>Konsultacja poszkoleniowa</td><td>zdalnie</td><td class="l">2</td><td><span class="etykieta" style="background:var(--info); color:#FAF5EC">informacja</span></td></tr>
+      </tbody>
+    </table>
+    <p class="przypis">Wiersze naprzemienne: neutral-light. Linie: border. Nagłówki kolumn: secondary, styl drogowskazu (700, wersaliki, tracking 0,2 em).</p>
+
+    <!-- 5. CTA i link -->
+    <h2 class="h2">Przycisk / CTA i link</h2>
+    <div style="margin:12px 0 4px;">
+      <a class="cta podstawowy" href="#wariant-5">Zapisz się na szkolenie</a>
+      <a class="cta drugi" href="#wariant-5">Pobierz program</a>
+      <a class="cta akcent" href="#wariant-5" style="color:#FAF5EC !important">Sprawdź dofinansowanie</a>
+    </div>
+    <p class="korpus">Link w tekście: <a href="#wariant-5">regulamin Bazy Usług Rozwojowych</a> oraz <a href="#wariant-5">limity KFS na rok bieżący</a>. Podkreślenie z odsunięciem 2 px jak w brandbook.dc.html; kolor: link, po najechaniu: primary.</p>
+    <div style="display:flex; gap:32px; align-items:baseline; margin-top:16px;">
+      <div><div class="cyfra">3 128</div><div class="przypis">liczba prowadząca · Manrope 800 · accent</div></div>
+      <div><div class="cyfra" style="color:var(--primary)">80%</div><div class="przypis">liczba prowadząca · primary</div></div>
+    </div>
+
+    <!-- 6. Sekcja prawo / compliance -->
+    <div class="compliance">
+      <div class="kicker" style="margin-bottom:8px;">§ 02 · Prawo i zgodność - elementy obowiązkowe zaświadczenia</div>
+      <h2 class="h2" style="margin-top:8px;">Wymogi formalne wobec PUP i BUR</h2>
+      <p class="korpus">Lista pól wynika z karty specyfikacji <a href="#wariant-5">02-szablony-dokumentow/certyfikat.md</a>. Status każdego pola pokazuje, jak paleta oznacza stan potwierdzony, do potwierdzenia i brak danych.</p>
+      <ul>
+        <li><span>Identyfikacja uczestnika, szkolenia, realizatora (IRIN) i liczby godzin - wymóg rozliczeniowy wobec PUP (ścieżka KFS)</span><span class="etykieta" style="background:var(--success); color:#FAF5EC">potwierdzone</span></li>
+        <li><span>Osiągnięte efekty uczenia się - wymóg BUR</span><span class="etykieta" style="background:var(--success); color:#FAF5EC">potwierdzone</span></li>
+        <li><span>Kod usługi BUR w formie zgodnej z rejestracją</span><span class="etykieta" style="background:var(--warning); color:#2B1F17">do potwierdzenia</span></li>
+        <li><span>Komplet pól wzoru z Załącznika nr 12 do Regulaminu BUR - treść wzoru nie została odczytana</span><span class="etykieta" style="background:var(--error); color:#FAF5EC">brak danych</span></li>
+      </ul>
+      <div class="box ostrzezenie">
+        <div class="kicker">Zastrzeżenie</div>
+        <p>Oficjalny wzór zaświadczenia BUR istnieje, ale jego treści nie udało się pobrać w sesji, w której powstała baza wiedzy. Zanim karta specyfikacji zostanie uznana za zamkniętą, należy odczytać załącznik wprost.</p>
+      </div>
+      <p class="przypis mono">Podstawa: ustawa o promocji zatrudnienia i instytucjach rynku pracy (KFS) · Regulamin BUR (PARP) · dane rejestrowe realizatora [do potwierdzenia]</p>
+    </div>
+  </section>
+</article>
+
+<article class="wariant" id="wariant-6" style="--primary:#6B1E2E; --secondary:#2E3A47; --accent:#8A6A1C; --neutral-dark:#1B1A1C; --neutral-light:#E8E4DF; --success:#2C6B46; --warning:#C4922C; --error:#B3261E; --info:#2F5F8A; --background:#FAF8F5; --surface:#FFFFFF; --border:#D5CFC7; --text-primary:#1B1A1C; --text-secondary:#57524E; --link:#8A2436;">
+  <div class="naglowek-wariantu">
+    <div style="display:flex; gap:20px; align-items:baseline;">
+      <div class="nr">6</div>
+      <div><div class="nazwa">Bordo akademickie (uroczyste, dyplomowe, chłodne neutrale)</div></div>
+    </div>
+    <div class="kierunek">Zachowuje bordo jako kolor marki, ale podnosi je i nasyca, a brązowe neutrale zamienia na chłodne szarości i biel - ton uczelni i dyplomu zamiast rzemieślniczego papieru. Złoto jako akcent honorowy (pieczęć, linia).</div>
+  </div>
+  <div class="probki"><div style="background:#6B1E2E; color:#FFFFFF"><b>primary</b>#6B1E2E</div><div style="background:#2E3A47; color:#FFFFFF"><b>secondary</b>#2E3A47</div><div style="background:#8A6A1C; color:#FFFFFF"><b>accent</b>#8A6A1C</div><div style="background:#1B1A1C; color:#FFFFFF"><b>neutral-dark</b>#1B1A1C</div><div style="background:#E8E4DF; color:#111111"><b>neutral-light</b>#E8E4DF</div><div style="background:#2C6B46; color:#FFFFFF"><b>success</b>#2C6B46</div><div style="background:#C4922C; color:#111111"><b>warning</b>#C4922C</div><div style="background:#B3261E; color:#FFFFFF"><b>error</b>#B3261E</div><div style="background:#2F5F8A; color:#FFFFFF"><b>info</b>#2F5F8A</div><div style="background:#FAF8F5; color:#111111"><b>background</b>#FAF8F5</div><div style="background:#FFFFFF; color:#111111"><b>surface</b>#FFFFFF</div><div style="background:#D5CFC7; color:#111111"><b>border</b>#D5CFC7</div><div style="background:#1B1A1C; color:#FFFFFF"><b>text-primary</b>#1B1A1C</div><div style="background:#57524E; color:#FFFFFF"><b>text-secondary</b>#57524E</div><div style="background:#8A2436; color:#FFFFFF"><b>link</b>#8A2436</div></div>
+
+  <!-- 1. Strona tytułowa (komponent okładki z brandbook.dc.html, § 00) -->
+  <section class="sekcja" style="padding:0;">
+    <div class="pas">
+      <div class="siatka">
+        <img src="../../logo_irin_poziom.svg" alt="IRIN">
+        <div class="linia"></div>
+        <div class="meta">Brandbook · wariant palety 6</div>
+      </div>
+      <div class="pasy">
+        <div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div>
+      </div>
+    </div>
+    <div class="okladka">
+      <div>
+        <div class="kicker" style="margin-bottom:20px;">Instytut Rozwoju i Nauki · księga marki</div>
+        <h1 class="display">Brandbook.</h1>
+        <div class="lead">Manrope × siatka sześciokolumnowa × paleta „Bordo akademickie” - jeden system dla trzech dziedzin.</div>
+        <div style="margin-top:32px; height:1px; background:var(--neutral-dark);"></div>
+        <p class="korpus" style="margin-top:20px;">Ta strona pokazuje wariant 6 palety na identycznym układzie co pozostałe sześć. Typografia, siatka i komponenty są wspólne - jedyną zmienną jest kolor i jego zastosowanie.</p>
+      </div>
+      <div class="prawa">
+        <div class="kicker" style="margin-bottom:16px;">§ Mapowanie dziedzin (propozycja)</div>
+        <ol><li><span>Pedagogika</span><span style='color:var(--text-primary); font-weight:400'>primary (bordo)</span></li><li><span>Akademia AI</span><span style='color:var(--text-primary); font-weight:400'>info (błękit)</span></li><li><span>Pożyczki UE/BGK</span><span style='color:var(--text-primary); font-weight:400'>secondary (łupek)</span></li></ol>
+      </div>
+    </div>
+    <div class="stopka"><div>Instytut Rozwoju i Nauki</div><div>podgląd palety v2 · wariant 6</div></div>
+  </section>
+
+  <!-- 2. Hierarchia nagłówków (skala z brandbook.dc.html, § 04) -->
+  <section class="sekcja">
+    <div class="kicker" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--neutral-dark);">§ 01 · Hierarchia nagłówków i akapit</div>
+    <h1 class="h1">Nagłówek H1 - rozdział dokumentu</h1>
+    <h2 class="h2">Nagłówek H2 - sekcja</h2>
+    <h3 class="h3">Nagłówek H3 · drogowskaz sekcji</h3>
+    <p class="korpus">IRIN mówi z pozycji doradcy biznesowego, nie urzędu i nie startupu. Ten sam dokument czyta dział HR korporacji, zarząd firmy i pracownik operatora dotacji, bez zmiany rejestru. Pedagogika, Akademia AI i Pożyczki UE/BGK są rozróżniane kolorem dziedziny, struktura i krój pozostają identyczne. Więcej: <a href="#wariant-6">karta usługi w Bazie Usług Rozwojowych</a>.</p>
+    <p class="przypis">Przypis i metadane: Manrope Regular 10 pt, kolor text-secondary. Kod usługi <span class="mono">2026/00000/PPUR</span> [do potwierdzenia].</p>
+
+    <!-- 3. Box informacyjny -->
+    <div class="box">
+      <div class="kicker">Informacja</div>
+      <p>Szkolenie może być dofinansowane ze środków Krajowego Funduszu Szkoleniowego (KFS) lub przez Bazę Usług Rozwojowych (BUR). Wysokość dofinansowania zależy od wielkości firmy i regulaminu operatora - patrz <a href="#wariant-6">01-baza-wiedzy/prawo/kfs.md</a>.</p>
+    </div>
+
+    <!-- 4. Tabela -->
+    <h2 class="h2">Tabela - program i rozliczenie</h2>
+    <table class="tab">
+      <thead><tr><th>Moduł szkolenia</th><th>Forma</th><th style="text-align:right">Godziny</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Diagnoza potrzeb rozwojowych</td><td>warsztat</td><td class="l">8</td><td><span class="etykieta" style="background:var(--success); color:#FAF8F5">potwierdzone</span></td></tr>
+        <tr><td>Wniosek KFS i dokumentacja</td><td>ćwiczenia</td><td class="l">6</td><td><span class="etykieta" style="background:var(--warning); color:#1B1A1C">do potwierdzenia</span></td></tr>
+        <tr><td>Walidacja efektów uczenia się</td><td>test</td><td class="l">2</td><td><span class="etykieta" style="background:var(--error); color:#FAF8F5">brak danych</span></td></tr>
+        <tr><td>Konsultacja poszkoleniowa</td><td>zdalnie</td><td class="l">2</td><td><span class="etykieta" style="background:var(--info); color:#FAF8F5">informacja</span></td></tr>
+      </tbody>
+    </table>
+    <p class="przypis">Wiersze naprzemienne: neutral-light. Linie: border. Nagłówki kolumn: secondary, styl drogowskazu (700, wersaliki, tracking 0,2 em).</p>
+
+    <!-- 5. CTA i link -->
+    <h2 class="h2">Przycisk / CTA i link</h2>
+    <div style="margin:12px 0 4px;">
+      <a class="cta podstawowy" href="#wariant-6">Zapisz się na szkolenie</a>
+      <a class="cta drugi" href="#wariant-6">Pobierz program</a>
+      <a class="cta akcent" href="#wariant-6" style="color:#FAF8F5 !important">Sprawdź dofinansowanie</a>
+    </div>
+    <p class="korpus">Link w tekście: <a href="#wariant-6">regulamin Bazy Usług Rozwojowych</a> oraz <a href="#wariant-6">limity KFS na rok bieżący</a>. Podkreślenie z odsunięciem 2 px jak w brandbook.dc.html; kolor: link, po najechaniu: primary.</p>
+    <div style="display:flex; gap:32px; align-items:baseline; margin-top:16px;">
+      <div><div class="cyfra">3 128</div><div class="przypis">liczba prowadząca · Manrope 800 · accent</div></div>
+      <div><div class="cyfra" style="color:var(--primary)">80%</div><div class="przypis">liczba prowadząca · primary</div></div>
+    </div>
+
+    <!-- 6. Sekcja prawo / compliance -->
+    <div class="compliance">
+      <div class="kicker" style="margin-bottom:8px;">§ 02 · Prawo i zgodność - elementy obowiązkowe zaświadczenia</div>
+      <h2 class="h2" style="margin-top:8px;">Wymogi formalne wobec PUP i BUR</h2>
+      <p class="korpus">Lista pól wynika z karty specyfikacji <a href="#wariant-6">02-szablony-dokumentow/certyfikat.md</a>. Status każdego pola pokazuje, jak paleta oznacza stan potwierdzony, do potwierdzenia i brak danych.</p>
+      <ul>
+        <li><span>Identyfikacja uczestnika, szkolenia, realizatora (IRIN) i liczby godzin - wymóg rozliczeniowy wobec PUP (ścieżka KFS)</span><span class="etykieta" style="background:var(--success); color:#FAF8F5">potwierdzone</span></li>
+        <li><span>Osiągnięte efekty uczenia się - wymóg BUR</span><span class="etykieta" style="background:var(--success); color:#FAF8F5">potwierdzone</span></li>
+        <li><span>Kod usługi BUR w formie zgodnej z rejestracją</span><span class="etykieta" style="background:var(--warning); color:#1B1A1C">do potwierdzenia</span></li>
+        <li><span>Komplet pól wzoru z Załącznika nr 12 do Regulaminu BUR - treść wzoru nie została odczytana</span><span class="etykieta" style="background:var(--error); color:#FAF8F5">brak danych</span></li>
+      </ul>
+      <div class="box ostrzezenie">
+        <div class="kicker">Zastrzeżenie</div>
+        <p>Oficjalny wzór zaświadczenia BUR istnieje, ale jego treści nie udało się pobrać w sesji, w której powstała baza wiedzy. Zanim karta specyfikacji zostanie uznana za zamkniętą, należy odczytać załącznik wprost.</p>
+      </div>
+      <p class="przypis mono">Podstawa: ustawa o promocji zatrudnienia i instytucjach rynku pracy (KFS) · Regulamin BUR (PARP) · dane rejestrowe realizatora [do potwierdzenia]</p>
+    </div>
+  </section>
+</article>
+
+<article class="wariant" id="wariant-7" style="--primary:#111111; --secondary:#3D3D3D; --accent:#B84500; --neutral-dark:#111111; --neutral-light:#E6E6E6; --success:#1B7A3D; --warning:#E3A81B; --error:#C1281E; --info:#1B5FC1; --background:#FFFFFF; --surface:#F4F4F4; --border:#C8C8C8; --text-primary:#111111; --text-secondary:#555555; --link:#0B57D0;">
+  <div class="naglowek-wariantu">
+    <div style="display:flex; gap:20px; align-items:baseline;">
+      <div class="nr">7</div>
+      <div><div class="nazwa">Sygnał (monochrom i jeden żywy akcent)</div></div>
+    </div>
+    <div class="kierunek">Czerń, biel, szarości i jeden intensywny akcent pomarańczowy: maksymalna odporność na druk, kserokopie i tanie monitory, tożsamość budowana typografią (Manrope) zamiast kolorem. Najbardziej odważny i najmniej ciepły wariant.</div>
+  </div>
+  <div class="probki"><div style="background:#111111; color:#FFFFFF"><b>primary</b>#111111</div><div style="background:#3D3D3D; color:#FFFFFF"><b>secondary</b>#3D3D3D</div><div style="background:#B84500; color:#FFFFFF"><b>accent</b>#B84500</div><div style="background:#111111; color:#FFFFFF"><b>neutral-dark</b>#111111</div><div style="background:#E6E6E6; color:#111111"><b>neutral-light</b>#E6E6E6</div><div style="background:#1B7A3D; color:#FFFFFF"><b>success</b>#1B7A3D</div><div style="background:#E3A81B; color:#111111"><b>warning</b>#E3A81B</div><div style="background:#C1281E; color:#FFFFFF"><b>error</b>#C1281E</div><div style="background:#1B5FC1; color:#FFFFFF"><b>info</b>#1B5FC1</div><div style="background:#FFFFFF; color:#111111"><b>background</b>#FFFFFF</div><div style="background:#F4F4F4; color:#111111"><b>surface</b>#F4F4F4</div><div style="background:#C8C8C8; color:#111111"><b>border</b>#C8C8C8</div><div style="background:#111111; color:#FFFFFF"><b>text-primary</b>#111111</div><div style="background:#555555; color:#FFFFFF"><b>text-secondary</b>#555555</div><div style="background:#0B57D0; color:#FFFFFF"><b>link</b>#0B57D0</div></div>
+
+  <!-- 1. Strona tytułowa (komponent okładki z brandbook.dc.html, § 00) -->
+  <section class="sekcja" style="padding:0;">
+    <div class="pas">
+      <div class="siatka">
+        <img src="../../logo_irin_poziom.svg" alt="IRIN">
+        <div class="linia"></div>
+        <div class="meta">Brandbook · wariant palety 7</div>
+      </div>
+      <div class="pasy">
+        <div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div><div style="background:var(--accent); opacity:0.3"></div><div style="background:var(--accent)"></div>
+      </div>
+    </div>
+    <div class="okladka">
+      <div>
+        <div class="kicker" style="margin-bottom:20px;">Instytut Rozwoju i Nauki · księga marki</div>
+        <h1 class="display">Brandbook.</h1>
+        <div class="lead">Manrope × siatka sześciokolumnowa × paleta „Sygnał” - jeden system dla trzech dziedzin.</div>
+        <div style="margin-top:32px; height:1px; background:var(--neutral-dark);"></div>
+        <p class="korpus" style="margin-top:20px;">Ta strona pokazuje wariant 7 palety na identycznym układzie co pozostałe sześć. Typografia, siatka i komponenty są wspólne - jedyną zmienną jest kolor i jego zastosowanie.</p>
+      </div>
+      <div class="prawa">
+        <div class="kicker" style="margin-bottom:16px;">§ Mapowanie dziedzin (propozycja)</div>
+        <ol><li><span>Pedagogika</span><span style='color:var(--text-primary); font-weight:400'>accent (pomarańcz) - jedyny kolor dziedzinowy; pozostałe dziedziny rozróżniane etykietą tekstową, nie kolorem</span></li><li><span>Akademia AI</span><span style='color:var(--text-primary); font-weight:400'>brak koloru - etykieta tekstowa</span></li><li><span>Pożyczki UE/BGK</span><span style='color:var(--text-primary); font-weight:400'>brak koloru - etykieta tekstowa</span></li></ol>
+      </div>
+    </div>
+    <div class="stopka"><div>Instytut Rozwoju i Nauki</div><div>podgląd palety v2 · wariant 7</div></div>
+  </section>
+
+  <!-- 2. Hierarchia nagłówków (skala z brandbook.dc.html, § 04) -->
+  <section class="sekcja">
+    <div class="kicker" style="margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid var(--neutral-dark);">§ 01 · Hierarchia nagłówków i akapit</div>
+    <h1 class="h1">Nagłówek H1 - rozdział dokumentu</h1>
+    <h2 class="h2">Nagłówek H2 - sekcja</h2>
+    <h3 class="h3">Nagłówek H3 · drogowskaz sekcji</h3>
+    <p class="korpus">IRIN mówi z pozycji doradcy biznesowego, nie urzędu i nie startupu. Ten sam dokument czyta dział HR korporacji, zarząd firmy i pracownik operatora dotacji, bez zmiany rejestru. Pedagogika, Akademia AI i Pożyczki UE/BGK są rozróżniane kolorem dziedziny, struktura i krój pozostają identyczne. Więcej: <a href="#wariant-7">karta usługi w Bazie Usług Rozwojowych</a>.</p>
+    <p class="przypis">Przypis i metadane: Manrope Regular 10 pt, kolor text-secondary. Kod usługi <span class="mono">2026/00000/PPUR</span> [do potwierdzenia].</p>
+
+    <!-- 3. Box informacyjny -->
+    <div class="box">
+      <div class="kicker">Informacja</div>
+      <p>Szkolenie może być dofinansowane ze środków Krajowego Funduszu Szkoleniowego (KFS) lub przez Bazę Usług Rozwojowych (BUR). Wysokość dofinansowania zależy od wielkości firmy i regulaminu operatora - patrz <a href="#wariant-7">01-baza-wiedzy/prawo/kfs.md</a>.</p>
+    </div>
+
+    <!-- 4. Tabela -->
+    <h2 class="h2">Tabela - program i rozliczenie</h2>
+    <table class="tab">
+      <thead><tr><th>Moduł szkolenia</th><th>Forma</th><th style="text-align:right">Godziny</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Diagnoza potrzeb rozwojowych</td><td>warsztat</td><td class="l">8</td><td><span class="etykieta" style="background:var(--success); color:#FFFFFF">potwierdzone</span></td></tr>
+        <tr><td>Wniosek KFS i dokumentacja</td><td>ćwiczenia</td><td class="l">6</td><td><span class="etykieta" style="background:var(--warning); color:#111111">do potwierdzenia</span></td></tr>
+        <tr><td>Walidacja efektów uczenia się</td><td>test</td><td class="l">2</td><td><span class="etykieta" style="background:var(--error); color:#FFFFFF">brak danych</span></td></tr>
+        <tr><td>Konsultacja poszkoleniowa</td><td>zdalnie</td><td class="l">2</td><td><span class="etykieta" style="background:var(--info); color:#FFFFFF">informacja</span></td></tr>
+      </tbody>
+    </table>
+    <p class="przypis">Wiersze naprzemienne: neutral-light. Linie: border. Nagłówki kolumn: secondary, styl drogowskazu (700, wersaliki, tracking 0,2 em).</p>
+
+    <!-- 5. CTA i link -->
+    <h2 class="h2">Przycisk / CTA i link</h2>
+    <div style="margin:12px 0 4px;">
+      <a class="cta podstawowy" href="#wariant-7">Zapisz się na szkolenie</a>
+      <a class="cta drugi" href="#wariant-7">Pobierz program</a>
+      <a class="cta akcent" href="#wariant-7" style="color:#FFFFFF !important">Sprawdź dofinansowanie</a>
+    </div>
+    <p class="korpus">Link w tekście: <a href="#wariant-7">regulamin Bazy Usług Rozwojowych</a> oraz <a href="#wariant-7">limity KFS na rok bieżący</a>. Podkreślenie z odsunięciem 2 px jak w brandbook.dc.html; kolor: link, po najechaniu: primary.</p>
+    <div style="display:flex; gap:32px; align-items:baseline; margin-top:16px;">
+      <div><div class="cyfra">3 128</div><div class="przypis">liczba prowadząca · Manrope 800 · accent</div></div>
+      <div><div class="cyfra" style="color:var(--primary)">80%</div><div class="przypis">liczba prowadząca · primary</div></div>
+    </div>
+
+    <!-- 6. Sekcja prawo / compliance -->
+    <div class="compliance">
+      <div class="kicker" style="margin-bottom:8px;">§ 02 · Prawo i zgodność - elementy obowiązkowe zaświadczenia</div>
+      <h2 class="h2" style="margin-top:8px;">Wymogi formalne wobec PUP i BUR</h2>
+      <p class="korpus">Lista pól wynika z karty specyfikacji <a href="#wariant-7">02-szablony-dokumentow/certyfikat.md</a>. Status każdego pola pokazuje, jak paleta oznacza stan potwierdzony, do potwierdzenia i brak danych.</p>
+      <ul>
+        <li><span>Identyfikacja uczestnika, szkolenia, realizatora (IRIN) i liczby godzin - wymóg rozliczeniowy wobec PUP (ścieżka KFS)</span><span class="etykieta" style="background:var(--success); color:#FFFFFF">potwierdzone</span></li>
+        <li><span>Osiągnięte efekty uczenia się - wymóg BUR</span><span class="etykieta" style="background:var(--success); color:#FFFFFF">potwierdzone</span></li>
+        <li><span>Kod usługi BUR w formie zgodnej z rejestracją</span><span class="etykieta" style="background:var(--warning); color:#111111">do potwierdzenia</span></li>
+        <li><span>Komplet pól wzoru z Załącznika nr 12 do Regulaminu BUR - treść wzoru nie została odczytana</span><span class="etykieta" style="background:var(--error); color:#FFFFFF">brak danych</span></li>
+      </ul>
+      <div class="box ostrzezenie">
+        <div class="kicker">Zastrzeżenie</div>
+        <p>Oficjalny wzór zaświadczenia BUR istnieje, ale jego treści nie udało się pobrać w sesji, w której powstała baza wiedzy. Zanim karta specyfikacji zostanie uznana za zamkniętą, należy odczytać załącznik wprost.</p>
+      </div>
+      <p class="przypis mono">Podstawa: ustawa o promocji zatrudnienia i instytucjach rynku pracy (KFS) · Regulamin BUR (PARP) · dane rejestrowe realizatora [do potwierdzenia]</p>
+    </div>
+  </section>
+</article>
+
+</body>
+</html>

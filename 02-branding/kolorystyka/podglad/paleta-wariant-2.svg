@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="150" viewBox="0 0 1500 150" font-family="Manrope, system-ui, -apple-system, Segoe UI, sans-serif">
+<title>Wariant 2 - Atrament i Papier (granat instytucjonalny na ciepłym papierze)</title>
+<rect width="1500" height="150" fill="#F8F5EE"/>
+<rect x="0" y="0" width="100" height="150" fill="#1F2D4F"/>
+<rect x="0" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="8" y="120" font-size="10" font-weight="700" fill="#FFFFFF">primary</text>
+<text x="8" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#1F2D4F</text>
+<rect x="100" y="0" width="100" height="150" fill="#7A5A36"/>
+<rect x="100" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="108" y="120" font-size="10" font-weight="700" fill="#FFFFFF">secondary</text>
+<text x="108" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#7A5A36</text>
+<rect x="200" y="0" width="100" height="150" fill="#875512"/>
+<rect x="200" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="208" y="120" font-size="10" font-weight="700" fill="#FFFFFF">accent</text>
+<text x="208" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#875512</text>
+<rect x="300" y="0" width="100" height="150" fill="#141A26"/>
+<rect x="300" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="308" y="120" font-size="10" font-weight="700" fill="#FFFFFF">neutral-dark</text>
+<text x="308" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#141A26</text>
+<rect x="400" y="0" width="100" height="150" fill="#E5E0D5"/>
+<rect x="400" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="408" y="120" font-size="10" font-weight="700" fill="#111111">neutral-light</text>
+<text x="408" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#111111">#E5E0D5</text>
+<rect x="500" y="0" width="100" height="150" fill="#2E6B4F"/>
+<rect x="500" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="508" y="120" font-size="10" font-weight="700" fill="#FFFFFF">success</text>
+<text x="508" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#2E6B4F</text>
+<rect x="600" y="0" width="100" height="150" fill="#C98F1B"/>
+<rect x="600" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="608" y="120" font-size="10" font-weight="700" fill="#111111">warning</text>
+<text x="608" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#111111">#C98F1B</text>
+<rect x="700" y="0" width="100" height="150" fill="#B0322E"/>
+<rect x="700" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="708" y="120" font-size="10" font-weight="700" fill="#FFFFFF">error</text>
+<text x="708" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#B0322E</text>
+<rect x="800" y="0" width="100" height="150" fill="#2B5F8E"/>
+<rect x="800" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="808" y="120" font-size="10" font-weight="700" fill="#FFFFFF">info</text>
+<text x="808" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#2B5F8E</text>
+<rect x="900" y="0" width="100" height="150" fill="#F8F5EE"/>
+<rect x="900" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="908" y="120" font-size="10" font-weight="700" fill="#111111">background</text>
+<text x="908" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#111111">#F8F5EE</text>
+<rect x="1000" y="0" width="100" height="150" fill="#F2EEE4"/>
+<rect x="1000" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="1008" y="120" font-size="10" font-weight="700" fill="#111111">surface</text>
+<text x="1008" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#111111">#F2EEE4</text>
+<rect x="1100" y="0" width="100" height="150" fill="#C9C2B4"/>
+<rect x="1100" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="1108" y="120" font-size="10" font-weight="700" fill="#111111">border</text>
+<text x="1108" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#111111">#C9C2B4</text>
+<rect x="1200" y="0" width="100" height="150" fill="#141A26"/>
+<rect x="1200" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="1208" y="120" font-size="10" font-weight="700" fill="#FFFFFF">text-primary</text>
+<text x="1208" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#141A26</text>
+<rect x="1300" y="0" width="100" height="150" fill="#56544F"/>
+<rect x="1300" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="1308" y="120" font-size="10" font-weight="700" fill="#FFFFFF">text-secondary</text>
+<text x="1308" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#56544F</text>
+<rect x="1400" y="0" width="100" height="150" fill="#1F5AA6"/>
+<rect x="1400" y="0" width="100" height="150" fill="none" stroke="#C9C2B4" stroke-width="1"/>
+<text x="1408" y="120" font-size="10" font-weight="700" fill="#FFFFFF">link</text>
+<text x="1408" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#1F5AA6</text>
+</svg>

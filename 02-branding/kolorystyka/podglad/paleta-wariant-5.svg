@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="150" viewBox="0 0 1500 150" font-family="Manrope, system-ui, -apple-system, Segoe UI, sans-serif">
+<title>Wariant 5 - Terakota i piasek (ciepły, ziemisty, ludzki)</title>
+<rect width="1500" height="150" fill="#FAF5EC"/>
+<rect x="0" y="0" width="100" height="150" fill="#8E3B1E"/>
+<rect x="0" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="8" y="120" font-size="10" font-weight="700" fill="#FFFFFF">primary</text>
+<text x="8" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#8E3B1E</text>
+<rect x="100" y="0" width="100" height="150" fill="#5C6A3B"/>
+<rect x="100" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="108" y="120" font-size="10" font-weight="700" fill="#FFFFFF">secondary</text>
+<text x="108" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#5C6A3B</text>
+<rect x="200" y="0" width="100" height="150" fill="#914A14"/>
+<rect x="200" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="208" y="120" font-size="10" font-weight="700" fill="#FFFFFF">accent</text>
+<text x="208" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#914A14</text>
+<rect x="300" y="0" width="100" height="150" fill="#2B1F17"/>
+<rect x="300" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="308" y="120" font-size="10" font-weight="700" fill="#FFFFFF">neutral-dark</text>
+<text x="308" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#2B1F17</text>
+<rect x="400" y="0" width="100" height="150" fill="#EBDFCC"/>
+<rect x="400" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="408" y="120" font-size="10" font-weight="700" fill="#111111">neutral-light</text>
+<text x="408" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#111111">#EBDFCC</text>
+<rect x="500" y="0" width="100" height="150" fill="#377033"/>
+<rect x="500" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="508" y="120" font-size="10" font-weight="700" fill="#FFFFFF">success</text>
+<text x="508" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#377033</text>
+<rect x="600" y="0" width="100" height="150" fill="#D9A441"/>
+<rect x="600" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="608" y="120" font-size="10" font-weight="700" fill="#111111">warning</text>
+<text x="608" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#111111">#D9A441</text>
+<rect x="700" y="0" width="100" height="150" fill="#B3261E"/>
+<rect x="700" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="708" y="120" font-size="10" font-weight="700" fill="#FFFFFF">error</text>
+<text x="708" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#B3261E</text>
+<rect x="800" y="0" width="100" height="150" fill="#3B6D8C"/>
+<rect x="800" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="808" y="120" font-size="10" font-weight="700" fill="#FFFFFF">info</text>
+<text x="808" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#3B6D8C</text>
+<rect x="900" y="0" width="100" height="150" fill="#FAF5EC"/>
+<rect x="900" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="908" y="120" font-size="10" font-weight="700" fill="#111111">background</text>
+<text x="908" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#111111">#FAF5EC</text>
+<rect x="1000" y="0" width="100" height="150" fill="#F4EBDC"/>
+<rect x="1000" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="1008" y="120" font-size="10" font-weight="700" fill="#111111">surface</text>
+<text x="1008" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#111111">#F4EBDC</text>
+<rect x="1100" y="0" width="100" height="150" fill="#D6C7B0"/>
+<rect x="1100" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="1108" y="120" font-size="10" font-weight="700" fill="#111111">border</text>
+<text x="1108" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#111111">#D6C7B0</text>
+<rect x="1200" y="0" width="100" height="150" fill="#2B1F17"/>
+<rect x="1200" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="1208" y="120" font-size="10" font-weight="700" fill="#FFFFFF">text-primary</text>
+<text x="1208" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#2B1F17</text>
+<rect x="1300" y="0" width="100" height="150" fill="#6A5646"/>
+<rect x="1300" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="1308" y="120" font-size="10" font-weight="700" fill="#FFFFFF">text-secondary</text>
+<text x="1308" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#6A5646</text>
+<rect x="1400" y="0" width="100" height="150" fill="#3B6D8C"/>
+<rect x="1400" y="0" width="100" height="150" fill="none" stroke="#D6C7B0" stroke-width="1"/>
+<text x="1408" y="120" font-size="10" font-weight="700" fill="#FFFFFF">link</text>
+<text x="1408" y="136" font-size="10" font-family="Inconsolata, ui-monospace, monospace" fill="#FFFFFF">#3B6D8C</text>
+</svg>

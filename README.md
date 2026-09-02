@@ -10,5 +10,6 @@ Kolejka zadań: [`PLAN.md`](./PLAN.md).
 - `01-baza-wiedzy/` - kontekst firmy, przepisy prawne, wytyczne usługowe. Wejście: `01-baza-wiedzy/00-INDEX.md`.
 - `02-szablony-dokumentow/` - specyfikacje treści i wymogów regulacyjnych dla dokumentów IRIN (nie układ graficzny).
 - `03-pakiet-claude-design/` - paczka i prompt dla Claude Design, gdzie powstaje kompozycja i layout.
+- `02-branding/` - propozycje identyfikacji czekające na decyzję foundera (obecnie: siedem wariantów palety v2); nie zastępuje specyfikacji w `03-pakiet-claude-design/`.
 - `orkiestracja/` - krótka karta startowa do pracy nad zadaniem.
 - `_robocze/` - archiwum robocze, nie jest źródłem prawdy bez ponownej weryfikacji.

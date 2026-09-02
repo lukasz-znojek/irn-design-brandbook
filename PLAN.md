@@ -46,3 +46,7 @@ Nie były ponumerowane wyżej, bo PLAN.md nie przewidywał jeszcze tych plików 
 ## Decyzja do potwierdzenia przez foundera (nowa)
 
 - Czy dane rejestrowe IRIN (KRS/NIP/REGON/adres/kontakt) w `01-baza-wiedzy/firma/kontekst-firmy-sanitized.md` mogą zostać w publicznym repozytorium — są jawne w KRS, ale to founder decyduje, czy mają trafić do publicznego repo.
+
+## Decyzja do potwierdzenia przez foundera (nowa, 2026-09-02) - wybór wariantu palety v2
+
+- **Paleta barw - dopracowanie.** Founder wstrzymał automatyczne przyjęcie obecnej palety (decyzja z sekcji „rozstrzygnięte” wyżej pozostaje zapisana, nie jest skasowana) i zlecił przygotowanie siedmiu wariantów do wyboru. Propozycja, pomiar kontrastu i podgląd: `02-branding/kolorystyka/palette-options-v2.md` i `02-branding/kolorystyka/palette-preview-v2.md`. Do czasu wskazania numeru wariantu obowiązuje specyfikacja w `03-pakiet-claude-design/format-paczki.md` bez zmian. Po wyborze: osobny commit wprowadza wybrany wariant do `format-paczki.md`, `prompt-bazowy.md` i tokenów.

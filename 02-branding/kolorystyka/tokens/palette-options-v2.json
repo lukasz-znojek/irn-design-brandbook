@@ -1,0 +1,233 @@
+{
+  "meta": {
+    "nazwa": "IRIN - warianty palety kolorystycznej v2",
+    "status": "propozycja do wyboru przez foundera - żaden wariant nie jest finalny",
+    "data": "2026-09-02",
+    "zrodlo_typografii": "brandbook.dc.html (Manrope 200-800, Inconsolata 300-700) - typografia nie jest przedmiotem tej propozycji i pozostaje bez zmian",
+    "specyfikacja": "../palette-options-v2.md",
+    "podglad": "../palette-preview-v2.md",
+    "uwaga_o_tokenach": "Repozytorium nie miało wcześniej plików tokenów (json/yaml/css). Ten plik jest pomocniczą strukturą danych dla 7 wariantów i źródłem dla generatora podglądu; nie jest jeszcze obowiązującą specyfikacją.",
+    "tokeny": {
+      "primary": "główny kolor marki: nagłówki H1, pasek tytułowy, CTA podstawowe",
+      "secondary": "drugi kolor marki: H2, nagłówki tabel, elementy pomocnicze",
+      "accent": "akcent: wyróżnienia, drugi CTA, markery, liczby prowadzące",
+      "neutral-dark": "najciemniejszy neutral: pasy tytułowe, stopki odwrócone",
+      "neutral-light": "jasny neutral: tła wtórne, wiersze naprzemienne tabel",
+      "success": "stan potwierdzony / pozytywny",
+      "warning": "ostrzeżenie / do potwierdzenia",
+      "error": "błąd / brak danych / odrzucenie",
+      "info": "informacja neutralna, box informacyjny",
+      "background": "tło strony",
+      "surface": "tło karty / sekcji / komórki",
+      "border": "linie tabel i ramek (dekoracyjne, hairline)",
+      "text-primary": "tekst korpusu i nagłówków",
+      "text-secondary": "tekst pomocniczy, metadane, przypisy",
+      "link": "odsyłacze i stany aktywne"
+    }
+  },
+  "warianty": [
+    {
+      "numer": 1,
+      "id": "kaszmir-aksamit",
+      "nazwa": "Kaszmir Aksamit (obecna, uporządkowana)",
+      "kierunek": "Obecna zatwierdzona paleta 12 barw przepisana na 15 tokenów, bez zmiany żadnej zatwierdzonej wartości - punkt odniesienia dla pozostałych sześciu. Jedyny dodatek to token info, którego obecna paleta nie miała.",
+      "tokeny": {
+        "primary": "#4A1D26",
+        "secondary": "#1B2B26",
+        "accent": "#8C5026",
+        "neutral-dark": "#1E1611",
+        "neutral-light": "#E4DACB",
+        "success": "#2F4A32",
+        "warning": "#D9AC4A",
+        "error": "#AC151F",
+        "info": "#2E4F4A",
+        "background": "#F7F3EA",
+        "surface": "#F2ECE1",
+        "border": "#C3BDB3",
+        "text-primary": "#1E1611",
+        "text-secondary": "#5B4837",
+        "link": "#AC151F"
+      },
+      "mapowanie_dziedzin": {
+        "Pedagogika": "primary (Aksamit)",
+        "Akademia AI": "accent (Miedź)",
+        "Pożyczki UE/BGK": "secondary (Onyks)"
+      },
+      "poza_tokenami": "Złoto foliowe #B58540 (pieczęć, sygnatura) i Rubryka #D9AC4A jako marker pozostają zgodnie z regułą 80/15/5 z format-paczki.md."
+    },
+    {
+      "numer": 2,
+      "id": "atrament-i-papier",
+      "nazwa": "Atrament i Papier (granat instytucjonalny na ciepłym papierze)",
+      "kierunek": "Zachowuje ciepły papier i edytorski charakter obecnego kierunku, ale główny kolor przesuwa z bordo na głęboki granat atramentu - ton instytutu i doradcy finansowego, czytelny w kopii czarno-białej. Brąz zamiast złota utrzymuje wątek pieczęci bez efektu folii.",
+      "tokeny": {
+        "primary": "#1F2D4F",
+        "secondary": "#7A5A36",
+        "accent": "#875512",
+        "neutral-dark": "#141A26",
+        "neutral-light": "#E5E0D5",
+        "success": "#2E6B4F",
+        "warning": "#C98F1B",
+        "error": "#B0322E",
+        "info": "#2B5F8E",
+        "background": "#F8F5EE",
+        "surface": "#F2EEE4",
+        "border": "#C9C2B4",
+        "text-primary": "#141A26",
+        "text-secondary": "#56544F",
+        "link": "#1F5AA6"
+      },
+      "mapowanie_dziedzin": {
+        "Pedagogika": "secondary (brąz umbra)",
+        "Akademia AI": "info (błękit stalowy)",
+        "Pożyczki UE/BGK": "primary (granat)"
+      },
+      "poza_tokenami": "Brak dodatkowych kolorów - pieczęć/sygnatura w accent."
+    },
+    {
+      "numer": 3,
+      "id": "zielen-instytutu",
+      "nazwa": "Zieleń Instytutu (leśna zieleń i mosiądz)",
+      "kierunek": "Głęboka zieleń jako kolor rozwoju i stabilności finansowej, mosiądz jako ciepły akcent honorowy; neutrale lekko zszarzałe, żeby zieleń nie wpadała w ton ekologiczny. Kierunek najbardziej odległy od czerwieni, więc najbezpieczniejszy dla osób z deuteranopią w połączeniu z czerwienią błędu.",
+      "tokeny": {
+        "primary": "#1F3D2E",
+        "secondary": "#5A6B54",
+        "accent": "#8F5C16",
+        "neutral-dark": "#16201A",
+        "neutral-light": "#E2E5DB",
+        "success": "#2F7A4E",
+        "warning": "#D19B2C",
+        "error": "#A9302C",
+        "info": "#2C6B85",
+        "background": "#F6F5EF",
+        "surface": "#EFEFE6",
+        "border": "#C6CBBE",
+        "text-primary": "#16201A",
+        "text-secondary": "#4F5A52",
+        "link": "#8A5814"
+      },
+      "mapowanie_dziedzin": {
+        "Pedagogika": "accent (mosiądz)",
+        "Akademia AI": "info (morski)",
+        "Pożyczki UE/BGK": "primary (leśna zieleń)"
+      },
+      "poza_tokenami": "Brak dodatkowych kolorów."
+    },
+    {
+      "numer": 4,
+      "id": "grafit-techniczny",
+      "nazwa": "Grafit techniczny (chłodne neutrale, jeden ciepły akcent)",
+      "kierunek": "Chłodny grafit i biel zamiast papieru - ton produktu cyfrowego, dopasowany do Akademii AI, aplikacji handlowej i przyszłego portalu; jeden palony akcent pomarańczowy ociepla całość. Świadomie najbardziej korporacyjny wariant zestawu.",
+      "tokeny": {
+        "primary": "#22272E",
+        "secondary": "#4A5563",
+        "accent": "#B84A0B",
+        "neutral-dark": "#15181C",
+        "neutral-light": "#E6E8EB",
+        "success": "#1E7B4B",
+        "warning": "#B7791F",
+        "error": "#B42318",
+        "info": "#175CD3",
+        "background": "#F7F8FA",
+        "surface": "#FFFFFF",
+        "border": "#D0D5DB",
+        "text-primary": "#15181C",
+        "text-secondary": "#4B5563",
+        "link": "#175CD3"
+      },
+      "mapowanie_dziedzin": {
+        "Pedagogika": "accent (palony pomarańcz)",
+        "Akademia AI": "info (błękit)",
+        "Pożyczki UE/BGK": "secondary (grafit średni)"
+      },
+      "poza_tokenami": "Brak dodatkowych kolorów."
+    },
+    {
+      "numer": 5,
+      "id": "terakota-i-piasek",
+      "nazwa": "Terakota i piasek (ciepły, ziemisty, ludzki)",
+      "kierunek": "Najcieplejszy wariant: terakota jako główny kolor, oliwka jako przeciwwaga, piaskowe tła. Buduje ton szkoleń dla ludzi (Pedagogika, HR), kosztem powagi finansowej. Najbliższy obecnej Miedzi, ale rozjaśniony i bez bordo.",
+      "tokeny": {
+        "primary": "#8E3B1E",
+        "secondary": "#5C6A3B",
+        "accent": "#914A14",
+        "neutral-dark": "#2B1F17",
+        "neutral-light": "#EBDFCC",
+        "success": "#377033",
+        "warning": "#D9A441",
+        "error": "#B3261E",
+        "info": "#3B6D8C",
+        "background": "#FAF5EC",
+        "surface": "#F4EBDC",
+        "border": "#D6C7B0",
+        "text-primary": "#2B1F17",
+        "text-secondary": "#6A5646",
+        "link": "#3B6D8C"
+      },
+      "mapowanie_dziedzin": {
+        "Pedagogika": "primary (terakota)",
+        "Akademia AI": "info (błękit przygaszony)",
+        "Pożyczki UE/BGK": "secondary (oliwka)"
+      },
+      "poza_tokenami": "Brak dodatkowych kolorów."
+    },
+    {
+      "numer": 6,
+      "id": "bordo-akademickie",
+      "nazwa": "Bordo akademickie (uroczyste, dyplomowe, chłodne neutrale)",
+      "kierunek": "Zachowuje bordo jako kolor marki, ale podnosi je i nasyca, a brązowe neutrale zamienia na chłodne szarości i biel - ton uczelni i dyplomu zamiast rzemieślniczego papieru. Złoto jako akcent honorowy (pieczęć, linia).",
+      "tokeny": {
+        "primary": "#6B1E2E",
+        "secondary": "#2E3A47",
+        "accent": "#8A6A1C",
+        "neutral-dark": "#1B1A1C",
+        "neutral-light": "#E8E4DF",
+        "success": "#2C6B46",
+        "warning": "#C4922C",
+        "error": "#B3261E",
+        "info": "#2F5F8A",
+        "background": "#FAF8F5",
+        "surface": "#FFFFFF",
+        "border": "#D5CFC7",
+        "text-primary": "#1B1A1C",
+        "text-secondary": "#57524E",
+        "link": "#8A2436"
+      },
+      "mapowanie_dziedzin": {
+        "Pedagogika": "primary (bordo)",
+        "Akademia AI": "info (błękit)",
+        "Pożyczki UE/BGK": "secondary (łupek)"
+      },
+      "poza_tokenami": "Złoto jaśniejsze #B58F2E wyłącznie jako element dekoracyjny (pieczęć, linia) - nigdy jako tekst; w tokenach accent to stare złoto #8A6A1C, które przechodzi AA jako mały tekst."
+    },
+    {
+      "numer": 7,
+      "id": "sygnal",
+      "nazwa": "Sygnał (monochrom i jeden żywy akcent)",
+      "kierunek": "Czerń, biel, szarości i jeden intensywny akcent pomarańczowy: maksymalna odporność na druk, kserokopie i tanie monitory, tożsamość budowana typografią (Manrope) zamiast kolorem. Najbardziej odważny i najmniej ciepły wariant.",
+      "tokeny": {
+        "primary": "#111111",
+        "secondary": "#3D3D3D",
+        "accent": "#B84500",
+        "neutral-dark": "#111111",
+        "neutral-light": "#E6E6E6",
+        "success": "#1B7A3D",
+        "warning": "#E3A81B",
+        "error": "#C1281E",
+        "info": "#1B5FC1",
+        "background": "#FFFFFF",
+        "surface": "#F4F4F4",
+        "border": "#C8C8C8",
+        "text-primary": "#111111",
+        "text-secondary": "#555555",
+        "link": "#0B57D0"
+      },
+      "mapowanie_dziedzin": {
+        "Pedagogika": "accent (pomarańcz) - jedyny kolor dziedzinowy; pozostałe dziedziny rozróżniane etykietą tekstową, nie kolorem",
+        "Akademia AI": "brak koloru - etykieta tekstowa",
+        "Pożyczki UE/BGK": "brak koloru - etykieta tekstowa"
+      },
+      "poza_tokenami": "Brak dodatkowych kolorów. Zamierzona rezygnacja z reguły 15% koloru dziedzinowego."
+    }
+  ]
+}
