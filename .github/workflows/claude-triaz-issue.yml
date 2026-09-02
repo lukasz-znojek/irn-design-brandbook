@@ -1,0 +1,47 @@
+name: Claude – triaż issue
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  triaz:
+    # Issue z „@claude” obsługuje workflow claude.yml – tu unikamy podwójnej reakcji.
+    if: |
+      github.actor != 'claude[bot]' &&
+      !contains(github.event.issue.body, '@claude') &&
+      !contains(github.event.issue.title, '@claude')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            REPOZYTORIUM: ${{ github.repository }}
+            NUMER ISSUE: ${{ github.event.issue.number }}
+            TYTUŁ: ${{ github.event.issue.title }}
+            AUTOR: ${{ github.event.issue.user.login }}
+
+            Przeczytaj CLAUDE.md, sekcję „Agent Claude w GitHub”. Wykonaj triaż tego issue po polsku.
+
+            1. Ustal warstwę: `warstwa-1` (baza wiedzy, `01-baza-wiedzy/`), `warstwa-2`
+               (szablony dokumentów, `02-szablony-dokumentow/`) albo żadna, gdy dotyczy
+               procesu, workflow lub pakietu Claude Design.
+            2. Dodaj `czeka-na-foundera`, gdy issue wymaga decyzji albo danych od właściciela,
+               których nie ma w repozytorium.
+            3. Sprawdź duplikaty: `gh search issues --repo ${{ github.repository }} "słowa kluczowe"`.
+            4. Dodaj etykiety komendą `gh issue edit <numer> --add-label "..."`. Używaj tylko
+               etykiet z `gh label list`; nowych nie twórz.
+            5. Dodaj jeden komentarz (`gh issue comment`): nadane etykiety z uzasadnieniem
+               w jednym zdaniu, ewentualny duplikat z numerem, oraz proponowany następny krok
+               w jednym zdaniu. Nie zmieniaj treści issue i nie zamykaj go.
+          claude_args: |
+            --max-turns 15
+            --allowedTools "Bash(gh issue view:*),Bash(gh issue edit:*),Bash(gh issue comment:*),Bash(gh search issues:*),Bash(gh label list:*),Read,Grep,Glob"
