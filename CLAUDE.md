@@ -23,7 +23,7 @@ IRIN (Instytut Rozwoju i Nauki) to polska firma działająca w trzech obszarach:
 - `logo_irin_sygnet.svg` i `logo_irin_pion.svg`: `viewBox="0 0 184.837 162.834"` (proporcja ok. 1.135:1).
 - `logo_irin_poziom.svg`: `viewBox="0 0 281.333 158.667"` (proporcja ok. 1.773:1).
 - Trzy pliki odpowiadają trzem wariantom logotypu: poziomy (podstawowy), pionowy (pola wąskie/wysokie), sygnet (samodzielny).
-- Minimalny rozmiar, przestrzeń ochronna i zakaz zmiany koloru **nie wynikają z geometrii SVG** — nie da się ich zmierzyć w tych plikach. Pochodzą wyłącznie z `brandbook.dc.html` (patrz niżej) i wymagają potwierdzenia foundera, zanim trafią do specyfikacji w `01-baza-wiedzy/`.
+- Minimalny rozmiar, przestrzeń ochronna i zakazy modyfikacji **nie wynikają z geometrii SVG** - nie da się ich zmierzyć w tych plikach. Pochodzą z `brandbook.dc.html` i **zostały potwierdzone przez foundera**: minimalny rozmiar i przestrzeń ochronna wcześniej, cztery zakazy modyfikacji 2026-09-02. Obowiązująca specyfikacja: `01-baza-wiedzy/identyfikacja/logotyp.md`.
 
 ## Co wynika z `brandbook.dc.html`
 
@@ -41,7 +41,7 @@ To jest **wstępne canvas foundera** — punkt inspiracji i dowód zamierzonego 
 
 Wartości hex wypisane wyżej opisują **plik `brandbook.dc.html`**, a nie obowiązującą paletę - to zapis tego, co jest w kanwie foundera, i pozostaje prawdziwy jako opis tego pliku.
 
-Obowiązująca paleta to **14 kolorów, wariant 2 „Kaszmir Wyciszony”**, wybrany przez foundera spośród siedmiu wariantów. Jedyne źródło prawdy: `01-baza-wiedzy/identyfikacja/paleta-barw.md`. Tam też, od 2026-09-02, siatka A4 (`siatka-a4.md`) i typografia (`typografia.md`) - `03-pakiet-claude-design/format-paczki.md` już żadnej z tych trzech nie powtarza, tylko odsyła i dokłada zasady ich użycia w zleceniu. Dane maszynowe: `01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json`. Porównanie siedmiu wariantów i uzasadnienie wyboru (archiwum): `_robocze/paleta-v2/palette-options-v2.md`. Historia pierwszej decyzji: `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
+Obowiązująca paleta to **14 kolorów, wariant 2 „Kaszmir Wyciszony”**, wybrany przez foundera spośród siedmiu wariantów. Jedyne źródło prawdy: `01-baza-wiedzy/identyfikacja/paleta-barw.md`. Tam też, od 2026-09-02, siatka A4 (`siatka-a4.md`), typografia (`typografia.md`) i logotyp (`logotyp.md`) - `03-pakiet-claude-design/format-paczki.md` już żadnej z tych czterech nie powtarza, tylko odsyła i dokłada zasady ich użycia w zleceniu. Dane maszynowe: `01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json`. Porównanie siedmiu wariantów i uzasadnienie wyboru (archiwum): `_robocze/paleta-v2/palette-options-v2.md`. Historia pierwszej decyzji: `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
 
 Rozbieżność opisana w punkcie wyżej jest **rozstrzygnięta**: paleta i siatka przeszły pomiar i świadomą decyzję foundera. Zapis zostaje jako historia, nie jako otwarta sprawa.
 

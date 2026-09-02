@@ -13,7 +13,8 @@ Zatwierdzone specyfikacje identyfikacji wizualnej: wartości, nie kompozycja.
 - [`identyfikacja/paleta-barw.md`](./identyfikacja/paleta-barw.md) - obowiązująca paleta „Kaszmir Wyciszony”: 14 kolorów z nazwami i tokenami semantycznymi, zmierzone kontrasty WCAG, reguła 80/15/5, przypisanie trzech dziedzin.
 - [`identyfikacja/siatka-a4.md`](./identyfikacja/siatka-a4.md) - siatka A4: 6 kolumn, moduł 25 mm, gutter 4 mm; ze sprawdzeniem dopasowania do strony i jedną otwartą rozbieżnością co do jednostki bazowej 6 mm.
 - [`identyfikacja/typografia.md`](./identyfikacja/typografia.md) - Manrope 200-800 i Inconsolata, dziesięciopoziomowa skala, zasada różnicowania wagą zamiast rodziną.
-- [`identyfikacja/tokeny/palette-irin.json`](./identyfikacja/tokeny/palette-irin.json) - wszystkie trzy specyfikacje maszynowo.
+- [`identyfikacja/logotyp.md`](./identyfikacja/logotyp.md) - logotyp: trzy warianty z proporcjami odczytanymi z plików źródłowych, minimalny rozmiar 18 mm / 90 px, przestrzeń ochronna x, cztery wiążące zakazy modyfikacji.
+- [`identyfikacja/tokeny/palette-irin.json`](./identyfikacja/tokeny/palette-irin.json) - wszystkie cztery specyfikacje maszynowo.
 
 ## firma/
 

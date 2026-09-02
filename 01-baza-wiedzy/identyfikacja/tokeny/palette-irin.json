@@ -8,7 +8,8 @@
   "specyfikacja-obowiazujaca": {
     "kolor": "01-baza-wiedzy/identyfikacja/paleta-barw.md",
     "siatka": "01-baza-wiedzy/identyfikacja/siatka-a4.md",
-    "typografia": "01-baza-wiedzy/identyfikacja/typografia.md"
+    "typografia": "01-baza-wiedzy/identyfikacja/typografia.md",
+    "logotyp": "01-baza-wiedzy/identyfikacja/logotyp.md"
   },
   "typografia": {
     "rodzina-podstawowa": "Manrope",
@@ -331,5 +332,45 @@
     "status": "ODRZUCONY (2026-09-02)",
     "decyzja": "Founder wybrał jedną paletę na wszystko. Wariant 6 (Druk Ekonomiczny) nie wchodzi jako osobny tryb monochromatyczny.",
     "skutek": "W dokumentach drukowanych mono Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność. Jedynym zabezpieczeniem czytelności statusu pozostaje obowiązkowa etykieta słowna albo ikona - patrz ograniczenia."
+  },
+  "logotyp": {
+    "pliki": [
+      {
+        "plik": "logo_irin_poziom.svg",
+        "viewbox": "281.333 x 158.667",
+        "proporcja": 1.7731,
+        "zastosowanie": "wariant podstawowy"
+      },
+      {
+        "plik": "logo_irin_pion.svg",
+        "viewbox": "184.837 x 162.834",
+        "proporcja": 1.1351,
+        "zastosowanie": "pola wąskie i wysokie"
+      },
+      {
+        "plik": "logo_irin_sygnet.svg",
+        "viewbox": "184.837 x 162.834",
+        "proporcja": 1.1351,
+        "zastosowanie": "znak samodzielny"
+      }
+    ],
+    "jednokolorowy": true,
+    "minimalny-rozmiar": {
+      "druk-mm": 18,
+      "ekran-px": 90,
+      "sygnet-samodzielny": "10 mm / 44 px - odczyt z brandbook.dc.html, nie potwierdzony osobno"
+    },
+    "przestrzen-ochronna": "x = wysokość liter sygnetu; miara względna, z każdej strony znaku",
+    "zakazy-wiazace": [
+      "nie zmieniamy koloru znaku; na ciemnym tle wersja odwrócona, nie przebarwiona",
+      "nie obracamy, nie pochylamy, nie odbijamy lustrzanie",
+      "nie dodajemy cienia, poświaty ani obrysu",
+      "nie rozciągamy nieproporcjonalnie"
+    ],
+    "zatwierdzenie": "minimalny rozmiar i przestrzeń ochronna potwierdzone wcześniej; cztery zakazy potwierdzone 2026-09-02",
+    "nadal-niepotwierdzone": [
+      "minimalny rozmiar samodzielnego sygnetu (10 mm / 44 px)",
+      "reguła kontrastu znaku na akcentach dziedzinowych (4,5:1)"
+    ]
   }
 }
