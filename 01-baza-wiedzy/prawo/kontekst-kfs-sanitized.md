@@ -14,26 +14,28 @@ Parametry odczytane 2026-08-10 z wytycznych ministerstwa dla urzędów pracy (ak
 ## Czym różni się od PSF — cztery różnice
 
 1. **Wniosek składa pracodawca, nie uczestnik**, do powiatowego urzędu pracy właściwego dla miejsca prowadzenia działalności.
-2. **Karta usługi w BUR nie jest wymagana na etapie wniosku.** Wymagany jest wpis realizatora do BUR oraz **program kształcenia** i **wzór dokumentu potwierdzającego ukończenie**. To ustalenie negatywne — żaden ze sprawdzonych dokumentów nie wymaga karty usługi na tym etapie, ale żaden też nie stwierdza wprost, że jest niepotrzebna. **Do potwierdzenia w regulaminie konkretnego urzędu.**
+2. **Karta usługi w BUR nie jest wymagana na etapie wniosku.** Wymagany jest wpis realizatora do BUR oraz **program kształcenia** i **wzór dokumentu potwierdzającego ukończenie**. **Potwierdzone u źródła 2026-09-03:** rozporządzenie o KFS wylicza zamkniętą listę elementów wniosku (§ 2 ust. 1) i załączników (§ 2 ust. 2) — o realizatorze wniosek podaje m.in. informację o wpisie do rejestru PARP w zakresie usług szkoleniowych (§ 2 ust. 1 pkt 6 lit. d), a karta usługi nie występuje w tej liście ani razu. Zostaje węższe zastrzeżenie: konkretny urząd ogłasza własne „zasady i kryteria wyboru" (§ 3 ust. 1), więc **do sprawdzenia w regulaminie naboru urzędu właściwego dla pierwszego klienta**.
 3. **Limity są krajowe i ruchome**, nie regionalne — patrz niżej.
 4. **Decyzja urzędu jest uznaniowa**, oparta na liście rankingowej. W komunikacji zewnętrznej: „usługa kwalifikuje się do wniosku o środki KFS", nigdy „KFS to sfinansuje".
 
 ## Poziomy dofinansowania
 
-Źródło: wytyczne ministerstwa dla urzędów pracy, aktualizacja luty 2026, powtarzane w zasadach przyznawania środków publikowanych przez urzędy powiatowe.
+Źródło: **ustawa o rynku pracy i służbach zatrudnienia, art. 126 ust. 1 i 2** (Dz.U. 2025 poz. 620, s. 60), odczytana u źródła 2026-09-03; plik w `./zrodla/`.
 
-- **90%** kosztów kształcenia ustawicznego dla mikroprzedsiębiorców (do 9 osób w przeliczeniu na pełne etaty),
-- **70%** dla pozostałych pracodawców.
+- **do 90%** kosztów — podmiot niezatrudniający pracowników albo zatrudniający nie więcej niż 9 osób w przeliczeniu na pełny wymiar czasu pracy w dniu złożenia wniosku,
+- **do 70%** — pozostałe podmioty.
+
+Oba przepisy mówią „do", więc procent jest maksymalny, nie gwarantowany: zakres finansowania ustala starosta w uzgodnieniu z wnioskodawcą (§ 5 ust. 4 rozporządzenia o KFS). W komunikacji zewnętrznej pisz „do 90%", nigdy „90%".
 
 Zmiana wobec lat wcześniejszych: było 100% i 80%, więc od 2026 wkład własny dotyczy również mikroprzedsiębiorców. Komunikacja oparta na „za darmo dla mikrofirm" jest nieaktualna.
 
-**Wymaga potwierdzenia:** przepis ustawy ustanawiający te wartości procentowe. Wytyczne wskazują artykuł o limicie dofinansowania, ale nie cytują ustępu z procentami wprost. Wartości są zgodne w wytycznych i w dokumentach urzędów, więc do planowania wystarczają — do pisma wychodzącego na zewnątrz potwierdź brzmienie przepisu źródłowego.
+**Potwierdzone 2026-09-03:** przepisem ustanawiającym te wartości jest art. 126 ust. 1 i 2 ustawy z 20 marca 2025 r. Pełny odczyt wraz z kontekstem: `./kfs.md`.
 
 ## Dwa limity, nie jeden
 
 **Na uczestnika: do 200% przeciętnego wynagrodzenia** obowiązującego w dniu zawarcia umowy, według komunikatu prezesa Głównego Urzędu Statystycznego. Komunikaty: https://stat.gov.pl/sygnalne/komunikaty-i-obwieszczenia/lista-komunikatow-i-obwieszczen/
 
-**Na wnioskodawcę, rocznie** — limit często pomijany, a przy większych pakietach wiążący wcześniej niż limit osobowy. Podstawy prawnej krotności nie ustalono ostatecznie w źródłach roboczych, więc przed oparciem na niej decyzji potwierdź ją w zasadach danego urzędu:
+**Na wnioskodawcę, rocznie** — limit często pomijany, a przy większych pakietach wiążący wcześniej niż limit osobowy. Podstawa prawna ustalona 2026-09-03: **art. 126 ust. 3 ustawy** (Dz.U. 2025 poz. 620, s. 61). Krotność zależy od zatrudnienia, nie od priorytetu:
 
 | Zatrudnienie | Limit roczny |
 |---|---|

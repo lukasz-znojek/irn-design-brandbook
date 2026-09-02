@@ -64,17 +64,26 @@ Dwie pozycje wymagane przez art. 206 KSH, których repozytorium nie zawiera (ozn
 
 ### Grupa III - weryfikacja prawna u źródła pierwotnego
 
-Wszystkie ustalenia prawne w warstwie 1 pochodzą ze źródeł wtórnych, bo w sesjach, w których powstały, dostęp do domen PARP i Dziennika Ustaw był zablokowany. Każda pozycja ma wpisany falsyfikator; zamknięcie oznacza odczyt dokumentu i wpisanie wyniku. **Lista do dostarczenia, z adresami i sposobem przekazania: `01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`** (gotowa 2026-09-02). Tabela niżej to skrót.
+Ustalenia prawne w warstwie 1 powstawały ze źródeł wtórnych, bo w sesjach, w których je spisywano, dostęp do domen PARP i Dziennika Ustaw był zablokowany. Każda pozycja ma wpisany falsyfikator; zamknięcie oznacza odczyt dokumentu i wpisanie wyniku. **Lista, z adresami, sposobem przekazania i statusem każdej pozycji: `01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`.** Tabela niżej to skrót.
 
-| Co sprawdzić | Dokument źródłowy | Który plik czeka |
-|---|---|---|
-| Lista obowiązkowych pól karty usługi. | Regulamin BUR, Załącznik nr 2 | `prawo/bur.md`, `02-szablony-dokumentow/karta-uslugi-bur.md` |
-| Pola zaświadczenia o ukończeniu usługi. | Regulamin BUR, Załącznik nr 12 | `prawo/bur.md`, `02-szablony-dokumentow/certyfikat.md` |
-| Format kodu usługi (`2025/00817/PPUR` z kanwy to obserwacja, nie wymóg). | Regulamin BUR | `prawo/bur.md` |
-| Treść rozporządzenia o KFS z 25 listopada 2025. | Dziennik Ustaw | `prawo/kfs.md` |
-| Czy operatorzy regionalni PSF nakładają na dostawcę kryteria ponad wpis do BUR. | Regionalne „Zasady udzielania wsparcia” | `prawo/psf.md`, `prawo/bur.md` |
-| Czy karta usługi w BUR jest wymagana na etapie wniosku KFS. | Regulamin konkretnego urzędu pracy | `prawo/kontekst-kfs-sanitized.md` |
-| Rozdział beneficjent a doradca zewnętrzny w Księdze Tożsamości Wizualnej Funduszy Europejskich. | Księga Tożsamości Wizualnej FE | `prawo/pozyczki-ue-bgk.md`; tylko jeśli IRIN zechce użyć znaku FE |
+**Stan na 2026-09-03: pięć z ośmiu pozycji odczytanych u źródła, szósta w części.**
+
+- **Pozycje 1-3 (BUR), 2026-09-02.** Founder dostarczył sześć plików PDF ze strony PARP (Regulamin BUR oraz Załączniki 1, 2g, 3, 4, 5); leżą w `01-baza-wiedzy/prawo/zrodla/`. Zamknęły wszystkie pozycje blokujące dwie karty warstwy 2. Odczyt obalił przy okazji założenie tej mapy: **Załącznika nr 12 z wzorem zaświadczenia już nie ma** - § 23 Regulaminu w wersji od 5 maja 2026 r. wymienia wyłącznie Załączniki 1-5, a wymogi zaświadczenia stoją dziś w Załączniku 4, Rozdział 2, pkt 3.
+- **Pozycje 4-5 (KFS), 2026-09-03.** Rozporządzenie o KFS i ustawa o rynku pracy pobrane wprost z Dziennika Ustaw, razem z ustawą o PARP potrzebną do identyfikacji rejestru z art. 128 ust. 2. `kfs.md` stoi dziś na tekstach aktów, nie na materiale wtórnym.
+- **Pozycja 6 (karta usługi we wniosku KFS), 2026-09-03, w części.** Poziom krajowy rozstrzygnięty przecząco: rozporządzenie o KFS wylicza zamkniętą listę elementów wniosku, karta usługi w niej nie występuje. Zostaje regulamin naboru konkretnego urzędu pracy.
+- **Pozycje 7-8 nieodczytane.** Dotyczą operatora PSF i znaku Funduszy Europejskich; obie mają poprawione wskazanie dokumentu, ale żadna nie została przeczytana.
+
+**Założenie tej mapy, które upadło: blokada sieciowa nie jest własnością projektu.** Pomiar z 2026-09-03 na maszynie foundera: wszystkie sześć domen, które w sesjach z 2026-09-02 odpowiadały `connect_rejected`, zwracają 200 albo 302. Blokada dotyczyła środowiska w piaskownicy, nie każdego uruchomienia Claude Code w tym projekcie. Wniosek operacyjny: **zanim poprosisz foundera o dokument, zmierz dostęp z maszyny, na której właśnie pracujesz.**
+
+| Co sprawdzić | Dokument źródłowy | Który plik czeka | Stan |
+|---|---|---|---|
+| Lista obowiązkowych pól karty usługi. | Regulamin BUR, Załącznik nr 2g (usługa szkoleniowa), wersja od 6 lipca 2026 | `prawo/bur.md`, `02-szablony-dokumentow/karta-uslugi-bur.md` | **odczytane u źródła** 2026-09-02 |
+| Pola zaświadczenia o ukończeniu usługi. | Załącznik 4 „Zasady funkcjonowania Dostawców Usług”, Rozdział 2 pkt 3, wersja od 31 marca 2026 (nie Załącznik nr 12 - ten już nie istnieje) | `prawo/bur.md`, `02-szablony-dokumentow/certyfikat.md` | **odczytane u źródła** 2026-09-02 |
+| Format kodu usługi (`2025/00817/PPUR` z kanwy to obserwacja, nie wymóg). | Regulamin BUR i Załącznik 4 | `prawo/bur.md` | **odczytane u źródła** 2026-09-02: żaden z sześciu dokumentów nie definiuje struktury numeru, więc karta ma wstawiać numer nadany przez system, bez rekonstrukcji |
+| Treść rozporządzenia o KFS z 25 listopada 2025 oraz przepis z procentami. | Dz.U. 2025 poz. 1641 i Dz.U. 2025 poz. 620 (ustawa), plus Dz.U. 2025 poz. 98 (identyfikacja rejestru) | `prawo/kfs.md`, `prawo/kontekst-kfs-sanitized.md` | **odczytane u źródła** 2026-09-03: procenty i krotności w art. 126 ust. 1-3 ustawy, wymóg wpisu do BUR w art. 128 ust. 2, krąg osób w art. 125 ust. 10; rozporządzenie żadnych liczb nie zawiera |
+| Czy operatorzy regionalni PSF nakładają na dostawcę kryteria ponad wpis do BUR. | Regulamin wsparcia operatora; **korekta 2026-09-03**: operatorem w świętokrzyskiem jest najpewniej WUP w Kielcach, nie ŚCITT - trop z wyszukiwarki, nie odczyt | `prawo/psf.md`, `prawo/bur.md` | niesprawdzone - do odczytu przy pierwszym kliencie z regionu |
+| Czy karta usługi w BUR jest wymagana na etapie wniosku KFS. | Rozporządzenie o KFS § 2 (poziom krajowy) plus regulamin naboru konkretnego urzędu pracy | `prawo/kontekst-kfs-sanitized.md` | **odczytane u źródła w części** 2026-09-03: przepisy krajowe karty usługi nie wymagają; zostaje regulamin urzędu |
+| Kto jest objęty obowiązkiem stosowania znaku FE: beneficjent, realizator, doradca zewnętrzny. | **Korekta 2026-09-03**: rozstrzyga Podręcznik wnioskodawcy i beneficjenta w zakresie informacji i promocji (od 20 maja 2026), nie Księga Tożsamości Wizualnej - Księga opisuje konstrukcję znaku | `prawo/pozyczki-ue-bgk.md`; tylko jeśli IRIN zechce użyć znaku FE | niesprawdzone - pozycja warunkowa |
 
 Jeśli dostęp do tych domen nadal będzie zablokowany, dokumenty musi dostarczyć founder (PDF do repozytorium albo wklejony fragment). To jedyna grupa, której Claude Code nie domknie samodzielnie bez zmiany dostępu sieciowego.
 
@@ -92,7 +101,7 @@ Jeśli dostęp do tych domen nadal będzie zablokowany, dokumenty musi dostarczy
 flowchart TD
     S0["Etap 0 - higiena - ZROBIONE<br/>4 zdania poprawione, PLAN 17-23,<br/>PR #4 scalony, PR #6 zamknięty"]
     S1["Etap 1 - decyzje foundera - ZROBIONE<br/>3 blokujące pilota podjęte,<br/>6 odłożonych do pierwszego użycia"]
-    S2["Etap 2 - weryfikacja prawna<br/>BUR zał. 2 i 12, kod usługi,<br/>KFS z Dz.U., operatorzy PSF"]
+    S2["Etap 2 - weryfikacja prawna<br/>BUR i KFS odczytane u źródła<br/>zostają operator PSF i znak FE"]
     S3["Etap 3 - karty warstwy 2 - ZROBIONE<br/>zero znaczników, 4 pozycje<br/>otwarte do pierwszego zlecenia"]
     S4["Etap 4 - pilot w Claude Design<br/>paczka i zlecenie GOTOWE,<br/>founder wypełnia 5 pól i prowadzi w Claude Design"]
     S5["Etap 5 - zamknięcie<br/>PLAN.md domknięty, README ze stanem,<br/>tag v1.0, procedura domknięcia okna"]
@@ -120,14 +129,16 @@ flowchart TD
     style G2 fill:#E4DACB,stroke:#1E1611,color:#1E1611
 ```
 
-Etapy 1 i 2 były niezależne; etap 1 jest zamknięty. Etap 2 wymaga dostępu do dokumentów źródłowych: pomiar z 2026-09-02 wieczorem pokazał, że z sesji Claude Code cztery domeny (parp.gov.pl, uslugirozwojowe.parp.gov.pl, dziennikustaw.gov.pl, isap.sejm.gov.pl) zwracają błąd połączenia, więc dokumenty muszą przyjść od foundera albo polityka sieciowa środowiska musi je dopuścić. Etap 4 (pilot) nie zależy od etapu 2 i może ruszyć równolegle.
+Etapy 1 i 2 były niezależne; etap 1 jest zamknięty. Etap 2 jest w połowie: pozycje 1-3 odczytane z plików dostarczonych przez foundera, pozycje 4-8 nadal czekają. Pomiar z 2026-09-02 wieczorem pokazał, że z sesji Claude Code cztery domeny (parp.gov.pl, uslugirozwojowe.parp.gov.pl, dziennikustaw.gov.pl, isap.sejm.gov.pl) zwracają błąd połączenia, więc pozostałe dokumenty też muszą przyjść od foundera albo polityka sieciowa środowiska musi je dopuścić. Etap 4 (pilot) nie zależy od etapu 2 i może ruszyć równolegle.
+
+**Co zostało odblokowane:** obie karty warstwy 2, które czekały na Etap 2 (`karta-uslugi-bur.md`, `certyfikat.md`), mają dziś listy pól odczytane u źródła i nie mają już sekcji „Status weryfikacji” z zastrzeżeniem o niepobranym załączniku.
 
 | Etap | Kto wykonuje | Warunek wyjścia (mierzalny) |
 |---|---|---|
 | 0 - higiena | Claude Code | **Spełnione 2026-09-02:** `grep` po czterech nieaktualnych zdaniach zwraca zero trafień; `PLAN.md` ma zadania 17-23; na GitHubie nie ma otwartego PR poza #9. Poza bramką zostało ręczne usunięcie gałęzi. |
 | 1 - decyzje foundera | Founder, Claude Code wpisuje | **Spełnione 2026-09-02:** trzy decyzje blokujące pilota wpisane do `PLAN.md` w sekcji „rozstrzygnięte”; sprzeczność o siedzibę i formę prawną ma jedną wersję w trzech plikach. |
-| 2 - weryfikacja prawna | Claude Code przy dostępie do PARP i Dz.U., inaczej founder dostarcza dokumenty | Każde z siedmiu ustaleń ma wpisane: odczytane u źródła albo status niesprawdzone z nazwanym powodem. Zero pozycji „do potwierdzenia przy dostępie do PARP”. |
-| 3 - karty warstwy 2 | Claude Code | **Spełnione 2026-09-02:** `grep -i "do potwierdzenia przez foundera" 02-szablony-dokumentow/` zwraca zero trafień; cztery pozycje mają status „otwarte do pierwszego zlecenia” z nazwą dokumentu. Zastrzeżenia o niepobranych załącznikach BUR zostają do etapu 2. |
+| 2 - weryfikacja prawna | Claude Code, gdy sieć na jego maszynie dopuszcza źródła; inaczej founder dostarcza dokumenty | **Spełnione w części:** pozycje 1-3 odczytane 2026-09-02 (sześć PDF-ów PARP), pozycje 4-5 odczytane 2026-09-03 (trzy akty z Dziennika Ustaw), pozycja 6 odczytana na poziomie krajowym. Zero pozycji „do potwierdzenia przy dostępie do PARP” w `bur.md`, `kfs.md`, `kontekst-kfs-sanitized.md`, `karta-uslugi-bur.md` i `certyfikat.md`. Zostają dwie pozycje bez odczytu (7 - regulamin operatora PSF, 8 - obowiązek znaku FE), obie zależne od pierwszego realnego klienta i obie warunkowe wobec repozytorium. Bramka zamknie się, gdy każda dostanie „odczytane u źródła” albo „niesprawdzone” z nazwanym powodem. |
+| 3 - karty warstwy 2 | Claude Code | **Spełnione 2026-09-02:** `grep -i "do potwierdzenia przez foundera" 02-szablony-dokumentow/` zwraca zero trafień; cztery pozycje mają status „otwarte do pierwszego zlecenia” z nazwą dokumentu. Zastrzeżenia o niepobranych załącznikach BUR zdjęte 2026-09-02 wraz z odczytem pozycji 1-3 etapu 2. |
 | 4 - pilot | Founder w Claude Design, Claude Code buduje paczkę i spisuje wnioski | Paczka gotowa (`03-pakiet-claude-design/zlecenia/pilot-papier-firmowy.md`). Bramka: pięć pomiarów z protokołu (polskie znaki na wagach 400-600, siatka 25 mm z treścią, H3 obok leadu, sygnet na rewersie, dokument bez koloru dziedzinowego) ma wpisany wynik w plikach warstwy 1. **Korekta wobec pierwszej wersji tej mapy:** kontrastu Karminu obok Aksamitu ten pilot nie sprawdzi, bo papier firmowy nie ma stanu błędu; ten falsyfikator przechodzi na pierwszy dokument ze statusami (certyfikat albo karta usługi BUR) i nie blokuje bramki B. |
 | 5 - zamknięcie | Claude Code, founder zatwierdza | `PLAN.md` bez pozycji otwartych, `README.md` podaje stan „gotowe do użycia” z datą, tag `v1.0` na `main`. |
 
