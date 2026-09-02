@@ -4,5 +4,5 @@ Fakty o samej firmie IRIN: czym się zajmuje, jakie ma linie biznesowe (aplikacj
 
 ## Pliki
 
-- [`kontekst-firmy-sanitized.md`](kontekst-firmy-sanitized.md) — dane dostawcy, linie biznesowe, modele rozliczenia dofinansowania i granica compliance wkładu własnego; wersja bezpieczna do repo publicznego.
-- `kontekst-firmy.md` — docelowa, pełna karta; jeszcze nie utworzona, wymaga decyzji foundera (`/PLAN.md`, pozycja 1). Plik sanitized powyżej jest dla niej materiałem wejściowym, nie zastępuje jej.
+- [`kontekst-firmy.md`](kontekst-firmy.md) — pełna nazwa IRIN, trzy linie biznesowe, planowany portal szkoleń; model organizacyjny i historia oznaczone jako brak danych, do potwierdzenia przez foundera.
+- [`kontekst-firmy-sanitized.md`](kontekst-firmy-sanitized.md) — uzupełnienie o mechanikę nieopisaną w karcie wyżej: dane rejestrowe dostawcy, modele rozliczenia dofinansowania, granica compliance wkładu własnego.

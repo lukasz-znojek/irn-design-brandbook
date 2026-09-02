@@ -4,6 +4,10 @@ Szablony `.md` dla poszczególnych typów dokumentów IRIN (np. viewbook, karta 
 
 ## Pliki
 
+- [`viewbook.md`](viewbook.md) — specyfikacja viewbooka szkoleniowego.
+- [`karta-uslugi-bur.md`](karta-uslugi-bur.md) — specyfikacja drukowanej/PDF karty jednej usługi BUR (formalny dokument dystrybucyjny, osobny od `program-szkolenia.md` i `prezentacja-sprzedazowa.md` poniżej).
+- [`certyfikat.md`](certyfikat.md) — specyfikacja certyfikatu/zaświadczenia ukończenia szkolenia.
+- [`papier-firmowy.md`](papier-firmowy.md) — specyfikacja papieru firmowego i wizytówki.
+- [`material-sprzedazowy.md`](material-sprzedazowy.md) — specyfikacja materiałów aplikacji sprzedażowej.
 - [`program-szkolenia.md`](program-szkolenia.md) — specyfikacja programu szkolenia: metryczka, kanały finansowania, cel edukacyjny, efekty uczenia się, ramowy program, kadra, karty usług.
 - [`prezentacja-sprzedazowa.md`](prezentacja-sprzedazowa.md) — struktura prezentacji produktowo-sprzedażowej dla klienta (dziesięć slajdów) wraz z zasadami twardymi komunikacji o dofinansowaniu.
-- `karta-uslugi-bur.md`, `viewbook.md`, `certyfikat.md`, `papier-firmowy.md`, `material-sprzedazowy.md` — jeszcze nie utworzone, patrz `/PLAN.md`.

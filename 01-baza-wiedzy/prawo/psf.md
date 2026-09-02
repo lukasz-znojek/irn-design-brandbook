@@ -46,7 +46,7 @@ Do wyceny konkretnej oferty **wymagana jest karta parametrów właściwego opera
 ## Powiązane dokumenty
 
 - `01-baza-wiedzy/prawo/kontekst-psf-sanitized.md` — pełny materiał źródłowy, w tym lista powtarzalnych mechanizmów regulaminowych do sprawdzenia u operatora.
-- `01-baza-wiedzy/prawo/kontekst-kfs-sanitized.md` — kanał porównawczy (KFS), z krajowymi, a nie regionalnymi parametrami.
+- `01-baza-wiedzy/prawo/kfs.md` — kanał porównawczy (KFS), z krajowymi, a nie regionalnymi parametrami.
 - `01-baza-wiedzy/_szablony/karta-produktu.md` — szablon, wg którego powstała ta karta.
 
 ## FAQ

@@ -1,6 +1,6 @@
 # KFS — Krajowy Fundusz Szkoleniowy — materiał źródłowy, wersja sanitized
 
-> Wersja bezpieczna do publicznego repozytorium, opracowana z wewnętrznego materiału roboczego. To jest **materiał źródłowy do dalszej pracy**, nie ostateczna karta prawna — docelowa karta `01-baza-wiedzy/prawo/kfs.md` (patrz `/PLAN.md`, pozycja 2) wciąż czeka na opracowanie. Ten plik dostarcza jej gotowe, zweryfikowane fakty i źródła.
+> Wersja bezpieczna do publicznego repozytorium, opracowana z wewnętrznego materiału roboczego. Karta `01-baza-wiedzy/prawo/kfs.md` już istnieje i jest źródłem prawdy co do stanu prawnego — ten plik ją uzupełnia o szczegóły, których tamta karta nie rozwija: pełną listę czterech priorytetów wydatkowania 2026, tabelę limitów rocznych wg wielkości firmy i checklistę załączników wniosku.
 
 Parametry odczytane 2026-08-10 z wytycznych ministerstwa dla urzędów pracy (aktualizacja luty 2026), z rozporządzenia o KFS i z dokumentów naborowych powiatowych urzędów pracy. **Przed pierwszym wnioskiem potwierdź w regulaminie naboru konkretnego urzędu** — urzędy dokładają własne priorytety i własne warunki.
 

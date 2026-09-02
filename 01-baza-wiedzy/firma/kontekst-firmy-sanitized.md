@@ -1,6 +1,6 @@
 # Kontekst firmy IRIN — wersja sanitized
 
-> Wersja bezpieczna do publicznego repozytorium, opracowana z wewnętrznego materiału źródłowego. Nie zastępuje docelowej karty `kontekst-firmy.md` (patrz `/PLAN.md`, pozycja 1, oznaczona **[FOUNDER]**) — jest dla niej materiałem wejściowym.
+> Wersja bezpieczna do publicznego repozytorium, opracowana z wewnętrznego materiału źródłowego. Uzupełnia `kontekst-firmy.md` o mechanikę finansową i compliance rozliczeń dofinansowania, której tamta karta (linie biznesowe, struktura) nie opisuje — nie zastępuje jej.
 
 ## Kto jest dostawcą
 

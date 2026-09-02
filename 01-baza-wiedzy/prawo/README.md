@@ -4,9 +4,11 @@ Obowiązujące przepisy i regulacje, którym podlegają dokumenty IRIN: Krajowy 
 
 ## Pliki
 
+- [`kfs.md`](kfs.md) — Krajowy Fundusz Szkoleniowy: podstawa prawna po reformie 2026, wymóg wpisu do BUR, limity dofinansowania.
+- [`bur.md`](bur.md) — Baza Usług Rozwojowych: warunek wpisu, obowiązkowe pola karty usługi, kod usługi, zaświadczenie ukończenia.
+- [`pozyczki-ue-bgk.md`](pozyczki-ue-bgk.md) — regulacje pośrednictwa w pozyskiwaniu dotacji UE i pożyczek BGK dla MŚP.
 - [`psf.md`](psf.md) — karta produktu PSF, wg `../_szablony/karta-produktu.md`.
-- [`kontekst-kfs-sanitized.md`](kontekst-kfs-sanitized.md) — materiał źródłowy o KFS (sanitized), wejście do docelowej karty `kfs.md`.
-- [`kontekst-psf-sanitized.md`](kontekst-psf-sanitized.md) — materiał źródłowy o PSF (sanitized), na którym oparta jest `psf.md`.
-- `kfs.md`, `bur.md` — jeszcze nie utworzone, patrz `/PLAN.md`.
+- [`kontekst-kfs-sanitized.md`](kontekst-kfs-sanitized.md) — materiał źródłowy uzupełniający `kfs.md` o priorytety 2026, limity roczne wg wielkości firmy i checklistę załączników wniosku.
+- [`kontekst-psf-sanitized.md`](kontekst-psf-sanitized.md) — materiał źródłowy, na którym oparta jest `psf.md`.
 
 Plik `psf.md` odpowiada na zlecenie karty „PFS" — materiał źródłowy i terminologia urzędowa używają skrótu **PSF**, więc to on jest tu nazwą kanoniczną; wyjaśnienie w nagłówku `psf.md`.
