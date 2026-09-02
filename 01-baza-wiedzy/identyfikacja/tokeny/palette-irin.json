@@ -5,7 +5,11 @@
   "status": "ZATWIERDZONA - wariant 2 wybrany przez foundera",
   "data-wyboru": "2026-09-02",
   "zrodlo-wyboru": "_robocze/paleta-v2/palette-options-v2.md (wariant 2 z siedmiu; archiwum)",
-  "specyfikacja-obowiazujaca": "01-baza-wiedzy/identyfikacja/paleta-barw.md",
+  "specyfikacja-obowiazujaca": {
+    "kolor": "01-baza-wiedzy/identyfikacja/paleta-barw.md",
+    "siatka": "01-baza-wiedzy/identyfikacja/siatka-a4.md",
+    "typografia": "01-baza-wiedzy/identyfikacja/typografia.md"
+  },
   "typografia": {
     "rodzina-podstawowa": "Manrope",
     "wagi": [
@@ -93,7 +97,9 @@
       170,
       251
     ],
-    "zmieniona": false
+    "zmieniona": false,
+    "pole-tresci-sprawdzone": "6x25 + 5x4 = 170 mm = 210 - 18 - 22; dopasowanie dokładne",
+    "rozbieznosc-otwarta": "jednostka bazowa 6 mm z kanwy nie dzieli wysokości pola treści (251/6 = 41,83); domknięcie wymagałoby marginesu dolnego 33 mm"
   },
   "metodologia-kontrastu": "WCAG 2.1, luminancja względna sRGB. Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 3:1. Każda para w tej palecie przechodzi próg.",
   "tokeny": {

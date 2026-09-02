@@ -7,7 +7,7 @@ Kolejka zadań: [`PLAN.md`](./PLAN.md).
 
 ## Struktura
 
-- `01-baza-wiedzy/` - kontekst firmy, przepisy prawne, wytyczne usługowe oraz zatwierdzone specyfikacje identyfikacji (`identyfikacja/paleta-barw.md`). Wejście: `01-baza-wiedzy/00-INDEX.md`.
+- `01-baza-wiedzy/` - kontekst firmy, przepisy prawne, wytyczne usługowe oraz zatwierdzone specyfikacje identyfikacji: paleta barw, siatka A4 i typografia (`identyfikacja/`). Wejście: `01-baza-wiedzy/00-INDEX.md`.
 - `02-szablony-dokumentow/` - specyfikacje treści i wymogów regulacyjnych dla dokumentów IRIN (nie układ graficzny).
 
 - `03-pakiet-claude-design/` - paczka i prompt dla Claude Design, gdzie powstaje kompozycja i layout.

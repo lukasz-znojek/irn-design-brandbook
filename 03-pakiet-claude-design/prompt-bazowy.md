@@ -12,7 +12,7 @@ Projektujesz dokument dla **IRIN (Instytut Rozwoju i Nauki)** — polskiej firmy
 
 **Typografia.** Krój **Manrope** (wagi 200-800) jako podstawowy; **Inconsolata** pomocniczo, do danych liczbowych, metadanych i kodów usług.
 
-**Siatka i paleta.** Siatka A4 (6 kolumn, moduł 25 mm, gutter 4 mm) i paleta **14 kolorów, wariant 2 „Kaszmir Wyciszony”** są zatwierdzone przez foundera - pełna specyfikacja, tokeny semantyczne, przepisane kolory etykiet na wypełnieniach i reguła 80/15/5 w `../01-baza-wiedzy/identyfikacja/paleta-barw.md`, dane maszynowe w `../01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json`. Trzymaj się dokładnie tych wartości, nie przybliżaj ich „na oko”. Kolor nigdy nie jest jedynym nośnikiem statusu - każdy stan potrzebuje etykiety słownej albo ikony obok koloru.
+**Siatka, paleta i typografia.** Wszystkie trzy specyfikacje są zatwierdzone i leżą w warstwie 1: `../01-baza-wiedzy/identyfikacja/paleta-barw.md` (14 kolorów, tokeny semantyczne, przepisane kolory etykiet, reguła 80/15/5), `../01-baza-wiedzy/identyfikacja/siatka-a4.md` (6 kolumn, moduł 25 mm, gutter 4 mm) i `../01-baza-wiedzy/identyfikacja/typografia.md` (Manrope 200-800 plus Inconsolata, dziesięciopoziomowa skala). Dane maszynowe wszystkich trzech: `../01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json`. Trzymaj się dokładnie tych wartości, nie przybliżaj ich „na oko”. Sześć zasad ich użycia - w `./format-paczki.md`; dwie najważniejsze: kolor nigdy nie jest jedynym nośnikiem statusu, a hierarchię typograficzną buduje waga jednego kroju, nie zmiana rodziny.
 
 ## Co rozstrzyga treść dokumentu — warstwy 1 i 2
 
