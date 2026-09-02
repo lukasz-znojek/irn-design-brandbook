@@ -4,9 +4,15 @@
 # a sesje Claude Code przepuszczają tylko REST, więc tablicę zakłada runner GitHuba.
 #
 # Jednorazowe przygotowanie (founder, ok. 2 minuty):
-#   1. github.com → Settings → Developer settings → Personal access tokens → Fine-grained
-#      → Generate new token. Resource owner: lukasz-znojek. Repository access: tylko
-#      irn-design-brandbook. Uprawnienia: Account permissions → Projects: Read and write.
+#   1. github.com → Settings → Developer settings → Personal access tokens → Tokens (classic)
+#      → Generate new token (classic). Note: PROJECTS_TOKEN, Expiration wg uznania,
+#      Scopes: zaznaczyć trzy: „project” (Full control of projects), „read:org” (pod
+#      admin:org) i „read:discussion” (pod write:discussion). Dwa ostatnie wymaga gh project
+#      do rozpoznania właściciela tablicy; bez nich: „missing required scopes”.
+#      Istniejący token klasyczny można edytować i dograć zakresy bez zmiany wartości.
+#      Dlaczego klasyczny: tokeny fine-grained nie mają uprawnienia do tablic Projects
+#      na koncie osobistym (tylko organizacyjnych), więc w ich formularzu pozycja
+#      „Projects” w zakładce Account nie występuje.
 #   2. W repozytorium: Settings → Secrets and variables → Actions → New repository secret,
 #      nazwa PROJECTS_TOKEN, wartość: token z kroku 1.
 #   3. Actions → „Tablica Projects - mapa drogowa” → Run workflow.
@@ -39,24 +45,46 @@ jobs:
       TOKEN_REPO: ${{ github.token }}
     steps:
       - name: Sprawdź sekret
+        env:
+          # Tylko fakt istnienia, nigdy wartość: zmienne Actions nie są maskowane w logu.
+          JEST_JAKO_VARIABLE: ${{ vars.PROJECTS_TOKEN != '' }}
         run: |
-          if [ -z "$TOKEN_PROJECTS" ]; then
-            echo "::error::Brak sekretu PROJECTS_TOKEN. Instrukcja w komentarzu na górze tego pliku."
-            exit 1
+          if [ -n "$TOKEN_PROJECTS" ]; then
+            echo "Sekret PROJECTS_TOKEN jest widoczny."
+            exit 0
           fi
+          REPO_URL="https://github.com/${{ github.repository }}"
+          if [ "$JEST_JAKO_VARIABLE" = "true" ]; then
+            echo "::error::PROJECTS_TOKEN jest zapisany jako Variable (zakładka Variables), a workflow czyta Secrets. Usuń zmienną: $REPO_URL/settings/variables/actions i dodaj sekret: $REPO_URL/settings/secrets/actions → New repository secret."
+          else
+            echo "::error::Brak sekretu repozytorium PROJECTS_TOKEN. Dodaj go tutaj: $REPO_URL/settings/secrets/actions → New repository secret (nie Environment secrets, nie Codespaces, nie Dependabot). Nazwa dokładnie: PROJECTS_TOKEN."
+          fi
+          exit 1
 
       - name: Znajdź albo utwórz tablicę
         id: tablica
         env:
           GH_TOKEN: ${{ env.TOKEN_PROJECTS }}
         run: |
-          NUM=$(gh project list --owner "$OWNER" --limit 100 --format json \
-            | jq -r --arg t "$TYTUL" '.projects[] | select(.title == $t) | .number' | head -n 1)
+          # "@me" = właściciel tokenu; omija rozpoznawanie typu właściciela po loginie.
+          if ! LISTA=$(gh project list --owner "@me" --limit 100 --format json 2>&1); then
+            echo "::error::gh project list nie zadziałał: $LISTA. Najczęstsza przyczyna: token nie jest klasyczny albo nie ma zakresów project, read:org i read:discussion. Token klasyczny zaczyna się od ghp_, fine-grained od github_pat_ i nie obsługuje tablic na koncie osobistym."
+            exit 1
+          fi
+          NUM=$(echo "$LISTA" | jq -r --arg t "$TYTUL" '.projects[] | select(.title == $t) | .number' | head -n 1)
           if [ -z "$NUM" ]; then
-            NUM=$(gh project create --owner "$OWNER" --title "$TYTUL" --format json | jq -r '.number')
+            if ! WYNIK=$(gh project create --owner "@me" --title "$TYTUL" --format json 2>&1); then
+              echo "::error::gh project create nie zadziałał: $WYNIK"
+              exit 1
+            fi
+            NUM=$(echo "$WYNIK" | jq -r '.number')
             echo "Utworzono tablicę nr $NUM"
           else
             echo "Tablica istnieje: nr $NUM"
+          fi
+          if [ -z "$NUM" ] || [ "$NUM" = "null" ]; then
+            echo "::error::Nie udało się ustalić numeru tablicy."
+            exit 1
           fi
           echo "num=$NUM" >> "$GITHUB_OUTPUT"
           echo "Adres: https://github.com/users/$OWNER/projects/$NUM"
@@ -66,7 +94,7 @@ jobs:
           GH_TOKEN: ${{ env.TOKEN_PROJECTS }}
           NUM: ${{ steps.tablica.outputs.num }}
         run: |
-          FIELD=$(gh project field-list "$NUM" --owner "$OWNER" --format json \
+          FIELD=$(gh project field-list "$NUM" --owner "@me" --format json \
             | jq -c '.fields[] | select(.name == "Status")')
           FID=$(echo "$FIELD" | jq -r '.id')
           if echo "$FIELD" | jq -e '.options[] | select(.name == "Todo" or .name == "In Progress" or .name == "Done")' >/dev/null; then
@@ -110,10 +138,10 @@ jobs:
         run: |
           while read -r URL; do
             [ -z "$URL" ] && continue
-            if gh project item-add "$NUM" --owner "$OWNER" --url "$URL" >/dev/null 2>&1; then
+            if BLAD=$(gh project item-add "$NUM" --owner "@me" --url "$URL" 2>&1 >/dev/null); then
               echo "dodano  $URL"
             else
-              echo "::warning::nie dodano $URL"
+              echo "::warning::nie dodano $URL: $BLAD"
             fi
           done < adresy.txt
           echo "Tablica: https://github.com/users/$OWNER/projects/$NUM"
