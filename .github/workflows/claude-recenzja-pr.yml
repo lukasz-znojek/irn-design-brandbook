@@ -1,0 +1,49 @@
+name: Claude – recenzja PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review]
+
+jobs:
+  recenzja:
+    # Nie recenzuj PR-ów tworzonych przez samego agenta ani PR-ów w wersji roboczej.
+    if: github.actor != 'claude[bot]' && github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          use_sticky_comment: true
+          prompt: |
+            REPOZYTORIUM: ${{ github.repository }}
+            NUMER PR: ${{ github.event.pull_request.number }}
+
+            Przeczytaj CLAUDE.md, sekcję „Agent Claude w GitHub”. Zrecenzuj ten PR po polsku,
+            krótko i formalnie. Gałąź PR jest już wybrana w katalogu roboczym.
+
+            Sprawdź w tej kolejności:
+            1. Zgodność z zasadami CLAUDE.md: język polski w nazwach i treści, brak layoutu
+               graficznego w warstwie 2, `_robocze/` nie jest źródłem prawdy.
+            2. Spójność ze specyfikacjami w `01-baza-wiedzy/identyfikacja/` (paleta, siatka,
+               typografia, logotyp) – każdą rozbieżność zacytuj z obu plików.
+            3. Karty w `02-szablony-dokumentow/`: czy rozróżniają elementy prawnie obowiązkowe,
+               konwencję IRIN i swobodny wybór projektowy.
+            4. Literówki, martwe odsyłacze, niespójne nazwy plików.
+
+            Zasady wypowiedzi: ryzyko przed pochwałą; jedna uwaga = jedno zdanie z lokalizacją;
+            nie wprowadzaj zmian w kodzie, tylko proponuj. Na końcu jedno zdanie: „Do scalenia”
+            albo „Wymaga poprawek” z listą punktów blokujących.
+
+            Uwagi ogólne: `gh pr comment`. Uwagi do konkretnych wierszy:
+            `mcp__github_inline_comment__create_inline_comment` (z `confirmed: true`).
+            Publikuj wyłącznie komentarze w GitHub.
+          claude_args: |
+            --max-turns 20
+            --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*),Read,Grep,Glob"

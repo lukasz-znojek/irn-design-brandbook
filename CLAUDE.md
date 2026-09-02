@@ -46,3 +46,24 @@ Obowiązująca paleta to **14 kolorów, wariant 2 „Kaszmir Wyciszony”**, wyb
 Rozbieżność opisana w punkcie wyżej jest **rozstrzygnięta**: paleta i siatka przeszły pomiar i świadomą decyzję foundera. Zapis zostaje jako historia, nie jako otwarta sprawa.
 
 Dwie zasady, które muszą przetrwać każdą przyszłą zmianę palety: kontrast liczy się na nowo wzorem WCAG 2.1, nigdy nie kopiuje się starych liczb; kolor nigdy nie jest jedynym nośnikiem statusu - każdy stan potrzebuje etykiety słownej albo ikony obok koloru.
+
+## Agent Claude w GitHub (rola i granice)
+
+Dwa kanały o różnym rozliczeniu:
+
+- **Workflow** `anthropics/claude-code-action` w `.github/workflows/` – rozliczane w subskrypcji Claude (sekret `CLAUDE_CODE_OAUTH_TOKEN`). Kanał podstawowy.
+- **Karta „Agents”** w GitHub – agent `brandbook-irin` z pliku `.github/agents/brandbook-irin.agent.md`, do zadań zlecanych ręcznie z panelu. Rozliczany w GitHub AI credits i minutach Actions; własnego klucza Anthropic nie przyjmuje.
+
+Trzy wyzwalacze workflow:
+
+- `claude.yml` – wzmianka `@claude` w issue, komentarzu albo recenzji: odpowiedź na pytanie, wyjaśnienie repozytorium, plan pracy, propozycja zmiany w osobnej gałęzi.
+- `claude-recenzja-pr.yml` – każde otwarcie lub aktualizacja PR: recenzja zgodności z tym plikiem i ze specyfikacjami w `01-baza-wiedzy/identyfikacja/`.
+- `claude-triaz-issue.yml` – każde nowe issue bez `@claude`: etykiety `warstwa-1`, `warstwa-2`, `czeka-na-foundera`, wykrycie duplikatu, jeden komentarz z następnym krokiem.
+
+Granice obowiązujące agenta w każdym trybie:
+
+- Nie modyfikuje `main` bezpośrednio. Każda zmiana plików to gałąź i PR do akceptacji właściciela; poza tym wyłącznie komentarze.
+- Nie zamyka issues ani PR-ów, nie scala, nie tworzy nowych etykiet, nie usuwa gałęzi.
+- Pisze po polsku, krótko i formalnie. Ryzyko nazywa przed pochwałą. Każda uwaga wskazuje plik i wiersz.
+- Nie rozstrzyga spraw oznaczonych `czeka-na-foundera` – może je streścić i wskazać, jaka decyzja jest potrzebna.
+- Limity: `--max-turns` w każdym workflow; brak wyzwalaczy cyklicznych (cron), dopóki właściciel ich nie doda świadomie.
