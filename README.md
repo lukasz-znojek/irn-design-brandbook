@@ -11,5 +11,5 @@ Kolejka zadań: [`PLAN.md`](./PLAN.md). Etapy i bramki domknięcia projektu: [`M
 - `02-szablony-dokumentow/` - specyfikacje treści i wymogów regulacyjnych dla dokumentów IRIN (nie układ graficzny).
 
 - `03-pakiet-claude-design/` - paczka i prompt dla Claude Design, gdzie powstaje kompozycja i layout.
-- `orkiestracja/` - krótka karta startowa do pracy nad zadaniem.
+- `orkiestracja/` - karta startowa oraz instrukcja delegowania etapów agentom.
 - `_robocze/` - archiwum robocze, nie jest źródłem prawdy bez ponownej weryfikacji. W `paleta-v2/` leży porównanie siedmiu wariantów palety, na podstawie którego zapadła decyzja.
