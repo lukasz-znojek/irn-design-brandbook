@@ -34,6 +34,12 @@ Cała hierarchia powstaje przez zmianę wagi jednego kroju - ExtraLight na displ
 
 Tracking jest ujemny na display i nagłówkach, dodatni na wersalikach. Stopnie podane w pikselach zgodnie z zapisem w kanwie; przy druku przelicz je na punkty w jednym miejscu i konsekwentnie, nie poziom po poziomie.
 
+## Interlinia korpusu a jednostka odstępu 6 mm
+
+Interlinia korpusu wynosi 13,5 px × 1,55 = 20,93 px, czyli **5,54 mm**. Jednostka odstępu z siatki to 6 mm. Te dwie wielkości **nie są ze sobą powiązane i nie muszą być** - jednostka 6 mm wymierza odstępy między blokami, a nie linie bazowe tekstu (patrz [`siatka-a4.md`](./siatka-a4.md), sekcja o jednostce bazowej).
+
+Konsekwencja praktyczna: nie próbuj układać akapitów na siatce 6 mm. Rozjazd wynosi 0,46 mm na linię i narasta do 19 mm na pełnej kolumnie, więc pogoń za wyrównaniem skończy się rozstrzelonymi odstępami między akapitami. Odstępy między blokami wymierzaj jednostką 6 mm, tekst wewnątrz bloku zostaw jego własnej interlinii.
+
 ## H3 - jedyny poziom dodany po kanwie
 
 **Zatwierdzony przez foundera 2026-09-02.** Kanwa nie definiowała tego poziomu; H3 to stopień leadu (16 px) z wagą podniesioną z 500 do 600. Ruch zgodny z własną logiką systemu - różnicuje wagą, nie wprowadza nowego stopnia do skali.

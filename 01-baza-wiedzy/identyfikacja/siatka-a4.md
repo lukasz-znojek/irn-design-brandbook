@@ -39,10 +39,23 @@ Liczby przeliczone w tej sesji, nie przepisane z żadnego dokumentu. Falsyfikato
 
 Poprawka polegała na zmniejszeniu modułu z 32 do 25 mm przy zachowaniu sześciu kolumn i gutteru 4 mm - bo to liczba kolumn jest w kanwie opisana jako element wspólny systemu, a moduł 32 mm był niesprawdzonym pomiarem. Rozważana alternatywa (5 kolumn po 32 mm, prawy margines zmniejszony do 16 mm) została odrzucona przez foundera.
 
-## Rozbieżność otwarta: jednostka bazowa 6 mm
+## Jednostka bazowa 6 mm - rozstrzygnięte
 
-`brandbook.dc.html` podaje jednostkę bazową 6 mm dla rytmu pionowego. Zmierzone: 251 mm / 6 mm = **41,83**, czyli 41 pełnych jednostek i **5 mm reszty**. Rytm pionowy nie domyka się na wysokości pola treści.
+`brandbook.dc.html` podaje jednostkę bazową 6 mm. Pierwsze podejrzenie brzmiało, że rytm pionowy się nie domyka: 251 mm / 6 mm = 41,83, czyli 41 pełnych jednostek i 5 mm reszty, a domknięcie wymagałoby marginesu dolnego 33 mm. **Pomiar pokazał, że to jest zła diagnoza** i margines nie jest tu w ogóle problemem.
 
-To nie jest błąd blokujący - reszta 5 mm może po prostu wypadać na dole strony, poniżej ostatniej linii bazowej. Ale jeśli rytm ma domykać się co do milimetra, margines dolny musiałby wynosić **33 mm** zamiast 28 mm: 297 - 18 - 33 = 246 mm, a 246 / 6 = 41 dokładnie.
+Żeby jednostka 6 mm mogła działać jako siatka linii bazowych tekstu, interlinia korpusu musiałaby być jej wielokrotnością. Nie jest:
 
-**Status: do rozstrzygnięcia przez foundera.** Margines 28 mm został zatwierdzony 2026-09-02 i obowiązuje - tej wartości nie zmieniono. Ten punkt jest zapisany, żeby nie wyszedł jako niespodzianka przy pierwszym dokumencie z gęstym tekstem. Falsyfikator: jeśli jednostka 6 mm nie jest w ogóle wiążąca (kanwa podaje ją opisowo, bez zastosowania), rozbieżność nie ma znaczenia.
+| Wielkość | Wartość |
+|---|---|
+| Jednostka bazowa | 6 mm = 22,68 px (przy 96 dpi) |
+| Interlinia korpusu | 13,5 px × 1,55 = 20,93 px = **5,54 mm** |
+| Różnica na każdą linię | 1,75 px = **0,46 mm** |
+| Dryf na pełnej kolumnie (45 linii) | **19 mm** |
+
+Tekst korpusu rozjeżdża się z siatką 6 mm o niecały milimetr na linię i o prawie dwa centymetry na pełnej stronie. Zmiana marginesu dolnego z 28 na 33 mm nie ma z tym nic wspólnego - poprawiłaby wyłącznie dzielenie jednej liczby przez drugą, nie ustawiłaby ani jednej linii tekstu na siatce.
+
+**Rozstrzygnięcie: margines dolny zostaje 28 mm, a jednostka 6 mm jest jednostką odstępu, nie siatką linii bazowych tekstu.** Służy do wymierzania przerw między blokami, marginesów wewnętrznych i wysokości elementów - tam dzielenie się wysokości strony nie ma znaczenia, bo bloki nie muszą wypełniać kolumny co do milimetra. Reszta 5 mm wypada poniżej ostatniej linii i jest po prostu dodatkowym światłem u dołu strony.
+
+**Co by musiało się zmienić, gdyby founder jednak chciał prawdziwej siatki linii bazowych:** interlinia korpusu z 1,55 na około **1,68** (czyli 22,68 px przy stopniu 13,5 px). To zmiana typografii, nie siatki, i rozluźniłaby tekst o 8 procent - w dokumentach regulowanych, gdzie treści jest dużo, to realny koszt stron. Nikt o taką zmianę nie prosił, więc jej nie wprowadzono.
+
+**Falsyfikator tego rozstrzygnięcia:** jeśli jednostka 6 mm miała w zamyśle foundera dotyczyć właśnie linii bazowych tekstu, a nie odstępów - wtedy wracamy do tego punktu i rozmawiamy o interlinii, nadal nie o marginesie.

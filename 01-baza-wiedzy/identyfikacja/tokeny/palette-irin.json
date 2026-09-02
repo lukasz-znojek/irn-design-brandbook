@@ -99,7 +99,8 @@
     ],
     "zmieniona": false,
     "pole-tresci-sprawdzone": "6x25 + 5x4 = 170 mm = 210 - 18 - 22; dopasowanie dokładne",
-    "rozbieznosc-otwarta": "jednostka bazowa 6 mm z kanwy nie dzieli wysokości pola treści (251/6 = 41,83); domknięcie wymagałoby marginesu dolnego 33 mm"
+    "jednostka-odstepu-mm": 6,
+    "jednostka-odstepu-uwaga": "Jednostka odstępu, nie siatka linii bazowych tekstu. Interlinia korpusu to 5,54 mm (13,5 px x 1,55), czyli nie jest wielokrotnością 6 mm - rozjazd 0,46 mm na linię, 19 mm na pełnej kolumnie. Wymierzaj nią odstępy między blokami, nie linie tekstu. Rozstrzygnięte 2026-09-02."
   },
   "metodologia-kontrastu": "WCAG 2.1, luminancja względna sRGB. Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 3:1. Każda para w tej palecie przechodzi próg.",
   "tokeny": {
