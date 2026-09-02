@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; background:#F7F3EA; color:#1E1611; font-family:'Manrope', system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:#8B2E3A; text-decoration:underline; text-underline-offset:2px; }
+  a:hover { color:#4A1D26; }
+</style>
+</helmet>
+
+<div style="max-width:2400px; margin:0 auto; padding:64px 48px;">
+
+<!-- ============================================================ 00 COVER ============================================================ -->
+<section id="s00" data-screen-label="00 · Okładka" style="background:#F2ECE1; border:1px solid #1E1611;">
+  <div style="background:#1E1611; color:#F2ECE1; padding:22px 40px 26px;">
+    <div style="display:grid; grid-template-columns:auto 1fr auto; gap:24px; align-items:center;">
+      <img src="uploads/logo_irin_poziom.svg" alt="IRIN" style="height:20px; width:auto; filter:invert(1) brightness(1.6);">
+      <div style="height:1px; background:#B58540; opacity:0.55;"></div>
+      <div style="font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.26em; text-transform:uppercase; color:#D9A75B;">Brandbook · MMXXV · edycja pierwsza</div>
+    </div>
+    <div style="margin-top:20px; display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr; gap:10px; height:12px;">
+      <div style="background:#B58540;"></div><div style="background:rgba(181,133,64,0.3);"></div><div style="background:#B58540;"></div><div style="background:rgba(181,133,64,0.3);"></div><div style="background:#B58540;"></div>
+    </div>
+  </div>
+
+  <div style="padding:72px 48px 56px; display:grid; grid-template-columns:1.4fr 1fr; gap:56px;">
+    <div>
+      <div style="font-family:'Manrope'; font-weight:700; font-size:11px; letter-spacing:0.26em; text-transform:uppercase; color:#5B4837; margin-bottom:20px;">Instytut Rozwoju i Nauki · księga marki</div>
+      <h1 style="font-family:'Manrope'; font-weight:200; font-size:168px; line-height:0.9; letter-spacing:-0.03em; margin:0;">Brandbook.</h1>
+      <div style="font-family:'Manrope'; font-weight:500; font-size:26px; line-height:1.3; margin:20px 0 0; color:#5B4837; max-width:820px;">Kaszmir Aksamit × Manrope × układ Kolumna — jeden system dla trzech dziedzin.</div>
+      <div style="margin-top:32px; height:1px; background:#1E1611;"></div>
+      <div style="margin-top:20px; font-family:'Manrope'; font-weight:400; font-size:14.5px; line-height:1.6; max-width:800px; color:#3A2C1E;">Księga określa reguły tożsamości wizualnej IRIN: paletę dwunastu barw zmierzonych względem papieru Kaszmir, jeden krój pisma — Manrope — różnicowany wyłącznie wagą, siatkę sześciokolumnową odziedziczoną po układzie Kolumna, oraz zestaw dokumentów wdrożeniowych. Pedagogika, Akademia AI i Pożyczki UE/BGK mówią jednym głosem, rozróżniane tylko kolorem dziedziny.</div>
+    </div>
+
+    <div style="border-left:1px solid #1E1611; padding:0 0 0 32px;">
+      <div style="font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837; margin-bottom:16px;">§ Spis treści</div>
+      <ol style="list-style:none; margin:0; padding:0; font-family:'Manrope'; font-weight:400; font-size:15px; line-height:1.5; color:#1E1611;">
+        <li style="display:grid; grid-template-columns:32px 1fr auto; gap:12px; padding:9px 0; border-bottom:1px solid rgba(30,22,17,0.22);"><span style="color:#5B4837; font-weight:600;">00</span><a href="#s00" style="color:#1E1611; text-decoration:none;">Okładka · spis treści</a></li>
+        <li style="display:grid; grid-template-columns:32px 1fr auto; gap:12px; padding:9px 0; border-bottom:1px solid rgba(30,22,17,0.22);"><span style="color:#4A1D26; font-weight:600;">01</span><a href="#s01" style="color:#1E1611; text-decoration:none;">Pozycjonowanie marki</a></li>
+        <li style="display:grid; grid-template-columns:32px 1fr auto; gap:12px; padding:9px 0; border-bottom:1px solid rgba(30,22,17,0.22);"><span style="color:#A15C2C; font-weight:600;">02</span><a href="#s02" style="color:#1E1611; text-decoration:none;">Logotyp — konstrukcja i użycie</a></li>
+        <li style="display:grid; grid-template-columns:32px 1fr auto; gap:12px; padding:9px 0; border-bottom:1px solid rgba(30,22,17,0.22);"><span style="color:#1B2B26; font-weight:600;">03</span><a href="#s03" style="color:#1E1611; text-decoration:none;">Kolorystyka — 12 barw, reguła 80/15/5</a></li>
+        <li style="display:grid; grid-template-columns:32px 1fr auto; gap:12px; padding:9px 0; border-bottom:1px solid rgba(30,22,17,0.22);"><span style="color:#5B4837; font-weight:600;">04</span><a href="#s04" style="color:#1E1611; text-decoration:none;">Typografia — Manrope, skala wagowa</a></li>
+        <li style="display:grid; grid-template-columns:32px 1fr auto; gap:12px; padding:9px 0; border-bottom:1px solid rgba(30,22,17,0.22);"><span style="color:#8B2E3A; font-weight:600;">05</span><a href="#s05" style="color:#1E1611; text-decoration:none;">Siatka — sześć kolumn, moduł 32 mm</a></li>
+        <li style="display:grid; grid-template-columns:32px 1fr auto; gap:12px; padding:9px 0; border-bottom:1px solid rgba(30,22,17,0.22);"><span style="color:#4A1D26; font-weight:600;">06</span><a href="#s06a" style="color:#1E1611; text-decoration:none;">Zastosowania — okładka, karta BUR</a></li>
+        <li style="display:grid; grid-template-columns:32px 1fr auto; gap:12px; padding:9px 0; border-bottom:1px solid rgba(30,22,17,0.22);"><span style="color:#1B2B26; font-weight:600;">07</span><a href="#s06c" style="color:#1E1611; text-decoration:none;">Certyfikat — dwie wersje</a></li>
+        <li style="display:grid; grid-template-columns:32px 1fr auto; gap:12px; padding:9px 0;"><span style="color:#5B4837; font-weight:600;">08</span><a href="#s06e" style="color:#1E1611; text-decoration:none;">Papier firmowy · wizytówka</a></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 01 MANIFEST ============================================================ -->
+<section id="s01" data-screen-label="01 · Pozycjonowanie" style="margin-top:32px; padding:48px; background:#F2ECE1; border:1px solid #1E1611;">
+  <div style="font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837; margin-bottom:20px;">§ 01 · Pozycjonowanie marki</div>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px;">
+    <h2 style="font-family:'Manrope'; font-weight:300; font-size:44px; line-height:1.08; letter-spacing:-0.015em; margin:0; color:#1E1611;">Trzy dziedziny. Jeden głos.</h2>
+    <div style="font-family:'Manrope'; font-weight:400; font-size:15px; line-height:1.6; color:#3A2C1E;">
+      <p style="margin:0 0 14px;">IRIN mówi z pozycji doradcy biznesowego — nie urzędu, nie startupu. Ten sam dokument czyta dział HR korporacji, zarząd firmy i pracownik operatora dotacji, bez zmiany rejestru.</p>
+      <p style="margin:0;">Pedagogika, Akademia AI i Pożyczki UE/BGK są rozróżniane wyłącznie kolorem dziedziny — Aksamit, Miedź, Onyks. Struktura, krój i siatka pozostają identyczne we wszystkich trzech. Spójność buduje zaufanie skuteczniej niż ozdoba.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 02 LOGOTYP ============================================================ -->
+<section id="s02" data-screen-label="02 · Logotyp" style="margin-top:32px; padding:48px; background:#F2ECE1; border:1px solid #1E1611;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:20px; border-bottom:1px solid #1E1611;">
+    <div style="font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837;">§ 02 · Logotyp — konstrukcja i użycie</div>
+    <div style="font-family:'Manrope'; font-weight:400; font-size:12px; color:#5B4837;">Trzy warianty · bez modyfikacji</div>
+  </div>
+
+  <!-- Lockups -->
+  <div style="margin-top:28px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px;">
+    <div style="background:#F2ECE1; border:1px solid #1E1611; padding:32px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; min-height:180px;">
+      <img src="uploads/logo_irin_poziom.svg" alt="IRIN poziom" style="height:34px; width:auto;">
+      <div style="font-family:'Inconsolata'; font-size:10.5px; color:#5B4837;">poziomy · zastosowanie podstawowe</div>
+    </div>
+    <div style="background:#F2ECE1; border:1px solid #1E1611; padding:32px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; min-height:180px;">
+      <img src="uploads/logo_irin_pion.svg" alt="IRIN pion" style="height:90px; width:auto;">
+      <div style="font-family:'Inconsolata'; font-size:10.5px; color:#5B4837;">pionowy · pola wąskie i wysokie</div>
+    </div>
+    <div style="background:#1E1611; border:1px solid #1E1611; padding:32px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:16px; min-height:180px;">
+      <img src="uploads/logo_irin_sygnet.svg" alt="IRIN sygnet" style="height:44px; width:auto; filter:invert(1) brightness(1.6);">
+      <div style="font-family:'Inconsolata'; font-size:10.5px; color:#D9A75B;">sygnet · wersja odwrócona na Espresso</div>
+    </div>
+  </div>
+
+  <!-- Clear space + min size -->
+  <div style="margin-top:32px; display:grid; grid-template-columns:1.3fr 1fr; gap:32px;">
+    <div style="border:1px solid #1E1611; padding:24px;">
+      <div style="font-family:'Manrope'; font-weight:700; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:#5B4837; margin-bottom:16px;">Przestrzeń ochronna</div>
+      <div style="border:1px dashed #A15C2C; padding:36px; display:flex; align-items:center; justify-content:center;">
+        <img src="uploads/logo_irin_poziom.svg" alt="IRIN" style="height:28px; width:auto;">
+      </div>
+      <div style="font-family:'Manrope'; font-weight:400; font-size:12.5px; line-height:1.5; color:#3A2C1E; margin-top:14px;">Jednostka <b>x</b> = wysokość liter sygnetu. Żaden element graficzny, tekstowy ani krawędź strony nie wchodzi bliżej niż <b>x</b> z każdej strony logotypu.</div>
+    </div>
+    <div style="border:1px solid #1E1611; padding:24px;">
+      <div style="font-family:'Manrope'; font-weight:700; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:#5B4837; margin-bottom:16px;">Minimalna wielkość</div>
+      <table style="width:100%; border-collapse:collapse; font-family:'Manrope'; font-size:13px;">
+        <tr style="border-top:1px solid #1E1611;"><td style="padding:8px 0;">Druk</td><td style="text-align:right; font-weight:600;">18 mm szerokości</td></tr>
+        <tr style="border-top:1px solid rgba(30,22,17,0.25);"><td style="padding:8px 0;">Ekran</td><td style="text-align:right; font-weight:600;">90 px szerokości</td></tr>
+        <tr style="border-top:1px solid rgba(30,22,17,0.25);"><td style="padding:8px 0;">Sygnet samodzielny</td><td style="text-align:right; font-weight:600;">10 mm / 44 px</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Don'ts -->
+  <div style="margin-top:32px;">
+    <div style="font-family:'Manrope'; font-weight:700; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:#5B4837; margin-bottom:14px;">Zakazane użycia</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px 32px; font-family:'Manrope'; font-weight:400; font-size:13.5px; line-height:1.5; color:#1E1611;">
+      <div style="padding:10px 0; border-top:1px solid rgba(30,22,17,0.25);">01 — Nie zmieniamy kolorów sygnetu ani wersji poziomej / pionowej.</div>
+      <div style="padding:10px 0; border-top:1px solid rgba(30,22,17,0.25);">02 — Nie obracamy, nie pochylamy, nie odbijamy lustrzanie.</div>
+      <div style="padding:10px 0; border-top:1px solid rgba(30,22,17,0.25);">03 — Nie dodajemy cienia, poświaty ani obrysu.</div>
+      <div style="padding:10px 0; border-top:1px solid rgba(30,22,17,0.25);">04 — Nie umieszczamy na akcentach dziedzinowych poniżej kontrastu 4.5:1 (§ 03).</div>
+      <div style="padding:10px 0; border-top:1px solid rgba(30,22,17,0.25); border-bottom:1px solid rgba(30,22,17,0.25);">05 — Nie rozciągamy nieproporcjonalnie — skalowanie tylko z zachowaniem proporcji.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 03 KOLORYSTYKA ============================================================ -->
+<section id="s03" data-screen-label="03 · Kolorystyka" style="margin-top:32px; padding:48px; background:#F2ECE1; border:1px solid #1E1611;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:20px; border-bottom:1px solid #1E1611;">
+    <div style="font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837;">§ 03 · Kolorystyka — 12 barw</div>
+    <div style="font-family:'Manrope'; font-weight:400; font-size:12px; color:#5B4837;">źródło: Colorbook Kaszmir Aksamit dopracowany</div>
+  </div>
+
+  <!-- Baza -->
+  <div style="margin-top:24px;">
+    <div style="font-family:'Manrope'; font-weight:700; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:#5B4837; margin-bottom:10px;">Baza · papier + tusz + foliowanie</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px;">
+      <div style="background:#F2ECE1; border:1px solid #1E1611; padding:14px; min-height:96px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:12px;">
+        <div style="font-weight:700;">Kaszmir</div>
+        <div style="font-family:'Inconsolata'; font-size:11px; color:#5B4837;">#F2ECE1 — papier karty</div>
+      </div>
+      <div style="background:#1E1611; color:#F2ECE1; padding:14px; min-height:96px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:12px;">
+        <div style="font-weight:700;">Espresso</div>
+        <div style="font-family:'Inconsolata'; font-size:11px; opacity:0.75;">#1E1611 — tusz uniwersalny</div>
+      </div>
+      <div style="background:linear-gradient(135deg,#D9A75B 0%,#B58540 55%,#8F651F 100%); color:#1E1611; padding:14px; min-height:96px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:12px;">
+        <div style="font-weight:700;">Złoto foliowe</div>
+        <div style="font-family:'Inconsolata'; font-size:11px;">#B58540 — pieczęć, sygnatura</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Domeny -->
+  <div style="margin-top:24px;">
+    <div style="font-family:'Manrope'; font-weight:700; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:#5B4837; margin-bottom:10px;">Akcenty dziedzinowe · Pedagogika · Akademia AI · Pożyczki UE/BGK</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px;">
+      <div style="background:#4A1D26; color:#F2ECE1; padding:16px; min-height:130px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:12px;">
+        <div>
+          <div style="font-weight:700; font-size:20px; margin-bottom:4px;">Aksamit</div>
+          <div style="font-size:11.5px; opacity:0.88;">Pedagogika</div>
+        </div>
+        <div style="font-family:'Inconsolata'; font-size:11px; opacity:0.85;">#4A1D26 · na Kaszmir 10.4:1 AAA ✓</div>
+      </div>
+      <div style="background:#A15C2C; color:#F2ECE1; padding:16px; min-height:130px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:12px;">
+        <div>
+          <div style="font-weight:700; font-size:20px; margin-bottom:4px;">Miedź</div>
+          <div style="font-size:11.5px; opacity:0.92;">Akademia AI</div>
+        </div>
+        <div style="font-family:'Inconsolata'; font-size:11px; opacity:0.9;">#A15C2C · na Kaszmir 3.7:1 AA large ✓</div>
+      </div>
+      <div style="background:#1B2B26; color:#F2ECE1; padding:16px; min-height:130px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:12px;">
+        <div>
+          <div style="font-weight:700; font-size:20px; margin-bottom:4px;">Onyks</div>
+          <div style="font-size:11.5px; opacity:0.92;">Pożyczki UE/BGK</div>
+        </div>
+        <div style="font-family:'Inconsolata'; font-size:11px; opacity:0.9;">#1B2B26 · na Kaszmir 13.4:1 AAA ✓</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Funkcjonalne -->
+  <div style="margin-top:24px;">
+    <div style="font-family:'Manrope'; font-weight:700; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:#5B4837; margin-bottom:10px;">Funkcjonalne · warstwa, tekst pomocniczy, stan, marker</div>
+    <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:6px;">
+      <div style="background:#E4DACB; border:1px solid #1E1611; padding:12px; min-height:96px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:11px;">
+        <div style="font-weight:700;">Pergamin</div><div style="font-family:'Inconsolata'; font-size:9.5px; color:#5B4837;">#E4DACB<br>drugi neutral</div>
+      </div>
+      <div style="background:#5B4837; color:#F2ECE1; padding:12px; min-height:96px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:11px;">
+        <div style="font-weight:700;">Sepia</div><div style="font-family:'Inconsolata'; font-size:9.5px; opacity:0.8;">#5B4837<br>tekst pomocniczy</div>
+      </div>
+      <div style="background:#8B2E3A; color:#F2ECE1; padding:12px; min-height:96px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:11px;">
+        <div style="font-weight:700;">Karmin</div><div style="font-family:'Inconsolata'; font-size:9.5px; opacity:0.85;">#8B2E3A<br>link, stan aktywny</div>
+      </div>
+      <div style="background:#F7F3EA; border:1px solid #1E1611; padding:12px; min-height:96px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:11px;">
+        <div style="font-weight:700;">Muślin</div><div style="font-family:'Inconsolata'; font-size:9.5px; color:#5B4837;">#F7F3EA<br>tło strony</div>
+      </div>
+      <div style="background:#2F4A32; color:#F2ECE1; padding:12px; min-height:96px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:11px;">
+        <div style="font-weight:700;">Werdykt</div><div style="font-family:'Inconsolata'; font-size:9.5px; opacity:0.85;">#2F4A32<br>stan potwierdzony</div>
+      </div>
+      <div style="background:#D9AC4A; padding:12px; min-height:96px; display:flex; flex-direction:column; justify-content:space-between; font-family:'Manrope'; font-size:11px;">
+        <div style="font-weight:700;">Rubryka</div><div style="font-family:'Inconsolata'; font-size:9.5px; color:#3A2C1E;">#D9AC4A<br>marker w CMYK</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 80/15/5 -->
+  <div style="margin-top:28px; padding-top:20px; border-top:1px solid #1E1611;">
+    <div style="font-family:'Manrope'; font-weight:700; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:#5B4837; margin-bottom:12px;">Reguła 80 / 15 / 5</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:8px; font-family:'Manrope'; font-size:12.5px;">
+      <div style="padding:14px; border:1px solid #1E1611;"><b style="font-size:15px;">80% baza</b><div style="color:#3A2C1E; line-height:1.5; margin-top:6px;">Kaszmir, Espresso, Pergamin. Wszystko, co nie wymaga kategoryzacji.</div></div>
+      <div style="padding:14px; border:1px solid #1E1611;"><b style="font-size:15px;">15% sygnał dziedziny</b><div style="color:#3A2C1E; line-height:1.5; margin-top:6px;">Aksamit / Miedź / Onyks — jeden kolor na moduł, tylko przy kategoryzacji pola.</div></div>
+      <div style="padding:14px; border:1px solid #1E1611;"><b style="font-size:15px;">5% aktywność i honor</b><div style="color:#3A2C1E; line-height:1.5; margin-top:6px;">Karmin dla linków i stanów. Złoto — wyłącznie pieczęć i sygnatura.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 04 TYPOGRAFIA ============================================================ -->
+<section id="s04" data-screen-label="04 · Typografia" style="margin-top:32px; padding:48px; background:#F2ECE1; border:1px solid #1E1611;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:20px; border-bottom:1px solid #1E1611;">
+    <div style="font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837;">§ 04 · Typografia — jeden krój, osiem wag</div>
+    <div style="font-family:'Manrope'; font-weight:400; font-size:12px; color:#5B4837;">Manrope 200–800</div>
+  </div>
+
+  <p style="font-family:'Manrope'; font-weight:400; font-size:14px; line-height:1.6; margin:20px 0 0; max-width:1000px; color:#3A2C1E;">Hierarchia poprzedniego układu (krój display + krój drogowskazu + krój korpusu) zostaje odwzorowana wagą jednego kroju: ExtraLight dla dużego displayu, Bold dla drogowskazów wersalikowych, Regular / Medium dla korpusu. Jedna rodzina eliminuje ryzyko niedopasowania metryk między krojami przy tłumaczeniach i re-flow.</p>
+
+  <!-- Weight ladder -->
+  <div style="margin-top:28px; display:grid; grid-template-columns:repeat(7,1fr); gap:4px; align-items:end;">
+    <div style="border-top:1px solid #1E1611; padding-top:10px;"><div style="font-family:'Manrope'; font-weight:200; font-size:34px; line-height:1;">Aa</div><div style="font-family:'Inconsolata'; font-size:10px; color:#5B4837; margin-top:6px;">200 · display</div></div>
+    <div style="border-top:1px solid #1E1611; padding-top:10px;"><div style="font-family:'Manrope'; font-weight:300; font-size:34px; line-height:1;">Aa</div><div style="font-family:'Inconsolata'; font-size:10px; color:#5B4837; margin-top:6px;">300 · nagłówek</div></div>
+    <div style="border-top:1px solid #1E1611; padding-top:10px;"><div style="font-family:'Manrope'; font-weight:400; font-size:34px; line-height:1;">Aa</div><div style="font-family:'Inconsolata'; font-size:10px; color:#5B4837; margin-top:6px;">400 · korpus</div></div>
+    <div style="border-top:1px solid #1E1611; padding-top:10px;"><div style="font-family:'Manrope'; font-weight:500; font-size:34px; line-height:1;">Aa</div><div style="font-family:'Inconsolata'; font-size:10px; color:#5B4837; margin-top:6px;">500 · lead</div></div>
+    <div style="border-top:1px solid #1E1611; padding-top:10px;"><div style="font-family:'Manrope'; font-weight:600; font-size:34px; line-height:1;">Aa</div><div style="font-family:'Inconsolata'; font-size:10px; color:#5B4837; margin-top:6px;">600 · H2</div></div>
+    <div style="border-top:1px solid #1E1611; padding-top:10px;"><div style="font-family:'Manrope'; font-weight:700; font-size:34px; line-height:1;">Aa</div><div style="font-family:'Inconsolata'; font-size:10px; color:#5B4837; margin-top:6px;">700 · kicker</div></div>
+    <div style="border-top:1px solid #1E1611; padding-top:10px;"><div style="font-family:'Manrope'; font-weight:800; font-size:34px; line-height:1;">Aa</div><div style="font-family:'Inconsolata'; font-size:10px; color:#5B4837; margin-top:6px;">800 · liczba</div></div>
+  </div>
+
+  <!-- Scale table -->
+  <div style="margin-top:36px; display:grid; grid-template-columns:auto 1fr; gap:32px;">
+    <div style="max-width:240px; font-family:'Manrope'; font-size:13px; line-height:1.5; color:#3A2C1E;">Skala rozpięta od korpusu 10 pt do wielkiego displayu 96 pt, tracking ujemny na displayu, dodatni na wersalikach.</div>
+    <table style="width:100%; border-collapse:collapse;">
+      <tr style="border-top:1px solid #1E1611;"><td style="padding:12px 0 8px; font-family:'Manrope'; font-weight:200; font-size:72px; line-height:0.92; letter-spacing:-0.03em;">Kolumna</td><td style="text-align:right; padding-top:12px; font-family:'Manrope'; font-size:11px; color:#5B4837; vertical-align:top;">D · display · 200 · leading 0.92</td></tr>
+      <tr style="border-top:1px solid rgba(30,22,17,0.22);"><td style="padding:10px 0 8px; font-family:'Manrope'; font-weight:300; font-size:40px; line-height:1; letter-spacing:-0.02em;">Kolumna</td><td style="text-align:right; padding-top:10px; font-family:'Manrope'; font-size:11px; color:#5B4837; vertical-align:top;">H1 · rozdział · 300 · leading 1.0</td></tr>
+      <tr style="border-top:1px solid rgba(30,22,17,0.22);"><td style="padding:8px 0; font-family:'Manrope'; font-weight:600; font-size:24px; line-height:1.1; letter-spacing:-0.01em;">Kolumna sekcyjna</td><td style="text-align:right; padding-top:8px; font-family:'Manrope'; font-size:11px; color:#5B4837; vertical-align:top;">H2 · sekcja · 600</td></tr>
+      <tr style="border-top:1px solid rgba(30,22,17,0.22);"><td style="padding:8px 0; font-family:'Manrope'; font-weight:500; font-size:16px; line-height:1.4;">Manrope Medium 16 pt — lead akapitu</td><td style="text-align:right; padding-top:8px; font-family:'Manrope'; font-size:11px; color:#5B4837; vertical-align:top;">B+ · lead · 500</td></tr>
+      <tr style="border-top:1px solid rgba(30,22,17,0.22);"><td style="padding:8px 0; font-family:'Manrope'; font-weight:400; font-size:13.5px; line-height:1.55;">Manrope Regular 13.5 pt — korpus dokumentu</td><td style="text-align:right; padding-top:8px; font-family:'Manrope'; font-size:11px; color:#5B4837; vertical-align:top;">B · korpus · 400</td></tr>
+      <tr style="border-top:1px solid rgba(30,22,17,0.22);"><td style="padding:8px 0; font-family:'Manrope'; font-weight:400; font-size:10px; line-height:1.5; color:#5B4837;">Manrope Regular 10 pt — przypis i metadane</td><td style="text-align:right; padding-top:8px; font-family:'Manrope'; font-size:11px; color:#5B4837; vertical-align:top;">B− · przypis · 400</td></tr>
+      <tr style="border-top:1px solid rgba(30,22,17,0.22);"><td style="padding:8px 0;"><span style="font-family:'Manrope'; font-weight:700; font-size:14px; letter-spacing:0.22em; text-transform:uppercase;">Manrope Bold · drogowskaz sekcji</span></td><td style="text-align:right; padding-top:8px; font-family:'Manrope'; font-size:11px; color:#5B4837; vertical-align:top;">K · kicker · 700 · caps</td></tr>
+      <tr style="border-top:1px solid #1E1611;"><td style="padding:8px 0; font-family:'Manrope'; font-weight:800; font-size:52px; line-height:0.95; letter-spacing:-0.02em;">3 128</td><td style="text-align:right; padding-top:8px; font-family:'Manrope'; font-size:11px; color:#5B4837; vertical-align:top;">N · liczba prowadząca · 800 · tabular</td></tr>
+    </table>
+  </div>
+
+  <!-- Alphabet -->
+  <div style="margin-top:32px; padding-top:24px; border-top:1px solid #1E1611;">
+    <div style="font-family:'Manrope'; font-weight:700; font-size:9.5px; letter-spacing:0.2em; text-transform:uppercase; color:#5B4837; margin-bottom:12px;">Alfabet PL</div>
+    <div style="font-family:'Manrope'; font-weight:200; font-size:38px; line-height:1.15; letter-spacing:-0.01em;">Aa Ąą Bb Ćć Dd Ęę Ff Gg Łł Ńń Óó Śś Zz Źź Żż 0123456789</div>
+    <div style="font-family:'Manrope'; font-weight:700; font-size:18px; letter-spacing:0.02em; margin-top:10px; color:#4A1D26;">Aa Ąą Bb Ćć Dd Ęę Ff Gg Łł Ńń Óó Śś Zz Źź Żż 0123456789</div>
+  </div>
+</section>
+
+<!-- ============================================================ 05 SIATKA ============================================================ -->
+<section id="s05" data-screen-label="05 · Siatka" style="margin-top:32px; padding:48px; background:#F2ECE1; border:1px solid #1E1611;">
+  <div style="display:flex; justify-content:space-between; align-items:baseline; padding-bottom:20px; border-bottom:1px solid #1E1611;">
+    <div style="font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837;">§ 05 · Siatka dokumentu A4</div>
+    <div style="font-family:'Manrope'; font-weight:400; font-size:12px; color:#5B4837;">6 kolumn · moduł 32 mm · gutter 4 mm · jednostka bazowa 6 mm</div>
+  </div>
+  <div style="margin-top:28px; display:grid; grid-template-columns:1fr 1.2fr; gap:40px; align-items:start;">
+    <div style="font-family:'Manrope'; font-weight:400; font-size:13.5px; line-height:1.6; color:#3A2C1E;">
+      <p style="margin:0 0 12px;">Marginesy A4: 18 mm góra, 18 mm lewy, 22 mm prawy, 28 mm dół (miejsce na stopkę i numer strony). Sześć kolumn o module 32 mm rozdzielone gutterem 4 mm.</p>
+      <p style="margin:0;">Siatka jest wspólna dla wszystkich trzech dziedzin — różni je wyłącznie kolor akcentu w polu treści, nigdy układ.</p>
+    </div>
+    <div style="position:relative; aspect-ratio:210/297; max-width:340px; border:1px solid #1E1611; background:#F7F3EA; padding:8.6% 8.6% 9.4% 8.6%;">
+      <div style="height:100%; display:grid; grid-template-columns:repeat(6,1fr); gap:4%;">
+        <div style="background:#E4DACB; border:1px solid #1E1611;"></div>
+        <div style="background:#E4DACB; border:1px solid #1E1611;"></div>
+        <div style="background:#E4DACB; border:1px solid #1E1611;"></div>
+        <div style="background:#E4DACB; border:1px solid #1E1611;"></div>
+        <div style="background:#E4DACB; border:1px solid #1E1611;"></div>
+        <div style="background:#E4DACB; border:1px solid #1E1611;"></div>
+      </div>
+      <div style="position:absolute; top:-18px; left:8.6%; right:8.6%; text-align:center; font-family:'Inconsolata'; font-size:9px; color:#5B4837;">18 mm</div>
+      <div style="position:absolute; bottom:-18px; left:8.6%; right:8.6%; text-align:center; font-family:'Inconsolata'; font-size:9px; color:#5B4837;">28 mm</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ 06a ZASTOSOWANIA — OKŁADKA ============================================================ -->
+<section id="s06a" data-screen-label="06 · Okładka raportu" style="margin-top:32px; padding:48px; background:#F2ECE1; border:1px solid #1E1611;">
+  <div style="font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837; margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #1E1611;">§ 06 · Zastosowania</div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+
+    <!-- Cover -->
+    <div>
+      <div style="font-family:'Manrope'; font-size:11px; color:#5B4837; margin-bottom:8px;">(a) Okładka viewbooka · A4 pion · Aksamit / Pedagogika</div>
+      <div style="aspect-ratio:210/297; background:#F2ECE1; border:1px solid #1E1611; box-shadow:0 4px 22px rgba(0,0,0,0.06); display:grid; grid-template-rows:auto 1fr auto; overflow:hidden;">
+        <div style="background:#1E1611; color:#F2ECE1; padding:20px 28px 22px;">
+          <div style="display:grid; grid-template-columns:1fr auto; align-items:start;">
+            <img src="uploads/logo_irin_poziom.svg" alt="IRIN" style="height:16px; width:auto; filter:invert(1) brightness(1.6);">
+            <div style="text-align:right; font-family:'Manrope'; font-weight:500; font-size:8.5px; letter-spacing:0.02em; line-height:1.6; opacity:0.8;">MMXXV · VIEWBOOK 01<br>AKSAMIT · SZKOLENIA PEDAGOGICZNE</div>
+          </div>
+          <div style="margin-top:18px; display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr; gap:6px; height:10px;">
+            <div style="background:#4A1D26;"></div><div style="background:rgba(74,29,38,0.35);"></div><div style="background:#4A1D26;"></div><div style="background:rgba(74,29,38,0.35);"></div><div style="background:#4A1D26;"></div>
+          </div>
+        </div>
+        <div style="padding:32px 28px 16px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div style="font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.26em; text-transform:uppercase; color:#4A1D26; margin-bottom:14px;">Viewbook · edycja 2024/2025</div>
+            <h3 style="font-family:'Manrope'; font-weight:200; font-size:56px; line-height:0.94; letter-spacing:-0.03em; margin:0 0 8px; color:#1E1611;">Dyplom<br>pedagogiczny.</h3>
+            <div style="font-family:'Manrope'; font-weight:500; font-size:16px; line-height:1.25; margin-top:8px; color:#3A2C1E; max-width:80%;">Cztery cykle nauczania dla dorosłych — dwanaście miesięcy praktyki.</div>
+          </div>
+          <div style="padding-top:16px; font-family:'Manrope'; font-weight:400; font-size:10.5px; line-height:1.5; max-width:320px; color:#1E1611;">Program prowadzony przez IRIN we współpracy z Wydziałem Pedagogicznym Uniwersytetu Warszawskiego.</div>
+        </div>
+        <div style="padding:12px 28px; border-top:1px solid #1E1611; display:grid; grid-template-columns:1fr auto; font-family:'Manrope'; font-size:8.5px; color:#5B4837;">
+          <div>Instytut Rozwoju i Nauki · Warszawa</div><div>irin.pl / viewbook / 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUR card -->
+    <div>
+      <div style="font-family:'Manrope'; font-size:11px; color:#5B4837; margin-bottom:8px;">(b) Karta usługi BUR · A4 pion · Miedź / Akademia AI</div>
+      <div style="background:#F2ECE1; border:1px solid #1E1611; box-shadow:0 4px 22px rgba(0,0,0,0.06); display:grid; grid-template-rows:auto auto auto auto;">
+        <div style="background:#1E1611; color:#F2ECE1; padding:16px 22px;">
+          <div style="display:grid; grid-template-columns:1fr auto; gap:10px; align-items:center;">
+            <img src="uploads/logo_irin_poziom.svg" alt="IRIN" style="height:14px; width:auto; filter:invert(1) brightness(1.6);">
+            <div style="font-family:'Manrope'; font-size:8px; opacity:0.85; line-height:1.5; text-align:right;">BUR · PARP<br>Kod usługi 2025/00817/PPUR</div>
+          </div>
+          <div style="margin-top:12px; font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.22em; text-transform:uppercase; color:#D9A75B;">Miedź · Akademia AI</div>
+        </div>
+        <div style="padding:20px 22px 6px;">
+          <h4 style="font-family:'Manrope'; font-weight:200; font-size:27px; line-height:1.05; letter-spacing:-0.015em; margin:0;">Wdrożenie asystenta AI w dziale HR — audyt zgodności z AI Act.</h4>
+        </div>
+        <div style="padding:12px 22px 0;">
+          <div style="border-top:1px solid #1E1611; border-bottom:1px solid #1E1611; padding:8px 0; display:grid; grid-template-columns:1fr 1fr;">
+            <div style="border-right:1px solid rgba(30,22,17,0.35); padding-right:10px;">
+              <div style="font-family:'Manrope'; font-weight:700; font-size:8px; letter-spacing:0.16em; text-transform:uppercase; color:#5B4837;">Cena netto</div>
+              <div style="font-family:'Manrope'; font-weight:200; font-size:20px; line-height:1;">3 240 zł</div>
+            </div>
+            <div style="padding-left:10px;">
+              <div style="font-family:'Manrope'; font-weight:700; font-size:8px; letter-spacing:0.16em; text-transform:uppercase; color:#5B4837;">Po dofinansowaniu 80%</div>
+              <div style="font-family:'Manrope'; font-weight:200; font-size:20px; line-height:1; color:#A15C2C;">648 zł</div>
+            </div>
+          </div>
+          <div style="padding:12px 0 0; font-family:'Manrope'; font-size:9.5px; line-height:1.55;">
+            <div style="font-family:'Manrope'; font-weight:700; font-size:8px; letter-spacing:0.16em; text-transform:uppercase; color:#5B4837; margin-bottom:4px;">Efekty uczenia się</div>
+            <ol style="margin:0 0 10px; padding-left:14px;">
+              <li>Uczestnik audytuje asystenta LLM pod art. 5 i 6 AI Act.</li>
+              <li>Uczestnik dokumentuje decyzję zgodnie z DPIA.</li>
+              <li>Uczestnik projektuje playbook wewnętrzny dla zespołu HR.</li>
+            </ol>
+            <div style="font-family:'Manrope'; font-weight:700; font-size:8px; letter-spacing:0.16em; text-transform:uppercase; color:#5B4837; margin-bottom:4px;">Prowadzący</div>
+            <div>dr Maciej Ostrowski (UAM) · Stefan Ł. Kowalski (b. dyr. HR)</div>
+          </div>
+        </div>
+        <div style="padding:10px 22px; border-top:1px solid #1E1611; display:grid; grid-template-columns:1fr auto; font-family:'Manrope'; font-size:8.5px; color:#5B4837;">
+          <div>Termin 08–10.09.2025 · Warszawa · max. 12 osób</div><div>IRIN / KU-817 · rev. 01</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ 06c CERTYFIKAT — DWIE WERSJE ============================================================ -->
+<section id="s06c" data-screen-label="07 · Certyfikat" style="margin-top:32px; padding:48px; background:#F2ECE1; border:1px solid #1E1611;">
+  <div style="font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837; margin-bottom:8px; padding-bottom:20px; border-bottom:1px solid #1E1611;">§ 07 · Certyfikat — dwie wersje wdrożeniowe</div>
+  <p style="font-family:'Manrope'; font-weight:400; font-size:14px; line-height:1.6; margin:20px 0 0; max-width:1000px; color:#3A2C1E;"><b>Wersja A — Kolumnowa</b>: dwupanelowa, z blokiem metryki dokumentu w kolorze dziedziny — dla dokumentów krążących jako skan, gdzie metryka musi być czytelna nawet w xerox. <b>Wersja B — Pieczęć</b>: jednopanelowa, ceremonialna, kolor ograniczony do cienkiej linii i pieczęci — dla wręczenia przy dyplomowaniu, gdzie dokument ma wyglądać dostojnie, nie administracyjnie.</p>
+
+  <!-- CERT A -->
+  <div style="margin-top:32px;">
+    <div style="font-family:'Manrope'; font-size:11px; color:#5B4837; margin-bottom:8px;">Wersja A · Kolumnowa · A4 poziom · Onyks / Pożyczki UE-BGK</div>
+    <div style="aspect-ratio:297/210; background:#F2ECE1; border:1px solid #1E1611; box-shadow:0 4px 22px rgba(0,0,0,0.06); display:grid; grid-template-rows:auto 1fr; overflow:hidden;">
+      <!-- portal band -->
+      <div style="background:#1E1611; padding:10px 30px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; gap:8px; height:6px;">
+          <div style="background:#8C6B2E;"></div><div style="background:rgba(140,107,46,0.3);"></div><div style="background:#8C6B2E;"></div><div style="background:rgba(140,107,46,0.3);"></div><div style="background:#8C6B2E;"></div><div style="background:rgba(140,107,46,0.3);"></div><div style="background:#8C6B2E;"></div><div style="background:rgba(140,107,46,0.3);"></div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:1.5fr 1fr; overflow:hidden;">
+        <div style="padding:22px 26px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div style="display:grid; grid-template-columns:auto 1fr; align-items:center; gap:12px; margin-bottom:12px;">
+              <img src="uploads/logo_irin_poziom.svg" alt="IRIN" style="height:15px; width:auto;">
+              <div style="height:1px; background:#1B2B26;"></div>
+            </div>
+            <div style="font-family:'Manrope'; font-weight:700; font-size:9.5px; letter-spacing:0.24em; text-transform:uppercase; color:#1B2B26; margin-bottom:4px;">Onyks · Pożyczki UE / BGK</div>
+            <div style="font-family:'Manrope'; font-weight:700; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:#5B4837; margin-bottom:10px;">Zaświadczenie ukończenia szkolenia</div>
+            <div style="font-family:'Manrope'; font-weight:400; font-size:12px; margin-bottom:2px; color:#3A2C1E;">Instytut Rozwoju i Nauki zaświadcza, że</div>
+            <h4 style="font-family:'Manrope'; font-weight:200; font-size:34px; line-height:1; letter-spacing:-0.02em; margin:0 0 4px;">Pan Marek Grzeszczyk</h4>
+            <div style="font-family:'Manrope'; font-size:10px; color:#5B4837; margin-bottom:10px;">PESEL: 78••••••••••</div>
+            <div style="font-family:'Manrope'; font-weight:400; font-size:11px; line-height:1.5; max-width:440px;">ukończył szkolenie <b>„Pożyczka unijna z gwarancją BGK — mechanika instrumentu finansowego 2021–2027"</b> zorganizowane przez Instytut Rozwoju i Nauki w dniach 22–24 września 2025 r., w wymiarze 24 godzin dydaktycznych, zakończone egzaminem wewnętrznym z wynikiem pozytywnym.</div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; padding-top:10px; border-top:1px solid #1E1611;">
+            <div>
+              <div style="font-family:'Manrope'; font-weight:700; font-size:8px; letter-spacing:0.14em; text-transform:uppercase; color:#5B4837;">Dyrektor merytoryczny</div>
+              <div style="font-family:'Manrope'; font-weight:500; font-size:14px; margin-top:2px;">dr hab. Anna Wiśniewska</div>
+            </div>
+            <div>
+              <div style="font-family:'Manrope'; font-weight:700; font-size:8px; letter-spacing:0.14em; text-transform:uppercase; color:#5B4837;">Prowadzący</div>
+              <div style="font-family:'Manrope'; font-weight:500; font-size:14px; margin-top:2px;">Tomasz Bartosik</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:#1B2B26; color:#F2ECE1; padding:22px 24px; display:flex; flex-direction:column; justify-content:space-between;">
+          <div>
+            <div style="display:grid; grid-template-columns:1fr auto; align-items:center; gap:10px; margin-bottom:12px;">
+              <div style="font-family:'Manrope'; font-weight:700; font-size:9px; letter-spacing:0.24em; text-transform:uppercase; opacity:0.75;">Metryka</div>
+              <div style="width:32px; height:32px; border-radius:50%; background:radial-gradient(circle at 30% 30%, #D9A75B 0%, #B58540 55%, #8F651F 100%); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <div style="font-family:'Manrope'; font-weight:800; color:#1E1611; font-size:9px;">IRIN</div>
+              </div>
+            </div>
+            <div style="font-family:'Manrope'; font-size:8px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.7;">Nr zaświadczenia</div>
+            <div style="font-family:'Manrope'; font-weight:300; font-size:17px; line-height:1.1; margin-bottom:8px;">IRIN/2025/D/00821</div>
+            <div style="font-family:'Manrope'; font-size:8px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.7;">Kod usługi BUR</div>
+            <div style="font-family:'Manrope'; font-weight:300; font-size:14px; line-height:1.1; margin-bottom:8px;">2025/00821/PPUR</div>
+            <div style="font-family:'Manrope'; font-size:8px; letter-spacing:0.08em; text-transform:uppercase; opacity:0.7;">Umowa operatora</div>
+            <div style="font-family:'Manrope'; font-weight:300; font-size:12px; line-height:1.15;">POWER.03.02.00-00-B-192/25</div>
+          </div>
+          <div style="font-family:'Manrope'; font-size:8.5px; opacity:0.75; line-height:1.55; padding-top:10px; border-top:1px solid rgba(242,236,225,0.3);">Warszawa · 24.09.2025<br>IRIN · KRS 0000000000 · irin.pl</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERT B -->
+  <div style="margin-top:36px;">
+    <div style="font-family:'Manrope'; font-size:11px; color:#5B4837; margin-bottom:8px;">Wersja B · Pieczęć · A4 poziom · Miedź / Akademia AI</div>
+    <div style="aspect-ratio:297/210; background:#F2ECE1; border:1px solid #1E1611; box-shadow:0 4px 22px rgba(0,0,0,0.06); padding:30px 44px; position:relative;">
+      <div style="position:absolute; top:16px; left:16px; width:26px; height:26px; border-top:1px solid #1E1611; border-left:1px solid #1E1611;"></div>
+      <div style="position:absolute; top:16px; right:16px; width:26px; height:26px; border-top:1px solid #1E1611; border-right:1px solid #1E1611;"></div>
+      <div style="position:absolute; bottom:16px; left:16px; width:26px; height:26px; border-bottom:1px solid #1E1611; border-left:1px solid #1E1611;"></div>
+      <div style="position:absolute; bottom:16px; right:16px; width:26px; height:26px; border-bottom:1px solid #1E1611; border-right:1px solid #1E1611;"></div>
+
+      <div style="height:100%; display:flex; flex-direction:column; align-items:center; justify-content:space-between; text-align:center;">
+        <div>
+          <img src="uploads/logo_irin_poziom.svg" alt="IRIN" style="height:17px; width:auto; margin-bottom:14px;">
+          <div style="font-family:'Manrope'; font-weight:700; font-size:9px; letter-spacing:0.28em; text-transform:uppercase; color:#A15C2C; margin-bottom:6px;">Miedź · Akademia AI</div>
+          <div style="font-family:'Manrope'; font-weight:700; font-size:9.5px; letter-spacing:0.22em; text-transform:uppercase; color:#5B4837; margin-bottom:20px;">Zaświadczenie ukończenia szkolenia</div>
+          <div style="font-family:'Manrope'; font-weight:400; font-size:14px; margin-bottom:4px; color:#3A2C1E;">niniejszym zaświadcza się, że</div>
+          <h4 style="font-family:'Manrope'; font-weight:200; font-size:42px; line-height:1; letter-spacing:-0.02em; margin:0 0 6px;">Pani Katarzyna Bąk</h4>
+          <div style="font-family:'Manrope'; font-size:10.5px; color:#5B4837; margin-bottom:16px;">PESEL: 82••••••••••</div>
+          <div style="font-family:'Manrope'; font-weight:400; font-size:12px; line-height:1.55; max-width:520px; margin:0 auto;">ukończyła szkolenie <b>„Wdrożenie asystenta AI w dziale HR — audyt zgodności z AI Act"</b> zorganizowane przez Instytut Rozwoju i Nauki w dniach 08–10 września 2025 r., w wymiarze 24 godzin dydaktycznych, egzamin wewnętrzny — wynik pozytywny.</div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr auto 1fr 1fr; gap:28px; align-items:center; width:100%; max-width:640px; padding-top:16px;">
+          <div style="text-align:center;">
+            <div style="border-top:1px solid #1E1611; padding-top:6px; font-family:'Manrope'; font-weight:700; font-size:8px; letter-spacing:0.12em; text-transform:uppercase; color:#5B4837;">Dyrektor merytoryczny</div>
+            <div style="font-family:'Manrope'; font-weight:500; font-size:13px; margin-top:2px;">dr hab. Anna Wiśniewska</div>
+          </div>
+          <div style="width:44px; height:44px; border-radius:50%; background:radial-gradient(circle at 30% 30%, #D9A75B 0%, #B58540 55%, #8F651F 100%); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+            <div style="font-family:'Manrope'; font-weight:800; color:#1E1611; font-size:10px; text-align:center; line-height:1.1;">IRIN<br><span style="font-weight:600; font-size:6px; letter-spacing:0.1em;">MMXXV</span></div>
+          </div>
+          <div style="text-align:center;">
+            <div style="border-top:1px solid #1E1611; padding-top:6px; font-family:'Manrope'; font-weight:700; font-size:8px; letter-spacing:0.12em; text-transform:uppercase; color:#5B4837;">Prowadzący</div>
+            <div style="font-family:'Manrope'; font-weight:500; font-size:13px; margin-top:2px;">dr Maciej Ostrowski</div>
+          </div>
+          <div style="text-align:center; font-family:'Manrope'; font-size:9px; color:#5B4837; line-height:1.5;">Nr IRIN/2025/D/00817<br>BUR 2025/00817/PPUR</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison note -->
+  <div style="margin-top:24px; padding-top:20px; border-top:1px solid #1E1611; display:grid; grid-template-columns:1fr 1fr; gap:32px; font-family:'Manrope'; font-size:12.5px; line-height:1.55; color:#3A2C1E;">
+    <div><b>Kiedy A:</b> dystrybucja mailem / skan do teczki operatora dotacji. Panel metryki działa jako blok kontrastowy nawet w odbitce czarno-białej — numer zaświadczenia i kod BUR pozostają czytelne po kopii.</div>
+    <div><b>Kiedy B:</b> wręczenie na żywo, druk na sztywnym papierze 250 g+. Kolor dziedziny ograniczony do kickera i pieczęci — test kontrolny „czy usunięcie akcentu rozwala wariant" wypada tu negatywnie, bo hierarchię niesie typografia i rama, nie plama koloru.</div>
+  </div>
+</section>
+
+<!-- ============================================================ 06e LETTERHEAD + CARD ============================================================ -->
+<section id="s06e" data-screen-label="08 · Papier firmowy" style="margin-top:32px; padding:48px; background:#F2ECE1; border:1px solid #1E1611;">
+  <div style="font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.24em; text-transform:uppercase; color:#5B4837; margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #1E1611;">§ 08 · Papier firmowy · wizytówka 85×55 mm</div>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+    <div style="background:#F2ECE1; border:1px solid #1E1611; box-shadow:0 4px 22px rgba(0,0,0,0.06); display:grid; grid-template-rows:auto auto auto;">
+      <div style="background:#1E1611; color:#F2ECE1; padding:16px 28px; display:grid; grid-template-columns:auto 1fr; gap:20px; align-items:center;">
+        <img src="uploads/logo_irin_pion.svg" alt="IRIN" style="height:48px; width:auto; filter:invert(1) brightness(1.6);">
+        <div style="text-align:right; font-family:'Manrope'; font-size:9px; opacity:0.85; line-height:1.6;">
+          <b style="font-weight:700; font-size:12.5px; opacity:1;">Instytut Rozwoju i Nauki</b><br>ul. Chmielna 73 · 00-801 Warszawa<br>NIP 000-000-00-00 · KRS 0000000000<br>kontakt@irin.pl · +48 22 000 00 00
+        </div>
+      </div>
+      <div style="padding:26px 28px 0;">
+        <div style="display:flex; justify-content:space-between; font-family:'Manrope'; font-size:9.5px; color:#5B4837;">
+          <div>Warszawa, 12 września 2025 r.</div><div>Nasz znak: 2025/09/0148</div>
+        </div>
+        <div style="margin-top:14px; font-family:'Manrope'; font-size:11px; line-height:1.5;">
+          <div style="color:#5B4837; margin-bottom:4px;">Do:</div>
+          <b style="font-weight:700; font-size:13px; color:#1E1611;">Bank Gospodarstwa Krajowego</b><br>Departament Programów Europejskich<br>Al. Jerozolimskie 7 · 00-955 Warszawa
+        </div>
+        <div style="margin-top:20px; font-family:'Manrope'; font-weight:700; font-size:10.5px; letter-spacing:0.22em; text-transform:uppercase; color:#8B2E3A;">Dot. · konsultacja programu 2026</div>
+        <h5 style="font-family:'Manrope'; font-weight:200; font-size:22px; line-height:1.15; letter-spacing:-0.01em; margin:8px 0 14px;">Wniosek o wpisanie IRIN jako partnera merytorycznego programu „Pożyczka na kształcenie".</h5>
+        <div style="font-family:'Manrope'; font-size:11px; line-height:1.55; max-width:540px;">Szanowni Państwo,<br><br>w związku z zaproszeniem BGK do konsultacji programu instrumentów zwrotnych dla podnoszenia kwalifikacji zawodowych, w załączeniu przesyłam ramy merytoryczne IRIN oraz sprawozdanie za rok 2024.</div>
+      </div>
+      <div style="padding:12px 28px; border-top:1px solid #1E1611; display:grid; grid-template-columns:1fr auto; font-family:'Manrope'; font-size:9px; color:#5B4837;">
+        <div>IRIN · pismo nr 2025/09/0148 · str. 1 z 3</div><div>REGON 000000000</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-rows:auto auto 1fr; gap:8px;">
+      <div style="font-family:'Manrope'; font-size:11px; color:#5B4837;">Wizytówka — awers / rewers</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+        <div style="aspect-ratio:85/55; background:#F2ECE1; border:1px solid #1E1611; padding:14px 16px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 4px 14px rgba(0,0,0,0.08);">
+          <img src="uploads/logo_irin_poziom.svg" alt="IRIN" style="height:12px; width:auto;">
+          <div>
+            <div style="font-family:'Manrope'; font-weight:500; font-size:16px; line-height:1;">Tomasz Bartosik</div>
+            <div style="font-family:'Manrope'; font-weight:700; font-size:8px; letter-spacing:0.2em; text-transform:uppercase; margin-top:4px; color:#1B2B26;">Dyrektor · Pożyczki UE / BGK</div>
+          </div>
+          <div style="font-family:'Manrope'; font-size:8px; line-height:1.5; color:#5B4837;">t.bartosik@irin.pl · +48 601 000 001<br>irin.pl · Chmielna 73, Warszawa</div>
+        </div>
+        <div style="aspect-ratio:85/55; background:#1E1611; padding:14px 16px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:0 4px 14px rgba(0,0,0,0.08);">
+          <div style="font-family:'Manrope'; font-weight:700; font-size:7px; letter-spacing:0.24em; text-transform:uppercase; color:#D9A75B; opacity:0.9;">Instytut Rozwoju i Nauki</div>
+          <div style="font-family:'Manrope'; font-weight:200; font-size:32px; line-height:0.9; background:linear-gradient(135deg,#D9A75B 0%,#B58540 50%,#8F651F 100%); -webkit-background-clip:text; background-clip:text; color:transparent;">IRIN.</div>
+          <div style="font-family:'Manrope'; font-size:7px; letter-spacing:0.02em; line-height:1.4; color:#D9A75B; opacity:0.75;">rewers · złocenie na chłodno · Pantone 872 C<br>papier Munken Pure 350 g</div>
+        </div>
+      </div>
+      <div style="border:1px dashed #A15C2C; padding:16px; font-family:'Manrope'; font-size:11.5px; line-height:1.5; color:#3A2C1E;">
+        <b>Druk:</b> CMYK 4/4, offset, papier uncoated 350 g. Złoto na rewersie — tłoczenie na chłodno, Pantone 872 C osobnym przebiegiem. Wariant bez tłoczenia: rewers w jednolitym Espresso, napis „IRIN." w Rubryce zamiast gradientu.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="margin-top:56px; padding-top:24px; border-top:1px solid #1E1611; font-family:'Manrope'; font-weight:400; font-size:11px; letter-spacing:0.03em; color:#5B4837; display:flex; justify-content:space-between;">
+  <div>IRIN · Brandbook · Kaszmir Aksamit × Manrope × Kolumna · wrzesień 2025</div>
+  <div>Instytut Rozwoju i Nauki</div>
+</footer>
+
+</div>
+</x-dc>
+</body>
+</html>
