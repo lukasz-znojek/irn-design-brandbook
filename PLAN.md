@@ -22,7 +22,7 @@ Zadania w kolejności wykonania, jedno zdanie każde, z docelowym plikiem. Pozyc
 
 ## Warstwa 3 — pakiet Claude Design
 
-13. Zdefiniować format paczki wejściowej dla Claude Design → `03-pakiet-claude-design/format-paczki.md`. **[FOUNDER]** (paleta barw i moduły siatki są zaakceptowanym kierunkiem, ale wymagają dopracowania — dokładnego pomiaru i zaplanowania kombinacji kolorów, zanim staną się wiążącą specyfikacją; patrz `CLAUDE.md`) — **format-paczki.md gotowy, świadomie bez wpisanej palety/siatki; dopracowana propozycja do zatwierdzenia czeka w `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`, w tym poprawka błędu wymiarów siatki A4 z kanwy.**
+13. Zdefiniować format paczki wejściowej dla Claude Design → `03-pakiet-claude-design/format-paczki.md`. **[FOUNDER] — częściowo rozstrzygnięte:** siatka A4 zatwierdzona (2026-09-02: 6 kolumn, moduł 25 mm, gutter 4 mm — poprawka błędu wymiarów z kanwy, gdzie moduł 32 mm fizycznie nie mieścił się na stronie) i wpisana do `format-paczki.md`. Paleta barw nadal czeka na decyzję (użycie koloru Miedź, ryzyko zbliżenia Karmin/Aksamit) — `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
 14. Napisać prompt bazowy dla Claude Design, odwołujący się do warstw 1 i 2 → `03-pakiet-claude-design/prompt-bazowy.md`.
 
 ## Decyzje foundera — rozstrzygnięte
