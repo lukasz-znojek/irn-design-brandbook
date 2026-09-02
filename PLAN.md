@@ -35,6 +35,10 @@ Nie były ponumerowane wyżej, bo PLAN.md nie przewidywał jeszcze tych plików 
 15. Zdefiniować format paczki wejściowej dla Claude Design → `03-pakiet-claude-design/format-paczki.md`. **[FOUNDER] — w pełni rozstrzygnięte (2026-09-02):** siatka A4 (6 kolumn, moduł 25 mm, gutter 4 mm — poprawka błędu wymiarów z kanwy) i paleta 12 kolorów (Miedź pogłębiona do `#8C5026`, Karmin zmieniony na `#AC151F`) zatwierdzone przez foundera i wpisane do `format-paczki.md`. Historia decyzji: `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
 16. Napisać prompt bazowy dla Claude Design, odwołujący się do warstw 1 i 2 → `03-pakiet-claude-design/prompt-bazowy.md`.
 
+## Domknięcie projektu
+
+17. Etapy 0-5 z bramkami, podział na to, co robi Claude Code, co rozstrzyga founder i co wymaga odczytu dokumentów u źródła → `MAPA-DROGOWA.md`. Zadania 18+ powstaną z tej mapy po decyzji foundera o wariancie zamknięcia (A: repozytorium gotowe do użycia, B: dodatkowo jeden dokument pilotażowy w Claude Design).
+
 ## Decyzje foundera — rozstrzygnięte
 
 - **Paleta barw - wybór wariantu (2026-09-02, decyzja późniejsza)**: automatyczne przyjęcie palety z 2026-09-02 zostało wstrzymane jako wymagające dopracowania. Powstało siedem wariantów z pomiarem kontrastu (`_robocze/paleta-v2/palette-options-v2.md`); founder wybrał **wariant 2 „Kaszmir Wyciszony”** - 14 kolorów, z których 12 to przesunięcia kolorów już nazwanych, a dwa są nowe (Popiół jako `border`, Patyna jako `link`; obie nazwy zatwierdzone przez foundera 2026-09-02). Powód wyboru: usuwa trzy zmierzone defekty poprzedniej palety (link i błąd w tym samym kolorze, `info` nieodróżnialny od tekstu korpusu, obramowanie w pełnym tuszu), nie zmieniając kierunku „ciepły papier plus bordo”. Obowiązująca specyfikacja: `01-baza-wiedzy/identyfikacja/paleta-barw.md` (przeniesiona do warstwy 1 decyzją foundera 2026-09-02; `format-paczki.md` już jej nie duplikuje, tylko się do niej odwołuje). Siatka A4 i typografia bez zmian.
