@@ -1,0 +1,119 @@
+# Tablica GitHub Projects dla mapy drogowej IRIN.
+#
+# Dlaczego workflow, a nie skrypt lokalny: Projects v2 działa wyłącznie przez GraphQL,
+# a sesje Claude Code przepuszczają tylko REST, więc tablicę zakłada runner GitHuba.
+#
+# Jednorazowe przygotowanie (founder, ok. 2 minuty):
+#   1. github.com → Settings → Developer settings → Personal access tokens → Fine-grained
+#      → Generate new token. Resource owner: lukasz-znojek. Repository access: tylko
+#      irn-design-brandbook. Uprawnienia: Account permissions → Projects: Read and write.
+#   2. W repozytorium: Settings → Secrets and variables → Actions → New repository secret,
+#      nazwa PROJECTS_TOKEN, wartość: token z kroku 1.
+#   3. Actions → „Tablica Projects - mapa drogowa” → Run workflow.
+#
+# Co robi: znajduje albo tworzy tablicę „IRIN Brandbook - mapa drogowa” na koncie
+# foundera, nadaje kolumnom Status polskie nazwy (Do zrobienia / W toku / Zrobione),
+# dodaje do niej wszystkie otwarte issues. Potem każdy nowo otwarty issue trafia na
+# tablicę automatycznie. Uruchomienie wielokrotne nie tworzy duplikatów.
+#
+# Cofnięcie: usunąć tablicę w UI (Projects → ... → Delete), usunąć sekret, usunąć ten plik.
+
+name: Tablica Projects - mapa drogowa
+
+on:
+  workflow_dispatch:
+  issues:
+    types: [opened, reopened]
+
+permissions:
+  issues: read
+  contents: read
+
+jobs:
+  tablica:
+    runs-on: ubuntu-latest
+    env:
+      OWNER: lukasz-znojek
+      TYTUL: IRIN Brandbook - mapa drogowa
+      TOKEN_PROJECTS: ${{ secrets.PROJECTS_TOKEN }}
+      TOKEN_REPO: ${{ github.token }}
+    steps:
+      - name: Sprawdź sekret
+        run: |
+          if [ -z "$TOKEN_PROJECTS" ]; then
+            echo "::error::Brak sekretu PROJECTS_TOKEN. Instrukcja w komentarzu na górze tego pliku."
+            exit 1
+          fi
+
+      - name: Znajdź albo utwórz tablicę
+        id: tablica
+        env:
+          GH_TOKEN: ${{ env.TOKEN_PROJECTS }}
+        run: |
+          NUM=$(gh project list --owner "$OWNER" --limit 100 --format json \
+            | jq -r --arg t "$TYTUL" '.projects[] | select(.title == $t) | .number' | head -n 1)
+          if [ -z "$NUM" ]; then
+            NUM=$(gh project create --owner "$OWNER" --title "$TYTUL" --format json | jq -r '.number')
+            echo "Utworzono tablicę nr $NUM"
+          else
+            echo "Tablica istnieje: nr $NUM"
+          fi
+          echo "num=$NUM" >> "$GITHUB_OUTPUT"
+          echo "Adres: https://github.com/users/$OWNER/projects/$NUM"
+
+      - name: Polskie nazwy kolumn Status
+        env:
+          GH_TOKEN: ${{ env.TOKEN_PROJECTS }}
+          NUM: ${{ steps.tablica.outputs.num }}
+        run: |
+          FIELD=$(gh project field-list "$NUM" --owner "$OWNER" --format json \
+            | jq -c '.fields[] | select(.name == "Status")')
+          FID=$(echo "$FIELD" | jq -r '.id')
+          if echo "$FIELD" | jq -e '.options[] | select(.name == "Todo" or .name == "In Progress" or .name == "Done")' >/dev/null; then
+            OPTS=$(echo "$FIELD" | jq -c '[.options[] | {
+              name: (if .name == "Todo" then "Do zrobienia"
+                     elif .name == "In Progress" then "W toku"
+                     elif .name == "Done" then "Zrobione"
+                     else .name end),
+              color: (if .name == "Todo" then "GRAY"
+                      elif .name == "In Progress" then "YELLOW"
+                      elif .name == "Done" then "GREEN"
+                      else "GRAY" end),
+              description: "" }]')
+            jq -n --arg f "$FID" --argjson o "$OPTS" \
+              '{query: "mutation($f: ID!, $o: [ProjectV2SingleSelectFieldOptionInput!]!) { updateProjectV2Field(input: {fieldId: $f, singleSelectOptions: $o}) { projectV2Field { ... on ProjectV2SingleSelectField { id } } } }",
+                variables: {f: $f, o: $o}}' \
+              | gh api graphql --input - >/dev/null \
+              && echo "Kolumny: Do zrobienia / W toku / Zrobione" \
+              || echo "::warning::Nie udało się zmienić nazw kolumn; zmień je ręcznie w UI (opcjonalne)."
+          else
+            echo "Kolumny już mają własne nazwy, nie zmieniam."
+          fi
+
+      - name: Zebrać issues do dodania
+        id: lista
+        env:
+          GH_TOKEN: ${{ env.TOKEN_REPO }}
+          JEDEN: ${{ github.event.issue.html_url }}
+        run: |
+          if [ -n "$JEDEN" ]; then
+            echo "$JEDEN" > adresy.txt
+          else
+            gh issue list --repo "${{ github.repository }}" --state open --limit 500 --json url --jq '.[].url' > adresy.txt
+          fi
+          echo "Do dodania: $(wc -l < adresy.txt) issues"
+
+      - name: Dodaj issues do tablicy
+        env:
+          GH_TOKEN: ${{ env.TOKEN_PROJECTS }}
+          NUM: ${{ steps.tablica.outputs.num }}
+        run: |
+          while read -r URL; do
+            [ -z "$URL" ] && continue
+            if gh project item-add "$NUM" --owner "$OWNER" --url "$URL" >/dev/null 2>&1; then
+              echo "dodano  $URL"
+            else
+              echo "::warning::nie dodano $URL"
+            fi
+          done < adresy.txt
+          echo "Tablica: https://github.com/users/$OWNER/projects/$NUM"

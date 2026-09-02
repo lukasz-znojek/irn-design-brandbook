@@ -3,7 +3,7 @@
 Brandbook operacyjny IRIN (Instytut Rozwoju i Nauki): baza wiedzy, szablony dokumentów i pakiet dla Claude Design.
 
 Zacznij od [`CLAUDE.md`](./CLAUDE.md) - kontekst firmy i zasady pracy w tym repozytorium.
-Kolejka zadań: [`PLAN.md`](./PLAN.md).
+Kolejka zadań: [`PLAN.md`](./PLAN.md). Etapy i bramki domknięcia projektu: [`MAPA-DROGOWA.md`](./MAPA-DROGOWA.md).
 
 ## Struktura
 

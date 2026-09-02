@@ -2,25 +2,32 @@
 
 Ten plik opisuje treść i wymogi papieru firmowego oraz wizytówki IRIN. Nie opisuje layoutu ani grafiki — patrz `/03-pakiet-claude-design/`.
 
-## Luka wejściowa — forma prawna IRIN
+## Forma prawna IRIN - rozstrzygnięta
 
-**Nie jest tu potwierdzone, jaką formę prawną ma IRIN** (spółka z o.o., spółka akcyjna, inna spółka handlowa, jednoosobowa działalność gospodarcza). To rozstrzyga, który dokładnie przepis i który dokładnie zestaw danych rejestrowych jest prawnie obowiązkowy na papierze firmowym — sekcja niżej opisuje regułę dla spółki kapitałowej (najbardziej rygorystyczny wariant), bo `brandbook.dc.html` (canvas foundera, materiał inspiracyjny, niepotwierdzony) używa w makietach pól "KRS" — co wskazuje na podmiot wpisany do Krajowego Rejestru Sądowego, a nie do CEIDG — ale same wartości w pliku są zerowym placeholderem (`KRS 0000000000`, `NIP 000-000-00-00`), więc nie stanowią rzeczywistych danych rejestrowych IRIN. **Do potwierdzenia przez foundera: forma prawna i rzeczywiste dane rejestrowe (KRS/NIP/adres siedziby), zanim ta karta zostanie użyta do wygenerowania gotowego wzoru z realnymi danymi.**
+IRIN to **spółka z ograniczoną odpowiedzialnością** (Instytut Rozwoju i Nauki sp. z o.o.) z siedzibą w Kielcach. Potwierdzone przez foundera 2026-09-02; numery KRS, NIP, REGON i adres siedziby są w `/01-baza-wiedzy/firma/kontekst-firmy-sanitized.md`, sekcja „Kto jest dostawcą”, i mogą wejść do gotowego wzoru. Wartości z `brandbook.dc.html` (`KRS 0000000000`, `NIP 000-000-00-00`) były zerowym placeholderem kanwy i nie są danymi IRIN.
 
-## Elementy prawnie obowiązkowe (przy założeniu spółki kapitałowej — do potwierdzenia)
+Dwóch pozycji wymaganych przez przepis niżej repozytorium **nie zawiera**: oznaczenia sądu rejestrowego i wysokości kapitału zakładowego. Obie są jawne w KRS i muszą zostać odczytane stamtąd przy pierwszym zleceniu papieru firmowego; nie zgaduje się ich.
 
-Jeśli IRIN jest spółką z ograniczoną odpowiedzialnością, zastosowanie ma **art. 206 Kodeksu spółek handlowych** (dla spółki akcyjnej — analogicznie art. 374 KSH): pisma i zamówienia handlowe składane przez spółkę w formie papierowej i elektronicznej muszą zawierać:
+## Elementy prawnie obowiązkowe
+
+Skoro IRIN jest spółką z ograniczoną odpowiedzialnością, zastosowanie ma **art. 206 Kodeksu spółek handlowych** (dla spółki akcyjnej — analogicznie art. 374 KSH): pisma i zamówienia handlowe składane przez spółkę w formie papierowej i elektronicznej muszą zawierać:
 1. firmę spółki, jej siedzibę i adres,
 2. oznaczenie sądu rejestrowego, w którym przechowywana jest dokumentacja spółki, oraz numer, pod którym spółka jest wpisana do rejestru (KRS),
 3. numer identyfikacji podatkowej (NIP),
 4. wysokość kapitału zakładowego.
 
-To dotyczy formalnie **pism i zamówień handlowych** — a więc wprost papieru firmowego. Niedopełnienie tego obowiązku jest zagrożone odpowiedzialnością (grzywna na podstawie KSH) — to nie jest kwestia estetyki, tylko wymóg ustawowy. **Jeśli forma prawna IRIN okaże się inna niż spółka kapitałowa, ta sekcja wymaga ponownego napisania od podstaw, nie tylko podmiany liczb.**
+To dotyczy formalnie **pism i zamówień handlowych** — a więc wprost papieru firmowego. Niedopełnienie tego obowiązku jest zagrożone odpowiedzialnością (grzywna na podstawie KSH) — to nie jest kwestia estetyki, tylko wymóg ustawowy. **Falsyfikator tej sekcji:** zmiana formy prawnej spółki. Wtedy sekcja wymaga ponownego napisania od podstaw, nie tylko podmiany liczb.
 
 Wizytówka **nie jest** "pismem ani zamówieniem handlowym" w rozumieniu art. 206 KSH — nie podlega temu samemu rygorowi ustawowemu. W praktyce firmy powtarzają na wizytówce część tych danych (nazwa, adres, NIP) jako dobrą praktykę identyfikacyjną, nie jako obowiązek prawny — to należy do konwencji organizacyjnej, nie do tej sekcji.
 
 ## Konwencja organizacyjna IRIN
 
-Z `brandbook.dc.html` (do potwierdzenia): papier firmowy zawiera dodatkowo dane kontaktowe (e-mail, telefon) i adres strony (`irin.pl`); wizytówka w formacie 85×55 mm, w wersji awers/rewers. **[do potwierdzenia przez foundera]** jako wiążąca konwencja, a nie tylko obserwacja z materiału inspiracyjnego.
+**Zatwierdzone przez foundera 2026-09-02** jako wiążąca konwencja IRIN (wcześniej obserwacja z `brandbook.dc.html`):
+
+- papier firmowy zawiera, poza danymi z art. 206 KSH, dane kontaktowe: adres e-mail, numer telefonu i adres strony internetowej; konkretne wartości przychodzą od foundera przy zleceniu, nie są powielane w warstwie 1;
+- wizytówka ma format 85 × 55 mm i dwie strony: awers i rewers; podział treści między strony pozostaje swobodnym wyborem projektowym.
+
+Zmiana tej konwencji wymaga zgody foundera i wpisu tutaj, nie decyzji w Claude Design.
 
 ## Swobodny wybór projektowy
 
@@ -28,7 +35,7 @@ Układ graficzny, typografia, kolorystyka w ramach palety IRIN, rozmieszczenie d
 
 ## Dane wejściowe wymagane przed przekazaniem do Claude Design
 
-Forma prawna IRIN, rzeczywisty adres siedziby, numer KRS lub odpowiednik, NIP, wysokość kapitału zakładowego (jeśli dotyczy), dane kontaktowe do umieszczenia — żadne z nich nie są tu zgadywane.
+Z repozytorium: forma prawna, adres siedziby, KRS, NIP, REGON (`/01-baza-wiedzy/firma/kontekst-firmy-sanitized.md`). Od foundera przy zleceniu: oznaczenie sądu rejestrowego, wysokość kapitału zakładowego, wartości danych kontaktowych (e-mail, telefon, adres strony) - te ostatnie celowo nie są powielane w warstwie 1. Żadne z nich nie są tu zgadywane.
 
 ## Źródła
 

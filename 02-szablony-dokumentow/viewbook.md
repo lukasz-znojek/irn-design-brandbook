@@ -16,12 +16,14 @@ Wynikają z `/01-baza-wiedzy/prawo/kfs.md` i `/01-baza-wiedzy/prawo/bur.md`:
 
 ## Konwencja organizacyjna IRIN
 
-1. **Segmentacja treści wg dziedziny.** `brandbook.dc.html` (canvas foundera, materiał inspiracyjny) pokazuje viewbook przypisany do jednej z trzech dziedzin nazwanych wprost w tym pliku: Pedagogika, Akademia AI, Pożyczki UE/BGK — sugerując, że IRIN może wydawać osobny viewbook per dziedzina, nie jeden uniwersalny katalog. **[do potwierdzenia przez foundera]** — to obserwacja z materiału inspiracyjnego, nie ustalona konwencja.
-2. **Cykl edycji.** Ten sam plik pokazuje oznaczenie "Viewbook · edycja 2024/2025", co sugeruje wydawanie viewbooka w cyklu rocznym/edycyjnym. **[do potwierdzenia przez foundera]** — z tych samych powodów co wyżej.
+Obie pozycje niżej mają status **otwarte do pierwszego zlecenia viewbooka**: to obserwacje z `brandbook.dc.html` (kanwa foundera, materiał inspiracyjny), nie ustalona konwencja. Founder rozstrzyga je przy pierwszym zleceniu, a decyzja trafia tutaj; do tego czasu Claude Design nie przyjmuje żadnej z nich za pewnik i projektuje miejsce na obie możliwości.
+
+1. **Segmentacja treści wg dziedziny.** Kanwa pokazuje viewbook przypisany do jednej z trzech dziedzin: Pedagogika, Akademia AI, Pożyczki UE/BGK, co sugeruje osobny viewbook per dziedzina, nie jeden uniwersalny katalog. Za segmentacją przemawia reguła jednego koloru dziedzinowego na dokument z `/01-baza-wiedzy/identyfikacja/paleta-barw.md`: katalog łączony musiałby ją złamać albo zrezygnować z warstwy 15 %.
+2. **Cykl edycji.** Kanwa pokazuje oznaczenie "Viewbook · edycja 2024/2025", co sugeruje wydawanie w cyklu rocznym.
 
 ## Swobodny wybór projektowy
 
-Format (drukowany / PDF / oba), liczba stron, układ okładki, sposób prezentacji poszczególnych szkoleń w środku (siatka, lista, karty), typografia i kolorystyka w ramach palety IRIN (patrz `/03-pakiet-claude-design/format-paczki.md` po zatwierdzeniu przez foundera) — wszystko to rozstrzyga się w Claude Design, nie w tym pliku.
+Format (drukowany / PDF / oba), liczba stron, układ okładki, sposób prezentacji poszczególnych szkoleń w środku (siatka, lista, karty), typografia i kolorystyka w ramach specyfikacji z `/01-baza-wiedzy/identyfikacja/` (zasady użycia: `/03-pakiet-claude-design/format-paczki.md`) — wszystko to rozstrzyga się w Claude Design, nie w tym pliku.
 
 ## Treść merytoryczna do zebrania przed przekazaniem do Claude Design
 

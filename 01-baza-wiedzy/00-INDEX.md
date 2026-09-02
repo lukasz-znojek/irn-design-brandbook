@@ -11,14 +11,14 @@ Szablony do pisania kart tej warstwy, nie dokumentów wydawanych na zewnątrz.
 Zatwierdzone specyfikacje identyfikacji wizualnej: wartości, nie kompozycja.
 
 - [`identyfikacja/paleta-barw.md`](./identyfikacja/paleta-barw.md) - obowiązująca paleta „Kaszmir Wyciszony”: 14 kolorów z nazwami i tokenami semantycznymi, zmierzone kontrasty WCAG, reguła 80/15/5, przypisanie trzech dziedzin.
-- [`identyfikacja/siatka-a4.md`](./identyfikacja/siatka-a4.md) - siatka A4: 6 kolumn, moduł 25 mm, gutter 4 mm; ze sprawdzeniem dopasowania do strony i jedną otwartą rozbieżnością co do jednostki bazowej 6 mm.
+- [`identyfikacja/siatka-a4.md`](./identyfikacja/siatka-a4.md) - siatka A4: 6 kolumn, moduł 25 mm, gutter 4 mm; ze sprawdzeniem dopasowania do strony i rozstrzygnięciem roli jednostki bazowej 6 mm (jednostka odstępu między blokami, nie siatka linii bazowych tekstu).
 - [`identyfikacja/typografia.md`](./identyfikacja/typografia.md) - Manrope 200-800 i Inconsolata, dziesięciopoziomowa skala, zasada różnicowania wagą zamiast rodziną.
 - [`identyfikacja/logotyp.md`](./identyfikacja/logotyp.md) - logotyp: trzy warianty z proporcjami odczytanymi z plików źródłowych, minimalny rozmiar 18 mm / 90 px, przestrzeń ochronna x, cztery wiążące zakazy modyfikacji.
 - [`identyfikacja/tokeny/palette-irin.json`](./identyfikacja/tokeny/palette-irin.json) - wszystkie cztery specyfikacje maszynowo.
 
 ## firma/
 
-- [`firma/kontekst-firmy.md`](./firma/kontekst-firmy.md) — pełna nazwa IRIN, trzy linie biznesowe i planowany portal szkoleń; model organizacyjny i historia firmy oznaczone jako brak danych, do potwierdzenia przez foundera.
+- [`firma/kontekst-firmy.md`](./firma/kontekst-firmy.md) — pełna nazwa i forma prawna IRIN (sp. z o.o., siedziba w Kielcach, potwierdzone przez foundera 2026-09-02), trzy linie biznesowe i planowany portal szkoleń; struktura zespołu i historia firmy nadal oznaczone jako brak danych.
 - [`firma/kontekst-firmy-sanitized.md`](./firma/kontekst-firmy-sanitized.md) — uzupełnienie o mechanikę nieopisaną w karcie wyżej: dane rejestrowe dostawcy, modele rozliczenia dofinansowania, granica compliance dot. wkładu własnego.
 
 ## prawo/
@@ -29,6 +29,7 @@ Zatwierdzone specyfikacje identyfikacji wizualnej: wartości, nie kompozycja.
 - [`prawo/psf.md`](./prawo/psf.md) — Podmiotowy System Finansowania (PSF): brak parametrów krajowych, wszystko ustala regulamin operatora regionalnego.
 - [`prawo/kontekst-kfs-sanitized.md`](./prawo/kontekst-kfs-sanitized.md) — materiał źródłowy uzupełniający `kfs.md`: priorytety wydatkowania 2026, limity roczne wg wielkości firmy, checklista załączników wniosku.
 - [`prawo/kontekst-psf-sanitized.md`](./prawo/kontekst-psf-sanitized.md) — materiał źródłowy, na którym oparta jest `psf.md`.
+- [`prawo/weryfikacja-u-zrodla.md`](./prawo/weryfikacja-u-zrodla.md) - lista ośmiu dokumentów pierwotnych do dostarczenia przez foundera albo do odczytu po odblokowaniu domen PARP i Dziennika Ustaw; przy każdym: co odczytać i które zdanie się zmieni.
 
 ## uslugi/
 
