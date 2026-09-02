@@ -2,8 +2,6 @@
 
 > Wersja bezpieczna do publicznego repozytorium, opracowana z wewnętrznego materiału roboczego. To jest **materiał źródłowy do dalszej pracy**, nie ostateczna karta prawna. Zobacz też `01-baza-wiedzy/prawo/psf.md` — kartę produktu opartą na tym materiale.
 
-> **Uwaga o nazwie:** zlecenie tego zadania posługiwało się skrótem „PFS". Materiał źródłowy i terminologia urzędowa używają skrótu **PSF (Podmiotowy System Finansowania)** — to prawidłowa nazwa mechanizmu. Ten plik i powiązana karta produktu przyjmują PSF jako rozstrzygnięcie tej rozbieżności.
-
 ## Dlaczego parametrów nie ma w tym pliku
 
 **PSF nie ma parametrów krajowych.** Wytyczne dotyczące realizacji projektów z udziałem środków Europejskiego Funduszu Społecznego Plus w programach regionalnych (wersja z lipca 2025, obowiązuje od 30.06.2025, odczyt 2026-08-10) poświęcają PSF jeden rozdział o dwóch podrozdziałach: zasady ogólne i kontrole projektów. Rozdział ten **nie określa** ani maksymalnego poziomu dofinansowania, ani minimalnego wkładu własnego, ani limitów kwotowych, ani sposobu liczenia pułapu ceny. Wytyczne zawierają klauzulę, że za zasady wykraczające poza ich zakres odpowiada właściwa instytucja zarządzająca programem regionalnym.
@@ -58,5 +56,3 @@ Usunięto lub uogólniono:
 - **wskazówkę „architektura jednej karty usługi na poziom"** — to wewnętrzna konwencja tworzenia dokumentów sprzedażowych IRIN, nie cecha samego mechanizmu PSF.
 
 Zachowano w całości: opis konstrukcji PSF, źródła rządowe, adresy stron i mechanizmy regulaminowe — są to informacje publiczne albo ogólnobranżowe, nie zawierają nazw klientów, kwot ani warunków handlowych.
-
-Poprawiono nazwę skrótu z „PFS" (błędnie użytego w zleceniu) na **PSF**, zgodnie z materiałem źródłowym i terminologią urzędową (Podmiotowy System Finansowania).

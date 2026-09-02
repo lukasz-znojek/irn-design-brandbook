@@ -2,11 +2,13 @@
 
 Struktura jest ustalona. Nie improwizuj jej przy każdym programie — to, co ma się różnić między programami, to treść, nie kolejność argumentów.
 
-**Zanim zaczniesz:** kolory, krój pisma, znak i wzory slajdów — zgodnie z aktualnym brandbookiem IRN (`/03-pakiet-claude-design/`). Ten plik nie definiuje warstwy wizualnej i nie odsyła do starszych wytycznych identyfikacji — jeśli natrafisz na materiał, który to robi, jest nieaktualny.
+**Zanim zaczniesz:** kolory, krój pisma, znak i wzory slajdów — zgodnie z aktualnym brandbookiem IRIN (`/03-pakiet-claude-design/`). Ten plik nie definiuje warstwy wizualnej i nie odsyła do starszych wytycznych identyfikacji — jeśli natrafisz na materiał, który to robi, jest nieaktualny.
 
 **Wszystkie liczby pochodzą z pliku programu (`program-szkolenia.md`) i z karty produktu właściwego kanału** (`01-baza-wiedzy/prawo/kfs.md`, `01-baza-wiedzy/prawo/psf.md`). Żadna liczba nie powstaje w prezentacji. Jeśli w trakcie pracy okazuje się, że jakiejś liczby w programie nie ma, wraca się do programu — nie dopisuje się jej tutaj.
 
 ## Legenda kategorii
+
+Pozostałe pliki warstwy 2 rozróżniają te same trzy kategorie osobnymi nagłówkami („Elementy prawnie obowiązkowe" / „Konwencja organizacyjna IRIN" / „Swobodny wybór projektowy"); tu, żeby nie rozbijać listy slajdów, są oznaczone inline:
 
 - **[PRAWO]** — element prawnie obowiązkowy: wynika z przepisu albo z regulaminu instytucji finansującej.
 - **[IRIN]** — konwencja organizacyjna IRIN.
@@ -60,4 +62,4 @@ Pod tabelą jedno zdanie liczbami dla segmentu głównego: ile osób, ile dni za
 
 ## Elementy wizualne
 
-Elementy wizualne i formatowanie należy stosować zgodnie z aktualnym brandbookiem IRN.
+Elementy wizualne i formatowanie należy stosować zgodnie z aktualnym brandbookiem IRIN.

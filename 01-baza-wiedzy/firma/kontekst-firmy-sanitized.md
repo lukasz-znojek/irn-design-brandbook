@@ -43,7 +43,7 @@ Nabór ma numer nadany przez instytucję finansującą. Dostawca usługi nie two
 
 ## Warstwa wizualna
 
-Ten plik nie dotyka warstwy wizualnej. Kolory, krój pisma, znak i wzory dokumentów pochodzą wyłącznie z `03-pakiet-claude-design/` i z bieżącego brandbooku IRN — nie z tego pliku i nie z żadnej starszej wersji identyfikacji.
+Ten plik nie dotyka warstwy wizualnej. Kolory, krój pisma, znak i wzory dokumentów pochodzą wyłącznie z `03-pakiet-claude-design/` i z bieżącego brandbooku IRIN — nie z tego pliku i nie z żadnej starszej wersji identyfikacji.
 
 ## Notatka o sanitizacji
 

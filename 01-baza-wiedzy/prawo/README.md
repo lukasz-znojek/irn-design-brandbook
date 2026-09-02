@@ -10,5 +10,3 @@ Obowiązujące przepisy i regulacje, którym podlegają dokumenty IRIN: Krajowy 
 - [`psf.md`](psf.md) — karta produktu PSF, wg `../_szablony/karta-produktu.md`.
 - [`kontekst-kfs-sanitized.md`](kontekst-kfs-sanitized.md) — materiał źródłowy uzupełniający `kfs.md` o priorytety 2026, limity roczne wg wielkości firmy i checklistę załączników wniosku.
 - [`kontekst-psf-sanitized.md`](kontekst-psf-sanitized.md) — materiał źródłowy, na którym oparta jest `psf.md`.
-
-Plik `psf.md` odpowiada na zlecenie karty „PFS" — materiał źródłowy i terminologia urzędowa używają skrótu **PSF**, więc to on jest tu nazwą kanoniczną; wyjaśnienie w nagłówku `psf.md`.

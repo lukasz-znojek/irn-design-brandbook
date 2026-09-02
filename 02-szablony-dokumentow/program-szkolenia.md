@@ -4,9 +4,11 @@
 
 Plik programu jest jedynym źródłem prawdy dla liczb usługi: nazwy modułów, godzin, efektów uczenia się i limitów. Karta usługi BUR i materiały sprzedażowe (np. `prezentacja-sprzedazowa.md`) są z niego generowane — żadna liczba usługi nie powinna żyć w dwóch miejscach niezależnie. Limity i poziomy dofinansowania pochodzą dodatkowo z karty produktu właściwego kanału (`01-baza-wiedzy/prawo/kfs.md`, `01-baza-wiedzy/prawo/psf.md`) — to liczby kanału, nie usługi. Sekcję 1 wypełnia się tylko dla programów pod klienta; w programach katalogowych usuń ją.
 
+Inaczej niż pozostałe pliki tej warstwy (np. `karta-uslugi-bur.md`, `certyfikat.md`) — to nie karta specyfikacji, tylko roboczy szablon do wypełnienia dla konkretnego programu; stąd nagłówek z polami do uzupełnienia zamiast nazwy dokumentu.
+
 ## Legenda kategorii
 
-Zgodnie z `/CLAUDE.md` każda karta specyfikacji w tej warstwie rozróżnia jawnie trzy kategorie elementów:
+Zgodnie z `/CLAUDE.md` każda karta specyfikacji w tej warstwie rozróżnia jawnie trzy kategorie elementów. Pozostałe pliki warstwy 2 robią to osobnymi nagłówkami („Elementy prawnie obowiązkowe" / „Konwencja organizacyjna IRIN" / „Swobodny wybór projektowy"); ten plik, żeby nie przerywać pól do wypełnienia, oznacza je inline tymi samymi trzema kategoriami:
 
 - **[PRAWO]** — element prawnie obowiązkowy: wynika z przepisu albo z regulaminu instytucji finansującej (KFS/PSF/BUR).
 - **[IRIN]** — konwencja organizacyjna IRIN: obecnie obowiązująca praktyka firmy, zmienialna decyzją firmy, nie przepisem.
@@ -183,4 +185,4 @@ Siatka terminów *(tylko programy wielousługowe)*: [rytm publikacji terminów; 
 
 ## Elementy wizualne
 
-Elementy wizualne i formatowanie tego dokumentu należy stosować zgodnie z aktualnym brandbookiem IRN.
+Elementy wizualne i formatowanie tego dokumentu należy stosować zgodnie z aktualnym brandbookiem IRIN.

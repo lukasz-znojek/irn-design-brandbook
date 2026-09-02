@@ -1,8 +1,8 @@
 # PSF — Podmiotowy System Finansowania
 
-> Karta produktu wg `01-baza-wiedzy/_szablony/karta-produktu.md`. Materiał źródłowy i uzasadnienie decyzji redakcyjnych: `01-baza-wiedzy/prawo/kontekst-psf-sanitized.md`.
+> Karta produktu wg `01-baza-wiedzy/_szablony/karta-produktu.md`. Materiał źródłowy: `01-baza-wiedzy/prawo/kontekst-psf-sanitized.md`.
 >
-> **Uwaga o nazwie:** ta karta była zamówiona pod skrótem „PFS". Materiał źródłowy i terminologia urzędowa (wytyczne dla programów regionalnych EFS+) używają skrótu **PSF — Podmiotowy System Finansowania**. Karta przyjmuje PSF jako formę poprawną; „PFS" nie występuje w żadnym sprawdzonym dokumencie urzędowym.
+> Nazwa mechanizmu: **PSF — Podmiotowy System Finansowania**, zgodnie z terminologią wytycznych dla programów regionalnych EFS+.
 
 ## Krótki opis
 
