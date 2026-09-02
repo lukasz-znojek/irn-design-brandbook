@@ -2,9 +2,13 @@
 
 Ten plik definiuje, co powinna zawierać paczka wejściowa przekazywana do Claude Design dla dowolnego dokumentu IRIN. Sama kompozycja, layout i grafika powstają w Claude Design — ten plik tylko określa, jakie materiały i informacje muszą się tam znaleźć, żeby to było możliwe.
 
-## Status palety i siatki — ważne zastrzeżenie
+## Status palety i siatki
 
-**Paleta barw i moduły siatki A4 nie są tu jeszcze wpisane jako ostateczna specyfikacja.** Zadanie to jest oznaczone w `/PLAN.md` jako **[FOUNDER]** — kierunek z `brandbook.dc.html` jest zaakceptowany, ale wymaga dopracowania (dokładny pomiar wartości hex, zaplanowanie kombinacji kolorów, poprawienie siatki A4, która w obecnym opisie nie mieści się fizycznie na stronie). Dopracowana propozycja czeka na zatwierdzenie foundera w `./propozycja-palety-i-siatki-do-potwierdzenia.md`. **Dopóki founder jej nie zaakceptuje, paczka wejściowa do Claude Design nie powinna zawierać stałej listy kolorów ani wymiarów siatki jako wiążącej specyfikacji** — Claude Design powinien albo pracować bez zdefiniowanej palety/siatki (tylko z logo i typografią, patrz niżej), albo zapytać foundera wprost, jeśli decyzja jest potrzebna do konkretnego zlecenia.
+**Siatka A4 — zatwierdzona przez foundera (2026-09-02).** Paleta barw — **nadal nie jest wpisana jako ostateczna specyfikacja**, dwa punkty czekają na decyzję (użycie koloru Miedź, ryzyko wizualnego zbliżenia Karminu i Aksamitu) — patrz `./propozycja-palety-i-siatki-do-potwierdzenia.md`. **Dopóki paleta nie zostanie zatwierdzona, paczka wejściowa do Claude Design nie powinna zawierać stałej listy kolorów jako wiążącej specyfikacji** — Claude Design powinien pracować z logo, typografią i siatką niżej, a kolor albo zostawić nieokreślony, albo zapytać foundera wprost, jeśli zlecenie tego wymaga.
+
+### Siatka dokumentu A4 (zatwierdzona)
+
+6 kolumn, moduł 25 mm, gutter 4 mm. Marginesy: 18 mm góra, 18 mm lewy, 22 mm prawy, 28 mm dół. Treść: 170 × 251 mm. Zastępuje wersję z `brandbook.dc.html` (moduł 32 mm), która nie mieściła się fizycznie na stronie A4 — pomiar i uzasadnienie w `./propozycja-palety-i-siatki-do-potwierdzenia.md`.
 
 ## Elementy paczki, potwierdzone i gotowe do użycia
 

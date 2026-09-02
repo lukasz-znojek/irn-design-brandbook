@@ -1,6 +1,6 @@
-# DO POTWIERDZENIA — propozycja dopracowanej palety i siatki A4
+# Propozycja dopracowanej palety i siatki A4
 
-**Status: projekt do zatwierdzenia przez foundera. Nic w tym pliku nie jest wiążącą specyfikacją, dopóki founder świadomie tego nie zaakceptuje — patrz zadanie 13 w `/PLAN.md` i sekcja o `brandbook.dc.html` w `/CLAUDE.md`.** Dopóki status się nie zmieni, `./format-paczki.md` nie traktuje niczego z tego pliku jako ostatecznej specyfikacji.
+**Status: siatka A4 — ZATWIERDZONA przez foundera (2026-09-02, Opcja 1). Paleta barw — nadal DO POTWIERDZENIA** (dwa otwarte punkty niżej: użycie Miedzi, ryzyko Karmin/Aksamit) — patrz zadanie 13 w `/PLAN.md` i sekcja o `brandbook.dc.html` w `/CLAUDE.md`. Siatka jest już wpisana jako obowiązująca w `./format-paczki.md`; paleta trafi tam dopiero po rozstrzygnięciu pozostałych punktów.
 
 ## Punkt wyjścia
 
@@ -30,7 +30,11 @@
 1. **Miedź (`#A15C2C`, Akademia AI) nie nadaje się na kolor tekstu korpusu** — 4,37:1 nie spełnia progu AA dla normalnego tekstu (4,5:1), tylko dla tekstu dużego/pogrubionego i elementów graficznych. W kanwie Miedź bywa użyta jako kolor liczby ("648 zł" po dofinansowaniu, `brandbook.dc.html:344`) — przy dużym rozmiarze fontu (20 px) to mieści się w normie AA large, ale nie należy tym kolorem pisać zwykłego tekstu akapitowego. **Do decyzji: zaakceptować to ograniczenie użycia (Miedź tylko do dużych elementów), czy pogłębić odcień, żeby Miedź spełniała 4,5:1 też dla tekstu normalnego?**
 2. **Karmin (`#8B2E3A`, link/stan) i Aksamit (`#4A1D26`, domena Pedagogika) są wizualnie zbliżone** — oba to ciemne bordo, wzajemny kontrast między nimi to tylko 1,71:1. Na dokumencie z dziedziny Pedagogika (gdzie Aksamit jest kolorem sygnującym dziedzinę) użycie Karminu na linku obok elementu w Aksamicie może się zlewać wizualnie i zacierać rozróżnienie "to jest link/stan" od "to jest kolor dziedziny". **Do decyzji: zaakceptować to ryzyko (dokumenty rzadko łączą oba kolory blisko siebie), czy zmienić odcień jednego z nich?**
 
-## Siatka A4 — błąd w wymiarach, dwie poprawki do wyboru
+## Siatka A4 — ZATWIERDZONA (Opcja 1)
+
+**Founder wybrał Opcję 1, zgodnie z rekomendacją niżej.** Obowiązująca siatka A4: 6 kolumn, moduł 25 mm, gutter 4 mm, marginesy 18 mm góra / 18 mm lewy / 22 mm prawy / 28 mm dół — treść 170 × 251 mm. Wpisana jako obowiązująca specyfikacja w `./format-paczki.md`. Historia decyzji i uzasadnienie pomiaru — niżej, bez zmian.
+
+### Błąd w wymiarach, który doprowadził do tej decyzji
 
 **Zmierzony problem:** kanwa opisuje siatkę jako "6 kolumn, moduł 32 mm, gutter 4 mm" na stronie A4 (210 × 297 mm), z marginesami 18 mm góra/lewo, 22 mm prawo, 28 mm dół. Zsumowane 6 kolumn × 32 mm + 5 gutterów × 4 mm = **212 mm**. Sama szerokość strony A4 to 210 mm — więc **siatka nie mieści się na stronie nawet przy zerowych marginesach** (212 mm > 210 mm), a przy podanych marginesach dostępna szerokość treści to tylko 170 mm (210 − 18 − 22). Różnica wynosi 42 mm. To nie jest kwestia gustu — to jest niemożliwe geometrycznie, niezależnie od tego, jak founder ustawi marginesy. Falsyfikator tego wniosku: inny format strony niż A4 pion (np. A3, albo A4 poziom) — kanwa jednak wprost mówi "Siatka dokumentu A4" bez dopisku o orientacji poziomej.
 
@@ -40,7 +44,7 @@ Dwie poprawki, które faktycznie mieszczą się na A4 pion przy zachowanych marg
 
 **Opcja 2 — zachować moduł 32 mm, zmniejszyć liczbę kolumn i skorygować prawy margines.** 5 kolumn, gutter 4 mm: 5 × 32 + 4 × 4 = 160 + 16 = **176 mm**. Przy tej szerokości treści prawy margines musiałby się zmniejszyć z 22 mm do 16 mm (210 − 18 − 176 = 16). Zachowuje moduł 32 mm z kanwy, zmienia liczbę kolumn (6 → 5) i jeden margines.
 
-**Rekomendacja: Opcja 1.** Liczba kolumn (sześć) jest w kanwie opisana jako element wspólny dla wszystkich trzech dziedzin — bardziej prawdopodobne, że to ona jest zamierzoną stałą systemu, a moduł 32 mm był tylko niesprawdzonym pomiarem. Ale to jest rekomendacja do obalenia przez foundera, nie decyzja — może chcieć odwrotnie.
+**Rekomendacja: Opcja 1 — wybrana przez foundera.** Liczba kolumn (sześć) jest w kanwie opisana jako element wspólny dla wszystkich trzech dziedzin — bardziej prawdopodobne, że to ona jest zamierzoną stałą systemu, a moduł 32 mm był tylko niesprawdzonym pomiarem.
 
 ## Reguła 80/15/5 — doprecyzowanie
 
@@ -55,6 +59,6 @@ Kanwa opisuje regułę opisowo (`brandbook.dc.html:213-215`); tu doprecyzowanie,
 1. Nazwy i przypisania 12 kolorów jako oficjalne nazewnictwo marki IRIN (Kaszmir, Espresso, Złoto foliowe, Aksamit, Miedź, Onyks, Pergamin, Sepia, Karmin, Muślin, Werdykt, Rubryka) — czy zostają, czy founder chce inne nazwy/przypisania dziedzin.
 2. Ograniczenie użycia Miedzi do dużych elementów (nie tekstu korpusu) — akceptacja albo zlecenie pogłębienia odcienia.
 3. Ryzyko zbliżenia Karmin/Aksamit — akceptacja albo zmiana odcienia.
-4. Wybór między Opcją 1 (moduł 25 mm) a Opcją 2 (5 kolumn, margines 16 mm) dla siatki A4 — albo trzecia opcja własna foundera.
+4. ~~Wybór między Opcją 1 (moduł 25 mm) a Opcją 2 (5 kolumn, margines 16 mm) dla siatki A4~~ — **ZATWIERDZONE: Opcja 1** (2026-09-02).
 
-Dopiero po tej decyzji odpowiednia treść trafia do `./format-paczki.md` jako obowiązująca specyfikacja.
+Punkty 2 i 3 czekają na decyzję; punkt 1 (nazewnictwo) przyjęty roboczo, do jawnego potwierdzenia albo odrzucenia razem z punktami 2-3. Dopiero po ich rozstrzygnięciu paleta trafia do `./format-paczki.md` jako obowiązująca specyfikacja — siatka już tam jest.
