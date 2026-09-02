@@ -181,7 +181,7 @@ Siatka terminów *(tylko programy wielousługowe)*: [rytm publikacji terminów; 
 
 **Blokujące publikację karty:**
 
-**Do potwierdzenia u źródła:**
+**Status: niesprawdzone — brak bezpośredniego odczytu dokumentu źródłowego:**
 
 ## Elementy wizualne
 

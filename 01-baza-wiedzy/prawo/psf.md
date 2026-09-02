@@ -42,7 +42,7 @@ Do wyceny konkretnej oferty **wymagana jest karta parametrów właściwego opera
 - Decyzja o przyznaniu dofinansowania i jego poziomie należy do operatora regionalnego — komunikacja zewnętrzna nie powinna sugerować gwarancji dofinansowania.
 - Wybór usługi z BUR jest warunkiem koniecznym, niezależnie od regionu.
 - **Dostawca usługi musi mieć aktywny profil „Dostawcy Usług" w BUR** (konto dostawcy + akceptacja regulaminu — ten sam wymóg, co opisany w `./bur.md`, sekcja „Warunek wpisu do BUR"). To nie jest wymóg specyficzny dla PSF: usługa nie może zostać opublikowana w BUR bez zarejestrowanego za nią dostawcy, więc skoro PSF wymaga usługi z BUR, wymaga też pośrednio dostawcy z BUR. Wpis jest warunkiem **koniecznym, ale niewystarczającym** — możliwość finansowania w konkretnym naborze zależy dodatkowo od kryteriów projektowych i regulaminu operatora regionalnego.
-- TODO: wymaga potwierdzenia — czy poszczególni operatorzy PSF nakładają na dostawcę dodatkowe kryteria ponad bazowy wpis do BUR (np. akredytację regionalną, wpis na listę uznanych realizatorów). Regionalne dokumenty „Zasady udzielania wsparcia" mogą to regulować, ale nie były dostępne do bezpośredniego odczytu w tej sesji — dostęp do domen `parp.gov.pl` i do regionalnych plików PDF był zablokowany przez proxy sesji, w której powstał ten zapis.
+- Status: **niesprawdzone** — brak dostępu do regionalnych dokumentów „Zasady udzielania wsparcia” oraz brak dostarczonego PDF/fragmentu do katalogu `01-baza-wiedzy/prawo/zrodla/`. Nie potwierdzono, czy poszczególni operatorzy PSF nakładają na dostawcę dodatkowe kryteria ponad bazowy wpis do BUR (np. akredytację regionalną, wpis na listę uznanych realizatorów).
 
 ## Powiązane dokumenty
 

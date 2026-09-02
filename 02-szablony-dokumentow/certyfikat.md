@@ -15,7 +15,7 @@ Z `/01-baza-wiedzy/prawo/bur.md`:
 - wskazanie osiągniętych efektów uczenia się (lub innych efektów usługi),
 - jednoznaczna identyfikacja usługi (w tym kodu usługi BUR) i uczestnika.
 
-**Status weryfikacji — ważne zastrzeżenie:** oficjalny wzór "Zaświadczenia o zakończeniu udziału w usłudze rozwojowej" (Załącznik nr 12 do Regulaminu BUR) istnieje, ale **jego treści nie udało się pobrać** w sesji, w której powstał `/01-baza-wiedzy/prawo/bur.md` — domena hostująca dokument była zablokowana przez proxy. Dokładna, kompletna lista pól tego wzoru **nie jest tu potwierdzona**. Zanim ta karta specyfikacji zostanie potraktowana jako zamknięta co do treści prawnie obowiązkowej, należy odczytać ten załącznik wprost i ewentualnie skorygować listę pól powyżej (lista dokumentów do dostarczenia: `/01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`, pozycja 2).
+**Status weryfikacji — ważne zastrzeżenie:** pozycja 2 z `/01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md` jest **niesprawdzone** u źródła. Oficjalny wzór "Zaświadczenia o zakończeniu udziału w usłudze rozwojowej" (Załącznik nr 12 do Regulaminu BUR) nie został pobrany w tej sesji i nie ma dostarczonego PDF/fragmentu w repozytorium. Dokładna, kompletna lista pól tego wzoru **nie jest tu potwierdzona**; należy odczytać go wprost i skorygować listę pól powyżej, jeśli dokument zostanie dostarczony przez foundera.
 
 ## Konwencja organizacyjna IRIN
 

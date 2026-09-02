@@ -14,7 +14,7 @@ Parametry odczytane 2026-08-10 z wytycznych ministerstwa dla urzędów pracy (ak
 ## Czym różni się od PSF — cztery różnice
 
 1. **Wniosek składa pracodawca, nie uczestnik**, do powiatowego urzędu pracy właściwego dla miejsca prowadzenia działalności.
-2. **Karta usługi w BUR nie jest wymagana na etapie wniosku.** Wymagany jest wpis realizatora do BUR oraz **program kształcenia** i **wzór dokumentu potwierdzającego ukończenie**. To ustalenie negatywne — żaden ze sprawdzonych dokumentów nie wymaga karty usługi na tym etapie, ale żaden też nie stwierdza wprost, że jest niepotrzebna. **Do potwierdzenia w regulaminie konkretnego urzędu.**
+2. **Karta usługi w BUR nie jest wymagana na etapie wniosku.** Wymagany jest wpis realizatora do BUR oraz **program kształcenia** i **wzór dokumentu potwierdzającego ukończenie**. To ustalenie negatywne — żaden ze sprawdzonych dokumentów nie wymaga karty usługi na tym etapie, ale żaden też nie stwierdza wprost, że jest niepotrzebna. **Status: niesprawdzone — wymagane jest potwierdzenie w regulaminie konkretnego urzędu.**
 3. **Limity są krajowe i ruchome**, nie regionalne — patrz niżej.
 4. **Decyzja urzędu jest uznaniowa**, oparta na liście rankingowej. W komunikacji zewnętrznej: „usługa kwalifikuje się do wniosku o środki KFS", nigdy „KFS to sfinansuje".
 
@@ -27,7 +27,7 @@ Parametry odczytane 2026-08-10 z wytycznych ministerstwa dla urzędów pracy (ak
 
 Zmiana wobec lat wcześniejszych: było 100% i 80%, więc od 2026 wkład własny dotyczy również mikroprzedsiębiorców. Komunikacja oparta na „za darmo dla mikrofirm" jest nieaktualna.
 
-**Wymaga potwierdzenia:** przepis ustawy ustanawiający te wartości procentowe. Wytyczne wskazują artykuł o limicie dofinansowania, ale nie cytują ustępu z procentami wprost. Wartości są zgodne w wytycznych i w dokumentach urzędów, więc do planowania wystarczają — do pisma wychodzącego na zewnątrz potwierdź brzmienie przepisu źródłowego.
+**Status: niesprawdzone** — przepis ustawy ustanawiający te wartości procentowe nie został odczytany wprost z Dziennika Ustaw. Wytyczne wskazują artykuł o limicie dofinansowania, ale nie cytują ustępu z procentami wprost. Wartości są zgodne w wytycznych i w dokumentach urzędów, więc do planowania wystarczają — do pisma wychodzącego na zewnątrz wymagane jest potwierdzenie źródłowe.
 
 ## Dwa limity, nie jeden
 

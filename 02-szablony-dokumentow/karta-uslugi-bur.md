@@ -8,7 +8,7 @@ Materiał prezentujący jedną konkretną usługę szkoleniową zarejestrowaną 
 
 ## Elementy prawnie obowiązkowe
 
-Wynikają z `/01-baza-wiedzy/prawo/bur.md` — z zastrzeżeniem, że część z nich ma tam status "do potwierdzenia bezpośrednim odczytem regulaminu BUR" (dostęp do domen PARP był zablokowany; lista dokumentów do dostarczenia: `/01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`, pozycje 1 i 3):
+Wynikają z `/01-baza-wiedzy/prawo/bur.md` — z zastrzeżeniem, że część z nich ma tam status "niesprawdzone" po stronie bezpośredniego odczytu regulaminu BUR (dostęp do domen PARP był zablokowany; lista dokumentów do dostarczenia: `/01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`, pozycje 1 i 3):
 
 1. **Kod usługi BUR** — unikalny numer nadany usłudze przez system przy publikacji, musi być widoczny na dokumencie i zgodny z rzeczywistym wpisem. Format zaobserwowany w `brandbook.dc.html` (`2025/00817/PPUR`) jest niepotwierdzony — nie zakładać tej struktury jako reguły, wstawiać rzeczywisty kod usługi wygenerowany przez system BUR.
 2. **Tytuł i opis usługi** — zgodne z opublikowaną Kartą Usługi.
@@ -16,7 +16,7 @@ Wynikają z `/01-baza-wiedzy/prawo/bur.md` — z zastrzeżeniem, że część z 
 4. **Grupa docelowa** — do kogo kierowana jest usługa; obowiązkowe pole Karty Usługi.
 5. **Liczba godzin zegarowych usługi** i — od zmiany Regulaminu BUR z 5 maja 2026 r. — **wariant zajęć** (tam gdzie dotyczy) oraz dane **osób prowadzących** — jeśli dokument podaje wymiar godzinowy czy prowadzącego, musi być zgodny z tym, co zadeklarowano w systemie.
 
-**Status weryfikacji:** lista wynika z `/01-baza-wiedzy/prawo/bur.md`, gdzie jest oznaczona jako oparta na źródłach wtórnych. Przed uznaniem tej karty za zamkniętą specyfikację, warto zweryfikować bezpośrednio w Załączniku nr 2 do Regulaminu BUR, czy nie ma dodatkowych pól obowiązkowych pominiętych tutaj.
+**Status weryfikacji:** pozycje 1 i 3 z `/01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md` są **niesprawdzone** u źródła. Brak dostępu do PARP i brak dostarczonego PDF/fragmentu oznaczają, że ta lista nie jest zamkniętą specyfikacją prawnie obowiązkową; jest to robocza synteza źródeł wtórnych i musi zostać zweryfikowana wprost w Załączniku nr 2 do Regulaminu BUR.
 
 ## Konwencja organizacyjna IRIN
 

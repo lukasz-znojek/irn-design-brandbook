@@ -1,6 +1,6 @@
 # Baza Usług Rozwojowych (BUR) — wymogi certyfikacji
 
-Status weryfikacji: ustalenia poniżej pochodzą z wyszukiwania w źródłach wtórnych (portale branżowe, strony certyfikujące) wykonanego 2026-09-02. Próba bezpośredniego pobrania oficjalnych dokumentów PARP (regulamin BUR, załączniki, wzór zaświadczenia) **nie powiodła się** — domeny `parp.gov.pl` i `serwis-uslugirozwojowe.parp.gov.pl` są zablokowane przez serwer pośredniczący (proxy) tej sesji. Poniższe ustalenia są więc podsumowaniami wtórnymi, nie odczytem pierwotnego tekstu regulaminu czy załączników. Falsyfikator: bezpośredni odczyt aktualnego Regulaminu BUR i jego załączników (linki niżej) różniący się od poniższego podsumowania — **do wykonania, gdy dostęp do domeny PARP będzie możliwy, przed uznaniem czegokolwiek poniżej za wiążącą specyfikację treści dokumentu**.
+Status weryfikacji: ustalenia poniżej są **niesprawdzone** u źródła. W dniu 2026-09-02 domeny `parp.gov.pl` i `uslugirozwojowe.parp.gov.pl` były niedostępne z sesji Claude Code, a żaden dokument pierwotny nie został dostarczony do katalogu `01-baza-wiedzy/prawo/zrodla/`. Poniższe ustalenia są zatem roboczą syntezą źródeł wtórnych i nie są traktowane jako ostateczna interpretacja regulaminu BUR ani załączników. Falsyfikator: bezpośredni odczyt aktualnego Regulaminu BUR i jego załączników różniący się od poniższego podsumowania — wymagany jest dokument źródłowy z numerem strony albo PDF dostarczony przez foundera.
 
 ## Co to jest BUR
 
@@ -17,17 +17,17 @@ Wpis do BUR jest bezpłatny; kosztem po stronie IRIN jest uzyskanie i utrzymanie
 
 **Powiązanie z KFS:** od 1 stycznia 2026 r. wpis do BUR jest też warunkiem prowadzenia szkoleń finansowanych z Krajowego Funduszu Szkoleniowego — patrz `./kfs.md`. Dla IRIN oznacza to jeden wspólny wymóg rejestrowy dla obu ścieżek szkoleniowych, nie dwa osobne.
 
-**Powiązanie z PSF:** dla Podmiotowego Systemu Finansowania (PSF, patrz `./psf.md`) potwierdzone jest, że **usługa** musi być wybrana z BUR — warunek konieczny mechanizmu PSF niezależnie od regionu. Wpis **dostawcy** do BUR (konto + regulamin, jak w sekcji wyżej) jest tu wymagany pośrednio, tą samą drogą co dla każdej usługi w BUR — bo usługa nie może być opublikowana bez zarejestrowanego za nią dostawcy (Regulamin BUR, Załącznik nr 4 „Zasady funkcjonowania Dostawców usług"; źródła w `./psf.md`). To nie jest osobny, PSF-specyficzny przepis analogiczny do KFS — wynika z ogólnej mechaniki BUR. **Status: do potwierdzenia pozostaje** tylko węższe pytanie, czy poszczególni operatorzy regionalni PSF nakładają na dostawcę dodatkowe kryteria ponad ten bazowy wpis.
+**Powiązanie z PSF:** dla Podmiotowego Systemu Finansowania (PSF, patrz `./psf.md`) potwierdzone jest, że **usługa** musi być wybrana z BUR — warunek konieczny mechanizmu PSF niezależnie od regionu. Wpis **dostawcy** do BUR (konto + regulamin, jak w sekcji wyżej) jest tu wymagany pośrednio, tą samą drogą co dla każdej usługi w BUR — bo usługa nie może być opublikowana bez zarejestrowanego za nią dostawcy (Regulamin BUR, Załącznik nr 4 „Zasady funkcjonowania Dostawców usług"; źródła w `./psf.md`). To nie jest osobny, PSF-specyficzny przepis analogiczny do KFS — wynika z ogólnej mechaniki BUR. **Status: niesprawdzone** — nie potwierdzono bezpośrednio, czy poszczególni operatorzy regionalni PSF nakładają na dostawcę dodatkowe kryteria ponad ten bazowy wpis.
 
 ## Karta Usługi — obowiązkowe pola
 
 Z podsumowań instrukcji PARP (Załącznik nr 2 do Regulaminu BUR) obowiązkowe elementy Karty Usługi obejmują co najmniej: tytuł usługi, opis usługi, efekty uczenia się, grupę docelową. Od zmiany regulaminu z 5 maja 2026 r. dochodzą dodatkowo: pole "Liczba godzin zegarowych usługi" (godzina zegarowa staje się jedyną obowiązującą miarą czasu trwania usługi w BUR), pola dot. liczby godzin praktycznych indywidualnych i godzin zdalnych w usługach mieszanych, dane osób prowadzących (uzupełniane już na etapie publikacji karty) oraz — dla większości podrodzajów usług poza doradztwem biznesowym i usługami zdalnymi — pole określające wariant zajęć. Suma godzin w harmonogramie musi być zgodna z liczbą godzin zegarowych zadeklarowaną w karcie.
 
-**Status: lista pól potwierdzona w kilku niezależnych źródłach wtórnych, ale nie zweryfikowana wprost w treści Załącznika nr 2 — traktuj jako punkt wyjścia do karty specyfikacji w `/02-szablony-dokumentow/karta-uslugi-bur.md`, do potwierdzenia przy bezpośrednim dostępie do dokumentu PARP.**
+**Status: niesprawdzone — lista pól została zebrana z kilku niezależnych źródeł wtórnych, ale nie została zweryfikowana wprost w treści Załącznika nr 2. To jest punkt wyjścia do karty specyfikacji w `/02-szablony-dokumentow/karta-uslugi-bur.md` i wymaga bezpośredniego dostępu do dokumentu PARP przed uznaniem polem na stałe.**
 
 ## Kod usługi
 
-System BUR nadaje każdej opublikowanej usłudze unikalny kod/numer. W pliku `brandbook.dc.html` (canvas foundera, materiał inspiracyjny — patrz `/CLAUDE.md`) pojawia się przykładowy zapis `2025/00817/PPUR` przy makiecie karty usługi BUR. **To jest obserwacja z materiału inspiracyjnego, nie potwierdzony oficjalny format kodu** — nie udało się zweryfikować struktury tego numeru (znaczenia segmentów) w źródłach dostępnych w tej sesji z powodu zablokowanego dostępu do domeny PARP. Do potwierdzenia przed wpisaniem jako wymóg do jakiejkolwiek karty specyfikacji.
+System BUR nadaje każdej opublikowanej usłudze unikalny kod/numer. W pliku `brandbook.dc.html` (canvas foundera, materiał inspiracyjny — patrz `/CLAUDE.md`) pojawia się przykładowy zapis `2025/00817/PPUR` przy makiecie karty usługi BUR. **To jest obserwacja z materiału inspiracyjnego, nie potwierdzony oficjalny format kodu** — nie udało się zweryfikować struktury tego numeru (znaczenia segmentów) w źródłach dostępnych w tej sesji z powodu zablokowanego dostępu do domeny PARP. Status: niesprawdzone; format kodu nie może być wpisany jako wymóg do karty specyfikacji bez bezpośredniego odczytu regulaminu.
 
 ## Ocena usługi po zakończeniu
 
@@ -37,7 +37,7 @@ Po zakończeniu usługi dostawca ma **7 dni** na oznaczenie statusu każdego ucz
 
 Regulamin BUR przewiduje oficjalny wzór dokumentu — **Załącznik nr 12 do Regulaminu, "Zaświadczenie o zakończeniu udziału w usłudze rozwojowej"** (wersja obowiązująca od 1 kwietnia 2025 r., zgodnie ze znalezionym plikiem). **Nie udało się pobrać treści tego wzoru** w tej sesji (domena hostująca dokument jest zablokowana przez proxy) — dokładna lista pól wymaganych na zaświadczeniu nie jest tu potwierdzona. Z podsumowań wtórnych wynika, że dokument potwierdzający ukończenie usługi musi wskazywać osiągnięte efekty uczenia się (lub inne efekty usługi) i jednoznacznie identyfikować usługę oraz uczestnika; dokumentację potwierdzającą ukończenie stanowią też listy obecności potwierdzone przez osobę prowadzącą oraz — dla usług zdalnych — raporty logowań.
 
-**Status: do potwierdzenia bezpośrednim odczytem Załącznika nr 12, zanim karta specyfikacji certyfikatu (`/02-szablony-dokumentow/certyfikat.md`, zadanie 10) uzna którekolwiek pole za prawnie obowiązkowe na tej podstawie.**
+**Status: niesprawdzone — brak bezpośredniego odczytu Załącznika nr 12. Karta specyfikacji certyfikatu (`/02-szablony-dokumentow/certyfikat.md`, zadanie 10) nie może uznać żadnego pola za prawnie obowiązkowe, dopóki nie pojawi się źródłowy odczyt wzoru zaświadczenia.**
 
 ## Co z tego jest prawnie wiążące dla dokumentów IRIN
 

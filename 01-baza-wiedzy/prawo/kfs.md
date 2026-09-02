@@ -1,6 +1,6 @@
 # Krajowy Fundusz Szkoleniowy (KFS)
 
-Status weryfikacji: ustalenia poniżej pochodzą z wyszukiwania w źródłach wtórnych (portale urzędów pracy, portale branżowe) wykonanego 2026-09-02, zgodnych ze sobą w kilku niezależnych źródłach — nie z bezpośredniego odczytu pełnego tekstu aktu prawnego w Dzienniku Ustaw. Traktuj to jako materiał do potwierdzenia przy każdym użyciu do rozstrzygnięcia prawnego wymogu w konkretnym dokumencie, nie jako zamknięte ustalenie. Falsyfikator: treść rozporządzenia Ministra Rodziny, Pracy i Polityki Społecznej z 25 listopada 2025 r. w sprawie KFS, odczytana wprost z Dziennika Ustaw, różniąca się od podsumowania niżej.
+Status weryfikacji: ustalenia poniżej są **niesprawdzone** u źródła. W dniu 2026-09-02 domena `dziennikustaw.gov.pl` była niedostępna z sesji Claude Code, a żaden dokument pierwotny nie został dostarczony do katalogu `01-baza-wiedzy/prawo/zrodla/`. Poniższe informacje mają charakter roboczy, nie są traktowane jako ostateczna interpretacja aktu prawnego i muszą zostać zweryfikowane przez bezpośredni odczyt rozporządzenia albo PDF dostarczony przez foundera.
 
 ## Co to jest KFS
 
