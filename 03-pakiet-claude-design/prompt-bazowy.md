@@ -12,9 +12,7 @@ Projektujesz dokument dla **IRIN (Instytut Rozwoju i Nauki)** — polskiej firmy
 
 **Typografia.** Krój **Manrope** (wagi 200-800) jako podstawowy; **Inconsolata** pomocniczo, do danych liczbowych, metadanych i kodów usług.
 
-## Czego jeszcze nie masz — i co z tym zrobić
-
-**Paleta barw i siatka A4 nie są jeszcze zatwierdzone przez foundera.** Dopracowana propozycja czeka w `./propozycja-palety-i-siatki-do-potwierdzenia.md` — możesz się nią inspirować, ale **nie traktuj jej jako wiążącej specyfikacji**. Jeśli zlecenie wymaga konkretnych kolorów lub siatki modułowej, a nie dostałeś ich jawnie w tym zleceniu: zapytaj, zamiast zgadywać albo przyjmować propozycję automatycznie jako ostateczną.
+**Siatka i paleta.** Siatka A4 (6 kolumn, moduł 25 mm, gutter 4 mm) i paleta 12 kolorów (w tym Miedź `#8C5026` i Karmin `#AC151F` — zmienione względem `brandbook.dc.html` po pomiarze kontrastu) są zatwierdzone przez foundera — pełna specyfikacja i reguła 80/15/5 w `./format-paczki.md`. Trzymaj się dokładnie tych wartości, nie przybliżaj ich "na oko".
 
 ## Co rozstrzyga treść dokumentu — warstwy 1 i 2
 

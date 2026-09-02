@@ -1,6 +1,6 @@
 # Propozycja dopracowanej palety i siatki A4
 
-**Status: siatka A4 — ZATWIERDZONA przez foundera (2026-09-02, Opcja 1). Paleta barw — nadal DO POTWIERDZENIA** (dwa otwarte punkty niżej: użycie Miedzi, ryzyko Karmin/Aksamit) — patrz zadanie 13 w `/PLAN.md` i sekcja o `brandbook.dc.html` w `/CLAUDE.md`. Siatka jest już wpisana jako obowiązująca w `./format-paczki.md`; paleta trafi tam dopiero po rozstrzygnięciu pozostałych punktów.
+**Status: ZATWIERDZONE w całości przez foundera (2026-09-02)** — siatka A4 (Opcja 1) i paleta barw (Miedź pogłębiona, Karmin zmieniony na wyrazistą karmazynową czerwień). Obie specyfikacje są już wpisane jako obowiązujące w `./format-paczki.md`. Ten plik zostaje jako zapis pomiaru i uzasadnienia decyzji — nie jest już "do potwierdzenia".
 
 ## Punkt wyjścia
 
@@ -15,9 +15,9 @@
 | Muślin | `#F7F3EA` | tło strony | Espresso na Muślin: **16,10:1** | nie podano | AAA ✓ |
 | Aksamit | `#4A1D26` | akcent dziedziny: Pedagogika | **11,95:1** na Kaszmir | 10,4:1 AAA | AAA (7:1) ✓ — liczba w kanwie zaniżona, wniosek ten sam |
 | Onyks | `#1B2B26` | akcent dziedziny: Pożyczki UE/BGK | **12,58:1** na Kaszmir | 13,4:1 AAA | AAA (7:1) ✓ — liczba w kanwie zawyżona, wniosek ten sam |
-| **Miedź** | `#A15C2C` | akcent dziedziny: Akademia AI | **4,37:1** na Kaszmir | 3,7:1 "AA large" | **Nie spełnia AA dla tekstu normalnego (4,5:1).** Spełnia AA large (3:1) i AAA large (4,5:1) — na granicy. |
+| **Miedź** (nowa) | `#8C5026` | akcent dziedziny: Akademia AI | **5,42:1** na Kaszmir | — | AA (4,5:1) ✓ — po pogłębieniu, patrz niżej |
 | Sepia | `#5B4837` | tekst pomocniczy | **7,36:1** na Kaszmir; 6,26:1 na Pergaminie | nie podano | AAA na Kaszmir ✓, AA (nie AAA) na Pergaminie |
-| Karmin | `#8B2E3A` | link, stan aktywny | **7,01:1** na Kaszmir | nie podano | AAA (7:1) ✓ — na granicy |
+| **Karmin** (nowy) | `#AC151F` | link, stan aktywny | **6,17:1** na Kaszmir | — | AAA (7:1) blisko ✓ — po zmianie odcienia, patrz niżej |
 | Pergamin | `#E4DACB` | drugi neutral (tło) | — | — | — |
 | Werdykt | `#2F4A32` | stan potwierdzony (tło) | tekst Kaszmir na Werdykt: **8,32:1** | nie podano | AAA ✓ |
 | Rubryka | `#D9AC4A` | marker CMYK (tło) | tekst Espresso na Rubryka: **6,38:1** | nie podano | AA (4,5:1) ✓, nie AAA |
@@ -25,10 +25,26 @@
 
 **Metodologia:** kontrast liczony wg standardowego wzoru WCAG 2.1 (luminancja względna sRGB), skryptem uruchomionym w tej sesji — nie przepisany z kanwy. Rozbieżności między liczbą zmierzoną a liczbą w kanwie (Aksamit, Onyks) nie zmieniają wniosku (obie i tak przechodzą AAA), ale pokazują, że liczby w kanwie są przybliżeniem, nie precyzyjnym pomiarem — stąd zalecenie, żeby przy każdej przyszłej zmianie palety przeliczać kontrast na nowo, nie kopiować starych liczb.
 
-### Dwa realne problemy do decyzji foundera
+### Dwa problemy — ROZWIĄZANE decyzją foundera (2026-09-02)
 
-1. **Miedź (`#A15C2C`, Akademia AI) nie nadaje się na kolor tekstu korpusu** — 4,37:1 nie spełnia progu AA dla normalnego tekstu (4,5:1), tylko dla tekstu dużego/pogrubionego i elementów graficznych. W kanwie Miedź bywa użyta jako kolor liczby ("648 zł" po dofinansowaniu, `brandbook.dc.html:344`) — przy dużym rozmiarze fontu (20 px) to mieści się w normie AA large, ale nie należy tym kolorem pisać zwykłego tekstu akapitowego. **Do decyzji: zaakceptować to ograniczenie użycia (Miedź tylko do dużych elementów), czy pogłębić odcień, żeby Miedź spełniała 4,5:1 też dla tekstu normalnego?**
-2. **Karmin (`#8B2E3A`, link/stan) i Aksamit (`#4A1D26`, domena Pedagogika) są wizualnie zbliżone** — oba to ciemne bordo, wzajemny kontrast między nimi to tylko 1,71:1. Na dokumencie z dziedziny Pedagogika (gdzie Aksamit jest kolorem sygnującym dziedzinę) użycie Karminu na linku obok elementu w Aksamicie może się zlewać wizualnie i zacierać rozróżnienie "to jest link/stan" od "to jest kolor dziedziny". **Do decyzji: zaakceptować to ryzyko (dokumenty rzadko łączą oba kolory blisko siebie), czy zmienić odcień jednego z nich?**
+**1. Miedź pogłębiona.** Founder wybrał pogłębienie odcienia zamiast ograniczenia użycia. Metoda: ten sam odcień/nasycenie (H 24,6° / S 57%), jasność obniżona z 40% do 35%.
+
+| | Hex | Kontrast na Kaszmir | Kontrast na Pergaminie |
+|---|---|---|---|
+| Miedź — stara | `#A15C2C` | 4,37:1 (nie AA tekst) | — |
+| **Miedź — nowa** | **`#8C5026`** | **5,42:1 (AA, blisko AAA large)** | **4,61:1 (AA)** |
+
+Miedź w nowym odcieniu można używać jako kolor tekstu normalnego, nie tylko dużych elementów — ograniczenie z propozycji roboczej już nie obowiązuje.
+
+**2. Karmin zmieniony na wyrazistą karmazynową czerwień.** Founder wybrał zmianę odcienia zamiast akceptacji ryzyka. Stary Karmin (`#8B2E3A`) i Aksamit (`#4A1D26`) leżały niemal w tym samym wąskim paśmie barwy (348°–352° w skali HSL) — różniły je głównie jasność i nasycenie, nie barwa, stąd wizualne zlewanie się. Poprawka: przesunięcie w stronę czystszej, bardziej nasyconej czerwieni (karmazyn) i podniesienie nasycenia z 50% do 78% — Karmin ma teraz czytelnie inny charakter (żywa czerwień) niż Aksamit (przyciemnione, stonowane bordo), nie tylko inny numer barwy.
+
+| | Hex | HSL | Kontrast na Kaszmir | Kontrast na Pergaminie |
+|---|---|---|---|---|
+| Karmin — stary | `#8B2E3A` | 352° / 50% / 36% | 7,01:1 (AAA, na granicy) | nie liczono |
+| **Karmin — nowy** | **`#AC151F`** | **356° / 78% / 38%** | **6,17:1 (AAA)** | **5,25:1 (AA)** |
+| Aksamit (bez zmian, dla porównania) | `#4A1D26` | 348° / 44% / 20% | 11,95:1 | — |
+
+**Zastrzeżenie metodologiczne:** wzajemny kontrast WCAG między nowym Karminem a Aksamitem (miara luminancji, nie barwy) pozostaje niski — WCAG mierzy jasność, nie odróżnialność barwy. Rzeczywista poprawa czytelności różnicy bierze się stąd, że nowy Karmin jest wyraźnie bardziej nasycony (żywa czerwień) niż stonowany, przyciemniony Aksamit — to różnica odczytywana okiem, nie liczbą kontrastu. Jeśli po zobaczeniu obu kolorów obok siebie na realnym dokumencie różnica nadal wyda się za mała, wróć do tego punktu.
 
 ## Siatka A4 — ZATWIERDZONA (Opcja 1)
 
@@ -51,14 +67,14 @@ Dwie poprawki, które faktycznie mieszczą się na A4 pion przy zachowanych marg
 Kanwa opisuje regułę opisowo (`brandbook.dc.html:213-215`); tu doprecyzowanie, które kolory wchodzą do której warstwy, żeby dało się to sprawdzić na gotowym dokumencie:
 
 - **80% — baza:** Kaszmir (tło karty), Muślin (tło strony), Espresso (tekst korpusu), Pergamin (drugie tło neutralne), Sepia (tekst pomocniczy). Wszystko, co nie niesie znaczenia kategoryzującego.
-- **15% — sygnał dziedziny:** dokładnie jeden z trzech — Aksamit (Pedagogika), Miedź (Akademia AI, z zastrzeżeniem o kontraście wyżej), Onyks (Pożyczki UE/BGK) — na dokument. Nie mieszać dwóch kolorów dziedzinowych na jednej stronie.
-- **5% — aktywność i honor:** Karmin wyłącznie dla linków/stanów aktywnych (z zastrzeżeniem o zbliżeniu do Aksamitu wyżej), Werdykt dla stanu potwierdzonego, Rubryka jako marker. Złoto foliowe **wyłącznie** jako pieczęć/sygnatura — nigdy jako kolor tekstu czy tła większej powierzchni.
+- **15% — sygnał dziedziny:** dokładnie jeden z trzech — Aksamit (Pedagogika), Miedź `#8C5026` (Akademia AI), Onyks (Pożyczki UE/BGK) — na dokument. Nie mieszać dwóch kolorów dziedzinowych na jednej stronie.
+- **5% — aktywność i honor:** Karmin `#AC151F` wyłącznie dla linków/stanów aktywnych, Werdykt dla stanu potwierdzonego, Rubryka jako marker. Złoto foliowe **wyłącznie** jako pieczęć/sygnatura — nigdy jako kolor tekstu czy tła większej powierzchni.
 
-## Co dokładnie ma zatwierdzić founder
+## Decyzje foundera (2026-09-02) — wszystkie cztery punkty rozstrzygnięte
 
-1. Nazwy i przypisania 12 kolorów jako oficjalne nazewnictwo marki IRIN (Kaszmir, Espresso, Złoto foliowe, Aksamit, Miedź, Onyks, Pergamin, Sepia, Karmin, Muślin, Werdykt, Rubryka) — czy zostają, czy founder chce inne nazwy/przypisania dziedzin.
-2. Ograniczenie użycia Miedzi do dużych elementów (nie tekstu korpusu) — akceptacja albo zlecenie pogłębienia odcienia.
-3. Ryzyko zbliżenia Karmin/Aksamit — akceptacja albo zmiana odcienia.
-4. ~~Wybór między Opcją 1 (moduł 25 mm) a Opcją 2 (5 kolumn, margines 16 mm) dla siatki A4~~ — **ZATWIERDZONE: Opcja 1** (2026-09-02).
+1. **Nazwy i przypisania 12 kolorów** — przyjęte: founder edytował konkretne kolory pod tymi nazwami (Miedź, Karmin), nie zgłaszając zastrzeżeń do samego nazewnictwa ani przypisań dziedzinowych — traktowane jako akceptacja dorozumiana. Jeśli to złe odczytanie, popraw tutaj.
+2. **Miedź** — pogłębiona do `#8C5026` (zamiast ograniczenia użycia).
+3. **Karmin** — zmieniony na `#AC151F` (zamiast akceptacji ryzyka zbliżenia z Aksamitem).
+4. **Siatka A4** — Opcja 1 (6 kolumn, moduł 25 mm).
 
-Punkty 2 i 3 czekają na decyzję; punkt 1 (nazewnictwo) przyjęty roboczo, do jawnego potwierdzenia albo odrzucenia razem z punktami 2-3. Dopiero po ich rozstrzygnięciu paleta trafia do `./format-paczki.md` jako obowiązująca specyfikacja — siatka już tam jest.
+Cała specyfikacja (paleta + siatka) jest teraz wpisana jako obowiązująca w `./format-paczki.md`.
