@@ -32,12 +32,18 @@ Nie były ponumerowane wyżej, bo PLAN.md nie przewidywał jeszcze tych plików 
 
 ## Warstwa 3 — pakiet Claude Design
 
-15. Zdefiniować format paczki wejściowej dla Claude Design → `03-pakiet-claude-design/format-paczki.md`. **[FOUNDER] — w pełni rozstrzygnięte (2026-09-02):** siatka A4 (6 kolumn, moduł 25 mm, gutter 4 mm — poprawka błędu wymiarów z kanwy) i paleta 12 kolorów (Miedź pogłębiona do `#8C5026`, Karmin zmieniony na `#AC151F`) zatwierdzone przez foundera i wpisane do `format-paczki.md`. Historia decyzji: `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
+15. Zdefiniować format paczki wejściowej dla Claude Design → `03-pakiet-claude-design/format-paczki.md`. **[FOUNDER] — rozstrzygnięte (2026-09-02):** siatka A4 (6 kolumn, moduł 25 mm, gutter 4 mm — poprawka błędu wymiarów z kanwy) i paleta zatwierdzone przez foundera; paleta obowiązuje w wersji 14-kolorowej „Kaszmir Wyciszony”. Obie specyfikacje leżą w `01-baza-wiedzy/identyfikacja/`, a `format-paczki.md` do nich odsyła i dokłada zasady użycia. Historia pierwszej decyzji: `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
 16. Napisać prompt bazowy dla Claude Design, odwołujący się do warstw 1 i 2 → `03-pakiet-claude-design/prompt-bazowy.md`.
 
 ## Domknięcie projektu
 
-17. Etapy 0-5 z bramkami, podział na to, co robi Claude Code, co rozstrzyga founder i co wymaga odczytu dokumentów u źródła → `MAPA-DROGOWA.md`. Zadania 18+ powstaną z tej mapy po decyzji foundera o wariancie zamknięcia (A: repozytorium gotowe do użycia, B: dodatkowo jeden dokument pilotażowy w Claude Design).
+17. Etapy 0-5 z bramkami, podział na to, co robi Claude Code, co rozstrzyga founder i co wymaga odczytu dokumentów u źródła → `MAPA-DROGOWA.md`. Zrealizowane.
+18. Etap 0, higiena: poprawić nieaktualne zdania w `00-INDEX.md`, `01-baza-wiedzy/README.md` i tym pliku; scalić PR #4, zamknąć PR #6. Zrealizowane 2026-09-02, poza usunięciem dwóch martwych gałęzi (blokuje to proxy sesji; do zrobienia w GitHubie ręcznie).
+19. Etap 1, decyzje foundera: wpisać do plików rozstrzygnięcia o formie prawnej, siedzibie i danych rejestrowych (zrobione 2026-09-02) oraz o konwencji papieru firmowego i wizytówki (e-mail, telefon, adres strony, format 85 × 55 mm) → `02-szablony-dokumentow/papier-firmowy.md`. **[FOUNDER]** dla drugiej części.
+20. Etap 2, weryfikacja prawna u źródła: siedem ustaleń z tabeli w `MAPA-DROGOWA.md` (Załączniki 2 i 12 Regulaminu BUR, format kodu usługi, rozporządzenie KFS z Dziennika Ustaw, kryteria operatorów PSF, karta usługi na etapie wniosku KFS, Księga FE) → pliki w `01-baza-wiedzy/prawo/` i karty w `02-szablony-dokumentow/`. Wymaga dostępu do domen PARP i Dziennika Ustaw albo dokumentów dostarczonych przez foundera.
+21. Etap 3, karty warstwy 2: każde „do potwierdzenia przez foundera” zamienić na decyzję albo na status „otwarte do pierwszego użycia” z nazwą dokumentu → wszystkie pliki w `02-szablony-dokumentow/`.
+22. Etap 4, pilot: zbudować paczkę dla papieru firmowego i wizytówki wg `03-pakiet-claude-design/format-paczki.md`, przeprowadzić przez Claude Design, wpisać wyniki czterech falsyfikatorów (polskie znaki na wagach 500 i 600, Karmin obok Aksamitu, siatka 25 mm z treścią, H3 obok leadu) → `01-baza-wiedzy/identyfikacja/`. **[FOUNDER]** wykonuje część w Claude Design.
+23. Etap 5, zamknięcie: `PLAN.md` bez pozycji otwartych, `README.md` ze stanem „gotowe do użycia” i datą, tag `v1.0` na `main`.
 
 ## Decyzje foundera — rozstrzygnięte
 
@@ -47,12 +53,17 @@ Nie były ponumerowane wyżej, bo PLAN.md nie przewidywał jeszcze tych plików 
 - **Tryb monochromatyczny - odrzucony (2026-09-02)**: rozważany był wariant 6 „Druk Ekonomiczny” jako osobny tryb mono dla zaświadczeń KFS. Founder wybrał jedną paletę na wszystko. Skutek: obowiązkowa etykieta słowna albo ikona przy każdym statusie jest teraz jedynym zabezpieczeniem czytelności w druku mono.
 - **Poziom H3 - zatwierdzony (2026-09-02)**: Manrope 600 / 16 px / interlinia 1,3, czyli stopień leadu z podniesioną wagą. Kanwa nie definiowała tego poziomu. Wpisany do `03-pakiet-claude-design/format-paczki.md` wraz z pełną skalą typograficzną.
 
-- **Paleta barw** (12 kolorów, "Colorbook Kaszmir Aksamit", reguła 80/15/5) i **siatka A4**: kierunek z `brandbook.dc.html` zaakceptowany, dopracowany i **w pełni zatwierdzony (2026-09-02)** — siatka 6 kolumn / moduł 25 mm / gutter 4 mm (poprawka błędu wymiarów oryginału), Miedź pogłębiona do `#8C5026`, Karmin zmieniony na `#AC151F`. Specyfikacja: `03-pakiet-claude-design/format-paczki.md`.
+- **Paleta barw i siatka A4 - pierwsza decyzja (2026-09-02, rano)**: kierunek z `brandbook.dc.html` zaakceptowany i dopracowany — siatka 6 kolumn / moduł 25 mm / gutter 4 mm (poprawka błędu wymiarów oryginału), paleta 12 kolorów z Miedzią pogłębioną do `#8C5026` i Karminem `#AC151F`. Siatka obowiązuje w tej postaci do dziś. Paleta 12-kolorowa została tego samego dnia zastąpiona 14-kolorowym wariantem 2 (pozycja pierwsza tej listy); zapis zostaje jako historia. Obowiązujące specyfikacje: `01-baza-wiedzy/identyfikacja/`.
 - **Logotyp - komplet zasad zatwierdzony**: minimalny rozmiar (18 mm / 90 px) i przestrzeń ochronna (x = wysokość liter sygnetu) potwierdzone wcześniej; **cztery zakazy modyfikacji** - zmiany koloru, obracania i odbijania, cienia i obrysu, nieproporcjonalnego rozciągania - potwierdzone 2026-09-02, wcześniej były tylko odczytem z kanwy. Specyfikacja przeniesiona do `01-baza-wiedzy/identyfikacja/logotyp.md`. Nadal niepotwierdzone dwie drobne pozycje z kanwy, opisane tam wprost: minimalny rozmiar samodzielnego sygnetu (10 mm / 44 px) i reguła o kontraście znaku na akcentach dziedzinowych (4,5:1).
 - **Aplikacje dla przedstawicieli handlowych**: narzędzie wewnętrzne IRIN — CRM/aplikacja dla własnych handlowców (lead-y, prowizje, raportowanie sprzedaży szkoleń i pożyczek), nie produkt na sprzedaż zewnętrzną.
 - **Usługi pozyskiwania pożyczek UE/BGK**: pośrednictwo finansowania rozwojowego dla firm (B2B) — doradztwo i pośrednictwo w pozyskiwaniu dotacji UE i pożyczek BGK dla małych i średnich przedsiębiorstw.
 - **Portal sprzedaży szkoleń online**: model hybrydowy — portal sprzedaje miejsca na szkolenia (w tym dofinansowane KFS/BUR) i pozwala je zrealizować zdalnie (webinary, materiały do pobrania), bez pełnej platformy LMS.
 
-## Decyzja do potwierdzenia przez foundera (nowa)
+- **Dane rejestrowe i forma prawna (2026-09-02, wieczór)**: founder potwierdził, że dane z `01-baza-wiedzy/firma/kontekst-firmy-sanitized.md` (Instytut Rozwoju i Nauki sp. z o.o., siedziba w Kielcach, KRS, NIP, REGON) są poprawne i zostają w publicznym repozytorium. Dane kontaktowe (e-mail, telefon, adres strony) zostały wcześniej usunięte zasadą minimalizacji (PR #4). Sprzeczność między `kontekst-firmy.md` (brak danych) a wersją sanitized rozstrzygnięta na rzecz sanitized; napis „Warszawa” z kanwy nie obowiązuje. Wpisane do `kontekst-firmy.md` i `02-szablony-dokumentow/papier-firmowy.md`.
+- **Wariant zamknięcia projektu: B (2026-09-02)**: repozytorium plus jeden dokument pilotażowy (papier firmowy i wizytówka) przeprowadzony przez Claude Design, żeby sprawdzić cztery falsyfikatory identyfikacji na realnym dokumencie. Etapy i bramki: `MAPA-DROGOWA.md`.
+- **Porządek w PR-ach (2026-09-02)**: PR #4 scalony, PR #6 zamknięty jako zastąpiony przez PR #5, gałęzie `copilot/irin-brandbook-os` i `claude/irin-color-palette-variants-tjjnza` do usunięcia ręcznie w GitHubie.
 
-- Czy dane rejestrowe IRIN (KRS/NIP/REGON/adres/kontakt) w `01-baza-wiedzy/firma/kontekst-firmy-sanitized.md` mogą zostać w publicznym repozytorium — są jawne w KRS, ale to founder decyduje, czy mają trafić do publicznego repo.
+## Decyzje do potwierdzenia przez foundera
+
+- Konwencja papieru firmowego i wizytówki z kanwy: e-mail, telefon i adres strony na papierze, wizytówka 85 × 55 mm awers i rewers → `02-szablony-dokumentow/papier-firmowy.md`. Blokuje pilota (zadanie 22).
+- Pozycje do odłożenia do pierwszego użycia dokumentu: tabela w `MAPA-DROGOWA.md`, grupa II.

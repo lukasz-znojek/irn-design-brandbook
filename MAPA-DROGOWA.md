@@ -1,6 +1,6 @@
 # Mapa drogowa domknięcia projektu
 
-Stan na 2026-09-02, po scaleniu PR #8 (logotyp w warstwie 1). Ten plik odpowiada na trzy pytania: co jest zrobione, co zostało, w jakiej kolejności to zamykać. Kolejka zadań pozostaje w `PLAN.md`; tutaj są etapy, bramki i zależności między nimi.
+Stan na 2026-09-02 wieczorem, po scaleniu PR #4 i #8 oraz po trzech decyzjach foundera z tego dnia (wariant zamknięcia, dane firmy, porządek w PR-ach). Ten plik odpowiada na trzy pytania: co jest zrobione, co zostało, w jakiej kolejności to zamykać. Kolejka zadań pozostaje w `PLAN.md`; tutaj są etapy, bramki i zależności między nimi.
 
 ## Skąd wiadomo, że projekt jest gotowy
 
@@ -11,7 +11,7 @@ Repozytorium nie definiuje wprost, co znaczy „projekt zamknięty”. Z `CLAUDE
 | **A. Repozytorium gotowe do użycia** | Trzy warstwy kompletne i spójne, żadna karta nie zawiera pozycji „do potwierdzenia przez foundera”, każde ustalenie prawne ma źródło pierwotne albo jawny status niesprawdzone. | Etapy 0-3 poniżej. |
 | **B. Repozytorium sprawdzone w boju** | To, co w A, plus co najmniej jeden dokument przeprowadzony przez pełną ścieżkę: paczka wg `format-paczki.md`, prompt bazowy, wynik z Claude Design, wnioski wpisane z powrotem do warstwy 1. | Etapy 0-4 poniżej. |
 
-**Rekomendacja: wariant B z jednym dokumentem pilotażowym.** Powód, który da się obalić: cztery specyfikacje identyfikacji mają wpisane falsyfikatory, których nie sprawdzi żaden przegląd plików, tylko realny dokument (polskie znaki na wagach 500 i 600, Karmin obok Aksamitu na papierze, sześć kolumn po 25 mm z realną treścią, H3 obok leadu). Zamknięcie bez pilota zostawia te cztery pozycje otwarte na zawsze. Jeżeli founder uzna, że pilot należy już do „użytkowania”, a nie do „budowy”, wariant A jest domknięciem poprawnym i o jeden etap krótszym.
+**Decyzja foundera (2026-09-02): wariant B z jednym dokumentem pilotażowym.** Powód, który da się obalić: cztery specyfikacje identyfikacji mają wpisane falsyfikatory, których nie sprawdzi żaden przegląd plików, tylko realny dokument (polskie znaki na wagach 500 i 600, Karmin obok Aksamitu na papierze, sześć kolumn po 25 mm z realną treścią, H3 obok leadu). Zamknięcie bez pilota zostawia te cztery pozycje otwarte na zawsze. Jeżeli founder uzna, że pilot należy już do „użytkowania”, a nie do „budowy”, wariant A jest domknięciem poprawnym i o jeden etap krótszym.
 
 ## Co jest zrobione
 
@@ -21,21 +21,21 @@ Repozytorium nie definiuje wprost, co znaczy „projekt zamknięty”. Z `CLAUDE
 | 1 - identyfikacja | Paleta 14 kolorów „Kaszmir Wyciszony”, siatka A4, typografia z H3, logotyp z czterema zakazami. Wszystkie cztery zatwierdzone przez foundera. Tokeny maszynowe w jednym JSON. | `01-baza-wiedzy/identyfikacja/`, decyzje w `PLAN.md`, sekcja „Decyzje foundera - rozstrzygnięte”. |
 | 2 - szablony | Siedem kart specyfikacji: viewbook, karta usługi BUR, certyfikat, papier firmowy i wizytówka, materiał sprzedażowy, program szkolenia, prezentacja sprzedażowa. Każda rozróżnia trzy kategorie elementów. | Pomiar w tej sesji: w każdym z siedmiu plików występują wszystkie trzy hasła („prawnie obowiązkowe”, „konwencja”, „swobodny wybór”). |
 | 3 - pakiet | Format paczki z sześcioma zasadami użycia, prompt bazowy odsyłający do warstw 1 i 2, historia decyzji o palecie i siatce. | `03-pakiet-claude-design/`. |
-| Zadania z `PLAN.md` | 16 z 16 ponumerowanych zadań ma plik docelowy. | Lista w `PLAN.md`; brak zadań 17+. |
+| Zadania z `PLAN.md` | 16 z 16 pierwotnych zadań ma plik docelowy; zadania 17-23 odwzorowują etapy tej mapy, 17 i 18 zrealizowane. | Lista w `PLAN.md`, sekcja „Domknięcie projektu”. |
 
 ## Co zostało
 
 Cztery grupy pracy, różne co do tego, kto je może wykonać.
 
-### Grupa I - higiena repozytorium (może zrobić Claude Code, bez decyzji foundera)
+### Grupa I - higiena repozytorium (zrealizowana 2026-09-02, PR #9)
 
-1. Cztery zdania, które opisują stan nieaktualny:
+1. Cztery zdania, które opisywały stan nieaktualny, poprawione:
    - `01-baza-wiedzy/00-INDEX.md`, wiersz o siatce: „jedną otwartą rozbieżnością co do jednostki bazowej 6 mm”, a `siatka-a4.md` ma tę sprawę rozstrzygniętą.
    - `01-baza-wiedzy/README.md`: „na razie paletę barw”, a w `identyfikacja/` są cztery specyfikacje.
    - `PLAN.md`, zadanie 15: „paleta 12 kolorów (...) wpisane do `format-paczki.md`”, a obowiązuje 14 kolorów w warstwie 1 i `format-paczki.md` już palety nie zawiera.
    - `PLAN.md`, wiersz „Paleta barw (12 kolorów, Colorbook Kaszmir Aksamit) (...) Specyfikacja: `format-paczki.md`”: ta sama nieaktualność co wyżej.
-2. `PLAN.md` nie ma zadań 17+; kolejka kończy się na promptcie bazowym, choć praca trwa. Do dopisania zadania z tej mapy.
-3. Dwa otwarte PR-y i trzy martwe gałęzie (rozstrzygnięcie niżej, w grupie IV).
+2. `PLAN.md` dostał zadania 17-23 odwzorowujące etapy tej mapy.
+3. PR-y i gałęzie: rozstrzygnięte w grupie IV; zostało ręczne usunięcie dwóch gałęzi.
 
 ### Grupa II - decyzje foundera (blokują karty warstwy 2 i pilota)
 
@@ -43,13 +43,13 @@ Każda pozycja to jedno zdanie, z plikiem, który na nią czeka. Podział na to,
 
 **Blokujące pilota (papier firmowy i wizytówka):**
 
-| Decyzja | Czeka plik | Co się zmieni po decyzji |
+| Decyzja | Stan | Czeka plik |
 |---|---|---|
-| Czy dane rejestrowe (KRS, NIP, REGON, adres) zostają w publicznym repozytorium. | `01-baza-wiedzy/firma/kontekst-firmy-sanitized.md`, `PLAN.md` | Tak: dane wchodzą do paczki papieru firmowego. Nie: paczka dostaje placeholder, a dane przychodzą przy każdym zleceniu. |
-| Forma prawna i siedziba IRIN. | `02-szablony-dokumentow/papier-firmowy.md`, `01-baza-wiedzy/firma/kontekst-firmy.md` | Rozstrzyga, który zestaw danych jest prawnie obowiązkowy na papierze firmowym. |
-| Czy papier firmowy zawiera e-mail, telefon i adres strony, a wizytówka ma format 85 × 55 mm, awers i rewers. | `02-szablony-dokumentow/papier-firmowy.md` | Z obserwacji z kanwy staje się konwencją IRIN albo zostaje swobodnym wyborem projektowym. |
+| Czy dane rejestrowe (KRS, NIP, REGON, adres) zostają w publicznym repozytorium. | **Rozstrzygnięte 2026-09-02: tak.** Dane wchodzą do paczki papieru firmowego. | Wpisane do `kontekst-firmy-sanitized.md`, `kontekst-firmy.md`, `PLAN.md`. |
+| Forma prawna i siedziba IRIN. | **Rozstrzygnięte 2026-09-02:** sp. z o.o., siedziba w Kielcach. Sprzeczność między `kontekst-firmy.md` (brak danych, napis „Warszawa” z kanwy odrzucony) a `kontekst-firmy-sanitized.md` (sp. z o.o., Kielce, KRS) rozstrzygnięta na rzecz sanitized; jedna wersja w trzech plikach. | Wpisane do `kontekst-firmy.md` i `02-szablony-dokumentow/papier-firmowy.md`. |
+| Czy papier firmowy zawiera e-mail, telefon i adres strony, a wizytówka ma format 85 × 55 mm, awers i rewers. | **Otwarte.** Z obserwacji z kanwy staje się konwencją IRIN albo zostaje swobodnym wyborem projektowym. | `02-szablony-dokumentow/papier-firmowy.md` |
 
-**Sprzeczność do nazwania obiema stronami, zanim founder odpowie:** `kontekst-firmy.md` mówi, że siedziba i forma prawna to brak danych, a napis „Warszawa” z kanwy nie jest przyjmowany. `kontekst-firmy-sanitized.md` podaje „Instytut Rozwoju i Nauki sp. z o.o.” i adres w Kielcach z numerem KRS. `papier-firmowy.md` opiera się na pierwszym z tych plików. Po decyzji foundera ma zostać jedna wersja we wszystkich trzech miejscach.
+Dwie pozycje wymagane przez art. 206 KSH, których repozytorium nie zawiera (oznaczenie sądu rejestrowego, wysokość kapitału zakładowego), founder odczytuje z KRS przy zleceniu pilota; to dane wejściowe, nie decyzja.
 
 **Do odłożenia, aż powstanie dokument, którego dotyczą:**
 
@@ -82,16 +82,16 @@ Jeśli dostęp do tych domen nadal będzie zablokowany, dokumenty musi dostarczy
 
 | Pozycja | Stan zmierzony w tej sesji | Rekomendacja |
 |---|---|---|
-| PR #4 „finalize post-merge follow-ups” (`chore/post-merge-followups-psf-bur-kontekst`) | 1 commit, 3 pliki, 11 commitów za `main`, scalenie bez konfliktów (sprawdzone `git merge-tree`). Rozstrzyga pośrednio wymóg wpisu dostawcy do BUR dla PSF i usuwa e-mail, telefon i adres strony z karty kontekstu firmy. | **Scalić**, bo zawęża otwarte pytanie o PSF i realizuje zasadę minimalizacji danych. Uwaga: usunięcie danych kontaktowych to część decyzji foundera o danych rejestrowych; scalenie nie zamyka tej decyzji, tylko zmniejsza jej zakres do KRS, NIP, REGON i adresu. |
-| PR #6 „Siedem wariantów palety v2” (`claude/irin-color-palette-variants-dl9lge`) | Dodaje katalog `02-branding/` z siedmioma wariantami. Ta sama treść trafiła już do `main` przez PR #5, w katalogu `_robocze/paleta-v2/`. | **Zamknąć bez scalenia** jako zastąpiony; scalenie stworzyłoby drugą kopię wariantów w katalogu, którego architektura trzech warstw nie przewiduje. |
-| Gałęzie `copilot/irin-brandbook-os`, `claude/irin-color-palette-variants-tjjnza` | 0 commitów przed `main`. | Usunąć (odwracalne: `git push origin <gałąź>` z lokalnej kopii przywraca). Usunięcie czeka na decyzję foundera. |
+| PR #4 „finalize post-merge follow-ups” (`chore/post-merge-followups-psf-bur-kontekst`) | 1 commit, 3 pliki, scalenie bez konfliktów (sprawdzone `git merge-tree`). Rozstrzyga pośrednio wymóg wpisu dostawcy do BUR dla PSF i usuwa e-mail, telefon i adres strony z karty kontekstu firmy. | **Scalony 2026-09-02** za zgodą foundera. |
+| PR #6 „Siedem wariantów palety v2” (`claude/irin-color-palette-variants-dl9lge`) | Dodawał katalog `02-branding/` z siedmioma wariantami. Ta sama treść trafiła do `main` przez PR #5, w katalogu `_robocze/paleta-v2/`. | **Zamknięty bez scalenia 2026-09-02** jako zastąpiony. |
+| Gałęzie `copilot/irin-brandbook-os`, `claude/irin-color-palette-variants-tjjnza`, po zamknięciu także `chore/post-merge-followups-psf-bur-kontekst` i `claude/irin-color-palette-variants-dl9lge` | 0 commitów przed `main` (dwie pierwsze), scalona albo zastąpiona (dwie kolejne). Founder zgodził się na usunięcie. | **Do usunięcia ręcznie w GitHubie** (zakładka Branches). Proxy sesji odrzuca `git push --delete`, próba z tej sesji nie przeszła. Odwracalne: gałąź da się przywrócić z lokalnej kopii albo z zakładki zamkniętego PR. |
 
 ## Etapy i bramki
 
 ```mermaid
 flowchart TD
-    S0["Etap 0 - higiena<br/>4 nieaktualne zdania, PLAN 17+,<br/>PR #4 scalić, PR #6 zamknąć"]
-    S1["Etap 1 - decyzje foundera<br/>3 blokujące pilota + 6 do odłożenia"]
+    S0["Etap 0 - higiena - ZROBIONE<br/>4 zdania poprawione, PLAN 17-23,<br/>PR #4 scalony, PR #6 zamknięty"]
+    S1["Etap 1 - decyzje foundera<br/>2 z 3 blokujących pilota podjęte,<br/>1 otwarta + 6 do odłożenia"]
     S2["Etap 2 - weryfikacja prawna<br/>BUR zał. 2 i 12, kod usługi,<br/>KFS z Dz.U., operatorzy PSF"]
     S3["Etap 3 - domknięcie kart warstwy 2<br/>każde „do potwierdzenia” zamienione<br/>na decyzję albo status niesprawdzone"]
     S4["Etap 4 - pilot w Claude Design<br/>papier firmowy i wizytówka:<br/>paczka, prompt, wynik, wnioski do warstwy 1"]
@@ -124,8 +124,8 @@ Etapy 1 i 2 są niezależne i mogą iść równolegle: pierwszy wymaga foundera,
 
 | Etap | Kto wykonuje | Warunek wyjścia (mierzalny) |
 |---|---|---|
-| 0 - higiena | Claude Code | `grep` po czterech nieaktualnych zdaniach zwraca zero trafień; `PLAN.md` ma zadania 17+; na GitHubie nie ma otwartego PR poza bieżącym. |
-| 1 - decyzje foundera | Founder, Claude Code wpisuje | Trzy decyzje blokujące pilota wpisane do `PLAN.md` w sekcji „rozstrzygnięte”; sprzeczność o siedzibę i formę prawną ma jedną wersję w trzech plikach. |
+| 0 - higiena | Claude Code | **Spełnione 2026-09-02:** `grep` po czterech nieaktualnych zdaniach zwraca zero trafień; `PLAN.md` ma zadania 17-23; na GitHubie nie ma otwartego PR poza #9. Poza bramką zostało ręczne usunięcie gałęzi. |
+| 1 - decyzje foundera | Founder, Claude Code wpisuje | Trzy decyzje blokujące pilota wpisane do `PLAN.md` w sekcji „rozstrzygnięte” (dwie już są); sprzeczność o siedzibę i formę prawną ma jedną wersję w trzech plikach (zrobione). Zostaje konwencja papieru firmowego i wizytówki. |
 | 2 - weryfikacja prawna | Claude Code przy dostępie do PARP i Dz.U., inaczej founder dostarcza dokumenty | Każde z siedmiu ustaleń ma wpisane: odczytane u źródła albo status niesprawdzone z nazwanym powodem. Zero pozycji „do potwierdzenia przy dostępie do PARP”. |
 | 3 - karty warstwy 2 | Claude Code | `grep -i "do potwierdzenia przez foundera" 02-szablony-dokumentow/` zwraca zero trafień; pozycje odłożone mają status „otwarte do pierwszego użycia” z nazwą dokumentu. |
 | 4 - pilot | Founder w Claude Design, Claude Code buduje paczkę i spisuje wnioski | Cztery falsyfikatory z warstwy 1 (polskie znaki na 500 i 600, Karmin obok Aksamitu, siatka 25 mm z treścią, H3 obok leadu) mają wpisany wynik pomiaru w swoich plikach. |

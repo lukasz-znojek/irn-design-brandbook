@@ -1,10 +1,10 @@
 # Kontekst firmy — IRIN (Instytut Rozwoju i Nauki)
 
-Status: fakty poniżej pochodzą z `/CLAUDE.md` i z sekcji "Decyzje foundera — rozstrzygnięte" w `/PLAN.md`. Tam, gdzie repozytorium nie zawiera danych (historia, struktura organizacyjna), sekcja jest oznaczona jawnie jako brak, nie jako założenie.
+Status: fakty poniżej pochodzą z `/CLAUDE.md`, z sekcji "Decyzje foundera — rozstrzygnięte" w `/PLAN.md` oraz z `kontekst-firmy-sanitized.md` (forma prawna i dane rejestrowe, potwierdzone przez foundera 2026-09-02). Tam, gdzie repozytorium nie zawiera danych (historia, struktura zespołu), sekcja jest oznaczona jawnie jako brak, nie jako założenie.
 
 ## Nazwa i forma
 
-Pełna nazwa: **Instytut Rozwoju i Nauki**, skrót: **IRIN**. Firma działa na polskim rynku, w języku polskim — stąd wymóg z `/CLAUDE.md`, że każdy commitowany plik tego repozytorium jest po polsku.
+Pełna nazwa: **Instytut Rozwoju i Nauki**, skrót: **IRIN**. Forma prawna: **spółka z ograniczoną odpowiedzialnością** (Instytut Rozwoju i Nauki sp. z o.o.), siedziba w **Kielcach**. Numery rejestrowe (KRS, NIP, REGON) i adres siedziby są w `kontekst-firmy-sanitized.md`, sekcja „Kto jest dostawcą”; founder potwierdził 2026-09-02, że te dane są poprawne i mogą pozostać w publicznym repozytorium. Firma działa na polskim rynku, w języku polskim — stąd wymóg z `/CLAUDE.md`, że każdy commitowany plik tego repozytorium jest po polsku.
 
 ## Trzy linie biznesowe
 
@@ -30,6 +30,6 @@ Portal **jeszcze nie istnieje** — jest w fazie planowania. Model ustalony w `/
 
 ## Model organizacyjny i historia firmy
 
-**Brak danych w repozytorium.** Ani `/CLAUDE.md`, ani `/PLAN.md`, ani pliki logotypu, ani `brandbook.dc.html` nie zawierają informacji o strukturze organizacyjnej IRIN (liczba osób, działy, siedziba) ani o historii firmy (data założenia, kluczowe etapy rozwoju). `brandbook.dc.html` zawiera w jednym z makiet napis "Instytut Rozwoju i Nauki · Warszawa" — ale to element wstępnego canvasu foundera (materiał inspiracyjny do layoutu, nie ustalony fakt firmowy — patrz zasada w `/CLAUDE.md`), więc lokalizacja siedziby **nie jest tu przyjmowana jako potwierdzona**.
+**Brak danych w repozytorium.** Żaden plik nie zawiera informacji o strukturze zespołu IRIN (liczba osób, działy) ani o historii firmy (data założenia, kluczowe etapy rozwoju). Te dwie pozycje zostaną uzupełnione, gdy founder dostarczy dane; nie zostały tu zgadnięte. Nie blokują żadnej karty warstwy 2, więc ich brak nie wstrzymuje domknięcia projektu (patrz `/MAPA-DROGOWA.md`, decyzje do odłożenia).
 
-**Status: do potwierdzenia przez foundera.** Te dwie pozycje (model organizacyjny, historia) czeka się uzupełnić, gdy founder dostarczy dane — nie zostały tu zgadnięte.
+**Siedziba - rozstrzygnięta.** `brandbook.dc.html` zawiera w jednej z makiet napis "Instytut Rozwoju i Nauki · Warszawa". To element wstępnej kanwy foundera, nie fakt firmowy: siedziba spółki według KRS jest w Kielcach (potwierdzone przez foundera 2026-09-02, dane w `kontekst-firmy-sanitized.md`). Napis z kanwy nie wchodzi do żadnego dokumentu.
