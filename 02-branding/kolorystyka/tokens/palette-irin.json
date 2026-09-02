@@ -19,7 +19,65 @@
     ],
     "rodzina-pomocnicza": "Inconsolata",
     "zrodlo": "brandbook.dc.html sekcja 04",
-    "zmieniona": false
+    "zmieniona": false,
+    "skala": {
+      "display": {
+        "waga": 200,
+        "rozmiar-px": 72,
+        "interlinia": 0.92,
+        "tracking": "-0.03em"
+      },
+      "h1": {
+        "waga": 300,
+        "rozmiar-px": 40,
+        "interlinia": 1.0,
+        "tracking": "-0.02em"
+      },
+      "h2": {
+        "waga": 600,
+        "rozmiar-px": 24,
+        "interlinia": 1.1,
+        "tracking": "-0.01em"
+      },
+      "h3": {
+        "waga": 600,
+        "rozmiar-px": 16,
+        "interlinia": 1.3,
+        "zatwierdzony": "2026-09-02",
+        "uwaga": "stopień leadu z wagą 600; kanwa nie definiowała tego poziomu"
+      },
+      "lead": {
+        "waga": 500,
+        "rozmiar-px": 16,
+        "interlinia": 1.4
+      },
+      "body": {
+        "waga": 400,
+        "rozmiar-px": 13.5,
+        "interlinia": 1.55
+      },
+      "footnote": {
+        "waga": 400,
+        "rozmiar-px": 10,
+        "interlinia": 1.5
+      },
+      "kicker": {
+        "waga": 700,
+        "rozmiar-px": 14,
+        "tracking": "0.22em",
+        "transform": "uppercase"
+      },
+      "numeral": {
+        "waga": 800,
+        "rozmiar-px": 52,
+        "interlinia": 0.95,
+        "tracking": "-0.02em"
+      },
+      "mono": {
+        "rodzina": "Inconsolata",
+        "rozmiar-px": 10.5
+      }
+    }
   },
   "siatka-a4": {
     "kolumny": 6,
@@ -261,5 +319,10 @@
     "Kolor nigdy nie jest jedynym nośnikiem statusu - każdy stan wymaga etykiety słownej albo ikony (WCAG 1.4.1). Po konwersji do skali szarości Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność.",
     "Odnośnik wewnątrz boksu informacyjnego zawsze z podkreśleniem - Patyna i Onyks mają kontrast wzajemny 1,28:1.",
     "Złoto foliowe nigdy jako tło większej powierzchni ani jako kolor tekstu korpusu."
-  ]
+  ],
+  "tryb-mono": {
+    "status": "ODRZUCONY (2026-09-02)",
+    "decyzja": "Founder wybrał jedną paletę na wszystko. Wariant 6 (Druk Ekonomiczny) nie wchodzi jako osobny tryb monochromatyczny.",
+    "skutek": "W dokumentach drukowanych mono Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność. Jedynym zabezpieczeniem czytelności statusu pozostaje obowiązkowa etykieta słowna albo ikona - patrz ograniczenia."
+  }
 }

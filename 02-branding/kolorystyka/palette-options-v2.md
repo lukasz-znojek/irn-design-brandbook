@@ -29,7 +29,7 @@ Kolorystyka jest jedyną rzeczą, którą ten dokument proponuje zmienić. Typog
 | Liczba prowadząca | Manrope | 800 | 52 px | 0,95 | -0,02em |
 | Dane techniczne, kody usług | Inconsolata | 300-700 | 10,5 px | 1,5 | 0 |
 
-**Jedno odstępstwo do odnotowania:** kanwa nie definiuje poziomu H3 - ma stopień „lead 16 px / waga 500”. H3 w tym dokumencie to ten sam stopień z wagą podniesioną do 600, żeby układ demonstracyjny miał trzy poziomy nagłówka, o które prosi zadanie. To wyprowadzenie z istniejącej skali, nie nowy krój ani nowy stopień; jeśli ma pozostać, wymaga osobnego potwierdzenia.
+**H3 - zatwierdzony przez foundera (2026-09-02).** Kanwa nie definiowała tego poziomu; H3 to stopień leadu (16 px) z wagą podniesioną do 600. Wyprowadzenie z istniejącej skali, nie nowy krój ani nowy stopień. Wpisany do obowiązującej specyfikacji w `../../03-pakiet-claude-design/format-paczki.md`.
 
 ## Metodologia pomiaru kontrastu
 
@@ -800,7 +800,7 @@ Powód jest w pomiarach, nie w guście. Wariant zatwierdzony 2026-09-02 ma trzy 
 
 **Co ten wniosek obala:** jeśli powodem wstrzymania palety jest sam kierunek „ciepły papier plus bordo”, a nie jego szczegóły, to wariant 2 jest pracą w złą stronę i rekomendacja upada - wtedy odpowiedzią jest wariant 4 (granat urzędowy) albo 7 (ekranowy). Ta różnica jest jedynym pytaniem, na które nie da się odpowiedzieć pomiarem.
 
-**Rekomendacja dodatkowa, niezależna od wyboru numeru:** wariant 6 warto przyjąć nie jako paletę główną, tylko jako **obowiązkowy tryb mono** obok wybranego wariantu - dla zaświadczeń KFS i certyfikatów, które realnie bywają kserowane i skanowane. To nie konkuruje z wyborem 1-7, tylko go uzupełnia.
+**Rekomendacja dodatkowa - ODRZUCONA przez foundera (2026-09-02).** Proponowałem przyjąć wariant 6 jako obowiązkowy tryb mono obok wybranego, dla zaświadczeń KFS i certyfikatów, które bywają kserowane. Founder wybrał jedną paletę na wszystko. Skutek do zapamiętania: w druku mono Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność, więc jedynym zabezpieczeniem czytelności statusu pozostaje obowiązkowa etykieta słowna albo ikona - ta zasada obowiązuje tym bardziej, im mniej mamy trybów.
 
 **Rozstrzygnięcie (2026-09-02): founder wybrał wariant 2.** Rekomendacja została przyjęta. Wariant 2 jest wpisany jako obowiązujący w `../../03-pakiet-claude-design/format-paczki.md`; otwarte pozostają trzy sprawy poboczne: czy wariant 6 wchodzi jako obowiązkowy tryb mono, czy katalog `02-branding/` zostaje pod tym numerem, i czy poziom H3 zostaje na wadze 600.
 

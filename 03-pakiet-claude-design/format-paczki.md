@@ -95,7 +95,24 @@ Zasady **potwierdzone jako obowiązujące** (`/PLAN.md`, "Decyzje foundera — r
 
 ### 2. Typografia
 
-Krój: **Manrope**, wagi 200-800; pomocniczo **Inconsolata** (np. do danych liczbowych, metadanych, kodów usług). Źródło: `brandbook.dc.html` — nie jest na liście rozbieżności wymagających potwierdzenia w `/CLAUDE.md` (w przeciwieństwie do palety i siatki), więc traktowany tu jako przyjęty kierunek, nie tylko inspiracja. Oba kroje są darmowe i dostępne przez Google Fonts.
+Krój: **Manrope**, wagi 200-800; pomocniczo **Inconsolata** (dane liczbowe, metadane, kody usług). Oba kroje są darmowe i dostępne przez Google Fonts. Źródło skali: `brandbook.dc.html`, sekcja 04.
+
+Hierarchię buduje **waga jednego kroju**, nie zmiana rodziny - to zasada systemu, nie szczegół. Obowiązująca skala:
+
+| Poziom | Krój | Waga | Stopień | Interlinia | Tracking |
+|---|---|---|---|---|---|
+| Display (okładka) | Manrope | 200 | 72 px | 0,92 | -0,03em |
+| H1 - rozdział | Manrope | 300 | 40 px | 1,0 | -0,02em |
+| H2 - sekcja | Manrope | 600 | 24 px | 1,1 | -0,01em |
+| **H3 - podsekcja** | Manrope | 600 | 16 px | 1,3 | 0 |
+| Lead akapitu | Manrope | 500 | 16 px | 1,4 | 0 |
+| Korpus | Manrope | 400 | 13,5 px | 1,55 | 0 |
+| Przypis, metadane | Manrope | 400 | 10 px | 1,5 | 0 |
+| Kicker - drogowskaz sekcji | Manrope | 700 | 14 px | 1,2 | 0,22em, wersaliki |
+| Liczba prowadząca | Manrope | 800 | 52 px | 0,95 | -0,02em |
+| Dane techniczne, kody usług | Inconsolata | 300-700 | 10,5 px | 1,5 | 0 |
+
+**H3 - zatwierdzony przez foundera (2026-09-02).** Kanwa nie definiowała tego poziomu; H3 to stopień leadu (16 px) z wagą podniesioną do 600. Ruch zgodny z własną logiką systemu - różnicuje wagą, nie wprowadza nowego stopnia do skali. Odróżnia się od leadu wyłącznie wagą, więc H3 i lead nigdy nie powinny stać bezpośrednio obok siebie.
 
 ### 3. Treść merytoryczna — z warstwy 1 i 2
 
