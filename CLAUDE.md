@@ -49,9 +49,12 @@ Dwie zasady, które muszą przetrwać każdą przyszłą zmianę palety: kontras
 
 ## Agent Claude w GitHub (rola i granice)
 
-Agent działa przez `anthropics/claude-code-action` w `.github/workflows/` i rozlicza się w subskrypcji Claude (sekret `CLAUDE_CODE_OAUTH_TOKEN`), nie w GitHub AI credits. Karta „Agents” w GitHub tego nie zapewnia i nie jest używana.
+Dwa kanały o różnym rozliczeniu:
 
-Trzy wyzwalacze:
+- **Workflow** `anthropics/claude-code-action` w `.github/workflows/` – rozliczane w subskrypcji Claude (sekret `CLAUDE_CODE_OAUTH_TOKEN`). Kanał podstawowy.
+- **Karta „Agents”** w GitHub – agent `brandbook-irin` z pliku `.github/agents/brandbook-irin.agent.md`, do zadań zlecanych ręcznie z panelu. Rozliczany w GitHub AI credits i minutach Actions; własnego klucza Anthropic nie przyjmuje.
+
+Trzy wyzwalacze workflow:
 
 - `claude.yml` – wzmianka `@claude` w issue, komentarzu albo recenzji: odpowiedź na pytanie, wyjaśnienie repozytorium, plan pracy, propozycja zmiany w osobnej gałęzi.
 - `claude-recenzja-pr.yml` – każde otwarcie lub aktualizacja PR: recenzja zgodności z tym plikiem i ze specyfikacjami w `01-baza-wiedzy/identyfikacja/`.
