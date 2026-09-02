@@ -17,6 +17,8 @@ Wpis do BUR jest bezpłatny; kosztem po stronie IRIN jest uzyskanie i utrzymanie
 
 **Powiązanie z KFS:** od 1 stycznia 2026 r. wpis do BUR jest też warunkiem prowadzenia szkoleń finansowanych z Krajowego Funduszu Szkoleniowego — patrz `./kfs.md`. Dla IRIN oznacza to jeden wspólny wymóg rejestrowy dla obu ścieżek szkoleniowych, nie dwa osobne.
 
+**Powiązanie z PSF:** dla Podmiotowego Systemu Finansowania (PSF, patrz `./psf.md`) potwierdzone jest tylko, że **usługa** musi być wybrana z BUR — to jest warunek konieczny mechanizmu PSF niezależnie od regionu. Czy dodatkowo wymagany jest wpis **dostawcy** do BUR (analogicznie do KFS) — nie znaleziono tego wprost w wytycznych EFS+ dla programów regionalnych; **status: do potwierdzenia**, nie zakładać automatycznie tego samego wymogu co przy KFS.
+
 ## Karta Usługi — obowiązkowe pola
 
 Z podsumowań instrukcji PARP (Załącznik nr 2 do Regulaminu BUR) obowiązkowe elementy Karty Usługi obejmują co najmniej: tytuł usługi, opis usługi, efekty uczenia się, grupę docelową. Od zmiany regulaminu z 5 maja 2026 r. dochodzą dodatkowo: pole "Liczba godzin zegarowych usługi" (godzina zegarowa staje się jedyną obowiązującą miarą czasu trwania usługi w BUR), pola dot. liczby godzin praktycznych indywidualnych i godzin zdalnych w usługach mieszanych, dane osób prowadzących (uzupełniane już na etapie publikacji karty) oraz — dla większości podrodzajów usług poza doradztwem biznesowym i usługami zdalnymi — pole określające wariant zajęć. Suma godzin w harmonogramie musi być zgodna z liczbą godzin zegarowych zadeklarowaną w karcie.
