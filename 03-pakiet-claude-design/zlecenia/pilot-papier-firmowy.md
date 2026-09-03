@@ -70,7 +70,9 @@ Skopiuj `../prompt-bazowy.md` w całości i zastąp jego ostatnią sekcję „Zl
 
 Zdanie z żółcią i gęsią jest w tekście celowo: zawiera wszystkie polskie znaki diakrytyczne w obu wielkościach. Zachowaj je w każdej wadze użytej w piśmie.
 
-**Format wyniku:** PDF w skali 1:1 dla obu elementów oraz podgląd z naniesioną siatką sześciu kolumn (25 mm, gutter 4 mm) na stronie pierwszej papieru.
+**Format wyniku:** podgląd na żywej kanwie z przełącznikiem siatki sześciu kolumn (25 mm, gutter 4 mm) nad obiema stronami A4, oraz PDF w skali 1:1 dla obu elementów.
+
+**Kolejność ma znaczenie: najpierw kanwa, potem PDF.** Eksport do PDF nie osadza krojów z Google Fonts - w wyeksportowanym pliku tekst pokazuje krój zastępczy (`Segoe UI`/`Arial` zamiast Manrope, `Courier New` zamiast Inconsolaty). Pomiarów dotyczących liter i wag nie da się więc wykonać na PDF-ie; PDF służy do sprawdzenia proporcji, marginesów i skali 1:1.
 
 ---
 
@@ -78,12 +80,14 @@ Zdanie z żółcią i gęsią jest w tekście celowo: zawiera wszystkie polskie 
 
 Pilot ma wartość tylko wtedy, gdy jego wynik trafi do warstwy 1. Cztery pomiary i jedno pytanie; każdy ma wpisane, gdzie ląduje.
 
+**Dwie rzeczy do zapamiętania przed pierwszym pomiarem.** Po pierwsze: pomiary 1, 3 i 4 wykonuje się **na żywej kanwie, nie na wyeksportowanym PDF-ie** - eksport podmienia Manrope i Inconsolatę na kroje zastępcze, więc mierzyłbyś czcionkę systemową, a nie swoją. Po drugie: przełącznik `siatka` działa osobno na każdym artboardzie, więc do pomiaru 2 trzeba go włączyć dwa razy - na stronie pierwszej i na stronie kolejnej.
+
 | Nr | Co sprawdzić | Jak | Gdzie wpisać wynik |
 |---|---|---|---|
-| 1 | Polskie znaki na wagach 400, 500 i 600 (korpus, lead, H3) | Powiększyć zdanie testowe w PDF; szukać brakujących ogonków, kresek, zamienników z innego kroju. | `/01-baza-wiedzy/identyfikacja/typografia.md`, sekcja „Alfabet polski”: zmienić „pokrycie potwierdzone w zakresie, w jakim je zmierzono” na wynik, z datą. |
+| 1 | Polskie znaki na wagach 400, 500 i 600 (korpus, lead, H3) | Powiększyć zdanie testowe **na kanwie** (nie w PDF); szukać brakujących ogonków, kresek, zamienników z innego kroju. Komplet 18 diakrytyków stoi teraz w każdej z trzech wag - sprawdzone skryptem 2026-09-03, wcześniej pełny zestaw był tylko na wadze 400. | `/01-baza-wiedzy/identyfikacja/typografia.md`, sekcja „Alfabet polski”: zmienić „pokrycie potwierdzone w zakresie, w jakim je zmierzono” na wynik, z datą. |
 | 2 | Siatka 6 × 25 mm z realną treścią | Na podglądzie z siatką: czy blok danych rejestrowych, logotyp i kolumna tekstu siadają na kolumnach bez łamania modułu; czy margines prawy 22 mm nie wygląda na błąd. | `/01-baza-wiedzy/identyfikacja/siatka-a4.md`: dopisać sekcję „Pierwsze użycie” z wynikiem. |
 | 3 | H3 bezpośrednio pod leadem | Czy różnica wagi 500 wobec 600 przy tym samym stopniu 16 px jest widoczna bez kickera. Jeśli nie, zasada 5 z `format-paczki.md` (użyj kickera) zostaje potwierdzona jako konieczna. | `/01-baza-wiedzy/identyfikacja/typografia.md`, sekcja o H3. |
-| 4 | Sygnet samodzielny na rewersie wizytówki | Zmierzona szerokość sygnetu w mm i ocena czytelności. Jeśli stoi w 10 mm i jest czytelny, wiersz „10 mm / 44 px” w `logotyp.md` przechodzi z „nie potwierdzony osobno” na potwierdzony; jeśli nie, wpisać zmierzone minimum. | `/01-baza-wiedzy/identyfikacja/logotyp.md`, tabela minimalnych rozmiarów. |
+| 4 | Sygnet samodzielny na rewersie wizytówki | Zmierzona szerokość sygnetu w mm i ocena czytelności. Sygnet stoi na rewersie dokładnie w 10 mm (poprawione 2026-09-03 z 12 mm, żeby pomiar w ogóle dotyczył spornej wartości). Jeśli jest czytelny, wiersz „10 mm / 44 px” w `logotyp.md` przechodzi z „nie potwierdzony osobno” na potwierdzony; jeśli nie, wpisać zmierzone minimum. | `/01-baza-wiedzy/identyfikacja/logotyp.md`, tabela minimalnych rozmiarów. |
 | 5 | Dokument bez koloru dziedzinowego | Czy papier w samym Aksamicie jako `primary` czyta się jako spójny z systemem 80/15/5. Odpowiedź foundera po obejrzeniu wyniku. | `/01-baza-wiedzy/identyfikacja/paleta-barw.md`, sekcja o regule 80/15/5: dopisać zdanie o dokumentach ogólnofirmowych. |
 
 **Czego ten pilot nie sprawdzi:** kontrastu Karminu obok Aksamitu na realnym dokumencie. Papier firmowy i wizytówka nie mają stanu błędu, więc Karmin się na nich nie pojawia. Ten falsyfikator czeka na pierwszy dokument ze statusami (certyfikat albo karta usługi BUR) i jest tak zapisany w `/MAPA-DROGOWA.md`, bramka B.
@@ -94,6 +98,6 @@ Pilot ma wartość tylko wtedy, gdy jego wynik trafi do warstwy 1. Cztery pomiar
 
 Placeholdery, które zostają w kanwie i **mają zostać**: `[IMIĘ I NAZWISKO]`, `[STANOWISKO]`, `[TELEFON]` i `[E-MAIL]` na wizytówce - to pola osoby, uzupełniane przy druku dla konkretnego pracownika - oraz `[KOD]` kodu usługi BUR i data w treści pisma przykładowego.
 
-**Kanwa pilota już istnieje.** Artboardy `.dc.html` i `canvas.json`, z których 2026-09-02 zasiano kanwę Claude Design, leżą w `/_robocze/pilot-papier-firmowy/` (adres opublikowanej kanwy w tamtejszym `README.md`). Opublikowana wersja ma jeszcze `[KWOTA]` w bloku danych rejestrowych - pliki w repozytorium są już uzupełnione, więc po wpisaniu telefonu kanwę zasiewa się ponownie z nich, nie pisze od zera.
+**Kanwa pilota jest gotowa do zasiania, ale nigdy nie została opublikowana.** Artboardy `.dc.html` i `canvas.json` leżą w `/_robocze/pilot-papier-firmowy/`. Adres artefaktu podawany wcześniej w tamtejszym `README.md` nie istnieje na koncie (sprawdzone 2026-09-03) - to będzie pierwsza publikacja.
 
 Po wysłaniu i powrocie wyniku: wykonać punkt 3, potem zaktualizować `/PLAN.md` (zadanie 22) i `/MAPA-DROGOWA.md` (bramka B).
