@@ -316,6 +316,36 @@
       "para": "accent jako linia/ikona na surface",
       "kontrast": 3.17,
       "ocena": "OK (>=3:1)"
+    },
+    {
+      "para": "border na neutral-light",
+      "kontrast": 2.61,
+      "ocena": "PONIŻEJ PROGU"
+    },
+    {
+      "para": "accent na neutral-light",
+      "kontrast": 2.55,
+      "ocena": "PONIŻEJ PROGU"
+    },
+    {
+      "para": "warning na neutral-light",
+      "kontrast": 4.18,
+      "ocena": "tylko grafika i element interfejsu (3:1)"
+    },
+    {
+      "para": "text-secondary na neutral-light",
+      "kontrast": 6.02,
+      "ocena": "AA"
+    },
+    {
+      "para": "secondary na neutral-light",
+      "kontrast": 4.94,
+      "ocena": "AA"
+    },
+    {
+      "para": "text-primary na neutral-light",
+      "kontrast": 12.95,
+      "ocena": "AAA"
     }
   ],
   "regula-80-15-5": {
@@ -326,7 +356,8 @@
   "ograniczenia": [
     "Kolor nigdy nie jest jedynym nośnikiem statusu - każdy stan wymaga etykiety słownej albo ikony (WCAG 1.4.1). Po konwersji do skali szarości Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność.",
     "Odnośnik wewnątrz boksu informacyjnego zawsze z podkreśleniem - Patyna i Onyks mają kontrast wzajemny 1,28:1.",
-    "Złoto foliowe nigdy jako tło większej powierzchni ani jako kolor tekstu korpusu."
+    "Złoto foliowe nigdy jako tło większej powierzchni ani jako kolor tekstu korpusu.",
+    "Na tle Pergaminu (neutral-light) trzy pary spadają pod próg: border 2,61:1 i accent 2,55:1 (próg 3:1 dla grafiki), warning jako tekst 4,18:1 (próg 4,5:1). Wewnątrz calloutu i na każdym polu o tle Pergaminu nie stosuje się border jako linii, accent jako kreski ozdobnej ani warning jako koloru tekstu - zastąpienia: obrys text-secondary (6,02:1), kreska secondary (4,94:1), ostrzeżenie text-primary (12,95:1) z etykietą słowną. Pełna tabela dla trzech teł: paleta-barw.md, sekcja „Trzy pary poniżej progu”. Przeliczone 2026-09-03."
   ],
   "tryb-mono": {
     "status": "ODRZUCONY (2026-09-02)",

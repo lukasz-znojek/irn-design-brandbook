@@ -11,7 +11,7 @@ Wszystkie pliki z tego repozytorium, bez modyfikacji, w kolejności czytania prz
 | Kolejność | Plik | Rola w paczce |
 |---|---|---|
 | 1 | `../prompt-bazowy.md` z sekcją „Zlecenie” zastąpioną treścią z punktu 2 niżej | instrukcja główna |
-| 2 | `../format-paczki.md` | siedem zasad użycia specyfikacji |
+| 2 | `../format-paczki.md` | osiem zasad użycia specyfikacji |
 | 3 | `/02-szablony-dokumentow/papier-firmowy.md` | co jest prawnie obowiązkowe, co konwencją, co wyborem |
 | 4 | `/01-baza-wiedzy/identyfikacja/paleta-barw.md` | kolory i przepisane kolory etykiet |
 | 5 | `/01-baza-wiedzy/identyfikacja/siatka-a4.md` | siatka strony A4 |

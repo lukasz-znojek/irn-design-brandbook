@@ -12,24 +12,40 @@ Historia pierwszej decyzji z 2026-09-02, zastąpionej tą: [`../../03-pakiet-cla
 
 System ma dwie warstwy i obie obowiązują naraz: **nazwa koloru** (tożsamość marki, reguła 80/15/5, przypisanie dziedzin) i **token semantyczny** (rola w dokumencie i w interfejsie). Ten sam kolor ma zawsze obie etykiety - Aksamit *jest* tokenem `primary`, nie ma osobnego koloru wiodącego obok Aksamitu.
 
-| Kolor | Token | Hex | Rola | Kontrast na Kaszmir |
-|---|---|---|---|---|
-| Kaszmir | `surface` | `#FBF8F2` | papier, tło karty i tabeli | nie dotyczy (tło) |
-| Muślin | `background` | `#F6F2E9` | tło strony | nie dotyczy (tło) |
-| Pergamin | `neutral-light` | `#E7DFD2` | tło calloutu, pas nagłówka, etykieta na ciemnym wypełnieniu | nie dotyczy (tło) |
-| Espresso | `neutral-dark`, `text-primary` | `#221A15` | tusz uniwersalny, tekst korpusu, tło sekcji odwróconej | 16,15:1 |
-| Sepia | `text-secondary` | `#5E4E40` | tekst pomocniczy, metadane, przypisy, nagłówki kolumn | 7,50:1 |
-| **Aksamit** | `primary` | `#452430` | kolor wiodący: nagłówki H1/H2, wypełnienie CTA; akcent dziedziny **Pedagogika** | 12,80:1 |
-| **Miedź** | `secondary` | `#7A5638` | kolor wspierający: H3, podtytuły; akcent dziedziny **Akademia AI** | 6,16:1 |
-| **Onyks** | `info` | `#33474F` | nota informacyjna, boks „podstawa prawna”; akcent dziedziny **Pożyczki UE/BGK** | 9,19:1 |
-| Złoto foliowe | `accent` | `#A8874E` | pieczęć, sygnatura, cienka linia ozdobna | 3,17:1 |
-| Werdykt | `success` | `#2E5241` | stan potwierdzony: zatwierdzona karta usługi, zdany egzamin | 8,26:1 |
-| Rubryka | `warning` | `#8A6110` | stan wymagający uwagi: termin naboru, brakujący załącznik | 5,22:1 |
-| Karmin | `error` | `#9E2B2B` | stan błędu: odrzucony wniosek, niespełniony wymóg | 6,99:1 |
-| **Popiół** | `border` | `#938978` | linie tabeli, obrys karty i pola formularza | 3,25:1 |
-| **Patyna** | `link` | `#2F5A63` | odnośnik w treści i w interfejsie | 7,17:1 |
+| Kolor | Token | Hex | Rola | na Kaszmirze | na Muślinie | na Pergaminie |
+|---|---|---|---|---|---|---|
+| Kaszmir | `surface` | `#FBF8F2` | papier, tło karty i tabeli | nie dotyczy (tło) | - | - |
+| Muślin | `background` | `#F6F2E9` | tło strony | - | nie dotyczy (tło) | - |
+| Pergamin | `neutral-light` | `#E7DFD2` | tło calloutu, pas nagłówka, etykieta na ciemnym wypełnieniu | - | - | nie dotyczy (tło) |
+| Espresso | `neutral-dark`, `text-primary` | `#221A15` | tusz uniwersalny, tekst korpusu, tło sekcji odwróconej | 16,15:1 | 15,32:1 | 12,95:1 |
+| Sepia | `text-secondary` | `#5E4E40` | tekst pomocniczy, metadane, przypisy, nagłówki kolumn | 7,50:1 | 7,12:1 | 6,02:1 |
+| **Aksamit** | `primary` | `#452430` | kolor wiodący: nagłówki H1/H2, wypełnienie CTA; akcent dziedziny **Pedagogika** | 12,80:1 | 12,14:1 | 10,26:1 |
+| **Miedź** | `secondary` | `#7A5638` | kolor wspierający: H3, podtytuły; akcent dziedziny **Akademia AI** | 6,16:1 | 5,85:1 | 4,94:1 |
+| **Onyks** | `info` | `#33474F` | nota informacyjna, boks „podstawa prawna”; akcent dziedziny **Pożyczki UE/BGK** | 9,19:1 | 8,72:1 | 7,37:1 |
+| Złoto foliowe | `accent` | `#A8874E` | pieczęć, sygnatura, cienka linia ozdobna | 3,17:1 | 3,01:1 | **2,55:1** |
+| Werdykt | `success` | `#2E5241` | stan potwierdzony: zatwierdzona karta usługi, zdany egzamin | 8,26:1 | 7,83:1 | 6,62:1 |
+| Rubryka | `warning` | `#8A6110` | stan wymagający uwagi: termin naboru, brakujący załącznik | 5,22:1 | 4,95:1 | **4,18:1** |
+| Karmin | `error` | `#9E2B2B` | stan błędu: odrzucony wniosek, niespełniony wymóg | 6,99:1 | 6,63:1 | 5,60:1 |
+| **Popiół** | `border` | `#938978` | linie tabeli, obrys karty i pola formularza | 3,25:1 | 3,09:1 | **2,61:1** |
+| **Patyna** | `link` | `#2F5A63` | odnośnik w treści i w interfejsie | 7,17:1 | 6,80:1 | 5,75:1 |
 
-Wszystkie kontrasty policzone wzorem WCAG 2.1 na luminancji względnej sRGB. Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 3:1. **Każda para tekstowa w tej palecie przechodzi co najmniej AA, każdy element interfejsu co najmniej 3:1** - w tej palecie nie ma ani jednej pozycji poniżej progu.
+Wszystkie kontrasty policzone wzorem WCAG 2.1 na luminancji względnej sRGB, przeliczone od nowa 2026-09-03 dla wszystkich trzech teł. Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 3:1.
+
+## Trzy pary poniżej progu - na Pergaminie, nie na Kaszmirze
+
+**Poprzednia wersja tego pliku podawała kontrasty wyłącznie na Kaszmirze i stwierdzała, że w palecie nie ma ani jednej pozycji poniżej progu. To było prawdziwe dla Kaszmiru i nieprawdziwe dla Pergaminu.** Pergamin jest ciemniejszy od Kaszmiru o około 20 % luminancji, więc trzy pary spadają pod próg dokładnie tam, gdzie Pergamin bywa tłem: **wewnątrz calloutu i pod pasem nagłówka**.
+
+| Para | Kontrast na Pergaminie | Próg | Co przestaje działać |
+|---|---|---|---|
+| Popiół `#938978` | **2,61:1** | 3:1 dla grafiki | linia tabeli i obrys karty wewnątrz calloutu są niewidoczne |
+| Złoto foliowe `#A8874E` | **2,55:1** | 3:1 dla grafiki | cienka linia ozdobna na tle calloutu nie przechodzi |
+| Rubryka `#8A6110` jako tekst | **4,18:1** | 4,5:1 dla tekstu | ostrzeżenie pisane Rubryką w calloucie nie przechodzi AA |
+
+**Zasada wiążąca, wynikająca z tych trzech liczb:** wewnątrz calloutu i na każdym innym polu, którego tłem jest Pergamin, **nie stosuje się Popiołu jako linii ani Złota foliowego jako kreski ozdobnej, a Rubryki nie używa się jako koloru tekstu**. Obrys wewnątrz calloutu prowadzi się Sepią (6,02:1), kreskę ozdobną Miedzią (4,94:1), a ostrzeżenie pisze się Espresso (12,95:1) z etykietą słowną, bo kolor i tak nigdy nie jest jedynym nośnikiem statusu.
+
+**Czego ta tabela nie rozstrzyga:** kontrastów na tłach spoza palety - na kolorowym zdjęciu, na skanie, na papierze innym niż biały maszynowy. Tam liczy się od nowa, nie przenosi tych liczb.
+
+**Falsyfikator:** ponowne przeliczenie wzorem WCAG 2.1 na `tokeny/palette-irin.json` dające inną wartość niż w tabeli wyżej. Rachunek odtwarza się skryptem liczącym luminancję względną sRGB dla par (token, tło); kolumna „na Kaszmirze” jest w tym pliku od 2026-09-02 i przeliczenie z 2026-09-03 odtworzyło ją co do setnej, co jest kontrolą samej metody.
 
 ## Etykieta na wypełnieniu - kolor przepisany, nie dowolny
 
