@@ -98,7 +98,7 @@ Pilot ma wartość tylko wtedy, gdy jego wynik trafi do warstwy 1. Cztery pomiar
 
 Placeholdery, które zostają w kanwie i **mają zostać**: `[IMIĘ I NAZWISKO]`, `[STANOWISKO]`, `[TELEFON]` i `[E-MAIL]` na wizytówce - to pola osoby, uzupełniane przy druku dla konkretnego pracownika - oraz `[KOD]` kodu usługi BUR i data w treści pisma przykładowego.
 
-**Kanwa pilota została opublikowana 2026-09-03, ale adresu nie potwierdzono z sesji.** Artboardy `.dc.html` i `canvas.json` leżą w `/_robocze/pilot-papier-firmowy/`, tam też oba znane adresy kanwy. Publikacja zwróciła sukces, natomiast narzędzie listujące artefakty jest zależne od profilu konta i nie potrafiło potwierdzić nawet tej świeżo opublikowanej - więc przed pomiarami adres trzeba otworzyć w przeglądarce i sprawdzić naocznie.
+**Adresy kanwy sprawdzone w przeglądarce 2026-09-03: pomiarów nie robi się na żadnej z istniejących.** Artboardy `.dc.html` i `canvas.json` leżą w `/_robocze/pilot-papier-firmowy/`, tam też oba znane adresy kanwy. Publikacja zwróciła sukces, natomiast narzędzie listujące artefakty jest zależne od profilu konta i nie potrafiło potwierdzić nawet tej świeżo opublikowanej - więc przed pomiarami adres trzeba otworzyć w przeglądarce i sprawdzić naocznie.
 
 **Czego nie wysyła się do Claude Design: tego pliku.** Ma ścieżki lokalne, a Claude Design nie widzi dysku - ścieżka jest tam martwym adresem, który może zostać wzięty za zadanie do wykonania. Do wklejenia służy `pilot-papier-firmowy-do-wyslania.md` obok: ta sama treść bez ścieżek, z listą plików do wgrania na kanwę. Ten plik zostaje źródłem prawdy; tamten jest jego przekładem i po każdej zmianie tutaj trzeba go przełożyć od nowa.
 

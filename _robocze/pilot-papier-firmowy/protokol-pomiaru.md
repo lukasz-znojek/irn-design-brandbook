@@ -8,9 +8,11 @@ na trzech tłach zamiast jednego.
 
 ## Zanim zaczniesz mierzyć — trzy rzeczy
 
-1. **Otwórz adres kanwy w przeglądarce zalogowanej na właściwy profil i sprawdź, że działa.**
-   Publikacja zwróciła sukces, ale adresu nie potwierdzono z sesji; dwa znane adresy i uzasadnienie
-   są w `README.md` obok. To czynność właściciela, nie sesji.
+1. **Mierzysz na kanwie zasianej od nowa z paczki, nie na żadnej z istniejących.** Sprawdzone
+   w przeglądarce 2026-09-03: adres z 2026-09-03 zwraca „Page not found", a kanwa z 2026-09-02
+   działa, ale pokazuje wersję sprzed poprawek - jej notatka mówi „Sygnet na rewersie ma 12 mm",
+   choć sporną wartością jest 10 mm. Pomiar na niej mierzyłby wartości, które repozytorium już
+   poprawiło. Szczegóły: `README.md` obok.
 2. **Pomiary 1, 3, 4 i 6 robi się na żywej kanwie, nie na wyeksportowanym PDF-ie.** Eksport podmienia
    Manrope i Inconsolatę na kroje zastępcze, więc mierzyłbyś czcionkę systemową, a nie swoją.
 3. **Przełącznik `siatka` działa osobno na każdym artboardzie**, więc do pomiaru 2 trzeba go włączyć
