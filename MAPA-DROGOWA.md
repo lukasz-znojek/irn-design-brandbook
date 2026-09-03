@@ -67,7 +67,7 @@ Dwie pozycje wymagane przez art. 206 KSH (oznaczenie sądu rejestrowego, wysoko�
 
 Ustalenia prawne w warstwie 1 powstawały ze źródeł wtórnych, bo w sesjach, w których je spisywano, dostęp do domen PARP i Dziennika Ustaw był zablokowany. Każda pozycja ma wpisany falsyfikator; zamknięcie oznacza odczyt dokumentu i wpisanie wyniku. **Lista, z adresami, sposobem przekazania i statusem każdej pozycji: `01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`.** Tabela niżej to skrót.
 
-**Stan na 2026-09-03: pięć z ośmiu pozycji odczytanych u źródła, szósta w części.**
+**Stan na 2026-09-03: wszystkie osiem pozycji ma wpisany wynik — siedem odczytanych u źródła, jedna (nr 6) w części.**
 
 - **Pozycje 1-3 (BUR), 2026-09-02.** Founder dostarczył sześć plików PDF ze strony PARP (Regulamin BUR oraz Załączniki 1, 2g, 3, 4, 5); leżą w `01-baza-wiedzy/prawo/zrodla/`. Zamknęły wszystkie pozycje blokujące dwie karty warstwy 2. Odczyt obalił przy okazji założenie tej mapy: **Załącznika nr 12 z wzorem zaświadczenia już nie ma** - § 23 Regulaminu w wersji od 5 maja 2026 r. wymienia wyłącznie Załączniki 1-5, a wymogi zaświadczenia stoją dziś w Załączniku 4, Rozdział 2, pkt 3.
 - **Pozycje 4-5 (KFS), 2026-09-03.** Rozporządzenie o KFS i ustawa o rynku pracy pobrane wprost z Dziennika Ustaw, razem z ustawą o PARP potrzebną do identyfikacji rejestru z art. 128 ust. 2. `kfs.md` stoi dziś na tekstach aktów, nie na materiale wtórnym.
