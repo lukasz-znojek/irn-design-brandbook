@@ -48,7 +48,7 @@ Skopiuj `../prompt-bazowy.md` w całości i zastąp jego ostatnią sekcję „Zl
 
 *(Obie pozycje odczytane 2026-09-03 z odpisu pełnego w rejestrze KRS, `api-krs.ms.gov.pl`, stan z dnia 15.07.2026; zapis sądu pochodzi z pola „REJESTRACJA W KRAJOWYM REJESTRZE SĄDOWYM" odpisu, kwota z pola `wysokoscKapitaluZakladowego`. Founder potwierdza jednym spojrzeniem w odpis, zanim zlecenie pójdzie do Claude Design - dane rejestrowe zmieniają się wpisem, więc odczyt sprzed tygodnia nie jest gwarancją.)*
 
-**Dane kontaktowe do umieszczenia** (konwencja IRIN, wartości od foundera): e-mail [E-MAIL], telefon [TELEFON], strona [ADRES STRONY]. **To jedyne trzy pola, które zostały do wypełnienia** - repozytorium ich celowo nie przechowuje (zasada minimalizacji, `kontekst-firmy-sanitized.md`), a zgadywać ich nie wolno.
+**Dane kontaktowe do umieszczenia** (konwencja IRIN, wartości od foundera): e-mail **biuro@irin.pl**, telefon [TELEFON], strona **www.irin.pl**. E-mail i adres strony pochodzą z dokumentów foundera i są już wpisane w kanwie pilota (`/_robocze/pilot-papier-firmowy/`); w warstwie 1 celowo ich nie ma (zasada minimalizacji, `kontekst-firmy-sanitized.md`) i nie należy ich tam dopisywać. **Zostało jedno pole: telefon.** Zgadywać go nie wolno.
 
 **Pola wizytówki:** imię i nazwisko, stanowisko, telefon bezpośredni, e-mail. Na wzorze użyj placeholderów w nawiasach kwadratowych, nie zmyślonych osób.
 
@@ -90,6 +90,8 @@ Pilot ma wartość tylko wtedy, gdy jego wynik trafi do warstwy 1. Cztery pomiar
 
 ## 4. Co blokuje wysłanie
 
-Nic decyzyjnego. **Stan na 2026-09-03: z pięciu pól w nawiasach kwadratowych zostały trzy.** Sąd rejestrowy i kapitał zakładowy odczytano z rejestru KRS i wpisano do punktu 2; do wypełnienia zostają e-mail, telefon i adres strony - dane operacyjne, których repozytorium celowo nie trzyma.
+Nic decyzyjnego. **Stan na 2026-09-03: z pięciu pól w nawiasach kwadratowych zostało jedno - numer telefonu.** Sąd rejestrowy i kapitał zakładowy odczytano z rejestru KRS; e-mail i adres strony były już wpisane w kanwie pilota z dokumentów foundera.
+
+**Kanwa pilota już istnieje.** Artboardy `.dc.html` i `canvas.json`, z których 2026-09-02 zasiano kanwę Claude Design, leżą w `/_robocze/pilot-papier-firmowy/` (adres opublikowanej kanwy w tamtejszym `README.md`). Opublikowana wersja ma jeszcze `[KWOTA]` w bloku danych rejestrowych - pliki w repozytorium są już uzupełnione, więc po wpisaniu telefonu kanwę zasiewa się ponownie z nich, nie pisze od zera.
 
 Po wysłaniu i powrocie wyniku: wykonać punkt 3, potem zaktualizować `/PLAN.md` (zadanie 22) i `/MAPA-DROGOWA.md` (bramka B).
