@@ -16,17 +16,17 @@ Wynikają z `/01-baza-wiedzy/prawo/kfs.md` i `/01-baza-wiedzy/prawo/bur.md`:
 
 ## Konwencja organizacyjna IRIN
 
-Obie pozycje niżej mają status **otwarte do pierwszego zlecenia viewbooka**: to obserwacje z `brandbook.dc.html` (kanwa foundera, materiał inspiracyjny), nie ustalona konwencja. Founder rozstrzyga je przy pierwszym zleceniu, a decyzja trafia tutaj; do tego czasu Claude Design nie przyjmuje żadnej z nich za pewnik i projektuje miejsce na obie możliwości.
+Obie pozycje niżej zostały rozstrzygnięte przez foundera 2026-09-02.
 
-1. **Segmentacja treści wg dziedziny.** Kanwa pokazuje viewbook przypisany do jednej z trzech dziedzin: Pedagogika, Akademia AI, Pożyczki UE/BGK, co sugeruje osobny viewbook per dziedzina, nie jeden uniwersalny katalog. Za segmentacją przemawia reguła jednego koloru dziedzinowego na dokument z `/01-baza-wiedzy/identyfikacja/paleta-barw.md`: katalog łączony musiałby ją złamać albo zrezygnować z warstwy 15 %.
-2. **Cykl edycji.** Kanwa pokazuje oznaczenie "Viewbook · edycja 2024/2025", co sugeruje wydawanie w cyklu rocznym.
+1. **Segmentacja treści wg szkolenia.** Powstaje osobny viewbook dla każdego szkolenia; może zawierać jedno szkolenie albo zestaw kilku szkoleń. Pierwsze materiały dotyczą TUS (Treningu Umiejętności Społecznych) i Integracji Sensorycznej w dziedzinie Pedagogika. Szkolenia AI mają osobny szablon.
+2. **Uniwersalność.** Viewbook nie zawiera miejscowości ani daty, aby mógł być używany niezależnie od terminu i lokalizacji konkretnej edycji.
 
 ## Swobodny wybór projektowy
 
-Format (drukowany / PDF / oba), liczba stron, układ okładki, sposób prezentacji poszczególnych szkoleń w środku (siatka, lista, karty), typografia i kolorystyka w ramach specyfikacji z `/01-baza-wiedzy/identyfikacja/` (zasady użycia: `/03-pakiet-claude-design/format-paczki.md`) — wszystko to rozstrzyga się w Claude Design, nie w tym pliku.
+Format (drukowany / PDF / oba), liczba stron, układ okładki, sposób prezentacji poszczególnych szkoleń w środku (siatka, lista, karty), typografia i kolorystyka w ramach specyfikacji z `/01-baza-wiedzy/identyfikacja/` (zasady użycia: `/03-pakiet-claude-design/format-paczki.md`) — wszystko to rozstrzyga się w Claude Design, nie w tym pliku. Podstawowym formatem jest PDF.
 
 ## Treść merytoryczna do zebrania przed przekazaniem do Claude Design
 
-- Lista szkoleń/dziedzin do zaprezentowania w danej edycji (dane wejściowe od foundera — nie ma ich w tym repozytorium).
+- Lista szkoleń do zaprezentowania w danym viewbooku (dane wejściowe od foundera lub z BUR).
 - Dla każdego prezentowanego szkolenia: czy jest objęte KFS, BUR, czy oboma — od tego zależy, które zastrzeżenia prawne z sekcji wyżej mają zastosowanie.
 - Ewentualne dane kontaktowe/CTA (call to action) — do ustalenia z founderem, nie zakładane tutaj.

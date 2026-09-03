@@ -58,10 +58,10 @@ Dwie pozycje wymagane przez art. 206 KSH (oznaczenie sądu rejestrowego, wysoko�
 |---|---|
 | Czy viewbook wychodzi osobno per dziedzina (Pedagogika, Akademia AI, Pożyczki UE/BGK) i w cyklu rocznym. | `02-szablony-dokumentow/viewbook.md`, `karta-uslugi-bur.md` |
 | Czy certyfikat ma dwie wersje wdrożeniowe (kolumnowa, z pieczęcią) i regułę doboru wg kanału dystrybucji. | `02-szablony-dokumentow/certyfikat.md` |
-| Model organizacyjny i historia firmy. | `01-baza-wiedzy/firma/kontekst-firmy.md` |
-| Aplikacja sprzedażowa: platforma (web, mobile) i stan wdrożenia. | `01-baza-wiedzy/uslugi/aplikacje-sprzedazowe.md`, `02-szablony-dokumentow/material-sprzedazowy.md` |
-| Portal szkoleń: nazwa, termin, technologia webinarów, model cenowy. | `01-baza-wiedzy/uslugi/portal-szkolen.md` |
-| Minimalny rozmiar samodzielnego sygnetu (10 mm / 44 px) i kontrast znaku na akcentach dziedzinowych 4,5:1. | `01-baza-wiedzy/identyfikacja/logotyp.md` (plik sam odkłada to do pierwszego użycia sygnetu) |
+| Historia kluczowych etapów firmy oraz konkretne dane członków zespołu do dokumentów. | `01-baza-wiedzy/firma/kontekst-firmy.md` |
+| Nazwy ekranów, role użytkowników i dane demonstracyjne aplikacji sprzedażowej. | `01-baza-wiedzy/uslugi/aplikacje-sprzedazowe.md`, `02-szablony-dokumentow/material-sprzedazowy.md` |
+| Portal szkoleń: nazwa i termin uruchomienia. Pozostałe parametry (narzędzia, materiały, płatności, faktury i modele cenowe) ustalone. | `01-baza-wiedzy/uslugi/portal-szkolen.md` |
+| Konkretne dane osoby podpisującej dokumenty. | `02-szablony-dokumentow/certyfikat.md` |
 
 ### Grupa III - weryfikacja prawna u źródła pierwotnego
 
@@ -164,6 +164,5 @@ Etykiety: `warstwa-1`, `warstwa-2`, `warstwa-3` (której warstwy dotyczy praca) 
 
 ## Czego ta mapa nie rozstrzyga
 
-- Czy repozytorium ma zostać publiczne. Od tego zależy decyzja o danych rejestrowych, nie odwrotnie.
-- Czy `_robocze/copilot-v1/` (30 plików po angielsku) ma zostać w repozytorium jako archiwum, czy wyjść do osobnego archiwum poza nim. Nie blokuje żadnego etapu.
+- Repozytorium ma pozostać prywatne (ustalenie foundera z 2026-09-02).
 - Terminy. Etapy są ułożone wg zależności, nie wg kalendarza; czas etapu 1 zależy od foundera, etapu 2 od dostępu do dokumentów.

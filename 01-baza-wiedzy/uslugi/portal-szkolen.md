@@ -17,4 +17,4 @@ Model **hybrydowy** (`/PLAN.md`, sekcja "Decyzje foundera — rozstrzygnięte"):
 
 ## Braki — do potwierdzenia przez foundera
 
-Repozytorium nie zawiera: nazwy/marki portalu, planowanego terminu uruchomienia, wybranej technologii webinarów, zakresu materiałów do pobrania (pliki, nagrania, inne), ani modelu cenowego. Te decyzje nie są tu zgadywane — karta specyfikacji dowolnego dokumentu odwołującego się do portalu powinna je traktować jako otwarte, nie domyślne.
+Ustalenia foundera z 2026-09-02: portal nie ma jeszcze nazwy ani terminu uruchomienia. Webinary będą realizowane z wykorzystaniem gotowych narzędzi, z możliwością użycia prezentacji interaktywnych. Materiały obejmą PDF-y, nagrania, prezentacje i ćwiczenia. Portal ma obsługiwać płatności online i faktury. Dopuszczone są wszystkie rozważane modele cenowe: płatność za szkolenie, pakiety, abonament oraz bezpłatne materiały.

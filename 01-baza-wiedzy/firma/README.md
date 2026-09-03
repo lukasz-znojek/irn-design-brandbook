@@ -4,5 +4,5 @@ Fakty o samej firmie IRIN: czym się zajmuje, jakie ma linie biznesowe (aplikacj
 
 ## Pliki
 
-- [`kontekst-firmy.md`](kontekst-firmy.md) — pełna nazwa i forma prawna IRIN (sp. z o.o., siedziba w Kielcach), trzy linie biznesowe, planowany portal szkoleń; struktura zespołu i historia oznaczone jako brak danych, do uzupełnienia przez foundera.
+- [`kontekst-firmy.md`](kontekst-firmy.md) — pełna nazwa i forma prawna IRIN, siedziba w Kielcach, rok założenia 2023, struktura zespołu, trzy linie biznesowe i planowany portal szkoleń.
 - [`kontekst-firmy-sanitized.md`](kontekst-firmy-sanitized.md) — uzupełnienie o mechanikę nieopisaną w karcie wyżej: dane rejestrowe dostawcy, modele rozliczenia dofinansowania, granica compliance wkładu własnego.

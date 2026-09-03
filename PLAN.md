@@ -74,4 +74,4 @@ Wykonanie zadań 20-23 śledzą issues w GitHubie (nadrzędne: #29 etap 2, #38 e
 
 ## Decyzje do potwierdzenia przez foundera
 
-- Żadna nie blokuje pilota. Sześć pozycji odłożonych do pierwszego użycia dokumentu, którego dotyczą (viewbook, certyfikat, struktura zespołu i historia, aplikacja sprzedażowa, portal, sygnet): tabela w `MAPA-DROGOWA.md`, grupa II.
+- Żadna nie blokuje pilota. Pozostają decyzje zależne od pierwszego użycia: historia kluczowych etapów firmy, nazwa i termin portalu, nazwy ekranów aplikacji oraz konkretne dane podpisującego. Ustalenia o strukturze zespołu, viewbooku, certyfikacie, modelu portalu, aplikacji i syg­necie wpisano 2026-09-02 do odpowiednich plików. Archiwum `_robocze/copilot-v1/` usunięto na prośbę foundera.
