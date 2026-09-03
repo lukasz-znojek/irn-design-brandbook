@@ -398,6 +398,100 @@ nie ma (sprawdzone `grep` po czterech prefiksach katalogów: zero trafień).
 - [ ] **Krok 5:** zadać właścicielowi dwie decyzje, które z tego wynikają: rozszerzenie skali
       typograficznej i zatwierdzenie siatki slajdu jako piątej specyfikacji identyfikacji.
 
+### Zadanie S3: tury 2 i 3 briefu - lista rozszerzona 2026-09-03
+
+**Plik:** ten sam, `03-pakiet-claude-design/zlecenia/szablony-uniwersalne-do-wyslania.md`,
+rozszerzony o trzy bloki do wklejenia zamiast jednego. Powód podziału, do obalenia: jedna
+wiadomość zamawiająca około sześćdziesięciu artboardów da sześćdziesiąt płytkich.
+
+| Tura | Pozycje | Co zamawia |
+|---|---|---|
+| 1 | 1-8 | osiem szablonów dokumentów A4 |
+| 2 | 9-12 | pakiet znaku, wersje kolorystyczne i favicon jako propozycja, cztery wizytówki, sześć formatów social media w pięciu typach treści |
+| 3 | 13-16 | prezentacja w 24 wariantach slajdu, arkusz wzorcowy, wykresy plus zlecenie badawcze na paletę serii, pięć pozycji dołożonych z propozycji Claude Code |
+
+- [x] Brief rozszerzony, trzy bloki sprawdzone pod kątem ścieżek lokalnych: zero trafień w każdym.
+- [ ] **Krok 2:** właściciel wkleja turę 2, potem turę 3.
+- [ ] **Krok 3:** Claude Code weryfikuje rachunkiem to, co da się policzyć z plików projektu.
+- [ ] **Krok 4:** wpisać cztery rzeczy zwrócone przez projektanta: propozycje siatek dla trzech
+      formatów bez zatwierdzonej siatki (slajd 16:9, kadry social media, wizytówka), propozycję
+      palety serii, zmierzoną szerokość powiększonego sygnetu, obserwację o sygnecie poniżej 44 px.
+
+### Zadanie S4: paleta serii do wykresów - zlecenie badawcze
+
+**Właściciel poprosił, żeby spróbował Claude Design** („może Claude Design będzie potrafił, zleć
+mu"), po tym jak pomiar pokazał, że z obecnych czternastu kolorów palety serii zbudować nie można.
+
+Zmierzone walidatorem palet kategorialnych, tło Kaszmir `#FBF8F2`: trzy warianty, wszystkie FAIL.
+Przyczyna jedna i nie do obejścia doborem - nasycenie każdego koloru IRIN leży między **0,016
+a 0,085** w OKLCH przy podłodze **0,10**, a najciemniejsze mają jasność **0,226 - 0,406** przy
+dolnej granicy pasma **0,43**. Kaszmir Wyciszony jest celowo odsycony, więc barwy czytają się
+w wykresie jako szarości.
+
+Progi przyjęcia wpisane do briefu, żeby propozycja była policzalna, nie estetyczna: jasność
+0,43 - 0,77; nasycenie co najmniej 0,10; odróżnialność sąsiadów w wadach widzenia barw ΔE cel 8
+i podłoga 6 tylko przy drugim nośniku tożsamości; odróżnialność w widzeniu prawidłowym ΔE co
+najmniej 15; kontrast wobec tła co najmniej 3:1. Plus trzy ograniczenia z tożsamości IRIN:
+kolejność stała i nigdy zapętlana, maksimum osiem pozycji, zakaz użycia trzech kolorów dziedziny
+i trzech kolorów statusu.
+
+- [ ] **Krok 1:** odebrać propozycję z hexami, jasnością, nasyceniem i kontrastem przy każdej pozycji.
+- [ ] **Krok 2: weryfikacja tym samym walidatorem**, nie oceną wzrokową.
+
+```
+node scripts/validate_palette.js "<hexy z propozycji>" --mode light --surface "#FBF8F2"
+```
+
+Oczekiwane: `PASSED`. Każdy `FAIL` wraca do projektanta z nazwą sprawdzenia, nie z komentarzem
+o gustach.
+
+- [ ] **Krok 3:** przedstawić właścicielowi decyzję: czy identyfikacja dostaje **piątą
+      specyfikację** - osobny zestaw odcieni wyłącznie do wykresów. Bez niej kolorowych pulpitów
+      nie da się zrobić poprawnie, a wykresy zostają na sekwencji jednego odcienia, małych
+      wielokrotnościach i fakturze.
+- [ ] **Krok 4:** jeżeli tak - nowy plik `01-baza-wiedzy/identyfikacja/paleta-wykresow.md`
+      z falsyfikatorem: ponowne uruchomienie walidatora dające inny wynik.
+
+### Zadanie S5: trzy pliki, które nie powstają w Claude Design
+
+Wszystkie trzy z listy właściciela z 2026-09-03. Szczegóły i uzasadnienie: część C briefu.
+
+| Plik | Warunek wejścia | Uwaga |
+|---|---|---|
+| Arkusz `.xlsx` z tabelą, pasami wierszy i wykresami | pozycje 14 i 15 zamknięte na kanwie | pasy wierszy na parze Kaszmir `#FBF8F2` i Muślin `#F6F2E9`, kontrast **1,054:1** - zmierzone; Pergamin odpada przy **1,247:1** |
+| Szablon `.docx` do pisania pism | tura 1 zamknięta | sens polega na tym, że firma pisze pismo **bez** Claude Design |
+| Podpis e-mail w HTML | tura 1 zamknięta | art. 206 KSH wymaga danych rejestrowych na pismach spółki, a e-mail jest głównym kanałem pism wychodzących |
+
+- [ ] **Krok 1:** `.docx` i podpis e-mail po zamknięciu tury 1.
+- [ ] **Krok 2:** `.xlsx` po zamknięciu pozycji 14 i 15; przed wyborem kolorów wykresu wczytać
+      wytyczne do wizualizacji danych, nie dobierać ich z palety na oko.
+- [ ] **Krok 3: weryfikacja** - otworzyć każdy plik i sprawdzić, że działa, nie tylko że istnieje.
+
+### Zadanie S6: sprzeczność pozycji 1 z zakazem 1 - do rozstrzygnięcia przez właściciela
+
+**Polecenie:** „pakiet logo do użycia i faviconów w różnych kolorach".
+**Zakaz 1 z `01-baza-wiedzy/identyfikacja/logotyp.md`**, zatwierdzony przez właściciela
+2026-09-02: znaku się nie przebarwia; na ciemnym tle wchodzi wersja odwrócona, nie przebarwiona.
+
+Druga strona, niezależna od koloru: **favicon w 16 i 32 px stoi poniżej minimum 44 px** dla
+samodzielnego sygnetu. Favicon nie mieści się w obowiązującej specyfikacji przy żadnej barwie.
+
+Brief rozstrzyga to tak, że pakiet dopuszczony idzie jako zlecenie (pozycja 9), a wersje
+kolorystyczne i favicon jako osobny artboard oznaczony jako propozycja, z policzonym kontrastem
+każdej pary (pozycja 10). Liczby dla decyzji, przeliczone wzorem WCAG 2.1:
+
+| Znak w kolorze | na Aksamicie | na Miedzi | na Onyksie | Próg 3:1 |
+|---|---|---|---|---|
+| Espresso `#221A15`, kolor źródłowy | **1,26:1** | **2,62:1** | **1,76:1** | zawodzi wszędzie |
+| Kaszmir `#FBF8F2`, wersja odwrócona | 12,80:1 | 6,16:1 | 9,19:1 | przechodzi wszędzie |
+
+Wniosek obowiązujący **niezależnie od decyzji o kolorach**: na każdym z trzech kolorów dziedziny
+wchodzi wersja odwrócona znaku, nie źródłowa. To dotyczy wprost kolorowych wizytówek z pozycji 11.
+
+- [ ] **Krok 1:** zadać właścicielowi dwie decyzje osobno: czy zakaz 1 zostaje, i czy favicon
+      dostaje uproszczony znak jako utwór pochodny.
+- [ ] **Krok 2:** wpisać rozstrzygnięcie do `PLAN.md` i do `logotyp.md`, wraz z datą.
+
 ### Zadanie S2: dwie luki w palecie, wykryte pomiarem
 
 Obie policzone w tej sesji wzorem WCAG 2.1 i **już wpisane do briefu S1 jako zakazy**, bo bez nich

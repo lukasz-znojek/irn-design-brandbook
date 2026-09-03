@@ -69,10 +69,103 @@ układów. Wracają za to trzy rzeczy do wpisania: lista stopni pisma poniżej 7
 projektant faktycznie potrzebuje (wejście do decyzji o rozszerzeniu `01-baza-wiedzy/identyfikacja/typografia.md`),
 propozycja siatki dla slajdu 16:9 (piąta specyfikacja, do zatwierdzenia), i lista prymitywów,
 które w praktyce powtarzały się w szablonach.
+### Rozszerzenie listy - polecenie z 2026-09-03
+
+Doszło sześć pozycji: pakiet znaku i faviconów, wersje kolorystyczne wizytówek z powiększonym
+sygnetem, rozbudowany szablon prezentacji, arkusz z wykresami i paletą pól, szablony social media,
+plus „pomyśl co jeszcze potrzebne na start".
+
+**Zlecenie zostało podzielone na trzy tury wklejania, i to jest rekomendacja, nie wymóg.** Powód
+do obalenia: jedna wiadomość zamawiająca około sześćdziesięciu artboardów da sześćdziesiąt płytkich.
+Jeżeli wolisz wkleić wszystko naraz, brief na to pozwala - tury są rozdzielone znacznikami, nie
+zależnościami.
+
+| Tura | Co zamawia | Ile artboardów, orientacyjnie |
+|---|---|---|
+| 1 | osiem szablonów dokumentów A4 | 8 |
+| 2 | znak, favicon, wizytówki, social media | 4 grupy, około 20 kadrów |
+| 3 | prezentacja pełna, arkusz, wykresy, dodatki na start | około 30 slajdów plus 8 |
+
+### Sprzeczność, którą trzeba nazwać: pozycja 1 wobec zakazu 1
+
+**Polecenie:** „pakiet logo do użycia i faviconów w różnych kolorach".
+**Zakaz 1 z `01-baza-wiedzy/identyfikacja/logotyp.md`**, zatwierdzony przez właściciela 2026-09-02:
+„Nie zmieniamy koloru znaku. Ani sygnetu, ani wersji poziomej, ani pionowej. Znak jest
+jednokolorowy; na ciemnym tle stosuje się wersję odwróconą, a nie przebarwioną."
+
+Druga strona sprzeczności, niezależna od koloru: **favicon w 16 i 32 px stoi poniżej minimum
+44 px** dla samodzielnego sygnetu z tabeli w `logotyp.md`. Favicon w ogóle nie mieści się
+w obowiązującej specyfikacji, niezależnie od barwy.
+
+**Rozstrzygnięcie w tym briefie:** pakiet dopuszczony (pozycja 9) idzie jako zlecenie, a wersje
+kolorystyczne znaku i favicon (pozycja 10) jako **osobny artboard oznaczony jako propozycja,
+z policzonym kontrastem każdej pary**. Decyzja o zmianie zakazu 1 należy do właściciela; brief jej
+nie przesądza. Zmierzone, żeby decyzja miała liczby:
+
+| Znak w kolorze | na Aksamicie | na Miedzi | na Onyksie | Próg 3:1 |
+|---|---|---|---|---|
+| Espresso `#221A15` (kolor źródłowy) | **1,26:1** | **2,62:1** | **1,76:1** | zawodzi wszędzie |
+| Kaszmir `#FBF8F2` (wersja odwrócona) | 12,80:1 | 6,16:1 | 9,19:1 | przechodzi wszędzie |
+| Pergamin `#E7DFD2` | 10,26:1 | 4,94:1 | 7,37:1 | przechodzi wszędzie |
+
+Wniosek, który obowiązuje niezależnie od decyzji o kolorach: **na każdym z trzech kolorów dziedziny
+wchodzi wersja odwrócona znaku, nie źródłowa.** To dotyczy wprost kolorowych wizytówek z pozycji 11.
+
+### Pozycja 4 rozstrzygnięta pomiarem: paleta IRIN nie umie dać palety serii
+
+Uruchomiony walidator palet kategorialnych na trzech wariantach zbudowanych z 14 kolorów IRIN,
+tło Kaszmir `#FBF8F2`:
+
+| Wariant | Skład | Wynik |
+|---|---|---|
+| A, kontrola negatywna | osiem kolorów nasyconych, łamie reguły IRIN | **FAIL** na 4 z 5 sprawdzeń |
+| B, zgodny z regułami | tylko kolory nie zajęte przez dziedzinę ani status: Patyna, Złoto, Sepia, Popiół, Espresso | **FAIL** na 3 z 5 |
+| C | trzy kolory dziedzin plus Złoto | **FAIL** na 3 z 5 |
+
+**Przyczyna we wszystkich trzech jest ta sama i nie da się jej obejść doborem:** nasycenie każdego
+koloru IRIN leży poniżej podłogi walidatora (od 0,016 do 0,085), czyli w wykresie wszystkie czytają
+się jako odcienie szarości. To nie defekt palety - to skutek tego, że system nazywa się
+**Kaszmir Wyciszony** i został celowo odsycony. Dwa dalsze ograniczenia dokładają się do tego:
+kolory dziedzin są warstwą 15 % i obowiązuje jeden na dokument, a Werdykt, Rubryka i Karmin są
+zarezerwowane dla statusów i nie wolno ich użyć jako „serii czwartej".
+
+**Skutek: tożsamość serii na wykresie IRIN nie może opierać się na kolorze.** Brief zamawia więc
+wykresy budowane na sekwencji jednego odcienia, małych wielokrotnościach, etykietach wprost przy
+serii i fakturze - a nie na palecie ośmiu barw. **Do decyzji właściciela zostaje pytanie osobne:**
+czy identyfikacja dostaje osobny, bardziej nasycony zestaw odcieni wyłącznie do wykresów, jako
+piątą specyfikację. Bez tej decyzji kolorowych pulpitów nie da się zrobić poprawnie.
+
+### Zmierzone wartości, na których stoi pozycja 4
+
+**Pasy wierszy w tabeli:** Kaszmir `#FBF8F2` wobec Muślinu `#F6F2E9` daje **1,054:1** i mieści się
+w zakresie używalnym dla zebry (około 1,03 - 1,12:1). Pergamin odpada: Kaszmir wobec Pergaminu
+to **1,247:1**, czyli pas zaczyna się czytać jako dane, nie jako pomoc w czytaniu wiersza.
+
+**Sekwencja dla wielkości, propozycja a nie specyfikacja** - odcienie Aksamitu mieszane z papierem
+Kaszmir. Sekwencja ma własne kryteria przyjęcia, inne niż paleta kategorialna: jeden odcień,
+jasność malejąca monotonicznie, różnica jasności między sąsiadami co najmniej 0,06 w OKLCH,
+i jasny koniec co najmniej 2,0:1 na tle.
+
+**Pierwsza wersja tej tabeli, wpisana w tej sesji, nie przechodziła i została wycofana:** jej jasny
+koniec `#E5DFDB` dawał 1,25:1 wobec wymaganych 2,0:1. Poniżej wersja przeliczona i sprawdzona:
+
+| Krok | Hex | OKLCH L | Kontrast na Kaszmirze | Różnica L do następnego |
+|---|---|---|---|---|
+| 1 | `#BBAEAE` | 0,762 | 2,03:1 | 0,107 |
+| 2 | `#9E8B8F` | 0,655 | 3,03:1 | 0,110 |
+| 3 | `#80696F` | 0,545 | 4,75:1 | 0,116 |
+| 4 | `#634650` | 0,429 | 7,85:1 | 0,121 |
+| 5 | `#452430` | 0,308 | 12,80:1 | - |
+
+Trzy warunki spełnione: jasny koniec 2,03:1 przy progu 2,0; najmniejsza różnica jasności 0,107
+przy progu 0,06; jasność malejąca na każdym kroku. Krok 1 nadal nie nadaje się pod tekst
+ani pod cienką linię (2,03:1 to poniżej progu 3:1 dla grafiki) - działa jako wypełnienie
+powierzchni z etykietą obok.
+
 
 ---
 
-## ——— POCZĄTEK TEKSTU DO WKLEJENIA ———
+## ——— POCZĄTEK TURY 1 ———
 
 Projektujesz **zestaw szablonów uniwersalnych** dla IRIN (Instytut Rozwoju i Nauki) - nie konkretne
 dokumenty. Zadanie polega na przygotowaniu układów z miejscami na treść, z których da się potem
@@ -262,4 +355,294 @@ Trzy rzeczy do zwrotu razem z kanwą:
 2. propozycja siatki slajdu 16:9 z rachunkiem szerokości domykającym się co do milimetra,
 3. lista elementów, które powtarzały się w szablonach na tyle, że powinny zostać prymitywami.
 
-## ——— KONIEC TEKSTU DO WKLEJENIA ———
+## ——— KONIEC TURY 1 ———
+
+---
+
+## ——— POCZĄTEK TURY 2 ———
+
+Druga tura tego samego zestawu: **znak, favicon, wizytówki i social media**. Specyfikacje masz
+w projekcie: `logotyp.md`, `paleta-barw.md`, `typografia.md`, `siatka-a4.md`, `zasady-uzycia.md`,
+`tokens/palette-irin.json`.
+
+**Reguły z tury pierwszej obowiązują bez zmian**, w szczególności: wszystko na placeholderach
+w nawiasach kwadratowych i zero zmyślonych danych; jeden kolor dziedziny na materiał; kolor nigdy
+nie jest jedynym nośnikiem statusu; linia struktury Popiołem `#7D7466` nie cieniej niż 0,25 mm,
+Złoto foliowe `#A8874E` nie cieniej niż 0,5 mm; na materiale IRIN nie ma znaku Funduszy
+Europejskich, znaku barw RP ani flagi Unii Europejskiej.
+
+### 9. Pakiet znaku do użycia - to jest zlecenie
+
+Trzy warianty znaku (`logo_irin_poziom.svg`, `logo_irin_pion.svg`, `logo_irin_sygnet.svg`)
+pokazane na pięciu tłach: Kaszmir `#FBF8F2`, Muślin `#F6F2E9`, Pergamin `#E7DFD2`,
+Espresso `#221A15`, Aksamit `#452430`.
+
+Na każdym tle **wersja właściwa, nie przebarwiona**: na trzech jasnych znak w kolorze źródłowym,
+na dwóch ciemnych wersja odwrócona. Podstawa liczbowa, przeliczona wzorem WCAG 2.1:
+
+| Znak w kolorze | na Aksamicie | na Miedzi | na Onyksie | na Espresso |
+|---|---|---|---|---|
+| Espresso `#221A15`, kolor źródłowy | 1,26:1 | 2,62:1 | 1,76:1 | 1,00:1 |
+| Kaszmir `#FBF8F2`, wersja odwrócona | 12,80:1 | 6,16:1 | 9,19:1 | 16,15:1 |
+
+Próg 3:1 dla grafiki znaczącej. **Znak w kolorze źródłowym nie przechodzi na żadnym z trzech
+kolorów dziedziny** - na każdym z nich wchodzi wersja odwrócona.
+
+Do tego samego artboardu dołóż dwie demonstracje, bo bez nich pakiet jest niekompletny:
+
+- **przestrzeń ochronna** x = wysokość liter sygnetu, pokazana obrysem z każdej strony znaku,
+  przy dwóch różnych wielkościach - żeby było widać, że to miara względna, a nie stały margines,
+- **minimalne rozmiary:** pełny znak 18 mm w druku i 90 px na ekranie, sygnet samodzielny
+  10 mm i 44 px. Pokaż każdy dokładnie w minimum, obok tego samego znaku w rozmiarze wygodnym.
+
+### 10. Wersje kolorystyczne znaku i favicon - OSOBNY artboard, oznaczony jako PROPOZYCJA
+
+**To nie jest zlecenie pakietu.** Właściciel poprosił o „logo w różnych kolorach", a obowiązujący
+`logotyp.md` ma zakaz 1: znaku się nie przebarwia, na ciemnym tle wchodzi wersja odwrócona.
+Twoim zadaniem jest **przygotować materiał do jego decyzji**, nie rozstrzygnąć ją.
+
+Oznacz ten artboard słowem PROPOZYCJA i pokaż:
+
+- znak w Aksamicie `#452430`, Miedzi `#7A5638`, Onyksie `#33474F` i Złocie foliowym `#A8874E`,
+  każdy na papierze Kaszmir, **z policzonym kontrastem wobec tła obok każdej wersji**,
+- kolor ustawiony **wprost wartością hex**, nigdy łańcuchem `filter:`. Filtr użyty w pierwszej
+  turze pilota celował w Aksamit `#452430`, a dawał `#3D1922` - z łańcucha filtrów nie da się
+  odczytać, jaka barwa była zamierzona.
+
+**Favicon - i druga część sprzeczności, niezależna od koloru.** Rozmiary do przygotowania:
+16, 32, 48, 180 i 512 px. Sygnet w 16 i 32 px stoi **poniżej minimum 44 px** z tabeli
+w `logotyp.md`, czyli favicon w ogóle nie mieści się w obowiązującej specyfikacji.
+
+Zrób z tym trzy rzeczy: pokaż sygnet w każdym z pięciu rozmiarów bez żadnych zmian, żeby było
+widać, co się z nim dzieje w 16 i 32 px; **zaproponuj uproszczenie** znaku na te dwa rozmiary jako
+osobną pozycję, też oznaczoną jako propozycja; i napisz jednym zdaniem, co konkretnie w sygnecie
+przestaje się czytać poniżej 44 px. Uproszczenie jest utworem pochodnym od znaku, więc nie wchodzi
+do użycia bez decyzji właściciela.
+
+### 11. Wizytówka - cztery wersje kolorystyczne
+
+Format 85 × 55 mm, awers i rewers, wszystkie pola osoby jako placeholdery: `[IMIĘ I NAZWISKO]`,
+`[STANOWISKO]`, `[TELEFON]`, `[E-MAIL]`. Dane firmowe w brzmieniu z pierwszej tury.
+
+Cztery wersje, każda z jednym kolorem, nigdy dwoma:
+
+| Wersja | Tło awersu | Zastosowanie | Znak na awersie |
+|---|---|---|---|
+| ogólnofirmowa | Kaszmir `#FBF8F2` | dokument całej firmy, bez sygnału dziedziny | kolor źródłowy |
+| Pedagogika | Aksamit `#452430` | dziedzina Pedagogika | wersja odwrócona, 12,80:1 |
+| Akademia AI | Miedź `#7A5638` | dziedzina Akademia AI | wersja odwrócona, 6,16:1 |
+| Pożyczki UE/BGK | Onyks `#33474F` | dziedzina Pożyczki UE/BGK | wersja odwrócona, 9,19:1 |
+
+**Sygnet na rewersie: powiększ go wobec 22 mm z pierwszej tury.** Właściciel prosił o to
+dwukrotnie. Podaj **zmierzoną szerokość w milimetrach** przy każdej wersji - to wchodzi do
+protokołu. Rewers zostaje na tle Espresso `#221A15` z sygnetem w wersji odwróconej (16,15:1).
+
+Jedna rzecz do sprawdzenia u siebie, zanim oddasz: **przestrzeń ochronna x wokół powiększonego
+sygnetu.** Im większy sygnet na karcie 85 × 55 mm, tym mniej miejsca zostaje na wymagane
+odsunięcie od krawędzi - jeżeli x nie mieści się, napisz to, a nie zmniejszaj x po cichu.
+
+### 12. Social media - sześć formatów, pięć typów treści
+
+Formaty w pikselach: **1080 × 1080** (kwadrat), **1080 × 1350** (portret 4:5),
+**1080 × 1920** (pełny ekran, 9:16), **1200 × 630** (podgląd odnośnika, OG),
+**1584 × 396** (baner LinkedIn), **400 × 400** (awatar).
+
+Typy treści, każdy jako jeden kadr: **cytat**, **ogłoszenie szkolenia**, **post z jedną wielką
+liczbą** (skala ma na to poziom: liczba prowadząca 13,76 mm), **post z terminem**,
+**karuzela w trzech klatkach** (otwarcie, rozwinięcie, wezwanie do działania).
+
+**Siatka: żaden z tych formatów nie ma zatwierdzonej siatki.** `siatka-a4.md` obowiązuje wyłącznie
+na A4 pion. Sześć kolumn zostaje jako element tożsamości; moduł, gutter i marginesy **proponujesz
+Ty, z rachunkiem szerokości domykającym się co do milimetra albo piksela**. Oznacz to jako
+propozycję.
+
+**Zakazane sformułowania - te obowiązują szczególnie tutaj, bo to kanał, w którym się pojawiają.**
+Podstawa: karta prezentacji sprzedażowej w warstwie 2, sekcja „Zasady twarde".
+
+- Nigdy: „gwarancja dofinansowania", „za darmo", „bezpłatnie".
+- Nigdy nie podawaj terminu naboru, którego nie ma w ogłoszeniu instytucji finansującej.
+- W kanale KFS: „usługa kwalifikuje się do wniosku o środki", **nigdy** „KFS to sfinansuje" -
+  decyzja urzędu pracy jest uznaniowa.
+- Przy każdej wzmiance o dofinansowaniu zastrzeżenie: poziom zależy od statusu klienta i oceny
+  wniosku, środki do wyczerpania alokacji naboru.
+- Ceny, jeżeli wystąpią, opisane wprost jako netto albo brutto, w każdym miejscu.
+
+Na wzorach użyj tych sformułowań w wersji poprawnej, jako placeholderów treści - żeby szablon
+uczył zasady, a nie tylko jej nie łamał.
+
+**Zakaz znaków instytucjonalnych ma tu ostrze:** materiał social media o dziedzinie
+Pożyczki UE/BGK jest miejscem, w którym flaga Unii Europejskiej wydaje się naturalna. Nie wchodzi.
+IRIN jest doradcą zewnętrznym, nie beneficjentem.
+
+## ——— KONIEC TURY 2 ———
+
+---
+
+## ——— POCZĄTEK TURY 3 ———
+
+Trzecia tura: **pełna prezentacja, arkusz z tabelą i wykresami, oraz dodatki na start**.
+Reguły z tur 1 i 2 obowiązują bez zmian.
+
+### 13. Prezentacja - szablon rozbudowany, każdy wariant slajdu
+
+Format 16:9. **Siatka slajdu nie istnieje i nie wolno jej wziąć na oko** - `siatka-a4.md`
+obowiązuje wyłącznie na A4 pion i sam ten plik mówi, że inny format unieważnia całe sprawdzenie.
+Sześć kolumn zostaje; moduł, gutter i marginesy proponujesz Ty, z rachunkiem domykającym się
+co do jednostki. Pierwszy artboard tury niech będzie **propozycją siatki slajdu**, z tym rachunkiem
+wypisanym.
+
+Warianty slajdu do przygotowania, każdy jako osobny slajd:
+
+1. tytułowy
+2. tytułowy w wersji roboczej, z oznaczeniem `SZKIC - KONSULTACJA WEWNĘTRZNA`
+3. agenda albo spis treści
+4. przerywnik sekcji
+5. treść jednokolumnowa
+6. treść dwukolumnowa
+7. treść trzykolumnowa
+8. tekst plus obraz, obraz po prawej
+9. tekst plus obraz, obraz po lewej
+10. obraz pełnoekranowy z podpisem
+11. cytat
+12. jedna wielka liczba z podpisem
+13. trzy liczby obok siebie
+14. tabela
+15. wykres z opisem
+16. dwa wykresy obok siebie
+17. schemat procesu, cztery kroki poziomo
+18. oś czasu
+19. porównanie dwóch opcji, z plakietkami statusu
+20. lista kroków numerowana
+21. osoby, cztery kadry z placeholderem zdjęcia
+22. slajd z zastrzeżeniem prawnym, na pełną szerokość
+23. kontakt i wezwanie do działania
+24. slajd końcowy ze znakiem
+
+Dwie rzeczy do pilnowania w całości: **hierarchię buduje waga jednego kroju**, więc nie dobieraj
+trzeciego; i **H3 różni się od leadu wyłącznie wagą** (600 wobec 500), więc te dwa poziomy nie
+stoją bezpośrednio obok siebie - jeżeli muszą, wchodzi kicker.
+
+### 14. Arkusz - układ tabeli, pasy wierszy, kodowanie typów pól
+
+Jeden artboard z arkuszem wzorcowym, czytelnym w druku i na ekranie.
+
+**Pasy wierszy - wartości zmierzone, nie do dobierania.** Zebra idzie na parze
+Kaszmir `#FBF8F2` i Muślin `#F6F2E9`: kontrast **1,054:1**, czyli w zakresie, w którym pas pomaga
+czytać wiersz, a nie udaje danych. Pergamin `#E7DFD2` **odpada**: wobec Kaszmiru daje **1,247:1**
+i pas zaczyna się czytać jako wyróżnienie treści.
+
+**Kodowanie typów pól - kolor plus etykieta, nigdy kolor sam.** Cztery typy, każdy z obrysem
+Popiołem `#7D7466` co najmniej 0,25 mm i z widoczną etykietą albo ikoną:
+
+- pole do wypełnienia przez człowieka
+- pole liczone formułą, niedotykalne
+- pole zablokowane
+- pole z błędem walidacji
+
+Do tego: nagłówek tabeli, wiersz sumy wyróżniony, przypis pod tabelą, oraz **zachowanie przy
+przejściu tabeli na drugą stronę** - powtórzony nagłówek i oznaczenie kontynuacji.
+
+### 15. Wykresy - i jedno zlecenie badawcze, o które prosił właściciel
+
+**Zmierzone, żeby nie było niespodzianki:** uruchomiłem walidator palet kategorialnych na trzech
+zestawach zbudowanych z 14 kolorów IRIN, na tle Kaszmir. Wszystkie trzy **nie przeszły**, i za
+każdym razem z tego samego powodu: nasycenie każdego koloru IRIN leży między 0,016 a 0,085
+w OKLCH, przy podłodze **0,10** - poniżej niej barwa czyta się jako szarość i przestaje nieść
+tożsamość serii. Dodatkowo kolory najciemniejsze mają jasność 0,226 - 0,406 przy dolnej granicy
+pasma **0,43**. To skutek tego, że system nazywa się Kaszmir Wyciszony i jest celowo odsycony,
+a nie błąd palety.
+
+**Część A: wykresy, które działają bez palety serii - to jest zlecenie.** Cztery przykłady:
+
+- **słupki poziome** z etykietami wprost przy słupku, jedna seria, sekwencja odcieni Aksamitu
+  na wielkość: `#BBAEAE` (2,03:1), `#9E8B8F` (3,03:1), `#80696F` (4,75:1), `#634650` (7,85:1),
+  `#452430` (12,80:1). Na dwóch najjaśniejszych krokach nie stawiaj tekstu ani cienkiej linii.
+- **linia w czasie**, grubość 2 px, znaczniki co najmniej 8 px, etykieta wprost przy końcu linii
+- **małe wielokrotności** zamiast wielu serii na jednej osi - to jest odpowiedź na brak palety
+- **schemat procesu** na czterech krokach
+
+Reguły, które obowiązują niezależnie od palety: **nigdy dwie osie Y**; statusy Werdykt `#2E5241`,
+Rubryka `#8A6110` i Karmin `#9E2B2B` są **zarezerwowane** i nie wolno ich użyć jako „serii
+czwartej"; siatka i osie recesywne, nie konkurujące z danymi; przy dwóch albo więcej seriach
+legenda jest zawsze, a przy czterech i mniej dodatkowo etykiety wprost; wartości i etykiety
+noszą kolory tekstu, nie kolor serii; faktura kierunkowa (45 i 135 stopni) jako drugi nośnik
+tożsamości obok koloru, dla druku mono i dla daltonizmu.
+
+**Część B: zaproponuj paletę serii - to jest zlecenie badawcze, nie decyzja.** Właściciel chce
+wiedzieć, czy da się to zrobić. Warunki przyjęcia są policzalne i podaję je wprost, żeby nie było
+zgadywania:
+
+| Kryterium | Próg |
+|---|---|
+| jasność każdego koloru, OKLCH L, tło jasne | **0,43 - 0,77** |
+| nasycenie każdego koloru, OKLCH C | **co najmniej 0,10** |
+| odróżnialność sąsiadów w wadach widzenia barw, ΔE w OKLab ×100 | cel **8**, podłoga **6** i tylko przy drugim nośniku tożsamości |
+| odróżnialność sąsiadów w widzeniu prawidłowym, ΔE | **co najmniej 15**, poniżej to twardy błąd |
+| kontrast każdego koloru wobec tła | **co najmniej 3:1** |
+
+Do tego trzy ograniczenia nie z walidatora, a z tożsamości IRIN: kolejność barw jest **stała
+i nigdy nie zapętlana** (dziewiąta seria wchodzi do pozycji „Inne", nie dostaje nowego koloru);
+maksimum osiem pozycji; i **nie wolno użyć trzech kolorów dziedziny ani trzech kolorów statusu**,
+bo obie grupy mają już przypisane znaczenie.
+
+Z liczb wyżej wynika, że kolory spełniające te progi będą **jaśniejsze i bardziej nasycone niż
+cokolwiek w obecnych czternastu**, czyli będą nowe. Dlatego to wraca jako **propozycja piątej
+specyfikacji identyfikacji**, do decyzji właściciela, a nie jako gotowa paleta do użycia.
+**Podaj przy każdej pozycji jej hex, OKLCH L, OKLCH C i kontrast wobec Kaszmiru** - przeliczę
+to tym samym walidatorem i wynik pójdzie do właściciela razem z Twoją propozycją.
+
+### 16. Co jeszcze na start - pozycje dołożone z mojej propozycji
+
+Pięć rzeczy, o które właściciel nie poprosił wprost, a które są potrzebne od pierwszego dnia.
+Każda z uzasadnieniem, żeby dało się ją odrzucić.
+
+1. **Materiały dla uczestnika szkolenia:** slajd szkoleniowy i handout na A4. Powód: karta usługi
+   BUR ma pole obowiązkowe „Informacja o materiałach dla uczestników", więc materiały muszą
+   istnieć, zanim usługa zostanie opublikowana.
+2. **Oferta i kosztorys**, A4. Powód: to dokument, który wychodzi do klienta najczęściej,
+   a obowiązuje w nim reguła twarda z warstwy 2 - cena opisana wprost jako netto albo brutto,
+   w każdym miejscu, gdzie się pojawia.
+3. **Potwierdzenie zapisu na szkolenie** i **lista obecności**, A4. Powód: dokumenty operacyjne
+   obsługi szkolenia. **Nie twierdzę, że mają podstawę prawną** - żaden przejrzany dokument PARP
+   ani przepis KFS ich nie wymienia; są potrzebne organizacyjnie.
+4. **Znak wodny SZKIC** na pełną stronę A4, do nakładania na materiał roboczy. Powód: warstwa 2
+   wymaga jawnego oznaczenia poziomu materiału, a dziś istnieje tylko plakietka, nie oznaczenie
+   całej strony.
+5. **Baner na stronę i obraz podglądu odnośnika** dla `www.irin.pl`. Powód: te dwa kadry są
+   w tury 2 jako formaty (1584 × 396 i 1200 × 630), ale bez treści firmowej - tu dostają wersję
+   ogólnofirmową, gotową do użycia.
+
+### Format wyniku dla tur 2 i 3
+
+Ta sama kanwa, nowe artboardy, każdy z podpisem i jednym zdaniem o tym, co jest w nim do podmiany.
+Przy każdym artboardzie oznaczonym jako PROPOZYCJA napisz wprost, czego dotyczy decyzja
+właściciela. Jeżeli którakolwiek reguła okazała się niewykonalna, napisz to jako uwagę -
+**nie obchodź jej po cichu**.
+
+Do zwrotu razem z kanwą, poza tym co w turze 1:
+
+1. propozycje siatki dla trzech formatów bez zatwierdzonej siatki: slajd 16:9, kadry social media,
+   wizytówka - każda z rachunkiem,
+2. propozycja palety serii z czterema liczbami przy każdej pozycji, albo jasne stwierdzenie,
+   że przy tych progach nie da się jej zbudować bez wyjścia poza charakter Kaszmiru Wyciszonego,
+3. zmierzona szerokość powiększonego sygnetu na rewersie wizytówki, dla każdej wersji kolorystycznej,
+4. jedno zdanie o tym, co w sygnecie przestaje się czytać poniżej 44 px.
+
+## ——— KONIEC TURY 3 ———
+
+---
+
+## Część C: czego nie zlecamy Claude Design
+
+Trzy rzeczy z listy właściciela nie są pracą projektową i powstają w repozytorium, nie na kanwie.
+Wchodzą do `PLAN.md` jako zadania Claude Code.
+
+| Co | Dlaczego nie na kanwie | Kto robi |
+|---|---|---|
+| Plik `.xlsx` arkusza z tabelą, pasami wierszy i wykresami | Claude Design projektuje wygląd arkusza, ale nie wyprodukuje działającego pliku z formułami, formatowaniem warunkowym i wykresami | Claude Code, po zamknięciu pozycji 14 i 15 |
+| Szablon `.docx` do pisania pism | Sens tego szablonu polega na tym, że firma pisze pismo **bez** Claude Design; plik musi mieć styl akapitu, nagłówek i stopkę w formacie Worda | Claude Code, po zamknięciu tury 1 |
+| Podpis e-mail w HTML | To kod, nie layout drukowany; wymaga tabel HTML i stylów inline, bo klienty pocztowe nie renderują nowoczesnego CSS | Claude Code |
+
+Podpis e-mail ma jedno uzasadnienie merytoryczne, nie tylko wygodę: art. 206 Kodeksu spółek
+handlowych wymaga danych rejestrowych na pismach spółki, a e-mail jest dziś głównym kanałem pism
+wychodzących. Blok danych z papieru firmowego przenosi się tam bez zmian.
