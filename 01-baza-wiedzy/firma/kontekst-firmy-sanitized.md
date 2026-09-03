@@ -8,6 +8,13 @@ Nazwa prawna: **Instytut Rozwoju i Nauki sp. z o.o.**, marka IRIN.
 
 Dane rejestrowe (jawne w Krajowym Rejestrze Sądowym): KRS 0001032499 · NIP 9592061542 · REGON 525113640 · ul. Karola Olszewskiego 6, 25-663 Kielce.
 
+Dwie pozycje wymagane przez art. 206 KSH na pismach i zamówieniach handlowych, **odczytane 2026-09-03 z odpisu pełnego w rejestrze KRS** (`api-krs.ms.gov.pl/api/krs/OdpisPelny/0001032499?rejestr=P`, stan z dnia 15.07.2026):
+
+- **sąd rejestrowy:** Sąd Rejonowy w Kielcach, X Wydział Gospodarczy Krajowego Rejestru Sądowego
+- **kapitał zakładowy:** 40 000,00 zł
+
+Kapitał zakładowy zmienia się uchwałą i wpisem do rejestru, więc przed każdym dokumentem powołującym się na tę kwotę sprawdza się datę „stan z dnia" w świeżym odpisie, nie datę tego pliku. To jedyne dwie wartości w tej karcie, których founder nie potwierdził osobiście - pochodzą wprost z rejestru.
+
 Te dane trafiają do stopki dokumentu wydawanego uczestnikowi szkolenia i do danych dostawcy w karcie usługi — bo tego wymaga jednoznaczna identyfikacja realizatora na dokumencie formalnym (patrz `../prawo/kfs.md`, `../prawo/bur.md`). Numer wpisu do rejestru podmiotów świadczących usługi rozwojowe (BUR) nie jest tu podawany — każdy dokument, który go wymaga, powinien odczytać go z aktualnego profilu dostawcy w BUR, nie wpisywać z pamięci ani z tego pliku.
 
 **Zasada minimalizacji:** ten plik publikuje wyłącznie dane jawne (KRS) i niezbędne do formalnej identyfikacji dostawcy na dokumencie. Dane kontaktowe o charakterze operacyjnym (adres e-mail, numer telefonu, adres strony) nie są tu powielane — nie są potrzebne do identyfikacji dostawcy na dokumencie formalnym, a ich miejsce jest w materiałach, których to dotyczy (np. papier firmowy, wizytówka), nie w karcie kontekstu firmy.

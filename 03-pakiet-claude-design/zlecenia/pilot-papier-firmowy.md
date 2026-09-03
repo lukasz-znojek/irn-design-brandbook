@@ -11,7 +11,7 @@ Wszystkie pliki z tego repozytorium, bez modyfikacji, w kolejności czytania prz
 | Kolejność | Plik | Rola w paczce |
 |---|---|---|
 | 1 | `../prompt-bazowy.md` z sekcją „Zlecenie” zastąpioną treścią z punktu 2 niżej | instrukcja główna |
-| 2 | `../format-paczki.md` | sześć zasad użycia specyfikacji |
+| 2 | `../format-paczki.md` | siedem zasad użycia specyfikacji |
 | 3 | `/02-szablony-dokumentow/papier-firmowy.md` | co jest prawnie obowiązkowe, co konwencją, co wyborem |
 | 4 | `/01-baza-wiedzy/identyfikacja/paleta-barw.md` | kolory i przepisane kolory etykiet |
 | 5 | `/01-baza-wiedzy/identyfikacja/siatka-a4.md` | siatka strony A4 |
@@ -43,10 +43,12 @@ Skopiuj `../prompt-bazowy.md` w całości i zastąp jego ostatnią sekcję „Zl
 - firma: Instytut Rozwoju i Nauki sp. z o.o.
 - siedziba i adres: ul. Karola Olszewskiego 6, 25-663 Kielce
 - KRS 0001032499, NIP 9592061542, REGON 525113640
-- sąd rejestrowy: [SĄD REJESTROWY, np. Sąd Rejonowy w Kielcach, X Wydział Gospodarczy KRS; odczytać z odpisu KRS]
-- kapitał zakładowy: [KWOTA W ZŁ; odczytać z odpisu KRS]
+- sąd rejestrowy: Sąd Rejonowy w Kielcach, X Wydział Gospodarczy Krajowego Rejestru Sądowego
+- kapitał zakładowy: 40 000,00 zł
 
-**Dane kontaktowe do umieszczenia** (konwencja IRIN, wartości od foundera): e-mail [E-MAIL], telefon [TELEFON], strona [ADRES STRONY].
+*(Obie pozycje odczytane 2026-09-03 z odpisu pełnego w rejestrze KRS, `api-krs.ms.gov.pl`, stan z dnia 15.07.2026; zapis sądu pochodzi z pola „REJESTRACJA W KRAJOWYM REJESTRZE SĄDOWYM" odpisu, kwota z pola `wysokoscKapitaluZakladowego`. Founder potwierdza jednym spojrzeniem w odpis, zanim zlecenie pójdzie do Claude Design - dane rejestrowe zmieniają się wpisem, więc odczyt sprzed tygodnia nie jest gwarancją.)*
+
+**Dane kontaktowe do umieszczenia** (konwencja IRIN, wartości od foundera): e-mail [E-MAIL], telefon [TELEFON], strona [ADRES STRONY]. **To jedyne trzy pola, które zostały do wypełnienia** - repozytorium ich celowo nie przechowuje (zasada minimalizacji, `kontekst-firmy-sanitized.md`), a zgadywać ich nie wolno.
 
 **Pola wizytówki:** imię i nazwisko, stanowisko, telefon bezpośredni, e-mail. Na wzorze użyj placeholderów w nawiasach kwadratowych, nie zmyślonych osób.
 
@@ -88,4 +90,6 @@ Pilot ma wartość tylko wtedy, gdy jego wynik trafi do warstwy 1. Cztery pomiar
 
 ## 4. Co blokuje wysłanie
 
-Nic decyzyjnego. Pięć pól w nawiasach kwadratowych w punkcie 2 wypełnia founder z odpisu KRS i z własnych danych kontaktowych. Po wysłaniu i powrocie wyniku: wykonać punkt 3, potem zaktualizować `/PLAN.md` (zadanie 22) i `/MAPA-DROGOWA.md` (bramka B).
+Nic decyzyjnego. **Stan na 2026-09-03: z pięciu pól w nawiasach kwadratowych zostały trzy.** Sąd rejestrowy i kapitał zakładowy odczytano z rejestru KRS i wpisano do punktu 2; do wypełnienia zostają e-mail, telefon i adres strony - dane operacyjne, których repozytorium celowo nie trzyma.
+
+Po wysłaniu i powrocie wyniku: wykonać punkt 3, potem zaktualizować `/PLAN.md` (zadanie 22) i `/MAPA-DROGOWA.md` (bramka B).

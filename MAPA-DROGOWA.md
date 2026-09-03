@@ -20,7 +20,7 @@ Repozytorium nie definiuje wprost, co znaczy „projekt zamknięty”. Z `CLAUDE
 | 1 - baza wiedzy | Firma (2 pliki), prawo (6 plików: KFS, BUR, PSF, pożyczki UE/BGK plus dwa materiały źródłowe), usługi (2 pliki), szablon karty produktu, indeks. | `01-baza-wiedzy/00-INDEX.md` odsyła do każdego z nich. |
 | 1 - identyfikacja | Paleta 14 kolorów „Kaszmir Wyciszony”, siatka A4, typografia z H3, logotyp z czterema zakazami. Wszystkie cztery zatwierdzone przez foundera. Tokeny maszynowe w jednym JSON. | `01-baza-wiedzy/identyfikacja/`, decyzje w `PLAN.md`, sekcja „Decyzje foundera - rozstrzygnięte”. |
 | 2 - szablony | Siedem kart specyfikacji: viewbook, karta usługi BUR, certyfikat, papier firmowy i wizytówka, materiał sprzedażowy, program szkolenia, prezentacja sprzedażowa. Każda rozróżnia trzy kategorie elementów. | Pomiar w tej sesji: w każdym z siedmiu plików występują wszystkie trzy hasła („prawnie obowiązkowe”, „konwencja”, „swobodny wybór”). |
-| 3 - pakiet | Format paczki z sześcioma zasadami użycia, prompt bazowy odsyłający do warstw 1 i 2, historia decyzji o palecie i siatce. | `03-pakiet-claude-design/`. |
+| 3 - pakiet | Format paczki z siedmioma zasadami użycia, prompt bazowy odsyłający do warstw 1 i 2, historia decyzji o palecie i siatce. | `03-pakiet-claude-design/`. |
 | Zadania z `PLAN.md` | 16 z 16 pierwotnych zadań ma plik docelowy; zadania 17-23 odwzorowują etapy tej mapy, 17 i 18 zrealizowane. | Lista w `PLAN.md`, sekcja „Domknięcie projektu”. |
 
 ## Co zostało
@@ -48,8 +48,9 @@ Każda pozycja to jedno zdanie, z plikiem, który na nią czeka. Podział na to,
 | Czy dane rejestrowe (KRS, NIP, REGON, adres) zostają w publicznym repozytorium. | **Rozstrzygnięte 2026-09-02: tak.** Dane wchodzą do paczki papieru firmowego. | Wpisane do `kontekst-firmy-sanitized.md`, `kontekst-firmy.md`, `PLAN.md`. |
 | Forma prawna i siedziba IRIN. | **Rozstrzygnięte 2026-09-02:** sp. z o.o., siedziba w Kielcach. Sprzeczność między `kontekst-firmy.md` (brak danych, napis „Warszawa” z kanwy odrzucony) a `kontekst-firmy-sanitized.md` (sp. z o.o., Kielce, KRS) rozstrzygnięta na rzecz sanitized; jedna wersja w trzech plikach. | Wpisane do `kontekst-firmy.md` i `02-szablony-dokumentow/papier-firmowy.md`. |
 | Czy papier firmowy zawiera e-mail, telefon i adres strony, a wizytówka ma format 85 × 55 mm, awers i rewers. | **Rozstrzygnięte 2026-09-02: tak, w całości jako konwencja IRIN.** | Wpisane do `02-szablony-dokumentow/papier-firmowy.md`. |
+| Oznaczenie sądu rejestrowego i wysokość kapitału zakładowego (art. 206 KSH). | **Odczytane 2026-09-03 z rejestru KRS**, nie było decyzją: Sąd Rejonowy w Kielcach, X Wydział Gospodarczy KRS; 40 000,00 zł. Founder potwierdza przy zleceniu, bo kwota zmienia się wpisem. | Wpisane do `kontekst-firmy-sanitized.md`, `02-szablony-dokumentow/papier-firmowy.md` i do zlecenia pilota. |
 
-Dwie pozycje wymagane przez art. 206 KSH, których repozytorium nie zawiera (oznaczenie sądu rejestrowego, wysokość kapitału zakładowego), founder odczytuje z KRS przy zleceniu pilota; to dane wejściowe, nie decyzja.
+Dwie pozycje wymagane przez art. 206 KSH (oznaczenie sądu rejestrowego, wysokość kapitału zakładowego) były opisane jako dane, które founder odczyta z KRS przy zleceniu pilota. **Odczytano je 2026-09-03 wprost z rejestru** - patrz wiersz wyżej; to były dane wejściowe, nie decyzja, więc nie wymagały czekania na foundera.
 
 **Do odłożenia, aż powstanie dokument, którego dotyczą:**
 
@@ -71,7 +72,8 @@ Ustalenia prawne w warstwie 1 powstawały ze źródeł wtórnych, bo w sesjach, 
 - **Pozycje 1-3 (BUR), 2026-09-02.** Founder dostarczył sześć plików PDF ze strony PARP (Regulamin BUR oraz Załączniki 1, 2g, 3, 4, 5); leżą w `01-baza-wiedzy/prawo/zrodla/`. Zamknęły wszystkie pozycje blokujące dwie karty warstwy 2. Odczyt obalił przy okazji założenie tej mapy: **Załącznika nr 12 z wzorem zaświadczenia już nie ma** - § 23 Regulaminu w wersji od 5 maja 2026 r. wymienia wyłącznie Załączniki 1-5, a wymogi zaświadczenia stoją dziś w Załączniku 4, Rozdział 2, pkt 3.
 - **Pozycje 4-5 (KFS), 2026-09-03.** Rozporządzenie o KFS i ustawa o rynku pracy pobrane wprost z Dziennika Ustaw, razem z ustawą o PARP potrzebną do identyfikacji rejestru z art. 128 ust. 2. `kfs.md` stoi dziś na tekstach aktów, nie na materiale wtórnym.
 - **Pozycja 6 (karta usługi we wniosku KFS), 2026-09-03, w części.** Poziom krajowy rozstrzygnięty przecząco: rozporządzenie o KFS wylicza zamkniętą listę elementów wniosku, karta usługi w niej nie występuje. Zostaje regulamin naboru konkretnego urzędu pracy.
-- **Pozycje 7-8 nieodczytane.** Dotyczą operatora PSF i znaku Funduszy Europejskich; obie mają poprawione wskazanie dokumentu, ale żadna nie została przeczytana.
+- **Pozycja 7 (operator PSF), 2026-09-03.** Regulamin WUP w Kielcach przeczytany: bez akredytacji regionalnej i bez listy uznanych realizatorów, ale z czterema obowiązkami ponad wpis do BUR. Ważne dla jednego województwa; inny region wymaga powtórzenia pomiaru.
+- **Pozycja 8 (znak Funduszy Europejskich), 2026-09-03.** Rozstrzygnięta mocniej, niż pytano: IRIN jako doradca zewnętrzny nie tylko nie musi używać znaku FE, ale nie ma prawa znaleźć się w cudzym zestawieniu znaków. Weszło do `format-paczki.md` jako siódma zasada.
 
 **Założenie tej mapy, które upadło: blokada sieciowa nie jest własnością projektu.** Pomiar z 2026-09-03 na maszynie foundera: wszystkie sześć domen, które w sesjach z 2026-09-02 odpowiadały `connect_rejected`, zwracają 200 albo 302. Blokada dotyczyła środowiska w piaskownicy, nie każdego uruchomienia Claude Code w tym projekcie. Wniosek operacyjny: **zanim poprosisz foundera o dokument, zmierz dostęp z maszyny, na której właśnie pracujesz.**
 
@@ -101,7 +103,7 @@ Jeśli dostęp do tych domen nadal będzie zablokowany, dokumenty musi dostarczy
 flowchart TD
     S0["Etap 0 - higiena - ZROBIONE<br/>4 zdania poprawione, PLAN 17-23,<br/>PR #4 scalony, PR #6 zamknięty"]
     S1["Etap 1 - decyzje foundera - ZROBIONE<br/>3 blokujące pilota podjęte,<br/>6 odłożonych do pierwszego użycia"]
-    S2["Etap 2 - weryfikacja prawna<br/>BUR i KFS odczytane u źródła<br/>zostają operator PSF i znak FE"]
+    S2["Etap 2 - weryfikacja prawna - ZROBIONE<br/>8 z 8 pozycji z wpisanym wynikiem<br/>otwarte tylko przy pierwszym kliencie"]
     S3["Etap 3 - karty warstwy 2 - ZROBIONE<br/>zero znaczników, 4 pozycje<br/>otwarte do pierwszego zlecenia"]
     S4["Etap 4 - pilot w Claude Design<br/>paczka i zlecenie GOTOWE,<br/>founder wypełnia 5 pól i prowadzi w Claude Design"]
     S5["Etap 5 - zamknięcie<br/>PLAN.md domknięty, README ze stanem,<br/>tag v1.0, procedura domknięcia okna"]
@@ -129,7 +131,7 @@ flowchart TD
     style G2 fill:#E4DACB,stroke:#1E1611,color:#1E1611
 ```
 
-Etapy 1 i 2 były niezależne; etap 1 jest zamknięty. Etap 2 jest w połowie: pozycje 1-3 odczytane z plików dostarczonych przez foundera, pozycje 4-8 nadal czekają. Pomiar z 2026-09-02 wieczorem pokazał, że z sesji Claude Code cztery domeny (parp.gov.pl, uslugirozwojowe.parp.gov.pl, dziennikustaw.gov.pl, isap.sejm.gov.pl) zwracają błąd połączenia, więc pozostałe dokumenty też muszą przyjść od foundera albo polityka sieciowa środowiska musi je dopuścić. Etap 4 (pilot) nie zależy od etapu 2 i może ruszyć równolegle.
+Etapy 1 i 2 były niezależne; oba są zamknięte. Etap 2 domknięto 2026-09-03: wszystkie osiem pozycji ma wpisany wynik. Pomiar z 2026-09-02 wieczorem pokazał, że z sesji Claude Code cztery domeny (parp.gov.pl, uslugirozwojowe.parp.gov.pl, dziennikustaw.gov.pl, isap.sejm.gov.pl) zwracają błąd połączenia, więc pozostałe dokumenty też muszą przyjść od foundera albo polityka sieciowa środowiska musi je dopuścić. Etap 4 (pilot) nie zależy od etapu 2 i może ruszyć równolegle.
 
 **Co zostało odblokowane:** obie karty warstwy 2, które czekały na Etap 2 (`karta-uslugi-bur.md`, `certyfikat.md`), mają dziś listy pól odczytane u źródła i nie mają już sekcji „Status weryfikacji” z zastrzeżeniem o niepobranym załączniku.
 
@@ -137,9 +139,9 @@ Etapy 1 i 2 były niezależne; etap 1 jest zamknięty. Etap 2 jest w połowie: p
 |---|---|---|
 | 0 - higiena | Claude Code | **Spełnione 2026-09-02:** `grep` po czterech nieaktualnych zdaniach zwraca zero trafień; `PLAN.md` ma zadania 17-23; na GitHubie nie ma otwartego PR poza #9. Poza bramką zostało ręczne usunięcie gałęzi. |
 | 1 - decyzje foundera | Founder, Claude Code wpisuje | **Spełnione 2026-09-02:** trzy decyzje blokujące pilota wpisane do `PLAN.md` w sekcji „rozstrzygnięte”; sprzeczność o siedzibę i formę prawną ma jedną wersję w trzech plikach. |
-| 2 - weryfikacja prawna | Claude Code, gdy sieć na jego maszynie dopuszcza źródła; inaczej founder dostarcza dokumenty | **Spełnione w części:** pozycje 1-3 odczytane 2026-09-02 (sześć PDF-ów PARP), pozycje 4-5 odczytane 2026-09-03 (trzy akty z Dziennika Ustaw), pozycja 6 odczytana na poziomie krajowym. Zero pozycji „do potwierdzenia przy dostępie do PARP” w `bur.md`, `kfs.md`, `kontekst-kfs-sanitized.md`, `karta-uslugi-bur.md` i `certyfikat.md`. Zostają dwie pozycje bez odczytu (7 - regulamin operatora PSF, 8 - obowiązek znaku FE), obie zależne od pierwszego realnego klienta i obie warunkowe wobec repozytorium. Bramka zamknie się, gdy każda dostanie „odczytane u źródła” albo „niesprawdzone” z nazwanym powodem. |
+| 2 - weryfikacja prawna | Claude Code, gdy sieć na jego maszynie dopuszcza źródła; inaczej founder dostarcza dokumenty | **Spełnione 2026-09-03.** Każda z ośmiu pozycji ma wpisany wynik, czyli warunek wyjścia jest spełniony: 1-3 z sześciu PDF-ów PARP (2026-09-02), 4-5 z trzech aktów w Dzienniku Ustaw, 6 na poziomie krajowym, 7 z regulaminu WUP w Kielcach, 8 z Podręcznika informacji i promocji FE. Zero pozycji „do potwierdzenia przy dostępie do PARP” w `bur.md`, `kfs.md`, `psf.md`, `pozyczki-ue-bgk.md`, `kontekst-kfs-sanitized.md`, `karta-uslugi-bur.md` i `certyfikat.md`. Dwie sprawy zostają otwarte, obie związane z pierwszym realnym klientem, nie z repozytorium: regulamin naboru jego urzędu pracy i regulamin operatora PSF, jeśli będzie spoza świętokrzyskiego. |
 | 3 - karty warstwy 2 | Claude Code | **Spełnione 2026-09-02:** `grep -i "do potwierdzenia przez foundera" 02-szablony-dokumentow/` zwraca zero trafień; cztery pozycje mają status „otwarte do pierwszego zlecenia” z nazwą dokumentu. Zastrzeżenia o niepobranych załącznikach BUR zdjęte 2026-09-02 wraz z odczytem pozycji 1-3 etapu 2. |
-| 4 - pilot | Founder w Claude Design, Claude Code buduje paczkę i spisuje wnioski | Paczka gotowa (`03-pakiet-claude-design/zlecenia/pilot-papier-firmowy.md`). Bramka: pięć pomiarów z protokołu (polskie znaki na wagach 400-600, siatka 25 mm z treścią, H3 obok leadu, sygnet na rewersie, dokument bez koloru dziedzinowego) ma wpisany wynik w plikach warstwy 1. **Korekta wobec pierwszej wersji tej mapy:** kontrastu Karminu obok Aksamitu ten pilot nie sprawdzi, bo papier firmowy nie ma stanu błędu; ten falsyfikator przechodzi na pierwszy dokument ze statusami (certyfikat albo karta usługi BUR) i nie blokuje bramki B. |
+| 4 - pilot | Founder w Claude Design, Claude Code buduje paczkę i spisuje wnioski | Paczka gotowa (`03-pakiet-claude-design/zlecenia/pilot-papier-firmowy.md`); od 2026-09-03 do wypełnienia zostały trzy pola zamiast pięciu - sąd rejestrowy i kapitał zakładowy odczytano z rejestru KRS. Bramka: pięć pomiarów z protokołu (polskie znaki na wagach 400-600, siatka 25 mm z treścią, H3 obok leadu, sygnet na rewersie, dokument bez koloru dziedzinowego) ma wpisany wynik w plikach warstwy 1. **Korekta wobec pierwszej wersji tej mapy:** kontrastu Karminu obok Aksamitu ten pilot nie sprawdzi, bo papier firmowy nie ma stanu błędu; ten falsyfikator przechodzi na pierwszy dokument ze statusami (certyfikat albo karta usługi BUR) i nie blokuje bramki B. |
 | 5 - zamknięcie | Claude Code, founder zatwierdza | `PLAN.md` bez pozycji otwartych, `README.md` podaje stan „gotowe do użycia” z datą, tag `v1.0` na `main`. |
 
 ## Dlaczego pilotem jest papier firmowy, a nie certyfikat
