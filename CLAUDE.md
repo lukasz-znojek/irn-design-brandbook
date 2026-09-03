@@ -54,11 +54,12 @@ Dwa kanały o różnym rozliczeniu:
 - **Workflow** `anthropics/claude-code-action` w `.github/workflows/` – rozliczane w subskrypcji Claude (sekret `CLAUDE_CODE_OAUTH_TOKEN`). Kanał podstawowy.
 - **Karta „Agents”** w GitHub – agent `brandbook-irin` z pliku `.github/agents/brandbook-irin.agent.md`, do zadań zlecanych ręcznie z panelu. Rozliczany w GitHub AI credits i minutach Actions; własnego klucza Anthropic nie przyjmuje.
 
-Trzy wyzwalacze workflow:
+Cztery wyzwalacze workflow:
 
 - `claude.yml` – wzmianka `@claude` w issue, komentarzu albo recenzji: odpowiedź na pytanie, wyjaśnienie repozytorium, plan pracy, propozycja zmiany w osobnej gałęzi.
 - `claude-recenzja-pr.yml` – każde otwarcie lub aktualizacja PR: recenzja zgodności z tym plikiem i ze specyfikacjami w `01-baza-wiedzy/identyfikacja/`.
 - `claude-triaz-issue.yml` – każde nowe issue bez `@claude`: etykiety `warstwa-1`, `warstwa-2`, `czeka-na-foundera`, wykrycie duplikatu, jeden komentarz z następnym krokiem.
+- `claude-zadanie.yml` – ręczne uruchomienie z zakładki Actions („Run workflow”) z polem na zadanie i numerem issue/PR na wynik; zamiennik panelu „Agents” na subskrypcji Claude. Zmiany plików tylko przez gałąź `claude/zadanie-<run_id>` i PR.
 
 Granice obowiązujące agenta w każdym trybie:
 
