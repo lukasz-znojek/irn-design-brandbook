@@ -75,3 +75,516 @@ Wykonanie zadań 20-23 śledzą issues w GitHubie (nadrzędne: #29 etap 2, #38 e
 ## Decyzje do potwierdzenia przez foundera
 
 - Żadna nie blokuje pilota. Sześć pozycji odłożonych do pierwszego użycia dokumentu, którego dotyczą (viewbook, certyfikat, struktura zespołu i historia, aplikacja sprzedażowa, portal, sygnet): tabela w `MAPA-DROGOWA.md`, grupa II.
+
+
+---
+
+# Plan wykonawczy: bramka B i zlecenie certyfikatu
+
+> **Dopisane 2026-09-03.** Ta sekcja nie zastępuje niczego wyżej: kolejka zadań 1-23 i lista
+> decyzji foundera zostają źródłem prawdy. Tu jest rozpisana na kroki wyłącznie praca, która
+> została po weryfikacji stanu z 2026-09-03.
+>
+> **Sprzeczność, którą trzeba nazwać:** skill `metoda-plan-pracy` każe zapisać plan do
+> `PLAN.md` projektu, a `PLAN.md` tego repozytorium jest już kolejką zadań i dziennikiem decyzji
+> (`CLAUDE.md`: „Kolejka zadań pozostaje w PLAN.md"). Rozstrzygnięcie: plan **dopisany** jako
+> osobna sekcja, nie nadpisujący pliku. Cofnięcie: usunięcie tej sekcji albo `git revert`
+> commitu, który ją dodał.
+>
+> **Dla wykonującego:** jedno zadanie na raz, w kolejności. Skończ, zweryfikuj podaną komendą,
+> zatrzymaj się na przegląd, potem następne. Kroki mają `- [ ]` do odhaczania.
+
+**Cel:** domknąć bramkę B (wyniki pomiarów pilota wpisane do warstwy 1) i wydać komplet zlecenia
+certyfikatu dla Claude Design, bez wypełniania wzoru zmyślonymi danymi.
+
+**Podejście:** repozytorium trzyma treść i wytyczne, layout powstaje w Claude Design. Każde
+zadanie kończy się komendą, której wynik da się przeczytać - w tym projekcie „gotowe" znaczy
+„pomiar wykonany", nie „plik istnieje".
+
+**Specyfikacja, z której ten plan argumentuje:** `CLAUDE.md`, `MAPA-DROGOWA.md` (bramka B),
+`01-baza-wiedzy/identyfikacja/` (cztery specyfikacje), `02-szablony-dokumentow/certyfikat.md`,
+`01-baza-wiedzy/prawo/{bur,kfs,pozyczki-ue-bgk}.md`, oraz protokół weryfikacji stanu
+`_robocze/sesje/2026-09-03-weryfikacja-stanu-i-kanwa-pilota.md`.
+
+## Ograniczenia obowiązujące w każdym zadaniu
+
+- Każdy commitowany plik po polsku: nazwa, nagłówki, treść.
+- Layout, kompozycja i grafika **wyłącznie** w Claude Design. Claude Code nie pisze artboardów.
+- Kontrast liczy się od nowa wzorem WCAG 2.1 i podaje oba hexy obok wyniku. Nigdy nie przepisuje
+  się liczby ze starego pliku.
+- Kolor nigdy nie jest jedynym nośnikiem statusu: każdy stan ma etykietę słowną albo ikonę.
+- Jeden kolor dziedziny na dokument: Aksamit `#452430`, Miedź `#7A5638` albo Onyks `#33474F`.
+- Na materiale IRIN **nie stawia się** znaku Funduszy Europejskich, znaku barw RP ani flagi UE.
+- We wzorze zaświadczenia zero zmyślonych danych: placeholdery w nawiasach kwadratowych.
+- Formatu kodu BUR nie odtwarza się. `2025/00817/PPUR` z kanwy jest formatem niepotwierdzonym.
+- Do projektu w Claude Design **nie idą**: `brandbook.dc.html` ani `program-szkolenia.md`.
+- Nazwy w projekcie w Claude Design są inne niż w repozytorium: `format-paczki.md` występuje tam
+  jako `guidelines/zasady-uzycia.md`, katalog `tokeny/` jako `tokens/`.
+- `_ds_manifest.json` nie jest dowodem o zawartości projektu. Dowodem jest `get_file`.
+- W tekście wyłącznie dywiz `-`, nigdy `\u2014` ani `\u2013`, także w zakresach liczb i dat.
+- Na `origin` nie idzie nic bez pytania właściciela.
+
+---
+
+## Strumień A: bramka B, pilot papieru firmowego
+
+**Kolejność zmieniona polecaniem właściciela 2026-09-03: „później będziemy mierzyć na końcu",
+„na razie poprowadź zadania aby design skończył pracę".** Najpierw A0, czyli tura poprawek
+w Claude Design. Pomiary A2, A3 i A4 idą po jej zamknięciu, nie przed. A1 i A6 zostają
+niezależne od tej kolejności, bo nie potrzebują ani właściciela, ani projektanta.
+
+Zależność: A1 i A6 są niezależne od właściciela. A2-A5 wymagają jego oczu albo decyzji.
+
+### Zadanie A0: tura poprawek w Claude Design - PIERWSZA W KOLEJNOŚCI
+
+**Pliki:**
+- Utworzone 2026-09-03: `03-pakiet-claude-design/zlecenia/pilot-poprawki-do-wyslania.md`
+- Zapis wyników: `_robocze/pilot-papier-firmowy/protokol-pomiaru.md`
+
+**Co brief zamawia, trzy rzeczy do zrobienia i jedna do zaraportowania:**
+
+1. **Stopka strony pierwszej, defekt twardy.** `grid-template-columns: 54mm 54mm 62mm` plus
+   `column-gap: 4mm` daje 178 mm w pojemniku 170 mm; `overflow:hidden` obcina 8 mm, a razem z nimi
+   NIP, REGON, telefon i adres strony, czyli treść prawnie obowiązkową z art. 206 KSH. Naprawa
+   podana wprost: 54 + 4 + 54 + 4 + 54 = 170 mm, trzy bloki po dwie kolumny.
+2. **Trzy bloki nie siadają prawą krawędzią na kolumnie:** logo 20 .. 72 mm (do 54 mm), blok
+   adresata 20 .. 99 mm (do 83 mm), kolumna tekstu `max-width:150mm` (do 141 albo 112 mm, wybór
+   projektanta z uzasadnieniem, bo to długość wiersza).
+3. **Znak: zero nowego przebarwienia** do decyzji właściciela; jeżeli przebarwienie zostaje, kolor
+   wprost hexem z palety, nie łańcuchem `filter:`, który daje `#3D1922` i `#F6F3EB`, czyli barwy
+   spoza palety.
+4. **Do zaraportowania, nie do naprawy:** 15 z 22 stopni pisma jest poza skalą, czyli 68 procent.
+   Przy takim udziale wniosek nie brzmi „dokument łamie regułę", tylko „skala nie ma poziomów
+   poniżej 7,5 pt", a stopka i wizytówka ich potrzebują. Projektant ma zwrócić listę stopni,
+   których faktycznie potrzebuje - to wejście do decyzji właściciela o rozszerzeniu
+   `typografia.md`. Jedna wartość idzie w górę niezależnie od tej decyzji: etykiety na awersie
+   wizytówki mają 1,90 mm, czyli 5,39 pt, poniżej progu czytelności druku.
+
+- [ ] **Krok 1:** właściciel otwiera kanwę w Claude Design i wkleja tekst między znacznikami
+      POCZĄTEK i KONIEC z `03-pakiet-claude-design/zlecenia/pilot-poprawki-do-wyslania.md`.
+      Załączniki są już w projekcie, nie wgrywa się ich ponownie.
+- [ ] **Krok 2:** Claude Code odczytuje kanwę po poprawkach i weryfikuje trzy naprawy rachunkiem.
+
+```
+DesignSync get_file projectId=1a22ce64-0e1c-43a6-bd60-eef9241ef73b \
+  path=templates/papier-firmowy-wizytowka/PapierFirmowyWizytowka.dc.html
+```
+
+Oczekiwane po poprawce: suma kolumn stopki równa 170 mm; brak `62mm` w `grid-template-columns`;
+logo w 54 mm; blok adresata w 83 mm; kolumna tekstu w 141 albo 112 mm.
+
+- [ ] **Krok 3:** wpisać do formularza pomiaru, co projektant zmienił i jakie wartości wziął,
+      wraz z jego listą potrzebnych stopni pisma.
+- [ ] **Krok 4:** zadać właścicielowi decyzję o rozszerzeniu skali typograficznej - z listą
+      od projektanta, nie z moją propozycją.
+- [ ] **Krok 5: commit**
+
+```bash
+git add _robocze/pilot-papier-firmowy/protokol-pomiaru.md
+git commit -m "Tura poprawek pilota: stopka, przyleganie do kolumn, lista stopni pisma"
+```
+
+### Zadanie A1: pomiar 2 (siatka z realną treścią) - wykonalny bez właściciela
+
+**Pliki:**
+- Odczyt: projekt Claude Design `1a22ce64-0e1c-43a6-bd60-eef9241ef73b`,
+  `templates/papier-firmowy-wizytowka/PapierFirmowyWizytowka.dc.html`
+- Zapis wyniku: `_robocze/pilot-papier-firmowy/protokol-pomiaru.md`, wiersz 2
+- Zapis do warstwy 1: `01-baza-wiedzy/identyfikacja/siatka-a4.md`, nowa sekcja „Pierwsze użycie"
+
+**Co już zmierzono 2026-09-03 i wchodzi do wyniku:**
+
+| Element kanwy | Zakres w mm | Przyleganie do kolumn |
+|---|---|---|
+| logo poziome, strona 1 | 20 .. 72 | lewa siada, prawa nie (kolumna 2 kończy się na 74) |
+| blok adresata | 20 .. 99 | lewa siada, prawa nie (kolumna 3 kończy się na 103) |
+| lead i korpus, `max-width:150mm` | 20 .. 170 | lewa siada, prawa nie (kolumna 5 kończy się na 161) |
+| pas kickera i H3 | 20 .. 190 | siada obustronnie |
+| przełącznik `.siatka` | `repeat(6,25mm)` + `4mm` = 170 mm | zgodne z polem treści |
+| **stopka strony pierwszej** | **54 + 54 + 62 + 2 × 4 = 178 mm w pojemniku 170 mm** | **przekroczenie 8 mm, obcinane przez `overflow:hidden`** |
+
+- [ ] **Krok 1: odtworzyć pomiar**
+
+```bash
+python3 - <<'EOF'
+edges=[(k+1, 20+k*29, 20+k*29+25) for k in range(6)]
+print("kolumny:", edges)
+print("stopka:", 54+54+62+2*4, "mm w pojemniku", 210-40, "mm")
+EOF
+```
+
+Oczekiwane: kolumny `20..45, 49..74, 78..103, 107..132, 136..161, 165..190`; stopka `178 mm`
+w pojemniku `170 mm`.
+
+- [ ] **Krok 2: potwierdzić, że wartości nadal stoją w kanwie**
+
+```
+DesignSync get_file projectId=1a22ce64-0e1c-43a6-bd60-eef9241ef73b \
+  path=templates/papier-firmowy-wizytowka/PapierFirmowyWizytowka.dc.html
+```
+
+Oczekiwane: w treści występuje `grid-template-columns:54mm 54mm 62mm` oraz `column-gap:4mm`.
+Jeżeli nie występuje - kanwa została poprawiona, pomiar trzeba zrobić od nowa na nowych wartościach.
+
+- [ ] **Krok 3: wpisać wynik do formularza pomiaru**
+
+W `_robocze/pilot-papier-firmowy/protokol-pomiaru.md`, wiersz 2, kolumna „Co zobaczyłem":
+tabela z kroku wyżej, z dopiskiem „odczytane z plików projektu, nie z renderu".
+
+- [ ] **Krok 4: zadać właścicielowi jedno pytanie, nie rozstrzygać samemu**
+
+Przekroczenie stopki o 8 mm obcina trzecią kolumnę: NIP, REGON, telefon i adres strony. Dane
+z art. 206 KSH są w `02-szablony-dokumentow/papier-firmowy.md` **prawnie obowiązkowe**, więc to
+nie jest kosmetyka. Pytanie: poprawiamy dokument (stopka na 54 + 54 + 54 + 2 × 4 = 170 mm), czy
+zmieniamy pojemnik. **Nie wpisuj tego do warstwy 1 przed odpowiedzią** - formularz pomiaru wprost
+zakazuje przenoszenia rozbieżności automatycznie.
+
+- [ ] **Krok 5: commit**
+
+```bash
+git add _robocze/pilot-papier-firmowy/protokol-pomiaru.md
+git commit -m "Pomiar 2 pilota: siatka zmierzona na plikach kanwy, stopka o 8 mm za szeroka"
+```
+
+### Zadanie A2: pomiary 1, 3 i 5 - właściciel na żywej kanwie
+
+**Pliki:**
+- Zapis wyniku: `_robocze/pilot-papier-firmowy/protokol-pomiaru.md`, wiersze 1, 3, 5
+- Zapis do warstwy 1: `01-baza-wiedzy/identyfikacja/typografia.md` (sekcje „Alfabet polski" i o H3),
+  `01-baza-wiedzy/identyfikacja/paleta-barw.md` (sekcja o regule 80/15/5)
+
+**Warunek wejścia:** kanwa otwarta w przeglądarce. Kroje są w projekcie osadzone jako data URI
+(zmierzone 2026-09-03: `sha256` `f80139aec8d4a268`, cztery bloki `data:font/woff2`, zero `url(http`),
+więc **nie trzeba nic przygotowywać**. Pomiarów nie robi się na PDF - eksport idzie przez drukarkę
+Chromium i wyciąga metryki systemowe.
+
+- [ ] **Krok 1: pomiar 1** - powiększyć na kanwie zdanie „Żółć, gęś, źdźbło, ćma, łódź, ńandu, świt,
+      żółw: ĄĆĘŁŃÓŚŹŻ ąćęłńóśźż" w każdym z trzech miejsc: korpus (Manrope 400), lead (500) i H3 (600).
+      Szukać brakujących ogonków, kresek i zamienników z innego kroju. Zapisać, czy komplet 18
+      diakrytyków stoi w każdej z trzech wag.
+- [ ] **Krok 2: pomiar 3** - obejrzeć H3 „Źródła finansowania, o które występuje pracodawca"
+      stojący bezpośrednio pod leadem. Oba mają stopień 4,2 mm (16 px), różni je wyłącznie waga
+      500 wobec 600. Zapisać: widać różnicę bez kickera czy nie.
+- [ ] **Krok 3: pomiar 5** - obejrzeć całość i odpowiedzieć, czy papier w samym Aksamicie, bez
+      koloru dziedziny, czyta się jako spójny z regułą 80/15/5. Projektant zapisał w uwadze nr 1,
+      że warstwa 15 % została pusta celowo - to jego zapis, nie odpowiedź właściciela.
+- [ ] **Krok 4: Claude Code wpisuje trzy wyniki do formularza, z datą**
+- [ ] **Krok 5: Claude Code przenosi wyniki do dwóch plików warstwy 1**
+
+Weryfikacja: `grep -n "pokrycie potwierdzone w zakresie, w jakim je zmierzono" 01-baza-wiedzy/identyfikacja/typografia.md`
+Oczekiwane po zadaniu: **zero trafień** - zdanie zastąpione wynikiem z datą.
+
+- [ ] **Krok 6: commit**
+
+```bash
+git add _robocze/pilot-papier-firmowy/protokol-pomiaru.md 01-baza-wiedzy/identyfikacja/typografia.md 01-baza-wiedzy/identyfikacja/paleta-barw.md
+git commit -m "Pomiary 1, 3 i 5 pilota wpisane do warstwy 1"
+```
+
+### Zadanie A3: pomiar 6 - wydruk na zwykłej drukarce
+
+**Pliki:** `_robocze/pilot-papier-firmowy/protokol-pomiaru.md` wiersz 6,
+potem `01-baza-wiedzy/identyfikacja/paleta-barw.md`, sekcja „Minimalna grubość linii".
+
+- [ ] **Krok 1:** wyeksportować PDF w skali 1:1 i wydrukować stronę pierwszą oraz wizytówkę.
+      Kroje na wydruku będą zastępcze i to nie przeszkadza - ten pomiar dotyczy grubości linii,
+      nie liter.
+- [ ] **Krok 2:** obejrzeć linię struktury 0,25 mm w Popiele `#7D7466` (linia stopki, dwie sztuki)
+      i kreskę 0,5 mm w Złocie foliowym `#A8874E` (sygnatura na stronie pierwszej, kreska na
+      awersie wizytówki). Zapisać: widoczne czy nie, i na jakim tle.
+- [ ] **Krok 3:** wpisać wynik. Widoczne - obie wartości potwierdzone. Niewidoczne - wpisać
+      zmierzone minimum, a nie „trzeba pogrubić".
+- [ ] **Krok 4: commit**
+
+```bash
+git add _robocze/pilot-papier-firmowy/protokol-pomiaru.md 01-baza-wiedzy/identyfikacja/paleta-barw.md
+git commit -m "Pomiar 6 pilota: minimalne grubosci linii sprawdzone na wydruku"
+```
+
+### Zadanie A4: pomiar 4 - decyzja właściciela, gdzie się przenosi
+
+**Pliki:** `_robocze/pilot-papier-firmowy/protokol-pomiaru.md`, sekcja „Pomiar 4 stracił nośnik";
+potem `01-baza-wiedzy/identyfikacja/logotyp.md` albo `MAPA-DROGOWA.md`, zależnie od wyjścia.
+
+Trzy wyjścia są wypisane w formularzu. Zadanie polega na zadaniu pytania i wpisaniu odpowiedzi,
+**nie** na wybraniu wyjścia za właściciela.
+
+- [ ] **Krok 1:** zadać pytanie ankietą, z rekomendacją i jej uzasadnieniem.
+- [ ] **Krok 2:** wpisać decyzję do `PLAN.md`, sekcja „Decyzje foundera - rozstrzygnięte".
+- [ ] **Krok 3:** jeżeli wyjście 2 (przeniesienie na inny dokument) - poprawić `MAPA-DROGOWA.md`,
+      wiersz etapu 4, tak jak zrobiono z falsyfikatorem „Karmin obok Aksamitu".
+- [ ] **Krok 4: commit**
+
+### Zadanie A5: zamknięcie bramki B
+
+**Warunek wejścia:** A1-A4 zamknięte, każdy pomiar ma wpisany wynik albo jawnie przeniesiony nośnik.
+
+**Pliki:**
+- Modyfikacja: `MAPA-DROGOWA.md` (wiersz etapu 4 w tabeli bramek, plus diagram)
+- Modyfikacja: `PLAN.md`, zadanie 22
+
+- [ ] **Krok 1:** wpisać do `MAPA-DROGOWA.md`, że bramka B jest spełniona, z listą pomiarów
+      i datą każdego.
+- [ ] **Krok 2:** zamknąć zadanie 22 w `PLAN.md`.
+- [ ] **Krok 3: weryfikacja**
+
+```bash
+grep -c "Etap czeka wyłącznie na przeprowadzenie pilota" MAPA-DROGOWA.md
+```
+
+Oczekiwane: `0`.
+
+- [ ] **Krok 4: commit**
+
+### Zadanie A6: higiena po weryfikacji z 2026-09-03
+
+Trzy pliki twierdzą rzeczy, które pomiar obalił. Zadanie jest niezależne od właściciela.
+
+**Pliki:**
+- Modyfikacja: `_robocze/pilot-papier-firmowy/README.md` - zdanie „pomiar 4 dotyczyłby sygnetu
+  12 mm, choć sporną wartością jest 10 mm" i „kanwę zasiewa się od nowa z paczki"
+- Modyfikacja: `MAPA-DROGOWA.md`, wiersz etapu 4 - „Pomiarów nie robi się na żadnej z nich"
+- Modyfikacja: `PLAN.md`, zadanie 22 - „sygnet na rewersie zmniejszony z 12 na 10 mm"
+
+Wszystkie trzy powstały, gdy nie było wiadomo, że w projekcie w Claude Design leży gotowa kanwa
+z 22 mm z polecenia właściciela.
+
+- [ ] **Krok 1:** w każdym z trzech plików zastąpić nieaktualne zdanie wynikiem pomiaru, z odsyłaczem
+      do `_robocze/sesje/2026-09-03-weryfikacja-stanu-i-kanwa-pilota.md`.
+- [ ] **Krok 2:** dopisać do `_robocze/pilot-papier-firmowy/README.md` trzeci adres: projekt
+      design-system `1a22ce64-0e1c-43a6-bd60-eef9241ef73b`, w nim
+      `templates/papier-firmowy-wizytowka/PapierFirmowyWizytowka.dc.html` - **to jest kanwa,
+      na której się mierzy**.
+- [ ] **Krok 3: weryfikacja**
+
+```bash
+grep -rn "kanwę zasiewa się od nowa\|Pomiarów nie robi się na żadnej" MAPA-DROGOWA.md PLAN.md _robocze/pilot-papier-firmowy/README.md
+```
+
+Oczekiwane: `0` trafień.
+
+- [ ] **Krok 4: commit**
+
+---
+
+## Strumień B: zlecenie certyfikatu i zaświadczenia
+
+Zależność: B1 nie ruszy bez B0. B0 to pytania, nie praca.
+
+### Zadanie B0: pięć decyzji właściciela
+
+Każda zmienia treść zlecenia, więc żadnej nie zgaduję. Pytane ankietą, po dwie albo trzy na raz,
+z rekomendacją przy każdej.
+
+- [ ] **Krok 1: orientacja strony.** A4 pion (siatka zatwierdzona, zero pracy) czy A4 poziom.
+      Rekomendacja: **pion**. Uzasadnienie do obalenia: `siatka-a4.md` obowiązuje wyłącznie na
+      pionie i sama mówi, że inna orientacja unieważnia całe sprawdzenie, a zaświadczenie jest
+      w `02-szablony-dokumentow/certyfikat.md` opisane jako dowód rozliczeniowy wobec PUP i BUR,
+      nie pamiątkowy dyplom - trafia do teczki obok dokumentów pionowych. Falsyfikator: jeżeli
+      klienci albo operatorzy oczekują poziomego dyplomu, konwencja rynku wygrywa z wygodą siatki.
+      Koszt poziomu, policzony: nowa para moduł/gutter (6 × 37 + 5 × 7 = 257 mm przy marginesach
+      20 mm), rytm pionowy 27 jednostek plus 2 mm reszty zamiast 41 plus 5 mm, i **nowa
+      specyfikacja do zatwierdzenia**, czyli piąta obok czterech istniejących.
+- [ ] **Krok 2: dziedzina, czyli kolor warstwy 15 %.** Rekomendacja: **Aksamit (Pedagogika)**.
+      Uzasadnienie: tylko wtedy na tym dokumencie zadziała falsyfikator „Karmin obok Aksamitu",
+      który mapa drogowa przeniosła z pilota na pierwszy dokument ze statusami. Jeden kolor
+      dziedziny na dokument, nigdy dwa.
+- [ ] **Krok 3: osoba podpisująca.** Jedna sygnatura czy dwie. Imion z `brandbook.dc.html`
+      użyć nie wolno - są zmyślone.
+- [ ] **Krok 4: numeracja zaświadczeń.** Czy `IRIN/RRRR/D/NNNNN` z kanwy jest realną konwencją
+      firmy. Jeżeli nie, we wzorze zostaje placeholder `[NUMER ZAŚWIADCZENIA]`.
+- [ ] **Krok 5: PESEL.** Czy w ogóle na dokumencie i w jakim maskowaniu. Powód, dla którego to
+      nie jest decyzja projektanta: zaświadczenie krąży jako skan między pracodawcą, urzędem pracy
+      i operatorem, a `bur.md` wymaga „danych usługobiorcy" bez wskazania, że to musi być PESEL.
+- [ ] **Krok 6:** wpisać pięć decyzji do `PLAN.md`, sekcja „Decyzje foundera - rozstrzygnięte",
+      i zdjąć wiersz „Czy certyfikat ma dwie wersje wdrożeniowe" z `MAPA-DROGOWA.md`, grupa II.
+
+### Zadanie B1: zlecenie certyfikatu, wersja projektowa
+
+**Pliki:**
+- Utworzenie: `03-pakiet-claude-design/zlecenia/certyfikat-zaswiadczenie.md`
+- Wzór formy: `03-pakiet-claude-design/zlecenia/pilot-papier-firmowy.md` (cztery sekcje: skład
+  paczki, treść sekcji „Zlecenie", protokół pomiaru, co blokuje wysłanie)
+
+**Interfejsy:**
+- Konsumuje: pięć decyzji z B0; listę ośmiu elementów zaświadczenia z
+  `01-baza-wiedzy/prawo/bur.md`, sekcja „Zaświadczenie"; dwa wymogi KFS z
+  `01-baza-wiedzy/prawo/kfs.md`, sekcja „Dokumentacja ukończenia szkolenia".
+- Produkuje: listę plików paczki, której B2 i B4 muszą się trzymać co do nazw.
+
+**Treść obowiązkowa zlecenia, wypisana, żeby nie było „uzupełnij":**
+
+1. **Dwie wersje wdrożeniowe jako artboardy do porównania**, w tej samej dziedzinie i z tą samą
+   treścią: kolumnowa i z pieczęcią (panel metryk jako blok kontrastowy). W zleceniu napisane
+   wprost: **nie wybieraj wersji i nie sugeruj, która lepsza.** Powód: karta specyfikacji nie prosi
+   o wybór, tylko o **regułę doboru wg kanału dystrybucji**, a reguła zakłada, że obie istnieją.
+   Kryterium jest pomiarem, nie gustem: czy numer zaświadczenia i kod usługi zostają czytelne
+   po kopii czarno-białej.
+2. **Osiem elementów treści z Załącznika 4 do Regulaminu BUR**, Rozdział 2 pkt 3: tytuł usługi,
+   numer identyfikacyjny usługi, data świadczenia, liczba godzin, informacja o nabytych efektach
+   uczenia się, dane usługobiorcy, ID wsparcia, kod kwalifikacji z ZRK (tylko jeżeli nabyta).
+   Wszystkie jako placeholdery w nawiasach kwadratowych.
+3. **Dwa wymogi z KFS:** wzór dokumentu musi istnieć przed złożeniem wniosku (rozporządzenie
+   o KFS, § 2 ust. 2 pkt 3), a wystawiony dokument wskazuje **tematykę kształcenia**
+   (§ 6 ust. 3 pkt 5 lit. c). KFS nie narzuca ani pól, ani układu.
+4. **Plakietka KOREKTA w Karminie `#9E2B2B`** jako stan błędu - jedyny legalny nośnik tego koloru
+   na tym dokumencie. Podstawa nie jest wymysłem: Załącznik 4 nakłada obowiązek wydania korekty
+   zaświadczenia w ciągu 7 dni od uzasadnionego wezwania usługobiorcy. Obok koloru obowiązkowa
+   etykieta słowna - kolor nigdy nie jest jedynym nośnikiem statusu.
+5. **Zakaz, który trzeba napisać wprost:** plakietka Karmin nie stoi na wypełnieniu Aksamitu ani
+   Aksamit na Karminie. Kontrast przeliczony 2026-09-03 wzorem WCAG 2.1: `#9E2B2B` wobec `#452430`
+   daje **1,83:1**. Dopuszczone: Karmin na papierze Kaszmir `#FBF8F2` (6,99:1), Pergamin
+   `#E7DFD2` jako napis na wypełnieniu Karminu (5,60:1). Zakazane dodatkowo: Karmin na Espresso
+   `#221A15` (2,31:1).
+6. **Kodu usługi BUR nie odtwarzać.** Struktura numeru nie jest zdefiniowana w żadnym z sześciu
+   przejrzanych dokumentów PARP. Na wzorze stoi `[NUMER IDENTYFIKACYJNY USŁUGI Z BUR]`.
+7. **Zakaz znaków:** bez znaku Funduszy Europejskich, znaku barw RP i flagi UE. Podstawa:
+   Podręcznik informacji i promocji FE, rozdz. 2 (s. 7) i 8.7 (s. 22). IRIN jest doradcą
+   zewnętrznym, nie beneficjentem - to zakaz, nie brak obowiązku.
+8. **Logotyp bez zmiany koloru**, dopóki decyzja o przebarwianiu filtrem jest odłożona. Na ciemnym
+   tle wersja odwrócona, nie przebarwiona. Jeżeli projektant potrzebuje znaku w kolorze dziedziny,
+   ma to **zapisać jako pytanie**, nie zrobić po cichu i nie łańcuchem `filter:` - ten na kanwie
+   pilota daje `#3D1922`, czyli nie trafia w żaden kolor palety.
+9. **Zdanie testowe z diakrytykami** do zachowania w każdej użytej wadze, jak w pilocie.
+10. **Format wyniku:** żywa kanwa z przełącznikiem siatki nad każdym artboardem, potem PDF 1:1.
+    Kolejność ma znaczenie - eksport nie osadza krojów.
+
+- [ ] **Krok 1:** napisać plik według czterech sekcji wzoru pilota.
+- [ ] **Krok 2: weryfikacja kompletności**
+
+```bash
+python3 - <<'EOF'
+import re
+s = open('03-pakiet-claude-design/zlecenia/certyfikat-zaswiadczenie.md', encoding='utf-8').read()
+wymagane = ["1,83:1", "#9E2B2B", "#452430", "KOREKTA", "Załącznika 4", "§ 2 ust. 2 pkt 3",
+            "§ 6 ust. 3 pkt 5", "nie wybieraj wersji", "Funduszy Europejskich",
+            "NUMER IDENTYFIKACYJNY USŁUGI"]
+brak = [w for w in wymagane if w not in s]
+print("brakuje:", brak if brak else "nic")
+print("mysliniki:", len(re.findall(r"[\u2014\u2013]", s)))
+EOF
+```
+
+Oczekiwane: `brakuje: nic`, `mysliniki: 0`.
+
+- [ ] **Krok 3: commit**
+
+### Zadanie B2: przekład na wersję do wysłania
+
+**Pliki:**
+- Utworzenie: `03-pakiet-claude-design/zlecenia/certyfikat-zaswiadczenie-do-wyslania.md`
+- Wzór: `03-pakiet-claude-design/zlecenia/pilot-papier-firmowy-do-wyslania.md`
+
+Powód istnienia tego pliku: Claude Design nie widzi dysku, więc każda ścieżka lokalna jest tam
+martwym adresem, który może zostać wzięty za zadanie do wykonania. Źródłem prawdy zostaje B1.
+
+- [ ] **Krok 1:** przełożyć B1 na jeden ciągły tekst między znacznikami POCZĄTEK i KONIEC,
+      bez ani jednej ścieżki lokalnej. Nazwy plików w paczce **w wersji z projektu Claude Design**:
+      `zasady-uzycia.md` zamiast `format-paczki.md`, `tokens/palette-irin.json` zamiast `tokeny/`.
+- [ ] **Krok 2: weryfikacja braku ścieżek lokalnych**
+
+```bash
+sed -n '/POCZĄTEK TEKSTU/,/KONIEC TEKSTU/p' 03-pakiet-claude-design/zlecenia/certyfikat-zaswiadczenie-do-wyslania.md | grep -n "01-baza-wiedzy/\|02-szablony-dokumentow/\|03-pakiet-claude-design/\|_robocze/\|format-paczki"
+```
+
+Oczekiwane: zero trafień.
+
+- [ ] **Krok 3: commit**
+
+### Zadanie B3: formularz pomiaru certyfikatu
+
+**Pliki:** utworzenie `_robocze/certyfikat/protokol-pomiaru.md`, wzór:
+`_robocze/pilot-papier-firmowy/protokol-pomiaru.md`.
+
+**Pomiary, które ten dokument ma zamknąć** - każdy z nazwanym plikiem docelowym:
+
+| Nr | Co sprawdzić | Gdzie ląduje wynik |
+|---|---|---|
+| 1 | **Karmin obok Aksamitu na realnym dokumencie** - falsyfikator przeniesiony z pilota. Czy plakietka KOREKTA jest odróżnialna od koloru dziedziny na papierze i po kopii mono | `paleta-barw.md`, sekcja o Karminie |
+| 2 | Czy numer zaświadczenia i numer usługi BUR zostają czytelne **po kopii czarno-białej** w obu wersjach wdrożeniowych | `02-szablony-dokumentow/certyfikat.md`, sekcja „Konwencja organizacyjna IRIN" - to jest ta reguła doboru wersji |
+| 3 | Czy osiem elementów z Załącznika 4 zmieściło się bez skracania i bez zmiany brzmienia | `02-szablony-dokumentow/certyfikat.md` |
+| 4 | Objętość: ile stron zajmuje realne zaświadczenie w wariancie 1 „Kaszmir uporządkowany" - to pomiar zapowiedziany w `PLAN.md` przy wyborze układu księgi marki | `PLAN.md`, sekcja o wariancie 1 |
+| 5 | Czy status ma etykietę słowną obok koloru w **każdym** miejscu, gdzie kolor niesie znaczenie | `paleta-barw.md`, sekcja „Kolor nigdy nie jest jedynym nośnikiem statusu" |
+
+- [ ] **Krok 1:** napisać formularz z pustą kolumną „Co zobaczyłem" i kolumną „Na czym
+      (kanwa / PDF / wydruk / kopia mono)".
+- [ ] **Krok 2:** dopisać sekcję „Czego ten dokument nie sprawdzi", tak jak ma pilot.
+- [ ] **Krok 3: commit**
+
+### Zadanie B4: dołożyć cztery pliki do projektu w Claude Design
+
+**Pliki w projekcie `1a22ce64-0e1c-43a6-bd60-eef9241ef73b`:**
+- `guidelines/certyfikat.md` z `02-szablony-dokumentow/certyfikat.md`
+- `guidelines/bur.md` z `01-baza-wiedzy/prawo/bur.md`
+- `guidelines/kfs.md` z `01-baza-wiedzy/prawo/kfs.md`
+- `guidelines/pozyczki-ue-bgk.md` z `01-baza-wiedzy/prawo/pozyczki-ue-bgk.md`
+
+**To jest zapis do usługi zewnętrznej, więc wymaga zgody właściciela przed wykonaniem.**
+Cofnięcie: `DesignSync delete_files` na tych czterech ścieżkach; żaden istniejący plik nie jest
+nadpisywany, bo `guidelines/` ma dziś osiem plików i żadna z tych czterech nazw w nim nie występuje.
+
+- [ ] **Krok 1:** skopiować cztery pliki do `_robocze/ds-bundle/guidelines/`, bo `write_files`
+      czyta z katalogu zatwierdzonego w planie (`localDir`).
+- [ ] **Krok 2:** `DesignSync finalize_plan` z `writes` na cztery ścieżki i `deletes: []`.
+- [ ] **Krok 3:** `DesignSync write_files` z `planId` i `localPath` każdego pliku.
+- [ ] **Krok 4: weryfikacja**
+
+```
+DesignSync list_files projectId=1a22ce64-0e1c-43a6-bd60-eef9241ef73b
+```
+
+Oczekiwane: `guidelines/` ma **dwanaście** plików, w tym cztery nowe.
+
+- [ ] **Krok 5:** sprawdzić treść jednego z nich, żeby wykluczyć wysłanie pustego pliku.
+
+```
+DesignSync get_file projectId=1a22ce64-0e1c-43a6-bd60-eef9241ef73b path=guidelines/certyfikat.md
+```
+
+Oczekiwane: w treści występuje „Elementy prawnie obowiązkowe".
+
+- [ ] **Krok 6: commit** kopii w `_robocze/ds-bundle/`.
+
+---
+
+## Kolejność i równoległości
+
+- **A0 jest pierwsze.** Właściciel wkleja brief poprawek, projektant je wykonuje, ja weryfikuję
+  rachunkiem. Dopóki A0 nie jest zamknięte, pomiarów nie robimy - mierzyłyby stan, który się
+  jeszcze zmieni.
+- **A1 i A6 ruszają natychmiast** - nie potrzebują właściciela ani Claude Design.
+- **A2, A3 i A4 idą po A0**, nie przed. To praca na kanwie i wydruku plus jedna decyzja.
+  **B0 nie czeka na A0** - pięć decyzji o certyfikacie jest od pilota niezależne.
+- **B1 zależy wyłącznie od B0.** Nie zależy od bramki B, więc oba strumienie idą równolegle.
+- **B2 zależy od B1**, bo jest jego przekładem. **B3 i B4 są niezależne od B1** i mogą powstać
+  wcześniej.
+- **A5 jest ostatnie w strumieniu A**, po A1-A4.
+
+Ryzyko blokujące jedno: jeżeli B0 krok 1 wyjdzie na A4 poziom, dochodzi zadanie nieujęte w tym
+planie - przeliczenie i zatwierdzenie piątej specyfikacji identyfikacji. Wtedy B1 czeka na nią.
+
+## Weryfikacja domknięcia planu
+
+| Kryterium | Komenda | Oczekiwane |
+|---|---|---|
+| Stopka strony pierwszej mieści się w polu treści | `DesignSync get_file` na kanwie, potem suma kolumn stopki | `170 mm`, brak `62mm` |
+| Każdy pomiar pilota ma wynik albo jawnie przeniesiony nośnik | `grep -c "| | |" _robocze/pilot-papier-firmowy/protokol-pomiaru.md` | `0` |
+| Bramka B zamknięta | `grep -c "Etap czeka wyłącznie na przeprowadzenie pilota" MAPA-DROGOWA.md` | `0` |
+| Nieaktualne zdania o kanwie usunięte | `grep -rn "kanwę zasiewa się od nowa" MAPA-DROGOWA.md PLAN.md _robocze/pilot-papier-firmowy/README.md` | zero trafień |
+| Para plików zlecenia certyfikatu istnieje | `ls 03-pakiet-claude-design/zlecenia/certyfikat-zaswiadczenie*.md` | dwa pliki |
+| Wersja do wysłania nie ma ścieżek lokalnych | komenda z B2 krok 2 | zero trafień |
+| Formularz certyfikatu istnieje | `ls _robocze/certyfikat/protokol-pomiaru.md` | plik istnieje |
+| Cztery pliki w projekcie Claude Design | `DesignSync list_files` | `guidelines/` ma dwanaście plików |
+| Zero zmyślonych danych osobowych we wzorze | `grep -nE "PESEL [0-9]|[0-9]{11}" 03-pakiet-claude-design/zlecenia/certyfikat-zaswiadczenie*.md` | zero trafień |
+| Zero myślników w nowych plikach | `grep -c "\u2014\|\u2013" 03-pakiet-claude-design/zlecenia/certyfikat-zaswiadczenie*.md _robocze/certyfikat/protokol-pomiaru.md` | `0` w każdym |
+
+## Otwarte pytania
+
+Sześć, wszystkie do właściciela. Pięć jest w zadaniu B0. Szóste w A4. Dodatkowo dwa, które wyszły
+z pomiaru 2 i z weryfikacji stanu:
+
+- **Stopka strony pierwszej jest o 8 mm szersza od pola treści** i obcina NIP, REGON, telefon oraz
+  adres strony. Poprawiamy dokument czy pojemnik. Dane z art. 206 KSH są prawnie obowiązkowe,
+  więc to nie jest kosmetyka.
+- **Przebarwienie znaku łańcuchem `filter:`** - właściciel odłożył decyzję do obejrzenia pracy
+  Claude Design. Do jej podjęcia w zleceniach obowiązuje `logotyp.md` bez zmian.
