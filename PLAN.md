@@ -367,6 +367,65 @@ Oczekiwane: `0` trafień.
 
 ---
 
+## Strumień S: zestaw szablonów uniwersalnych - PRIORYTET WŁAŚCICIELA
+
+**Wprowadzony polecaniem z 2026-09-03:** „narazie potrzebuję lekkich szablonów uniwersalnych,
+żeby dało się je przygotować jako wzorce dla różnego rodzaju pierdoletów", „merytoryką będziemy
+się martwić później", „niech już wszystko robi". Ten strumień **wyprzedza strumień B**: zamiast
+zlecać sześć konkretnych dokumentów, zamawiamy osiem układów z miejscami na treść, a merytoryka
+wchodzi w kolejnych turach.
+
+### Zadanie S1: brief ośmiu szablonów - ZROBIONE 2026-09-03
+
+**Plik:** `03-pakiet-claude-design/zlecenia/szablony-uniwersalne-do-wyslania.md`
+
+Osiem artboardów: karta jednostronicowa, dokument z pieczęcią w dwóch odmianach, tabela danych
+regulowanych, okładka, rozkładówka katalogowa, slajd 16:9 w trzech odmianach (jako **propozycja**
+siatki, bo `siatka-a4.md` obowiązuje wyłącznie na A4 pion), notatka wewnętrzna, zestaw drobnych.
+Wszystko na placeholderach, zero zmyślonych danych.
+
+Inaczej niż zlecenie pilota ten plik **nie ma osobnej wersji projektowej** - nie zamawia treści
+merytorycznej, więc nie ma czego trzymać w dwóch wersjach. Notatka dla właściciela ze ścieżkami
+stoi w części A, przed znacznikiem POCZĄTEK; tekst do wklejenia jest za znacznikiem i ścieżek
+nie ma (sprawdzone `grep` po czterech prefiksach katalogów: zero trafień).
+
+- [x] Brief napisany i sprawdzony pod kątem ścieżek lokalnych oraz nazw z projektu.
+- [ ] **Krok 2:** właściciel wkleja tekst między znacznikami do Claude Design.
+- [ ] **Krok 3:** Claude Code odczytuje kanwę i weryfikuje rachunkiem przyleganie bloków do kolumn
+      (szerokości 25, 54, 83, 112, 141, 170 mm; krawędzie prawe 45, 74, 103, 132, 161, 190 mm).
+- [ ] **Krok 4:** wpisać trzy rzeczy zwrócone przez projektanta: listę stopni poniżej 7,5 pt,
+      propozycję siatki slajdu 16:9, listę kandydatów na prymitywy.
+- [ ] **Krok 5:** zadać właścicielowi dwie decyzje, które z tego wynikają: rozszerzenie skali
+      typograficznej i zatwierdzenie siatki slajdu jako piątej specyfikacji identyfikacji.
+
+### Zadanie S2: dwie luki w palecie, wykryte pomiarem
+
+Obie policzone w tej sesji wzorem WCAG 2.1 i **już wpisane do briefu S1 jako zakazy**, bo bez nich
+plakietka i pieczęć wyszłyby nieczytelne. Do decyzji właściciela, czy wchodzą do warstwy 1.
+
+| Luka | Zmierzone | Czego `paleta-barw.md` nie mówi |
+|---|---|---|
+| Plakietka statusu na wypełnieniu koloru dziedziny | Karmin na Aksamicie 1,83:1, na Miedzi 1,13:1, na Onyksie 1,32:1 - wszystkie poniżej progu 3:1 | Plik nie zakazuje tego zestawienia w ogóle |
+| Złoto foliowe zawodzi nie tylko na Pergaminie | na Miedzi 1,94:1, na Onyksie 2,90:1, przy progu 3:1; przechodzi na Aksamicie 4,03:1 i Kaszmirze 3,17:1 | Plik zakazuje mu wyłącznie tła Pergaminu (2,55:1) |
+
+Skutek praktyczny drugiej luki: **pieczęć w Złocie foliowym nie działa w dokumencie dziedziny
+Akademia AI ani Pożyczki UE/BGK.** To nie jest kosmetyka - pieczęć jest w `paleta-barw.md` jedną
+z trzech dopuszczonych rol tego koloru.
+
+- [ ] **Krok 1:** zadać właścicielowi decyzję: dopisujemy oba zakazy do `paleta-barw.md`
+      czy zostają wyłącznie w zleceniach.
+- [ ] **Krok 2:** jeżeli tak - dopisać do `01-baza-wiedzy/identyfikacja/paleta-barw.md`, sekcja
+      „Dwie pary nadal pod progiem", i przeliczyć tabelę od nowa, nie kopiować tych liczb.
+- [ ] **Krok 3: weryfikacja**
+
+```bash
+grep -c "1,13:1\|1,94:1" 01-baza-wiedzy/identyfikacja/paleta-barw.md
+```
+
+Oczekiwane po kroku 2: co najmniej `2`.
+
+---
+
 ## Strumień B: zlecenie certyfikatu i zaświadczenia
 
 Zależność: B1 nie ruszy bez B0. B0 to pytania, nie praca.
@@ -555,6 +614,8 @@ Oczekiwane: w treści występuje „Elementy prawnie obowiązkowe".
 - **A1 i A6 ruszają natychmiast** - nie potrzebują właściciela ani Claude Design.
 - **A2, A3 i A4 idą po A0**, nie przed. To praca na kanwie i wydruku plus jedna decyzja.
   **B0 nie czeka na A0** - pięć decyzji o certyfikacie jest od pilota niezależne.
+- **Strumień S wyprzedza B.** Właściciel odłożył merytorykę, więc konkretne dokumenty (certyfikat,
+  karta usługi, viewbook) czekają na zamknięcie szablonów uniwersalnych.
 - **B1 zależy wyłącznie od B0.** Nie zależy od bramki B, więc oba strumienie idą równolegle.
 - **B2 zależy od B1**, bo jest jego przekładem. **B3 i B4 są niezależne od B1** i mogą powstać
   wcześniej.

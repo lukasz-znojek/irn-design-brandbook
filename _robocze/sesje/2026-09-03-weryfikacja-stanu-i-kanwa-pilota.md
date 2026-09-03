@@ -139,6 +139,35 @@ Aksamitu ani Aksamit na Karminie - 1,83:1 to zlanie się dwóch plam. Karmin na 
 Karmin na Espresso (2,31:1) też jest zakazany, a Espresso jest tłem rewersu wizytówki, więc
 ta para nie jest hipotetyczna.
 
+## Dwie luki w palecie, wykryte przy pisaniu briefu szablonów
+
+Obie policzone wzorem WCAG 2.1 w tej sesji, oba hexy obok wyniku. Falsyfikator dla obu: ponowne
+przeliczenie na `tokeny/palette-irin.json` dające inną wartość.
+
+**Luka 1: `paleta-barw.md` nie zakazuje stawiania plakietki statusu na wypełnieniu koloru dziedziny.**
+Zmierzone kontrasty są poniżej progu 3:1 dla grafiki we wszystkich trzech parach:
+Karmin `#9E2B2B` na Aksamicie `#452430` **1,83:1**, na Miedzi `#7A5638` **1,13:1**,
+na Onyksie `#33474F` **1,32:1**. Plik opisuje regułę 80/15/5 i osobno tabelę etykiet, ale nigdzie
+nie mówi, że warstwa 5 % nie może stać na warstwie 15 %.
+
+**Luka 2: zakaz dla Złota foliowego jest za węski.** Plik zakazuje mu wyłącznie tła Pergaminu
+(2,55:1). Zmierzone: Złoto `#A8874E` na Miedzi `#7A5638` **1,94:1** i na Onyksie `#33474F`
+**2,90:1**, oba poniżej 3:1. Przechodzi na Aksamicie (4,03:1) i na Kaszmirze (3,17:1).
+
+**Skutek, który to obala:** zdanie z `paleta-barw.md`, że Złoto foliowe „zostaje jasne" i wystarczy
+mu zawężona rola „wyłącznie kreska ozdobna, pieczęć i sygnatura, nigdy na tle Pergaminu". Zawężenie
+roli nie wystarcza, bo **pieczęć w dokumencie dziedziny Akademia AI albo Pożyczki UE/BGK stoi na
+Miedzi albo Onyksie** i tam Złoto nie przechodzi. Dwie z trzech dopuszczonych rol tego koloru
+przestają działać w dwóch z trzech dziedzin.
+
+Kontrola metody: ten sam skrypt odtworzył co do setnej dziewięć wartości z tabel w `paleta-barw.md`
+(Pergamin na trzech kolorach dziedziny 10,26 / 4,94 / 7,37, Popiół na trzech tłach
+4,34 / 4,12 / 3,48, Karmin na Kaszmirze 6,99, Espresso na Złocie 5,09, biel na Rubryce 5,53).
+
+Oba zakazy weszły już do `03-pakiet-claude-design/zlecenia/szablony-uniwersalne-do-wyslania.md`,
+bo bez nich szablon plakietki i pieczęci wyszedłby nieczytelny. Czy wchodzą do warstwy 1 - decyzja
+właściciela, zadanie S2 w `PLAN.md`.
+
 ## Siatka na A4 poziom - rachunek, jeżeli orientacja się zmieni
 
 `siatka-a4.md` obowiązuje wyłącznie na A4 pion i sama mówi: „Falsyfikator: inny format albo inna
@@ -193,7 +222,11 @@ i tego, na czym się mierzy.
    wzór ma zostać z placeholderem.
 8. **PESEL na dokumencie:** czy w ogóle, i w jakim maskowaniu.
 
-Pozycje 4-8 blokują napisanie zlecenia certyfikatu. Pozycja 1 blokuje domknięcie bramki B.
+**Doszła dziewiąta, z pomiaru kontrastu:** czy dwa zakazy z sekcji „Dwie luki w palecie" wchodzą
+do `paleta-barw.md`, czy zostają wyłącznie w zleceniach.
+
+**Kolejność zmieniona polecaniem właściciela 2026-09-03:** merytoryka odłożona, priorytetem są
+lekkie szablony uniwersalne (strumień S w `PLAN.md`). Pozycje 4-8 blokują napisanie zlecenia certyfikatu. Pozycja 1 blokuje domknięcie bramki B.
 Pozycja 2 została przez właściciela **odłożona**: decyzja po obejrzeniu pracy Claude Design.
 Do tego czasu w zleceniach obowiązuje `logotyp.md` w brzmieniu dotychczasowym, czyli zakaz
 przebarwiania na jasnym tle i wersja odwrócona na ciemnym.
