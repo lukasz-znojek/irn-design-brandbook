@@ -10,10 +10,17 @@ Artboardy `.dc.html` i `canvas.json` pilota papieru firmowego IRIN. Źródło do
 
 Wcześniejsza wersja tego pliku podawała, że 2026-09-02 zasiano kanwę pod adresem `https://claude.ai/code/artifact/3c6ee053-8041-4c1f-989a-c320941b156b`. **Lista artefaktów konta tego nie potwierdza:** `Artifact action:list` w zakresie `mine` i `all` zwraca trzy artefakty, najnowszy z 2026-08-29, i tego identyfikatora wśród nich nie ma. Zapis był nieprawdziwy i został usunięty; to będzie pierwsza publikacja, nie ponowna.
 
-**Po publikacji wpisz tu adres artefaktu.** Bez tego powtórzy się dokładnie ta sytuacja: plik twierdzi, że kanwa istnieje, a nikt nie potrafi jej znaleźć.
+**Kanwa opublikowana 2026-09-03:** https://claude.ai/code/artifact/191cf137-7c7c-4bec-a074-f9c53780ae9d — „Papier firmowy IRIN", cztery artboardy, zapis i eksport PNG/PDF włączone. Adres wpisany tu w tej samej turze, w której powstał; poprzedni zapis o kanwie był nieprawdziwy właśnie dlatego, że tego kroku zabrakło.
 
 ## Jak zasiać
 
 Logotypy zostają w korzeniu repozytorium - **nie kopiuj ich do tego katalogu**. Przy zasiewie przekazuje się je jako obrazy, a seeder zapisuje je pod samą nazwą pliku; dlatego `<img src="logo_irin_poziom.svg">` bez prefiksu katalogu jest zapisem poprawnym. Prefiks `uploads/`, jak w `brandbook.dc.html` w korzeniu, pochodzi z innego mechanizmu i tutaj **zepsułby render** - obraz wyszedłby jako pusta ramka, bez ostrzeżenia.
 
 Używane są dokładnie dwa pliki: `logo_irin_poziom.svg` (strona 1, strona kolejna, awers wizytówki) i `logo_irin_sygnet.svg` (rewers wizytówki).
+
+## Zanim wykonasz pomiary
+
+Dwie rzeczy, bez których wynik będzie fałszywy:
+
+1. **Pomiary liter i wag robi się na kanwie, nie na wyeksportowanym PDF-ie.** Eksport nie osadza krojów z Google Fonts — w pliku PDF zobaczysz krój zastępczy (`Segoe UI`/`Arial` zamiast Manrope, `Courier New` zamiast Inconsolaty). PDF służy do sprawdzenia proporcji i skali 1:1.
+2. **Przełącznik `siatka` działa osobno na każdym artboardzie.** Do pomiaru siatki trzeba go włączyć dwa razy: na stronie pierwszej i na stronie kolejnej.
