@@ -46,6 +46,21 @@ Kanwa rysuje tymi kolorami linie 0,2 mm (Popiół, obrys stopki) i 0,3 mm (Złot
 nad blokiem treści). Przy zapasie 0,01 o widoczności decyduje grubość linii i druk, nie tabela
 kontrastu — dlatego ten jeden pomiar wymaga wydruku, a nie ekranu.
 
+## Jeśli wróci propozycja zmiany siatki
+
+Zlecenie pozwala Claude Design zaproponować dopracowanie siatki - na osobnym artboardzie
+oznaczonym jako propozycja, z rachunkiem szerokości, przy zachowanym A4 pion i sześciu kolumnach.
+**To nie jest pomiar i nie wchodzi do formularza wyżej.** Propozycja idzie do właściciela jako
+decyzja: przyjąć do `siatka-a4.md` czy odrzucić.
+
+Zanim ją pokażę, sprawdzam jedną rzecz i podaję wynik: czy suma kolumn i gutterów równa się
+szerokości pola treści co do milimetra. Dziś 6 × 25 + 5 × 4 = 170 mm i pole treści ma 170 mm.
+Propozycja, która tego nie domyka, jest odrzucana bez pytania właściciela - to błąd rachunkowy,
+nie wybór projektowy.
+
+Pomiar 2 z formularza dotyczy **artboardu głównego**, na wartościach zatwierdzonych. Propozycja
+go nie zastępuje i nie unieważnia.
+
 ## Czego ten pilot nie sprawdzi
 
 Kontrastu Karminu obok Aksamitu na realnym dokumencie. Papier firmowy i wizytówka nie mają stanu

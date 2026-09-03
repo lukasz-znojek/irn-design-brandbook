@@ -130,6 +130,24 @@ linię, podaj jej grubość w milimetrach i tło, na którym stoi. Na tle Muśli
 nad progiem 3:1 rzędu setnych (Popiół 3,09:1, Złoto foliowe 3,01:1), więc grubość linii przestaje
 być wyborem estetycznym.
 
+**Siatkę wolno Ci dopracować - ale jako propozycję obok, nie po cichu w dokumencie.** Wartości
+z `siatka-a4.md` są zatwierdzone i artboard główny trzyma je bez zmian: A4 pion, sześć kolumn,
+moduł 25 mm, gutter 4 mm, marginesy 18 / 22 / 28 / 18 mm. Jeżeli przy realnej treści zobaczysz,
+że któraś wartość jest do poprawy - najczęściej podejrzane są marginesy, bo prawy 22 mm wygląda
+niesymetrycznie wobec lewego 18 mm - zrób trzy rzeczy:
+
+1. Zostaw artboard główny na wartościach zatwierdzonych.
+2. Dodaj **drugi artboard oznaczony jako propozycja**, z Twoją wersją siatki i tą samą treścią,
+   żeby dało się je porównać obok siebie.
+3. Napisz, co konkretnie zmieniasz i dlaczego, **z rachunkiem szerokości**: suma kolumn i gutterów
+   musi się równać szerokości pola treści co do milimetra. Obecnie 6 × 25 + 5 × 4 = 170 mm i pole
+   treści też ma 170 mm, dopasowanie jest dokładne, bez zapasu - każda zmiana modułu albo gutteru
+   pociąga zmianę marginesu i odwrotnie.
+
+Dwie rzeczy są poza dyskusją: **format A4 pion** i **sześć kolumn**. Liczba kolumn jest w tym
+systemie elementem tożsamości wspólnym dla trzech dziedzin, nie parametrem dobieranym per dokument
+- mówi o tym zasada 6 z `format-paczki.md`. Reszta parametrów jest otwarta na Twoją propozycję.
+
 **Treść przykładowa pisma na stronie pierwszej** (tekst zastępczy do pokazania układu,
 nie korespondencja):
 
