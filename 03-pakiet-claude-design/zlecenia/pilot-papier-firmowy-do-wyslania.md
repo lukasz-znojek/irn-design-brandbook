@@ -125,6 +125,13 @@ w trakcie pracy uznasz, że dokument bez koloru dziedzinowego wypada niejednozna
 między poziomym a pionowym na awersie, a na rewersie sygnet `logo_irin_sygnet.svg` samodzielnie.
 Zmierz i zapisz, w jakiej szerokości sygnet stoi na rewersie — to potrzebne do protokołu pomiaru.
 
+**Siatka ma teraz także pion, nie tylko kolumny.** Odstęp pionowy między blokami treści jest
+wielokrotnością 6 mm - dopuszczone 6, 12, 18, 24, 48 mm; 8, 10 i 15 mm nie istnieją. Nie dotyczy
+to wnętrza komponentu: światło pod linią, padding komórki i odstęp etykieta-wartość dobierasz
+do stopnia pisma. Górny margines 18 mm jest strefą znaku i nagłówka, dolny 28 mm strefą stopki -
+w stopce stoi linia i jeden pas metadanych, treść dokumentu nigdy. Tekst stopki nie schodzi
+bliżej niż 12 mm od krawędzi strony. Pełny wywód: `siatka-a4.md`.
+
 **Linie mają przepisany kolor i minimalną grubość.** Linię niosącą strukturę - linia tabeli, obrys
 karty, obrys pola, rozdzielenie bloków - prowadzisz Popiołem `#7D7466`, nie cieniej niż **0,25 mm**.
 Złoto foliowe `#A8874E` jest wyłącznie kreską ozdobną, pieczęcią i sygnaturą, nie cieniej niż

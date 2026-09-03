@@ -63,6 +63,68 @@ trzeba napisać od nowa. Papier firmowy i wizytówka takiej krawędzi nie mają.
 
 Poprawka polegała na zmniejszeniu modułu z 32 do 25 mm przy zachowaniu sześciu kolumn i gutteru 4 mm - bo to liczba kolumn jest w kanwie opisana jako element wspólny systemu, a moduł 32 mm był niesprawdzonym pomiarem. Rozważana alternatywa (5 kolumn po 32 mm, prawy margines zmniejszony do 16 mm) została odrzucona przez foundera.
 
+## Dlaczego moduł 25 mm i gutter 4 mm, a nie inna para
+
+Przy sześciu kolumnach i polu treści 170 mm równanie `6 × moduł + 5 × gutter = 170` ma pięć
+rozwiązań w liczbach całkowitych:
+
+| Gutter | Moduł | Ocena |
+|---|---|---|
+| **4 mm** | **25 mm** | **obowiązujące** - gutter jest szóstą częścią modułu, więc kolumna czyta się jako kolumna |
+| 10 mm | 20 mm | gutter to połowa modułu; odstęp konkuruje z kolumną |
+| 16 mm | 15 mm | gutter szerszy od połowy modułu; siatka rozpada się na paski |
+| 22 mm | 10 mm | gutter dwukrotnie szerszy od modułu |
+| 28 mm | 5 mm | moduł węższy od jednego słowa |
+
+Para 25 / 4 nie jest więc wyborem estetycznym, tylko jedyną, która przy zadanych sześciu kolumnach
+i 170 mm daje odstęp wyraźnie węższy od kolumny. To domyka pytanie „dlaczego akurat te liczby”:
+liczba kolumn jest decyzją tożsamościową, szerokość pola treści wynika z formatu i marginesów,
+a moduł i gutter są z nich policzone.
+
+## Rytm pionowy - co jednostka 6 mm faktycznie wymierza
+
+Sekcja niżej rozstrzyga, czym jednostka 6 mm **nie** jest (siatką linii bazowych). Tu jest
+napisane, czym jest - bo do 2026-09-03 specyfikacja definiowała wyłącznie poziom, a pion
+zostawiała projektantowi.
+
+**Zasada:** odstęp pionowy **między blokami treści** jest wielokrotnością 6 mm. Dopuszczone
+wartości w praktyce: 6, 12, 18, 24 i 48 mm. Odstępu 8, 10 czy 15 mm między blokami w tym
+systemie nie ma.
+
+**Czego ta zasada nie obejmuje: wnętrza komponentu.** Światło pod linią stopki, padding komórki
+tabeli, odstęp między etykietą a wartością w jednym wierszu danych - to są wymiary wewnętrzne
+i dobiera się je do stopnia pisma, nie do jednostki strony. Wymuszanie tam 6 mm rozpycha
+komponenty i psuje właśnie ten rytm, który jednostka ma budować. Granica jest prosta: jeżeli
+element da się przesunąć bez ruszania sąsiada, to jest wnętrze; jeżeli przesunięcie przesuwa
+następny blok, to jest odstęp i podlega jednostce.
+
+**Reszta 5 mm zostaje na dole i nigdy nie jest odstępem.** Pole treści ma 251 mm, czyli 41 pełnych
+jednostek i 5 mm reszty. Ta reszta jest światłem pod ostatnim blokiem, nie luzem do rozdzielenia
+między odstępy - inaczej rytm rozjeżdża się o niecały milimetr na każdym styku.
+
+**Czego świadomie nie zrobiono:** marginesu dolnego nie zmieniono z 28 na 27 mm, choć wtedy pole
+treści miałoby 252 mm, czyli równe 42 jednostki. Sekcja niżej rozstrzygnęła 2026-09-02, że taka
+zmiana poprawia dzielenie liczb, a nie ustawia żadnego elementu - i nic w pomiarach z 2026-09-03
+tego nie obaliło. Zmiana bez nowego pomiaru byłaby kosmetyką podaną jako poprawka.
+
+## Strefa stopki - dolny margines jest jej, nie treści
+
+Pilot papieru firmowego ustawił stopkę 12 mm od dolnej krawędzi strony, czyli **poniżej pola
+treści**, którego dolna krawędź leży 28 mm od spodu. To nie jest błąd projektanta, tylko luka
+w tej specyfikacji: mówiła, gdzie kończy się treść, i nie mówiła, gdzie stoi stopka.
+
+**Rozstrzygnięcie:** dolny margines 28 mm jest **strefą stopki**. Wolno w niej stać wyłącznie
+linii oddzielającej i jednemu pasowi metadanych - dane rejestrowe, numer strony, numer pisma.
+Treść dokumentu nie wchodzi tam nigdy. Górna krawędź linii stopki leży na dolnej krawędzi pola
+treści albo niżej; dolna krawędź tekstu stopki nie schodzi bliżej niż 12 mm od krawędzi strony,
+bo poniżej zaczyna się obszar nierozpoznawalny dla części drukarek biurowych.
+
+To samo dotyczy marginesu górnego 18 mm: jest strefą znaku i nagłówka strony, nie treści.
+
+**Falsyfikator obu stref:** dokument, w którym stopka albo nagłówek muszą pomieścić więcej niż
+jeden pas - wtedy strefa jest za wąska i wraca pytanie o marginesy, tym razem z pomiarem
+wysokości realnej stopki, nie z rachunku dzielenia.
+
 ## Jednostka bazowa 6 mm - rozstrzygnięte
 
 `brandbook.dc.html` podaje jednostkę bazową 6 mm. Pierwsze podejrzenie brzmiało, że rytm pionowy się nie domyka: 251 mm / 6 mm = 41,83, czyli 41 pełnych jednostek i 5 mm reszty, a domknięcie wymagałoby marginesu dolnego 33 mm. **Pomiar pokazał, że to jest zła diagnoza** i margines nie jest tu w ogóle problemem.

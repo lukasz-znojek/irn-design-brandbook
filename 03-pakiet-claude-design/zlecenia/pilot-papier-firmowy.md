@@ -73,6 +73,10 @@ Dwie rzeczy są poza dyskusją: **format A4 pion** i **sześć kolumn**. Liczba 
 systemie elementem tożsamości wspólnym dla trzech dziedzin, nie parametrem dobieranym per dokument
 - mówi o tym zasada 6 z `../format-paczki.md`. Reszta parametrów jest otwarta na Twoją propozycję.
 
+**Linie mają przepisany kolor i minimalną grubość.** Linię niosącą strukturę - linia tabeli, obrys karty, obrys pola, rozdzielenie bloków - prowadzi się Popiołem `#7D7466`, nie cieniej niż **0,25 mm**. Złoto foliowe `#A8874E` jest wyłącznie kreską ozdobną, pieczęcią i sygnaturą, nie cieniej niż **0,5 mm**, i nigdy na tle Pergaminu. Grubość każdej użytej linii i tło, na którym stoi, wchodzą do protokołu pomiaru. Podstawa: `/01-baza-wiedzy/identyfikacja/paleta-barw.md`, sekcje „Kolory linii” i „Minimalna grubość linii”.
+
+**Siatka ma także pion, nie tylko kolumny.** Odstęp pionowy między blokami treści jest wielokrotnością 6 mm - dopuszczone 6, 12, 18, 24, 48 mm. Nie dotyczy to wnętrza komponentu (światło pod linią, padding komórki, odstęp etykieta-wartość). Górny margines 18 mm jest strefą znaku i nagłówka, dolny 28 mm strefą stopki; treść dokumentu nie wchodzi do żadnej z nich. Podstawa: `/01-baza-wiedzy/identyfikacja/siatka-a4.md`, sekcje „Rytm pionowy” i „Strefa stopki”.
+
 **Treść przykładowa pisma na stronie pierwszej** (tekst zastępczy do pokazania układu, nie korespondencja):
 
 > **[Kicker]** OFERTA SZKOLENIOWA · WRZESIEŃ 2026
