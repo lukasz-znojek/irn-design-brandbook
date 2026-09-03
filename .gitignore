@@ -27,3 +27,6 @@ TestResults.xml
 
 # Katalog roboczy AgentsRoom - stan aplikacji, nie kod projektu
 .agentsroom/
+
+# macOS
+.DS_Store
