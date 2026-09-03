@@ -100,4 +100,6 @@ Placeholdery, które zostają w kanwie i **mają zostać**: `[IMIĘ I NAZWISKO]`
 
 **Kanwa pilota została opublikowana 2026-09-03, ale adresu nie potwierdzono z sesji.** Artboardy `.dc.html` i `canvas.json` leżą w `/_robocze/pilot-papier-firmowy/`, tam też oba znane adresy kanwy. Publikacja zwróciła sukces, natomiast narzędzie listujące artefakty jest zależne od profilu konta i nie potrafiło potwierdzić nawet tej świeżo opublikowanej - więc przed pomiarami adres trzeba otworzyć w przeglądarce i sprawdzić naocznie.
 
-Po wysłaniu i powrocie wyniku: wykonać punkt 3, potem zaktualizować `/PLAN.md` (zadanie 22) i `/MAPA-DROGOWA.md` (bramka B).
+**Czego nie wysyła się do Claude Design: tego pliku.** Ma ścieżki lokalne, a Claude Design nie widzi dysku - ścieżka jest tam martwym adresem, który może zostać wzięty za zadanie do wykonania. Do wklejenia służy `pilot-papier-firmowy-do-wyslania.md` obok: ta sama treść bez ścieżek, z listą plików do wgrania na kanwę. Ten plik zostaje źródłem prawdy; tamten jest jego przekładem i po każdej zmianie tutaj trzeba go przełożyć od nowa.
+
+Po wysłaniu i powrocie wyniku: wypełnić formularz `/_robocze/pilot-papier-firmowy/protokol-pomiaru.md` (punkt 3 tego pliku plus szósty pomiar o liniach włosowych), potem zaktualizować `/PLAN.md` (zadanie 22) i `/MAPA-DROGOWA.md` (bramka B).
