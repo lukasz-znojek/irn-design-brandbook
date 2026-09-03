@@ -1,0 +1,45 @@
+<!-- @dsCard group="Fundamenty" -->
+<!doctype html><html lang="pl"><head><meta charset="utf-8">
+<title>Siatka A4</title><link rel="stylesheet" href="../../../styles.css">
+<style>html,body{margin:0} .karta{width:720px}</style></head>
+<body><div class="karta"><h2>Siatka A4</h2>
+<p class="podtytul">Sześć kolumn w poziomie, jednostka 6 mm w pionie, dwie strefy marginesów. Wszystkie liczby przeliczone, nie przepisane.</p>
+
+<div style="display:block">
+  <div style="margin-bottom:18px">
+    <div style="position:relative;width:280px;height:396px;background:var(--irin-background);
+                border:.25mm solid var(--irin-border)">
+      <div style="position:absolute;left:26.7px;right:26.7px;top:24px;bottom:37.3px;
+                  display:grid;grid-template-columns:repeat(6,1fr);gap:5.3px"><div style="background:rgba(69,36,48,.10);height:100%"></div><div style="background:rgba(69,36,48,.10);height:100%"></div><div style="background:rgba(69,36,48,.10);height:100%"></div><div style="background:rgba(69,36,48,.10);height:100%"></div><div style="background:rgba(69,36,48,.10);height:100%"></div><div style="background:rgba(69,36,48,.10);height:100%"></div></div>
+      <div style="position:absolute;left:0;right:0;top:0;height:24px;background:rgba(122,86,56,.12)"></div>
+      <div style="position:absolute;left:0;right:0;bottom:0;height:37.3px;background:rgba(122,86,56,.12)"></div>
+      <div class="irin-dane" style="position:absolute;left:6px;top:6px;font-size:8px;color:var(--irin-text-secondary)">strefa znaku</div>
+      <div class="irin-dane" style="position:absolute;left:6px;bottom:6px;font-size:8px;color:var(--irin-text-secondary)">strefa stopki</div>
+    </div>
+    <p class="irin-meta" style="margin-top:8px">A4 pion w skali. Pasy w Miedzi to strefy marginesów, słupki w Aksamicie to sześć kolumn.</p>
+  </div>
+  <div style="flex:1">
+    <table><tbody>
+      <tr><td>Format strony</td><td><strong>A4 pion, 210 × 297 mm</strong></td></tr>
+      <tr><td>Kolumny</td><td><strong>6</strong> — element tożsamości wspólny dla trzech dziedzin, nie parametr per dokument</td></tr>
+      <tr><td>Moduł kolumny</td><td><strong>25 mm</strong></td></tr>
+      <tr><td>Gutter</td><td><strong>4 mm</strong></td></tr>
+      <tr><td>Margines górny</td><td><strong>18 mm</strong> — strefa znaku i nagłówka</td></tr>
+      <tr><td>Marginesy boczne</td><td><strong>20 mm</strong> i <strong>20 mm</strong></td></tr>
+      <tr><td>Margines dolny</td><td><strong>28 mm</strong> — strefa stopki</td></tr>
+      <tr><td>Pole treści</td><td><strong>170 × 251 mm</strong></td></tr>
+      <tr><td>Jednostka odstępu</td><td><strong>6 mm</strong></td></tr>
+    </tbody></table>
+    <div class="uwaga"><strong>Rachunek, który musi się zgadzać co do milimetra.</strong>
+      Szerokość: 210 − 20 − 20 = <strong>170 mm</strong>. Siatka: 6 × 25 + 5 × 4 = 150 + 20 = <strong>170 mm</strong>.
+      Dopasowanie dokładne, bez zapasu — każda zmiana modułu albo gutteru pociąga zmianę marginesu i odwrotnie.</div>
+    <div class="uwaga"><strong>Dlaczego 25 / 4.</strong> Równanie 6c + 5g = 170 ma pięć rozwiązań całkowitych
+      (25/4, 20/10, 15/16, 10/22, 5/28). Tylko pierwsze daje gutter wyraźnie węższy od kolumny — szóstą część modułu.
+      W drugim odstęp to połowa modułu i konkuruje z kolumną.</div>
+    <div class="uwaga"><strong>Rytm pionowy.</strong> Odstęp <em>między blokami treści</em> jest wielokrotnością 6 mm:
+      6, 12, 18, 24, 48. Odstępu 8, 10 i 15 mm nie ma. Nie dotyczy to wnętrza komponentu — światła pod linią,
+      paddingu komórki, odstępu etykieta–wartość: te dobiera się do stopnia pisma.
+      Reszta 5 mm z pola 251 mm zostaje światłem pod ostatnim blokiem i nigdy nie jest odstępem.</div>
+  </div>
+</div>
+</div></body></html>

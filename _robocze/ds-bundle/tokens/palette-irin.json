@@ -1,0 +1,413 @@
+{
+  "schemat": "irin-palette",
+  "wersja": "v2",
+  "nazwa": "Kaszmir Wyciszony",
+  "status": "ZATWIERDZONA - wariant 2 wybrany przez foundera",
+  "data-wyboru": "2026-09-02",
+  "zrodlo-wyboru": "_robocze/paleta-v2/palette-options-v2.md (wariant 2 z siedmiu; archiwum)",
+  "specyfikacja-obowiazujaca": {
+    "kolor": "01-baza-wiedzy/identyfikacja/paleta-barw.md",
+    "siatka": "01-baza-wiedzy/identyfikacja/siatka-a4.md",
+    "typografia": "01-baza-wiedzy/identyfikacja/typografia.md",
+    "logotyp": "01-baza-wiedzy/identyfikacja/logotyp.md"
+  },
+  "typografia": {
+    "rodzina-podstawowa": "Manrope",
+    "wagi": [
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800
+    ],
+    "rodzina-pomocnicza": "Inconsolata",
+    "zrodlo": "brandbook.dc.html sekcja 04",
+    "zmieniona": false,
+    "skala": {
+      "display": {
+        "waga": 200,
+        "rozmiar-px": 72,
+        "interlinia": 0.92,
+        "tracking": "-0.03em"
+      },
+      "h1": {
+        "waga": 300,
+        "rozmiar-px": 40,
+        "interlinia": 1.0,
+        "tracking": "-0.02em"
+      },
+      "h2": {
+        "waga": 600,
+        "rozmiar-px": 24,
+        "interlinia": 1.1,
+        "tracking": "-0.01em"
+      },
+      "h3": {
+        "waga": 600,
+        "rozmiar-px": 16,
+        "interlinia": 1.3,
+        "zatwierdzony": "2026-09-02",
+        "uwaga": "stopień leadu z wagą 600; kanwa nie definiowała tego poziomu"
+      },
+      "lead": {
+        "waga": 500,
+        "rozmiar-px": 16,
+        "interlinia": 1.4
+      },
+      "body": {
+        "waga": 400,
+        "rozmiar-px": 13.5,
+        "interlinia": 1.55
+      },
+      "footnote": {
+        "waga": 400,
+        "rozmiar-px": 10,
+        "interlinia": 1.5
+      },
+      "kicker": {
+        "waga": 700,
+        "rozmiar-px": 14,
+        "tracking": "0.22em",
+        "transform": "uppercase"
+      },
+      "numeral": {
+        "waga": 800,
+        "rozmiar-px": 52,
+        "interlinia": 0.95,
+        "tracking": "-0.02em"
+      },
+      "mono": {
+        "rodzina": "Inconsolata",
+        "rozmiar-px": 10.5
+      }
+    }
+  },
+  "siatka-a4": {
+    "kolumny": 6,
+    "modul-mm": 25,
+    "gutter-mm": 4,
+    "marginesy-mm": {
+      "gora": 18,
+      "lewy": 20,
+      "prawy": 20,
+      "dol": 28
+    },
+    "tresc-mm": [
+      170,
+      251
+    ],
+    "zmieniona": false,
+    "pole-tresci-sprawdzone": "6x25 + 5x4 = 170 mm = 210 - 20 - 20; dopasowanie dokładne",
+    "jednostka-odstepu-mm": 6,
+    "jednostka-odstepu-uwaga": "Jednostka odstępu, nie siatka linii bazowych tekstu. Interlinia korpusu to 5,54 mm (13,5 px x 1,55), czyli nie jest wielokrotnością 6 mm - rozjazd 0,46 mm na linię, 19 mm na pełnej kolumnie. Wymierzaj nią odstępy między blokami, nie linie tekstu. Rozstrzygnięte 2026-09-02.",
+    "marginesy-boczne-zmiana-2026-09-03": "Wyrównane z 18/22 na 20/20. Pole treści bez zmian, 170 mm w obu układach; asymetria nie miała uzasadnienia, bo dokumenty IRIN nie są bindowane. Marginesy pionowe zostają niesymetryczne celowo (18 góra, 28 dół) - cięższy dół to reguła składu."
+  },
+  "metodologia-kontrastu": "WCAG 2.1, luminancja względna sRGB. Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 3:1. Każda para w tej palecie przechodzi próg.",
+  "tokeny": {
+    "primary": {
+      "hex": "#452430",
+      "nazwa": "Aksamit",
+      "rola": "nagłówki H1/H2, wypełnienie CTA",
+      "dziedzina": "Pedagogika",
+      "etykieta-na-wypelnieniu": {
+        "hex": "#E7DFD2",
+        "token": "neutral-light",
+        "kontrast": 10.26
+      }
+    },
+    "secondary": {
+      "hex": "#7A5638",
+      "nazwa": "Miedź",
+      "rola": "H3, podtytuły",
+      "dziedzina": "Akademia AI",
+      "etykieta-na-wypelnieniu": {
+        "hex": "#E7DFD2",
+        "token": "neutral-light",
+        "kontrast": 4.94
+      }
+    },
+    "accent": {
+      "hex": "#A8874E",
+      "nazwa": "Złoto foliowe",
+      "rola": "pieczęć, sygnatura, cienka linia ozdobna",
+      "etykieta-na-wypelnieniu": {
+        "hex": "#221A15",
+        "token": "neutral-dark",
+        "kontrast": 5.09
+      }
+    },
+    "neutral-dark": {
+      "hex": "#221A15",
+      "nazwa": "Espresso",
+      "rola": "tusz uniwersalny, tło sekcji odwróconej"
+    },
+    "neutral-light": {
+      "hex": "#E7DFD2",
+      "nazwa": "Pergamin",
+      "rola": "tło calloutu, pas nagłówka, etykieta na ciemnym wypełnieniu"
+    },
+    "success": {
+      "hex": "#2E5241",
+      "nazwa": "Werdykt",
+      "rola": "stan potwierdzony",
+      "etykieta-na-wypelnieniu": {
+        "hex": "#E7DFD2",
+        "token": "neutral-light",
+        "kontrast": 6.62
+      }
+    },
+    "warning": {
+      "hex": "#8A6110",
+      "nazwa": "Rubryka",
+      "rola": "stan wymagający uwagi",
+      "etykieta-na-wypelnieniu": {
+        "hex": "#FFFFFF",
+        "token": "#FFFFFF",
+        "kontrast": 5.53
+      }
+    },
+    "error": {
+      "hex": "#9E2B2B",
+      "nazwa": "Karmin",
+      "rola": "stan błędu",
+      "etykieta-na-wypelnieniu": {
+        "hex": "#E7DFD2",
+        "token": "neutral-light",
+        "kontrast": 5.6
+      }
+    },
+    "info": {
+      "hex": "#33474F",
+      "nazwa": "Onyks",
+      "rola": "nota informacyjna, boks podstawy prawnej",
+      "dziedzina": "Pożyczki UE/BGK",
+      "etykieta-na-wypelnieniu": {
+        "hex": "#E7DFD2",
+        "token": "neutral-light",
+        "kontrast": 7.37
+      }
+    },
+    "background": {
+      "hex": "#F6F2E9",
+      "nazwa": "Muślin",
+      "rola": "tło strony"
+    },
+    "surface": {
+      "hex": "#FBF8F2",
+      "nazwa": "Kaszmir",
+      "rola": "papier, tło karty i tabeli"
+    },
+    "border": {
+      "hex": "#7D7466",
+      "nazwa": "Popiół",
+      "rola": "linie tabeli, obrys karty i pola formularza",
+      "nazwa-zatwierdzona": "2026-09-02",
+      "zmiana-2026-09-03": "Popiół pociemniony z #938978. Powód: dawna wartość dawała 2,61:1 na Pergaminie (próg 3:1) i zapas 0,09 na Muślinie, więc token obramowania nie działał na dwóch z trzech własnych teł. Nowa wartość: 4,34 / 4,12 / 3,48 na Kaszmirze / Muślinie / Pergaminie - próg z zapasem wszędzie, a odległość od Sepii (7,12 na Muślinie) zachowana, więc hierarchia linii cienkiej i grubej stoi."
+    },
+    "text-primary": {
+      "hex": "#221A15",
+      "nazwa": "Espresso",
+      "rola": "tekst korpusu"
+    },
+    "text-secondary": {
+      "hex": "#5E4E40",
+      "nazwa": "Sepia",
+      "rola": "tekst pomocniczy, metadane, przypisy, nagłówki kolumn"
+    },
+    "link": {
+      "hex": "#2F5A63",
+      "nazwa": "Patyna",
+      "rola": "odnośnik w treści i w interfejsie",
+      "nazwa-zatwierdzona": "2026-09-02"
+    }
+  },
+  "kontrasty": [
+    {
+      "para": "text-primary na background",
+      "kontrast": 15.32,
+      "ocena": "AAA"
+    },
+    {
+      "para": "text-primary na surface",
+      "kontrast": 16.15,
+      "ocena": "AAA"
+    },
+    {
+      "para": "text-secondary na background",
+      "kontrast": 7.12,
+      "ocena": "AAA"
+    },
+    {
+      "para": "text-secondary na surface",
+      "kontrast": 7.5,
+      "ocena": "AAA"
+    },
+    {
+      "para": "primary (H1/H2) na surface",
+      "kontrast": 12.8,
+      "ocena": "AAA"
+    },
+    {
+      "para": "secondary (H3) na surface",
+      "kontrast": 6.16,
+      "ocena": "AA"
+    },
+    {
+      "para": "link na surface",
+      "kontrast": 7.17,
+      "ocena": "AAA"
+    },
+    {
+      "para": "link na background",
+      "kontrast": 6.8,
+      "ocena": "AA"
+    },
+    {
+      "para": "text-primary na neutral-light (callout)",
+      "kontrast": 12.95,
+      "ocena": "AAA"
+    },
+    {
+      "para": "primary na neutral-light (naglowek callouta)",
+      "kontrast": 10.26,
+      "ocena": "AAA"
+    },
+    {
+      "para": "etykieta neutral-light na primary",
+      "kontrast": 10.26,
+      "ocena": "AAA"
+    },
+    {
+      "para": "etykieta neutral-dark na accent",
+      "kontrast": 5.09,
+      "ocena": "AA"
+    },
+    {
+      "para": "etykieta neutral-light na success",
+      "kontrast": 6.62,
+      "ocena": "AA"
+    },
+    {
+      "para": "etykieta #FFFFFF na warning",
+      "kontrast": 5.53,
+      "ocena": "AA"
+    },
+    {
+      "para": "etykieta neutral-light na error",
+      "kontrast": 5.6,
+      "ocena": "AA"
+    },
+    {
+      "para": "etykieta neutral-light na info",
+      "kontrast": 7.37,
+      "ocena": "AAA"
+    },
+    {
+      "para": "border na surface",
+      "kontrast": 4.34,
+      "ocena": "OK (>=3:1)",
+      "przeliczone": "2026-09-03, po pociemnieniu border z #938978 na #7D7466"
+    },
+    {
+      "para": "border na background",
+      "kontrast": 4.12,
+      "ocena": "OK (>=3:1)",
+      "przeliczone": "2026-09-03, po pociemnieniu border z #938978 na #7D7466"
+    },
+    {
+      "para": "accent jako linia/ikona na surface",
+      "kontrast": 3.17,
+      "ocena": "OK (>=3:1)"
+    },
+    {
+      "para": "border na neutral-light",
+      "kontrast": 3.48,
+      "ocena": "OK (>=3:1)",
+      "przeliczone": "2026-09-03, po pociemnieniu border z #938978 na #7D7466"
+    },
+    {
+      "para": "accent na neutral-light",
+      "kontrast": 2.55,
+      "ocena": "PONIŻEJ PROGU"
+    },
+    {
+      "para": "warning na neutral-light",
+      "kontrast": 4.18,
+      "ocena": "tylko grafika i element interfejsu (3:1)"
+    },
+    {
+      "para": "text-secondary na neutral-light",
+      "kontrast": 6.02,
+      "ocena": "AA"
+    },
+    {
+      "para": "secondary na neutral-light",
+      "kontrast": 4.94,
+      "ocena": "AA"
+    },
+    {
+      "para": "text-primary na neutral-light",
+      "kontrast": 12.95,
+      "ocena": "AAA"
+    }
+  ],
+  "regula-80-15-5": {
+    "baza-80": "Kaszmir, Muślin, Pergamin (tła); Espresso, Sepia (tekst); Popiół (linie)",
+    "dziedzina-15": "dokładnie jeden z trzech na dokument: Aksamit (Pedagogika), Miedź (Akademia AI), Onyks (Pożyczki UE/BGK); nigdy dwa naraz",
+    "aktywnosc-5": "Patyna (odnośniki, stany aktywne), Werdykt (potwierdzone), Rubryka (uwaga), Karmin (błąd), Złoto foliowe (wyłącznie pieczęć, sygnatura, cienka linia)"
+  },
+  "ograniczenia": [
+    "Kolor nigdy nie jest jedynym nośnikiem statusu - każdy stan wymaga etykiety słownej albo ikony (WCAG 1.4.1). Po konwersji do skali szarości Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność.",
+    "Odnośnik wewnątrz boksu informacyjnego zawsze z podkreśleniem - Patyna i Onyks mają kontrast wzajemny 1,28:1.",
+    "Złoto foliowe nigdy jako tło większej powierzchni, nigdy jako kolor tekstu korpusu, nigdy jako linia niosąca strukturę i nigdy na tle Pergaminu. Wyłącznie kreska ozdobna, pieczęć i sygnatura, przy grubości nie mniejszej niż 0,5 mm. Linię, która coś rozdziela albo obramowuje, prowadzi się border albo secondary.",
+    "Na tle Pergaminu (neutral-light) dwie pary spadają pod próg: accent 2,55:1 (próg 3:1 dla grafiki) i warning jako tekst 4,18:1 (próg 4,5:1). Na tle Pergaminu nie stosuje się accent jako kreski ozdobnej ani warning jako koloru tekstu - zastąpienia: kreska secondary (4,94:1), ostrzeżenie text-primary (12,95:1) z etykietą słowną. Border przechodzi na wszystkich trzech tłach po pociemnieniu z 2026-09-03 (3,48:1 na Pergaminie). Pełna tabela: paleta-barw.md, sekcja „Kolory linii - stan po poprawce”. Przeliczone 2026-09-03.",
+    "Minimalna grubość linii w druku: 0,25 mm dla linii niosącej strukturę (border, secondary) i 0,5 mm dla kreski ozdobnej w accent. Poniżej tych wartości kontrast z tabeli przestaje cokolwiek gwarantować, bo o widoczności decyduje raster drukarki, nie luminancja."
+  ],
+  "tryb-mono": {
+    "status": "ODRZUCONY (2026-09-02)",
+    "decyzja": "Founder wybrał jedną paletę na wszystko. Wariant 6 (Druk Ekonomiczny) nie wchodzi jako osobny tryb monochromatyczny.",
+    "skutek": "W dokumentach drukowanych mono Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność. Jedynym zabezpieczeniem czytelności statusu pozostaje obowiązkowa etykieta słowna albo ikona - patrz ograniczenia."
+  },
+  "logotyp": {
+    "pliki": [
+      {
+        "plik": "logo_irin_poziom.svg",
+        "viewbox": "281.333 x 158.667",
+        "proporcja": 1.7731,
+        "zastosowanie": "wariant podstawowy"
+      },
+      {
+        "plik": "logo_irin_pion.svg",
+        "viewbox": "184.837 x 162.834",
+        "proporcja": 1.1351,
+        "zastosowanie": "pola wąskie i wysokie"
+      },
+      {
+        "plik": "logo_irin_sygnet.svg",
+        "viewbox": "184.837 x 162.834",
+        "proporcja": 1.1351,
+        "zastosowanie": "znak samodzielny"
+      }
+    ],
+    "jednokolorowy": true,
+    "minimalny-rozmiar": {
+      "druk-mm": 18,
+      "ekran-px": 90,
+      "sygnet-samodzielny": "10 mm / 44 px - odczyt z brandbook.dc.html, nie potwierdzony osobno"
+    },
+    "przestrzen-ochronna": "x = wysokość liter sygnetu; miara względna, z każdej strony znaku",
+    "zakazy-wiazace": [
+      "nie zmieniamy koloru znaku; na ciemnym tle wersja odwrócona, nie przebarwiona",
+      "nie obracamy, nie pochylamy, nie odbijamy lustrzanie",
+      "nie dodajemy cienia, poświaty ani obrysu",
+      "nie rozciągamy nieproporcjonalnie"
+    ],
+    "zatwierdzenie": "minimalny rozmiar i przestrzeń ochronna potwierdzone wcześniej; cztery zakazy potwierdzone 2026-09-02",
+    "nadal-niepotwierdzone": [
+      "minimalny rozmiar samodzielnego sygnetu (10 mm / 44 px)",
+      "reguła kontrastu znaku na akcentach dziedzinowych (4,5:1)"
+    ]
+  }
+}

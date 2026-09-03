@@ -1,0 +1,41 @@
+:root {
+  --irin-kaszmir: #FBF8F2;   /* token surface */
+  --irin-surface: #FBF8F2;
+  --irin-muslin: #F6F2E9;   /* token background */
+  --irin-background: #F6F2E9;
+  --irin-pergamin: #E7DFD2;   /* token neutral-light */
+  --irin-neutral-light: #E7DFD2;
+  --irin-espresso: #221A15;   /* token neutral-dark */
+  --irin-neutral-dark: #221A15;
+  --irin-sepia: #5E4E40;   /* token text-secondary */
+  --irin-text-secondary: #5E4E40;
+  --irin-aksamit: #452430;   /* token primary */
+  --irin-primary: #452430;
+  --irin-miedz: #7A5638;   /* token secondary */
+  --irin-secondary: #7A5638;
+  --irin-onyks: #33474F;   /* token info */
+  --irin-info: #33474F;
+  --irin-zloto-foliowe: #A8874E;   /* token accent */
+  --irin-accent: #A8874E;
+  --irin-werdykt: #2E5241;   /* token success */
+  --irin-success: #2E5241;
+  --irin-rubryka: #8A6110;   /* token warning */
+  --irin-warning: #8A6110;
+  --irin-karmin: #9E2B2B;   /* token error */
+  --irin-error: #9E2B2B;
+  --irin-popiol: #7D7466;   /* token border */
+  --irin-border: #7D7466;
+  --irin-patyna: #2F5A63;   /* token link */
+  --irin-link: #2F5A63;
+
+  /* Siatka A4 - zatwierdzona, rachunek odtwarzalny */
+  --irin-strona-szer: 210mm;  --irin-strona-wys: 297mm;
+  --irin-kolumny: 6;          --irin-modul: 25mm;      --irin-gutter: 4mm;
+  --irin-margines-gora: 18mm; --irin-margines-bok: 20mm; --irin-margines-dol: 28mm;
+  --irin-pole-tresci-szer: 170mm; --irin-pole-tresci-wys: 251mm;
+  --irin-jednostka: 6mm;
+
+  /* Typografia - skala zatwierdzona */
+  --irin-kroj: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --irin-kroj-mono: 'Inconsolata', 'SFMono-Regular', Consolas, monospace;
+}

@@ -1,0 +1,7 @@
+{
+  "projectId": "1a22ce64-0e1c-43a6-bd60-eef9241ef73b",
+  "projectName": "System projektowy IRIN",
+  "shape": "off-script",
+  "bundleDir": "_robocze/ds-bundle",
+  "uwaga": "Repozytorium nie ma biblioteki komponentow w kodzie (brak package.json, dist/, Storybooka). Uklad skladany recznie ze specyfikacji warstwy 1: 8 kart podgladu, tokeny jako zmienne CSS, guidelines jako kopie plikow warstwy 1. Bez _ds_bundle.js - agent projektowy dostaje styl, tokeny i wytyczne, nie gotowe komponenty React."
+}

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Inconsolata:wght@300..700&display=swap');
+@import url('./tokens/tokens.css');
+
+/* System IRIN - warstwa bazowa. Wszystko, co widzi projekt renderowany
+   w Claude Design, przechodzi przez domknięcie @import tego pliku. */
+
+body { background: var(--irin-background); color: var(--irin-neutral-dark);
+       font-family: var(--irin-kroj); margin: 0; }
+
+/* Skala typograficzna - hierarchię buduje waga jednego kroju, nie zmiana rodziny */
+.irin-display { font-weight: 200; font-size: 72px; line-height: .92; letter-spacing: -.03em; }
+.irin-h1      { font-weight: 300; font-size: 40px; line-height: 1;   letter-spacing: -.02em; }
+.irin-h2      { font-weight: 600; font-size: 24px; line-height: 1.1; letter-spacing: -.01em; }
+.irin-h3      { font-weight: 600; font-size: 16px; line-height: 1.3; }
+.irin-lead    { font-weight: 500; font-size: 16px; line-height: 1.4; }
+.irin-korpus  { font-weight: 400; font-size: 13.5px; line-height: 1.55; }
+.irin-meta    { font-weight: 400; font-size: 10px; line-height: 1.5; color: var(--irin-text-secondary); }
+.irin-kicker  { font-weight: 700; font-size: 14px; line-height: 1.2; letter-spacing: .22em; text-transform: uppercase; }
+.irin-liczba  { font-weight: 800; font-size: 52px; line-height: .95; letter-spacing: -.02em; }
+.irin-dane    { font-family: var(--irin-kroj-mono); font-size: 10.5px; line-height: 1.5; }
+
+/* Linie. Grubości NIE są jeszcze potwierdzone na wydruku - patrz README. */
+.irin-linia-struktury { border: 0; border-top: .25mm solid var(--irin-border); }
+.irin-kreska-ozdobna  { height: .5mm; background: var(--irin-accent); border: 0; }
+
+/* Odstęp pionowy między blokami: wielokrotność jednostki 6 mm */
+.irin-odstep-1 { margin-block: var(--irin-jednostka); }
+.irin-odstep-2 { margin-block: calc(var(--irin-jednostka) * 2); }
+.irin-odstep-4 { margin-block: calc(var(--irin-jednostka) * 4); }
+
+/* Siatka sześciu kolumn */
+.irin-siatka { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
+               gap: var(--irin-gutter); }
+
+/* Karta podglądu w panelu Design System */
+.karta { background: var(--irin-surface); color: var(--irin-neutral-dark);
+         font-family: var(--irin-kroj); padding: 28px 32px; box-sizing: border-box; }
+.karta h2 { font-weight: 600; font-size: 24px; letter-spacing: -.01em; margin: 0 0 4px; }
+.karta .podtytul { font-weight: 400; font-size: 13.5px; line-height: 1.55;
+                   color: var(--irin-text-secondary); margin: 0 0 20px; max-width: 62ch; }
+.karta table { border-collapse: collapse; width: 100%; font-size: 12px; }
+.karta th { text-align: left; font-weight: 600; font-size: 10px; text-transform: uppercase;
+            letter-spacing: .08em; color: var(--irin-text-secondary);
+            border-bottom: .25mm solid var(--irin-border); padding: 6px 10px 6px 0; }
+.karta td { padding: 7px 10px 7px 0; border-bottom: .25mm solid var(--irin-border);
+            vertical-align: middle; }
+.karta .uwaga { margin-top: 18px; padding: 12px 14px; background: var(--irin-neutral-light);
+                font-size: 11.5px; line-height: 1.5; }
+.karta code { font-family: var(--irin-kroj-mono); font-size: 11px; }
