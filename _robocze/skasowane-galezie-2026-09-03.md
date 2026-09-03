@@ -38,7 +38,18 @@ Te dwie miały commity poza `main`. Powód odrzucenia jest wpisany, bo bez niego
 | `989a7219d21d5551824f82d36429cfc7e7284ebe` | `copilot/etap-2-weryfikacja-prawna` | 2 commity, 10 plików: zamykała wszystkie osiem pozycji `weryfikacja-u-zrodla.md` statusem „niesprawdzone”. | Siedem z tych ośmiu pozycji jest **odczytanych u źródła** (2026-09-02 i 2026-09-03), z cytatami i numerami stron. Scalenie zamieniłoby odczyt na deklarację braku odczytu. |
 | `a84979c0612fb6770e4c8e657067928bc9150d46` | `claude/project-roadmap-3cr739` | 1 commit, 18 plików: równoległe podejście do Etapu 2 z wyciągiem art. 125-133 oraz kanwą pilota. | Oparta na `main` sprzed scalenia — jej scalenie **usunęłoby siedem PDF-ów źródłowych** z `01-baza-wiedzy/prawo/zrodla/` (`git diff` pokazywał je jako `Bin … -> 0 bytes`). To, co miała unikalnego, przeniesiono osobno: katalog `_robocze/pilot-papier-firmowy/` wszedł do `main` commitem `9d4101e`. |
 
+## Druga tura, tego samego dnia: gałęzie bez własnej treści
+
+Founder polecił usunąć to, co niepotrzebne. Usunięto dwie, obie sprawdzone pomiarem przed skasowaniem, nie na oko.
+
+| SHA | Gałąź | Pomiar, na podstawie którego uznano ją za pustą |
+|---|---|---|
+| `47df8b7c` | `claude/agent-github` | `git diff main...` wskazywał cztery pliki, ale wszystkie trzy pliki w `.github/` mają w `main` **identyczne skróty obiektów**, a sekcja „Agent Claude w GitHub” jest w `CLAUDE.md` na `main`. Gałąź nie wnosiła nic. |
+| `ee76082` | `copilot/pilot-papieru-firmowego` | Jeden commit „Initial plan”; `git diff --stat main...` zwraca pustkę. |
+
 ## Czego świadomie nie usunięto
 
 - `copilot/ankieta-uzupelniajaca` (`3b4f098`) — usuwa 5110 wierszy w 43 plikach. Nie ustalono, co to miało być; **wymaga przejrzenia przed jakąkolwiek decyzją.**
-- `claude/agent-github`, `claude/irin-color-palette-variants-dl9lge`, `claude/zadanie-reczne`, `copilot/help-advise-on-tasks`, `copilot/pilot-papieru-firmowego` — każda ma commity poza `main` i nie była przedmiotem tej decyzji.
+- `claude/irin-color-palette-variants-dl9lge` (`e9b1569`) — 16 plików, siedem wariantów palety v2. Obowiązująca paleta to wariant 2, a jego kopia leży w `_robocze/paleta-v2/`; gałąź nie była jednak porównana plik po pliku, więc zostaje.
+- `claude/zadanie-reczne` (`cc4728c`) — workflow „Claude – zadanie ręczne” na `workflow_dispatch`, nieobecny w `main`. To realna, niescalona funkcja, nie śmieć.
+- `copilot/help-advise-on-tasks` (`33f023e`) — trzy pliki, dokumentacja delegowania etapów. Niescalona, nieprzejrzana.
