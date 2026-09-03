@@ -6,11 +6,16 @@ Artboardy `.dc.html` i `canvas.json` pilota papieru firmowego IRIN. Źródło do
 
 **Placeholder `[TELEFON]` w `WizytowkaAwers.dc.html` zostaje celowo** - obok `[IMIĘ I NAZWISKO]`, `[STANOWISKO]` i `[E-MAIL]` to pole osoby, nie firmy, a zlecenie wprost zakazuje wypełniania ich zmyślonymi danymi.
 
-## Kanwa nie została dotąd opublikowana - korekta z 2026-09-03
+## Dwa adresy kanwy, żadnego nie potwierdzono z sesji - stan na 2026-09-03
 
-Wcześniejsza wersja tego pliku podawała, że 2026-09-02 zasiano kanwę pod adresem `https://claude.ai/code/artifact/3c6ee053-8041-4c1f-989a-c320941b156b`. **Lista artefaktów konta tego nie potwierdza:** `Artifact action:list` w zakresie `mine` i `all` zwraca trzy artefakty, najnowszy z 2026-08-29, i tego identyfikatora wśród nich nie ma. Zapis był nieprawdziwy i został usunięty; to będzie pierwsza publikacja, nie ponowna.
+| Adres | Skąd |
+|---|---|
+| `https://claude.ai/code/artifact/3c6ee053-8041-4c1f-989a-c320941b156b` | zapisany przez sesję z 2026-09-02 |
+| `https://claude.ai/code/artifact/191cf137-7c7c-4bec-a074-f9c53780ae9d` | publikacja z 2026-09-03, zwróciła sukces i ten adres |
 
-**Kanwa opublikowana 2026-09-03:** https://claude.ai/code/artifact/191cf137-7c7c-4bec-a074-f9c53780ae9d — „Papier firmowy IRIN", cztery artboardy, zapis i eksport PNG/PDF włączone. Adres wpisany tu w tej samej turze, w której powstał; poprzedni zapis o kanwie był nieprawdziwy właśnie dlatego, że tego kroku zabrakło.
+**Wcześniejsza wersja tego akapitu twierdziła, że pierwszy adres nie istnieje, i powoływała się na `Artifact action:list`. To twierdzenie zostało wycofane, bo dowód go nie utrzymuje.** Ten sam mechanizm, użyty później w tej samej sesji, zwrócił zero artefaktów, a `Artifact action:status` odpowiedział „no such artifact for this account" **na kanwę opublikowaną godzinę wcześniej z tej sesji**. Listowanie artefaktów jest zależne od profilu konta, na którym akurat pracuje sesja, i nie rozstrzyga, czy artefakt istnieje.
+
+Co z tego wynika: **nie wiadomo, czy któryś z dwóch adresów działa** - nie wiadomo też, że nie działa. Rozstrzyga jedno i nie da się tego zrobić z sesji: otworzyć oba w przeglądarce zalogowanej na właściwy profil.
 
 ## Jak zasiać
 

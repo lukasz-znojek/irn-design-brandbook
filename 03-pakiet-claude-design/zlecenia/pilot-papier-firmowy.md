@@ -98,6 +98,6 @@ Pilot ma wartość tylko wtedy, gdy jego wynik trafi do warstwy 1. Cztery pomiar
 
 Placeholdery, które zostają w kanwie i **mają zostać**: `[IMIĘ I NAZWISKO]`, `[STANOWISKO]`, `[TELEFON]` i `[E-MAIL]` na wizytówce - to pola osoby, uzupełniane przy druku dla konkretnego pracownika - oraz `[KOD]` kodu usługi BUR i data w treści pisma przykładowego.
 
-**Kanwa pilota jest gotowa do zasiania, ale nigdy nie została opublikowana.** Artboardy `.dc.html` i `canvas.json` leżą w `/_robocze/pilot-papier-firmowy/`. Adres artefaktu podawany wcześniej w tamtejszym `README.md` nie istnieje na koncie (sprawdzone 2026-09-03) - to będzie pierwsza publikacja.
+**Kanwa pilota została opublikowana 2026-09-03, ale adresu nie potwierdzono z sesji.** Artboardy `.dc.html` i `canvas.json` leżą w `/_robocze/pilot-papier-firmowy/`, tam też oba znane adresy kanwy. Publikacja zwróciła sukces, natomiast narzędzie listujące artefakty jest zależne od profilu konta i nie potrafiło potwierdzić nawet tej świeżo opublikowanej - więc przed pomiarami adres trzeba otworzyć w przeglądarce i sprawdzić naocznie.
 
 Po wysłaniu i powrocie wyniku: wykonać punkt 3, potem zaktualizować `/PLAN.md` (zadanie 22) i `/MAPA-DROGOWA.md` (bramka B).
