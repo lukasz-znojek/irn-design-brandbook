@@ -6,7 +6,9 @@ Ten plik opisuje treść i wymogi papieru firmowego oraz wizytówki IRIN. Nie op
 
 IRIN to **spółka z ograniczoną odpowiedzialnością** (Instytut Rozwoju i Nauki sp. z o.o.) z siedzibą w Kielcach. Potwierdzone przez foundera 2026-09-02; numery KRS, NIP, REGON i adres siedziby są w `/01-baza-wiedzy/firma/kontekst-firmy-sanitized.md`, sekcja „Kto jest dostawcą”, i mogą wejść do gotowego wzoru. Wartości z `brandbook.dc.html` (`KRS 0000000000`, `NIP 000-000-00-00`) były zerowym placeholderem kanwy i nie są danymi IRIN.
 
-Dwóch pozycji wymaganych przez przepis niżej repozytorium **nie zawiera**: oznaczenia sądu rejestrowego i wysokości kapitału zakładowego. Obie są jawne w KRS i muszą zostać odczytane stamtąd przy pierwszym zleceniu papieru firmowego; nie zgaduje się ich.
+Dwie pozycje wymagane przez przepis niżej - oznaczenie sądu rejestrowego i wysokość kapitału zakładowego - **zostały odczytane 2026-09-03 z rejestru KRS** (`api-krs.ms.gov.pl`, odpis pełny, stan z dnia 15.07.2026): **Sąd Rejonowy w Kielcach, X Wydział Gospodarczy Krajowego Rejestru Sądowego**, kapitał zakładowy **40 000,00 zł**. Obie są jawne w KRS, więc ich miejsce w publicznym repozytorium jest tym samym, co KRS, NIP i REGON.
+
+**Falsyfikator:** ponowny odczyt tego samego odpisu pokazujący inną kwotę albo inny wydział - kapitał zakładowy zmienia się uchwałą i wpisem, więc przed każdym zleceniem papieru sprawdza się datę „stan z dnia" w odpisie, a nie datę tego pliku.
 
 ## Elementy prawnie obowiązkowe
 
@@ -35,7 +37,7 @@ Układ graficzny, typografia, kolorystyka w ramach palety IRIN, rozmieszczenie d
 
 ## Dane wejściowe wymagane przed przekazaniem do Claude Design
 
-Z repozytorium: forma prawna, adres siedziby, KRS, NIP, REGON (`/01-baza-wiedzy/firma/kontekst-firmy-sanitized.md`). Od foundera przy zleceniu: oznaczenie sądu rejestrowego, wysokość kapitału zakładowego, wartości danych kontaktowych (e-mail, telefon, adres strony) - te ostatnie celowo nie są powielane w warstwie 1. Żadne z nich nie są tu zgadywane.
+Z repozytorium: forma prawna, adres siedziby, KRS, NIP, REGON (`/01-baza-wiedzy/firma/kontekst-firmy-sanitized.md`) oraz - od 2026-09-03 - oznaczenie sądu rejestrowego i wysokość kapitału zakładowego, odczytane z KRS (sekcja wyżej). Od foundera przy zleceniu zostają wyłącznie wartości danych kontaktowych: e-mail, telefon, adres strony - celowo niepowielane w warstwie 1. Żadne z nich nie są tu zgadywane.
 
 ## Źródła
 

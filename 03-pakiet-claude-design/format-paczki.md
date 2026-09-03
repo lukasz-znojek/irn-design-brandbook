@@ -26,6 +26,7 @@ Poniższe **muszą** trafić do każdego zlecenia dla Claude Design razem z wart
 4. **Hierarchię buduje waga jednego kroju, nie zmiana rodziny.** Manrope na wszystko, Inconsolata wyłącznie na liczby, kody usług i metadane. Nie dobieraj trzeciego kroju.
 5. **H3 odróżnia się od leadu wyłącznie wagą.** Te dwa poziomy nie powinny stać bezpośrednio obok siebie; jeśli muszą, użyj kickera.
 6. **Siatka to sześć kolumn, zawsze.** Liczba kolumn jest wspólna dla wszystkich trzech dziedzin - to element tożsamości, nie parametr do dobierania per dokument.
+7. **Na materiale IRIN nie stawia się znaku Funduszy Europejskich, znaku barw RP ani flagi Unii Europejskiej.** Dotyczy każdego dokumentu dziedziny Pożyczki UE/BGK. To zakaz, nie brak obowiązku: Podręcznik informacji i promocji FE (rozdz. 8.7, s. 22) wprost nie pozwala umieszczać w zestawieniu znaków podmiotów, które nie są beneficjentami, a IRIN jest doradcą zewnętrznym. Nazwę programu wolno napisać w treści, oznaczyć nim materiału - nie. Uzasadnienie i falsyfikator: `/01-baza-wiedzy/prawo/pozyczki-ue-bgk.md`.
 
 ## Elementy paczki, potwierdzone i gotowe do użycia
 
