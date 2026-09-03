@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   WARIANT 2 - "Marginalia"
+   Kolor dziedziny w chrome dokumentu: Onyks (Pozyczki UE/BGK).
+   Os wariacji: hierarchie niesie POLOZENIE NA SIATCE, nie stopien pisma.
+   Podzial 2 + 4 kolumny: 2x25+4 = 54 mm aparatu, 4x25+3x4 = 112 mm tekstu,
+   54 + 4 + 112 = 170 mm - dokladna szerokosc pola tresci.
+   Display wystepuje raz, na okladce; wewnatrz ksiegi skala jest scisnieta
+   do H2 / H3 / lead / korpus, a znaczenie rozstrzyga kolumna.
+   ============================================================ */
+:root{
+  --kaszmir:#FBF8F2; --muslin:#F6F2E9; --pergamin:#E7DFD2;
+  --espresso:#221A15; --sepia:#5E4E40; --popiol:#938978;
+  --aksamit:#452430; --miedz:#7A5638; --onyks:#33474F;
+  --zloto:#A8874E; --patyna:#2F5A63;
+  --biel:#FFFFFF;
+  --werdykt:#2E5241; --rubryka:#8A6110; --karmin:#9E2B2B;
+  --dziedzina:var(--onyks);
+}
+html,body{margin:0;padding:0;background:var(--muslin);color:var(--espresso);
+  font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased;}
+.plansza{max-width:2400px;margin:0 auto;padding:64px 48px;}
+section{margin-top:40px;} section:first-of-type{margin-top:0;}
+
+.a4{width:210mm;height:297mm;box-sizing:border-box;
+  padding:18mm 22mm 28mm 18mm;background:var(--kaszmir);
+  border:1px solid var(--popiol);position:relative;overflow:hidden;}
+
+/* --- rejestr: kazdy blok to wiersz aparat | tresc --- */
+.wiersz{display:grid;grid-template-columns:54mm 112mm;column-gap:4mm;
+  padding:4mm 0;border-top:.2mm solid var(--popiol);align-items:start;}
+.wiersz.otwarcie{border-top:.6mm solid var(--dziedzina);padding-top:5mm;}
+.wiersz.domkniecie{border-bottom:.2mm solid var(--popiol);}
+.aparat{color:var(--sepia);}
+.aparat .mono{display:block}
+
+/* podzial wewnatrz kolumny tresci: 4 x 25 + 3 x 4 = 112 mm */
+.t4{display:grid;grid-template-columns:repeat(4,25mm);column-gap:4mm;}
+.c1{grid-column:span 1}.c2{grid-column:span 2}.c3{grid-column:span 3}.c4{grid-column:span 4}
+
+.display{font-weight:200;font-size:72px;line-height:.92;letter-spacing:-.03em;margin:0}
+.h1{font-weight:300;font-size:40px;line-height:1;letter-spacing:-.02em;margin:0}
+.h2{font-weight:600;font-size:24px;line-height:1.1;letter-spacing:-.01em;margin:0}
+.h3{font-weight:600;font-size:16px;line-height:1.3;margin:0}
+.lead{font-weight:500;font-size:16px;line-height:1.4;margin:0}
+.korpus{font-weight:400;font-size:13.5px;line-height:1.55;margin:0}
+.przypis{font-weight:400;font-size:10px;line-height:1.5;margin:0;color:var(--sepia)}
+.kicker{font-weight:700;font-size:14px;line-height:1.2;letter-spacing:.22em;
+  text-transform:uppercase;margin:0;color:var(--dziedzina)}
+.liczba{font-weight:800;font-size:52px;line-height:.95;letter-spacing:-.02em;margin:0;color:var(--dziedzina)}
+.mono{font-family:'Inconsolata',ui-monospace,monospace;font-size:10.5px;line-height:1.5;color:var(--sepia);margin:0}
+.o1{margin-top:6mm}.o2{margin-top:12mm}.o3{margin-top:18mm}
+
+.probka{height:14mm}
+.probka.opisana{display:flex;align-items:flex-end;padding:1.5mm}
+.probka.opisana span{font-size:10px;font-weight:600;color:var(--pergamin)}
+.nota{background:var(--pergamin);padding:5mm;border-left:1.2mm solid var(--dziedzina)}
+.stopka{position:absolute;left:18mm;right:22mm;bottom:12mm;
+  display:grid;grid-template-columns:54mm 112mm;column-gap:4mm;align-items:end}
+img.znak{display:block;height:auto}
+table{border-collapse:collapse;width:100%}
+th,td{text-align:left;padding:1.4mm 2mm;font-size:10px;border-bottom:.2mm solid var(--popiol)}
+th{font-weight:600;color:var(--sepia)}
+</style>
+</helmet>
+
+<div class="plansza">
+
+<!-- ===================== 00 OKLADKA ===================== -->
+<section id="s00" data-screen-label="00 · Okładka">
+  <div class="a4">
+    <div class="wiersz otwarcie" style="border-top:none;padding-top:0">
+      <div class="aparat">
+        <img class="znak" src="../../logo_irin_pion.svg" alt="IRIN" style="width:30mm">
+        <div class="o2"></div>
+        <p class="mono">WYDANIE 01</p>
+        <p class="mono">2026-09-03</p>
+        <p class="mono">WARIANT 2 · MARGINALIA</p>
+        <p class="mono">CHROME: ONYKS</p>
+      </div>
+      <div>
+        <div style="height:60mm"></div>
+        <p class="display">Brandbook.</p>
+        <div class="o2"></div>
+        <p class="h1">Instytut Rozwoju i&nbsp;Nauki</p>
+        <div class="o1"></div>
+        <p class="lead" style="color:var(--sepia)">System identyfikacji „Kaszmir Wyciszony”.<br>
+          Wszystko, co znaczy, leży w lewej kolumnie.</p>
+      </div>
+    </div>
+    <div class="stopka">
+      <p class="mono">IRIN · KSIĘGA MARKI</p>
+      <p class="mono" style="text-align:right">00</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 01 POZYCJONOWANIE ===================== -->
+<section id="s01" data-screen-label="01 · Pozycjonowanie">
+  <div class="a4">
+    <div class="wiersz otwarcie" style="border-top:none;padding-top:0">
+      <div class="aparat"><p class="liczba">01</p><p class="kicker">Pozycjo&shy;nowanie</p></div>
+      <div><p class="h2">Trzy dziedziny. Jeden głos.</p>
+        <div class="o1" style="margin-top:3mm"></div>
+        <p class="lead">IRIN mówi jednym systemem w trzech obszarach. Różni je jeden kolor sygnału,
+          nie osobna tożsamość wizualna.</p></div>
+    </div>
+
+    <div class="wiersz">
+      <div class="aparat"><p class="mono">REGUŁA PROPORCJI</p><p class="mono">80 / 15 / 5</p></div>
+      <div><p class="korpus"><strong>80 % baza:</strong> Kaszmir, Muślin, Pergamin, Espresso, Sepia, Popiół.
+        <strong>15 % dziedzina:</strong> dokładnie jeden z trzech kolorów na dokument, nigdy dwa naraz.
+        <strong>5 % aktywność:</strong> Patyna, Werdykt, Rubryka, Karmin, Złoto foliowe.</p></div>
+    </div>
+
+    <div class="wiersz">
+      <div class="aparat"><p class="mono">PRÓBKA · AKSAMIT</p><p class="mono">primary · #452430</p><p class="mono">12,80:1 NA KASZMIRZE</p></div>
+      <div class="t4">
+        <div class="c1"><div class="probka opisana" style="background:var(--aksamit)"><span>Pergamin</span></div></div>
+        <div class="c3"><p class="h3">Pedagogika</p><p class="korpus">Kolor wiodący systemu:
+          nagłówki H1 i H2, wypełnienie przycisku akcji.</p></div>
+      </div>
+    </div>
+
+    <div class="wiersz">
+      <div class="aparat"><p class="mono">PRÓBKA · MIEDŹ</p><p class="mono">secondary · #7A5638</p><p class="mono">6,16:1 NA KASZMIRZE</p></div>
+      <div class="t4">
+        <div class="c1"><div class="probka opisana" style="background:var(--miedz)"><span>Pergamin</span></div></div>
+        <div class="c3"><p class="h3">Akademia AI</p><p class="korpus">Kolor wspierający:
+          H3 i podtytuły. Najniższy kontrast z trzech dziedzinowych — nie schodzi poniżej 13,5 px.</p></div>
+      </div>
+    </div>
+
+    <div class="wiersz domkniecie">
+      <div class="aparat"><p class="mono">PRÓBKA · ONYKS</p><p class="mono">info · #33474F</p><p class="mono">9,19:1 NA KASZMIRZE</p></div>
+      <div class="t4">
+        <div class="c1"><div class="probka opisana" style="background:var(--onyks)"><span>Pergamin</span></div></div>
+        <div class="c3"><p class="h3">Pożyczki UE / BGK</p><p class="korpus">Nota informacyjna,
+          boks podstawy prawnej. Zastąpił prawie-czerń, która wobec Espresso dawała 1,05:1.</p></div>
+      </div>
+    </div>
+
+    <div class="o2"></div>
+    <div class="wiersz" style="border-top:none;padding-top:0">
+      <div class="aparat"><p class="mono">ZAKAZ</p><p class="mono">PODRĘCZNIK FE</p><p class="mono">ROZDZ. 8.7, S. 22</p></div>
+      <div><div class="nota">
+        <p class="h3">Bez znaków Funduszy Europejskich</p>
+        <div style="margin-top:3mm"></div>
+        <p class="korpus">Na materiale IRIN nie stawia się znaku FE, znaku barw RP ani flagi Unii
+          Europejskiej — także w dziedzinie Pożyczki UE/BGK. IRIN jest doradcą zewnętrznym,
+          nie beneficjentem. Nazwę programu wolno napisać w treści; oznaczyć nim materiał — nie.</p>
+      </div></div>
+    </div>
+
+    <div class="stopka"><p class="mono">POZYCJONOWANIE</p><p class="mono" style="text-align:right">01</p></div>
+  </div>
+</section>
+
+<!-- ===================== 02 LOGOTYP ===================== -->
+<section id="s02" data-screen-label="02 · Logotyp">
+  <div class="a4">
+    <div class="wiersz otwarcie" style="border-top:none;padding-top:0">
+      <div class="aparat"><p class="liczba">02</p><p class="kicker">Logotyp</p></div>
+      <div><p class="h2">Znak w trzech wariantach.</p>
+        <div style="margin-top:3mm"></div>
+        <p class="lead">Pliki źródłowe nie niosą własnej palety — kolor znaku bierze się z reguł,
+          nie z pliku.</p></div>
+    </div>
+
+    <div class="wiersz">
+      <div class="aparat"><p class="mono">POZIOMY · PODSTAWOWY</p><p class="mono">281,333 × 158,667</p><p class="mono">1,773:1</p></div>
+      <div><img class="znak" src="../../logo_irin_poziom.svg" alt="IRIN poziomy" style="width:60mm"></div>
+    </div>
+    <div class="wiersz">
+      <div class="aparat"><p class="mono">PIONOWY · POLA WĄSKIE</p><p class="mono">184,837 × 162,834</p><p class="mono">1,135:1</p></div>
+      <div><img class="znak" src="../../logo_irin_pion.svg" alt="IRIN pionowy" style="width:32mm"></div>
+    </div>
+    <div class="wiersz domkniecie">
+      <div class="aparat"><p class="mono">SYGNET · SAMODZIELNY</p><p class="mono">184,837 × 162,834</p><p class="mono">1,135:1</p></div>
+      <div><img class="znak" src="../../logo_irin_sygnet.svg" alt="IRIN sygnet" style="width:26mm"></div>
+    </div>
+
+    <div class="o1"></div>
+    <div class="wiersz">
+      <div class="aparat"><p class="mono">ROZMIAR MINIMALNY</p></div>
+      <div><table>
+        <tr><th>Nośnik</th><th>Minimum</th><th>Status</th></tr>
+        <tr><td>Druk</td><td>18 mm szerokości</td><td>zatwierdzone</td></tr>
+        <tr><td>Ekran</td><td>90 px szerokości</td><td>zatwierdzone</td></tr>
+        <tr><td>Sygnet samodzielny</td><td>10 mm / 44 px</td><td><strong>niepotwierdzone</strong></td></tr>
+      </table></div>
+    </div>
+
+    <div class="wiersz">
+      <div class="aparat"><p class="mono">PRZESTRZEŃ OCHRONNA</p><p class="mono">x = WYSOKOŚĆ LITER SYGNETU</p></div>
+      <div class="t4">
+        <div class="c2"><div style="border:.2mm dashed var(--popiol);padding:7mm;display:inline-block">
+          <img class="znak" src="../../logo_irin_poziom.svg" alt="IRIN z polem ochronnym" style="width:28mm"></div></div>
+        <div class="c2"><p class="korpus">Miara względna, skalująca się ze znakiem. Przy logotypie
+          w minimalnych 18 mm pole też jest małe — stały margines strony go nie zastąpi.</p></div>
+      </div>
+    </div>
+
+    <div class="wiersz domkniecie">
+      <div class="aparat"><p class="mono">ZAKAZY · CZTERY</p><p class="mono">WSZYSTKIE WIĄŻĄCE</p></div>
+      <div><p class="korpus">Nie zmieniamy koloru znaku — na ciemnym tle wersja odwrócona, nie przebarwiona.
+        Nie obracamy, nie pochylamy, nie odbijamy lustrzanie. Nie dodajemy cienia, poświaty ani obrysu.
+        Nie rozciągamy nieproporcjonalnie.</p>
+        <div style="margin-top:3mm"></div>
+        <p class="przypis">Logotyp jest jedynym elementem tożsamości, którego nie da się odtworzyć
+          z innej specyfikacji po zepsuciu — paletę, siatkę i skalę można przeliczyć na nowo, znaku nie.</p></div>
+    </div>
+
+    <div class="stopka"><p class="mono">LOGOTYP</p><p class="mono" style="text-align:right">02</p></div>
+  </div>
+</section>
+
+<!-- ===================== 03 KOLORYSTYKA ===================== -->
+<section id="s03" data-screen-label="03 · Kolorystyka">
+  <div class="a4">
+    <div class="wiersz otwarcie" style="border-top:none;padding-top:0">
+      <div class="aparat"><p class="liczba">03</p><p class="kicker">Kolory&shy;styka</p></div>
+      <div><p class="h2">Czternaście barw, dwie etykiety każda.</p>
+        <div style="margin-top:3mm"></div>
+        <p class="lead">Nazwa marki i token semantyczny obowiązują naraz. Aksamit <em>jest</em>
+          tokenem <span class="mono">primary</span>.</p></div>
+    </div>
+
+    <div class="wiersz">
+      <div class="aparat"><p class="mono">BAZA · 80 %</p><p class="mono">TŁA, TUSZ, LINIE</p></div>
+      <div class="t4" style="row-gap:3mm">
+        <div class="c1"><div class="probka" style="background:var(--kaszmir);border:.2mm solid var(--popiol)"></div><p class="mono">KASZMIR<br>#FBF8F2</p></div>
+        <div class="c1"><div class="probka" style="background:var(--muslin);border:.2mm solid var(--popiol)"></div><p class="mono">MUŚLIN<br>#F6F2E9</p></div>
+        <div class="c1"><div class="probka" style="background:var(--pergamin);border:.2mm solid var(--popiol)"></div><p class="mono">PERGAMIN<br>#E7DFD2</p></div>
+        <div class="c1"><div class="probka" style="background:var(--popiol)"></div><p class="mono">POPIÓŁ<br>#938978</p></div>
+        <div class="c1"><div class="probka opisana" style="background:var(--espresso)"><span>16,15:1</span></div><p class="mono">ESPRESSO<br>#221A15</p></div>
+        <div class="c1"><div class="probka opisana" style="background:var(--sepia)"><span>7,50:1</span></div><p class="mono">SEPIA<br>#5E4E40</p></div>
+      </div>
+    </div>
+
+    <div class="wiersz">
+      <div class="aparat"><p class="mono">DZIEDZINA · 15 %</p><p class="mono">JEDEN NA DOKUMENT</p></div>
+      <div class="t4" style="row-gap:3mm">
+        <div class="c1"><div class="probka opisana" style="background:var(--aksamit)"><span>10,26:1</span></div><p class="mono">AKSAMIT<br>#452430</p></div>
+        <div class="c1"><div class="probka opisana" style="background:var(--miedz)"><span>4,94:1</span></div><p class="mono">MIEDŹ<br>#7A5638</p></div>
+        <div class="c1"><div class="probka opisana" style="background:var(--onyks)"><span>7,37:1</span></div><p class="mono">ONYKS<br>#33474F</p></div>
+      </div>
+    </div>
+
+    <div class="wiersz domkniecie">
+      <div class="aparat"><p class="mono">AKTYWNOŚĆ · 5 %</p><p class="mono">STANY I HONOR</p></div>
+      <div class="t4" style="row-gap:3mm">
+        <div class="c1"><div class="probka opisana" style="background:var(--patyna)"><span>7,17:1</span></div><p class="mono">PATYNA<br>#2F5A63</p></div>
+        <div class="c1"><div class="probka opisana" style="background:var(--werdykt)"><span>6,62:1</span></div><p class="mono">WERDYKT<br>#2E5241</p></div>
+        <div class="c1"><div class="probka opisana" style="background:var(--rubryka)"><span style="color:var(--biel)">biel 5,53:1</span></div><p class="mono">RUBRYKA<br>#8A6110</p></div>
+        <div class="c1"><div class="probka opisana" style="background:var(--karmin)"><span>5,60:1</span></div><p class="mono">KARMIN<br>#9E2B2B</p></div>
+        <div class="c1"><div class="probka opisana" style="background:var(--zloto)"><span style="color:var(--espresso)">5,09:1</span></div><p class="mono">ZŁOTO FOL.<br>#A8874E</p></div>
+      </div>
+    </div>
+
+    <div class="o1"></div>
+    <div class="wiersz" style="border-top:none;padding-top:0">
+      <div class="aparat"><p class="mono">STATUS</p><p class="mono">WCAG 1.4.1</p></div>
+      <div><div class="nota">
+        <p class="h3">Kolor nigdy nie jest jedynym nośnikiem statusu</p>
+        <div style="margin-top:3mm"></div>
+        <p class="korpus">Po konwersji do skali szarości Werdykt, Rubryka, Karmin i Onyks mają zbliżoną
+          jasność, a osobny tryb monochromatyczny został odrzucony. Etykieta słowna albo ikona jest
+          jedynym zabezpieczeniem, nie jednym z dwóch.</p>
+        <div style="margin-top:3mm"></div>
+        <p style="margin:0">
+          <span style="background:var(--werdykt);color:var(--pergamin);font-size:10px;font-weight:600;padding:1.2mm 2.4mm">✓ POTWIERDZONE</span>
+          <span style="background:var(--rubryka);color:var(--biel);font-size:10px;font-weight:600;padding:1.2mm 2.4mm;margin-left:2mm">! WYMAGA UWAGI</span>
+          <span style="background:var(--karmin);color:var(--pergamin);font-size:10px;font-weight:600;padding:1.2mm 2.4mm;margin-left:2mm">✕ ODRZUCONE</span></p>
+      </div></div>
+    </div>
+
+    <div class="stopka"><p class="mono">KOLORYSTYKA</p><p class="mono" style="text-align:right">03</p></div>
+  </div>
+</section>
+
+<!-- ===================== 04 TYPOGRAFIA ===================== -->
+<section id="s04" data-screen-label="04 · Typografia">
+  <div class="a4">
+    <div class="wiersz otwarcie" style="border-top:none;padding-top:0">
+      <div class="aparat"><p class="liczba">04</p><p class="kicker">Typo&shy;grafia</p></div>
+      <div><p class="h2">Hierarchię buduje waga, nie rodzina.</p>
+        <div style="margin-top:3mm"></div>
+        <p class="lead">Manrope 200–800 na wszystko, Inconsolata wyłącznie na liczby, kody usług
+          i metadane. Trzeciego kroju nie dobiera się.</p></div>
+    </div>
+
+    <div class="wiersz"><div class="aparat"><p class="mono">DISPLAY · 200 · 72 px</p><p class="mono">1,0 · −0,03em · TYLKO OKŁADKA</p></div>
+      <div><p class="display">Zaświadczenie</p></div></div>
+    <div class="wiersz"><div class="aparat"><p class="mono">H1 · 300 · 40 px</p><p class="mono">1,0 · −0,02em</p></div>
+      <div><p class="h1">Rozdział pierwszy</p></div></div>
+    <div class="wiersz"><div class="aparat"><p class="mono">H2 · 600 · 24 px</p><p class="mono">1,1 · −0,01em</p></div>
+      <div><p class="h2">Sekcja dokumentu</p></div></div>
+    <div class="wiersz"><div class="aparat"><p class="mono">H3 · 600 · 16 px</p><p class="mono">1,3 · ZATW. 2026-09-02</p></div>
+      <div><p class="h3">Podsekcja — źdźbło, ćma, łąka</p></div></div>
+    <div class="wiersz"><div class="aparat"><p class="mono">KICKER · 700 · 14 px</p><p class="mono">0,22em · WERSALIKI</p></div>
+      <div><p class="kicker">Drogowskaz sekcji</p></div></div>
+    <div class="wiersz"><div class="aparat"><p class="mono">LEAD · 500 · 16 px</p><p class="mono">1,4 · TEN SAM STOPIEŃ CO H3</p></div>
+      <div><p class="lead">Lead różni się od H3 wyłącznie wagą — 500 wobec 600.</p></div></div>
+    <div class="wiersz"><div class="aparat"><p class="mono">KORPUS · 400 · 13,5 px</p><p class="mono">1,55 = 5,54 mm</p></div>
+      <div><p class="korpus">Tekst korpusu dokumentu regulowanego. W tym wariancie korpus jest
+        stopniem dominującym: nagłówek nie rośnie, rośnie jego odległość od lewej krawędzi.</p></div></div>
+    <div class="wiersz"><div class="aparat"><p class="mono">PRZYPIS · 400 · 10 px</p><p class="mono">1,5</p></div>
+      <div><p class="przypis">Przypis, metadane, podstawa prawna.</p></div></div>
+    <div class="wiersz"><div class="aparat"><p class="mono">LICZBA · 800 · 52 px</p><p class="mono">0,95 · −0,02em</p></div>
+      <div><p class="liczba">120 h</p></div></div>
+    <div class="wiersz domkniecie"><div class="aparat"><p class="mono">INCONSOLATA · 10,5 px</p><p class="mono">LICZBY, KODY, METADANE</p></div>
+      <div><p class="mono">KFS/2026/0417 · BUR 2026/00318 · 2026-09-03</p></div></div>
+
+    <div class="stopka"><p class="mono">TYPOGRAFIA</p><p class="mono" style="text-align:right">04</p></div>
+  </div>
+</section>
+
+<!-- ===================== 05 SIATKA ===================== -->
+<section id="s05" data-screen-label="05 · Siatka">
+  <div class="a4">
+    <div class="wiersz otwarcie" style="border-top:none;padding-top:0">
+      <div class="aparat"><p class="liczba">05</p><p class="kicker">Siatka A4</p></div>
+      <div><p class="h2">Sześć kolumn, czytane jako dwie i cztery.</p>
+        <div style="margin-top:3mm"></div>
+        <p class="lead">Liczba kolumn się nie zmienia — zmienia się miejsce, w którym je łamiemy.</p></div>
+    </div>
+
+    <div class="wiersz">
+      <div class="aparat"><p class="mono">APARAT · 2 KOLUMNY</p><p class="mono">2 × 25 + 4 = 54 mm</p></div>
+      <div><p class="korpus">Lewa kolumna trzyma kicker, numer sekcji, metadane i przypisy.
+        Nigdy nie wchodzi w nią zdanie, które trzeba przeczytać, żeby zrozumieć treść po prawej.</p></div>
+    </div>
+    <div class="wiersz domkniecie">
+      <div class="aparat"><p class="mono">TREŚĆ · 4 KOLUMNY</p><p class="mono">4 × 25 + 3 × 4 = 112 mm</p></div>
+      <div><p class="korpus">Prawa kolumna niesie całą treść czytaną w porządku liniowym.
+        54 + 4 + 112 = <strong>170 mm</strong> — dokładna szerokość pola treści.</p></div>
+    </div>
+
+    <div class="o1"></div>
+    <div style="display:grid;grid-template-columns:54mm 112mm;column-gap:4mm">
+      <div style="background:var(--pergamin);height:36mm"></div>
+      <div style="display:grid;grid-template-columns:repeat(4,25mm);column-gap:4mm">
+        <div style="background:var(--pergamin);height:36mm"></div>
+        <div style="background:var(--pergamin);height:36mm"></div>
+        <div style="background:var(--pergamin);height:36mm"></div>
+        <div style="background:var(--pergamin);height:36mm"></div>
+      </div>
+    </div>
+    <div class="o1"></div>
+    <p class="mono">54 mm APARATU + 4 mm GUTTERA + 112 mm TREŚCI = 170 mm · SZEŚĆ MODUŁÓW PO 25 mm ZACHOWANYCH</p>
+
+    <div class="o2"></div>
+    <div class="wiersz">
+      <div class="aparat"><p class="mono">PARAMETRY</p></div>
+      <div><table>
+        <tr><th>Parametr</th><th>Wartość</th></tr>
+        <tr><td>Format</td><td>A4 pion, 210 × 297 mm</td></tr>
+        <tr><td>Kolumny · moduł · gutter</td><td>6 · 25 mm · 4 mm</td></tr>
+        <tr><td>Marginesy (góra / lewy / prawy / dół)</td><td>18 / 18 / 22 / 28 mm</td></tr>
+        <tr><td>Pole treści</td><td>170 × 251 mm</td></tr>
+        <tr><td>Jednostka odstępu</td><td>6 mm</td></tr>
+      </table></div>
+    </div>
+
+    <div class="wiersz domkniecie">
+      <div class="aparat"><p class="mono">RACHUNEK</p><p class="mono">NIE DEKLARACJA</p></div>
+      <div><p class="korpus">210 − 18 − 22 = <strong>170 mm</strong>; 6 × 25 + 5 × 4 = <strong>170 mm</strong>.
+        297 − 18 − 28 = <strong>251 mm</strong>.</p>
+        <div style="margin-top:3mm"></div>
+        <p class="przypis">Moduł 32 mm z kanwy foundera dawał 212 mm — o 2 mm więcej niż cała
+          szerokość strony. Jednostka 6 mm mierzy odstępy między blokami, nie linie bazowe tekstu:
+          interlinia korpusu to 5,54 mm, rozjazd 0,46 mm na linię, 19 mm na pełnej kolumnie.</p></div>
+    </div>
+
+    <div class="stopka"><p class="mono">SIATKA A4</p><p class="mono" style="text-align:right">05</p></div>
+  </div>
+</section>
+
+</div>
+</x-dc>
+</body>
+</html>
