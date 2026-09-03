@@ -16,8 +16,8 @@ Pomiar i historia decyzji: [`../../03-pakiet-claude-design/propozycja-palety-i-s
 | Moduł kolumny | 25 mm |
 | Gutter | 4 mm |
 | Margines górny | 18 mm |
-| Margines lewy | 18 mm |
-| Margines prawy | 22 mm |
+| Margines lewy | 20 mm |
+| Margines prawy | 20 mm |
 | Margines dolny | 28 mm |
 | Pole treści | 170 × 251 mm |
 
@@ -25,13 +25,37 @@ Liczba kolumn (sześć) jest wspólna dla wszystkich trzech dziedzin - to elemen
 
 ## Sprawdzenie, że siatka fizycznie mieści się na stronie
 
-Szerokość pola treści: 210 - 18 (lewy) - 22 (prawy) = **170 mm**.
+Szerokość pola treści: 210 - 20 (lewy) - 20 (prawy) = **170 mm**.
 Suma siatki: 6 × 25 + 5 × 4 = 150 + 20 = **170 mm**.
 **Dopasowanie dokładne**, bez zapasu i bez nadmiaru.
 
 Wysokość pola treści: 297 - 18 (górny) - 28 (dolny) = **251 mm**.
 
 Liczby przeliczone w tej sesji, nie przepisane z żadnego dokumentu. Falsyfikator: inny format albo inna orientacja strony niż A4 pion - wtedy całe to sprawdzenie trzeba wykonać od nowa.
+
+## Marginesy boczne wyrównane - poprawka 2026-09-03
+
+Do 2026-09-03 marginesy boczne wynosiły 18 mm z lewej i 22 mm z prawej. Ta asymetria nie miała
+uzasadnienia: dokumenty IRIN nie są oprawiane ani bindowane, więc nie ma krawędzi, która
+potrzebowałaby zapasu. Powstała jako reszta z rachunku, nie jako decyzja.
+
+**Poprawka nic nie kosztuje.** Pole treści ma tak samo 170 mm w obu układach:
+
+| Układ | Rachunek | Pole treści | Zgodność z siatką 170 mm |
+|---|---|---|---|
+| dawny 18 / 22 | 210 - 18 - 22 | 170 mm | zgodne |
+| **obowiązujący 20 / 20** | 210 - 20 - 20 | **170 mm** | zgodne |
+
+Siatka, moduł, gutter i wysokość pola treści są nietknięte - zmienia się wyłącznie położenie
+bloku treści na stronie, o 2 mm w prawo.
+
+**Marginesy pionowe zostają niesymetryczne celowo:** 18 mm u góry, 28 mm u dołu. Cięższy margines
+dolny to reguła składu, nie przeoczenie - blok treści posadzony optycznie w połowie strony leży
+wyżej niż w połowie geometrycznej.
+
+**Falsyfikator:** jeśli któryś dokument IRIN ma być bindowany, zszywany albo dziurkowany, wraca
+margines wewnętrzny większy od zewnętrznego, a wtedy asymetria jest uzasadniona i tę sekcję
+trzeba napisać od nowa. Papier firmowy i wizytówka takiej krawędzi nie mają.
 
 ## Dlaczego moduł to 25 mm, a nie 32 mm z kanwy
 

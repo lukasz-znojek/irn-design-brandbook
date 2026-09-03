@@ -26,22 +26,50 @@ System ma dwie warstwy i obie obowiązują naraz: **nazwa koloru** (tożsamość
 | Werdykt | `success` | `#2E5241` | stan potwierdzony: zatwierdzona karta usługi, zdany egzamin | 8,26:1 | 7,83:1 | 6,62:1 |
 | Rubryka | `warning` | `#8A6110` | stan wymagający uwagi: termin naboru, brakujący załącznik | 5,22:1 | 4,95:1 | **4,18:1** |
 | Karmin | `error` | `#9E2B2B` | stan błędu: odrzucony wniosek, niespełniony wymóg | 6,99:1 | 6,63:1 | 5,60:1 |
-| **Popiół** | `border` | `#938978` | linie tabeli, obrys karty i pola formularza | 3,25:1 | 3,09:1 | **2,61:1** |
+| **Popiół** | `border` | `#7D7466` | linie tabeli, obrys karty i pola formularza | 4,34:1 | 4,12:1 | 3,48:1 |
 | **Patyna** | `link` | `#2F5A63` | odnośnik w treści i w interfejsie | 7,17:1 | 6,80:1 | 5,75:1 |
 
 Wszystkie kontrasty policzone wzorem WCAG 2.1 na luminancji względnej sRGB, przeliczone od nowa 2026-09-03 dla wszystkich trzech teł. Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 3:1.
 
-## Trzy pary poniżej progu - na Pergaminie, nie na Kaszmirze
+## Kolory linii - stan po poprawce z 2026-09-03
 
-**Poprzednia wersja tego pliku podawała kontrasty wyłącznie na Kaszmirze i stwierdzała, że w palecie nie ma ani jednej pozycji poniżej progu. To było prawdziwe dla Kaszmiru i nieprawdziwe dla Pergaminu.** Pergamin jest ciemniejszy od Kaszmiru o około 20 % luminancji, więc trzy pary spadają pod próg dokładnie tam, gdzie Pergamin bywa tłem: **wewnątrz calloutu i pod pasem nagłówka**.
+Historia w dwóch krokach. Do 2026-09-03 ten plik podawał kontrasty **wyłącznie na Kaszmirze**
+i stwierdzał, że w palecie nie ma ani jednej pozycji poniżej progu. Przeliczenie na trzech tłach
+pokazało trzy pary pod progiem na Pergaminie. Druga poprawka, tego samego dnia, usunęła przyczynę
+zamiast obchodzić skutek: **Popiół został pociemniony z `#938978` na `#7D7466`.**
 
-| Para | Kontrast na Pergaminie | Próg | Co przestaje działać |
+**Dlaczego pociemnienie, a nie zakaz.** Popiół jest tokenem `border`, czyli kolorem linii tabeli
+i obrysu karty - a Pergamin jest tłem calloutu, czyli miejsca, w którym tabele i karty stoją
+najczęściej. Token obramowania, który nie działa na własnym tle calloutu, jest zepsuty, a nie
+ograniczony. Zapas na Muślinie wynosił zresztą 0,09 nad progiem, czyli tyle co nic.
+
+| Wartość | na Kaszmirze | na Muślinie | na Pergaminie | Próg 3:1 |
+|---|---|---|---|---|
+| dawna `#938978` | 3,25:1 | 3,09:1 | **2,61:1** | zawodzi na Pergaminie, zapas 0,09 na Muślinie |
+| **obowiązująca `#7D7466`** | **4,34:1** | **4,12:1** | **3,48:1** | przechodzi na wszystkich trzech |
+
+Odległość od Sepii (`text-secondary`, 7,12:1 na Muślinie) zostaje duża, więc hierarchia linii
+cienkiej i grubej - powód, dla którego Popiół w ogóle powstał - nie ucierpiała.
+
+### Dwie pary nadal pod progiem, obie z uzasadnieniem
+
+| Para | na Pergaminie | Próg | Rozstrzygnięcie |
 |---|---|---|---|
-| Popiół `#938978` | **2,61:1** | 3:1 dla grafiki | linia tabeli i obrys karty wewnątrz calloutu są niewidoczne |
-| Złoto foliowe `#A8874E` | **2,55:1** | 3:1 dla grafiki | cienka linia ozdobna na tle calloutu nie przechodzi |
-| Rubryka `#8A6110` jako tekst | **4,18:1** | 4,5:1 dla tekstu | ostrzeżenie pisane Rubryką w calloucie nie przechodzi AA |
+| Złoto foliowe `#A8874E` | **2,55:1** | 3:1 dla grafiki | **Zostaje jasne.** Pociemnienie do progu odbiera mu złoto, a to jedyny kolor w palecie, który ma wyglądać na metal. Zamiast tego zawężona rola: wyłącznie kreska ozdobna, pieczęć i sygnatura, **nigdy linia niosąca strukturę i nigdy na tle Pergaminu**. Linię rozdzielającą prowadzi się Popiołem albo Miedzią (4,94:1 na Pergaminie). |
+| Rubryka `#8A6110` jako tekst | **4,18:1** | 4,5:1 dla tekstu | Nie pisze się nią tekstu na Pergaminie; ostrzeżenie idzie Espresso (12,95:1) z etykietą słowną. Jako wypełnienie plakietki Rubryka działa bez zmian. |
 
-**Zasada wiążąca, wynikająca z tych trzech liczb:** wewnątrz calloutu i na każdym innym polu, którego tłem jest Pergamin, **nie stosuje się Popiołu jako linii ani Złota foliowego jako kreski ozdobnej, a Rubryki nie używa się jako koloru tekstu**. Obrys wewnątrz calloutu prowadzi się Sepią (6,02:1), kreskę ozdobną Miedzią (4,94:1), a ostrzeżenie pisze się Espresso (12,95:1) z etykietą słowną, bo kolor i tak nigdy nie jest jedynym nośnikiem statusu.
+### Minimalna grubość linii
+
+Kontrast z tabeli przestaje cokolwiek gwarantować, gdy linia jest cieńsza od rastra drukarki -
+o widoczności decyduje wtedy druk, nie luminancja. Obowiązują dwie wartości:
+
+| Rodzaj linii | Kolor | Minimalna grubość |
+|---|---|---|
+| Niosąca strukturę: linia tabeli, obrys karty, obrys pola, linia rozdzielająca bloki | Popiół, w razie potrzeby Sepia albo Miedź | **0,25 mm** |
+| Ozdobna: kreska pod nagłówkiem, kreska sygnatury | Złoto foliowe | **0,5 mm** |
+
+Linia cieńsza niż 0,25 mm nie jest w tym systemie wyborem projektowym, tylko błędem: znika
+na wydruku niezależnie od tego, co mówi tabela kontrastu.
 
 **Czego ta tabela nie rozstrzyga:** kontrastów na tłach spoza palety - na kolorowym zdjęciu, na skanie, na papierze innym niż biały maszynowy. Tam liczy się od nowa, nie przenosi tych liczb.
 
@@ -89,7 +117,7 @@ Poprzednia paleta miała 12 kolorów; ta ma 14. Żaden kolor nie został usunię
 | Werdykt | `#2F4A32` | `#2E5241` | przesunięty od zieleni butelkowej ku morskiej |
 | **Rubryka** | `#D9AC4A` | `#8A6110` | **zmiana roli, nie tylko odcienia**: było jasne złoto używane jako tło z ciemnym tekstem, jest ciemny bursztyn używany jako tło z tekstem białym albo jako kolor tekstu na papierze. Powód: stara Rubryka nie nadawała się na tekst (kontrast 1,7:1 na papierze), więc token `warning` nie miał czym pisać. |
 | Karmin | `#AC151F` | `#9E2B2B` | przygaszony, mniej sygnalizacyjny |
-| **Popiół** | *nie istniał* | `#938978` | **kolor nowy**. Powód: wcześniej linie tabeli rysowało się pełnym Espresso, więc każda kreska miała wagę ramki i tabela nie miała hierarchii linii cienkiej i grubej. |
+| **Popiół** | *nie istniał* | `#938978`, dziś `#7D7466` | **kolor nowy**. Powód: wcześniej linie tabeli rysowało się pełnym Espresso, więc każda kreska miała wagę ramki i tabela nie miała hierarchii linii cienkiej i grubej. Wartość z 2026-09-02 nie przechodziła progu na Pergaminie - pociemniona 2026-09-03, patrz sekcja „Kolory linii”. |
 | **Patyna** | *nie istniał* | `#2F5A63` | **kolor nowy**. Powód: wcześniej odnośnik i komunikat błędu były fizycznie tym samym kolorem (Karmin, kontrast wzajemny 1,00:1), więc czytelnik nie mógł ich odróżnić inaczej niż z kontekstu zdania. |
 
 **Dwie nazwy nowe, zatwierdzone przez foundera (2026-09-02):** „Popiół” (`border`) i „Patyna” (`link`). Trzymają się konwencji pozostałych dwunastu - materiał albo barwnik, jak Kaszmir, Aksamit, Sepia, Karmin, Miedź, Onyks - a „Patyna” wiąże się dodatkowo znaczeniowo z Miedzią. Obie nazwy są obowiązujące na równi z pozostałymi dwunastoma.

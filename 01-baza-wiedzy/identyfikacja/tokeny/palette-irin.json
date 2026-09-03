@@ -90,8 +90,8 @@
     "gutter-mm": 4,
     "marginesy-mm": {
       "gora": 18,
-      "lewy": 18,
-      "prawy": 22,
+      "lewy": 20,
+      "prawy": 20,
       "dol": 28
     },
     "tresc-mm": [
@@ -99,9 +99,10 @@
       251
     ],
     "zmieniona": false,
-    "pole-tresci-sprawdzone": "6x25 + 5x4 = 170 mm = 210 - 18 - 22; dopasowanie dokładne",
+    "pole-tresci-sprawdzone": "6x25 + 5x4 = 170 mm = 210 - 20 - 20; dopasowanie dokładne",
     "jednostka-odstepu-mm": 6,
-    "jednostka-odstepu-uwaga": "Jednostka odstępu, nie siatka linii bazowych tekstu. Interlinia korpusu to 5,54 mm (13,5 px x 1,55), czyli nie jest wielokrotnością 6 mm - rozjazd 0,46 mm na linię, 19 mm na pełnej kolumnie. Wymierzaj nią odstępy między blokami, nie linie tekstu. Rozstrzygnięte 2026-09-02."
+    "jednostka-odstepu-uwaga": "Jednostka odstępu, nie siatka linii bazowych tekstu. Interlinia korpusu to 5,54 mm (13,5 px x 1,55), czyli nie jest wielokrotnością 6 mm - rozjazd 0,46 mm na linię, 19 mm na pełnej kolumnie. Wymierzaj nią odstępy między blokami, nie linie tekstu. Rozstrzygnięte 2026-09-02.",
+    "marginesy-boczne-zmiana-2026-09-03": "Wyrównane z 18/22 na 20/20. Pole treści bez zmian, 170 mm w obu układach; asymetria nie miała uzasadnienia, bo dokumenty IRIN nie są bindowane. Marginesy pionowe zostają niesymetryczne celowo (18 góra, 28 dół) - cięższy dół to reguła składu."
   },
   "metodologia-kontrastu": "WCAG 2.1, luminancja względna sRGB. Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 3:1. Każda para w tej palecie przechodzi próg.",
   "tokeny": {
@@ -199,10 +200,11 @@
       "rola": "papier, tło karty i tabeli"
     },
     "border": {
-      "hex": "#938978",
+      "hex": "#7D7466",
       "nazwa": "Popiół",
       "rola": "linie tabeli, obrys karty i pola formularza",
-      "nazwa-zatwierdzona": "2026-09-02"
+      "nazwa-zatwierdzona": "2026-09-02",
+      "zmiana-2026-09-03": "Popiół pociemniony z #938978. Powód: dawna wartość dawała 2,61:1 na Pergaminie (próg 3:1) i zapas 0,09 na Muślinie, więc token obramowania nie działał na dwóch z trzech własnych teł. Nowa wartość: 4,34 / 4,12 / 3,48 na Kaszmirze / Muślinie / Pergaminie - próg z zapasem wszędzie, a odległość od Sepii (7,12 na Muślinie) zachowana, więc hierarchia linii cienkiej i grubej stoi."
     },
     "text-primary": {
       "hex": "#221A15",
@@ -304,13 +306,15 @@
     },
     {
       "para": "border na surface",
-      "kontrast": 3.25,
-      "ocena": "OK (>=3:1)"
+      "kontrast": 4.34,
+      "ocena": "OK (>=3:1)",
+      "przeliczone": "2026-09-03, po pociemnieniu border z #938978 na #7D7466"
     },
     {
       "para": "border na background",
-      "kontrast": 3.09,
-      "ocena": "OK (>=3:1)"
+      "kontrast": 4.12,
+      "ocena": "OK (>=3:1)",
+      "przeliczone": "2026-09-03, po pociemnieniu border z #938978 na #7D7466"
     },
     {
       "para": "accent jako linia/ikona na surface",
@@ -319,8 +323,9 @@
     },
     {
       "para": "border na neutral-light",
-      "kontrast": 2.61,
-      "ocena": "PONIŻEJ PROGU"
+      "kontrast": 3.48,
+      "ocena": "OK (>=3:1)",
+      "przeliczone": "2026-09-03, po pociemnieniu border z #938978 na #7D7466"
     },
     {
       "para": "accent na neutral-light",
@@ -356,8 +361,9 @@
   "ograniczenia": [
     "Kolor nigdy nie jest jedynym nośnikiem statusu - każdy stan wymaga etykiety słownej albo ikony (WCAG 1.4.1). Po konwersji do skali szarości Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność.",
     "Odnośnik wewnątrz boksu informacyjnego zawsze z podkreśleniem - Patyna i Onyks mają kontrast wzajemny 1,28:1.",
-    "Złoto foliowe nigdy jako tło większej powierzchni ani jako kolor tekstu korpusu.",
-    "Na tle Pergaminu (neutral-light) trzy pary spadają pod próg: border 2,61:1 i accent 2,55:1 (próg 3:1 dla grafiki), warning jako tekst 4,18:1 (próg 4,5:1). Wewnątrz calloutu i na każdym polu o tle Pergaminu nie stosuje się border jako linii, accent jako kreski ozdobnej ani warning jako koloru tekstu - zastąpienia: obrys text-secondary (6,02:1), kreska secondary (4,94:1), ostrzeżenie text-primary (12,95:1) z etykietą słowną. Pełna tabela dla trzech teł: paleta-barw.md, sekcja „Trzy pary poniżej progu”. Przeliczone 2026-09-03."
+    "Złoto foliowe nigdy jako tło większej powierzchni, nigdy jako kolor tekstu korpusu, nigdy jako linia niosąca strukturę i nigdy na tle Pergaminu. Wyłącznie kreska ozdobna, pieczęć i sygnatura, przy grubości nie mniejszej niż 0,5 mm. Linię, która coś rozdziela albo obramowuje, prowadzi się border albo secondary.",
+    "Na tle Pergaminu (neutral-light) dwie pary spadają pod próg: accent 2,55:1 (próg 3:1 dla grafiki) i warning jako tekst 4,18:1 (próg 4,5:1). Na tle Pergaminu nie stosuje się accent jako kreski ozdobnej ani warning jako koloru tekstu - zastąpienia: kreska secondary (4,94:1), ostrzeżenie text-primary (12,95:1) z etykietą słowną. Border przechodzi na wszystkich trzech tłach po pociemnieniu z 2026-09-03 (3,48:1 na Pergaminie). Pełna tabela: paleta-barw.md, sekcja „Kolory linii - stan po poprawce”. Przeliczone 2026-09-03.",
+    "Minimalna grubość linii w druku: 0,25 mm dla linii niosącej strukturę (border, secondary) i 0,5 mm dla kreski ozdobnej w accent. Poniżej tych wartości kontrast z tabeli przestaje cokolwiek gwarantować, bo o widoczności decyduje raster drukarki, nie luminancja."
   ],
   "tryb-mono": {
     "status": "ODRZUCONY (2026-09-02)",

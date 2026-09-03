@@ -27,24 +27,29 @@ na trzech tłach zamiast jednego.
 | 3 | H3 bezpośrednio pod leadem — czy różnica wagi 500 wobec 600 przy tym samym stopniu 16 px jest widoczna bez kickera | | | `typografia.md`, sekcja o H3. Jeśli niewidoczna, zasada 5 z `format-paczki.md` zostaje potwierdzona jako konieczna |
 | 4 | Sygnet samodzielny na rewersie wizytówki — zmierzona szerokość w mm i ocena czytelności; sygnet stoi w 10 mm | | | `logotyp.md`, tabela minimalnych rozmiarów. Czytelny → wiersz „10 mm / 44 px” przechodzi z „nie potwierdzony osobno” na potwierdzony; nieczytelny → wpisać zmierzone minimum |
 | 5 | Dokument bez koloru dziedzinowego — czy papier w samym Aksamicie jako `primary` czyta się jako spójny z systemem 80/15/5 | | | `paleta-barw.md`, sekcja o regule 80/15/5: dopisać zdanie o dokumentach ogólnofirmowych |
-| 6 | **Linie włosowe Popiołu i Złota foliowego** — czy widać je na tle Muślinu; podać grubość w mm i tło | | wymaga **wydruku**, nie samego ekranu | `paleta-barw.md`, sekcja „Trzy pary poniżej progu”: dopisać wiersz o grubości linii na Muślinie |
+| 6 | **Minimalne grubości linii na wydruku** — czy linia struktury 0,25 mm w Popiele `#7D7466` i kreska ozdobna 0,5 mm w Złocie foliowym są widoczne po wydrukowaniu na zwykłej drukarce | | wymaga **wydruku**, nie samego ekranu | `paleta-barw.md`, sekcja „Minimalna grubość linii”: potwierdzić obie wartości albo wpisać zmierzone minimum |
 
 ## Skąd wziął się pomiar 6
 
 Do 2026-09-03 `paleta-barw.md` podawała kontrasty wyłącznie na tle Kaszmiru i stwierdzała, że
-w palecie nie ma ani jednej pozycji poniżej progu. Po przeliczeniu na trzech tłach okazało się,
-że trzy pary spadają pod próg na Pergaminie. Kanwa pilota Pergaminu nie używa — jej tła to Kaszmir
-`#FBF8F2` i Muślin `#F6F2E9` — więc reguły 7 nie łamie. Ale na Muślinie zapas nad progiem 3:1 jest
-rzędu setnych:
+w palecie nie ma pozycji poniżej progu. Przeliczenie na trzech tłach pokazało trzy pary pod progiem
+na Pergaminie, a Popiół miał na Muślinie zapas 0,09 - tyle co nic.
 
-| Para | na Kaszmirze | na Muślinie | Próg | Zapas na Muślinie |
+**Przyczyna została usunięta tego samego dnia, nie obejrzana z boku.** Popiół pociemniał
+z `#938978` na `#7D7466` i przechodzi teraz na wszystkich trzech tłach:
+
+| Wartość | Kaszmir | Muślin | Pergamin | Próg 3:1 |
 |---|---|---|---|---|
-| Popiół `#938978` | 3,25:1 | 3,09:1 | 3:1 dla grafiki | 0,09 |
-| Złoto foliowe `#A8874E` | 3,17:1 | 3,01:1 | 3:1 dla grafiki | 0,01 |
+| dawna `#938978` | 3,25:1 | 3,09:1 | 2,61:1 | zawodzi na Pergaminie |
+| **obowiązująca `#7D7466`** | 4,34:1 | 4,12:1 | 3,48:1 | przechodzi wszędzie |
 
-Kanwa rysuje tymi kolorami linie 0,2 mm (Popiół, obrys stopki) i 0,3 mm (Złoto foliowe, kreska
-nad blokiem treści). Przy zapasie 0,01 o widoczności decyduje grubość linii i druk, nie tabela
-kontrastu — dlatego ten jeden pomiar wymaga wydruku, a nie ekranu.
+Złoto foliowe zostało jasne (`#A8874E`, 2,55:1 na Pergaminie), bo pociemnienie odbiera mu metal -
+w zamian ma zawężoną rolę i minimalną grubość 0,5 mm.
+
+**Co wobec tego mierzy pomiar 6:** nie kontrast, bo ten jest policzony, tylko **czy przepisane
+minimalne grubości wystarczają na papierze**. Kanwa ma dziś linię struktury 0,25 mm w Popiele
+i kreskę ozdobną 0,5 mm w Złocie foliowym - obie na granicy tego, co drukarka biurowa jeszcze
+kładzie. To jedyny pomiar, którego nie da się wykonać na ekranie.
 
 ## Jeśli wróci propozycja zmiany siatki
 

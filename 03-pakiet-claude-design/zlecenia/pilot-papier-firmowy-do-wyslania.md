@@ -125,16 +125,18 @@ w trakcie pracy uznasz, że dokument bez koloru dziedzinowego wypada niejednozna
 między poziomym a pionowym na awersie, a na rewersie sygnet `logo_irin_sygnet.svg` samodzielnie.
 Zmierz i zapisz, w jakiej szerokości sygnet stoi na rewersie — to potrzebne do protokołu pomiaru.
 
-**Linie włosowe — zapisz zmierzony efekt.** Jeśli użyjesz Popiołu albo Złota foliowego na cienką
-linię, podaj jej grubość w milimetrach i tło, na którym stoi. Na tle Muślinu obie pary mają zapas
-nad progiem 3:1 rzędu setnych (Popiół 3,09:1, Złoto foliowe 3,01:1), więc grubość linii przestaje
-być wyborem estetycznym.
+**Linie mają przepisany kolor i minimalną grubość.** Linię niosącą strukturę - linia tabeli, obrys
+karty, obrys pola, rozdzielenie bloków - prowadzisz Popiołem `#7D7466`, nie cieniej niż **0,25 mm**.
+Złoto foliowe `#A8874E` jest wyłącznie kreską ozdobną, pieczęcią i sygnaturą, nie cieniej niż
+**0,5 mm**, i nigdy na tle Pergaminu. Podaj przy każdej użytej linii jej grubość w milimetrach
+i tło, na którym stoi - to wchodzi do protokołu pomiaru.
 
 **Siatkę wolno Ci dopracować - ale jako propozycję obok, nie po cichu w dokumencie.** Wartości
 z `siatka-a4.md` są zatwierdzone i artboard główny trzyma je bez zmian: A4 pion, sześć kolumn,
-moduł 25 mm, gutter 4 mm, marginesy 18 / 22 / 28 / 18 mm. Jeżeli przy realnej treści zobaczysz,
-że któraś wartość jest do poprawy - najczęściej podejrzane są marginesy, bo prawy 22 mm wygląda
-niesymetrycznie wobec lewego 18 mm - zrób trzy rzeczy:
+moduł 25 mm, gutter 4 mm, marginesy 18 mm góra, 20 mm lewy, 20 mm prawy, 28 mm dół. Marginesy boczne zostały wyrównane 2026-09-03
+(dawniej 18 lewy / 22 prawy, bez uzasadnienia); pionowe są niesymetryczne celowo, bo cięższy dół
+to reguła składu. Jeżeli przy realnej treści zobaczysz, że któraś wartość jest do poprawy,
+zrób trzy rzeczy:
 
 1. Zostaw artboard główny na wartościach zatwierdzonych.
 2. Dodaj **drugi artboard oznaczony jako propozycja**, z Twoją wersją siatki i tą samą treścią,

@@ -58,9 +58,8 @@ Skopiuj `../prompt-bazowy.md` w całości i zastąp jego ostatnią sekcję „Zl
 
 **Siatkę wolno Ci dopracować - ale jako propozycję obok, nie po cichu w dokumencie.** Wartości
 z `/01-baza-wiedzy/identyfikacja/siatka-a4.md` są zatwierdzone i artboard główny trzyma je bez zmian: A4 pion, sześć kolumn,
-moduł 25 mm, gutter 4 mm, marginesy 18 / 22 / 28 / 18 mm. Jeżeli przy realnej treści zobaczysz,
-że któraś wartość jest do poprawy - najczęściej podejrzane są marginesy, bo prawy 22 mm wygląda
-niesymetrycznie wobec lewego 18 mm - zrób trzy rzeczy:
+moduł 25 mm, gutter 4 mm, marginesy 18 mm góra, 20 mm lewy, 20 mm prawy, 28 mm dół. Jeżeli przy realnej treści zobaczysz,
+że któraś wartość jest do poprawy - marginesy boczne zostały wyrównane 2026-09-03 - zrób trzy rzeczy:
 
 1. Zostaw artboard główny na wartościach zatwierdzonych.
 2. Dodaj **drugi artboard oznaczony jako propozycja**, z Twoją wersją siatki i tą samą treścią,
