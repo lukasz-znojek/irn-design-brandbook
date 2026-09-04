@@ -2,7 +2,7 @@
 
 Zatwierdzone specyfikacje identyfikacji wizualnej IRIN - wartości, nie kompozycja.
 
-- [`paleta-barw.md`](./paleta-barw.md) - obowiązująca paleta „Kaszmir Wyciszony”: 14 kolorów z nazwami, tokenami semantycznymi, zmierzonymi kontrastami WCAG i regułą 80/15/5.
+- [`paleta-barw.md`](./paleta-barw.md) - obowiązująca paleta **„Regalia”**: siedem barw nośnych, siedem funkcjonalnych, cztery tinty 12 procent, kontrasty przeliczone 2026-09-04, reguła 80/15/5. Zastąpiła paletę „Kaszmir Wyciszony” 2026-09-03.
 - [`siatka-a4.md`](./siatka-a4.md) - siatka dokumentu A4: 6 kolumn, moduł 25 mm, gutter 4 mm, marginesy i pole treści, wraz ze sprawdzeniem, że siatka fizycznie mieści się na stronie.
 - [`typografia.md`](./typografia.md) - Manrope i Inconsolata, dziesięciopoziomowa skala, zasada różnicowania wagą, stan sprawdzenia alfabetu polskiego.
 - [`logotyp.md`](./logotyp.md) - trzy pliki źródłowe z proporcjami, minimalne rozmiary, przestrzeń ochronna i cztery wiążące zakazy modyfikacji znaku.

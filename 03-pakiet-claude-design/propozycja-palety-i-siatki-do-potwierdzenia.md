@@ -1,5 +1,11 @@
 # Propozycja dopracowanej palety i siatki A4
 
+> **ARCHIWUM. Ten plik opisuje stan sprzed 2026-09-03 i nie jest źródłem żadnej wartości.**
+> Paleta „Kaszmir Wyciszony”, o której mówi zdanie niżej, **została zastąpiona w całości** paletą
+> **„Regalia”** (wariant B, zatwierdzona przez właściciela 2026-09-03). Obowiązująca specyfikacja
+> koloru: `../01-baza-wiedzy/identyfikacja/paleta-barw.md`. Siatka A4 z tego pliku obowiązuje
+> bez zmian. Zapis zostaje jako historia dwóch decyzji, nie jako specyfikacja.
+
 > **Aktualizacja 2026-09-02 (późniejsza tego samego dnia): paleta z tego dokumentu została wstrzymana i zastąpiona.**
 > Founder wstrzymał automatyczne przyjęcie palety opisanej niżej, uznając, że wymaga dopracowania. Powstało siedem wariantów do wyboru (`../_robocze/paleta-v2/palette-options-v2.md`), z których **wybrany został wariant 2 „Kaszmir Wyciszony”** - i to on jest teraz obowiązującą specyfikacją w `./format-paczki.md`.
 > Ten dokument **zostaje w całości i bez zmian** jako zapis pierwszej decyzji: pomiaru siatki A4, wykrytego błędu wymiarów, pogłębienia Miedzi i zmiany Karminu. Siatka A4 uzgodniona tutaj (6 kolumn, moduł 25 mm) **obowiązuje nadal** - wstrzymanie dotyczyło wyłącznie palety barw. Jej obowiązująca specyfikacja jest od 2026-09-02 w `../01-baza-wiedzy/identyfikacja/siatka-a4.md`.

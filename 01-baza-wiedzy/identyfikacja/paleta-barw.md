@@ -1,125 +1,200 @@
 # Paleta barw IRIN - specyfikacja obowiązująca
 
-**Status: ZATWIERDZONA przez foundera (2026-09-02).** To jest jedyne źródło prawdy dla kolorów IRIN. Nazwa systemu: **Kaszmir Wyciszony** (wariant 2 z siedmiu przedstawionych do wyboru).
+**Status: ZATWIERDZONA przez właściciela 2026-09-03.** Nazwa systemu: **Regalia** (wariant B).
+To jest jedyne źródło prawdy dla kolorów IRIN.
+
+**Ta specyfikacja zastąpiła w całości paletę „Kaszmir Wyciszony" (14 kolorów, zatwierdzoną
+2026-09-02).** Żadna nazwa i żaden hex ze starej palety nie obowiązuje. Wypadły: Kaszmir, Muślin,
+Pergamin, Espresso, Sepia, Popiół, Miedź, Onyks, Karmin, Patyna, Werdykt, Rubryka, Aksamit
+(dawny `#452430`), Złoto foliowe. Historia i uzasadnienie wyboru: dokumenty `irn-design-*`
+w projekcie Claude Design `1a22ce64-0e1c-43a6-bd60-eef9241ef73b`.
 
 Dane maszynowe: [`tokeny/palette-irin.json`](./tokeny/palette-irin.json).
-Jak paleta wchodzi do zlecenia dla Claude Design: [`../../03-pakiet-claude-design/format-paczki.md`](../../03-pakiet-claude-design/format-paczki.md).
-Siatka A4: [`siatka-a4.md`](./siatka-a4.md). Typografia: [`typografia.md`](./typografia.md). Ten plik opisuje wyłącznie kolor.
-Porównanie siedmiu wariantów, pomiar i uzasadnienie wyboru (archiwum, nie źródło prawdy): [`../../_robocze/paleta-v2/palette-options-v2.md`](../../_robocze/paleta-v2/palette-options-v2.md).
-Historia pierwszej decyzji z 2026-09-02, zastąpionej tą: [`../../03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`](../../03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md).
+Siatka A4: [`siatka-a4.md`](./siatka-a4.md). Typografia: [`typografia.md`](./typografia.md).
+Logotyp: [`logotyp.md`](./logotyp.md). Ten plik opisuje wyłącznie kolor.
 
-## 14 kolorów
+**Wszystkie kontrasty w tym pliku policzone od nowa 2026-09-04** wzorem WCAG 2.1 na luminancji
+względnej sRGB, skryptem, nie przepisane z żadnego dokumentu. Progi: tekst normalny AA 4,5:1,
+AAA 7:1; element interfejsu i grafika znacząca 3:1.
 
-System ma dwie warstwy i obie obowiązują naraz: **nazwa koloru** (tożsamość marki, reguła 80/15/5, przypisanie dziedzin) i **token semantyczny** (rola w dokumencie i w interfejsie). Ten sam kolor ma zawsze obie etykiety - Aksamit *jest* tokenem `primary`, nie ma osobnego koloru wiodącego obok Aksamitu.
+## Barwy nośne · 7
 
-| Kolor | Token | Hex | Rola | na Kaszmirze | na Muślinie | na Pergaminie |
-|---|---|---|---|---|---|---|
-| Kaszmir | `surface` | `#FBF8F2` | papier, tło karty i tabeli | nie dotyczy (tło) | - | - |
-| Muślin | `background` | `#F6F2E9` | tło strony | - | nie dotyczy (tło) | - |
-| Pergamin | `neutral-light` | `#E7DFD2` | tło calloutu, pas nagłówka, etykieta na ciemnym wypełnieniu | - | - | nie dotyczy (tło) |
-| Espresso | `neutral-dark`, `text-primary` | `#221A15` | tusz uniwersalny, tekst korpusu, tło sekcji odwróconej | 16,15:1 | 15,32:1 | 12,95:1 |
-| Sepia | `text-secondary` | `#5E4E40` | tekst pomocniczy, metadane, przypisy, nagłówki kolumn | 7,50:1 | 7,12:1 | 6,02:1 |
-| **Aksamit** | `primary` | `#452430` | kolor wiodący: nagłówki H1/H2, wypełnienie CTA; akcent dziedziny **Pedagogika** | 12,80:1 | 12,14:1 | 10,26:1 |
-| **Miedź** | `secondary` | `#7A5638` | kolor wspierający: H3, podtytuły; akcent dziedziny **Akademia AI** | 6,16:1 | 5,85:1 | 4,94:1 |
-| **Onyks** | `info` | `#33474F` | nota informacyjna, boks „podstawa prawna”; akcent dziedziny **Pożyczki UE/BGK** | 9,19:1 | 8,72:1 | 7,37:1 |
-| Złoto foliowe | `accent` | `#A8874E` | pieczęć, sygnatura, cienka linia ozdobna | 3,17:1 | 3,01:1 | **2,55:1** |
-| Werdykt | `success` | `#2E5241` | stan potwierdzony: zatwierdzona karta usługi, zdany egzamin | 8,26:1 | 7,83:1 | 6,62:1 |
-| Rubryka | `warning` | `#8A6110` | stan wymagający uwagi: termin naboru, brakujący załącznik | 5,22:1 | 4,95:1 | **4,18:1** |
-| Karmin | `error` | `#9E2B2B` | stan błędu: odrzucony wniosek, niespełniony wymóg | 6,99:1 | 6,63:1 | 5,60:1 |
-| **Popiół** | `border` | `#7D7466` | linie tabeli, obrys karty i pola formularza | 4,34:1 | 4,12:1 | 3,48:1 |
-| **Patyna** | `link` | `#2F5A63` | odnośnik w treści i w interfejsie | 7,17:1 | 6,80:1 | 5,75:1 |
+| # | Nazwa | HEX | CMYK (Coated FOGRA39) | Σ | Rola | na Kości Słoniowej | na Aksamicie Nocy |
+|---|---|---|---|---|---|---|---|
+| 01 | **Szafir Nocny** | `#132246` | 100/90/45/40 | 275 % | kolor marki, pasy nagłówkowe, wypełnienie CTA | 14,09:1 | 1,22:1 |
+| 02 | **Rubin Głęboki** | `#541319` | 35/100/85/45 | 265 % | dziedzina Szkolenia zawodowe | 12,77:1 | 1,35:1 |
+| 03 | **Zieleń Butelkowa** | `#0B3627` | 95/50/80/60 | 285 % | dziedzina Pożyczki UE/BGK, status pozytywny | 12,06:1 | 1,43:1 |
+| 04 | **Ametyst Dworski** | `#331F41` | 75/90/40/45 | 250 % | materiał przekrojowy, kategorie, tagi | 13,41:1 | 1,29:1 |
+| 05 | **Złoto Szampańskie** | `#C4B790` | 18/20/45/0 | 83 % | akcent do 5 %: linia, pieczęć, tłoczenie | 1,80:1 | 9,58:1 |
+| 06 | **Atrament** | `#07090C` | 70/60/55/100 | 285 % | typografia główna | 17,99:1 | 1,04:1 |
+| 07 | **Kość Słoniowa** | `#F7F3E9` | 1/2/7/0 | 10 % | tło strony | tło | 17,25:1 |
 
-Wszystkie kontrasty policzone wzorem WCAG 2.1 na luminancji względnej sRGB, przeliczone od nowa 2026-09-03 dla wszystkich trzech teł. Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 3:1.
+## Barwy funkcjonalne · 7
 
-## Kolory linii - stan po poprawce z 2026-09-03
+| # | Nazwa | HEX | CMYK | Σ | Rola | na Kości Słoniowej | na Aksamicie Nocy |
+|---|---|---|---|---|---|---|---|
+| 08 | **Alabaster** | `#E4E1D8` | 5/5/11/0 | 21 % | tła kart; tekst drugorzędny na ciemnym | 1,18:1 | 14,62:1 |
+| 09 | **Grafit Jedwabny** | `#606369` | 55/45/40/15 | 155 % | tekst drugorzędny na jasnym, linie | 5,44:1 | 3,17:1 |
+| 10 | **Aksamit Nocy** | `#080F1F` | 95/85/45/65 | 290 % | tło ciemne, stopka | 17,25:1 | tło |
+| 11 | **Muszla Różana** | `#E8D6D6` | 3/15/10/0 | 28 % | cytaty, podświetlenia | 1,26:1 | 13,67:1 |
+| 12 | **Złoto Antyczne** | `#75674B` | 40/45/70/25 | 180 % | podpowiedzi, metadane | 4,99:1 | 3,46:1 |
+| 13 | **Bursztyn Wyciszony** | `#9B5E30` | 22/65/95/12 | 194 % | ostrzeżenie; dziedzina Akademia AI | 4,69:1 | 3,68:1 |
+| 14 | **Lapis Stonowany** | `#305686` | 85/62/20/10 | 177 % | odnośniki, stan aktywny | 6,77:1 | 2,55:1 |
 
-Historia w dwóch krokach. Do 2026-09-03 ten plik podawał kontrasty **wyłącznie na Kaszmirze**
-i stwierdzał, że w palecie nie ma ani jednej pozycji poniżej progu. Przeliczenie na trzech tłach
-pokazało trzy pary pod progiem na Pergaminie. Druga poprawka, tego samego dnia, usunęła przyczynę
-zamiast obchodzić skutek: **Popiół został pociemniony z `#938978` na `#7D7466`.**
+**HEX jest wiążący. CMYK jest referencyjny** i staje się wiążący po proofie cyfrowym na papierze
+docelowym - to pozycja otwarta, patrz sekcja „Do potwierdzenia".
 
-**Dlaczego pociemnienie, a nie zakaz.** Popiół jest tokenem `border`, czyli kolorem linii tabeli
-i obrysu karty - a Pergamin jest tłem calloutu, czyli miejsca, w którym tabele i karty stoją
-najczęściej. Token obramowania, który nie działa na własnym tle calloutu, jest zepsuty, a nie
-ograniczony. Zapas na Muślinie wynosił zresztą 0,09 nad progiem, czyli tyle co nic.
+## Tinty dziedzinowe · 12 % krycia
 
-| Wartość | na Kaszmirze | na Muślinie | na Pergaminie | Próg 3:1 |
-|---|---|---|---|---|
-| dawna `#938978` | 3,25:1 | 3,09:1 | **2,61:1** | zawodzi na Pergaminie, zapas 0,09 na Muślinie |
-| **obowiązująca `#7D7466`** | **4,34:1** | **4,12:1** | **3,48:1** | przechodzi na wszystkich trzech |
+Procent farby, nie nowe wartości palety. Wyłącznie tła kart i pasy tabel.
 
-Odległość od Sepii (`text-secondary`, 7,12:1 na Muślinie) zostaje duża, więc hierarchia linii
-cienkiej i grubej - powód, dla którego Popiół w ogóle powstał - nie ucierpiała.
-
-### Dwie pary nadal pod progiem, obie z uzasadnieniem
-
-| Para | na Pergaminie | Próg | Rozstrzygnięcie |
+| Tint | HEX | Podstawa | Atrament na tincie |
 |---|---|---|---|
-| Złoto foliowe `#A8874E` | **2,55:1** | 3:1 dla grafiki | **Zostaje jasne.** Pociemnienie do progu odbiera mu złoto, a to jedyny kolor w palecie, który ma wyglądać na metal. Zamiast tego zawężona rola: wyłącznie kreska ozdobna, pieczęć i sygnatura, **nigdy linia niosąca strukturę i nigdy na tle Pergaminu**. Linię rozdzielającą prowadzi się Popiołem albo Miedzią (4,94:1 na Pergaminie). |
-| Rubryka `#8A6110` jako tekst | **4,18:1** | 4,5:1 dla tekstu | Nie pisze się nią tekstu na Pergaminie; ostrzeżenie idzie Espresso (12,95:1) z etykietą słowną. Jako wypełnienie plakietki Rubryka działa bez zmian. |
+| Szafir 12 % | `#DCDAD5` | Szafir Nocny na Kości Słoniowej | **14,27:1** |
+| Rubin 12 % | `#E3D8D0` | Rubin Głęboki na Kości Słoniowej | **14,24:1** |
+| Zieleń 12 % | `#DBDCD2` | Zieleń Butelkowa na Kości Słoniowej | **14,41:1** |
+| Ametyst 12 % | `#DFDAD5` | Ametyst Dworski na Kości Słoniowej | **14,36:1** |
 
-### Minimalna grubość linii
+Rozrzut czterech tintów wobec Atramentu: 14,24 do 14,41:1, czyli 0,17 punktu. Tinty są nieodróżnialne kontrastem i **nie kodują dziedziny same** - obok tintu stoi słowo.
 
-Kontrast z tabeli przestaje cokolwiek gwarantować, gdy linia jest cieńsza od rastra drukarki -
-o widoczności decyduje wtedy druk, nie luminancja. Obowiązują dwie wartości:
+## Hierarchia powierzchni 80 / 15 / 5
 
-| Rodzaj linii | Kolor | Minimalna grubość |
+- **80 % baza:** Kość Słoniowa (tło) plus Atrament (typografia), a w niej Grafit Jedwabny na linie
+  i tekst drugorzędny, Alabaster na tła kart, tinty 12 % na karty dziedzinowe.
+- **15 % sygnał:** Szafir Nocny **plus dokładnie jeden** kolor dziedziny na dokument.
+- **5 % akcent:** Złoto Szampańskie - linia, pieczęć, tłoczenie. Limit 21,34 cm²
+  na polu treści A4 (5 % z 170 × 251 mm = 426,70 cm²).
+- **punktowo:** Lapis Stonowany, Złoto Antyczne, Bursztyn Wyciszony, Muszla Różana.
+
+Pary bazowe: Atrament na Kości Słoniowej **17,99:1**, odwrócenie Kość Słoniowa
+na Aksamicie Nocy **17,25:1**. Tekst drugorzędny: na jasnym Grafit Jedwabny
+(5,44:1), na ciemnym Alabaster (14,62:1).
+
+**Maksymalnie dwa tła na dokument:** Kość Słoniowa plus jedno ciemne (Aksamit Nocy albo Szafir Nocny).
+
+## Cztery barwy nośne nie różnicują się kontrastem - dlaczego dziedziny wymagają słowa
+
+| Barwa | na Kości Słoniowej | % K w mono (100 − L) |
 |---|---|---|
-| Niosąca strukturę: linia tabeli, obrys karty, obrys pola, linia rozdzielająca bloki | Popiół, w razie potrzeby Sepia albo Miedź | **0,25 mm** |
-| Ozdobna: kreska pod nagłówkiem, kreska sygnatury | Złoto foliowe | **0,5 mm** |
+| Szafir Nocny | 14,09:1 | 74 % |
+| Ametyst Dworski | 13,41:1 | 72 % |
+| Rubin Głęboki | 12,77:1 | 70 % |
+| Zieleń Butelkowa | 12,06:1 | 70 % |
 
-Linia cieńsza niż 0,25 mm nie jest w tym systemie wyborem projektowym, tylko błędem: znika
-na wydruku niezależnie od tego, co mówi tabela kontrastu.
+Rozpiętość: **2,03 punktu**. Rubin i Zieleń wypadają w mono identycznie (70 % K), więc
+znak dziedziny Szkolenia i znak dziedziny Pożyczki są w druku jednokolorowym nieodróżnialne.
+**Dziedziny nie wolno kodować samym kolorem** - wchodzi tint tła, słowo, albo oba.
 
-**Czego ta tabela nie rozstrzyga:** kontrastów na tłach spoza palety - na kolorowym zdjęciu, na skanie, na papierze innym niż biały maszynowy. Tam liczy się od nowa, nie przenosi tych liczb.
+**Korekta wobec dokumentu źródłowego:** `irn-design-paleta-kolorow.md` podaje, że cztery barwy
+nośne różnią się „o mniej niż 2 punkty". Przeliczenie daje **2,03**, czyli o 0,03
+punktu więcej - twierdzenie w tej formie jest nieprawdziwe. Reguła, którą uzasadniało, zostaje
+w mocy i ma mocniejszą podstawę: równość w mono (70 % wobec 70 %), nie bliskość kontrastu.
 
-**Falsyfikator:** ponowne przeliczenie wzorem WCAG 2.1 na `tokeny/palette-irin.json` dające inną wartość niż w tabeli wyżej. Rachunek odtwarza się skryptem liczącym luminancję względną sRGB dla par (token, tło); kolumna „na Kaszmirze” jest w tym pliku od 2026-09-02 i przeliczenie z 2026-09-03 odtworzyło ją co do setnej, co jest kontrolą samej metody.
+## Pary zabronione i zamienniki
 
-## Etykieta na wypełnieniu - kolor przepisany, nie dowolny
+| Para | Kontrast | Próg | Zamiast tego |
+|---|---|---|---|
+| Złoto Szampańskie na Kości Słoniowej | **1,80:1** | 3:1 grafika | linia, tłoczenie albo wypełnienie z etykietą Atramentem (9,99:1) |
+| Grafit Jedwabny na Aksamicie Nocy | **3,17:1** | 4,5:1 tekst | Alabaster (14,62:1) |
+| Bursztyn Wyciszony na Aksamicie Nocy | **3,68:1** | 4,5:1 tekst | wypełnienie z etykietą Kością Słoniową |
+| Złoto Antyczne na Aksamicie Nocy | **3,46:1** | 4,5:1 tekst | Złoto Szampańskie (9,58:1) |
+| Bursztyn Wyciszony na Alabastrze | **3,98:1** | 4,5:1 tekst | Kość Słoniowa jako tło (4,69:1) |
 
-Kiedy kolor jest tłem przycisku, plakietki albo pieczęci, kolor napisu na nim **nie jest wyborem projektowym**. Obowiązuje ta tabela:
+**Korekta wobec dokumentu źródłowego, druga.** `irn-design-paleta-kolorow.md` i rozdział
+„Dark mode" brandbooka podają dla Złota Antycznego na Aksamicie Nocy **3,94:1**. Przeliczenie daje
+**3,46:1**. Przyczyna wskazana: 3,94 to kontrast **poprzedniej** wartości
+Złota Antycznego `#7E7053`, sprzed pociemnienia do `#75674B` - ta sama liczba odtwarza się co do
+setnej na starym hexie. Tabela par zabronionych nie została przeliczona po zmianie. Wyrok się nie
+zmienia (para zabroniona w obu rachunkach), zmienia się liczba.
+
+## Etykieta na wypełnieniu - kolor przepisany, nie dobierany
 
 | Wypełnienie | Kolor etykiety | Kontrast |
 |---|---|---|
-| Aksamit `#452430` | Pergamin `#E7DFD2` | 10,26:1 |
-| Miedź `#7A5638` | Pergamin `#E7DFD2` | 4,94:1 |
-| Onyks `#33474F` | Pergamin `#E7DFD2` | 7,37:1 |
-| Złoto foliowe `#A8874E` | Espresso `#221A15` | 5,09:1 |
-| Werdykt `#2E5241` | Pergamin `#E7DFD2` | 6,62:1 |
-| Rubryka `#8A6110` | biel `#FFFFFF` | 5,53:1 |
-| Karmin `#9E2B2B` | Pergamin `#E7DFD2` | 5,60:1 |
-
-## Reguła proporcji 80/15/5 - obowiązuje bez zmian
-
-- **80% - baza:** Kaszmir (tło karty), Muślin (tło strony), Pergamin (drugie tło neutralne), Espresso (tekst korpusu), Sepia (tekst pomocniczy), Popiół (linie). Wszystko, co nie niesie znaczenia kategoryzującego.
-- **15% - sygnał dziedziny:** dokładnie jeden z trzech - Aksamit (Pedagogika), Miedź (Akademia AI), Onyks (Pożyczki UE/BGK) - na dokument. Nie mieszać dwóch kolorów dziedzinowych na jednej stronie.
-- **5% - aktywność i honor:** Patyna wyłącznie do odnośników i stanów aktywnych, Werdykt do stanu potwierdzonego, Rubryka do stanu wymagającego uwagi, Karmin do stanu błędu, Złoto foliowe **wyłącznie** jako pieczęć, sygnatura albo cienka linia - nigdy jako tło większej powierzchni.
+| Szafir Nocny `#132246` | Kość Słoniowa `#F7F3E9` | 14,09:1 |
+| Rubin Głęboki `#541319` | Kość Słoniowa `#F7F3E9` | 12,77:1 |
+| Zieleń Butelkowa `#0B3627` | Kość Słoniowa `#F7F3E9` | 12,06:1 |
+| Ametyst Dworski `#331F41` | Kość Słoniowa `#F7F3E9` | 13,41:1 |
+| Aksamit Nocy `#080F1F` | Kość Słoniowa `#F7F3E9` | 17,25:1 |
+| Bursztyn Wyciszony `#9B5E30` | Kość Słoniowa `#F7F3E9` | 4,69:1 |
+| Złoto Antyczne `#75674B` | Kość Słoniowa `#F7F3E9` | 4,99:1 |
+| Lapis Stonowany `#305686` | Kość Słoniowa `#F7F3E9` | 6,77:1 |
+| Grafit Jedwabny `#606369` | Kość Słoniowa `#F7F3E9` | 5,44:1 |
+| Złoto Szampańskie `#C4B790` | Atrament `#07090C` | 9,99:1 |
+| Alabaster `#E4E1D8` | Atrament `#07090C` | 15,25:1 |
+| Muszla Różana `#E8D6D6` | Atrament `#07090C` | 14,26:1 |
 
 ## Kolor nigdy nie jest jedynym nośnikiem statusu
 
-Po konwersji do skali szarości Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność. Każdy status w dokumencie IRIN **musi** mieć etykietę słowną albo ikonę obok koloru. To wymóg dostępności (WCAG 1.4.1 „Użycie koloru”), nie preferencja - i dotyczy tak samo zaświadczeń drukowanych mono, jak ekranu.
+Każdy status w dokumencie IRIN **musi** mieć etykietę słowną albo ikonę obok koloru. To wymóg
+dostępności (WCAG 1.4.1 „Użycie koloru"), nie preferencja - i w tej palecie ma dodatkową
+podstawę: w mono Rubin i Zieleń schodzą do tej samej wartości 70 % K.
 
-## Co dokładnie zmieniło się względem palety z 2026-09-02
+## Minimalna grubość linii
 
-Poprzednia paleta miała 12 kolorów; ta ma 14. Żaden kolor nie został usunięty, żadna nazwa nie zniknęła, dwa kolory doszły. Wszystkie hexy są nowe, ale dwanaście z nich to przesunięcia w obrębie tego samego koloru, a nie inne barwy.
+| Rodzaj linii | Kolor | Minimalna grubość |
+|---|---|---|
+| Niosąca strukturę: linia tabeli, obrys karty, obrys pola, rozdzielenie bloków | Grafit Jedwabny `#606369` | **0,25 mm** |
+| Ozdobna: kreska pod nagłówkiem, kreska sygnatury, obramowanie dyplomu | Złoto Szampańskie `#C4B790` | **0,5 mm** |
+| Siatka wykresu | Grafit Jedwabny, krycie obniżone | **0,15 mm** |
 
-| Kolor | Było | Jest | Na czym polega zmiana |
+Grafit Jedwabny na Kości Słoniowej daje 5,44:1, na Alabastrze 4,61:1 - oba nad progiem 3:1. **Na Aksamicie Nocy Grafit nie wchodzi**
+(3,17:1); linia na ciemnym idzie Alabastrem albo Złotem Szampańskim.
+
+Widoczność tych grubości na papierze docelowym **nie jest zmierzona** - kontrast jest policzony,
+druk nie. Falsyfikator: pierwszy wydruk.
+
+## Wykresy - jedna barwa, cztery stopnie krycia
+
+Dokument jednej dziedziny: **jedna barwa dziedziny, cztery stopnie krycia 100 / 72 / 50 / 30 %**.
+Serie różni jasność, nie odcień, więc działają w mono i przy zaburzeniach widzenia barw.
+Dokument przekrojowy: serie mogą być barwami dziedzin, bo wtedy barwa kategorii nie koduje,
+tylko ją powtarza - warunek: każda oś podpisana słowem. Maksymalnie cztery serie, oś Y od zera.
+
+**Dlaczego nie paleta serii.** Sprawdzone walidatorem palet kategorialnych na palecie poprzedniej:
+nasycenie każdej barwy leżało poniżej podłogi 0,10 w OKLCH, więc barwy czytały się jako szarości.
+Regalia jest palettą jeszcze ciemniejszą i zwartą kontrastowo (cztery barwy nośne w rozpiętości
+2,03 punktu), więc ten sam wniosek obowiązuje: **tożsamość serii nie może opierać się
+na barwie**. Stopnie krycia jednej barwy rozwiązują to bez rozszerzania palety.
+
+## Mapa tokenów
+
+| Token | Barwa | Token | Barwa |
 |---|---|---|---|
-| Kaszmir | `#F2ECE1` | `#FBF8F2` | papier rozjaśniony i odsycony, żeby karta wyraźniej odcinała się od strony |
-| Muślin | `#F7F3EA` | `#F6F2E9` | tło strony przygaszone o włos, w parze ze zmianą wyżej |
-| Pergamin | `#E4DACB` | `#E7DFD2` | rozjaśniony, mniej żółty |
-| Espresso | `#1E1611` | `#221A15` | minimalnie rozjaśniony; nadal najciemniejszy kolor palety |
-| Sepia | `#5B4837` | `#5E4E40` | odsycona, mniej rudy |
-| Aksamit | `#4A1D26` | `#452430` | odsycony i przesunięty od bordo ku śliwce; spokojniejszy |
-| Miedź | `#8C5026` | `#7A5638` | odsycona, bardziej brązowa niż rudo-pomarańczowa |
-| **Onyks** | `#1B2B26` | `#33474F` | **istotna zmiana**: z prawie-czerni na łupkowy błękit. Powód: stary Onyks miał wobec Espresso kontrast 1,05:1, czyli był nieodróżnialny od zwykłego tekstu i nie niósł żadnego sygnału. Nowy ma 1,76:1 wobec Espresso - to nadal niewiele w luminancji, ale barwa jest teraz jawnie inna (chłodny łupek wobec ciepłej czerni), więc różnicę widać okiem. |
-| Złoto foliowe | `#B58540` | `#A8874E` | pogłębione. Powód: stare złoto dawało 2,79:1 na papierze, czyli **nie przechodziło progu 3:1** dla linii i ikon. Nowe daje 3,17:1, więc wolno go użyć jako cienkiej kreski, a nie tylko plamy. |
-| Werdykt | `#2F4A32` | `#2E5241` | przesunięty od zieleni butelkowej ku morskiej |
-| **Rubryka** | `#D9AC4A` | `#8A6110` | **zmiana roli, nie tylko odcienia**: było jasne złoto używane jako tło z ciemnym tekstem, jest ciemny bursztyn używany jako tło z tekstem białym albo jako kolor tekstu na papierze. Powód: stara Rubryka nie nadawała się na tekst (kontrast 1,7:1 na papierze), więc token `warning` nie miał czym pisać. |
-| Karmin | `#AC151F` | `#9E2B2B` | przygaszony, mniej sygnalizacyjny |
-| **Popiół** | *nie istniał* | `#938978`, dziś `#7D7466` | **kolor nowy**. Powód: wcześniej linie tabeli rysowało się pełnym Espresso, więc każda kreska miała wagę ramki i tabela nie miała hierarchii linii cienkiej i grubej. Wartość z 2026-09-02 nie przechodziła progu na Pergaminie - pociemniona 2026-09-03, patrz sekcja „Kolory linii”. |
-| **Patyna** | *nie istniał* | `#2F5A63` | **kolor nowy**. Powód: wcześniej odnośnik i komunikat błędu były fizycznie tym samym kolorem (Karmin, kontrast wzajemny 1,00:1), więc czytelnik nie mógł ich odróżnić inaczej niż z kontekstu zdania. |
+| `--irin-primary` | Szafir Nocny | `--irin-surface` | Kość Słoniowa |
+| `--irin-surface-alt` | Alabaster | `--irin-surface-dark` | Aksamit Nocy |
+| `--irin-text` | Atrament | `--irin-text-invert` | Kość Słoniowa |
+| `--irin-text-muted` | Grafit Jedwabny | `--irin-border` | Grafit Jedwabny |
+| `--irin-accent` | Złoto Szampańskie | `--irin-link` | Lapis Stonowany |
+| `--irin-success` | Zieleń Butelkowa | `--irin-warning` | Bursztyn Wyciszony |
+| `--irin-info` | Złoto Antyczne | `--irin-highlight` | Muszla Różana |
 
-**Dwie nazwy nowe, zatwierdzone przez foundera (2026-09-02):** „Popiół” (`border`) i „Patyna” (`link`). Trzymają się konwencji pozostałych dwunastu - materiał albo barwnik, jak Kaszmir, Aksamit, Sepia, Karmin, Miedź, Onyks - a „Patyna” wiąże się dodatkowo znaczeniowo z Miedzią. Obie nazwy są obowiązujące na równi z pozostałymi dwunastoma.
+Barwa dziedziny wchodzi tokenem ustawianym na poziomie dokumentu, nie tokenem semantycznym.
+Rubin Głęboki i Ametyst Dworski nie mają tokenu semantycznego.
 
-**Jedno ryzyko, które zostaje w tej palecie:** Patyna (`#2F5A63`) i Onyks (`#33474F`) mają kontrast wzajemny 1,28:1. Jeśli odnośnik trafi do wnętrza boksu informacyjnego rysowanego Onyksem, oba kolory się zleją. Zabezpieczenie: odnośnik wewnątrz boksu `info` zawsze z podkreśleniem.
+**Uwaga o obciążeniu tokenów, świadoma:** Bursztyn Wyciszony jest jednocześnie `--irin-warning`
+i barwą dziedziny Akademia AI, a Zieleń Butelkowa jednocześnie `--irin-success` i barwą dziedziny
+Pożyczki UE/BGK. W materiale tych dwóch dziedzin barwa ostrzeżenia albo statusu pozytywnego
+i barwa dziedziny to jedna wartość. Rubin Głęboki jest przy tym barwą oznaczenia zakazu, więc
+w materiale dziedziny Szkolenia zawodowe zakaz i dziedzina też się zlewają. Trzy kolizje ról,
+każda do rozstrzygnięcia przy pierwszym materiale, w którym wystąpią razem.
+
+## Czego ta specyfikacja nie rozstrzyga
+
+Kontrastów na tłach spoza palety: na kolorowym zdjęciu, na skanie, na papierze innym niż biały
+maszynowy. Tam liczy się od nowa, nie przenosi tych liczb. Jeżeli na obrazie ma stanąć znak,
+wchodzi plama neutralna z palety i mierzy się wobec niej.
+
+## Do potwierdzenia
+
+| # | Pozycja | Status | Falsyfikator |
+|---|---|---|---|
+| 01 | Rozbicia CMYK | bez proofu | proof cyfrowy na papierze docelowym |
+| 02 | Złoto Szampańskie na papierze niepowlekanym | L* 78 przy 83 % krycia może zniknąć w tle | pierwszy wydruk dyplomu |
+| 03 | Przypisanie barw do dziedzin: Rubin → Szkolenia, Zieleń → Pożyczki, Bursztyn → Akademia AI | **czeka na właściciela** | zatwierdzenie |
+| 04 | Nazwa trzeciego obszaru i liczba dziedzin | rozbieżność: `CLAUDE.md` zna Pedagogikę, dokumenty wzorcowe Szkolenia zawodowe; `tokens.css` opisuje sześć obszarów, paleta zna trzy barwy | decyzja właściciela |
+| 05 | Trzy kolizje ról tokenów (Bursztyn, Zieleń, Rubin) | świadome obciążenie | pierwszy materiał, w którym rola i dziedzina wystąpią razem |
+| 06 | Widoczność linii 0,25 i 0,5 mm | kontrast policzony, druk nie | pierwszy wydruk na papierze docelowym |
+
+**Falsyfikator całej tej specyfikacji:** ponowne przeliczenie wzorem WCAG 2.1 na
+`tokeny/palette-irin.json` dające inną wartość niż w tabelach wyżej.

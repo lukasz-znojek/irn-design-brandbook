@@ -1,0 +1,72 @@
+/* ============================================================
+   IRIN - paleta REGALIA (wariant B), zatwierdzona 2026-09-03.
+   Zastapila palete Kaszmir Wyciszony w calosci.
+   Zrodlo prawdy: 01-baza-wiedzy/identyfikacja/paleta-barw.md
+   Kontrasty przeliczone 2026-09-04 wzorem WCAG 2.1.
+
+   TEN BLOK DOPISUJE SIE do tokens/tokens.css, nie zastepuje go.
+   Stare tokeny --irin-* zostaja z niezmienionymi wartosciami, bo
+   wydanie 01 brandbooka i ksiegi znaku wciaz z nich czyta. Nowa
+   praca uzywa wylacznie nazw --irin-r-* i aliasow semantycznych.
+   ============================================================ */
+:root {
+  /* --- barwy nazwane --- */
+  --irin-r-szafir-nocny: #132246;   /* kolor marki, pasy naglowkowe, wypelnienie CTA | na Kosci 14,09 | na Aksamicie 1,22 */
+  --irin-r-rubin-gleboki: #541319;   /* dziedzina Szkolenia zawodowe; barwa oznaczenia zakazu | na Kosci 12,77 | na Aksamicie 1,35 */
+  --irin-r-zielen-butelkowa: #0B3627;   /* dziedzina Pozyczki UE/BGK; status pozytywny | na Kosci 12,06 | na Aksamicie 1,43 */
+  --irin-r-ametyst-dworski: #331F41;   /* material przekrojowy, kategorie, tagi | na Kosci 13,41 | na Aksamicie 1,29 */
+  --irin-r-zloto-szampanskie: #C4B790;   /* akcent do 5 %: linia, pieczec, tloczenie | na Kosci 1,80 | na Aksamicie 9,58 */
+  --irin-r-atrament: #07090C;   /* typografia glowna | na Kosci 17,99 | na Aksamicie 1,04 */
+  --irin-r-kosc-sloniowa: #F7F3E9;   /* tlo strony; wersja odwrocona znaku | na Kosci tlo | na Aksamicie 17,25 */
+  --irin-r-alabaster: #E4E1D8;   /* tla kart; tekst drugorzedny na ciemnym | na Kosci 1,18 | na Aksamicie 14,62 */
+  --irin-r-grafit-jedwabny: #606369;   /* tekst drugorzedny na jasnym, linie 0,25 mm | na Kosci 5,44 | na Aksamicie 3,17 */
+  --irin-r-aksamit-nocy: #080F1F;   /* tlo ciemne, stopka | na Kosci 17,25 | na Aksamicie tlo */
+  --irin-r-muszla-rozana: #E8D6D6;   /* cytaty, podswietlenia | na Kosci 1,26 | na Aksamicie 13,67 */
+  --irin-r-zloto-antyczne: #75674B;   /* podpowiedzi, metadane | na Kosci 4,99 | na Aksamicie 3,46 */
+  --irin-r-bursztyn-wyciszony: #9B5E30;   /* ostrzezenie; dziedzina Akademia AI | na Kosci 4,69 | na Aksamicie 3,68 */
+  --irin-r-lapis-stonowany: #305686;   /* odnosniki, stan aktywny, obrys focus | na Kosci 6,77 | na Aksamicie 2,55 */
+
+  /* --- tinty dziedzinowe 12 % krycia: wylacznie tla kart i pasy tabel --- */
+  --irin-r-tint-szafir: #DCDAD5;   /* Atrament na tincie 14,27 */
+  --irin-r-tint-rubin: #E3D8D0;   /* Atrament na tincie 14,24 */
+  --irin-r-tint-zielen: #DBDCD2;   /* Atrament na tincie 14,41 */
+  --irin-r-tint-ametyst: #DFDAD5;   /* Atrament na tincie 14,36 */
+
+  /* --- aliasy semantyczne --- */
+  --irin-r-primary: var(--irin-r-szafir-nocny);
+  --irin-r-success: var(--irin-r-zielen-butelkowa);
+  --irin-r-accent: var(--irin-r-zloto-szampanskie);
+  --irin-r-text: var(--irin-r-atrament);
+  --irin-r-surface: var(--irin-r-kosc-sloniowa);
+  --irin-r-surface-alt: var(--irin-r-alabaster);
+  --irin-r-text-muted: var(--irin-r-grafit-jedwabny);
+  --irin-r-surface-dark: var(--irin-r-aksamit-nocy);
+  --irin-r-highlight: var(--irin-r-muszla-rozana);
+  --irin-r-info: var(--irin-r-zloto-antyczne);
+  --irin-r-warning: var(--irin-r-bursztyn-wyciszony);
+  --irin-r-link: var(--irin-r-lapis-stonowany);
+  --irin-r-text-invert: var(--irin-r-kosc-sloniowa);
+  --irin-r-border: var(--irin-r-grafit-jedwabny);
+
+  /* --- barwy dziedzin, ustawiane na poziomie dokumentu --- */
+  --irin-r-dziedzina-szkolenia: var(--irin-r-rubin-gleboki);
+  --irin-r-dziedzina-pozyczki: var(--irin-r-zielen-butelkowa);
+  --irin-r-dziedzina-akademia: var(--irin-r-bursztyn-wyciszony);
+  --irin-r-przekrojowy: var(--irin-r-ametyst-dworski);
+
+  /* --- limity policzone --- */
+  --irin-r-limit-zlota-cm2: 21.34;   /* 5 % pola tresci A4 = 426,7 cm2 */
+}
+
+/* Trzy kolizje rol, swiadome i zapisane:
+   warning  = Bursztyn = dziedzina Akademia AI
+   success  = Zielen   = dziedzina Pozyczki UE/BGK
+   zakaz    = Rubin    = dziedzina Szkolenia zawodowe
+   W materiale tych dziedzin rola i dziedzina to jedna wartosc. */
+
+/* Pary zabronione, z liczba:
+   Zloto Szampanskie na Kosci Sloniowej   1,80  - nigdy tlo, nigdy tekst na jasnym
+   Grafit Jedwabny  na Aksamicie Nocy     3,17  - wchodzi Alabaster
+   Bursztyn         na Aksamicie Nocy     3,68  - wchodzi wypelnienie z etykieta
+   Zloto Antyczne   na Aksamicie Nocy     3,46  - KOREKTA z 3,94; wchodzi Zloto Szampanskie
+   Bursztyn         na Alabastrze         3,98  - prog przechodzi, zakaz decyzja */
