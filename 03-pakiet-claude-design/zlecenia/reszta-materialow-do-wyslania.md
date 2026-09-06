@@ -51,9 +51,23 @@ Skutek: `width:18mm` na kontenerze bez nadpisania `viewBox` daje znak o szeroko�
 
 `01-baza-wiedzy/identyfikacja/paleta-barw.md` (przepisany na Regalię, wszystkie kontrasty przeliczone skryptem), `tokeny/palette-irin.json` (v3, z korektami i kolizjami rol), `identyfikacja/logotyp.md` (wydanie 02: osiem wersji, matryca 48 zestawień, proporcje artworku, miara x, dziesięć zakazów), `CLAUDE.md`, `MAPA-DROGOWA.md`, `01-baza-wiedzy/00-INDEX.md`, `identyfikacja/README.md`, plus banner archiwalny na `propozycja-palety-i-siatki-do-potwierdzenia.md`.
 
-### Jedna rzecz, której nie zrobiłem bez Twojej zgody
+### Decyzje właściciela z 2026-09-06
 
-**`tokens/tokens.css` w projekcie Claude Design.** Nadpisanie go zmieniłoby barwy w wydaniu 01 brandbooka i księgi znaku, bo te pliki czytają `--irin-*`. Bezpieczny wariant: **dopisać** tokeny Regalii pod nowymi nazwami i zostawić stare jako przestarzałe z niezmienionymi wartościami - wtedy nic się nie psuje, a nowa praca ma czym się posługiwać. Cofnięcie: wysłanie poprzedniej wersji pliku, którą mam.
+| # | Pytanie | Odpowiedź | Co z niej wynika |
+|---|---|---|---|
+| 1 | Dopisać tokeny Regalii do `tokens/tokens.css` | **tak** | Zrobione. Stary blok nietknięty, dopisany blok `--irin-r-*`; zweryfikowane odczytem po zapisie |
+| 2 | Nazwa i liczba obszarów działalności | **„na razie czysty brandbook bez obszarów, które będą wymienne"** | Materiały nie wpisują obszarów na stałe. Każdy nośnik ma **jeden wariant neutralny**, nie cztery. Obszar wchodzi przez **jedno gniazdo do podmiany** |
+| 3 | Przypisanie barw do obszarów | zgoda | Zapisane jako **domyślne dla chwili, gdy warstwa obszarów zostanie włączona** - nie wpisane w żaden materiał, bo to przeczyłoby decyzji 2 |
+| 4 | Stopień pisma w druku | zgoda | Skala **bez zmian**; pozycja zostaje otwarta ze swoim falsyfikatorem, którym jest pierwszy wydruk dokumentu regulowanego |
+| 5 | Trzy kolizje rol tokenów | zgoda | **Rozwiązała je decyzja 2.** W bloku Regalii nie ma tokenów `success` / `warning` / `error` - przypisanie roli statusu do barwy będącej kandydatem na obszar zabetonowałoby to, co ma być wymienne |
+
+**Sprzeczność, którą muszę nazwać:** odpowiedź 2 każe wyjąć obszary z materiałów, a odpowiedź 3 zatwierdza ich przypisanie do barw. Pogodziłem to tak: **przypisanie jest zapisane jako domyśl, żaden materiał go nie używa.** Jeżeli chodziło Ci o coś innego - powiedz, to jedna linijka do zmiany.
+
+**Skutek uboczny decyzji 2, wart odnotowania:** system robi się prostszy o cztery piąte. Zamiast czterech wariantów każdego nośnika powstaje jeden, a warstwa obszarów sprowadza się do dwóch tokenów, które dokument nadpisuje u siebie.
+
+### Tokeny: zrobione 2026-09-06
+
+`tokens/tokens.css` w projekcie **dostał blok Regalii dopisany, nie nadpisany**. Stary blok `--irin-*` został z niezmienionymi wartościami, bo wydanie 01 brandbooka i księgi znaku wciąż z niego czyta - nadpisanie zmieniłoby ich barwy bez ostrzeżenia. Sprawdzone odczytem po zapisie: dziewięć znaczników starego bloku obecnych, 50 wystąpień nowych nazw `--irin-r-*`. Cofnięcie: wysłanie poprzedniej wersji, którą mam w `_robocze/ds-bundle/tokens/`.
 
 ---
 
@@ -85,15 +99,15 @@ Wszystkie opisują **poprzednią paletę** i żadna ich wartość barwna nie obo
 `Papier firmowy i wizytowka.html` też nie jest wzorem - stoi na poprzedniej palecie i jest
 do ponownego wydania w tej turze.
 
-### Pułapka, o której musisz wiedzieć: trzy palety w jednym projekcie
+### Tokeny: masz już Regalię, ale pod nowym prefiksem
 
-`tokens/tokens.css` **nie niesie Regalii**. Jest w wersji v5, z sześcioma obszarami i wartościami
-spoza obu palet (`--irin-aksamit: #752F3F`, `--irin-onyks: #005A80`, `--irin-werdykt: #004D49`).
-Synchronizacja arkusza jest po stronie repozytorium kodu i jeszcze nie nastąpiła.
+`tokens/tokens.css` dostał **dopisany** blok Regalii 2026-09-06. Stary blok `--irin-*` został
+nietknięty, bo czyta z niego wydanie 01 brandbooka i księgi znaku - i **niesie poprzednią paletę**
+(`--irin-aksamit: #752F3F`, `--irin-onyks: #005A80`).
 
-**Dlatego: barwy podajesz wartością hex albo własnymi zmiennymi `--p-*`, nigdy tokenem
-`--irin-*` barwnym.** Z `tokens.css` wolno wziąć wyłącznie `--irin-kroj`, `--irin-kroj-mono`
-i zmienne siatki (`--irin-modul`, `--irin-gutter`, marginesy) - te są poprawne.
+**Reguła jest prosta: barwy bierzesz wyłącznie z prefiksu `--irin-r-*`.** Każdy token `--irin-*`
+bez `r-` jest wartością poprzedniej palety i nie wolno go użyć. Siatka i kroje są poprawne w obu
+zapisach - `--irin-modul`, `--irin-gutter`, marginesy, `--irin-kroj`, `--irin-kroj-mono`.
 
 ### Cztery korekty liczbowe do wniesienia
 
@@ -131,6 +145,36 @@ zwrócić 0 × 0 i wtedy znak rośnie poza strefę; to zmierzony błąd, opisany
 **Przestrzeń ochronna x** to wysokość artworku: **37,46 % szerokości** dla sygnetu i **21,09 %**
 dla poziomu. Sygnet 22 mm → x = 8,24 mm; poziom 60 mm → x = 12,66 mm.
 
+### Obszary działalności wychodzą z materiałów - decyzja właściciela 2026-09-06
+
+„Na razie czysty brandbook bez obszarów, które będą wymienne."
+
+**Co to znaczy w praktyce.** Nie robisz czterech wariantów każdego nośnika po jednym na obszar.
+Robisz **jeden wariant neutralny**, a warstwa obszaru sprowadza się do **dwóch tokenów, które
+dokument nadpisuje u siebie**:
+
+```
+--irin-r-dziedzina        domyślnie var(--irin-r-szafir-nocny)
+--irin-r-tint-dziedzina   domyślnie var(--irin-r-tint-szafir)
+```
+
+Domyślne wartości są neutralne, więc materiał bez obszaru wychodzi poprawnie **bez żadnej podmiany**.
+Materiał obszarowy nadpisze te dwa tokeny u siebie i nic więcej - i właśnie dlatego **każde miejsce,
+w którym barwa niesie obszar, musi czytać z gniazda, nigdy z wartości wpisanej wprost**.
+
+**Trzy barwy są dostępne, ale nieprzypisane:** Rubin Głęboki `#541319`, Zieleń Butelkowa `#0B3627`,
+Bursztyn Wyciszony `#9B5E30`. Nie nazywaj ich obszarem w żadnym pliku, w żadnym podpisie ani
+w komentarzu. Wejdą wtedy, gdy właściciel włączy warstwę obszarów.
+
+**Tokenów `success`, `warning` i `error` w Regalii nie ma i nie dopisuj ich.** Trzy barwy, które
+w poprzedniej palecie pełniły te role, są dziś kandydatami na barwy obszarów - przypisanie ich
+do statusu zabetonowałoby to, co ma być wymienne. Status niesie **słowo plus jedną z barw nośnych
+dobraną w dokumencie**, a nie token o nazwie roli.
+
+**Sprawdzian, który masz sobie zrobić przed oddaniem każdego nośnika:** wyszukaj w pliku hexy
+`#541319`, `#0B3627` i `#9B5E30`. Jeżeli któryś występuje - albo powinien iść przez gniazdo,
+albo w ogóle nie powinno go tam być.
+
 ### Co robimy w tej turze - reszta nośników
 
 Każdy nośnik według rozdziału brandbooka, który go opisuje. Składasz je z ośmiu szablonów, nie
@@ -140,8 +184,8 @@ od zera. Numer rozdziału podaję, żebyś nie szukał.
 
 | Plik | Nośnik | Rozdz. | Wariantów |
 |---|---|---|---|
-| `templates/papier-firmowy/` | Papier firmowy A4, **ponowne wydanie na Regalii** | 13 | 4: trzy dziedziny plus neutralny |
-| `templates/wizytowka/` | Wizytówka 85 × 55 mm, **ponowne wydanie** | 14 | 5 plików: 4 awersy plus 1 rewers wspólny |
+| `templates/papier-firmowy/` | Papier firmowy A4, **ponowne wydanie na Regalii** | 13 | **1, neutralny** |
+| `templates/wizytowka/` | Wizytówka 85 × 55 mm, **ponowne wydanie** | 14 | **2: awers i rewers** |
 | `templates/koperta/` | Koperta DL i C5 | 15 | 1 |
 | `templates/podpis-mailowy/` | Podpis mailowy | 15 | 1 |
 | `templates/favicon/` | Favicon i awatar, komplet 16 / 32 / 180 / 512 px | 23 | 1 komplet |
@@ -159,10 +203,10 @@ Uproszczenie jest utworem pochodnym - proponujesz, nie wprowadzasz.
 
 | Plik | Nośnik | Rozdz. | Wariantów |
 |---|---|---|---|
-| `templates/okladka-wydawnicza/` | Okładka wydawnicza | 16 | 4 |
+| `templates/okladka-wydawnicza/` | Okładka wydawnicza | 16 | **1, neutralny** |
 | `templates/prezentacja/` | Prezentacja 16 : 9 | 17 | 2 typy slajdu |
-| `templates/rollup/` | Roll-up 85 × 200 cm | 18 | 4 |
-| `templates/plakat-a3/` | Plakat A3 | 18 | 4 |
+| `templates/rollup/` | Roll-up 85 × 200 cm | 18 | **1, neutralny** |
+| `templates/plakat-a3/` | Plakat A3 | 18 | **1, neutralny** |
 
 **Okładka jest jedynym nośnikiem blisko limitu złota: 4,7 % przy progu 5 %.** Podaj policzony
 procent zadruku złotem przy każdym wariancie. Pas dolny nie rośnie powyżej 4 mm, a złota ramka
@@ -180,8 +224,8 @@ jako założenie.
 
 | Plik | Nośnik | Rozdz. | Wariantów |
 |---|---|---|---|
-| `templates/zaswiadczenie-a4/` | Zaświadczenie o ukończeniu | 19 | 1, **bez barwy dziedziny** |
-| `templates/karta-uslugi-bur/` | Karta usługi BUR, tabele i formularze | 20 | 3, tint dziedziny |
+| `templates/zaswiadczenie-a4/` | Zaświadczenie o ukończeniu | 19 | 1, **bez barwy obszaru** |
+| `templates/karta-uslugi-bur/` | Karta usługi BUR, tabele i formularze | 20 | **1, neutralny**; tint z gniazda |
 | `irn-design-ksiega-koloru.md` | **brakująca para `.md`** do księgi koloru | - | 1 |
 
 **Księga koloru łamie własną regułę zestawu.** Brandbook, rozdz. „Numeracja", mówi: `pliki systemu:
@@ -208,9 +252,9 @@ i wtedy ramka 0,4 mm wypada. Jedno albo drugie - pokaż które i dlaczego.
 | tła kart, tekst drugi na ciemnym | Alabaster | `#E4E1D8` |
 | tekst drugi na jasnym, linie | Grafit Jedwabny | `#606369` |
 | akcent do 5 % | Złoto Szampańskie | `#C4B790` |
-| dziedzina Szkolenia zawodowe | Rubin Głęboki | `#541319` |
-| dziedzina Pożyczki UE / BGK | Zieleń Butelkowa | `#0B3627` |
-| dziedzina Akademia AI | Bursztyn Wyciszony | `#9B5E30` |
+| barwa dostępna, nieprzypisana | Rubin Głęboki | `#541319` |
+| barwa dostępna, nieprzypisana | Zieleń Butelkowa | `#0B3627` |
+| barwa dostępna, nieprzypisana; **jedyne tło: Kość Słoniowa** | Bursztyn Wyciszony | `#9B5E30` |
 | materiał przekrojowy | Ametyst Dworski | `#331F41` |
 | odnośnik, obrys focus | Lapis Stonowany | `#305686` |
 | metadane | Złoto Antyczne | `#75674B` |
@@ -233,26 +277,33 @@ Atrament na każdym z nich przechodzi 14,2:1 i wyżej.
    Bursztyn ma tylko jedno dopuszczone tło: Kość Słoniową, 4,69:1.
 
 **Hierarchia 80 / 15 / 5.** 80 % baza: Kość Słoniowa plus Atrament, w niej Grafit na linie, Alabaster
-na tła kart, tinty na karty dziedzinowe. 15 % sygnał: Szafir Nocny plus **dokładnie jeden** kolor
-dziedziny na dokument. 5 % akcent: Złoto Szampańskie, limit **21,34 cm²** na polu treści A4
+na tła kart, tinty na karty. 15 % sygnał: **gniazdo `--irin-r-dziedzina`**, w tej turze wskazujące
+na Szafir Nocny; nigdy dwie barwy w tej warstwie naraz. 5 % akcent: Złoto Szampańskie, limit **21,34 cm²** na polu treści A4
 (5 % z 426,7 cm²). Podaj policzony procent złota przy każdym nośniku.
 
 **Maksymalnie dwa tła na dokument:** Kość Słoniowa plus jedno ciemne.
 
-**Dziedziny nie wolno kodować samym kolorem.** Cztery barwy nośne leżą w rozpiętości 2,03 punktu
-kontrastu, a Rubin i Zieleń wypadają w mono identycznie - **70 % K obie**. Znak dziedziny Szkolenia
-i znak dziedziny Pożyczki są w druku jednokolorowym nieodróżnialne. Wchodzi tint tła, słowo albo oba.
+**Hierarchia 15 % w materiale neutralnym** wypełnia się Szafirem Nocnym, bo gniazdo obszaru wskazuje
+domyślnie właśnie na niego. Warstwa nie zostaje pusta.
+
+**Obszaru nie wolno kodować samym kolorem** - to zostaje w mocy także wtedy, gdy warstwa obszarów
+wróci. Cztery barwy nośne leżą w rozpiętości 2,03 punktu kontrastu, a Rubin i Zieleń wypadają
+w mono **identycznie, 70 % K obie**, więc w druku jednokolorowym są nieodróżnialne. Wchodzi tint
+tła, słowo albo oba.
 
 **Kolor nigdy nie jest jedynym nośnikiem statusu** - obok barwy stoi słowo albo ikona.
 
 **Znak: osiem wersji, ani jedna więcej.** Atrament (podstawowa), Kość Słoniowa (odwrócona), Szafir
-Nocny (markowa), Ametyst Dworski (przekrojowa), Rubin / Zieleń / Bursztyn (dziedziny), Złoto
-Szampańskie (warunkowa, wyłącznie na ciemnym, w limicie 5 %). Czerń czysta i biel czysta **nie
+Nocny (markowa), Ametyst Dworski (przekrojowa), Rubin / Zieleń / Bursztyn (**wersje obszarowe,
+w tej turze nieużywane**), Złoto Szampańskie (warunkowa, wyłącznie na ciemnym, w limicie 5 %).
+W materiałach tej tury znak idzie w Atramencie, Kości Słoniowej, Szafirze albo Ametyście - zgodnie
+z krokiem trzecim doboru. Czerń czysta i biel czysta **nie
 należą do systemu**. Barwę ustawiasz przez `color` kontenera i `fill: currentColor`, **nigdy przez
 `filter:`**.
 
-**Dobór wersji w trzech krokach:** jasność podłoża → dziedzina → funkcja materiału. Wątpliwość
-rozstrzyga Atrament na Kości Słoniowej.
+**Dobór wersji w trzech krokach:** jasność podłoża → obszar → funkcja materiału. W tej turze krok
+drugi zawsze wypada pusty, więc decyduje krok trzeci: reprezentacyjny → Szafir Nocny, przekrojowy →
+Ametyst Dworski, treściowy → Atrament. Wątpliwość rozstrzyga Atrament na Kości Słoniowej.
 
 **Minimum znaku:** 18 mm w druku i 90 px na ekranie dla poziomu i pionu, 10 mm i 44 px dla sygnetu
 samodzielnego. Pamiętaj o korekcie kontenera z sekcji o proporcjach.
@@ -283,10 +334,11 @@ a zakładane minimum dla dokumentu regulowanego bywa 12 pt. Nie podnoś skali sa
 wszystkich dokumentów A4 i zmiana liczby stron. Jeżeli w nośniku regulowanym stopień okaże się
 za mały, **zapisz to jako uwagę z liczbą**, nie zmieniaj.
 
-**Wykresy:** dokument jednej dziedziny to **jedna barwa w czterech stopniach krycia 100 / 72 / 50 /
-30 %** - serie różni jasność, nie odcień, więc działają w mono. Dokument przekrojowy może użyć barw
-dziedzin, bo wtedy barwa kategorii nie koduje, tylko ją powtarza; warunek: każda oś podpisana
-słowem. Maksymalnie cztery serie, oś Y od zera, bez 3D, cienia i gradientu.
+**Wykresy:** **jedna barwa w czterech stopniach krycia 100 / 72 / 50 / 30 %** - serie różni jasność,
+nie odcień, więc działają w mono i przy zaburzeniach widzenia barw. Barwę bierzesz z gniazda
+`--irin-r-dziedzina`, czyli w tej turze będzie to Szafir Nocny. Maksymalnie cztery serie, oś Y od
+zera, legenda znika i zostaje etykieta przy serii, siatka pozioma 0,15 mm, bez 3D, cienia
+i gradientu. Liczba w Inconsolacie, opis w Manrope.
 
 **Zakaz twardy:** na materiale IRIN nie stawia się znaku Funduszy Europejskich, znaku barw
 Rzeczypospolitej Polskiej ani flagi Unii Europejskiej - **także gdy usługa faktycznie jest

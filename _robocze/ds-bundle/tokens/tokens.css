@@ -9,33 +9,144 @@
   --irin-neutral-dark: #221A15;
   --irin-sepia: #5E4E40;   /* token text-secondary */
   --irin-text-secondary: #5E4E40;
-  --irin-aksamit: #452430;   /* token primary */
-  --irin-primary: #452430;
-  --irin-miedz: #7A5638;   /* token secondary */
-  --irin-secondary: #7A5638;
-  --irin-onyks: #33474F;   /* token info */
-  --irin-info: #33474F;
+  --irin-aksamit: #752F3F;   /* token primary */
+  --irin-primary: #752F3F;
+  --irin-bursztyn: #9F6631;   /* token secondary */
+  --irin-secondary: #9F6631;
+  --irin-onyks: #005A80;   /* token info */
+  --irin-info: #005A80;
   --irin-zloto-foliowe: #A8874E;   /* token accent */
   --irin-accent: #A8874E;
-  --irin-werdykt: #2E5241;   /* token success */
-  --irin-success: #2E5241;
-  --irin-rubryka: #8A6110;   /* token warning */
-  --irin-warning: #8A6110;
+  --irin-werdykt: #004D49;   /* token success (v5: przesunięty, już nie koliduje z dziedziną Szmaragd) */
+  --irin-success: #004D49;
+  --irin-rubryka: #803700;   /* token warning */
+  --irin-warning: #803700;
   --irin-karmin: #9E2B2B;   /* token error */
   --irin-error: #9E2B2B;
   --irin-popiol: #7D7466;   /* token border */
   --irin-border: #7D7466;
-  --irin-patyna: #2F5A63;   /* token link */
-  --irin-link: #2F5A63;
+  --irin-patyna: #007987;   /* token link */
+  --irin-link: #007987;
+
+  /* v4.0.0 (2026-09-03) - szesc dziedzin x 3 stopnie; hue 8/61/117/175/236/281, chroma 0,095-0,100 */
+  --irin-aksamit-jasny: #CF9FA7;   /* tło plakietki Pedagogika */
+  --irin-aksamit-ciemny: #3B0014;  /* H1 Pedagogika */
+  --irin-bursztyn-jasny: #DDB99B;  /* tło plakietki Akademia AI */
+  --irin-bursztyn-ciemny: #391B00; /* H1 Akademia AI */
+  --irin-onyks-jasny: #6390AB;     /* tło plakietki Pożyczki UE/BGK */
+  --irin-onyks-ciemny: #013147;    /* H1 Pożyczki UE/BGK */
+  /* v5.0.0 (2026-09-03) - Ultramaryna/Oliwin/Szmaragd zastępują Indygo/Alabaster/Malachit po recenzji zespołu */
+  --irin-ultramaryna-jasny: #CBD0FF;  /* tło plakietki Aplikacje sprzedażowe */
+  --irin-ultramaryna: #191647;        /* CTA / H2 Aplikacje sprzedażowe */
+  --irin-ultramaryna-ciemny: #090130; /* H1 Aplikacje sprzedażowe */
+  --irin-rubin-jasny: #BC87B4;      /* tło plakietki Portal sprzedaży online */
+  --irin-rubin: #905E88;            /* CTA / H2 Portal sprzedaży */
+  --irin-rubin-ciemny: #280024;     /* H1 Portal sprzedaży */
+  --irin-szmaragd-jasny: #B0FBD9;     /* tło plakietki szóstej dziedziny */
+  --irin-szmaragd: #2D795C;           /* CTA / H2 szóstej dziedziny */
+  --irin-szmaragd-ciemny: #00412C;    /* H1 szóstej dziedziny */
+  /* aliasy semantyczne dziedzin */
+  --irin-tertiary: #191647;        /* = Ultramaryna */
+  --irin-quaternary: #905E88;      /* = Rubin */
+  --irin-quinary: #2D795C;         /* = Szmaragd */
+
+  /* v3.0.0 - warianty dark-* (rozdz. 54 Brandbooka) */
+  --irin-dark-surface: #221A15;    /* = Espresso */
+  --irin-dark-callout: #33261E;    /* tło calloutu w trybie dark */
+  --irin-dark-border: #55463A;     /* linia i obrys w trybie dark */
 
   /* Siatka A4 - zatwierdzona, rachunek odtwarzalny */
-  --irin-strona-szer: 210mm;  --irin-strona-wys: 297mm;
-  --irin-kolumny: 6;          --irin-modul: 25mm;      --irin-gutter: 4mm;
-  --irin-margines-gora: 18mm; --irin-margines-bok: 20mm; --irin-margines-dol: 28mm;
-  --irin-pole-tresci-szer: 170mm; --irin-pole-tresci-wys: 251mm;
-  --irin-jednostka: 6mm;
+  --irin-strona-szer: 210mm;      /* @kind spacing */
+  --irin-strona-wys: 297mm;       /* @kind spacing */
+  --irin-kolumny: 6;              /* @kind other */
+  --irin-modul: 25mm;             /* @kind spacing */
+  --irin-gutter: 4mm;             /* @kind spacing */
+  --irin-margines-gora: 18mm;     /* @kind spacing */
+  --irin-margines-bok: 20mm;      /* @kind spacing */
+  --irin-margines-dol: 28mm;      /* @kind spacing */
+  --irin-pole-tresci-szer: 170mm; /* @kind spacing */
+  --irin-pole-tresci-wys: 251mm;  /* @kind spacing */
+  --irin-jednostka: 6mm;          /* @kind spacing */
 
   /* Typografia - skala zatwierdzona */
-  --irin-kroj: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --irin-kroj-mono: 'Inconsolata', 'SFMono-Regular', Consolas, monospace;
+  --irin-kroj: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;      /* @kind font */
+  --irin-kroj-mono: 'Inconsolata', 'SFMono-Regular', Consolas, monospace;         /* @kind font */
 }
+
+/* ================================================================
+   PALETA REGALIA (wariant B) - zatwierdzona 2026-09-03, dopisana 2026-09-06.
+
+   Zrodlo prawdy: 01-baza-wiedzy/identyfikacja/paleta-barw.md w repozytorium.
+   Kontrasty policzone wzorem WCAG 2.1, nie przepisane.
+
+   DLACZEGO DOPISANE, A NIE ZASTAPIONE. Wszystko powyzej zostaje z niezmienionymi
+   wartosciami, bo wydanie 01 brandbooka i ksiegi znaku wciaz czyta --irin-*.
+   Nadpisanie zmienilo by ich barwy bez ostrzezenia. Nowa praca uzywa wylacznie
+   nazw --irin-r-*. Osiem szablonow w templates/ i cztery dokumenty irn-design-*
+   nie czytaja tokenow w ogole - wpisuja hexy wprost - wiec ta zmiana ich nie dotyka.
+   ================================================================ */
+:root {
+  /* --- barwy nosne --- */
+  --irin-r-szafir-nocny: #132246;        /* kolor marki | na Kosci 14,09 | na Aksamicie 1,22 */
+  --irin-r-atrament: #07090C;            /* typografia glowna | na Kosci 17,99 */
+  --irin-r-kosc-sloniowa: #F7F3E9;       /* tlo strony; wersja odwrocona znaku | na Aksamicie 17,25 */
+  --irin-r-aksamit-nocy: #080F1F;        /* tlo ciemne, stopka */
+  --irin-r-alabaster: #E4E1D8;           /* tla kart; tekst drugi na ciemnym | na Aksamicie 14,62 */
+  --irin-r-grafit-jedwabny: #606369;     /* tekst drugi na jasnym, linie 0,25 mm | na Kosci 5,44 */
+  --irin-r-zloto-szampanskie: #C4B790;   /* akcent do 5 % | na Aksamicie 9,58 | na Kosci 1,80 ZAKAZ */
+  --irin-r-ametyst-dworski: #331F41;     /* material przekrojowy | na Kosci 13,41 */
+  --irin-r-muszla-rozana: #E8D6D6;       /* cytaty, podswietlenia | Atrament na niej 14,26 */
+  --irin-r-lapis-stonowany: #305686;     /* odnosniki, obrys focus | na Kosci 6,77 */
+  --irin-r-zloto-antyczne: #75674B;      /* metadane | na Kosci 4,99 | na Aksamicie 3,46 ZAKAZ */
+
+  /* --- barwy dostepne, NIE przypisane do zadnego obszaru dzialalnosci --- */
+  --irin-r-rubin-gleboki: #541319;       /* na Kosci 12,77 | tint #E3D8D0 */
+  --irin-r-zielen-butelkowa: #0B3627;    /* na Kosci 12,06 | tint #DBDCD2 */
+  --irin-r-bursztyn-wyciszony: #9B5E30;  /* na Kosci 4,69 - JEDYNE dopuszczone tlo */
+
+  /* --- tinty 12 % krycia: wylacznie tla kart i pasy tabel --- */
+  --irin-r-tint-szafir: #DCDAD5;    /* Atrament na tincie 14,27 */
+  --irin-r-tint-rubin: #E3D8D0;     /* Atrament na tincie 14,24 */
+  --irin-r-tint-zielen: #DBDCD2;    /* Atrament na tincie 14,41 */
+  --irin-r-tint-ametyst: #DFDAD5;   /* Atrament na tincie 14,36 */
+
+  /* --- GNIAZDO DZIEDZINY: jedno miejsce do podmiany ---
+     Decyzja wlasciciela 2026-09-06: obszary dzialalnosci sa wymienne, wiec
+     materialy nie wpisuja ich na stale. Dokument dziedzinowy nadpisuje te dwa
+     tokeny u siebie i nic wiecej. Domyslnie gniazdo jest NEUTRALNE (Szafir),
+     czyli material bez dziedziny wychodzi poprawnie bez zadnej podmiany. */
+  --irin-r-dziedzina: var(--irin-r-szafir-nocny);
+  --irin-r-tint-dziedzina: var(--irin-r-tint-szafir);
+
+  /* --- aliasy semantyczne --- */
+  --irin-r-primary: var(--irin-r-szafir-nocny);
+  --irin-r-surface: var(--irin-r-kosc-sloniowa);
+  --irin-r-surface-alt: var(--irin-r-alabaster);
+  --irin-r-surface-dark: var(--irin-r-aksamit-nocy);
+  --irin-r-text: var(--irin-r-atrament);
+  --irin-r-text-invert: var(--irin-r-kosc-sloniowa);
+  --irin-r-text-muted: var(--irin-r-grafit-jedwabny);
+  --irin-r-border: var(--irin-r-grafit-jedwabny);
+  --irin-r-accent: var(--irin-r-zloto-szampanskie);
+  --irin-r-link: var(--irin-r-lapis-stonowany);
+  --irin-r-highlight: var(--irin-r-muszla-rozana);
+  --irin-r-info: var(--irin-r-zloto-antyczne);
+  --irin-r-przekrojowy: var(--irin-r-ametyst-dworski);
+
+  /* --- limit policzony --- */
+  --irin-r-limit-zlota-cm2: 21.34;   /* 5 % pola tresci A4 = 426,7 cm2 */
+}
+
+/* PARY ZABRONIONE, kazda z liczba:
+   Zloto Szampanskie na Kosci Sloniowej   1,80  nigdy tlo, nigdy tekst na jasnym
+   Grafit Jedwabny  na Aksamicie Nocy     3,17  wchodzi Alabaster
+   Bursztyn         na Aksamicie Nocy     3,68  wchodzi wypelnienie z etykieta
+   Zloto Antyczne   na Aksamicie Nocy     3,46  KOREKTA z 3,94; wchodzi Zloto Szampanskie
+   Bursztyn         na Alabastrze         3,98  prog 3:1 przechodzi, zakaz decyzja
+
+   Bursztyn ma tylko jedno dopuszczone tlo: Kosc Sloniowa, 4,69.
+
+   TOKENOW success / warning / error W REGALII NIE MA. Trzy barwy, ktore je
+   pelnily, sa jednoczesnie kandydatami na barwy obszarow - przypisanie ich do
+   roli statusu zabetonowaloby to, co wlasciciel chce miec wymienne. Status
+   niesie slowo plus jedna z barw nosnych dobrana w dokumencie. */

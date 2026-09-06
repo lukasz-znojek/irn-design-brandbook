@@ -172,12 +172,17 @@ na barwie**. Stopnie krycia jednej barwy rozwiązują to bez rozszerzania palety
 Barwa dziedziny wchodzi tokenem ustawianym na poziomie dokumentu, nie tokenem semantycznym.
 Rubin Głęboki i Ametyst Dworski nie mają tokenu semantycznego.
 
-**Uwaga o obciążeniu tokenów, świadoma:** Bursztyn Wyciszony jest jednocześnie `--irin-warning`
-i barwą dziedziny Akademia AI, a Zieleń Butelkowa jednocześnie `--irin-success` i barwą dziedziny
-Pożyczki UE/BGK. W materiale tych dwóch dziedzin barwa ostrzeżenia albo statusu pozytywnego
-i barwa dziedziny to jedna wartość. Rubin Głęboki jest przy tym barwą oznaczenia zakazu, więc
-w materiale dziedziny Szkolenia zawodowe zakaz i dziedzina też się zlewają. Trzy kolizje ról,
-każda do rozstrzygnięcia przy pierwszym materiale, w którym wystąpią razem.
+**Trzy kolizje ról - rozwiązane decyzją z 2026-09-06.** Bursztyn Wyciszony miał być jednocześnie
+ostrzeżeniem i barwą obszaru Akademia AI, Zieleń Butelkowa statusem pozytywnym i barwą obszaru
+Pożyczki UE/BGK, a Rubin Głęboki oznaczeniem zakazu i barwą obszaru Szkolenia zawodowe. Decyzja
+właściciela o wyjęciu obszarów z materiałów usuwa przyczynę: **tokenów `success`, `warning` i `error`
+w Regalii nie ma.** Przypisanie roli statusu do barwy będącej kandydatem na obszar zabetonowałoby
+to, co ma pozostać wymienne. **Status niesie słowo plus jedną z barw nośnych dobraną w dokumencie**,
+nie token o nazwie roli - a wymóg etykiety słownej obok barwy i tak obowiązuje bezwarunkowo.
+
+**Gniazdo obszaru.** Warstwa 15 % wchodzi przez dwa tokeny: `--irin-r-dziedzina` i
+`--irin-r-tint-dziedzina`, domyślnie wskazujące na Szafir Nocny i jego tint. Materiał bez obszaru
+wychodzi poprawnie bez żadnej podmiany; materiał obszarowy nadpisuje te dwa tokeny i nic więcej.
 
 ## Czego ta specyfikacja nie rozstrzyga
 
@@ -191,8 +196,8 @@ wchodzi plama neutralna z palety i mierzy się wobec niej.
 |---|---|---|---|
 | 01 | Rozbicia CMYK | bez proofu | proof cyfrowy na papierze docelowym |
 | 02 | Złoto Szampańskie na papierze niepowlekanym | L* 78 przy 83 % krycia może zniknąć w tle | pierwszy wydruk dyplomu |
-| 03 | Przypisanie barw do dziedzin: Rubin → Szkolenia, Zieleń → Pożyczki, Bursztyn → Akademia AI | **czeka na właściciela** | zatwierdzenie |
-| 04 | Nazwa trzeciego obszaru i liczba dziedzin | rozbieżność: `CLAUDE.md` zna Pedagogikę, dokumenty wzorcowe Szkolenia zawodowe; `tokens.css` opisuje sześć obszarów, paleta zna trzy barwy | decyzja właściciela |
+| 03 | Przypisanie barw do obszarów: Rubin → Szkolenia, Zieleń → Pożyczki, Bursztyn → Akademia AI | **zatwierdzone 2026-09-06 jako domyśl**, ale **nieużywane w żadnym materiale** - patrz wiersz 04 | pierwszy materiał, w którym warstwa obszarów zostanie włączona |
+| 04 | Obszary działalności w materiałach | **rozstrzygnięte 2026-09-06: obszary wychodzą z materiałów.** Właściciel: „na razie czysty brandbook bez obszarów, które będą wymienne". Każdy nośnik ma jeden wariant neutralny; warstwa obszaru to jedno gniazdo `--irin-r-dziedzina` plus `--irin-r-tint-dziedzina`, domyślnie wskazujące na Szafir Nocny | decyzja właściciela o włączeniu warstwy obszarów |
 | 05 | Trzy kolizje ról tokenów (Bursztyn, Zieleń, Rubin) | świadome obciążenie | pierwszy materiał, w którym rola i dziedzina wystąpią razem |
 | 06 | Widoczność linii 0,25 i 0,5 mm | kontrast policzony, druk nie | pierwszy wydruk na papierze docelowym |
 
