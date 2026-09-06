@@ -12,7 +12,7 @@ Zatwierdzone specyfikacje identyfikacji wizualnej: wartości, nie kompozycja.
 
 - [`identyfikacja/paleta-barw.md`](./identyfikacja/paleta-barw.md) - obowiązująca paleta „Kaszmir Wyciszony”: 14 kolorów z nazwami i tokenami semantycznymi, zmierzone kontrasty WCAG, reguła 80/15/5, przypisanie trzech dziedzin.
 - [`identyfikacja/siatka-a4.md`](./identyfikacja/siatka-a4.md) - siatka A4: 6 kolumn, moduł 25 mm, gutter 4 mm; ze sprawdzeniem dopasowania do strony i rozstrzygnięciem roli jednostki bazowej 6 mm (jednostka odstępu między blokami, nie siatka linii bazowych tekstu).
-- [`identyfikacja/typografia.md`](./identyfikacja/typografia.md) - Manrope 200-800 i Inconsolata, dziesięciopoziomowa skala, zasada różnicowania wagą zamiast rodziną.
+- [`identyfikacja/typografia.md`](./identyfikacja/typografia.md) - Manrope 200-800 i Inconsolata, dziesięciopoziomowa skala, zasada różnicowania wagą zamiast rodziną, pomiar maszynowy pokrycia polskich diakrytyków w paczce systemu projektowego (18/18 w obu krojach, 2026-09-06).
 - [`identyfikacja/logotyp.md`](./identyfikacja/logotyp.md) - logotyp: trzy warianty z proporcjami odczytanymi z plików źródłowych, minimalny rozmiar 18 mm / 90 px, przestrzeń ochronna x, cztery wiążące zakazy modyfikacji.
 - [`identyfikacja/tokeny/palette-irin.json`](./identyfikacja/tokeny/palette-irin.json) - wszystkie cztery specyfikacje maszynowo.
 
@@ -24,7 +24,7 @@ Zatwierdzone specyfikacje identyfikacji wizualnej: wartości, nie kompozycja.
 ## prawo/
 
 - [`prawo/kfs.md`](./prawo/kfs.md) — Krajowy Fundusz Szkoleniowy: podstawa prawna po reformie 2026, wymóg wpisu realizatora do BUR, limity dofinansowania (zmienne rok do roku).
-- [`prawo/bur.md`](./prawo/bur.md) — Baza Usług Rozwojowych: warunek wpisu (certyfikat jakości), obowiązkowe pola karty usługi, kod usługi, zaświadczenie ukończenia — część ustaleń oznaczona jako do potwierdzenia z powodu zablokowanego dostępu do domen PARP w tej sesji.
+- [`prawo/bur.md`](./prawo/bur.md) - Baza Usług Rozwojowych, w całości z odczytu u źródła (Regulamin i pięć załączników w `prawo/zrodla/`): warunki wpisu z § 11, Karta Dostawcy Usług, obowiązkowe pola karty usługi, kod usługi, zaświadczenie ukończenia, system oceny, Standard SUZ wiążący dla usług zdalnych, licencja z § 16 na materiały wgrane do BUR, dostępność dla osób ze szczególnymi potrzebami oraz pomiar tego, czego dokumenty BUR nie regulują (znaki, logotypy, reklama). Ze źródeł wtórnych zostają wyłącznie nazwy certyfikatów jakości.
 - [`prawo/pozyczki-ue-bgk.md`](./prawo/pozyczki-ue-bgk.md) — regulacje pośrednictwa w pozyskiwaniu dotacji UE i pożyczek BGK dla MŚP: dlaczego IRIN (jako doradca, nie strona umowy z BGK) nie podlega rejestrowi pośredników kredytowych KNF ani obowiązkowi znaku Fundusze Europejskie.
 - [`prawo/psf.md`](./prawo/psf.md) — Podmiotowy System Finansowania (PSF): brak parametrów krajowych, wszystko ustala regulamin operatora regionalnego.
 - [`prawo/kontekst-kfs-sanitized.md`](./prawo/kontekst-kfs-sanitized.md) — materiał źródłowy uzupełniający `kfs.md`: priorytety wydatkowania 2026, limity roczne wg wielkości firmy, checklista załączników wniosku.

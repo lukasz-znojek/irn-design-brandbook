@@ -16,6 +16,11 @@ IRIN (Instytut Rozwoju i Nauki) to polska firma działająca w trzech obszarach:
 - Layout, kompozycja i grafika powstają wyłącznie w Claude Design — to repozytorium przechowuje treść i wytyczne merytoryczne, nie projekt graficzny.
 - `_robocze/` to poligon roboczy/archiwum — nic stamtąd nie jest źródłem prawdy bez ponownej weryfikacji.
 - Każda karta specyfikacji dokumentu w warstwie 2 musi jawnie rozróżniać trzy kategorie: elementy **prawnie obowiązkowe**, **konwencję organizacyjną** IRIN i **swobodny wybór projektowy**.
+- **Znak łączący to dywiz (`-`), nie myślnik (`—`) ani półpauza (`–`)** - także w zakresach liczb i dat. Reguła obowiązuje w tekście pisanym w tym repozytorium.
+
+  Zasięg reguły i pomiar stanu: nowa treść dopisywana od 2026-09-06 trzyma dywiz, ale w plikach `.md` poza `_robocze/` zostaje **465 myślników i półpauz w 35 plikach** (pomiar 2026-09-06). Masowej zamiany świadomie nie wykonano: część tych znaków stoi wewnątrz cytatów z dokumentów źródłowych, a to repozytorium wymaga, żeby cytat zgadzał się ze źródłem co do znaku - automat zamieniłby także je. Uporządkowanie starszej treści jest osobną decyzją właściciela, do wykonania cytat po cytacie.
+
+  To jest **zapis, nie blokada**: nic technicznie nie wymusza dywizu i model może tę regułę pominąć. Wymuszałby ją dopiero krok w workflow recenzji PR, odrzucający myślnik i półpauzę w liniach dodanych poza cytatami - takiego kroku dziś nie ma.
 
 ## Co wynika z plików logotypu (`logo_irin_sygnet.svg`, `logo_irin_pion.svg`, `logo_irin_poziom.svg`)
 

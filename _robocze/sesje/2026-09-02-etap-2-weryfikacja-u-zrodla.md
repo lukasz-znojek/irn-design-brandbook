@@ -58,3 +58,66 @@ Pliki źródłowe zapisane w `01-baza-wiedzy/prawo/zrodla/` z polską nazwą i d
 **Niesprawdzone pozostaje:** czy między 6 lipca 2026 (data na okładce Załącznika 2g) a dniem odczytu (2026-09-02) PARP opublikowała nowszą wersję - sieć nadal zablokowana, więc nie sprawdzono. Falsyfikator: publikacja nowszej daty na `uslugirozwojowe.parp.gov.pl`, albo kolejny plik od foundera z późniejszą datą na okładce.
 
 Pozycje 7 (ŚCITT/`it.kielce.pl`) i 8 (Księga Tożsamości Wizualnej FE/`gov.pl`) - founder nie dostarczył plików dla tych domen w tej turze; pozostają niesprawdzone, zadanie 3 nie zostało domknięte.
+
+---
+
+## Część 3 (2026-09-06): trzy nieprzeczytane załączniki, pomiar diakrytyków, pomiar sieci
+
+Nowa sesja, ta sama sprawa. Zapis dopisany do tego pliku zgodnie ze zleceniem.
+
+### Rozbieżność wobec briefu, stwierdzona na starcie
+
+Brief zakładał, że PR #69 jest otwarty jako draft i że pozycje 7-8 z `weryfikacja-u-zrodla.md` czekają na odczyt. Sprawdzenie w GitHubie: **PR #69 został scalony 2026-09-03**, gałąź `claude/etap-2-regulamin-bur` po scaleniu usunięta, a sesja z 2026-09-03 zamknęła pozycje 4-8 u źródła - z maszyny, na której domeny rządowe były osiągalne. Brief opisywał stan sprzed czterech dni.
+
+Skutki proceduralne: gałąź odtworzono z aktualnego `main` (dwa commity przeniesione przez rebase, konflikt w `weryfikacja-u-zrodla.md` rozstrzygnięty na rzecz nowszej treści z `main`), a praca poszła do **nowego PR-a**, bo scalonego PR-a nie da się użyć ponownie.
+
+### Pomiar sieci - wykonany mimo nieaktualnego założenia
+
+Zlecenie kazało spróbować pozycji 7 (`it.kielce.pl`) i 8 (`gov.pl`) przez `curl`, potem Chromium, maksymalnie dwie próby na domenę. Wykonano dokładnie tyle, choć obie pozycje były już zamknięte - bo pomiar mierzy coś, czego nie zastąpi żaden odczyt: stan dostępu z tego konkretnego środowiska.
+
+| Próba | Adres | Wynik |
+|---|---|---|
+| 1, `curl` | `it.kielce.pl`, `www.it.kielce.pl`, `gov.pl`, `www.gov.pl` | `curl: (56) CONNECT tunnel failed, response 403` |
+| 1, `curl` (kontrolnie) | `dziennikustaw.gov.pl`, `isap.sejm.gov.pl`, `uslugirozwojowe.parp.gov.pl` | to samo |
+| 2, Chromium | `it.kielce.pl` | `net::ERR_TUNNEL_CONNECTION_FAILED` |
+
+Diagnostyka `$HTTPS_PROXY/__agentproxy/status` wypisała dla każdej domeny `"kind": "connect_rejected"` z sygnaturą czasową tej sesji. Nie podjęto trzeciej próby ani żadnej próby obejścia.
+
+**Wniosek:** pomiar **potwierdza**, a nie obala, ustalenie z 2026-09-03, że blokada jest własnością środowiska, nie projektu. Sesja lokalna u foundera sięga do domen rządowych, sesja zdalna w chmurze nie sięga. Reguła praktyczna wpisana do `weryfikacja-u-zrodla.md` i `MAPA-DROGOWA.md`.
+
+Uwaga techniczna: `_robocze/narzedzia/pobierz-strone-chromium.mjs` nie uruchamia się z katalogu repozytorium, bo `playwright` jest zainstalowany globalnie w `/opt/node22/lib/node_modules`, a Node nie szuka tam pakietów przy imporcie ESM. Obejście: skopiować skrypt do katalogu roboczego i dowiązać tam `node_modules`. Na wynik pomiaru to nie wpływa.
+
+### Podagenci: cztery uruchomione, cztery padły
+
+Zgodnie ze zleceniem odczyt czterech dokumentów rozdzielono na czterech podagentów działających równolegle. Wszyscy czterej padli w ciągu kilku minut na limicie sesji (HTTP 429, „You've hit your session limit”). Pracę wykonano dalej szeregowo, w tej sesji, z ekstrakcją tekstu do plików roboczych i wyszukiwaniem po nich zamiast wczytywania całych dokumentów. **Wniosek na przyszłość: równoległe podagenty w tym projekcie zużywają limit szybciej, niż oszczędzają czas** - przy dokumentach, które i tak trzeba czytać cytat po cytacie, szeregowy odczyt z `grep` po wyekstrahowanym tekście jest tańszy.
+
+### Co odczytano
+
+Trzy załączniki dostarczone 2026-09-02 leżały w `zrodla/` nieprzeczytane - poza zakresem pozycji 1-3. Przeczytano je w całości plus Regulamin BUR (spis § 1-23, pełny odczyt § 11-20 i § 22-23, wyszukiwanie po całym pliku). Wyniki i cytaty z numerami paragrafów i stron: `01-baza-wiedzy/prawo/bur.md`.
+
+Cztery ustalenia, które zmieniły dokumenty warstwy 1 i 2:
+
+1. **Standard SUZ jest wiążący, nie doradczy** - § 15 ust. 3. Dotyczy każdej usługi zdalnej, więc i planowanego portalu szkoleń. Cztery z czternastu wymagań dotykają treści dokumentów: rzetelność informacji publikowanych o własnej działalności (SUZ-2, obejmuje dokumenty ofertowe i kanały marketingowe), jawna informacja o licencji na materiały (SUZ-3), zasady ustawy o dostępności cyfrowej (SUZ-1), standardy techniczne materiałów (SUZ-8).
+2. **§ 16: materiał wgrany do BUR objęty jest bezterminową licencją dla Administratora BUR** z prawem przerabiania (ust. 2 pkt 6) i sublicencjonowania (pkt 7), przy zrzeczeniu się roszczeń. Cztery zakazy modyfikacji logotypu wiążą IRIN i jego wykonawców, nie wiążą PARP wobec plików w systemie.
+3. **Dostosowanie materiałów dla osób ze szczególnymi potrzebami jest warunkiem wpisu do BUR** (§ 11 ust. 1 pkt 3), a potrzeba dostosowania nie może być powodem odmowy usługi (§ 15 ust. 1). W `program-szkolenia.md` pozycja 10 przeszła z **[WYBÓR]** na **[PRAWO]** / **[WYBÓR]**.
+4. **Dokumenty BUR nie regulują znaków ani reklamy.** Pomiar na pełnym tekście sześciu dokumentów: „logo” i „logotyp” występują w korpusie dokładnie dwa razy, oba w jednej pozycji Załącznika 1. Żaden dokument nie daje prawa ani nie nakłada obowiązku posługiwania się znakiem BUR, logo PARP czy znakiem Funduszy Europejskich. Falsyfikator zapisany: materiały ze „Strefy dla Dostawców Usług”, których repozytorium nie ma.
+
+Poza tym: sekcja „Ocena usługi po zakończeniu” w `bur.md` opisywała ankietę ze źródła wtórnego **nieprecyzyjnie** i została przepisana z odczytu (trzy pytania, skala 1-5, wagi 0,5/0,3/0,2, wzór oceny ogólnej). Sekcja „Warunek wpisu do BUR” przeszła ze źródeł wtórnych na § 11 - i przyniosła materiał, którego repozytorium nie ma: **misję oraz cele strategiczne i operacyjne IRIN** (§ 11 ust. 4 pkt 1).
+
+### Pomiar 1 pilota, zamknięty w części bez foundera
+
+Protokół pomiaru pilota (`_robocze/pilot-papier-firmowy/protokol-pomiaru.md`) to formularz czekający na oczy foundera. Pomiar 1 - polskie znaki na wagach 400, 500 i 600 - dał się jednak wykonać maszynowo, bo `main` zawiera od 2026-09-06 fonty osadzone w `_robocze/ds-bundle/fonts/fonts.css` jako data URI.
+
+Nowe narzędzie: `_robocze/narzedzia/pokrycie-diakrytykow.py`. Wynik: **Manrope i Inconsolata mają 18/18 polskich diakrytyków z realnymi konturami**, a oba są fontami zmiennymi z ciągłą osią `wght` (Manrope 200-800, Inconsolata 200-900) - jeden plik na podzbiór, nie osobny plik na wagę. Glify nie mogą się więc różnić między wagami, a podstawienie z innego kroju jest niemożliwe. Otwarta zostaje ocena wizualna rysunku znaków.
+
+**Dwie pułapki pomiarowe, obie zapisane w narzędziu, żeby nie wróciły:**
+
+- **Podzbiory.** Ó i ó leżą w Latin-1, więc są w podzbiorze `latin`; pozostałe szesnaście znaków w `latin-ext`. Żaden pojedynczy plik nie ma kompletu i tak ma być. Pomiar na jednym pliku pokazuje „brakuje 16 znaków” i jest fałszywy.
+- **Glify złożone.** Pierwsze podejście pokazało 16 pustych glifów Inconsolaty. To był artefakt licznika konturów, który przy glifie złożonym (baza plus znak diakrytyczny) zapisuje operację `addComponent` zamiast `moveTo`. Po rozłożeniu składników wynik brzmi 18/18. Sprawdzono osobno w tablicy `glyf`: wszystkie składniki są obecne w podzbiorze.
+
+### Czego nie zrobiono i dlaczego
+
+- **Pomiary 2-6 protokołu pilota** - wymagają obejrzenia kanwy w Claude Design, a pomiar 6 dodatkowo wydruku na papierze. Bez foundera nie do wykonania; statusy zostają puste, nie „wykonane”.
+- **Nazwy certyfikatów jakości uznawanych przez PARP** - Regulamin ich nie wymienia, Załącznik 1 odsyła do „Strefy dla Dostawców Usług”. Zostaje ze źródeł wtórnych, z nazwanym falsyfikatorem.
+- **Zakres art. 6 ustawy o zapewnianiu dostępności** - dokumenty PARP odsyłają do przepisu, którego repozytorium nie ma, a domena `isap.sejm.gov.pl` jest z tego środowiska nieosiągalna.
+- **Usunięcie martwych gałęzi** - w repozytorium jest ich dziś ponad dwadzieścia. To operacja nieodwracalna z poziomu sesji i pozostaje decyzją foundera.
