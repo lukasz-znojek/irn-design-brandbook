@@ -34,6 +34,23 @@ Obie pozycje mają nazwany pomiar, którym się je zamknie: pobrać regulamin w�
 
 Wniosek dla następnych sesji: **zanim poprosisz foundera o dostarczenie dokumentu, zmierz dostęp z maszyny, na której właśnie pracujesz.** Blokada dotyczy środowiska w piaskownicy, nie każdego uruchomienia Claude Code w tym projekcie. Falsyfikator: ten sam `curl` zwracający błąd połączenia na maszynie, na której akurat trwa sesja.
 
+**Potwierdzenie pomiaru z 2026-09-06:** z tej sesji (środowisko zdalne Claude Code w chmurze) wszystkie sześć domen znowu odpowiada `connect_rejected`. Zobacz sekcję „Powtórzony pomiar dostępu do sieci” niżej. Nie obala to wniosku wyżej, tylko go potwierdza: dostęp zależy od maszyny, na której sesja działa, a nie od domeny ani od projektu.
+
+## Dokumenty odczytane 2026-09-06 (poza pierwotną listą ośmiu)
+
+Trzy załączniki dostarczone przez foundera 2026-09-02 leżały w `./zrodla/` nieprzeczytane - były poza zakresem pozycji 1-3. Odczytano je w całości 2026-09-06; nie wymagały niczego od foundera ani dostępu do sieci. Pierwotna lista ośmiu pozycji ich nie obejmowała, bo powstała, zanim wiadomo było, co te załączniki zawierają.
+
+Wyniki są istotne dla brandbooka mocniej, niż zapowiadała lista: **Załącznik 5 (SUZ) jest wiążący dla każdej usługi zdalnej** (Regulamin § 15 ust. 3), a **Regulamin § 16 daje Administratorowi BUR prawo przerabiania materiałów wgranych do systemu** - to pierwsze ustalenie prawne, które dotyka wprost zakazów modyfikacji logotypu.
+
+| Dokument | Zakres odczytu | Co się zmieniło | Status |
+|---|---|---|---|
+| **Regulamin BUR**, wersja od 5 maja 2026 r., 35 stron | spis § 1-23, pełny odczyt § 11-§ 20 i § 22-23, wyszukiwanie po całym pliku | `bur.md`: warunek wpisu (§ 11), publikowanie i terminy (§ 14-15), SUZ jako wymóg (§ 15 ust. 3), licencja na materiały (§ 16), dostępność (§ 11 ust. 1 pkt 3), monitoring (§ 17) | **odczytane u źródła**, 2026-09-06 |
+| **Załącznik 1** - Karta Dostawcy Usług, wersja od 1 stycznia 2026 r., 14 stron | całość | `bur.md`: nowa sekcja „Karta Dostawcy Usług”; `logotyp.md`: logo w BUR jako pole opcjonalne bez wymogów formatu | **odczytane u źródła**, 2026-09-06 |
+| **Załącznik 3** - System Oceny Usług Rozwojowych, wersja od 8 lipca 2025 r., 5 stron | całość | `bur.md`: sekcja „Ocena usługi po zakończeniu” przepisana z odczytu (trzy pytania, wagi, wzór); `karta-uslugi-bur.md` i `prezentacja-sprzedazowa.md`: zasady powoływania się na ocenę BUR | **odczytane u źródła**, 2026-09-06 |
+| **Załącznik 5** - Standard Usług Zdalnego Uczenia się (SUZ), luty 2021, 15 stron | całość, ze słownikiem | `bur.md`: sekcja „Usługi zdalne”; `portal-szkolen.md`: SUZ-1 do SUZ-14 jako wymóg dla usług zdalnych | **odczytane u źródła**, 2026-09-06 |
+
+Trzy ustalenia negatywne z tego odczytu, wpisane do `bur.md` z podaniem, gdzie szukano: dokumenty BUR nie regulują posługiwania się znakami ani reklamy; SUZ nie podaje poziomu WCAG ani wartości kontrastu; Regulamin nie mówi nic o operatorach PSF.
+
 ## Co się nie udało w tej sesji (2026-09-02, Etap 2)
 
 Zadaniem tej sesji było pobranie trzech plików PDF z PARP dla pozycji 1-2 (Regulamin BUR z Załącznikiem nr 2 i Załącznikiem nr 12) i sprawdzenie numeracji usług dla pozycji 3, a przy nadmiarze czasu - pozycji 7 (`it.kielce.pl`) i 8 (`gov.pl/web/fundusze-regiony`).
@@ -46,6 +63,24 @@ Zadaniem tej sesji było pobranie trzech plików PDF z PARP dla pozycji 1-2 (Reg
 **Kontrolne sprawdzenie skali blokady:** `example.com` i `google.com` również kończą się `connect_rejected`; `github.com` łączy się (HTTP 400 na pustej ścieżce - to normalna odpowiedź serwera, nie blokada proxy). Wniosek: to nie jest zabezpieczenie konkretnej strony PARP (np. Incapsula) ani problem z konkretną domeną rządową - to ogólna polityka sieciowa tego środowiska Claude Code, działająca na zasadzie listy dozwolonych domen (npm, PyPI, GitHub, API Anthropic i kilka innych z listy `no_proxy`), z domyślną odmową dla reszty internetu. Żadne narzędzie dostępne w tej sesji (curl, przeglądarka, WebFetch) nie może tego obejść - i zgodnie z poleceniem sesja się nie próbowała.
 
 **Falsyfikator tego wniosku:** polecenie `curl -sS http://127.0.0.1:<port>/__agentproxy/status` w nowej sesji Claude Code pokazujące, że którakolwiek z domen PARP/Dziennika Ustaw/`it.kielce.pl`/`gov.pl` już nie trafia na `connect_rejected`, albo świadome rozszerzenie listy dozwolonych domen w polityce sieciowej środowiska przez foundera.
+
+## Powtórzony pomiar dostępu do sieci (2026-09-06)
+
+Zlecenie tej sesji zakładało, że pozycje 7 i 8 są otwarte, i kazało spróbować ich najpierw przez `curl`, potem przez Chromium, maksymalnie dwie próby na domenę, bez obchodzenia blokady. **Założenie było nieaktualne:** obie pozycje zostały zamknięte 2026-09-03 (patrz tabela wyżej), a dokumenty leżą w `./zrodla/`. Pomiar wykonano mimo to, bo mierzy coś, czego nie zastąpi żaden odczyt - stan dostępu z tego konkretnego środowiska:
+
+| Próba | Adres | Wynik |
+|---|---|---|
+| 1 (`curl`) | `it.kielce.pl`, `www.it.kielce.pl` | `curl: (56) CONNECT tunnel failed, response 403` |
+| 1 (`curl`) | `gov.pl`, `www.gov.pl` | `curl: (56) CONNECT tunnel failed, response 403` |
+| 2 (Chromium/Playwright) | `it.kielce.pl` | `net::ERR_TUNNEL_CONNECTION_FAILED` |
+
+Kontrolnie w tej samej turze: `dziennikustaw.gov.pl`, `isap.sejm.gov.pl` i `uslugirozwojowe.parp.gov.pl` (pozycje 1-5) - ten sam wynik. Diagnostyka serwera pośredniczącego (`$HTTPS_PROXY/__agentproxy/status`) wypisała dla każdej z tych domen wpis `"kind": "connect_rejected"`, `"detail": "gateway answered 403 to CONNECT (policy denial or upstream failure)"` z sygnaturą czasową tej sesji. Lista `noProxy` w odpowiedzi zawiera wyłącznie adresy lokalne, API Anthropic, rejestry pakietów (npm, PyPI, crates, Go) i adresy wewnętrzne - żadnej domeny rządowej.
+
+**Wniosek:** to blokada polityki sieciowej środowiska, nie zabezpieczenie strony - identycznie jak 2026-09-02 i przeciwnie do 2026-09-03, gdy sesja szła z maszyny foundera. Zgodnie z poleceniem nie podjęto trzeciej próby ani żadnej próby obejścia. **Dla pozycji 7 i 8 pomiar nie ma dziś skutku**, bo obie są już odczytane u źródła; ma skutek dla przyszłych pozycji: dokumentu, którego repozytorium nie ma, nie da się pobrać z sesji uruchomionej w chmurze.
+
+**Reguła praktyczna, potwierdzona dwoma pomiarami z różnych maszyn:** zanim zaplanujesz odczyt u źródła, zmierz dostęp z maszyny, na której trwa sesja; sesja lokalna u foundera sięga do domen rządowych, sesja zdalna w chmurze nie sięga.
+
+Uwaga techniczna do powtórzenia pomiaru: `_robocze/narzedzia/pobierz-strone-chromium.mjs` nie uruchomi się z katalogu repozytorium, bo `playwright` jest w tym środowisku zainstalowany globalnie (`/opt/node22/lib/node_modules`), a Node nie szuka tam pakietów przy imporcie ESM. Obejście użyte w tej sesji: skopiować skrypt do katalogu roboczego i dowiązać tam `node_modules` do katalogu globalnego. Nie ma to wpływu na wynik pomiaru - Chromium i tak trafia na tę samą blokadę co `curl`.
 
 **Rozbieżność wobec briefu tej sesji, do odnotowania:** brief zakładał istnienie plików `_robocze/sesje/2026-09-02-etap-2-weryfikacja-u-zrodla.md` i `_robocze/narzedzia/pobierz-strone-chromium.mjs` oraz sekcji „Adresy plików PARP do pobrania ręcznie” w tym pliku, a także opisywał wcześniejszy wynik jako stronę zabezpieczenia Incapsula (HTTP 200, ok. 200 B). Żaden z tych trzech elementów nie istniał w repozytorium na gałęzi `main` ani na gałęzi `claude/etap-2-weryfikacja-zrodla-v05npm` (identyczna z `main`, bez dodatkowych commitów) - więc materiał, na którym brief się opierał, nie został scommitowany w żadnej wcześniejszej sesji. Zamiast zakładać jego treść, ta sesja zmierzyła stan sieci od nowa (wynik wyżej). Notatka sesyjna `_robocze/sesje/2026-09-02-etap-2-weryfikacja-u-zrodla.md` oraz skrypty `_robocze/narzedzia/pobierz-strone-chromium.mjs` i `_robocze/narzedzia/tekst-z-pdf.py` powstały dopiero w tej sesji i są w tej gałęzi; sekcja „Adresy plików PARP do pobrania ręcznie” nie powstała.
 

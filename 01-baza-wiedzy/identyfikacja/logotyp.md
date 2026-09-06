@@ -49,4 +49,16 @@ Zatwierdzone przez foundera 2026-09-02. Wcześniej były odczytem z `brandbook.d
 
 Dlaczego zakaz koloru jest tu najważniejszy: pliki źródłowe nie niosą własnej palety, więc bez tej reguły każde zlecenie dla Claude Design mogłoby pokolorować znak według uznania. Logotyp jest jedynym elementem tożsamości, którego nie da się odtworzyć z żadnej innej specyfikacji po zepsuciu - paletę, siatkę i skalę można przeliczyć na nowo, znaku nie.
 
+## Logotyp w systemie BUR - dwa ustalenia z odczytu 2026-09-06
+
+Odczyt dokumentów PARP (`/01-baza-wiedzy/prawo/bur.md`, sekcje „Karta Dostawcy Usług” i „Licencja na materiały zamieszczone w BUR”) dał dwie rzeczy dotyczące bezpośrednio tego pliku.
+
+**1. Pole „Logo” w Karcie Dostawcy Usług jest opcjonalne i bez wymogów technicznych.** Załącznik 1 do Regulaminu BUR (wersja od 1 stycznia 2026 r.), poz. 1, s. 1: „Podmiot świadczący Usługi rozwojowe/ Dostawca Usług ma możliwość dodania logotypu jakim posługuje się w obrocie gospodarczym.” Załącznik nie podaje formatu pliku, wymiarów, proporcji, wagi ani wymagań co do tła. Wybór wariantu (poziomy, pionowy, sygnet) i przygotowanie pliku to więc **swobodny wybór projektowy** IRIN. Rekomendacja do rozstrzygnięcia przy zakładaniu profilu: wariant poziomy, bo profil w BUR jest polem szerokim - ale to dopiero propozycja, nie decyzja.
+
+**2. Zakazy modyfikacji nie wiążą Administratora BUR.** Regulamin BUR § 16 ust. 1-2 (s. 25-26): materiał wgrany do BUR objęty jest bezterminową, nieodpłatną i niewyłączną licencją dla Administratora BUR, a pola eksploatacji obejmują wprost „scalanie, dostosowywanie, przerabianie oraz dokonywanie wszelkich zmian służących połączeniu z innymi utworami” (ust. 2 pkt 6) i udzielanie dalszych licencji (pkt 7); dostawca zrzeka się przy tym roszczeń.
+
+Cztery zakazy wyżej pozostają w mocy - wiążą IRIN i wykonawców pracujących dla IRIN. Nie wiążą PARP w odniesieniu do plików wgranych do BUR. **Praktyczny wniosek: to nie jest powód do zmiany zakazów, tylko powód do świadomej decyzji, które pliki trafiają do systemu BUR.** Falsyfikator tego wniosku: zapis w dokumencie PARP spoza sześciu plików w `/01-baza-wiedzy/prawo/zrodla/` (np. w „Strefie dla Dostawców Usług”), który ograniczałby licencję z § 16 dla materiałów graficznych.
+
+Uwaga o zakresie tego ustalenia: pomiar na pełnym tekście sześciu dokumentów PARP pokazał, że słowa „logo” i „logotyp” występują w całym korpusie **dokładnie dwa razy** - oba w tej jednej pozycji Załącznika 1. Żaden z tych dokumentów nie nakłada obowiązku ani nie daje prawa posługiwania się znakiem BUR, logo PARP ani znakiem Funduszy Europejskich.
+
 **Piąta zasada z kanwy, nadal nie potwierdzona:** „nie umieszczamy na akcentach dziedzinowych poniżej kontrastu 4,5:1". Jest to reguła o kontraście, nie o modyfikacji znaku, i nie była przedmiotem decyzji z 2026-09-02. W obecnej palecie wszystkie trzy akcenty dziedzinowe (Aksamit 12,80:1, Miedź 6,16:1, Onyks 9,19:1 na papierze Kaszmir) i tak przekraczają ten próg, więc reguła nikogo dziś nie ogranicza - ale przy przyszłej zmianie palety warto ją potwierdzić albo skreślić świadomie.

@@ -59,6 +59,8 @@ Pod tabelą jedno zdanie liczbami dla segmentu głównego: ile osób, ile dni za
 - Ceny opisane wprost jako netto albo brutto, w każdym miejscu, gdzie się pojawiają.
 - Program nie może być pozycjonowany jako wypełnienie obowiązku wynikającego z przepisów — argument z obowiązku wchodzi wyłącznie do slajdu 2, jako uzasadnienie biznesowe.
 - Jeśli któraś liczba w programie jest oznaczona jako wymagająca potwierdzenia u źródła, nie wchodzi do prezentacji dla klienta. Do materiału wewnętrznego wchodzi z jawnym oznaczeniem.
+- Informacje o własnej działalności i usługach muszą być zgodne z rzeczywistymi możliwościami firmy. Dla usług zdalnych to wymóg wprost: Standard SUZ, wymaganie SUZ-2, wiążący przez Regulamin BUR § 15 ust. 3; zakres walidacji brzmi „Czy informacje podawane przez Dostawcę Usług są zgodne z rzeczywistymi możliwościami i usługami tego podmiotu”, a jako źródła dowodów standard wymienia wprost dokumenty ofertowe i publikacje w kanałach marketingowych (odczyt 2026-09-06, `/01-baza-wiedzy/prawo/bur.md`).
+- Ocena usługi albo dostawcy z BUR wchodzi na slajd wyłącznie razem z liczbą ankiet, na podstawie których ją wyliczono - tak, jak prezentuje ją sam system (Załącznik 3 do Regulaminu BUR, cz. II pkt 12). To konwencja IRIN, nie zakaz prawny: Załącznik 3 nie reguluje posługiwania się ocenami poza systemem.
 
 ## Elementy wizualne
 
