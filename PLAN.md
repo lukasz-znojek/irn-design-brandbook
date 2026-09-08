@@ -458,7 +458,7 @@ Wszystkie trzy z listy właściciela z 2026-09-03. Szczegóły i uzasadnienie: c
 
 | Plik | Warunek wejścia | Uwaga |
 |---|---|---|
-| Arkusz `.xlsx` z tabelą, pasami wierszy i wykresami | pozycje 14 i 15 zamknięte na kanwie | **wiersz do przeliczenia od nowa**: kontrasty 1,054:1 i 1,247:1 policzono na parach Kaszmir / Muślin / Pergamin, a te barwy wypadły z systemu razem z paletą „Kaszmir Wyciszony" 2026-09-03. Pary pasów wierszy trzeba wybrać z Regalii i zmierzyć na nowo |
+| Arkusz `.xlsx` z tabelą, pasami wierszy i wykresami | pozycje 14 i 15 zamknięte na kanwie; **plus decyzja o parze pasów** | **przeliczone 2026-09-08.** Stare 1,054:1 i 1,247:1 dotyczyły Kaszmiru, Muślinu i Pergaminu, czyli barw wycofanych z paletą „Kaszmir Wyciszony". W Regalii wybór jest wymuszony i ma koszt po obu stronach - patrz akapit pod tabelą |
 | Szablon `.docx` do pisania pism | tura 1 zamknięta | **zrobione 2026-09-08**: `_robocze/pismo-firmowe/` - szablon, generator, symulacja układu i README z pomiarami |
 | Podpis e-mail w HTML | tura 1 zamknięta | **zrobione 2026-09-08**: `_robocze/podpis-mailowy/` |
 
@@ -467,13 +467,32 @@ Wszystkie trzy z listy właściciela z 2026-09-03. Szczegóły i uzasadnienie: c
       decyzję właściciela i nic nie jest przenoszone przed nią.
 - [ ] **Krok 2:** `.xlsx` po zamknięciu pozycji 14 i 15; przed wyborem kolorów wykresu wczytać
       wytyczne do wizualizacji danych, nie dobierać ich z palety na oko. Przed pomiarem pasów
-      wierszy wybrać parę z Regalii - stare pary z wiersza wyżej już nie istnieją.
+      wierszy rozstrzygnąć parę pasów - patrz akapit pod listą.
 - [x] **Krok 3: weryfikacja** dla `.docx` i podpisu e-mail - wykonana w granicach kontenera
       i jawnie ograniczona. Czego **nie** dało się zrobić: w tym kontenerze LibreOffice nie ma
       modułu Writer, a `pdftoppm` nie jest zainstalowany, więc `.docx` nie został otwarty
       w żadnym edytorze. Zamiast tego: odczyt geometrii wprost z OOXML plus symulacja układu
       w Chromium na prawdziwym Manrope. Pełna lista pomiarów i falsyfikatorów:
       `_robocze/pismo-firmowe/README.md`. Dla `.xlsx` krok 3 zostaje otwarty.
+
+**Para pasów wierszy w Regalii - decyzja właściciela, jedna z dwóch.** Jasny koniec palety ma
+trzy poziomy: Kość Słoniowa `#F7F3E9` (L* 95,90), Alabaster `#E4E1D8` (L* 89,53) i cztery tinty
+12 % (L* około 87). Między 95,90 a 89,53 nie ma nic, więc nie da się mieć jednocześnie cichego
+pasa i tekstu drugorzędnego w Grafcie Jedwabnym:
+
+| Para | Kontrast pasów | ΔL* | Atrament | Grafit Jedwabny | Koszt |
+|---|---|---|---|---|---|
+| **Kość Słoniowa + Alabaster** (rekomendacja) | 1,180:1 | 6,36 | 15,25:1 | **4,61:1, AA trzymane** | pas jest wyraźny, czyta się jak jasnoszary blok, nie jak muśnięcie |
+| Alabaster + Szafir 12 % | 1,068:1 | 2,46 | 14,27:1 | **4,31:1, AA złamane** | tekst drugorzędny musi zejść z Grafitu na Atrament albo Lapis Stonowany; tint przestaje być wolny dla kart dziedzinowych |
+
+Rekomendacja: **Kość Słoniowa + Alabaster**, bo dostępność jest wymogiem, a cichość pasa
+preferencją. Poprzednia sesja wybrała odwrotnie (para o ΔL* 2,08) - wybierała jednak wyłącznie
+na oko odstępu pasów i nie liczyła tekstu na ciemniejszym pasie. Falsyfikator rekomendacji:
+wydruk na drukarce biurowej, na którym ΔL* 6,36 wychodzi jako ciężka szara wstęga zamiast pasa;
+wtedy wraca para cicha, a razem z nią zakaz Grafitu w wierszach.
+
+Pomiar wszystkich sześciu barw tekstu na wszystkich jasnych tłach:
+`01-baza-wiedzy/identyfikacja/paleta-barw.md`, sekcja „Jasne tła nie są wymienne".
 
 ### Zadanie S6: sprzeczność pozycji 1 z zakazem 1 - do rozstrzygnięcia przez właściciela
 

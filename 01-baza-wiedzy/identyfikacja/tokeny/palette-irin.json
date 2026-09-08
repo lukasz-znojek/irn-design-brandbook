@@ -549,5 +549,67 @@
       "przyczyna": "trzy liczby policzono wobec tintu Szafiru #DCDAD5, a nie wobec tintu z własnego wiersza, wbrew podpisowi pod tabelą",
       "wyrok": "bez zmian, wszystkie z ogromnym zapasem nad progiem"
     }
-  ]
+  ],
+  "tekst-na-jasnych-tlach": {
+    "data-pomiaru": "2026-09-08",
+    "prog-tekst-normalny": 4.5,
+    "prog-tekst-duzy": 3.0,
+    "uwaga": "Kontrasty w kluczu \"kontrasty\" liczone wobec Kości Słoniowej i Aksamitu Nocy. Ten klucz domyka Alabaster i cztery tinty 12 %, ktore maja role tla, a nie mialy policzonego tekstu na sobie.",
+    "trzymaja-AA-na-kazdym-jasnym-tle": [
+      "atrament",
+      "szafir-nocny",
+      "lapis-stonowany"
+    ],
+    "macierz": {
+      "atrament": {
+        "kosc-sloniowa": 17.99,
+        "alabaster": 15.25,
+        "tint-szafir": 14.27,
+        "tint-rubin": 14.24,
+        "tint-zielen": 14.41,
+        "tint-ametyst": 14.36
+      },
+      "szafir-nocny": {
+        "kosc-sloniowa": 14.09,
+        "alabaster": 11.94,
+        "tint-szafir": 11.18,
+        "tint-rubin": 11.15,
+        "tint-zielen": 11.29,
+        "tint-ametyst": 11.25
+      },
+      "lapis-stonowany": {
+        "kosc-sloniowa": 6.77,
+        "alabaster": 5.73,
+        "tint-szafir": 5.37,
+        "tint-rubin": 5.35,
+        "tint-zielen": 5.42,
+        "tint-ametyst": 5.4
+      },
+      "grafit-jedwabny": {
+        "kosc-sloniowa": 5.44,
+        "alabaster": 4.61,
+        "tint-szafir": 4.31,
+        "tint-rubin": 4.3,
+        "tint-zielen": 4.35,
+        "tint-ametyst": 4.34
+      },
+      "zloto-antyczne": {
+        "kosc-sloniowa": 4.99,
+        "alabaster": 4.23,
+        "tint-szafir": 3.96,
+        "tint-rubin": 3.95,
+        "tint-zielen": 4.0,
+        "tint-ametyst": 3.98
+      },
+      "bursztyn-wyciszony": {
+        "kosc-sloniowa": 4.69,
+        "alabaster": 3.98,
+        "tint-szafir": 3.72,
+        "tint-rubin": 3.72,
+        "tint-zielen": 3.76,
+        "tint-ametyst": 3.75
+      }
+    },
+    "falsyfikator": "Zmiana ktoregokolwiek hexa albo krycia tintu z 12 % na inna wartosc uniewaznia cala macierz."
+  }
 }

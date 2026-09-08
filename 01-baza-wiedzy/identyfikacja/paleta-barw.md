@@ -48,6 +48,8 @@ docelowym - to pozycja otwarta, patrz sekcja „Do potwierdzenia".
 
 Procent farby, nie nowe wartości palety. Wyłącznie tła kart i pasy tabel.
 
+**Co na tincie wolno napisać:** Atrament, Szafir Nocny albo Lapis Stonowany. Grafit Jedwabny, Złoto Antyczne i Bursztyn Wyciszony schodzą na tincie poniżej AA 4,5:1 dla tekstu normalnego - pomiar w sekcji „Jasne tła nie są wymienne".
+
 | Tint | HEX | Podstawa | Atrament na tincie |
 |---|---|---|---|
 | Szafir 12 % | `#DCDAD5` | Szafir Nocny na Kości Słoniowej | **14,27:1** |
@@ -99,6 +101,10 @@ w mocy i ma mocniejszą podstawę: równość w mono (70 % wobec 70 %), nie blis
 | Bursztyn Wyciszony na Aksamicie Nocy | **3,68:1** | 4,5:1 tekst | wypełnienie z etykietą Kością Słoniową |
 | Złoto Antyczne na Aksamicie Nocy | **3,46:1** | 4,5:1 tekst | Złoto Szampańskie (9,58:1) |
 | Bursztyn Wyciszony na Alabastrze | **3,98:1** | 4,5:1 tekst | Kość Słoniowa jako tło (4,69:1) |
+| Złoto Antyczne na Alabastrze | **4,23:1** | 4,5:1 tekst | Kość Słoniowa jako tło (4,99:1) albo Grafit Jedwabny (4,61:1) |
+| Grafit Jedwabny na tincie 12 % | **4,30 - 4,35:1** | 4,5:1 tekst | Atrament (14,24 - 14,41:1) albo Lapis Stonowany (5,35 - 5,42:1) |
+| Złoto Antyczne na tincie 12 % | **3,95 - 4,00:1** | 4,5:1 tekst | jak wyżej |
+| Bursztyn Wyciszony na tincie 12 % | **3,72 - 3,76:1** | 4,5:1 tekst | jak wyżej |
 
 **Korekta wobec dokumentu źródłowego, druga.** `irn-design-paleta-kolorow.md` i rozdział
 „Dark mode" brandbooka podają dla Złota Antycznego na Aksamicie Nocy **3,94:1**. Przeliczenie daje
@@ -106,6 +112,37 @@ w mocy i ma mocniejszą podstawę: równość w mono (70 % wobec 70 %), nie blis
 Złota Antycznego `#7E7053`, sprzed pociemnienia do `#75674B` - ta sama liczba odtwarza się co do
 setnej na starym hexie. Tabela par zabronionych nie została przeliczona po zmianie. Wyrok się nie
 zmienia (para zabroniona w obu rachunkach), zmienia się liczba.
+
+## Jasne tła nie są wymienne - policzone 2026-09-08
+
+Sekcja wyżej miała dla jasnych podłoży jeden wiersz (Bursztyn na Alabastrze). Brakowało
+pozostałych, bo kontrasty w tabelach barw są liczone wobec **Kości Słoniowej i Aksamitu Nocy**,
+a Alabaster i cztery tinty 12 % dostały rolę tła („tła kart", „pasy tabel") bez pomiaru tekstu
+na nich. Poniżej ten pomiar. Wzór WCAG 2.1, liczone w tej sesji.
+
+| Tekst | Kość Słoniowa `#F7F3E9` | Alabaster `#E4E1D8` | tinty 12 % |
+|---|---|---|---|
+| Atrament `#07090C` | 17,99:1 | 15,25:1 | 14,24 - 14,41:1 |
+| Szafir Nocny `#132246` | 14,09:1 | 11,94:1 | 11,15 - 11,29:1 |
+| Lapis Stonowany `#305686` | 6,77:1 | 5,73:1 | 5,35 - 5,42:1 |
+| Grafit Jedwabny `#606369` | 5,44:1 | 4,61:1 | **4,30 - 4,35:1** |
+| Złoto Antyczne `#75674B` | 4,99:1 | **4,23:1** | **3,95 - 4,00:1** |
+| Bursztyn Wyciszony `#9B5E30` | 4,69:1 | **3,98:1** | **3,72 - 3,76:1** |
+
+**Wniosek:** tylko **Atrament, Szafir Nocny i Lapis Stonowany** trzymają AA 4,5:1 na wszystkich
+trzech rodzajach jasnego tła. Grafit Jedwabny trzyma na Kości Słoniowej i na Alabastrze, ale nie
+na tincie. Złoto Antyczne i Bursztyn Wyciszony trzymają wyłącznie na Kości Słoniowej.
+
+Konsekwencja praktyczna: karta na Alabastrze z metadanymi w Złocie Antycznym jest poniżej AA,
+a wiersz tabeli na tincie z tekstem drugorzędnym w Grafcie Jedwabnym też. Nie jest to sprzeczność
+z żadną zatwierdzoną liczbą - to pomiar pary, której nikt wcześniej nie policzył.
+
+Zastrzeżenie, żeby nie przesadzić z zakazem: **próg 4,5:1 dotyczy tekstu normalnego.** Dla tekstu
+dużego (18 pt, albo 14 pt pogrubione) próg to 3:1 i wszystkie sześć barw go trzymają na każdym
+z tych podłoży. Zakaz dotyczy więc metadanych i przypisów, nie nagłówków.
+
+**Falsyfikator:** zmiana któregoś hexa albo krycia tintu z 12 % na inną wartość - wtedy cała ta
+tabela liczy się od nowa, bo tinty są wyliczane z krycia, nie wpisywane.
 
 ## Etykieta na wypełnieniu - kolor przepisany, nie dobierany
 
