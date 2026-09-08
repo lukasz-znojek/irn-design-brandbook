@@ -458,14 +458,22 @@ Wszystkie trzy z listy właściciela z 2026-09-03. Szczegóły i uzasadnienie: c
 
 | Plik | Warunek wejścia | Uwaga |
 |---|---|---|
-| Arkusz `.xlsx` z tabelą, pasami wierszy i wykresami | pozycje 14 i 15 zamknięte na kanwie | pasy wierszy na parze Kaszmir `#FBF8F2` i Muślin `#F6F2E9`, kontrast **1,054:1** - zmierzone; Pergamin odpada przy **1,247:1** |
-| Szablon `.docx` do pisania pism | tura 1 zamknięta | sens polega na tym, że firma pisze pismo **bez** Claude Design |
-| Podpis e-mail w HTML | tura 1 zamknięta | art. 206 KSH wymaga danych rejestrowych na pismach spółki, a e-mail jest głównym kanałem pism wychodzących |
+| Arkusz `.xlsx` z tabelą, pasami wierszy i wykresami | pozycje 14 i 15 zamknięte na kanwie | **wiersz do przeliczenia od nowa**: kontrasty 1,054:1 i 1,247:1 policzono na parach Kaszmir / Muślin / Pergamin, a te barwy wypadły z systemu razem z paletą „Kaszmir Wyciszony" 2026-09-03. Pary pasów wierszy trzeba wybrać z Regalii i zmierzyć na nowo |
+| Szablon `.docx` do pisania pism | tura 1 zamknięta | **zrobione 2026-09-08**: `_robocze/pismo-firmowe/` - szablon, generator, symulacja układu i README z pomiarami |
+| Podpis e-mail w HTML | tura 1 zamknięta | **zrobione 2026-09-08**: `_robocze/podpis-mailowy/` |
 
-- [ ] **Krok 1:** `.docx` i podpis e-mail po zamknięciu tury 1.
+- [x] **Krok 1:** `.docx` i podpis e-mail - zrobione. Oba leżą w `_robocze/`, bo repozytorium
+      nie ma warstwy gotowych plików; rekomendacja czwartej warstwy `04-materialy/` czeka na
+      decyzję właściciela i nic nie jest przenoszone przed nią.
 - [ ] **Krok 2:** `.xlsx` po zamknięciu pozycji 14 i 15; przed wyborem kolorów wykresu wczytać
-      wytyczne do wizualizacji danych, nie dobierać ich z palety na oko.
-- [ ] **Krok 3: weryfikacja** - otworzyć każdy plik i sprawdzić, że działa, nie tylko że istnieje.
+      wytyczne do wizualizacji danych, nie dobierać ich z palety na oko. Przed pomiarem pasów
+      wierszy wybrać parę z Regalii - stare pary z wiersza wyżej już nie istnieją.
+- [x] **Krok 3: weryfikacja** dla `.docx` i podpisu e-mail - wykonana w granicach kontenera
+      i jawnie ograniczona. Czego **nie** dało się zrobić: w tym kontenerze LibreOffice nie ma
+      modułu Writer, a `pdftoppm` nie jest zainstalowany, więc `.docx` nie został otwarty
+      w żadnym edytorze. Zamiast tego: odczyt geometrii wprost z OOXML plus symulacja układu
+      w Chromium na prawdziwym Manrope. Pełna lista pomiarów i falsyfikatorów:
+      `_robocze/pismo-firmowe/README.md`. Dla `.xlsx` krok 3 zostaje otwarty.
 
 ### Zadanie S6: sprzeczność pozycji 1 z zakazem 1 - do rozstrzygnięcia przez właściciela
 

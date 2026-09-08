@@ -1,0 +1,58 @@
+<meta charset="utf-8">
+<link rel="stylesheet" href="../ds-bundle/fonts/fonts.css">
+<style>
+  @page { size: 210mm 297mm; margin: 0 }
+  html,body { margin:0; padding:0; background:#fff }
+  .strona { position:relative; width:210mm; height:297mm; overflow:hidden;
+            font-family:'Manrope',sans-serif; color:#07090C; }
+  .pole { position:absolute; left:19.985mm; top:17.992mm; width:170.04mm; height:251.02mm; }
+  .znak { position:absolute; left:19.985mm; top:8.996mm; width:40mm; height:8.448mm;
+          background:url(znak-poziom.png) no-repeat left top/contain; }
+  .stopka { position:absolute; left:19.985mm; width:170.04mm; bottom:11.994mm; }
+  p { margin:0; padding:0; }
+  .korpus   { font-size:10pt;   line-height:5.538mm; width:112mm; margin-bottom:6mm; }
+  .meta     { font-size:7.5pt;  line-height:3.969mm; width:112mm; color:#606369; margin-bottom:6mm; }
+  .adresat  { font-size:10pt;   line-height:5.538mm; width:83mm;  margin-bottom:0; }
+  .kicker   { font-size:10.5pt; line-height:4.445mm; width:112mm; margin-bottom:6mm;
+              font-weight:700; color:#132246; letter-spacing:0.22em; text-transform:uppercase; }
+  .temat    { font-size:18pt;   line-height:6.985mm; width:112mm; margin-bottom:12mm;
+              font-weight:700; color:#132246; letter-spacing:-0.01em; }
+  .lead     { font-size:12pt;   line-height:5.927mm; width:112mm; margin-bottom:12mm; }
+  .podsek   { font-size:12pt;   line-height:5.503mm; width:112mm; margin-bottom:6mm;
+              font-weight:700; color:#132246; }
+  .mono     { font-family:'Inconsolata',monospace; font-size:8pt; }
+  .data     { font-size:10pt; line-height:5.538mm; width:170.04mm; text-align:right;
+              color:#606369; margin-bottom:12mm; }
+  .sygn     { font-size:10pt; line-height:5.538mm; margin-left:87mm; width:83.04mm;
+              text-align:right; }
+  .sygn.pierwsza { border-top:0.75pt solid #606369; padding-top:8pt; }
+  .stopka p { font-size:7.5pt; line-height:3.969mm; color:#606369; }
+  .stopka .l1 { border-top:0.75pt solid #606369; padding-top:6pt; }
+  .stopka p { display:flex; justify-content:space-between; }
+  .przed24 { margin-top:24mm } .przed12 { margin-top:12mm }
+  .po12 { margin-bottom:12mm } .po24 { margin-bottom:24mm } .po0 { margin-bottom:0 }
+</style>
+<div class="strona">
+  <div class="znak"></div>
+  <div class="pole">
+    <p class="meta przed24 po0" style="letter-spacing:0.22em">ADRESAT</p>
+    <p class="adresat">[Imię i nazwisko albo nazwa firmy]</p>
+    <p class="adresat">[ulica i numer]</p>
+    <p class="adresat po12">[kod pocztowy i miejscowość]</p>
+    <p class="data">Kielce, <span class="mono">[RRRR-MM-DD]</span></p>
+    <p class="kicker">[Kategoria pisma]</p>
+    <p class="temat">[Temat pisma w jednym zdaniu]</p>
+    <p class="lead">[Lead: jedno albo dwa zdania, które mówią, po co jest to pismo i czego dotyczy.]</p>
+    <p class="podsek przed12">[Podsekcja]</p>
+    <p class="korpus">[Akapit korpusu. Zdanie kontrolne z pełnym zestawem polskich znaków: żółć, gęś, źdźbło, ćma, łódź, świt, żółw - ĄĆĘŁŃÓŚŹŻ ąćęłńóśźż.]</p>
+    <p class="korpus po24">[Akapit drugi. Odstęp między akapitami to 6 mm, czyli jedna jednostka rytmu pionowego.]</p>
+    <p class="meta po24" id="dane">Nr pisma: <span class="mono">[numer pisma]</span> &nbsp; · &nbsp; Numer usługi w BUR: <span class="mono">[numer usługi]</span></p>
+    <p class="sygn pierwsza">[Imię i Nazwisko]</p>
+    <p class="sygn" style="font-size:7.5pt;line-height:3.969mm;color:#606369">[stanowisko osoby upoważnionej]</p>
+  </div>
+  <div class="stopka">
+    <p class="l1"><span class="lewo">Instytut Rozwoju i Nauki sp. z o.o., ul. Karola Olszewskiego 6, 25-663 Kielce</span><span>[e-mail firmowy]</span></p>
+    <p><span class="lewo">Sąd Rejonowy w Kielcach, X Wydział Gospodarczy Krajowego Rejestru Sądowego, KRS <span class="mono">0001032499</span></span><span>[telefon]</span></p>
+    <p class="l3"><span>NIP <span class="mono">9592061542</span> &nbsp;·&nbsp; kapitał zakładowy <span class="mono">40 000,00 zł</span> &nbsp;·&nbsp; www.irin.pl</span><span class="mono">strona 1 z 1</span></p>
+  </div>
+</div>
