@@ -1,0 +1,55 @@
+name: Claude – zadanie ręczne
+
+# Ręczny zamiennik panelu „Agents”: Actions → „Claude – zadanie ręczne” → „Run workflow”.
+# Działa na subskrypcji Claude (sekret CLAUDE_CODE_OAUTH_TOKEN), nie na GitHub AI credits.
+on:
+  workflow_dispatch:
+    inputs:
+      zadanie:
+        description: "Treść zadania dla agenta (po polsku)"
+        required: true
+        type: string
+      cel:
+        description: "Numer issue albo PR, pod którym ma stanąć wynik. Puste = agent utworzy nowe issue z wynikiem."
+        required: false
+        type: string
+        default: ""
+
+jobs:
+  zadanie:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          prompt: |
+            REPOZYTORIUM: ${{ github.repository }}
+            URUCHOMIŁ: ${{ github.actor }}
+            RUN: ${{ github.run_id }}
+            CEL (issue/PR na wynik, może być puste): ${{ inputs.cel }}
+
+            ZADANIE:
+            ${{ inputs.zadanie }}
+
+            Przeczytaj CLAUDE.md, sekcję „Agent Claude w GitHub (rola i granice)”, i wykonaj
+            zadanie po polsku, krótko i formalnie, w granicach tam opisanych.
+
+            Publikacja wyniku:
+            - Gdy CEL jest podany: jeden komentarz `gh issue comment <numer>` (działa też dla PR).
+            - Gdy CEL jest pusty: `gh issue create` z tytułem zaczynającym się od „Wynik zadania:”.
+            - Gdy zadanie wymaga zmian w plikach: nigdy na `main`. Utwórz gałąź
+              `claude/zadanie-${{ github.run_id }}`, zrób commit, wypchnij ją i otwórz PR do `main`
+              komendą `gh pr create`; w komentarzu wyniku podaj odsyłacz do PR.
+            - Nie zamykaj issues ani PR-ów, nie scalaj, nie twórz etykiet.
+            Zakończ komentarz jednym zdaniem: co zrobiono i co wymaga decyzji właściciela.
+          claude_args: |
+            --max-turns 30
+            --allowedTools "Read,Grep,Glob,Edit,Write,Bash(git checkout:*),Bash(git add:*),Bash(git commit:*),Bash(git push:*),Bash(git status:*),Bash(git diff:*),Bash(gh issue view:*),Bash(gh issue comment:*),Bash(gh issue create:*),Bash(gh pr view:*),Bash(gh pr comment:*),Bash(gh pr create:*),Bash(gh pr diff:*)"
