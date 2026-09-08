@@ -1,0 +1,56 @@
+<!-- IRIN - podpis mailowy. Paleta Regalia. Wersja 2026-09-08.
+     Wklejasz sam blok <table> ponizej do ustawien podpisu w kliencie pocztowym.
+     Nie dodawaj <style>, nie dodawaj klas - Gmail i Outlook je usuwaja.
+     Pola w [NAWIASACH] podmieniasz na dane osoby. -->
+
+<table cellpadding="0" cellspacing="0" border="0" bgcolor="#FFFFFF" style="background-color:#FFFFFF;border-collapse:collapse;width:520px;max-width:520px;font-family:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;">
+  <tr>
+    <td style="padding:0 0 12px 0;">
+      <!-- Znak: PNG wariantu PIONOWEGO, 90 px szerokosci.
+           PNG musi byc wyeksportowany OBCIETY DO OBWIEDNI ARTWORKU (103,728 x 87,312),
+           nie do pelnego viewBox pliku SVG. Eksport z viewBox dalby znak o szerokosci
+           50 px w kontenerze 90 px, czyli ponizej minimum 90 px na ekranie.
+           Podmien src na adres, pod ktorym hostujesz plik. -->
+      <img src="[ADRES-PNG-ZNAKU]" width="90" height="76" alt="IRIN - Instytut Rozwoju i Nauki" style="display:block;border:0;outline:none;text-decoration:none;width:90px;height:76px;">
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0 0 2px 0;font-family:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:15px;line-height:20px;font-weight:600;color:#07090C;">
+      [Imię i Nazwisko]
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0 0 10px 0;font-family:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:13px;line-height:18px;font-weight:400;color:#606369;">
+      [Stanowisko]
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:0;font-size:0;line-height:0;">
+      <!-- Linia rozdzielajaca. Grafit Jedwabny, nie Zloto Szampanskie: linia oddziela
+           bloki informacji, wiec jest grafika znaczaca i podlega progowi 3:1.
+           Zloto na bieli daje 2,00:1 i by zniknelo. Grafit daje 6,02:1. -->
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;width:88px;"><tr><td height="1" bgcolor="#606369" style="height:1px;line-height:1px;font-size:0;background-color:#606369;">&nbsp;</td></tr></table>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:10px 0 0 0;font-family:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:13px;line-height:20px;color:#07090C;">
+      tel. <span style="font-family:'Inconsolata',Consolas,'Courier New',monospace;color:#07090C;">[+48&nbsp;000&nbsp;000&nbsp;000]</span><br>
+      <a href="mailto:[imie.nazwisko@irin.pl]" style="color:#305686;text-decoration:underline;">[imie.nazwisko@irin.pl]</a><br>
+      <a href="https://www.irin.pl" style="color:#305686;text-decoration:underline;">www.irin.pl</a>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:14px 0 0 0;font-family:'Manrope',-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:11px;line-height:16px;color:#606369;">
+      <!-- Blok wymagany przez art. 206 Kodeksu spolek handlowych. Przepis obejmuje pisma
+           i zamowienia handlowe skladane przez spolke w formie papierowej I ELEKTRONICZNEJ,
+           wiec obejmuje wiadomosc e-mail. Cztery pozycje ponizej sa obowiazkowe.
+           Podstawa w repozytorium: 02-szablony-dokumentow/papier-firmowy.md.
+           Zadnej z tych czterech pozycji nie wolno skrocic ani usunac. -->
+      Instytut Rozwoju i Nauki sp. z o.o., ul. Karola Olszewskiego 6, 25-663 Kielce<br>
+      Sąd Rejonowy w Kielcach, X Wydział Gospodarczy Krajowego Rejestru Sądowego,
+      KRS <span style="font-family:'Inconsolata',Consolas,'Courier New',monospace;">0001032499</span><br>
+      NIP <span style="font-family:'Inconsolata',Consolas,'Courier New',monospace;">9592061542</span>
+      &nbsp;·&nbsp; kapitał zakładowy <span style="font-family:'Inconsolata',Consolas,'Courier New',monospace;">40&nbsp;000,00&nbsp;zł</span>
+    </td>
+  </tr>
+</table>
