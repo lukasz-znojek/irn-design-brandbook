@@ -1808,7 +1808,7 @@ wpisuje żadnej wartości wprost.** Próbki barw też idą przez `var()`.
   `<!-- @dsCard group="Fundamenty" -->` albo `group="Prymitywy"`. Z tej
   adnotacji panel Design System buduje indeks - zadanie 15 na tym stoi.
 
-- [ ] **Krok 1: Przepisz siedem kart**
+- [x] **Krok 1: Przepisz siedem kart**
 
 Wspólne reguły dla każdej z nich:
 - `<link rel="stylesheet" href="../../../styles.css">` - ścieżka bez zmian.
@@ -1835,7 +1835,7 @@ Wspólne reguły dla każdej z nich:
 - Karta `StopkaFirmowa`: linia `.irin-linia-struktury` plus jeden pas
   metadanych na `.irin-siatka`, callout o strefie stopki 28 mm i granicy 12 mm.
 
-- [ ] **Krok 2: Przepisz kartę stanu - to nie jest zmiana kosmetyczna**
+- [x] **Krok 2: Przepisz kartę stanu - to nie jest zmiana kosmetyczna**
 
 Stara karta nazywa się `PlakietkaStatusu` i pokazuje cztery plakietki
 **na wypełnieniu barwnym**, po jednej na token stanu. Regalia nie ma tokenów
@@ -1854,7 +1854,7 @@ git mv _robocze/ds-bundle/components/prymitywy/PlakietkaStanu/PlakietkaStatusu.h
        _robocze/ds-bundle/components/prymitywy/PlakietkaStanu/PlakietkaStanu.html
 ```
 
-- [ ] **Krok 3: Sprawdź, że żadna karta nie wpisuje wartości wprost**
+- [x] **Krok 3: Sprawdź, że żadna karta nie wpisuje wartości wprost**
 
 ```bash
 grep -rn -E '#[0-9A-Fa-f]{6}' _robocze/ds-bundle/components/ && echo "LITERALNY HEX - popraw" || echo "karty: zero literalnych hexów"
@@ -1865,7 +1865,7 @@ Oczekiwane: `karty: zero literalnych hexów` i **kod wyjścia 0** dla całej
 bramki spójności, o ile zadanie 10 (`guidelines/`) też jest już zrobione;
 jeżeli nie - zgłaszane mają być wyłącznie pliki z `guidelines/`.
 
-- [ ] **Krok 4: Otwórz osiem kart w przeglądarce**
+- [x] **Krok 4: Otwórz osiem kart w przeglądarce**
 
 ```bash
 NODE_PATH=/opt/node22/lib/node_modules node - <<'JS'
@@ -1904,7 +1904,7 @@ JS
 
 Oczekiwane: osiem wierszy `OK`, `kart: 8, złych: 0`.
 
-- [ ] **Krok 5: Commit**
+- [x] **Krok 5: Commit**
 
 ```bash
 git add -A _robocze/ds-bundle/components/
