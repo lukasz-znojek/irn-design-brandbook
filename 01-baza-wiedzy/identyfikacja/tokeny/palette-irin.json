@@ -611,5 +611,133 @@
       }
     },
     "falsyfikator": "Zmiana ktoregokolwiek hexa albo krycia tintu z 12 % na inna wartosc uniewaznia cala macierz."
+  },
+  "stopnie-serii-wykresu": {
+    "data-pomiaru": "2026-09-08",
+    "tlo-kompozycji": "#F7F3E9",
+    "uwaga": "Stopnie krycia 100/72/50/30 % skomponowane na tle, bo wypelnienie w arkuszu i w druku jest kryjace. Prog 3:1 to WCAG 1.4.11 dla grafiki znaczacej.",
+    "obrys-serii": {
+      "kolor": "#07090C",
+      "nazwa": "Atrament",
+      "grubosc-mm": 0.25,
+      "uzasadnienie": "Grafit Jedwabny na stopniu 72 % daje 1,03-1,09:1 i znika w wypelnieniu."
+    },
+    "serie": {
+      "szafir-nocny": {
+        "100": {
+          "hex": "#132246",
+          "do-tla": 14.09,
+          "nad-progiem-3": true,
+          "obrys-atrament-na-wypelnieniu": 1.28
+        },
+        "72": {
+          "hex": "#535D74",
+          "do-tla": 5.95,
+          "nad-progiem-3": true,
+          "obrys-atrament-na-wypelnieniu": 3.02
+        },
+        "50": {
+          "hex": "#858A98",
+          "do-tla": 3.11,
+          "nad-progiem-3": true,
+          "obrys-atrament-na-wypelnieniu": 5.78
+        },
+        "30": {
+          "hex": "#B3B4B8",
+          "do-tla": 1.87,
+          "nad-progiem-3": false,
+          "obrys-atrament-na-wypelnieniu": 9.62
+        }
+      },
+      "rubin-gleboki": {
+        "100": {
+          "hex": "#541319",
+          "do-tla": 12.77,
+          "nad-progiem-3": true,
+          "obrys-atrament-na-wypelnieniu": 1.41
+        },
+        "72": {
+          "hex": "#825253",
+          "do-tla": 5.78,
+          "nad-progiem-3": true,
+          "obrys-atrament-na-wypelnieniu": 3.11
+        },
+        "50": {
+          "hex": "#A68381",
+          "do-tla": 3.06,
+          "nad-progiem-3": true,
+          "obrys-atrament-na-wypelnieniu": 5.87
+        },
+        "30": {
+          "hex": "#C6B0AB",
+          "do-tla": 1.86,
+          "nad-progiem-3": false,
+          "obrys-atrament-na-wypelnieniu": 9.68
+        }
+      },
+      "zielen-butelkowa": {
+        "100": {
+          "hex": "#0B3627",
+          "do-tla": 12.06,
+          "nad-progiem-3": true,
+          "obrys-atrament-na-wypelnieniu": 1.49
+        },
+        "72": {
+          "hex": "#4D6B5D",
+          "do-tla": 5.3,
+          "nad-progiem-3": true,
+          "obrys-atrament-na-wypelnieniu": 3.4
+        },
+        "50": {
+          "hex": "#819488",
+          "do-tla": 2.9,
+          "nad-progiem-3": false,
+          "obrys-atrament-na-wypelnieniu": 6.19
+        },
+        "30": {
+          "hex": "#B0BAAF",
+          "do-tla": 1.81,
+          "nad-progiem-3": false,
+          "obrys-atrament-na-wypelnieniu": 9.96
+        }
+      },
+      "bursztyn-wyciszony": {
+        "100": {
+          "hex": "#9B5E30",
+          "do-tla": 4.69,
+          "nad-progiem-3": true,
+          "obrys-atrament-na-wypelnieniu": 3.83
+        },
+        "72": {
+          "hex": "#B58864",
+          "do-tla": 2.84,
+          "nad-progiem-3": false,
+          "obrys-atrament-na-wypelnieniu": 6.33
+        },
+        "50": {
+          "hex": "#C9A88C",
+          "do-tla": 2.0,
+          "nad-progiem-3": false,
+          "obrys-atrament-na-wypelnieniu": 8.98
+        },
+        "30": {
+          "hex": "#DBC6B2",
+          "do-tla": 1.49,
+          "nad-progiem-3": false,
+          "obrys-atrament-na-wypelnieniu": 12.09
+        }
+      }
+    },
+    "falsyfikator": "Wypelnienie na tle innym niz Kosc Sloniowa - stopnie sa komponowane z tlem, wiec cala tabela liczy sie od nowa.",
+    "wyjatek-wykres-liniowy": {
+      "serii-najwyzej": 3,
+      "stopnie": [
+        "100",
+        "72",
+        "50"
+      ],
+      "grubosc-linii-mm": 0.5,
+      "powod": "Linia nie ma wypelnienia, wiec obrys Atramentem nie ma czego obrysowac; stopien 30 % zostaje ze swoim 1,87:1 i wypada."
+    }
   }
 }

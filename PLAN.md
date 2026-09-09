@@ -458,22 +458,30 @@ Wszystkie trzy z listy właściciela z 2026-09-03. Szczegóły i uzasadnienie: c
 
 | Plik | Warunek wejścia | Uwaga |
 |---|---|---|
-| Arkusz `.xlsx` z tabelą, pasami wierszy i wykresami | pozycje 14 i 15 zamknięte na kanwie; **plus decyzja o parze pasów** | **przeliczone 2026-09-08.** Stare 1,054:1 i 1,247:1 dotyczyły Kaszmiru, Muślinu i Pergaminu, czyli barw wycofanych z paletą „Kaszmir Wyciszony". W Regalii wybór jest wymuszony i ma koszt po obu stronach - patrz akapit pod tabelą |
+| Arkusz `.xlsx` z tabelą, pasami wierszy i wykresami | pozycje 14 i 15 zamknięte na kanwie | **zrobione 2026-09-09**: `_robocze/arkusz-wzorcowy/`. Stare 1,054:1 i 1,247:1 dotyczyły Kaszmiru, Muślinu i Pergaminu, czyli barw wycofanych z paletą „Kaszmir Wyciszony" - przeliczone. Para pasów stoi na rekomendacji, nie na decyzji: patrz akapit pod listą |
 | Szablon `.docx` do pisania pism | tura 1 zamknięta | **zrobione 2026-09-08**: `_robocze/pismo-firmowe/` - szablon, generator, symulacja układu i README z pomiarami |
 | Podpis e-mail w HTML | tura 1 zamknięta | **zrobione 2026-09-08**: `_robocze/podpis-mailowy/` |
 
 - [x] **Krok 1:** `.docx` i podpis e-mail - zrobione. Oba leżą w `_robocze/`, bo repozytorium
       nie ma warstwy gotowych plików; rekomendacja czwartej warstwy `04-materialy/` czeka na
       decyzję właściciela i nic nie jest przenoszone przed nią.
-- [ ] **Krok 2:** `.xlsx` po zamknięciu pozycji 14 i 15; przed wyborem kolorów wykresu wczytać
-      wytyczne do wizualizacji danych, nie dobierać ich z palety na oko. Przed pomiarem pasów
-      wierszy rozstrzygnąć parę pasów - patrz akapit pod listą.
+- [x] **Krok 2:** `.xlsx` zrobiony 2026-09-09, `_robocze/arkusz-wzorcowy/`. Barw wykresu **nie
+      dobierano z palety na oko**: generator czyta stopnie z `tokeny/palette-irin.json`, a reguła
+      „jedna barwa, cztery stopnie krycia" była już w `paleta-barw.md`. Przy tej okazji wyszło,
+      że sama reguła nie wystarcza - stopień 30 % ma do tła 1,87:1 przy progu 3:1 z WCAG 1.4.11,
+      a Bursztyn Wyciszony traci trzy stopnie z czterech. Domknięte obrysem Atramentem 0,25 mm
+      i wyjątkiem dla wykresu liniowego (trzy serie). Pomiar w `paleta-barw.md`.
+      **Otwarte:** para pasów wierszy stoi na rekomendacji, nie na decyzji - akapit pod listą.
 - [x] **Krok 3: weryfikacja** dla `.docx` i podpisu e-mail - wykonana w granicach kontenera
       i jawnie ograniczona. Czego **nie** dało się zrobić: w tym kontenerze LibreOffice nie ma
       modułu Writer, a `pdftoppm` nie jest zainstalowany, więc `.docx` nie został otwarty
       w żadnym edytorze. Zamiast tego: odczyt geometrii wprost z OOXML plus symulacja układu
       w Chromium na prawdziwym Manrope. Pełna lista pomiarów i falsyfikatorów:
-      `_robocze/pismo-firmowe/README.md`. Dla `.xlsx` krok 3 zostaje otwarty.
+      `_robocze/pismo-firmowe/README.md`. **Dla `.xlsx` to samo ograniczenie i ta sama droga:**
+      LibreOffice w tym kontenerze nie ma również modułu Calc, więc arkusz sprawdzono odczytem
+      OOXML i odczytem zwrotnym przez openpyxl - formuły, barwy z kanałem alfa, `strRef`
+      na kategoriach osi, `min val="0"`, obrys 9000 EMU, marginesy 20/20/18/28 mm i zero komórek
+      bez polskich znaków. Lista w `_robocze/arkusz-wzorcowy/README.md`.
 
 **Para pasów wierszy w Regalii - decyzja właściciela, jedna z dwóch.** Jasny koniec palety ma
 trzy poziomy: Kość Słoniowa `#F7F3E9` (L* 95,90), Alabaster `#E4E1D8` (L* 89,53) i cztery tinty

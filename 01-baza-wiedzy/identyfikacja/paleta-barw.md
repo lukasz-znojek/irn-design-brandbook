@@ -188,6 +188,41 @@ Serie różni jasność, nie odcień, więc działają w mono i przy zaburzeniac
 Dokument przekrojowy: serie mogą być barwami dziedzin, bo wtedy barwa kategorii nie koduje,
 tylko ją powtarza - warunek: każda oś podpisana słowem. Maksymalnie cztery serie, oś Y od zera.
 
+**Cztery stopnie krycia nie wystarczają same - policzone 2026-09-08.** Reguła wyżej mówi, jak
+odróżnić serie od siebie, i nie mówiła, czy każda seria odróżnia się od **tła**. WCAG 1.4.11 stawia
+grafice znaczącej próg 3:1. Stopnie skomponowane na Kości Słoniowej (bo wypełnienie w arkuszu
+i w druku jest kryjące, nie półprzezroczyste):
+
+| Barwa serii | 100 % | 72 % | 50 % | 30 % |
+|---|---|---|---|---|
+| Szafir Nocny | `#132246` 14,09:1 | `#535D74` 5,95:1 | `#858A98` 3,11:1 | `#B3B4B8` **1,87:1** |
+| Rubin Głęboki | `#541319` 12,77:1 | `#825253` 5,78:1 | `#A68381` 3,06:1 | `#C6B0AB` **1,86:1** |
+| Zieleń Butelkowa | `#0B3627` 12,06:1 | `#4D6B5D` 5,30:1 | `#819488` **2,90:1** | `#B0BAAF` **1,81:1** |
+| Bursztyn Wyciszony | `#9B5E30` 4,69:1 | `#B58864` **2,84:1** | `#C9A88C` **2,00:1** | `#DBC6B2` **1,49:1** |
+
+Pogrubione są poniżej 3:1. Skala nie jest równa dla czterech barw: Szafir i Rubin tracą jeden
+stopień, Zieleń dwa, a **Bursztyn Wyciszony trzy z czterech** - jego jedyny stopień nad progiem
+to pełne krycie.
+
+**Reguła, która to domyka: każda seria dostaje obrys Atramentem `#07090C`, grubość 0,25 mm**
+(wartość z sekcji „Minimalna grubość linii", wiersz linii niosącej strukturę). Atrament ma wobec
+tła 17,99:1, więc krawędź kształtu zawsze przekracza próg. Wobec własnego wypełnienia obrys ma
+3,02 do 12,09:1 na każdym stopniu poza pełnym kryciem Szafiru, Rubinu i Zieleni - a tam granicę
+niesie samo wypełnienie (12,06 do 14,09:1). **Grafit Jedwabny na obrys serii nie wchodzi**:
+na stopniu 72 % daje 1,03 do 1,09:1, czyli znika w wypełnieniu.
+
+Skutek dla Bursztynu: wykres czterech serii w tej barwie stoi wyłącznie na obrysie i na podpisach.
+Bezpieczniej dać mu dwie serie albo zrobić ten wykres Szafirem jako materiał przekrojowy.
+
+**Wykres liniowy jest wyjątkiem: tam serii jest trzy, nie cztery.** Linia nie ma wypełnienia,
+więc nie ma czego obrysować - obrys Atramentem ratuje słupek, kołowy i warstwowy, a linii nie.
+Stopień 30 % zostaje wtedy sam ze swoim 1,87:1 i wypada. Trzy stopnie (100 / 72 / 50) mają
+14,09, 5,95 i 3,11:1, czyli wszystkie nad progiem. Grubość linii serii: 0,5 mm, dwukrotność
+minimum dla linii niosącej strukturę - nie nowa wartość, tylko zapas nad podłogą 0,25 mm.
+
+**Falsyfikator:** wypełnienie na tle innym niż Kość Słoniowa - na Alabastrze, na tincie albo na
+Aksamicie Nocy cała tabela liczy się od nowa, bo stopnie są komponowane z tłem, nie niezależne.
+
 **Dlaczego nie paleta serii.** Sprawdzone walidatorem palet kategorialnych na palecie poprzedniej:
 nasycenie każdej barwy leżało poniżej podłogi 0,10 w OKLCH, więc barwy czytały się jako szarości.
 Regalia jest palettą jeszcze ciemniejszą i zwartą kontrastowo (cztery barwy nośne w rozpiętości
