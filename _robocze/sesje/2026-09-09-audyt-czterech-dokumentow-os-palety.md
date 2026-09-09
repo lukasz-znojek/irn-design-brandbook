@@ -109,7 +109,15 @@ z własnej decyzji.
 
 ## Czego ten audyt NIE objął
 
-Wyłącznie oś **palety i kontrastu**. Nietknięte zostają trzy osie, które miały własnych agentów:
+**Domknięte tego samego dnia w osobnej notatce:**
+[`2026-09-09-audyt-trzech-osi-siatka-typografia-logotyp.md`](./2026-09-09-audyt-trzech-osi-siatka-typografia-logotyp.md).
+Trzy ustalenia twarde: dryf 19 mm w brandbooku wobec 20,86 mm z rachunku, skala zamknięta
+na dziesięciu poziomach wobec jedenastu w warstwie 1 (z dwoma stopniami pod podłogą składu),
+oraz proporcje 1,773 : 1 i 1,135 : 1 w zakazie rozciągania w księdze znaku - to proporcje
+viewBoksu, nie znaku.
+
+Ten audyt objął wyłącznie oś **palety i kontrastu**. Nietknięte zostawił trzy osie, które miały
+własnych agentów:
 
 1. **Siatka A4** - brandbook wobec `siatka-a4.md`: kolumny, moduł, gutter, marginesy, strefy.
 2. **Typografia** - brandbook wobec `typografia.md`: kroje, wagi, stopnie, interlinie, tracking,

@@ -22,6 +22,7 @@ SPRAWDZANE = [
     "01-baza-wiedzy/identyfikacja/README.md",
     "03-pakiet-claude-design/format-paczki.md",
     "03-pakiet-claude-design/prompt-bazowy.md",
+    "03-pakiet-claude-design/zlecenia/audyt-projektu-do-wyslania.md",
     "_robocze/ds-bundle/README.md",
     "_robocze/ds-bundle/styles.css",
 ]
@@ -38,6 +39,16 @@ WYCOFANE = {
     "#004D49": "Werdykt v5.1", "#803700": "Rubryka v5.1", "#007987": "Patyna v5.1",
     "#191647": "Ultramaryna v5.1", "#905E88": "Rubin v5.1", "#2D795C": "Szmaragd v5.1",
     "#3D3D00": "Oliwin v5.0", "#F2ECE1": "Kaszmir v1", "#1E1611": "Espresso v1",
+    # Dwie wartości sprzed pociemnienia w obrębie Regalii. Nie są z wycofanej palety,
+    # ale są wycofanymi wartościami: obie stoją w dokumencie irn-design-paleta-kolorow,
+    # w tabeli „Co zmieniono wobec wariantu Regalia", w kolumnie „Było".
+    # Udokumentowany przypadek błędnej liczby jest na razie jeden, dla Złota Antycznego:
+    # kontrast 3,94:1 na Aksamicie Nocy odtwarza się co do czwartego miejsca na #7E7053
+    # (3,9417), a na obowiązującym #75674B daje 3,4577. Dla Bursztynu Wyciszonego
+    # (#A7693C wobec obowiązującego #9B5E30) takiego przypadku nie znaleziono - wpis
+    # stoi tu profilaktycznie, bo wartość jest wycofana, nie dlatego, że coś zepsuła.
+    "#7E7053": "Złoto Antyczne sprzed pociemnienia",
+    "#A7693C": "Bursztyn Wyciszony sprzed pociemnienia",
 }
 
 def pliki():
@@ -51,6 +62,47 @@ def pliki():
             for p in sorted(d.rglob("*")):
                 if p.is_file() and p.suffix in (".md", ".html", ".css"):
                     yield p
+
+# Dwa znaczniki, którymi plik deklaruje bramce, że dana wartość jest CYTATEM,
+# a nie użyciem. Bez nich bramka nie umie odróżnić listy wykrywającej od składu
+# i oznacza cały klucz wyszukiwania jako błędy - dokładnie ten zarzut postawiła
+# recenzja PR 77.
+#
+#   <!-- bramka: klucz-wyszukiwania -->      przed blokiem ```, cały blok pomijany
+#   <!-- bramka: liczby-cytowane-jako-bledne 3,94 -->   wypisane liczby wolno
+#                                            w tym pliku podać jako błędne
+#
+# Znacznik obejmuje jeden plik i jeden blok. Nie ma znacznika globalnego i nie ma
+# znacznika na hex w prozie: hex spoza palety w prozie zostaje błędem zawsze.
+ZN_BLOK = "<!-- bramka: klucz-wyszukiwania -->"
+ZN_LICZBY = "<!-- bramka: liczby-cytowane-jako-bledne"
+
+def wyjatki(tresc):
+    """Zwraca (numery wierszy do pominięcia, liczby dopuszczone jako cytat)."""
+    pominiete, cytowane = set(), set()
+    czeka = False
+    w_bloku = False
+    for nr, wiersz in enumerate(tresc.splitlines(), 1):
+        s = wiersz.strip()
+        if ZN_LICZBY in wiersz:
+            ogon = wiersz.split(ZN_LICZBY, 1)[1]
+            cytowane |= set(re.findall(r"\d{1,2},\d{2}", ogon))
+            continue
+        if s == ZN_BLOK:
+            czeka = True
+            continue
+        if s.startswith("```"):
+            if czeka and not w_bloku:
+                w_bloku, czeka = True, False
+                pominiete.add(nr)
+                continue
+            if w_bloku:
+                w_bloku = False
+                pominiete.add(nr)
+                continue
+        if w_bloku:
+            pominiete.add(nr)
+    return pominiete, cytowane
 
 def main():
     d = json.loads(JSON.read_text(encoding="utf-8"))
@@ -76,7 +128,10 @@ def main():
     for p in pliki():
         tresc = p.read_text(encoding="utf-8", errors="replace")
         rel = p.relative_to(ROOT)
+        pominiete, cytowane = wyjatki(tresc)
         for nr, wiersz in enumerate(tresc.splitlines(), 1):
+            if nr in pominiete:
+                continue
             for hx in re.findall(r"#[0-9A-Fa-f]{6}\b", wiersz):
                 sprawdzonych += 1
                 g = hx.upper()
@@ -86,7 +141,7 @@ def main():
                     bledy.append(f"{rel}:{nr}  {hx} - nie ma tej wartości w palette-irin.json")
             for kontr in re.findall(r"\b(\d{1,2},\d{2})\s*:\s*1\b", wiersz):
                 sprawdzonych += 1
-                if kontr not in liczby:
+                if kontr not in liczby and kontr not in cytowane:
                     bledy.append(f"{rel}:{nr}  kontrast {kontr}:1 - "
                                  f"nie ma tej liczby w palette-irin.json")
 
