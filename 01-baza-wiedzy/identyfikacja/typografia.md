@@ -81,3 +81,31 @@ Znaki: ĄĆĘŁŃÓŚŹŻ ąćęłńóśźż.
 Metoda: cmap rozpakowanych woff2, kontur sprawdzony BoundsPen; oba kroje zmienne, więc pokrycie nie może różnić się między wagami.
 
 **Co pozostaje niepotwierdzone:** czytelność ogonków na wydruku przy stopniu podłogi - falsyfikator otwarty. Pokrycie glifu w foncie i czytelność ogonka na papierze to dwa różne twierdzenia; pierwsze jest zmierzone, drugie czeka na wydruk.
+
+### Jak ten pomiar zrobiono
+
+Narzędzie: `_robocze/narzedzia/pokrycie-diakrytykow.py`, uruchomione na
+`_robocze/ds-bundle/fonts/fonts.css`, czyli na paczce z fontami osadzonymi jako
+data URI. Pomiar powtarza się jednym poleceniem po każdej zmianie tego pliku.
+
+| Krój | Podzbiory | Oś `wght` w pliku | Pokrycie | Puste glify |
+|---|---|---|---|---|
+| Manrope | 2 pliki (`latin`, `latin-ext`), razem 39 816 B | 200-800 | **18/18** | brak |
+| Inconsolata | 2 pliki (`latin`, `latin-ext`), razem 54 576 B | 200-900, CSS udostępnia 300-700 | **18/18** | brak |
+
+Trzy wnioski, każdy z własnym zakresem:
+
+1. **Podstawienie z innego kroju jest w tej paczce niemożliwe.** Każdy z osiemnastu
+   znaków ma odwzorowanie w tablicy `cmap` i realny kontur, więc przeglądarka nie ma
+   powodu sięgać po krój zastępczy.
+2. **Glify nie mogą różnić się między wagami.** Oba kroje są zmienne, z ciągłą osią
+   `wght` i jednym plikiem na podzbiór - nie istnieje osobny plik dla wagi 500,
+   w którym mogłoby czegoś brakować. Pytanie „czy komplet diakrytyków jest w każdej
+   wadze" przestaje być dla tej paczki pytaniem empirycznym.
+3. **Ó i ó siedzą w podzbiorze `latin`, pozostałe szesnaście w `latin-ext`.** Żaden
+   pojedynczy plik nie ma kompletu i tak ma być - przeglądarka składa je po
+   `unicode-range`. Kto zmierzy jeden plik osobno, zobaczy „brakuje 16 znaków"
+   i wyciągnie fałszywy wniosek.
+
+Zapis pochodzi z odczytu 2026-09-06 i wchodzi tu przy scaleniu gałęzi
+`claude/etap-2-regulamin-bur`.

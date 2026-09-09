@@ -167,9 +167,15 @@ Zakres i efekty uczenia się identyczne we wszystkich wariantach. Odstępstwo wy
 
 Karta usługi wymaga **dwóch różnych osób**: prowadzącej kształcenie i prowadzącej walidację. Wymyślanie danych osoby, która nie potwierdziła swojego doświadczenia, jest zakazane bez wyjątków — karta jest dokumentem publicznym w usłudze finansowanej ze środków publicznych. Dane robocze kadry (dane kontaktowe, warunki współpracy) trzymaj poza tym plikiem i poza dokumentami wychodzącymi na zewnątrz.
 
-## 10. Materiały dla uczestników **[WYBÓR]**
+## 10. Materiały dla uczestników **[PRAWO]** / **[WYBÓR]**
 
 Wyłącznie materiały odnoszące się do tej usługi.
+
+**[PRAWO]** Na wniosek osoby ze szczególnymi potrzebami materiały dydaktyczne muszą być dostosowane do jej potrzeb, a potrzeba dostosowania nie może być powodem odmowy usługi - Regulamin BUR § 11 ust. 1 pkt 3 w związku z § 15 ust. 1 (odczyt 2026-09-06, `/01-baza-wiedzy/prawo/bur.md`, sekcja „Dostępność dla osób ze szczególnymi potrzebami”). Kategoria tej pozycji zmieniła się z **[WYBÓR]** na **[PRAWO]** / **[WYBÓR]**: *czy* istnieje ścieżka dostosowania - wymóg; *jak* wygląda dostosowany materiał - wybór projektowy, bo dokumenty PARP tego nie określają.
+
+**[PRAWO]** Dla usług zdalnych: materiały przygotowane w formie dostosowanej do realizacji na odległość (Regulamin § 11 ust. 1 pkt 4) oraz jasna informacja o zakresie licencji i dozwolonym sposobie użytkowania (Standard SUZ, SUZ-3, wiążący przez § 15 ust. 3).
+
+Sposób zgłoszenia wniosku o dostosowanie: [kanał i termin] - do uzupełnienia w konkretnym programie.
 
 ## 11. Karty usług **[PRAWO]** / **[IRIN]**
 

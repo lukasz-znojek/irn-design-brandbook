@@ -131,9 +131,15 @@ flowchart TD
     style G2 fill:#E4DACB,stroke:#1E1611,color:#1E1611
 ```
 
-Etapy 1 i 2 były niezależne; oba są zamknięte. Etap 2 domknięto 2026-09-03: wszystkie osiem pozycji ma wpisany wynik. Pomiar z 2026-09-02 wieczorem pokazał, że z sesji Claude Code cztery domeny (parp.gov.pl, uslugirozwojowe.parp.gov.pl, dziennikustaw.gov.pl, isap.sejm.gov.pl) zwracają błąd połączenia, więc pozostałe dokumenty też muszą przyjść od foundera albo polityka sieciowa środowiska musi je dopuścić. Etap 4 (pilot) nie zależy od etapu 2 i może ruszyć równolegle.
+Etapy 1 i 2 były niezależne; oba są zamknięte. Etap 2 domknięto 2026-09-03: wszystkie osiem pozycji ma wpisany wynik. Etap 4 (pilot) nie zależy od etapu 2 i może ruszyć równolegle.
+
+**Dostęp do sieci zależy od maszyny, nie od projektu** - dwa pomiary z różnych środowisk: 2026-09-02 i 2026-09-06 z sesji zdalnej w chmurze wszystkie domeny rządowe odpowiadają `connect_rejected` (403 na CONNECT z polityki środowiska), a 2026-09-03 z sesji uruchomionej u foundera te same domeny odpowiadają 200 i 302. Reguła na przyszłość: zanim poprosisz foundera o dokument, zmierz dostęp z maszyny, na której właśnie trwa sesja. Pełny zapis obu pomiarów: `01-baza-wiedzy/prawo/weryfikacja-u-zrodla.md`.
+
+**Uzupełnienie etapu 2 z 2026-09-06 (poza pierwotną listą ośmiu pozycji).** Trzy załączniki, które founder dostarczył 2026-09-02, leżały w `zrodla/` nieprzeczytane - były poza zakresem pozycji 1-3. Odczytano je w całości wraz z Regulaminem BUR. Cztery ustalenia zmieniły dokumenty: Standard SUZ jest **wiążący** dla usług zdalnych (§ 15 ust. 3), § 16 daje Administratorowi BUR prawo przerabiania materiałów wgranych do systemu, dostosowanie materiałów dla osób ze szczególnymi potrzebami jest wymogiem wpisu do BUR (§ 11 ust. 1 pkt 3), a żaden z sześciu dokumentów PARP nie reguluje posługiwania się znakami ani reklamy. Doszedł też jeden materiał, którego repozytorium nie ma, a który § 11 ust. 4 pkt 1 czyni warunkiem wpisu do BUR: **misja oraz cele strategiczne i operacyjne IRIN**.
 
 **Co zostało odblokowane:** obie karty warstwy 2, które czekały na Etap 2 (`karta-uslugi-bur.md`, `certyfikat.md`), mają dziś listy pól odczytane u źródła i nie mają już sekcji „Status weryfikacji” z zastrzeżeniem o niepobranym załączniku.
+
+**Bramka B, pomiar 1 - zamknięty w części 2026-09-06 bez udziału foundera.** Pokrycie polskich diakrytyków dało się zmierzyć maszynowo na paczce systemu projektowego: `_robocze/narzedzia/pokrycie-diakrytykow.py` pokazuje 18/18 znaków z realnymi konturami w Manrope i w Inconsolacie, a oba kroje są fontami zmiennymi z ciągłą osią `wght` - glify nie mogą się więc różnić między wagami 400, 500 i 600, a podstawienie z innego kroju jest niemożliwe. Otwarta zostaje wyłącznie ocena wizualna rysunku znaków przy wagach 500 i 600. Pozostałe pomiary protokołu (2-6) wymagają kanwy i wydruku, więc nadal czekają na foundera.
 
 | Etap | Kto wykonuje | Warunek wyjścia (mierzalny) |
 |---|---|---|
