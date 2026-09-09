@@ -1,0 +1,39 @@
+{
+  "wersja": "v7.0 — Klejnoty Koronne (propozycja)",
+  "data": "2026-09-03",
+  "metoda": "OKLCH (D65), WCAG 2.1 contrast ratio, CIEDE2000 na Lab D65, symulacja mono = gamma-enkodowana luminancja Y",
+  "glowne": {
+    "szafir-krolewski": {"hex": "#0B1B3D", "oklch": [23.1, 0.069, 263], "cr_white": 16.96, "cr_black": 1.24, "cr_na_diament": 16.23, "cr_na_perla": 14.45, "Y": 1.2, "mono": "#1D1D1D"},
+    "rubin-birmanski": {"hex": "#8B152B", "oklch": [41.5, 0.151, 18], "cr_white": 9.38, "cr_black": 2.24, "cr_na_diament": 8.97, "cr_na_perla": 7.99, "Y": 6.2, "mono": "#464646"},
+    "szmaragd-kolumbijski": {"hex": "#0C4A34", "oklch": [36.5, 0.072, 164], "cr_white": 10.27, "cr_black": 2.04, "cr_na_diament": 9.83, "cr_na_perla": 8.75, "Y": 5.2, "mono": "#414141"},
+    "szafir-polnocy": {"hex": "#182B4D", "oklch": [29.2, 0.067, 261], "cr_white": 14.08, "cr_black": 1.49, "cr_na_diament": 13.47, "cr_na_perla": 12.0, "Y": 2.5, "mono": "#2C2C2C"},
+    "spinel-karminowy": {"hex": "#B52642", "oklch": [51.0, 0.178, 16], "cr_white": 6.32, "cr_black": 3.32, "cr_na_diament": 6.05, "cr_na_obsydian": 3.12, "Y": 11.6, "mono": "#606060"},
+    "jadeit-cesarski": {"hex": "#176145", "oklch": [44.0, 0.085, 163], "cr_white": 7.41, "cr_black": 2.83, "cr_na_diament": 7.1, "cr_na_obsydian": 2.66, "Y": 9.2, "mono": "#555555"},
+    "piryt-zlocisty": {"hex": "#C5A059", "oklch": [72.5, 0.100, 82], "cr_white": 2.46, "cr_black": 8.55, "cr_na_diament": 2.35, "cr_na_obsydian": 8.02, "cr_na_lupek": 6.72, "cr_na_szafir": 6.9, "Y": 37.7, "mono": "#A5A5A5"}
+  },
+  "dodatkowe": {
+    "obsydian-szafirowy": {"hex": "#060B14", "oklch": [14.9, 0.022, 260], "cr_white": 19.71},
+    "lupek-mineralny": {"hex": "#131F33", "oklch": [23.9, 0.042, 260], "cr_white": 16.52, "cr_na_obsydian": 1.19},
+    "mglawica-kwarcowa": {"hex": "#6B7A99", "oklch": [57.9, 0.051, 265], "cr_white": 4.31, "cr_black": 4.87, "cr_na_diament": 4.13, "cr_na_obsydian": 4.57, "cr_na_lupek": 3.83},
+    "perla-akoya": {"hex": "#E9EDF5", "oklch": [94.5, 0.012, 265], "cr_na_obsydian": 16.79, "cr_na_diament": 1.12},
+    "krystaliczny-diament": {"hex": "#F9FAFB", "oklch": [98.5, 0.002, 248], "cr_na_obsydian": 18.86, "cr_na_lupek": 15.8, "cr_black": 20.1}
+  },
+  "delta_e_2000": {
+    "kolejnosc": ["szafir", "rubin", "szmaragd", "szafir-polnocy", "spinel", "jadeit", "piryt"],
+    "macierz": [
+      [null, 34.0, 32.0, 5.2, 39.2, 36.3, 63.8],
+      [34.0, null, 52.1, 33.8, 9.2, 55.3, 50.1],
+      [32.0, 52.1, null, 29.7, 56.3, 7.4, 48.6],
+      [5.2, 33.8, 29.7, null, 38.2, 33.4, 60.2],
+      [39.2, 9.2, 56.3, 38.2, null, 58.7, 44.5],
+      [36.3, 55.3, 7.4, 33.4, 58.7, null, 42.4],
+      [63.8, 50.1, 48.6, 60.2, 44.5, 42.4, null]
+    ],
+    "najslabsze_pary": [["szafir", "szafir-polnocy", 5.2], ["szmaragd", "jadeit", 7.4], ["rubin", "spinel", 9.2]]
+  },
+  "odniesienie_do_domu": {
+    "zloto-foliowe-A8874E": {"oklch": [64.2, 0.085, 80], "dE_do_pirytu": 8.5},
+    "espresso-na-kaszmir": 16.15,
+    "uwaga": "wszystkie neutralne v7 maja hue 248-265 (zimne); dom IRIN stoi na cieplym papierze #FBF8F2 i atramencie #221A15 — palety nie mieszaja sie na jednej powierzchni"
+  }
+}
