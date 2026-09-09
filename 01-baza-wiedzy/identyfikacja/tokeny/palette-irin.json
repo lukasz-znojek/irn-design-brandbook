@@ -1,90 +1,531 @@
 {
   "schemat": "irin-palette",
-  "wersja": "v2",
-  "nazwa": "Kaszmir Wyciszony",
-  "status": "ZATWIERDZONA - wariant 2 wybrany przez foundera",
-  "data-wyboru": "2026-09-02",
-  "zrodlo-wyboru": "_robocze/paleta-v2/palette-options-v2.md (wariant 2 z siedmiu; archiwum)",
+  "wersja": "regalia-1.0.0",
+  "nazwa": "Regalia",
+  "status": "ZATWIERDZONA przez foundera 2026-09-03; wpisana do warstwy 1 repozytorium 2026-09-09",
+  "prefiks-tokenow": "--irin-r-",
+  "plik-zrodlowy": "_robocze/narzedzia/zloz-palete.py",
+  "jak-odtworzyc": "python3 _robocze/narzedzia/zloz-palete.py, potem python3 _robocze/narzedzia/sprawdz-palete.py",
+  "metodologia-kontrastu": "WCAG 2.1, luminancja względna sRGB. Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 3:1. Każda liczba w tym pliku jest policzona przy składaniu, nie przepisana.",
   "specyfikacja-obowiazujaca": {
     "kolor": "01-baza-wiedzy/identyfikacja/paleta-barw.md",
     "siatka": "01-baza-wiedzy/identyfikacja/siatka-a4.md",
     "typografia": "01-baza-wiedzy/identyfikacja/typografia.md",
     "logotyp": "01-baza-wiedzy/identyfikacja/logotyp.md"
   },
-  "typografia": {
-    "rodzina-podstawowa": "Manrope",
-    "wagi": [
-      200,
-      300,
-      400,
-      500,
-      600,
-      700,
-      800
-    ],
-    "rodzina-pomocnicza": "Inconsolata",
-    "zrodlo": "brandbook.dc.html sekcja 04",
-    "zmieniona": false,
-    "skala": {
-      "display": {
-        "waga": 200,
-        "rozmiar-px": 72,
-        "interlinia": 0.92,
-        "tracking": "-0.03em"
-      },
-      "h1": {
-        "waga": 300,
-        "rozmiar-px": 40,
-        "interlinia": 1.0,
-        "tracking": "-0.02em"
-      },
-      "h2": {
-        "waga": 600,
-        "rozmiar-px": 24,
-        "interlinia": 1.1,
-        "tracking": "-0.01em"
-      },
-      "h3": {
-        "waga": 600,
-        "rozmiar-px": 16,
-        "interlinia": 1.3,
-        "zatwierdzony": "2026-09-02",
-        "uwaga": "stopień leadu z wagą 600; kanwa nie definiowała tego poziomu"
-      },
-      "lead": {
-        "waga": 500,
-        "rozmiar-px": 16,
-        "interlinia": 1.4
-      },
-      "body": {
-        "waga": 400,
-        "rozmiar-px": 13.5,
-        "interlinia": 1.55
-      },
-      "footnote": {
-        "waga": 400,
-        "rozmiar-px": 10,
-        "interlinia": 1.5
-      },
-      "kicker": {
-        "waga": 700,
-        "rozmiar-px": 14,
-        "tracking": "0.22em",
-        "transform": "uppercase"
-      },
-      "numeral": {
-        "waga": 800,
-        "rozmiar-px": 52,
-        "interlinia": 0.95,
-        "tracking": "-0.02em"
-      },
-      "mono": {
-        "rodzina": "Inconsolata",
-        "rozmiar-px": 10.5
-      }
+  "barwy": {
+    "szafir-nocny": {
+      "nazwa": "Szafir Nocny",
+      "hex": "#132246",
+      "rola": "kolor marki: logotyp, pasy nagłówkowe, wypełnienia CTA"
+    },
+    "atrament": {
+      "nazwa": "Atrament",
+      "hex": "#07090C",
+      "rola": "typografia główna: korpus, nagłówki, tabele"
+    },
+    "kosc-sloniowa": {
+      "nazwa": "Kość Słoniowa",
+      "hex": "#F7F3E9",
+      "rola": "tło strony; wersja odwrócona znaku"
+    },
+    "aksamit-nocy": {
+      "nazwa": "Aksamit Nocy",
+      "hex": "#080F1F",
+      "rola": "tło ciemne: sekcje, stopki, okładki wewnętrzne"
+    },
+    "alabaster": {
+      "nazwa": "Alabaster",
+      "hex": "#E4E1D8",
+      "rola": "tła kart, wiersze naprzemienne, tekst drugi na ciemnym"
+    },
+    "grafit-jedwabny": {
+      "nazwa": "Grafit Jedwabny",
+      "hex": "#606369",
+      "rola": "tekst drugi na jasnym, linie struktury od 0,25 mm"
+    },
+    "zloto-szampanskie": {
+      "nazwa": "Złoto Szampańskie",
+      "hex": "#C4B790",
+      "rola": "akcent do 5 %: kreska ozdobna od 0,5 mm, pieczęć, tłoczenie"
+    },
+    "ametyst-dworski": {
+      "nazwa": "Ametyst Dworski",
+      "hex": "#331F41",
+      "rola": "materiał przekrojowy: kategorie i tagi wspólne"
+    },
+    "muszla-rozana": {
+      "nazwa": "Muszla Różana",
+      "hex": "#E8D6D6",
+      "rola": "jasny akcent: cytaty, podświetlenia, ramki wyróżnień"
+    },
+    "lapis-stonowany": {
+      "nazwa": "Lapis Stonowany",
+      "hex": "#305686",
+      "rola": "interakcja: odnośniki, stan aktywny, obrys focus"
+    },
+    "zloto-antyczne": {
+      "nazwa": "Złoto Antyczne",
+      "hex": "#75674B",
+      "rola": "akcent informacyjny: podpowiedzi, metadane, ikony"
+    },
+    "rubin-gleboki": {
+      "nazwa": "Rubin Głęboki",
+      "hex": "#541319",
+      "rola": "barwa dostępna, nieprzypisana do obszaru"
+    },
+    "zielen-butelkowa": {
+      "nazwa": "Zieleń Butelkowa",
+      "hex": "#0B3627",
+      "rola": "barwa dostępna, nieprzypisana do obszaru"
+    },
+    "bursztyn-wyciszony": {
+      "nazwa": "Bursztyn Wyciszony",
+      "hex": "#9B5E30",
+      "rola": "barwa dostępna, nieprzypisana do obszaru"
     }
   },
+  "tinty": {
+    "szafir": {
+      "hex": "#DCDAD5",
+      "podstawa": "szafir-nocny",
+      "krycie": 0.12,
+      "podloze": "kosc-sloniowa",
+      "atrament-na-tincie": 14.27,
+      "rola": "wyłącznie tła kart i pasy tabel w obrębie obszaru; nie kolor tekstu ani linii"
+    },
+    "rubin": {
+      "hex": "#E3D8D0",
+      "podstawa": "rubin-gleboki",
+      "krycie": 0.12,
+      "podloze": "kosc-sloniowa",
+      "atrament-na-tincie": 14.24,
+      "rola": "wyłącznie tła kart i pasy tabel w obrębie obszaru; nie kolor tekstu ani linii"
+    },
+    "zielen": {
+      "hex": "#DBDCD2",
+      "podstawa": "zielen-butelkowa",
+      "krycie": 0.12,
+      "podloze": "kosc-sloniowa",
+      "atrament-na-tincie": 14.41,
+      "rola": "wyłącznie tła kart i pasy tabel w obrębie obszaru; nie kolor tekstu ani linii"
+    },
+    "ametyst": {
+      "hex": "#DFDAD5",
+      "podstawa": "ametyst-dworski",
+      "krycie": 0.12,
+      "podloze": "kosc-sloniowa",
+      "atrament-na-tincie": 14.36,
+      "rola": "wyłącznie tła kart i pasy tabel w obrębie obszaru; nie kolor tekstu ani linii"
+    }
+  },
+  "tla-nosne": [
+    "kosc-sloniowa",
+    "aksamit-nocy",
+    "alabaster"
+  ],
+  "gniazdo-obszaru": {
+    "token": "--irin-r-dziedzina",
+    "domyslnie": "szafir-nocny",
+    "token-tintu": "--irin-r-tint-dziedzina",
+    "domyslnie-tint": "tint-szafir",
+    "zasada": "Obszary działalności są wymienne, więc barwy nie są im przypisane. Materiał obszarowy nadpisuje u siebie te dwa tokeny i nic więcej. Materiał bez obszaru wychodzi poprawnie bez żadnej podmiany.",
+    "barwy-dostepne": [
+      "rubin-gleboki",
+      "zielen-butelkowa",
+      "bursztyn-wyciszony",
+      "ametyst-dworski"
+    ],
+    "pulapka": "Rubin Głęboki bywa też barwą oznaczenia - nie podmieniaj go globalnie."
+  },
+  "tokeny-stanu": {
+    "sa": false,
+    "powod": "Trzy barwy, które mogłyby je pełnić, są jednocześnie kandydatami na barwy obszarów; przypisanie ich do roli statusu zabetonowałoby to, co ma być wymienne.",
+    "skutek": "Stan niesie słowo plus jedna z barw nośnych dobrana w dokumencie. Kolor nigdy nie jest jedynym nośnikiem statusu (WCAG 1.4.1)."
+  },
+  "kontrasty-dopuszczone": [
+    {
+      "tekst": "atrament",
+      "tlo": "kosc-sloniowa",
+      "kontrast": 17.99,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "korpus, nagłówki, tabele"
+    },
+    {
+      "tekst": "kosc-sloniowa",
+      "tlo": "aksamit-nocy",
+      "kontrast": 17.25,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "sekcje ciemne, stopka"
+    },
+    {
+      "tekst": "atrament",
+      "tlo": "alabaster",
+      "kontrast": 15.25,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "karty, wiersze tabel"
+    },
+    {
+      "tekst": "alabaster",
+      "tlo": "aksamit-nocy",
+      "kontrast": 14.62,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "tekst drugi na ciemnym"
+    },
+    {
+      "tekst": "atrament",
+      "tlo": "muszla-rozana",
+      "kontrast": 14.26,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "cytaty, wyróżnienia"
+    },
+    {
+      "tekst": "kosc-sloniowa",
+      "tlo": "szafir-nocny",
+      "kontrast": 14.09,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "pas nagłówkowy, CTA"
+    },
+    {
+      "tekst": "kosc-sloniowa",
+      "tlo": "ametyst-dworski",
+      "kontrast": 13.41,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "tagi, kategorie"
+    },
+    {
+      "tekst": "kosc-sloniowa",
+      "tlo": "rubin-gleboki",
+      "kontrast": 12.77,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "wypełnienia sekcji"
+    },
+    {
+      "tekst": "kosc-sloniowa",
+      "tlo": "zielen-butelkowa",
+      "kontrast": 12.06,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "wypełnienia sekcji"
+    },
+    {
+      "tekst": "muszla-rozana",
+      "tlo": "rubin-gleboki",
+      "kontrast": 10.12,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "etykieta na wypełnieniu"
+    },
+    {
+      "tekst": "atrament",
+      "tlo": "zloto-szampanskie",
+      "kontrast": 9.99,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "etykieta na wypełnieniu złotym"
+    },
+    {
+      "tekst": "zloto-szampanskie",
+      "tlo": "aksamit-nocy",
+      "kontrast": 9.58,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "kicker na tle ciemnym"
+    },
+    {
+      "tekst": "lapis-stonowany",
+      "tlo": "kosc-sloniowa",
+      "kontrast": 6.77,
+      "rodzaj": "tekst",
+      "ocena": "AA",
+      "uwaga": "odnośniki i stan aktywny"
+    },
+    {
+      "tekst": "lapis-stonowany",
+      "tlo": "alabaster",
+      "kontrast": 5.73,
+      "rodzaj": "tekst",
+      "ocena": "AA",
+      "uwaga": "odnośnik na karcie"
+    },
+    {
+      "tekst": "grafit-jedwabny",
+      "tlo": "kosc-sloniowa",
+      "kontrast": 5.44,
+      "rodzaj": "tekst",
+      "ocena": "AA",
+      "uwaga": "tekst drugi na jasnym"
+    },
+    {
+      "tekst": "zloto-antyczne",
+      "tlo": "kosc-sloniowa",
+      "kontrast": 4.99,
+      "rodzaj": "tekst",
+      "ocena": "AA",
+      "uwaga": "podpowiedzi, metadane"
+    },
+    {
+      "tekst": "bursztyn-wyciszony",
+      "tlo": "kosc-sloniowa",
+      "kontrast": 4.69,
+      "rodzaj": "tekst",
+      "ocena": "AA",
+      "uwaga": "jedyne dopuszczone tło Bursztynu"
+    },
+    {
+      "tekst": "grafit-jedwabny",
+      "tlo": "kosc-sloniowa",
+      "kontrast": 5.44,
+      "rodzaj": "grafika",
+      "ocena": "OK",
+      "uwaga": "linia struktury od 0,25 mm"
+    },
+    {
+      "tekst": "atrament",
+      "tlo": "tint-szafir",
+      "kontrast": 14.27,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "karta i pas tabeli na tincie szafir 12 %"
+    },
+    {
+      "tekst": "atrament",
+      "tlo": "tint-rubin",
+      "kontrast": 14.24,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "karta i pas tabeli na tincie rubin 12 %"
+    },
+    {
+      "tekst": "atrament",
+      "tlo": "tint-zielen",
+      "kontrast": 14.41,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "karta i pas tabeli na tincie zielen 12 %"
+    },
+    {
+      "tekst": "atrament",
+      "tlo": "tint-ametyst",
+      "kontrast": 14.36,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "karta i pas tabeli na tincie ametyst 12 %"
+    }
+  ],
+  "kontrasty-zabronione": [
+    {
+      "tekst": "zloto-szampanskie",
+      "tlo": "kosc-sloniowa",
+      "kontrast": 1.8,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "złoto wyłącznie jako kreska, tłoczenie albo wypełnienie z etykietą Atramentem"
+    },
+    {
+      "tekst": "lapis-stonowany",
+      "tlo": "aksamit-nocy",
+      "kontrast": 2.55,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "odnośnik na tle ciemnym idzie Złotem Szampańskim (kontrast wyżej) albo Kością Słoniową z podkreśleniem"
+    },
+    {
+      "tekst": "bursztyn-wyciszony",
+      "tlo": "alabaster",
+      "kontrast": 3.98,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "Bursztyn ma jedno dopuszczone tło: Kość Słoniowa"
+    },
+    {
+      "tekst": "bursztyn-wyciszony",
+      "tlo": "aksamit-nocy",
+      "kontrast": 3.68,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "ostrzeżenie na ciemnym: wypełnienie bursztynowe z etykietą Kością Słoniową"
+    },
+    {
+      "tekst": "zloto-antyczne",
+      "tlo": "aksamit-nocy",
+      "kontrast": 3.46,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "na ciemnym wchodzi Złoto Szampańskie"
+    },
+    {
+      "tekst": "grafit-jedwabny",
+      "tlo": "aksamit-nocy",
+      "kontrast": 3.17,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "tekst drugi na ciemnym: Alabaster"
+    }
+  ],
+  "pary-nieuzywane": [
+    [
+      "szafir-nocny",
+      "aksamit-nocy"
+    ],
+    [
+      "atrament",
+      "aksamit-nocy"
+    ],
+    [
+      "ametyst-dworski",
+      "aksamit-nocy"
+    ],
+    [
+      "rubin-gleboki",
+      "aksamit-nocy"
+    ],
+    [
+      "zielen-butelkowa",
+      "aksamit-nocy"
+    ],
+    [
+      "kosc-sloniowa",
+      "alabaster"
+    ],
+    [
+      "alabaster",
+      "kosc-sloniowa"
+    ],
+    [
+      "zloto-szampanskie",
+      "alabaster"
+    ],
+    [
+      "muszla-rozana",
+      "kosc-sloniowa"
+    ],
+    [
+      "muszla-rozana",
+      "alabaster"
+    ]
+  ],
+  "pary-nieuzywane-uzasadnienie": "Pary pod progiem 3, które nie wchodzą do składu, bo są barwą ciemną na ciemnym tle albo jasną na jasnym. Wypisane jawnie, żeby bramka mogła sprawdzić, że żadna para pod progiem nie została przeoczona.",
+  "macierz-na-tlach-nosnych": {
+    "szafir-nocny": {
+      "kosc-sloniowa": 14.09,
+      "aksamit-nocy": 1.22,
+      "alabaster": 11.94
+    },
+    "atrament": {
+      "kosc-sloniowa": 17.99,
+      "aksamit-nocy": 1.04,
+      "alabaster": 15.25
+    },
+    "kosc-sloniowa": {
+      "kosc-sloniowa": null,
+      "aksamit-nocy": 17.25,
+      "alabaster": 1.18
+    },
+    "aksamit-nocy": {
+      "kosc-sloniowa": 17.25,
+      "aksamit-nocy": null,
+      "alabaster": 14.62
+    },
+    "alabaster": {
+      "kosc-sloniowa": 1.18,
+      "aksamit-nocy": 14.62,
+      "alabaster": null
+    },
+    "grafit-jedwabny": {
+      "kosc-sloniowa": 5.44,
+      "aksamit-nocy": 3.17,
+      "alabaster": 4.61
+    },
+    "zloto-szampanskie": {
+      "kosc-sloniowa": 1.8,
+      "aksamit-nocy": 9.58,
+      "alabaster": 1.53
+    },
+    "ametyst-dworski": {
+      "kosc-sloniowa": 13.41,
+      "aksamit-nocy": 1.29,
+      "alabaster": 11.37
+    },
+    "muszla-rozana": {
+      "kosc-sloniowa": 1.26,
+      "aksamit-nocy": 13.67,
+      "alabaster": 1.07
+    },
+    "lapis-stonowany": {
+      "kosc-sloniowa": 6.77,
+      "aksamit-nocy": 2.55,
+      "alabaster": 5.73
+    },
+    "zloto-antyczne": {
+      "kosc-sloniowa": 4.99,
+      "aksamit-nocy": 3.46,
+      "alabaster": 4.23
+    },
+    "rubin-gleboki": {
+      "kosc-sloniowa": 12.77,
+      "aksamit-nocy": 1.35,
+      "alabaster": 10.82
+    },
+    "zielen-butelkowa": {
+      "kosc-sloniowa": 12.06,
+      "aksamit-nocy": 1.43,
+      "alabaster": 10.22
+    },
+    "bursztyn-wyciszony": {
+      "kosc-sloniowa": 4.69,
+      "aksamit-nocy": 3.68,
+      "alabaster": 3.98
+    }
+  },
+  "regula-proporcji": {
+    "schemat": "80/15/5",
+    "baza-80": [
+      "kosc-sloniowa",
+      "atrament",
+      "alabaster",
+      "grafit-jedwabny"
+    ],
+    "obszar-15": "dokładnie jedna barwa z gniazda na dokument, nigdy dwie naraz",
+    "akcent-5": [
+      "zloto-szampanskie"
+    ],
+    "limit-akcentu": {
+      "podstawa-cm2": 426.7,
+      "procent": 5,
+      "limit-cm2": 21.34,
+      "rachunek": "170 x 251 mm = 426,70 cm2; 5 % = 21,34 cm2"
+    },
+    "poza-budzetem": [
+      "lapis-stonowany",
+      "zloto-antyczne",
+      "muszla-rozana"
+    ]
+  },
+  "minimalna-grubosc-linii-mm": {
+    "struktura": 0.25,
+    "ozdoba": 0.5,
+    "uwaga": "Poniżej tych wartości o widoczności decyduje raster drukarki, nie luminancja. NIEPOTWIERDZONE NA WYDRUKU - falsyfikator otwarty."
+  },
   "siatka-a4": {
+    "strona-mm": [
+      210,
+      297
+    ],
     "kolumny": 6,
     "modul-mm": 25,
     "gutter-mm": 4,
@@ -94,320 +535,236 @@
       "prawy": 20,
       "dol": 28
     },
-    "tresc-mm": [
+    "jednostka-odstepu-mm": 6,
+    "pole-tresci-mm": [
       170,
       251
     ],
-    "zmieniona": false,
-    "pole-tresci-sprawdzone": "6x25 + 5x4 = 170 mm = 210 - 20 - 20; dopasowanie dokładne",
-    "jednostka-odstepu-mm": 6,
-    "jednostka-odstepu-uwaga": "Jednostka odstępu, nie siatka linii bazowych tekstu. Interlinia korpusu to 5,54 mm (13,5 px x 1,55), czyli nie jest wielokrotnością 6 mm - rozjazd 0,46 mm na linię, 19 mm na pełnej kolumnie. Wymierzaj nią odstępy między blokami, nie linie tekstu. Rozstrzygnięte 2026-09-02.",
-    "marginesy-boczne-zmiana-2026-09-03": "Wyrównane z 18/22 na 20/20. Pole treści bez zmian, 170 mm w obu układach; asymetria nie miała uzasadnienia, bo dokumenty IRIN nie są bindowane. Marginesy pionowe zostają niesymetryczne celowo (18 góra, 28 dół) - cięższy dół to reguła składu."
-  },
-  "metodologia-kontrastu": "WCAG 2.1, luminancja względna sRGB. Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 3:1. Każda para w tej palecie przechodzi próg.",
-  "tokeny": {
-    "primary": {
-      "hex": "#452430",
-      "nazwa": "Aksamit",
-      "rola": "nagłówki H1/H2, wypełnienie CTA",
-      "dziedzina": "Pedagogika",
-      "etykieta-na-wypelnieniu": {
-        "hex": "#E7DFD2",
-        "token": "neutral-light",
-        "kontrast": 10.26
-      }
+    "pole-tresci-cm2": 426.7,
+    "suma-siatki-mm": 170,
+    "dopasowanie-dokladne": true,
+    "rachunek-szerokosci": "6 x 25 + 5 x 4 = 170 mm = 210 - 20 - 20",
+    "rytm-pionowy": {
+      "interlinia-korpusu-mm": 5.54,
+      "linii-w-polu-tresci": 45,
+      "dryf-na-linie-mm": 0.46,
+      "dryf-na-pelnej-kolumnie-mm": 20.86,
+      "uwaga": "Jednostka odstępu, nie siatka linii bazowych tekstu. Interlinia korpusu 5,54 mm nie jest wielokrotnością 6 mm - rozjazd 0,46 mm na linię i 20,86 mm na pełnej kolumnie 45 linii. Wymierzaj nią odstępy między blokami, nie linie tekstu."
     },
-    "secondary": {
-      "hex": "#7A5638",
-      "nazwa": "Miedź",
-      "rola": "H3, podtytuły",
-      "dziedzina": "Akademia AI",
-      "etykieta-na-wypelnieniu": {
-        "hex": "#E7DFD2",
-        "token": "neutral-light",
-        "kontrast": 4.94
-      }
-    },
-    "accent": {
-      "hex": "#A8874E",
-      "nazwa": "Złoto foliowe",
-      "rola": "pieczęć, sygnatura, cienka linia ozdobna",
-      "etykieta-na-wypelnieniu": {
-        "hex": "#221A15",
-        "token": "neutral-dark",
-        "kontrast": 5.09
-      }
-    },
-    "neutral-dark": {
-      "hex": "#221A15",
-      "nazwa": "Espresso",
-      "rola": "tusz uniwersalny, tło sekcji odwróconej"
-    },
-    "neutral-light": {
-      "hex": "#E7DFD2",
-      "nazwa": "Pergamin",
-      "rola": "tło calloutu, pas nagłówka, etykieta na ciemnym wypełnieniu"
-    },
-    "success": {
-      "hex": "#2E5241",
-      "nazwa": "Werdykt",
-      "rola": "stan potwierdzony",
-      "etykieta-na-wypelnieniu": {
-        "hex": "#E7DFD2",
-        "token": "neutral-light",
-        "kontrast": 6.62
-      }
-    },
-    "warning": {
-      "hex": "#8A6110",
-      "nazwa": "Rubryka",
-      "rola": "stan wymagający uwagi",
-      "etykieta-na-wypelnieniu": {
-        "hex": "#FFFFFF",
-        "token": "#FFFFFF",
-        "kontrast": 5.53
-      }
-    },
-    "error": {
-      "hex": "#9E2B2B",
-      "nazwa": "Karmin",
-      "rola": "stan błędu",
-      "etykieta-na-wypelnieniu": {
-        "hex": "#E7DFD2",
-        "token": "neutral-light",
-        "kontrast": 5.6
-      }
-    },
-    "info": {
-      "hex": "#33474F",
-      "nazwa": "Onyks",
-      "rola": "nota informacyjna, boks podstawy prawnej",
-      "dziedzina": "Pożyczki UE/BGK",
-      "etykieta-na-wypelnieniu": {
-        "hex": "#E7DFD2",
-        "token": "neutral-light",
-        "kontrast": 7.37
-      }
-    },
-    "background": {
-      "hex": "#F6F2E9",
-      "nazwa": "Muślin",
-      "rola": "tło strony"
-    },
-    "surface": {
-      "hex": "#FBF8F2",
-      "nazwa": "Kaszmir",
-      "rola": "papier, tło karty i tabeli"
-    },
-    "border": {
-      "hex": "#7D7466",
-      "nazwa": "Popiół",
-      "rola": "linie tabeli, obrys karty i pola formularza",
-      "nazwa-zatwierdzona": "2026-09-02",
-      "zmiana-2026-09-03": "Popiół pociemniony z #938978. Powód: dawna wartość dawała 2,61:1 na Pergaminie (próg 3:1) i zapas 0,09 na Muślinie, więc token obramowania nie działał na dwóch z trzech własnych teł. Nowa wartość: 4,34 / 4,12 / 3,48 na Kaszmirze / Muślinie / Pergaminie - próg z zapasem wszędzie, a odległość od Sepii (7,12 na Muślinie) zachowana, więc hierarchia linii cienkiej i grubej stoi."
-    },
-    "text-primary": {
-      "hex": "#221A15",
-      "nazwa": "Espresso",
-      "rola": "tekst korpusu"
-    },
-    "text-secondary": {
-      "hex": "#5E4E40",
-      "nazwa": "Sepia",
-      "rola": "tekst pomocniczy, metadane, przypisy, nagłówki kolumn"
-    },
-    "link": {
-      "hex": "#2F5A63",
-      "nazwa": "Patyna",
-      "rola": "odnośnik w treści i w interfejsie",
-      "nazwa-zatwierdzona": "2026-09-02"
+    "strefy": {
+      "gora-mm": 18,
+      "gora-rola": "strefa znaku i nagłówka strony, nie treści",
+      "dol-mm": 28,
+      "dol-rola": "strefa stopki: linia oddzielająca i jeden pas metadanych; dolna krawędź tekstu nie schodzi bliżej niż 12 mm od krawędzi strony"
     }
   },
-  "kontrasty": [
-    {
-      "para": "text-primary na background",
-      "kontrast": 15.32,
-      "ocena": "AAA"
+  "typografia": {
+    "rodzina-podstawowa": "Manrope",
+    "wagi-podstawowe": [
+      200,
+      300,
+      400,
+      500,
+      600,
+      700,
+      800
+    ],
+    "rodzina-pomocnicza": "Inconsolata",
+    "wagi-pomocnicze": [
+      300,
+      400,
+      500,
+      600,
+      700
+    ],
+    "zasada": "Hierarchię buduje waga jednego kroju, nie zmiana rodziny. Manrope na wszystko, Inconsolata wyłącznie na liczby, kody usług i metadane. Trzeciego kroju nie ma.",
+    "podloga-skladu": {
+      "px": 8.5,
+      "pt": 6.38,
+      "mm": 2.25,
+      "uwaga": "Nic mniejszego nie wchodzi do składu. Adnotacje rysunku w makietach w skali są wyjątkiem i muszą być tak opisane w kodzie."
     },
-    {
-      "para": "text-primary na surface",
-      "kontrast": 16.15,
-      "ocena": "AAA"
+    "skala": {
+      "display": {
+        "rozmiar-px": 72,
+        "rozmiar-pt": 54.0,
+        "rozmiar-mm": 19.05,
+        "rola": "okładka",
+        "waga": 200,
+        "interlinia": 0.92,
+        "tracking": "-0.03em"
+      },
+      "h1": {
+        "rozmiar-px": 40,
+        "rozmiar-pt": 30.0,
+        "rozmiar-mm": 10.58,
+        "rola": "rozdział",
+        "waga": 300,
+        "interlinia": 1.0,
+        "tracking": "-0.02em"
+      },
+      "h2": {
+        "rozmiar-px": 24,
+        "rozmiar-pt": 18.0,
+        "rozmiar-mm": 6.35,
+        "rola": "sekcja",
+        "waga": 600,
+        "interlinia": 1.1,
+        "tracking": "-0.01em"
+      },
+      "h3": {
+        "rozmiar-px": 16,
+        "rozmiar-pt": 12.0,
+        "rozmiar-mm": 4.23,
+        "rola": "podsekcja",
+        "waga": 600,
+        "interlinia": 1.3
+      },
+      "lead": {
+        "rozmiar-px": 16,
+        "rozmiar-pt": 12.0,
+        "rozmiar-mm": 4.23,
+        "rola": "lead akapitu",
+        "waga": 500,
+        "interlinia": 1.4
+      },
+      "korpus": {
+        "rozmiar-px": 13.5,
+        "rozmiar-pt": 10.13,
+        "rozmiar-mm": 3.57,
+        "rola": "korpus",
+        "waga": 400,
+        "interlinia": 1.55
+      },
+      "meta": {
+        "rozmiar-px": 10,
+        "rozmiar-pt": 7.5,
+        "rozmiar-mm": 2.65,
+        "rola": "przypis, metadane",
+        "waga": 400,
+        "interlinia": 1.5
+      },
+      "kicker": {
+        "rozmiar-px": 14,
+        "rozmiar-pt": 10.5,
+        "rozmiar-mm": 3.7,
+        "rola": "drogowskaz sekcji",
+        "waga": 700,
+        "interlinia": 1.2,
+        "tracking": "0.22em",
+        "transform": "uppercase"
+      },
+      "liczba": {
+        "rozmiar-px": 52,
+        "rozmiar-pt": 39.0,
+        "rozmiar-mm": 13.76,
+        "rola": "liczba prowadząca",
+        "waga": 800,
+        "interlinia": 0.95,
+        "tracking": "-0.02em"
+      },
+      "dane": {
+        "rozmiar-px": 10.5,
+        "rozmiar-pt": 7.88,
+        "rozmiar-mm": 2.78,
+        "rola": "Inconsolata: dane, kody, metadane",
+        "interlinia": 1.5,
+        "rodzina": "Inconsolata"
+      },
+      "techniczny": {
+        "rozmiar-px": 8.5,
+        "rozmiar-pt": 6.38,
+        "rozmiar-mm": 2.25,
+        "rola": "podłoga składu: nagłówki tabel, przypisy, pas nadawcy",
+        "interlinia": 1.4,
+        "rodzina": "Inconsolata"
+      }
     },
-    {
-      "para": "text-secondary na background",
-      "kontrast": 7.12,
-      "ocena": "AAA"
-    },
-    {
-      "para": "text-secondary na surface",
-      "kontrast": 7.5,
-      "ocena": "AAA"
-    },
-    {
-      "para": "primary (H1/H2) na surface",
-      "kontrast": 12.8,
-      "ocena": "AAA"
-    },
-    {
-      "para": "secondary (H3) na surface",
-      "kontrast": 6.16,
-      "ocena": "AA"
-    },
-    {
-      "para": "link na surface",
-      "kontrast": 7.17,
-      "ocena": "AAA"
-    },
-    {
-      "para": "link na background",
-      "kontrast": 6.8,
-      "ocena": "AA"
-    },
-    {
-      "para": "text-primary na neutral-light (callout)",
-      "kontrast": 12.95,
-      "ocena": "AAA"
-    },
-    {
-      "para": "primary na neutral-light (naglowek callouta)",
-      "kontrast": 10.26,
-      "ocena": "AAA"
-    },
-    {
-      "para": "etykieta neutral-light na primary",
-      "kontrast": 10.26,
-      "ocena": "AAA"
-    },
-    {
-      "para": "etykieta neutral-dark na accent",
-      "kontrast": 5.09,
-      "ocena": "AA"
-    },
-    {
-      "para": "etykieta neutral-light na success",
-      "kontrast": 6.62,
-      "ocena": "AA"
-    },
-    {
-      "para": "etykieta #FFFFFF na warning",
-      "kontrast": 5.53,
-      "ocena": "AA"
-    },
-    {
-      "para": "etykieta neutral-light na error",
-      "kontrast": 5.6,
-      "ocena": "AA"
-    },
-    {
-      "para": "etykieta neutral-light na info",
-      "kontrast": 7.37,
-      "ocena": "AAA"
-    },
-    {
-      "para": "border na surface",
-      "kontrast": 4.34,
-      "ocena": "OK (>=3:1)",
-      "przeliczone": "2026-09-03, po pociemnieniu border z #938978 na #7D7466"
-    },
-    {
-      "para": "border na background",
-      "kontrast": 4.12,
-      "ocena": "OK (>=3:1)",
-      "przeliczone": "2026-09-03, po pociemnieniu border z #938978 na #7D7466"
-    },
-    {
-      "para": "accent jako linia/ikona na surface",
-      "kontrast": 3.17,
-      "ocena": "OK (>=3:1)"
-    },
-    {
-      "para": "border na neutral-light",
-      "kontrast": 3.48,
-      "ocena": "OK (>=3:1)",
-      "przeliczone": "2026-09-03, po pociemnieniu border z #938978 na #7D7466"
-    },
-    {
-      "para": "accent na neutral-light",
-      "kontrast": 2.55,
-      "ocena": "PONIŻEJ PROGU"
-    },
-    {
-      "para": "warning na neutral-light",
-      "kontrast": 4.18,
-      "ocena": "tylko grafika i element interfejsu (3:1)"
-    },
-    {
-      "para": "text-secondary na neutral-light",
-      "kontrast": 6.02,
-      "ocena": "AA"
-    },
-    {
-      "para": "secondary na neutral-light",
-      "kontrast": 4.94,
-      "ocena": "AA"
-    },
-    {
-      "para": "text-primary na neutral-light",
-      "kontrast": 12.95,
-      "ocena": "AAA"
+    "licencja-krojow": "SIL Open Font License 1.1; tekst licencji podróżuje z fontem (_robocze/ds-bundle/fonts/OFL.txt)",
+    "pokrycie-diakrytykow": {
+      "znaki": "ĄĆĘŁŃÓŚŹŻ ąćęłńóśźż",
+      "manrope": "18/18",
+      "inconsolata": "18/18",
+      "metoda": "cmap rozpakowanych woff2, kontur sprawdzony BoundsPen; oba kroje zmienne, więc pokrycie nie może różnić się między wagami",
+      "niepotwierdzone": "czytelność ogonków na wydruku przy stopniu podłogi - falsyfikator otwarty"
     }
-  ],
-  "regula-80-15-5": {
-    "baza-80": "Kaszmir, Muślin, Pergamin (tła); Espresso, Sepia (tekst); Popiół (linie)",
-    "dziedzina-15": "dokładnie jeden z trzech na dokument: Aksamit (Pedagogika), Miedź (Akademia AI), Onyks (Pożyczki UE/BGK); nigdy dwa naraz",
-    "aktywnosc-5": "Patyna (odnośniki, stany aktywne), Werdykt (potwierdzone), Rubryka (uwaga), Karmin (błąd), Złoto foliowe (wyłącznie pieczęć, sygnatura, cienka linia)"
-  },
-  "ograniczenia": [
-    "Kolor nigdy nie jest jedynym nośnikiem statusu - każdy stan wymaga etykiety słownej albo ikony (WCAG 1.4.1). Po konwersji do skali szarości Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność.",
-    "Odnośnik wewnątrz boksu informacyjnego zawsze z podkreśleniem - Patyna i Onyks mają kontrast wzajemny 1,28:1.",
-    "Złoto foliowe nigdy jako tło większej powierzchni, nigdy jako kolor tekstu korpusu, nigdy jako linia niosąca strukturę i nigdy na tle Pergaminu. Wyłącznie kreska ozdobna, pieczęć i sygnatura, przy grubości nie mniejszej niż 0,5 mm. Linię, która coś rozdziela albo obramowuje, prowadzi się border albo secondary.",
-    "Na tle Pergaminu (neutral-light) dwie pary spadają pod próg: accent 2,55:1 (próg 3:1 dla grafiki) i warning jako tekst 4,18:1 (próg 4,5:1). Na tle Pergaminu nie stosuje się accent jako kreski ozdobnej ani warning jako koloru tekstu - zastąpienia: kreska secondary (4,94:1), ostrzeżenie text-primary (12,95:1) z etykietą słowną. Border przechodzi na wszystkich trzech tłach po pociemnieniu z 2026-09-03 (3,48:1 na Pergaminie). Pełna tabela: paleta-barw.md, sekcja „Kolory linii - stan po poprawce”. Przeliczone 2026-09-03.",
-    "Minimalna grubość linii w druku: 0,25 mm dla linii niosącej strukturę (border, secondary) i 0,5 mm dla kreski ozdobnej w accent. Poniżej tych wartości kontrast z tabeli przestaje cokolwiek gwarantować, bo o widoczności decyduje raster drukarki, nie luminancja."
-  ],
-  "tryb-mono": {
-    "status": "ODRZUCONY (2026-09-02)",
-    "decyzja": "Founder wybrał jedną paletę na wszystko. Wariant 6 (Druk Ekonomiczny) nie wchodzi jako osobny tryb monochromatyczny.",
-    "skutek": "W dokumentach drukowanych mono Werdykt, Rubryka, Karmin i Onyks mają zbliżoną jasność. Jedynym zabezpieczeniem czytelności statusu pozostaje obowiązkowa etykieta słowna albo ikona - patrz ograniczenia."
   },
   "logotyp": {
-    "pliki": [
-      {
-        "plik": "logo_irin_poziom.svg",
-        "viewbox": "281.333 x 158.667",
-        "proporcja": 1.7731,
+    "pliki": {
+      "logo_irin_poziom.svg": {
+        "viewbox": [
+          281.333,
+          158.667
+        ],
+        "obwiednia-znaku-widocznego": [
+          48.561,
+          59.907,
+          184.213,
+          38.854
+        ],
+        "proporcja-viewboksu": 1.7731,
+        "proporcja-znaku-widocznego": 4.7412,
+        "wspolczynnik-pola": 0.655,
+        "pole-pliku-dla-minimum-druku-mm": 27.48,
         "zastosowanie": "wariant podstawowy"
       },
-      {
-        "plik": "logo_irin_pion.svg",
-        "viewbox": "184.837 x 162.834",
-        "proporcja": 1.1351,
+      "logo_irin_pion.svg": {
+        "viewbox": [
+          184.837,
+          162.834
+        ],
+        "obwiednia-znaku-widocznego": [
+          40.555,
+          37.593,
+          103.728,
+          87.312
+        ],
+        "proporcja-viewboksu": 1.1351,
+        "proporcja-znaku-widocznego": 1.188,
+        "wspolczynnik-pola": 0.561,
+        "pole-pliku-dla-minimum-druku-mm": 32.09,
         "zastosowanie": "pola wąskie i wysokie"
       },
-      {
-        "plik": "logo_irin_sygnet.svg",
-        "viewbox": "184.837 x 162.834",
-        "proporcja": 1.1351,
+      "logo_irin_sygnet.svg": {
+        "viewbox": [
+          184.837,
+          162.834
+        ],
+        "obwiednia-znaku-widocznego": [
+          40.555,
+          61.991,
+          103.728,
+          38.853
+        ],
+        "proporcja-viewboksu": 1.1351,
+        "proporcja-znaku-widocznego": 2.6698,
+        "wspolczynnik-pola": 0.561,
+        "pole-pliku-dla-minimum-druku-mm": 32.09,
         "zastosowanie": "znak samodzielny"
       }
-    ],
+    },
     "jednokolorowy": true,
     "minimalny-rozmiar": {
       "druk-mm": 18,
       "ekran-px": 90,
-      "sygnet-samodzielny": "10 mm / 44 px - odczyt z brandbook.dc.html, nie potwierdzony osobno"
+      "sygnet-samodzielny-mm": 10
     },
-    "przestrzen-ochronna": "x = wysokość liter sygnetu; miara względna, z każdej strony znaku",
-    "zakazy-wiazace": [
+    "konwencja-pomiaru": "Każdy wymiar znaku podany w systemie IRIN jest szerokością OBWIEDNI ZNAKU WIDOCZNEGO, nie szerokością pola pliku. Pliki mają w viewBoksie puste pole; wstawienie znaku na szerokość pola daje znak mniejszy od zadeklarowanego.",
+    "przestrzen-ochronna": "x = wysokość liter sygnetu, mierzona z każdej strony znaku; miara względna, skaluje się ze znakiem",
+    "zakazy": [
       "nie zmieniamy koloru znaku; na ciemnym tle wersja odwrócona, nie przebarwiona",
       "nie obracamy, nie pochylamy, nie odbijamy lustrzanie",
       "nie dodajemy cienia, poświaty ani obrysu",
       "nie rozciągamy nieproporcjonalnie"
     ],
-    "zatwierdzenie": "minimalny rozmiar i przestrzeń ochronna potwierdzone wcześniej; cztery zakazy potwierdzone 2026-09-02",
-    "nadal-niepotwierdzone": [
-      "minimalny rozmiar samodzielnego sygnetu (10 mm / 44 px)",
-      "reguła kontrastu znaku na akcentach dziedzinowych (4,5:1)"
-    ]
-  }
+    "barwa-znaku": "przez color kontenera i fill: currentColor; nigdy filter:"
+  },
+  "falsyfikatory-otwarte": [
+    "grubość linii struktury 0,25 mm i kreski ozdobnej 0,5 mm na wydruku",
+    "minimalny rozmiar samodzielnego sygnetu 10 mm",
+    "czytelność diakrytyków na papierze przy stopniu podłogi 8,5 px",
+    "CMYK palety bez proofu na papierze docelowym",
+    "Złoto Szampańskie na papierze niepowlekanym",
+    "przypisanie barw dostępnych do obszarów działalności"
+  ]
 }

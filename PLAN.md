@@ -512,7 +512,7 @@ tabeli `BARWY`, a liczby lecą za nią same.
   `text-invert`, `text-muted`, `border`, `accent`, `link`, `highlight`, `info`,
   `przekrojowy`).
 
-- [ ] **Krok 1: Napisz generator**
+- [x] **Krok 1: Napisz generator**
 
 Treść pliku `_robocze/narzedzia/zloz-palete.py`:
 
@@ -1006,7 +1006,7 @@ if __name__ == "__main__":
             print(f"zapisane: {cel.relative_to(ROOT)}  ({len(tresc)} znaków)")
 ```
 
-- [ ] **Krok 2: Złóż paletę i otwórz bramkę**
+- [x] **Krok 2: Złóż paletę i otwórz bramkę**
 
 ```bash
 python3 _robocze/narzedzia/zloz-palete.py
@@ -1021,7 +1021,7 @@ pole treści `426,70 cm2`, limit akcentu `21,34 cm2`, dryf rytmu `20,86 mm`
 przy `45` liniach, podłoga składu `6,38 pt`, współczynniki pola znaku
 `0,655` i `0,561`, tinty `#DCDAD5 · #E3D8D0 · #DBDCD2 · #DFDAD5`.
 
-- [ ] **Krok 3: Uruchom osiem prób podmiany z zadania 1**
+- [x] **Krok 3: Uruchom osiem prób podmiany z zadania 1**
 
 ```bash
 python3 /tmp/proba-bramki.py 01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json
@@ -1029,7 +1029,7 @@ python3 /tmp/proba-bramki.py 01-baza-wiedzy/identyfikacja/tokeny/palette-irin.js
 
 Oczekiwane: osiem wierszy, każdy `kod 1  złapane`. Ani jednego `!!! DZIURA`.
 
-- [ ] **Krok 4: Sprawdź, że `tokens.css` rozwiązuje się w przeglądarce**
+- [x] **Krok 4: Sprawdź, że `tokens.css` rozwiązuje się w przeglądarce**
 
 ```bash
 python3 - <<'PY'
@@ -1052,7 +1052,7 @@ na ekranie jako `1px` (0,25 mm = 0,94 px przy 96 dpi, przeglądarka zaokrągla
 obramowanie w górę). Wartość drukarska jest w pliku poprawna; ekran jej nie
 odwzorowuje i nie jest miejscem pomiaru grubości linii.
 
-- [ ] **Krok 5: Commit**
+- [x] **Krok 5: Commit**
 
 ```bash
 git add _robocze/narzedzia/zloz-palete.py \
