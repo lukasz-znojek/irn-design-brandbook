@@ -136,7 +136,8 @@
       "bursztyn-wyciszony",
       "ametyst-dworski"
     ],
-    "pulapka": "Rubin Głęboki bywa też barwą oznaczenia - nie podmieniaj go globalnie."
+    "pulapka": "Rubin Głęboki bywa też barwą oznaczenia - nie podmieniaj go globalnie.",
+    "decyzja-wlasciciela": "2026-09-09: barwy dostępne są DOBIERANE DO MATERIAŁU, nie przypisane do obszarów działalności. Rozstrzyga to sprzeczność między dwiema decyzjami po stronie projektowej i zamyka falsyfikator, który do tej pory stał otwarty."
   },
   "tokeny-stanu": {
     "sa": false,
@@ -217,6 +218,14 @@
       "uwaga": "wypełnienia sekcji"
     },
     {
+      "tekst": "kosc-sloniowa",
+      "tlo": "bursztyn-wyciszony",
+      "kontrast": 4.69,
+      "rodzaj": "tekst",
+      "ocena": "AA",
+      "uwaga": "etykieta na wypełnieniu obszaru; najciaśniejsza z czterech barw gniazda"
+    },
+    {
       "tekst": "muszla-rozana",
       "tlo": "rubin-gleboki",
       "kontrast": 10.12,
@@ -294,7 +303,7 @@
       "kontrast": 14.27,
       "rodzaj": "tekst",
       "ocena": "AAA",
-      "uwaga": "karta i pas tabeli na tincie szafir 12 %"
+      "uwaga": "karta i pas tabeli na tincie Szafir 12 %"
     },
     {
       "tekst": "atrament",
@@ -302,7 +311,7 @@
       "kontrast": 14.24,
       "rodzaj": "tekst",
       "ocena": "AAA",
-      "uwaga": "karta i pas tabeli na tincie rubin 12 %"
+      "uwaga": "karta i pas tabeli na tincie Rubin 12 %"
     },
     {
       "tekst": "atrament",
@@ -310,7 +319,7 @@
       "kontrast": 14.41,
       "rodzaj": "tekst",
       "ocena": "AAA",
-      "uwaga": "karta i pas tabeli na tincie zielen 12 %"
+      "uwaga": "karta i pas tabeli na tincie Zieleń 12 %"
     },
     {
       "tekst": "atrament",
@@ -318,7 +327,7 @@
       "kontrast": 14.36,
       "rodzaj": "tekst",
       "ocena": "AAA",
-      "uwaga": "karta i pas tabeli na tincie ametyst 12 %"
+      "uwaga": "karta i pas tabeli na tincie Ametyst 12 %"
     }
   ],
   "kontrasty-zabronione": [
@@ -764,7 +773,6 @@
     "minimalny rozmiar samodzielnego sygnetu 10 mm",
     "czytelność diakrytyków na papierze przy stopniu podłogi 8,5 px",
     "CMYK palety bez proofu na papierze docelowym",
-    "Złoto Szampańskie na papierze niepowlekanym",
-    "przypisanie barw dostępnych do obszarów działalności"
+    "Złoto Szampańskie na papierze niepowlekanym"
   ]
 }

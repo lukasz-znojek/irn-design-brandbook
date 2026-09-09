@@ -99,6 +99,7 @@ DOPUSZCZONE = [
     ("kosc-sloniowa", "ametyst-dworski", "tekst", "tagi, kategorie"),
     ("kosc-sloniowa", "rubin-gleboki", "tekst", "wypełnienia sekcji"),
     ("kosc-sloniowa", "zielen-butelkowa", "tekst", "wypełnienia sekcji"),
+    ("kosc-sloniowa", "bursztyn-wyciszony", "tekst", "etykieta na wypełnieniu obszaru; najciaśniejsza z czterech barw gniazda"),
     ("muszla-rozana", "rubin-gleboki", "tekst", "etykieta na wypełnieniu"),
     ("atrament", "zloto-szampanskie", "tekst", "etykieta na wypełnieniu złotym"),
     ("zloto-szampanskie", "aksamit-nocy", "tekst", "kicker na tle ciemnym"),
@@ -205,9 +206,11 @@ def zloz():
         return w
 
     dopuszczone = [para(a, b, r, u) for a, b, r, u in DOPUSZCZONE]
+    NAZWY_TINTOW = {"szafir": "Szafir", "rubin": "Rubin",
+                    "zielen": "Zieleń", "ametyst": "Ametyst"}
     for n in tinty:
         dopuszczone.append(para("atrament", f"tint-{n}", "tekst",
-                                f"karta i pas tabeli na tincie {n} 12 %"))
+                                f"karta i pas tabeli na tincie {NAZWY_TINTOW[n]} 12 %"))
     zabronione = [para(a, b, r, "para zabroniona", z) for a, b, r, z in ZABRONIONE]
 
     # macierz pełna: 14 barw x 3 tła nośne, do wglądu
@@ -331,6 +334,10 @@ def zloz():
                       "Materiał bez obszaru wychodzi poprawnie bez żadnej podmiany.",
             "barwy-dostepne": ["rubin-gleboki", "zielen-butelkowa", "bursztyn-wyciszony", "ametyst-dworski"],
             "pulapka": "Rubin Głęboki bywa też barwą oznaczenia - nie podmieniaj go globalnie.",
+            "decyzja-wlasciciela": "2026-09-09: barwy dostępne są DOBIERANE DO MATERIAŁU, nie przypisane "
+                                   "do obszarów działalności. Rozstrzyga to sprzeczność między dwiema "
+                                   "decyzjami po stronie projektowej i zamyka falsyfikator, który do tej "
+                                   "pory stał otwarty.",
         },
         "tokeny-stanu": {
             "sa": False,
@@ -392,7 +399,6 @@ def zloz():
             "czytelność diakrytyków na papierze przy stopniu podłogi 8,5 px",
             "CMYK palety bez proofu na papierze docelowym",
             "Złoto Szampańskie na papierze niepowlekanym",
-            "przypisanie barw dostępnych do obszarów działalności",
         ],
     }
 

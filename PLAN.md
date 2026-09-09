@@ -1219,7 +1219,7 @@ git commit -m "Bramka spójności: proza nie może nieść wartości spoza danyc
 - Produkuje: plik, na który odsyłają `format-paczki.md`, `CLAUDE.md`,
   `guidelines/paleta-barw.md` i `tokens.css`.
 
-- [ ] **Krok 1: Napisz plik**
+- [x] **Krok 1: Napisz plik**
 
 Struktura, w tej kolejności. Każda liczba przepisana z JSON-a, **żadna
 policzona ręcznie** - bramka z zadania 3 sprawdzi zgodność.
@@ -1264,7 +1264,7 @@ policzona ręcznie** - bramka z zadania 3 sprawdzi zgodność.
 hexów v2 i v5.1, historii iteracji. To jest destylacja - historia palet została
 w gicie i w `POMIAR.md`.
 
-- [ ] **Krok 2: Uruchom bramkę spójności**
+- [x] **Krok 2: Uruchom bramkę spójności**
 
 ```bash
 python3 _robocze/narzedzia/sprawdz-zgodnosc-md.py 2>&1 | grep "paleta-barw" || echo "paleta-barw.md: czysto"
@@ -1272,14 +1272,14 @@ python3 _robocze/narzedzia/sprawdz-zgodnosc-md.py 2>&1 | grep "paleta-barw" || e
 
 Oczekiwane: `paleta-barw.md: czysto`.
 
-- [ ] **Krok 3: Sprawdź, że nie ma myślników i że liczby mają przecinek**
+- [x] **Krok 3: Sprawdź, że nie ma myślników i że liczby mają przecinek**
 
 ```bash
 python3 _robocze/narzedzia/sprawdz-dywizy.py 01-baza-wiedzy/identyfikacja/paleta-barw.md
 grep -nE '[0-9]\.[0-9]{2}\s*:\s*1' 01-baza-wiedzy/identyfikacja/paleta-barw.md && echo "KROPKA - popraw" || echo "przecinki: OK"
 ```
 
-- [ ] **Krok 4: Commit**
+- [x] **Krok 4: Commit**
 
 ```bash
 git add 01-baza-wiedzy/identyfikacja/paleta-barw.md
@@ -2921,16 +2921,10 @@ i **nie przestają istnieć w starym projekcie** - dlatego są pytaniem, nie zad
 
 Pytania, na które nie odpowiem sam, i te, których odpowiedź zmienia plan.
 Numer w nawiasie to zadanie, przed którym odpowiedź jest potrzebna.
+Numery pytań są stałe i nie przenumerowują się po rozstrzygnięciu: **pytanie 1
+(przypisanie barw do obszarów) zostało rozstrzygnięte 2026-09-09** i stoi
+w rejestrze niżej, dlatego lista zaczyna się od dwójki.
 
-1. **(przed zadaniem 4) Czy barwy dostępne zostają nieprzypisane do obszarów?**
-   Dwie decyzje ze strony projektowej mówią co innego.
-   `irn-design-paleta-kolorow.html`, strona 07, przypisuje Rubin do szkoleń,
-   Zieleń do pożyczek, Bursztyn do Akademii AI i Ametyst „ponad dziedzinami",
-   z adnotacją „propozycja wymagająca zatwierdzenia". Nowsza decyzja z
-   2026-09-06, zapisana w projektowym `tokens.css`, mówi: obszary są wymienne,
-   barwy nie są im przypisane, gniazdo domyślnie neutralne. **Plan przyjmuje
-   nowszą** i tak stoi w generatorze. Jeżeli obowiązuje starsza, zmienia się
-   treść `paleta-barw.md` sekcja 5 i mapy `DZ` w sześciu szablonach.
 2. **(przed zadaniem 6) Czy siatka slajdu 16:9 wchodzi do warstwy 1 jako
    propozycja, czy nie wchodzi wcale?** Rachunek się domyka
    (`6 × 253 + 5 × 42 = 1728 px`, `888 = 37 × 24`) i obala liczbę z rozdz. 17
@@ -2975,6 +2969,17 @@ poprzednia treść pliku, wraz z kolejką zadań 1-23, została w historii gita
 (`git show 4f11286:PLAN.md`).
 
 ## Rozstrzygnięte
+
+- **Barwy dostępne dobierane do materiału (2026-09-09).** Rubin Głęboki,
+  Zieleń Butelkowa, Bursztyn Wyciszony i Ametyst Dworski **nie są przypisane
+  do obszarów działalności** - obszary są wymienne, więc barwę wybiera się
+  do materiału i wstawia w gniazdo `--irin-r-dziedzina`. Rozstrzyga to
+  sprzeczność między stroną 07 `irn-design-paleta-kolorow.html` (przypisanie
+  z adnotacją „propozycja wymagająca zatwierdzenia") a nowszym zapisem
+  w projektowym `tokens.css` z 2026-09-06; obowiązuje nowszy. Skutek: sekcja
+  gniazda w `paleta-barw.md` mówi to wprost, mapy `DZ` w szablonach zostają
+  wymienne, a falsyfikator „przypisanie barw dostępnych do obszarów" wypada
+  z listy otwartych - było ich sześć, zostaje pięć.
 
 - **Paleta Regalia (2026-09-03; wpisana do warstwy 1 2026-09-09).**
   14 wartości, prefiks `--irin-r-`, gniazdo obszaru. Zatwierdzona po stronie
