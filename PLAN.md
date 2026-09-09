@@ -1297,7 +1297,7 @@ git commit -m "Specyfikacja koloru na Regalii, z parą Lapisu w tabeli par zabro
 - Konsumuje: `palette-irin.json`, klucz `typografia`.
 - Produkuje: plik, na który odsyłają `format-paczki.md` i `guidelines/`.
 
-- [ ] **Krok 1: Napisz plik**
+- [x] **Krok 1: Napisz plik**
 
 1. Nagłówek i to samo zdanie o wywiedzeniu z JSON-a co w zadaniu 4.
 2. `## Kroje` - Manrope 200-800 podstawowy, Inconsolata 300-700 pomocniczy,
@@ -1329,7 +1329,7 @@ git commit -m "Specyfikacja koloru na Regalii, z parą Lapisu w tabeli par zabro
    **co pozostaje niepotwierdzone**: czytelność ogonków na wydruku przy stopniu
    podłogi.
 
-- [ ] **Krok 2: Bramka spójności i kontrola dryfu**
+- [x] **Krok 2: Bramka spójności i kontrola dryfu**
 
 ```bash
 python3 _robocze/narzedzia/sprawdz-zgodnosc-md.py 2>&1 | grep "typografia" || echo "typografia.md: czysto"
@@ -1341,7 +1341,7 @@ grep -c "6,38 pt" 01-baza-wiedzy/identyfikacja/typografia.md
 Oczekiwane: `czysto`, co najmniej jedno `20,86`, brak `19 mm`, co najmniej
 jedno `6,38 pt`.
 
-- [ ] **Krok 3: Commit**
+- [x] **Krok 3: Commit**
 
 ```bash
 git add 01-baza-wiedzy/identyfikacja/typografia.md
