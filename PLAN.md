@@ -2596,6 +2596,17 @@ jest dowodem na czas przenoszenia i ginie razem z katalogiem roboczym.
 
 ## Zadanie 14: Nowy projekt i zasiew z repozytorium
 
+> **Wykonane częściowo 2026-09-09, poza kolejnością, na polecenie właściciela.**
+> Projekt „IRIN - system projektowy (Regalia)" utworzony,
+> `04ac99a2-1ffd-4632-bc63-f2a19df08c53`. Fala 1 wysłana: 10 plików
+> (tokeny, trzy specyfikacje jako `guidelines/`, znak, `fonts.css`, `README.md`),
+> potwierdzone przez `list_files`. Fala 2 czeka na zadania 7-10.
+> `.design-sync/config.json` **świadomie nie przełączony** - paczka
+> `_robocze/ds-bundle` stoi jeszcze na v2, więc przełączenie teraz wlałoby v2
+> do projektu na Regalii. Szczegóły i stan:
+> [`_robocze/porzadek-w-projekcie-claude-design.md`](./_robocze/porzadek-w-projekcie-claude-design.md).
+
+
 **Interfejsy:**
 - Konsumuje: `_robocze/ds-bundle/` po bloku A, trzy pliki SVG z korzenia.
 - Produkuje: `projectId` nowego projektu, wpisany w zadaniu 16 do

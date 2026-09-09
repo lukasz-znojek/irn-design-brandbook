@@ -181,3 +181,70 @@ dwoma plikami kontekstu firmy. To są decyzje, nie porządki.
 3. **Czy `.md` obok `.html` w czterech dokumentach jest źródłem, czy odpadem?**
    Jeżeli odpadem, cztery pliki idą do archiwum; jeżeli źródłem, brakuje
    piątego (`irn-design-ksiega-koloru.md`) i trzeba go dopisać.
+
+
+---
+
+# Rozstrzygnięcie i wykonanie, 2026-09-09
+
+**Decyzja właściciela:** zamiast porządkować stary projekt, powstaje nowy,
+zasiewany z repozytorium, a stary zostaje nietknięty jako archiwum. Zasiew
+w dwóch falach.
+
+**Powód mechaniczny, nie estetyczny.** Kierunek „repozytorium → projekt" jest
+wierny: `write_files` przyjmuje `localPath`, czyli narzędzie czyta plik z dysku
+i wysyła bajty, a treść nie przechodzi przez sesję modelu. Kierunek odwrotny
+tej właściwości nie ma - `get_file` zwraca treść do sesji, więc zapis na dysk
+jest przepisaniem. Dlatego zasiew jest kopią, a wynoszenie archiwum było
+transkrypcją. To wynika z kontraktu narzędzia, nie z mojego pomiaru.
+
+## Nowy projekt
+
+| | |
+|---|---|
+| Nazwa | IRIN - system projektowy (Regalia) |
+| Identyfikator | `04ac99a2-1ffd-4632-bc63-f2a19df08c53` |
+| Typ | `PROJECT_TYPE_DESIGN_SYSTEM` (niezmienialny po utworzeniu) |
+| Zasiew fali 1 | 2026-09-09, 10 plików |
+
+Fala 1, potwierdzona przez `list_files` - 10 z 10 ścieżek obecnych:
+`README.md`, `tokens/palette-irin.json`, `tokens/tokens.css`,
+`guidelines/paleta-barw.md`, `guidelines/typografia.md`,
+`guidelines/siatka-a4.md`, trzy `assets/logo_irin_*.svg`, `fonts/fonts.css`.
+
+Odnośniki wewnątrz trzech specyfikacji zostały przepisane pod układ projektu
+(`./tokeny/palette-irin.json` na `../tokens/palette-irin.json`), a dwa
+odnośniki bez odpowiednika po tamtej stronie zamienione na zapis tekstowy:
+generator w repozytorium i `logotyp.md`, który jedzie w drugiej fali.
+Kontrola: **zero odnośników relatywnych wychodzących poza układ projektu.**
+
+## Fala 2 - co jeszcze musi pojechać
+
+| Plik | Blokuje go |
+|---|---|
+| `guidelines/logotyp.md` | zadanie 7 |
+| `styles.css` z regułami druku | zadanie 8 |
+| `fonts/OFL.txt` | zadanie 8 |
+| osiem kart `components/**` | zadanie 9 |
+| `guidelines/zasady-uzycia.md` | zadanie 10 |
+
+## Czego świadomie nie zrobiłem
+
+**`.design-sync/config.json` nadal wskazuje stary projekt.** To nie
+przeoczenie: ten plik steruje poleceniem `/design-sync`, które wysyła paczkę
+`_robocze/ds-bundle`, a paczka stoi jeszcze na palecie v2 (osiem kart
+i `styles.css` przed zadaniami 8-9). Przełączenie identyfikatora teraz
+oznaczałoby, że jedno uruchomienie `/design-sync` wlewa v2 do świeżego
+projektu na Regalii. Przełączenie należy do zadania 16 i wykonuje się je
+po domknięciu bloku A.
+
+**Szesnaście wzorów nośników zostaje w starym projekcie.** Są na Regalii
+(zmierzone 2026-09-09) i są jedynymi plikami, których nie da się przenieść
+wiernie maszyną, bo istnieją tylko po tamtej stronie. Trzy drogi: pobranie
+z interfejsu, transkrypcja z jawnym ostrzeżeniem, albo złożenie ich na nowo
+przy okazji reszty materiałów. **Decyzja otwarta.**
+
+**W starym projekcie nie usunąłem ani jednego pliku.** Skoro zostaje jako
+archiwum, 68 plików historii palet nie przeszkadza - a 15 plików śmieci, na
+które zgoda padła, przestało być problemem, bo nikt już do tego projektu nie
+zagląda po wytyczne.
