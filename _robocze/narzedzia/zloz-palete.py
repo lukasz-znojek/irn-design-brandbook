@@ -236,8 +236,8 @@ def zloz():
         "pole-tresci-cm2": pole_cm2,
         "suma-siatki-mm": suma_siatki,
         "dopasowanie-dokladne": suma_siatki == szer,
-        "rachunek-szerokosci": f"{SIATKA['kolumny']} x {SIATKA['modul-mm']} + "
-                               f"{SIATKA['kolumny']-1} x {SIATKA['gutter-mm']} = {suma_siatki} mm "
+        "rachunek-szerokosci": f"{SIATKA['kolumny']} × {SIATKA['modul-mm']} + "
+                               f"{SIATKA['kolumny']-1} × {SIATKA['gutter-mm']} = {suma_siatki} mm "
                                f"= {SIATKA['strona-mm'][0]} - {SIATKA['marginesy-mm']['lewy']} - "
                                f"{SIATKA['marginesy-mm']['prawy']}",
         "rytm-pionowy": {

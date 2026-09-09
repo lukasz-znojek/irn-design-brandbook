@@ -552,7 +552,7 @@
     "pole-tresci-cm2": 426.7,
     "suma-siatki-mm": 170,
     "dopasowanie-dokladne": true,
-    "rachunek-szerokosci": "6 x 25 + 5 x 4 = 170 mm = 210 - 20 - 20",
+    "rachunek-szerokosci": "6 × 25 + 5 × 4 = 170 mm = 210 - 20 - 20",
     "rytm-pionowy": {
       "interlinia-korpusu-mm": 5.54,
       "linii-w-polu-tresci": 45,

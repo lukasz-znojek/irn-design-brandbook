@@ -1359,7 +1359,7 @@ git commit -m "Typografia: jedenasty poziom 8,5 px i poprawiony dryf 20,86 mm"
 - Konsumuje: `palette-irin.json`, klucz `siatka-a4`.
 - Produkuje: plik, na który odsyłają `format-paczki.md` i `guidelines/`.
 
-- [ ] **Krok 1: Napisz plik**
+- [x] **Krok 1: Napisz plik**
 
 1. Nagłówek, status, zdanie o wywiedzeniu z JSON-a.
 2. `## Parametry` - tabela z `siatka-a4`: format, kolumny, moduł, gutter,
@@ -1395,7 +1395,7 @@ z kanwy", „Marginesy boczne wyrównane - poprawka 2026-09-03" i „Jednostka
 bazowa 6 mm - rozstrzygnięte". To historia poprawek, nie specyfikacja.
 Zostaje w gicie.
 
-- [ ] **Krok 2: Bramka i kontrola**
+- [x] **Krok 2: Bramka i kontrola**
 
 ```bash
 python3 _robocze/narzedzia/sprawdz-zgodnosc-md.py 2>&1 | grep "siatka-a4" || echo "siatka-a4.md: czysto"
@@ -1404,7 +1404,7 @@ python3 -c "print('kontrola rachunku slajdu:', 6*253 + 5*42, '== 1728 ->', 6*253
 python3 -c "print('kontrola jednostki pionowej: 888 / 24 =', 888/24)"
 ```
 
-- [ ] **Krok 3: Commit**
+- [x] **Krok 3: Commit**
 
 ```bash
 git add 01-baza-wiedzy/identyfikacja/siatka-a4.md

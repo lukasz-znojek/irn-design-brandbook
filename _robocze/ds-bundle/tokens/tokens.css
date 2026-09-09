@@ -56,7 +56,7 @@
      Trzy barwy, które mogłyby je pełnić, są jednocześnie kandydatami na barwy obszarów; przypisanie ich do roli statusu zabetonowałoby to, co ma być wymienne.
      Stan niesie słowo plus jedna z barw nośnych dobrana w dokumencie. Kolor nigdy nie jest jedynym nośnikiem statusu (WCAG 1.4.1). --- */
 
-  /* --- siatka A4; rachunek: 6 x 25 + 5 x 4 = 170 mm = 210 - 20 - 20 --- */
+  /* --- siatka A4; rachunek: 6 × 25 + 5 × 4 = 170 mm = 210 - 20 - 20 --- */
   --irin-r-strona-szer:     210mm;
   --irin-r-strona-wys:      297mm;
   --irin-r-kolumny:         6;
