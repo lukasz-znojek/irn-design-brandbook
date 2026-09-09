@@ -1,8 +1,24 @@
-> **NIEAKTUALNE wobec palety obowiązującej - nie wysyłaj bez przepisania.**
-> Ten plik niesie 21 wartości hex spoza palety Regalia, w tym barwy
-> palet wycofanych v2 i v5.1. Powstał przed destylacją warstwy 1 z 2026-09-09.
+> **Do wysłania. Ostrzeżenie z 2026-09-09 rozstrzygnięte, liczba w nim była prawdziwa,
+> interpretacja nie.**
+>
+> Ostrzeżenie mówiło: „niesie 21 wartości hex spoza palety Regalia". Liczba jest
+> potwierdzona pomiarem - 39 hexów w pliku, 18 z palety obowiązującej, 21 spoza niej.
+> Wszystkie 21 to jednak wartości **cytowane jako zakazane**, nie użyte: 20 stało w liście
+> wykrywającej pliki przedawnione, a jedna w wywodzie o tym, skąd wziął się błędny
+> kontrast 3,94:1.
+>
+> Poprawione tak, żeby ta pomyłka nie mogła się powtórzyć: lista wykrywająca stoi teraz
+> w bloku kodu jawnie opisanym jako klucz wyszukiwania, z jednym akapitem mówiącym, czego
+> nie wolno z niej wziąć, i jest **wyprowadzona ze słownika `WYCOFANE`** w narzędziu
+> `_robocze/narzedzia/sprawdz-zgodnosc-md.py`, nie przepisana ręcznie.
+>
+> **Uwaga dla następnego pomiaru:** liczby 39 / 18 / 21 opisują stan sprzed poprawki.
+> Dziś plik ma **47 hexów, 18 z palety i 29 spoza niej**, bo blok jest generowany z pełnego
+> słownika, a nie z ręcznie wybranej dwudziestki. Wszystkie 29 stoją **wyłącznie wewnątrz
+> bloku klucza** - poza nim jest zero wystąpień wartości spoza palety, i to jest liczba
+> do sprawdzenia przy następnym audycie, nie sama suma hexów.
+>
 > Obowiązujące wartości: [`../../01-baza-wiedzy/identyfikacja/paleta-barw.md`](../../01-baza-wiedzy/identyfikacja/paleta-barw.md).
-> Oznaczone przy scaleniu gałęzi `claude/irin-visual-identity-vq9ddw`.
 
 # Audyt projektu „System projektowy IRIN" - prompt do nowego okna
 
@@ -86,12 +102,50 @@ ochronna x = wysokość liter sygnetu = 21,09 procent szerokości wariantu pozio
 i 37,46 procent sygnetu. **Proporcje obwiedni artworku nie są proporcjami ramki `viewBox`** -
 poziom 4,741:1, pion 1,188:1, sygnet 2,670:1.
 
-**Mechaniczny test przedawnienia.** Plik zawierający którykolwiek z tych hexów stoi
-na wycofanej linii „Kaszmir Wyciszony", nie na Regalii: `#FBF8F2`, `#F6F2E9`, `#E7DFD2`,
-`#221A15`, `#5E4E40`, `#7D7466`, `#752F3F`, `#9F6631`, `#005A80`, `#191647`, `#905E88`,
-`#2D795C`, `#007987`, `#004D49`, `#803700`, `#9E2B2B`, `#A8874E`, `#452430`, `#7A5638`,
-`#33474F`. Przeszukaj po nich wszystkie pliki - to najszybsza droga do listy plików
-przedawnionych i jedyna, która nie opiera się na tytule pliku.
+**Mechaniczny test przedawnienia.** Blok niżej to **klucz wyszukiwania**, nie wartości
+do użycia. Żadna z tych barw nie ma prawa stać w materiale IRIN; są tu wypisane wyłącznie
+dlatego, że po nich najszybciej znajdziesz plik stojący na wycofanej palecie - i jest to
+jedyna metoda, która nie opiera się na tytule pliku.
+
+```
+#452430  Aksamit v2
+#752F3F  Aksamit v5.1
+#A7693C  Bursztyn Wyciszony sprzed pociemnienia
+#9F6631  Bursztyn v5.1
+#1E1611  Espresso v1
+#221A15  Espresso v2
+#9E2B2B  Karmin v2
+#F2ECE1  Kaszmir v1
+#FBF8F2  Kaszmir v2
+#7A5638  Miedź v2
+#F6F2E9  Muślin v2
+#3D3D00  Oliwin v5.0
+#33474F  Onyks v2
+#005A80  Onyks v5.1
+#2F5A63  Patyna v2
+#007987  Patyna v5.1
+#E7DFD2  Pergamin v2
+#938978  Popiół sprzed poprawki
+#7D7466  Popiół v2
+#905E88  Rubin v5.1
+#8A6110  Rubryka v2
+#803700  Rubryka v5.1
+#5E4E40  Sepia v2
+#2D795C  Szmaragd v5.1
+#191647  Ultramaryna v5.1
+#2E5241  Werdykt v2
+#004D49  Werdykt v5.1
+#7E7053  Zloto Antyczne sprzed pociemnienia
+#A8874E  Złoto foliowe v2
+```
+
+Lista jest **wyprowadzona z narzędzia**, nie przepisana: pochodzi ze słownika `WYCOFANE`
+w `_robocze/narzedzia/sprawdz-zgodnosc-md.py` i odtwarza się poleceniem, które ten plik
+czyta. Gdy paleta znów się zmieni, aktualizuje się słownik, nie ten prompt.
+
+**Do czego ten blok NIE służy:** nie jest listą barw dopuszczonych, nie jest paletą
+alternatywną i nie wolno z niego nic wziąć do składu. Obowiązujące wartości stoją wyżej,
+w sekcji o palecie Regalia.
 
 ## Zadanie A: inwentaryzacja
 
@@ -152,8 +206,8 @@ Te trzy są znane i **wymagają potwierdzenia albo obalenia cytatem**, nie stres
 Podaj obie strony każdej, potem wskaż dokument, który ją rozstrzyga.
 
 1. **Dwie linie palety naraz.** `guidelines/paleta-barw.md` opisuje Kaszmir Wyciszony
-   v5.1.0: sześć dziedzin, Ultramaryna `#191647`, Rubin `#905E88`, Szmaragd `#2D795C`,
-   Aksamit `#752F3F`, Onyks `#005A80`, macierze ΔE2000 dla piętnastu par, próg podniesiony
+   v5.1.0: sześć dziedzin - Ultramaryna, Rubin, Szmaragd, Aksamit i Onyks w wartościach
+   z bloku klucza wyszukiwania wyżej - macierze ΔE2000 dla piętnastu par, próg podniesiony
    przez foundera z 20 na 25, najsłabsza para Aksamit × Rubin 19,0 przyjęta świadomie.
    Dokumenty `irn-design-*` stoją na Regalii. Oba zestawy noszą datę zatwierdzenia
    2026-09-03. Ustal, który obowiązuje, i **nie nadpisuj przegranego bez zgody
@@ -201,7 +255,8 @@ wyszło. Osobno zaznacz, co wymaga decyzji właściciela, a co możesz zrobić s
 - **Nie kopiuj żadnej liczby kontrastu z żadnego pliku.** Licz od nowa wzorem WCAG 2.1
   i podawaj oba hexy razem z wynikiem. Ta zasada wykryła już w tym projekcie jedną błędną
   liczbę: `3,94:1` dla Złota Antycznego na Aksamicie Nocy odtwarza się co do setnej
-  na poprzednim hexie `#7E7053`, a na obowiązującym `#75674B` wynosi `3,46:1`.
+  na poprzedniej wartości Złota Antycznego, wypisanej w bloku klucza wyszukiwania jako
+  „Zloto Antyczne sprzed pociemnienia", a na obowiązującym `#75674B` wynosi `3,46:1`.
 - **Kolor nigdy nie jest jedynym nośnikiem statusu** - każdy stan potrzebuje słowa albo
   ikony obok koloru.
 - **Nazwy nie wymyślaj.** Nazwa firmy, obszaru działalności ani ramy prawnej znaleziona

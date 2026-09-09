@@ -38,6 +38,12 @@ WYCOFANE = {
     "#004D49": "Werdykt v5.1", "#803700": "Rubryka v5.1", "#007987": "Patyna v5.1",
     "#191647": "Ultramaryna v5.1", "#905E88": "Rubin v5.1", "#2D795C": "Szmaragd v5.1",
     "#3D3D00": "Oliwin v5.0", "#F2ECE1": "Kaszmir v1", "#1E1611": "Espresso v1",
+    # Dwie wartosci sprzed pociemnienia w obrebie Regalii. Nie sa z wycofanej palety,
+    # ale sa wycofanymi wartosciami i dowiedlnie produkowaly bledne liczby: kontrast
+    # 3,94:1 dla Zlota Antycznego na Aksamicie Nocy odtwarza sie co do czwartego
+    # miejsca na #7E7053 (3,9417), a na obowiazujacym #75674B daje 3,4577.
+    "#7E7053": "Zloto Antyczne sprzed pociemnienia",
+    "#A7693C": "Bursztyn Wyciszony sprzed pociemnienia",
 }
 
 def pliki():
