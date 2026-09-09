@@ -62,3 +62,10 @@ i nie należy ich traktować jak zamkniętych:
 `siatka-a4.md`, `typografia.md`, `logotyp.md`, oraz `zasady-uzycia.md` z ośmioma regułami wyżej.
 Dane maszynowe: `tokens/palette-irin.json`. Przy składaniu czytaj te pliki, nie streszczenie —
 każda liczba ma tam wypisany rachunek, którym się ją odtwarza.
+
+## Licencja krojów
+
+Manrope i Inconsolata są objęte **SIL Open Font License 1.1**. Tekst licencji leży
+w `fonts/OFL.txt` i podróżuje z paczką - to wymóg samej licencji, nie uprzejmość:
+osadzone pliki woff2 niosą w tablicy `name` wyłącznie adres URL, więc bez tego pliku
+tekst licencji nie towarzyszyłby fontowi.

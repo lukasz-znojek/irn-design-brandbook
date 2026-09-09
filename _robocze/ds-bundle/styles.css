@@ -1,49 +1,87 @@
 @import url('./fonts/fonts.css');
 @import url('./tokens/tokens.css');
 
-/* System IRIN - warstwa bazowa. Wszystko, co widzi projekt renderowany
-   w Claude Design, przechodzi przez domknięcie @import tego pliku. */
+/* Warstwa bazowa systemu IRIN, paleta Regalia. Wszystko, co widzi projekt
+   renderowany w Claude Design, przechodzi przez domknięcie @import tego pliku.
 
-body { background: var(--irin-background); color: var(--irin-neutral-dark);
-       font-family: var(--irin-kroj); margin: 0; }
+   Ten plik NIE jest generowany - klasy pisze się tu ręcznie. Generowany jest
+   tokens.css; tu wolno używać wyłącznie zmiennych --irin-r-*, nigdy wartości
+   wpisanej wprost. Bramka sprawdz-zgodnosc-md.py to pilnuje. */
 
-/* Skala typograficzna - hierarchię buduje waga jednego kroju, nie zmiana rodziny */
-.irin-display { font-weight: 200; font-size: 72px; line-height: .92; letter-spacing: -.03em; }
-.irin-h1      { font-weight: 300; font-size: 40px; line-height: 1;   letter-spacing: -.02em; }
-.irin-h2      { font-weight: 600; font-size: 24px; line-height: 1.1; letter-spacing: -.01em; }
-.irin-h3      { font-weight: 600; font-size: 16px; line-height: 1.3; }
-.irin-lead    { font-weight: 500; font-size: 16px; line-height: 1.4; }
-.irin-korpus  { font-weight: 400; font-size: 13.5px; line-height: 1.55; }
-.irin-meta    { font-weight: 400; font-size: 10px; line-height: 1.5; color: var(--irin-text-secondary); }
-.irin-kicker  { font-weight: 700; font-size: 14px; line-height: 1.2; letter-spacing: .22em; text-transform: uppercase; }
-.irin-liczba  { font-weight: 800; font-size: 52px; line-height: .95; letter-spacing: -.02em; }
-.irin-dane    { font-family: var(--irin-kroj-mono); font-size: 10.5px; line-height: 1.5; }
+body { background: var(--irin-r-surface); color: var(--irin-r-text);
+       font-family: var(--irin-r-kroj); margin: 0; }
 
-/* Linie. Grubości NIE są jeszcze potwierdzone na wydruku - patrz README. */
-.irin-linia-struktury { border: 0; border-top: .25mm solid var(--irin-border); }
-.irin-kreska-ozdobna  { height: .5mm; background: var(--irin-accent); border: 0; }
+/* Skala typograficzna - jedenaście poziomów. Hierarchię buduje waga jednego
+   kroju, nie zmiana rodziny. Podłoga składu: .irin-techniczny, 8,5 px = 6,38 pt. */
+.irin-display    { font-weight: 200; font-size: 72px;   line-height: .92; letter-spacing: -.03em; }
+.irin-h1         { font-weight: 300; font-size: 40px;   line-height: 1;   letter-spacing: -.02em; }
+.irin-h2         { font-weight: 600; font-size: 24px;   line-height: 1.1; letter-spacing: -.01em; }
+.irin-h3         { font-weight: 600; font-size: 16px;   line-height: 1.3; }
+.irin-lead       { font-weight: 500; font-size: 16px;   line-height: 1.4; }
+.irin-korpus     { font-weight: 400; font-size: 13.5px; line-height: 1.55; }
+.irin-meta       { font-weight: 400; font-size: 10px;   line-height: 1.5; color: var(--irin-r-text-muted); }
+.irin-kicker     { font-weight: 700; font-size: 14px;   line-height: 1.2; letter-spacing: .22em;
+                   text-transform: uppercase; color: var(--irin-r-dziedzina); }
+.irin-liczba     { font-weight: 800; font-size: 52px;   line-height: .95; letter-spacing: -.02em; }
+.irin-dane       { font-family: var(--irin-r-kroj-mono); font-size: 10.5px; line-height: 1.5; }
+.irin-techniczny { font-family: var(--irin-r-kroj-mono); font-size: 8.5px;  line-height: 1.4;
+                   color: var(--irin-r-text-muted); }
 
-/* Odstęp pionowy między blokami: wielokrotność jednostki 6 mm */
-.irin-odstep-1 { margin-block: var(--irin-jednostka); }
-.irin-odstep-2 { margin-block: calc(var(--irin-jednostka) * 2); }
-.irin-odstep-4 { margin-block: calc(var(--irin-jednostka) * 4); }
+/* Linie. Grubości NIEPOTWIERDZONE NA WYDRUKU - falsyfikator otwarty.
+   Na ekranie .25mm zaokrągla się do 1px; ekran nie jest miejscem pomiaru. */
+.irin-linia-struktury { border: 0; border-top: var(--irin-r-linia-struktury) solid var(--irin-r-border); }
+.irin-kreska-ozdobna  { border: 0; height: var(--irin-r-linia-ozdobna); background: var(--irin-r-accent); }
 
-/* Siatka sześciu kolumn */
-.irin-siatka { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr));
-               gap: var(--irin-gutter); }
+/* Odstęp pionowy między blokami: wielokrotność jednostki 6 mm.
+   Wnętrze komponentu tej jednostce nie podlega - patrz siatka-a4.md. */
+.irin-odstep-1 { margin-block: var(--irin-r-jednostka); }
+.irin-odstep-2 { margin-block: calc(var(--irin-r-jednostka) * 2); }
+.irin-odstep-4 { margin-block: calc(var(--irin-r-jednostka) * 4); }
 
-/* Karta podglądu w panelu Design System */
-.karta { background: var(--irin-surface); color: var(--irin-neutral-dark);
-         font-family: var(--irin-kroj); padding: 28px 32px; box-sizing: border-box; }
+/* Sześć kolumn zawsze. Liczba kolumn jest elementem tożsamości, nie parametrem. */
+.irin-siatka { display: grid; grid-template-columns: repeat(var(--irin-r-kolumny), minmax(0, 1fr));
+               gap: var(--irin-r-gutter); }
+
+/* Arkusz A4: pole treści i dwie strefy marginesów. */
+.irin-arkusz { width: var(--irin-r-strona-szer); height: var(--irin-r-strona-wys);
+               box-sizing: border-box; background: var(--irin-r-surface);
+               padding: var(--irin-r-margines-gora) var(--irin-r-margines-bok)
+                        var(--irin-r-margines-dol); position: relative; overflow: hidden; }
+
+/* Układ odwrócony: para bazowa na ciemnym tle, nie nowe barwy. */
+.irin-odwrocony { background: var(--irin-r-surface-dark); color: var(--irin-r-text-invert); }
+.irin-odwrocony .irin-meta, .irin-odwrocony .irin-techniczny { color: var(--irin-r-surface-alt); }
+
+/* Karta podglądu w panelu Design System. */
+.karta { background: var(--irin-r-surface); color: var(--irin-r-text);
+         font-family: var(--irin-r-kroj); padding: 28px 32px; box-sizing: border-box; }
 .karta h2 { font-weight: 600; font-size: 24px; letter-spacing: -.01em; margin: 0 0 4px; }
 .karta .podtytul { font-weight: 400; font-size: 13.5px; line-height: 1.55;
-                   color: var(--irin-text-secondary); margin: 0 0 20px; max-width: 62ch; }
+                   color: var(--irin-r-text-muted); margin: 0 0 20px; max-width: 62ch; }
 .karta table { border-collapse: collapse; width: 100%; font-size: 12px; }
 .karta th { text-align: left; font-weight: 600; font-size: 10px; text-transform: uppercase;
-            letter-spacing: .08em; color: var(--irin-text-secondary);
-            border-bottom: .25mm solid var(--irin-border); padding: 6px 10px 6px 0; }
-.karta td { padding: 7px 10px 7px 0; border-bottom: .25mm solid var(--irin-border);
-            vertical-align: middle; }
-.karta .uwaga { margin-top: 18px; padding: 12px 14px; background: var(--irin-neutral-light);
+            letter-spacing: .08em; color: var(--irin-r-text-muted);
+            border-bottom: var(--irin-r-linia-struktury) solid var(--irin-r-border);
+            padding: 6px 10px 6px 0; }
+.karta td { padding: 7px 10px 7px 0; vertical-align: middle;
+            border-bottom: var(--irin-r-linia-struktury) solid var(--irin-r-border); }
+.karta .uwaga { margin-top: 18px; padding: 12px 14px; background: var(--irin-r-surface-alt);
                 font-size: 11.5px; line-height: 1.5; }
-.karta code { font-family: var(--irin-kroj-mono); font-size: 11px; }
+.karta code { font-family: var(--irin-r-kroj-mono); font-size: 11px; }
+
+/* ================================================================
+   DRUK. Bez tego bloku przeglądarka wygasza tła przy Ctrl+P i Pergamin
+   calloutu oraz papier arkusza znikają. System opisuje siebie jako służący
+   dokumentom drukowanym, więc to nie jest szczegół.
+   ================================================================ */
+@page { size: A4 portrait; margin: 0; }
+
+@media print {
+  html, body { background: var(--irin-r-surface); margin: 0; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .irin-arkusz { box-shadow: none; page-break-after: always; break-after: page; }
+  .irin-arkusz:last-child { page-break-after: auto; break-after: auto; }
+  .karta, .karta .uwaga { box-shadow: none; }
+  a { text-decoration: underline; }              /* odnośnik bez barwy ekranu nadal widoczny */
+  .irin-siatka, table, tr, td, th { break-inside: avoid; }
+}

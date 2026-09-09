@@ -1572,7 +1572,7 @@ podróżował z fontem, a `find -iname 'license*' -o -iname 'OFL*'` zwraca pusto
   `.irin-siatka`, **`.irin-arkusz`** (nowa), **`.irin-odwrocony`** (nowa),
   `.karta` z potomkami. Osiem kart z zadania 9 używa dokładnie tych nazw.
 
-- [ ] **Krok 1: Napisz `styles.css`**
+- [x] **Krok 1: Napisz `styles.css`**
 
 ```css
 @import url('./fonts/fonts.css');
@@ -1664,7 +1664,7 @@ body { background: var(--irin-r-surface); color: var(--irin-r-text);
 }
 ```
 
-- [ ] **Krok 2: Sprawdź w przeglądarce, że druk zachowuje tła**
+- [x] **Krok 2: Sprawdź w przeglądarce, że druk zachowuje tła**
 
 Zapisz `/tmp/sprawdz-druk.mjs`:
 
@@ -1730,7 +1730,7 @@ to `18 mm`. Jeżeli `adjust` w druku pokazuje `economy`, blok `@media print`
 nie zadziałał i **tła znikną na wydruku** - to jest ta luka, którą to zadanie
 zamyka.
 
-- [ ] **Krok 3: Dołóż tekst licencji krojów**
+- [x] **Krok 3: Dołóż tekst licencji krojów**
 
 ```bash
 python3 - <<'PY'
@@ -1763,7 +1763,7 @@ Dopisz na końcu `_robocze/ds-bundle/README.md` sekcję `## Licencja krojów`
 z jednym zdaniem: kroje są objęte SIL OFL 1.1, tekst licencji leży w
 `fonts/OFL.txt` i podróżuje z paczką.
 
-- [ ] **Krok 4: Bramka**
+- [x] **Krok 4: Bramka**
 
 ```bash
 python3 _robocze/narzedzia/sprawdz-zgodnosc-md.py 2>&1 | grep "styles.css" || echo "styles.css: czysto"
@@ -1774,7 +1774,7 @@ grep -c "print-color-adjust" _robocze/ds-bundle/styles.css
 Oczekiwane: `styles.css: czysto`, plik OFL istnieje, `print-color-adjust`
 występuje co najmniej raz.
 
-- [ ] **Krok 5: Commit**
+- [x] **Krok 5: Commit**
 
 ```bash
 git add _robocze/ds-bundle/styles.css _robocze/ds-bundle/fonts/OFL.txt _robocze/ds-bundle/README.md
@@ -2069,6 +2069,30 @@ git commit -m "Guidelines składane skryptem; siedemnaście martwych odnośnikó
 - Modyfikuj: `.gitignore`
 - Modyfikuj: `_robocze/brandbook-warianty/wariant-{1,2,3}-*.dc.html`
 - Usuń: `_robocze/skasowane-galezie-2026-09-03.md`
+
+- [ ] **Krok 0: `_robocze/ds-bundle/README.md` - przepisać w całości**
+
+Ten plik **wypadł z pierwotnego zakresu planu** i został dopisany 2026-09-09,
+w trakcie zadania 8. Nie było go w żadnym zadaniu, a jedzie do projektu Claude
+Design w fali 2, więc pojechałby z treścią palety v2. Zmierzone w nim rozjazdy:
+
+- prefiks tokenów `--irin-` zamiast `--irin-r-`, w dwóch miejscach;
+- nazwy barw v2 w siedmiu miejscach: Aksamit, Miedź, Onyks, Popiół, Złoto
+  foliowe, Pergamin, Rubryka;
+- reguła 1 przypisuje barwy do dziedzin, co **obala decyzja właściciela
+  z 2026-09-09** (barwy dobierane do materiału, gniazdo `--irin-r-dziedzina`);
+- lista klas typograficznych ma dziesięć pozycji, brakuje `.irin-techniczny`
+  (podłoga składu), `.irin-arkusz` i `.irin-odwrocony`;
+- sekcja „czego ten system nie potwierdził" podaje diakrytyki jako
+  „potwierdzone w zakresie, w jakim je zmierzono, nie glif po glifie" - a pomiar
+  z 2026-09-09 dał **18/18 glif po glifie** dla obu krojów, więc to twierdzenie
+  jest nieaktualne;
+- minimum sygnetu podane jako „10 mm / 44 px", a `logotyp.md` mówi
+  **10 mm** bez odpowiednika ekranowego;
+- myślniki i półpauzy w całym pliku.
+
+Sekcja `## Licencja krojów` została dopisana w zadaniu 8 i jest poprawna -
+przy przepisywaniu zostaw ją.
 
 - [ ] **Krok 1: `CLAUDE.md`**
 
