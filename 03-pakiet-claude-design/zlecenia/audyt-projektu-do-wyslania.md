@@ -135,13 +135,26 @@ jedyna metoda, która nie opiera się na tytule pliku.
 #191647  Ultramaryna v5.1
 #2E5241  Werdykt v2
 #004D49  Werdykt v5.1
-#7E7053  Zloto Antyczne sprzed pociemnienia
+#7E7053  Złoto Antyczne sprzed pociemnienia
 #A8874E  Złoto foliowe v2
 ```
 
 Lista jest **wyprowadzona z narzędzia**, nie przepisana: pochodzi ze słownika `WYCOFANE`
-w `_robocze/narzedzia/sprawdz-zgodnosc-md.py` i odtwarza się poleceniem, które ten plik
-czyta. Gdy paleta znów się zmieni, aktualizuje się słownik, nie ten prompt.
+w `_robocze/narzedzia/sprawdz-zgodnosc-md.py`. Blok wyżej odtwarza się co do znaku tym
+poleceniem, uruchomionym w korzeniu repozytorium:
+
+```bash
+python3 - <<'PY'
+import importlib.util as u
+s = u.spec_from_file_location("g", "_robocze/narzedzia/sprawdz-zgodnosc-md.py")
+m = u.module_from_spec(s); s.loader.exec_module(m)
+for h, n in sorted(m.WYCOFANE.items(), key=lambda x: x[1]): print(f"{h}  {n}")
+PY
+```
+
+Gdy paleta znów się zmieni, aktualizuje się słownik, potem przebiega to polecenie,
+a jego wyjście zastępuje blok wyżej. Ten prompt nie jest miejscem, w którym dopisuje się
+hex ręcznie.
 
 **Do czego ten blok NIE służy:** nie jest listą barw dopuszczonych, nie jest paletą
 alternatywną i nie wolno z niego nic wziąć do składu. Obowiązujące wartości stoją wyżej,
@@ -256,7 +269,7 @@ wyszło. Osobno zaznacz, co wymaga decyzji właściciela, a co możesz zrobić s
   i podawaj oba hexy razem z wynikiem. Ta zasada wykryła już w tym projekcie jedną błędną
   liczbę: `3,94:1` dla Złota Antycznego na Aksamicie Nocy odtwarza się co do setnej
   na poprzedniej wartości Złota Antycznego, wypisanej w bloku klucza wyszukiwania jako
-  „Zloto Antyczne sprzed pociemnienia", a na obowiązującym `#75674B` wynosi `3,46:1`.
+  „Złoto Antyczne sprzed pociemnienia", a na obowiązującym `#75674B` wynosi `3,46:1`.
 - **Kolor nigdy nie jest jedynym nośnikiem statusu** - każdy stan potrzebuje słowa albo
   ikony obok koloru.
 - **Nazwy nie wymyślaj.** Nazwa firmy, obszaru działalności ani ramy prawnej znaleziona

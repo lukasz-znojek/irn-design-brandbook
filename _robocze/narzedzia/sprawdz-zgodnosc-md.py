@@ -38,11 +38,15 @@ WYCOFANE = {
     "#004D49": "Werdykt v5.1", "#803700": "Rubryka v5.1", "#007987": "Patyna v5.1",
     "#191647": "Ultramaryna v5.1", "#905E88": "Rubin v5.1", "#2D795C": "Szmaragd v5.1",
     "#3D3D00": "Oliwin v5.0", "#F2ECE1": "Kaszmir v1", "#1E1611": "Espresso v1",
-    # Dwie wartosci sprzed pociemnienia w obrebie Regalii. Nie sa z wycofanej palety,
-    # ale sa wycofanymi wartosciami i dowiedlnie produkowaly bledne liczby: kontrast
-    # 3,94:1 dla Zlota Antycznego na Aksamicie Nocy odtwarza sie co do czwartego
-    # miejsca na #7E7053 (3,9417), a na obowiazujacym #75674B daje 3,4577.
-    "#7E7053": "Zloto Antyczne sprzed pociemnienia",
+    # Dwie wartości sprzed pociemnienia w obrębie Regalii. Nie są z wycofanej palety,
+    # ale są wycofanymi wartościami: obie stoją w dokumencie irn-design-paleta-kolorow,
+    # w tabeli „Co zmieniono wobec wariantu Regalia", w kolumnie „Było".
+    # Udokumentowany przypadek błędnej liczby jest na razie jeden, dla Złota Antycznego:
+    # kontrast 3,94:1 na Aksamicie Nocy odtwarza się co do czwartego miejsca na #7E7053
+    # (3,9417), a na obowiązującym #75674B daje 3,4577. Dla Bursztynu Wyciszonego
+    # (#A7693C wobec obowiązującego #9B5E30) takiego przypadku nie znaleziono - wpis
+    # stoi tu profilaktycznie, bo wartość jest wycofana, nie dlatego, że coś zepsuła.
+    "#7E7053": "Złoto Antyczne sprzed pociemnienia",
     "#A7693C": "Bursztyn Wyciszony sprzed pociemnienia",
 }
 
