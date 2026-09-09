@@ -96,9 +96,21 @@ wizytówki w skali 1:1, na którym kontakt w Inconsolacie 10,5 px nie mieści si
 ### Co się na tej osi zgadza
 
 Wszystkie dziesięć poziomów, które brandbook ma, zgadzają się z `typografia.md` co do kroju,
-wagi, stopnia, interlinii i trackingu - sprawdzone wiersz po wierszu. Zapis `10,1 pt` wobec
-`10,13 pt` w warstwie 1 **nie jest rozjazdem**: `typografia.md` wiersz 50 sam ustala, że strona
-projektowa zapisuje jednomiejscowo, a repozytorium dwumiejscowo. Pozycja otwarta „stopień pisma
+wagi, stopnia, interlinii i trackingu - sprawdzone wiersz po wierszu.
+
+Zapis `10,1 pt` wobec `10,13 pt` w warstwie 1 **traktuję jako różnicę zapisu, nie rozjazd -
+i to jest wniosek, nie odczyt.** Uczciwie o podstawie: `typografia.md` wiersz 50 ustala
+konwencję („strona projektowa zapisuje `6,4 pt`… w repozytorium obowiązuje zapis dwumiejscowy"),
+ale robi to **w sekcji o podłodze składu i dla tego jednego wiersza skali**. Rozciągnięcie tej
+konwencji na korpus jest moim uogólnieniem z jednego przypadku. Co je wzmacnia: operacja jest
+ta sama co w wierszu 50, czyli **zaokrąglenie do jednego miejsca** - 6,38 → 6,4 tam, 10,13 → 10,1
+tutaj - i w obu przypadkach wychodzi poprawnie, w odróżnieniu od sygnetu z osi logotypu, gdzie
+2,6698 → 2,669 jest ucięciem. Co je obali: wiersz
+skali, w którym
+brandbook podaje wartość niedającą się otrzymać z liczby warstwy 1 żadnym zaokrągleniem -
+wtedy to nie konwencja zapisu, tylko inna liczba. Takiego wiersza w tym pomiarze nie ma.
+
+Pozycja otwarta „stopień pisma
 w druku" (korpus 10,1 pt wobec zakładanego minimum 12 pt) jest w brandbooku odnotowana jako
 otwarta, z falsyfikatorem - czyli obsłużona poprawnie.
 
@@ -106,8 +118,9 @@ otwarta, z falsyfikatorem - czyli obsłużona poprawnie.
 
 To jest najcięższe ustalenie tego audytu.
 
-Księga znaku ma rozdział 01 w pełni zgodny z `logotyp.md`: viewBoksy, obwiednie
-i **proporcje znaku 4,741 : 1, 1,188 : 1, 2,669 : 1**. Trzy akapity dalej, w tabeli doboru
+Księga znaku ma rozdział 01 zgodny z `logotyp.md` co do wielkości: viewBoksy, obwiednie
+i **proporcje znaku 4,741 : 1, 1,188 : 1, 2,669 : 1** - z jednym odstępstwem w zapisie,
+opisanym niżej. Trzy akapity dalej, w tabeli doboru
 wariantu, ta sama księga podaje inne liczby:
 
 | Wariant | Proporcja w tabeli doboru | Proporcja obwiedni | Iloraz |
@@ -115,6 +128,14 @@ wariantu, ta sama księga podaje inne liczby:
 | Poziom | **1,773 : 1** | 4,7412 : 1 | 2,674 |
 | Pion | **1,135 : 1** | 1,1880 : 1 | 1,047 |
 | Sygnet | **1,135 : 1** | 2,6698 : 1 | 2,352 |
+
+**Odstępstwo w zapisie, osobne od tego rozjazdu.** Z trzech proporcji przepisanych w rozdziale 01
+dwie są poprawnie zaokrąglone (4,7412 → 4,741 i 1,1880 → 1,188), a trzecia jest **ucięta,
+nie zaokrąglona**: 2,6698 zaokrąglone do trzech miejsc daje **2,670**, a księga podaje 2,669.
+Różnica jest o rząd wielkości mniejsza niż rozjazd wyżej i nie zmienia żadnego składu, ale
+w dokumencie, którego tematem są proporcje znaku, jedna z trzech liczb jest przepisana inną
+metodą niż dwie pozostałe. `03-pakiet-claude-design/zlecenia/audyt-projektu-do-wyslania.md`
+podaje w tym miejscu **2,670**, czyli wartość zaokrągloną.
 
 Skąd te dwie liczby, rachunek jednoznaczny:
 

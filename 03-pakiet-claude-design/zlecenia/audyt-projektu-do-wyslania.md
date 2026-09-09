@@ -1,3 +1,5 @@
+<!-- bramka: liczby-cytowane-jako-bledne 3,94 -->
+
 > **Do wysłania. Ostrzeżenie z 2026-09-09 rozstrzygnięte, liczba w nim była prawdziwa,
 > interpretacja nie.**
 >
@@ -107,6 +109,7 @@ do użycia. Żadna z tych barw nie ma prawa stać w materiale IRIN; są tu wypis
 dlatego, że po nich najszybciej znajdziesz plik stojący na wycofanej palecie - i jest to
 jedyna metoda, która nie opiera się na tytule pliku.
 
+<!-- bramka: klucz-wyszukiwania -->
 ```
 #452430  Aksamit v2
 #752F3F  Aksamit v5.1

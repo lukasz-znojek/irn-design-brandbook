@@ -22,6 +22,7 @@ SPRAWDZANE = [
     "01-baza-wiedzy/identyfikacja/README.md",
     "03-pakiet-claude-design/format-paczki.md",
     "03-pakiet-claude-design/prompt-bazowy.md",
+    "03-pakiet-claude-design/zlecenia/audyt-projektu-do-wyslania.md",
     "_robocze/ds-bundle/README.md",
     "_robocze/ds-bundle/styles.css",
 ]
@@ -62,6 +63,47 @@ def pliki():
                 if p.is_file() and p.suffix in (".md", ".html", ".css"):
                     yield p
 
+# Dwa znaczniki, którymi plik deklaruje bramce, że dana wartość jest CYTATEM,
+# a nie użyciem. Bez nich bramka nie umie odróżnić listy wykrywającej od składu
+# i oznacza cały klucz wyszukiwania jako błędy - dokładnie ten zarzut postawiła
+# recenzja PR 77.
+#
+#   <!-- bramka: klucz-wyszukiwania -->      przed blokiem ```, cały blok pomijany
+#   <!-- bramka: liczby-cytowane-jako-bledne 3,94 -->   wypisane liczby wolno
+#                                            w tym pliku podać jako błędne
+#
+# Znacznik obejmuje jeden plik i jeden blok. Nie ma znacznika globalnego i nie ma
+# znacznika na hex w prozie: hex spoza palety w prozie zostaje błędem zawsze.
+ZN_BLOK = "<!-- bramka: klucz-wyszukiwania -->"
+ZN_LICZBY = "<!-- bramka: liczby-cytowane-jako-bledne"
+
+def wyjatki(tresc):
+    """Zwraca (numery wierszy do pominięcia, liczby dopuszczone jako cytat)."""
+    pominiete, cytowane = set(), set()
+    czeka = False
+    w_bloku = False
+    for nr, wiersz in enumerate(tresc.splitlines(), 1):
+        s = wiersz.strip()
+        if ZN_LICZBY in wiersz:
+            ogon = wiersz.split(ZN_LICZBY, 1)[1]
+            cytowane |= set(re.findall(r"\d{1,2},\d{2}", ogon))
+            continue
+        if s == ZN_BLOK:
+            czeka = True
+            continue
+        if s.startswith("```"):
+            if czeka and not w_bloku:
+                w_bloku, czeka = True, False
+                pominiete.add(nr)
+                continue
+            if w_bloku:
+                w_bloku = False
+                pominiete.add(nr)
+                continue
+        if w_bloku:
+            pominiete.add(nr)
+    return pominiete, cytowane
+
 def main():
     d = json.loads(JSON.read_text(encoding="utf-8"))
     hexy = {v["hex"].upper() for v in d["barwy"].values()}
@@ -86,7 +128,10 @@ def main():
     for p in pliki():
         tresc = p.read_text(encoding="utf-8", errors="replace")
         rel = p.relative_to(ROOT)
+        pominiete, cytowane = wyjatki(tresc)
         for nr, wiersz in enumerate(tresc.splitlines(), 1):
+            if nr in pominiete:
+                continue
             for hx in re.findall(r"#[0-9A-Fa-f]{6}\b", wiersz):
                 sprawdzonych += 1
                 g = hx.upper()
@@ -96,7 +141,7 @@ def main():
                     bledy.append(f"{rel}:{nr}  {hx} - nie ma tej wartości w palette-irin.json")
             for kontr in re.findall(r"\b(\d{1,2},\d{2})\s*:\s*1\b", wiersz):
                 sprawdzonych += 1
-                if kontr not in liczby:
+                if kontr not in liczby and kontr not in cytowane:
                     bledy.append(f"{rel}:{nr}  kontrast {kontr}:1 - "
                                  f"nie ma tej liczby w palette-irin.json")
 
