@@ -1080,7 +1080,7 @@ ta sama karta rozwiązuje.
   0 albo 1. Sprawdza cztery specyfikacje warstwy 1, pięć plików `guidelines/`,
   osiem kart, `styles.css`, `format-paczki.md` i `prompt-bazowy.md`.
 
-- [ ] **Krok 1: Napisz bramkę spójności**
+- [x] **Krok 1: Napisz bramkę spójności**
 
 ```python
 #!/usr/bin/env python3
@@ -1183,7 +1183,7 @@ if __name__ == "__main__":
     sys.exit(main())
 ```
 
-- [ ] **Krok 2: Uruchom - musi ODMÓWIĆ**
+- [x] **Krok 2: Uruchom - musi ODMÓWIĆ**
 
 ```bash
 python3 _robocze/narzedzia/sprawdz-zgodnosc-md.py; echo "kod wyjścia: $?"
@@ -1198,7 +1198,7 @@ python3 _robocze/narzedzia/sprawdz-zgodnosc-md.py > /tmp/roboty.txt 2>&1
 awk '/^    !/{print $2}' /tmp/roboty.txt | cut -d: -f1 | sort | uniq -c | sort -rn
 ```
 
-- [ ] **Krok 3: Commit**
+- [x] **Krok 3: Commit**
 
 ```bash
 git add _robocze/narzedzia/sprawdz-zgodnosc-md.py
