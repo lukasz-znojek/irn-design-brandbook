@@ -25,8 +25,8 @@ IRIN (Instytut Rozwoju i Nauki) to polska firma działająca w trzech obszarach:
 ## Co wynika z plików logotypu (`logo_irin_sygnet.svg`, `logo_irin_pion.svg`, `logo_irin_poziom.svg`)
 
 - Ścieżki graficzne w każdym z trzech plików nie mają zdefiniowanego atrybutu `fill` — a więc renderują się domyślnym czarnym; jedyny jawny `fill="none"` dotyczy przezroczystego prostokąta tła. Wniosek: pliki źródłowe logotypu są jednokolorowe (czarne na przezroczystym tle) i same w sobie nie definiują żadnej palety barw.
-- `logo_irin_sygnet.svg` i `logo_irin_pion.svg`: `viewBox="0 0 184.837 162.834"` (proporcja ok. 1.135:1).
-- `logo_irin_poziom.svg`: `viewBox="0 0 281.333 158.667"` (proporcja ok. 1.773:1).
+- `logo_irin_sygnet.svg` i `logo_irin_pion.svg`: `viewBox="0 0 184.837 162.834"`; `logo_irin_poziom.svg`: `viewBox="0 0 281.333 158.667"`.
+- **Proporcje odczytane z `viewBox` to proporcje pustej ramki, nie znaku - korekta 2026-09-04.** Obwiednia artworku zmierzona `getBBox` na złożonej kanwie: poziom 184,213 × 38,854 (**4,741:1**), pion 103,728 × 87,312 (**1,188:1**), sygnet 103,728 × 38,853 (**2,670:1**). Artwork zajmuje 16,0 / 30,1 / 13,4 procent powierzchni ramki. Skutek: `width:18mm` na kontenerze bez nadpisania `viewBox` daje znak o szerokości 11,8 mm, czyli poniżej minimum. Pełny wywód i dwa poprawne sposoby: `01-baza-wiedzy/identyfikacja/logotyp.md`.
 - Trzy pliki odpowiadają trzem wariantom logotypu: poziomy (podstawowy), pionowy (pola wąskie/wysokie), sygnet (samodzielny).
 - Minimalny rozmiar, przestrzeń ochronna i zakazy modyfikacji **nie wynikają z geometrii SVG** - nie da się ich zmierzyć w tych plikach. Pochodzą z `brandbook.dc.html` i **zostały potwierdzone przez foundera**: minimalny rozmiar i przestrzeń ochronna wcześniej, cztery zakazy modyfikacji 2026-09-02. Obowiązująca specyfikacja: `01-baza-wiedzy/identyfikacja/logotyp.md`.
 
@@ -34,7 +34,7 @@ IRIN (Instytut Rozwoju i Nauki) to polska firma działająca w trzech obszarach:
 
 To jest **wstępne canvas foundera** — punkt inspiracji i dowód zamierzonego kierunku, nie specyfikacja do odtworzenia. Wyekstrahowane fakty:
 
-- Pełna nazwa firmy w pliku: "Instytut Rozwoju i Nauki". Trzy dziedziny nazwane wprost: Pedagogika, Akademia AI, Pożyczki UE/BGK.
+- Pełna nazwa firmy w pliku: "Instytut Rozwoju i Nauki". Trzy dziedziny nazwane wprost: Pedagogika, Akademia AI, Pożyczki UE/BGK. **Rozbieżność otwarta 2026-09-04:** dokumenty wzorcowe `irn-design-*` nazywają pierwszą dziedzinę **Szkolenia zawodowe**, nie Pedagogika, a `tokens/tokens.css` opisuje **sześć** obszarów przy trzech barwach dziedzinowych w palecie. Czeka na decyzję właściciela; do jej podjęcia obowiązują trzy barwy z `paleta-barw.md`, a obszar bez własnej barwy dostaje Szafir Nocny plus podpis słowem.
 - Krój pisma: **Manrope**, wagi 200–800; pomocniczo Inconsolata.
 - Najczęstsze wartości hex w pliku: `#1E1611` (tusz/tekst), `#5B4837`, `#F2ECE1` (papier/tło), `#3A2C1E`, `#4A1D26`, `#D9A75B`, `#B58540`, `#E4DACB`, `#1B2B26`, `#A15C2C`, `#8B2E3A` — plik nazywa tę paletę "Colorbook Kaszmir Aksamit" i opisuje regułę proporcji 80/15/5 (baza / akcent dziedzinowy / akcja).
 - Siatka dokumentu A4 w pliku: 6 kolumn, moduł 32 mm, gutter 4 mm, jednostka bazowa 6 mm.
@@ -46,9 +46,11 @@ To jest **wstępne canvas foundera** — punkt inspiracji i dowód zamierzonego 
 
 Wartości hex wypisane wyżej opisują **plik `brandbook.dc.html`**, a nie obowiązującą paletę - to zapis tego, co jest w kanwie foundera, i pozostaje prawdziwy jako opis tego pliku.
 
-Obowiązująca paleta to **14 kolorów, wariant 2 „Kaszmir Wyciszony”**, wybrany przez foundera spośród siedmiu wariantów. Jedyne źródło prawdy: `01-baza-wiedzy/identyfikacja/paleta-barw.md`. Tam też, od 2026-09-02, siatka A4 (`siatka-a4.md`), typografia (`typografia.md`) i logotyp (`logotyp.md`) - `03-pakiet-claude-design/format-paczki.md` już żadnej z tych czterech nie powtarza, tylko odsyła i dokłada zasady ich użycia w zleceniu. Dane maszynowe: `01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json`. Porównanie siedmiu wariantów i uzasadnienie wyboru (archiwum): `_robocze/paleta-v2/palette-options-v2.md`. Historia pierwszej decyzji: `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
+Obowiązująca paleta to **Regalia (wariant B)**, zatwierdzona przez właściciela 2026-09-03: siedem barw nośnych, siedem funkcjonalnych i cztery tinty dziedzinowe 12 procent. **Zastąpiła w całości paletę „Kaszmir Wyciszony” (14 kolorów, 2026-09-02) - żadna nazwa i żaden hex tamtej palety nie obowiązuje.** Wypadły: Kaszmir, Muślin, Pergamin, Espresso, Sepia, Popiół, Miedź, Onyks, Karmin, Patyna, Werdykt, Rubryka, dawny Aksamit `#452430` i Złoto foliowe. Jedyne źródło prawdy: `01-baza-wiedzy/identyfikacja/paleta-barw.md`. Tam też, od 2026-09-02, siatka A4 (`siatka-a4.md`), typografia (`typografia.md`) i logotyp (`logotyp.md`) - `03-pakiet-claude-design/format-paczki.md` już żadnej z tych czterech nie powtarza, tylko odsyła i dokłada zasady ich użycia w zleceniu. Dane maszynowe: `01-baza-wiedzy/identyfikacja/tokeny/palette-irin.json`. Porównanie siedmiu wariantów i uzasadnienie wyboru (archiwum): `_robocze/paleta-v2/palette-options-v2.md`. Historia pierwszej decyzji: `03-pakiet-claude-design/propozycja-palety-i-siatki-do-potwierdzenia.md`.
 
 Rozbieżność opisana w punkcie wyżej jest **rozstrzygnięta**: paleta i siatka przeszły pomiar i świadomą decyzję foundera. Zapis zostaje jako historia, nie jako otwarta sprawa.
+
+**Uwaga o projekcie w Claude Design, zmierzona 2026-09-04.** W projekcie `1a22ce64-0e1c-43a6-bd60-eef9241ef73b` żyją równolegle **trzy zestawy barw**: `guidelines/paleta-barw.md` (kopia sprzed wymiany), `tokens/tokens.css` w wersji v5 z sześcioma obszarami i wartościami spoza obu palet (`--irin-aksamit: #752F3F`, `--irin-onyks: #005A80`), oraz dokumenty `irn-design-*` na Regalii. Osiem szablonów w `templates/` i cztery dokumenty wzorcowe **nie korzystają z tokenów** - wpisują hexy Regalii wprost - więc renderują się poprawnie; wydanie 01 brandbooka i księgi znaku korzysta z `--irin-*` i renderuje się w barwach v5. Synchronizacja `tokens/` jest po stronie repozytorium kodu (`/design-sync`) i jest pozycją otwartą.
 
 Dwie zasady, które muszą przetrwać każdą przyszłą zmianę palety: kontrast liczy się na nowo wzorem WCAG 2.1, nigdy nie kopiuje się starych liczb; kolor nigdy nie jest jedynym nośnikiem statusu - każdy stan potrzebuje etykiety słownej albo ikony obok koloru.
 

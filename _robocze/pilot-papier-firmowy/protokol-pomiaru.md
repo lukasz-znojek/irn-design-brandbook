@@ -27,9 +27,34 @@ na trzech tłach zamiast jednego.
 | 1 | Polskie znaki na wagach 400, 500 i 600 — komplet 18 diakrytyków w każdej wadze, bez brakujących ogonków, kresek i zamienników z innego kroju | **Część pierwsza zmierzona maszynowo 2026-09-06**: w `../ds-bundle/fonts/fonts.css` oba kroje mają 18/18 diakrytyków z realnymi konturami, a oba są fontami zmiennymi (jeden plik na podzbiór, oś `wght`), więc glify nie mogą się różnić między wagami i podstawienie z innego kroju jest niemożliwe. Narzędzie: `../narzedzia/pokrycie-diakrytykow.py`. **Zostaje do obejrzenia:** czy rysunek znaków trzyma się przy 500 i 600 - ogonek przy ą, kreska nad ź przy 16 px. | pomiar maszynowy na paczce; ocena wizualna wymaga kanwy | `typografia.md`, sekcja „Alfabet polski” - **część maszynowa już wpisana 2026-09-06**; do dopisania zostaje ocena wizualna |
 | 2 | Siatka 6 × 25 mm z realną treścią — czy blok danych rejestrowych, logotyp i kolumna tekstu siadają na kolumnach bez łamania modułu; czy margines prawy 22 mm nie wygląda na błąd | | | `siatka-a4.md`: dopisać sekcję „Pierwsze użycie” z wynikiem |
 | 3 | H3 bezpośrednio pod leadem — czy różnica wagi 500 wobec 600 przy tym samym stopniu 16 px jest widoczna bez kickera | | | `typografia.md`, sekcja o H3. Jeśli niewidoczna, zasada 5 z `format-paczki.md` zostaje potwierdzona jako konieczna |
-| 4 | Sygnet samodzielny na rewersie wizytówki — zmierzona szerokość w mm i ocena czytelności; sygnet stoi w 10 mm | | | `logotyp.md`, tabela minimalnych rozmiarów. Czytelny → wiersz „10 mm / 44 px” przechodzi z „nie potwierdzony osobno” na potwierdzony; nieczytelny → wpisać zmierzone minimum |
+| 4 | **Nośnik utracony - patrz sekcja „Pomiar 4 stracił nośnik" niżej.** Sygnet na rewersie stoi w 22 mm z polecenia właściciela, a sporną wartością w `logotyp.md` jest 10 mm | nie do wypełnienia na tej kanwie | — | `logotyp.md`, tabela minimalnych rozmiarów - **czeka na decyzję, gdzie ten pomiar się przenosi** |
 | 5 | Dokument bez koloru dziedzinowego — czy papier w samym Aksamicie jako `primary` czyta się jako spójny z systemem 80/15/5 | | | `paleta-barw.md`, sekcja o regule 80/15/5: dopisać zdanie o dokumentach ogólnofirmowych |
 | 6 | **Minimalne grubości linii na wydruku** — czy linia struktury 0,25 mm w Popiele `#7D7466` i kreska ozdobna 0,5 mm w Złocie foliowym są widoczne po wydrukowaniu na zwykłej drukarce | | wymaga **wydruku**, nie samego ekranu | `paleta-barw.md`, sekcja „Minimalna grubość linii”: potwierdzić obie wartości albo wpisać zmierzone minimum |
+
+## Pomiar 4 stracił nośnik - 2026-09-03
+
+**Właściciel polecił powiększyć sygnet na rewersie wizytówki.** Kanwa w Claude Design ma dziś
+`width:22mm`, a jej własny blok pomiaru podaje „Sygnet na rewersie: 22 mm szerokości". To decyzja
+właściciela, **nie odstępstwo projektanta** - zapis „sygnet stoi na rewersie dokładnie w 10 mm"
+w zleceniu pilota jest wobec niej przedawniony i został poprawiony tego samego dnia.
+
+Skutek jest jednak taki, że pomiar 4 nie ma czym się wykonać. Sporną wartością w
+`../../01-baza-wiedzy/identyfikacja/logotyp.md` jest wiersz „Sygnet samodzielny | 10 mm / 44 px |
+odczyt z `brandbook.dc.html`, **nie potwierdzony osobno**". Sygnet w 22 mm stoi powyżej
+zatwierdzonego minimum 18 mm dla pełnego znaku, więc jego czytelność nie mówi o 10 mm nic.
+
+**Trzy wyjścia, decyzja właściciela** (dokładnie ta sama sytuacja co z falsyfikatorem „Karmin obok
+Aksamitu", który mapa drogowa przeniosła na inny dokument):
+
+1. Dołożyć na tej kanwie drugą instancję sygnetu w 10 mm, wyłącznie jako próbkę do oceny
+   czytelności, obok rewersu w 22 mm. Pomiar 4 zostaje w bramce B.
+2. Przenieść pomiar 4 na pierwszy dokument, który faktycznie użyje małego samodzielnego sygnetu,
+   i zdjąć go z bramki B - tak jak zrobiono z Karminem.
+3. Zamknąć wiersz „10 mm / 44 px" decyzją właściciela zamiast pomiarem, i wpisać do `logotyp.md`
+   wartość, którą właściciel uzna za minimum sygnetu.
+
+**Do rozstrzygnięcia tej decyzji bramka B liczy pięć pomiarów, nie sześć.** Ten zapis nie jest
+zdjęciem pomiaru z bramki - jest stwierdzeniem, że nie ma go dziś na czym wykonać.
 
 ## Skąd wziął się pomiar 6
 

@@ -2070,6 +2070,31 @@ git commit -m "Guidelines składane skryptem; siedemnaście martwych odnośnikó
 - Modyfikuj: `_robocze/brandbook-warianty/wariant-{1,2,3}-*.dc.html`
 - Usuń: `_robocze/skasowane-galezie-2026-09-03.md`
 
+- [ ] **Krok 0b: `03-pakiet-claude-design/zlecenia/` - sześć zleceń poza perymetrem bramki**
+
+Dopisane 2026-09-09 przy scaleniu gałęzi `claude/irin-visual-identity-vq9ddw`.
+Sześć plików `*-do-wyslania.md` to dokumenty **operacyjne, przeznaczone do
+wysłania** agentowi projektowemu, a bramka spójności ich nie widzi: katalog
+`zlecenia/` nie jest w jej perymetrze. Zmierzone przy scaleniu wartości hex
+spoza palety Regalia: `audyt-projektu` 21, `szablony-uniwersalne` 18,
+`osiem-szablonow` 8, `pilot-poprawki` 5, `reszta-materialow` 3,
+`pilot-papier-firmowy` 2 - w tym barwy palet wycofanych v2 (`#452430`,
+`#221A15`, `#33474F`) i v5.1 (`#005A80`, `#752F3F`, `#004D49`).
+
+Doraźnie każdy z sześciu dostał nagłówek `NIEAKTUALNE wobec palety
+obowiązującej - nie wysyłaj bez przepisania`. **Nagłówek jest kontekstem,
+nie blokadą.** Do zrobienia w tym zadaniu jedno z dwóch:
+
+- (a) wciągnąć `03-pakiet-claude-design/zlecenia/` do perymetru
+  `sprawdz-zgodnosc-md.py`, przepisać sześć plików na Regalię i domknąć
+  bramkę - wtedy liczba rozjazdów chwilowo rośnie o około 55;
+- (b) przenieść je do `_robocze/` jako archiwum zleceń już wysłanych, jeżeli
+  żadne z nich nie będzie wysyłane ponownie.
+
+Rekomendacja: **(a) dla `reszta-materialow` i `szablony-uniwersalne`**, bo
+opisują nośniki, które dopiero powstaną, **(b) dla czterech pozostałych**,
+bo dotyczą pilota i audytów już wykonanych.
+
 - [ ] **Krok 0: `_robocze/ds-bundle/README.md` - przepisać w całości**
 
 Ten plik **wypadł z pierwotnego zakresu planu** i został dopisany 2026-09-09,

@@ -1,3 +1,9 @@
+> **NIEAKTUALNE wobec palety obowiązującej - nie wysyłaj bez przepisania.**
+> Ten plik niesie 2 wartości hex spoza palety Regalia, w tym barwy
+> palet wycofanych v2 i v5.1. Powstał przed destylacją warstwy 1 z 2026-09-09.
+> Obowiązujące wartości: [`../../01-baza-wiedzy/identyfikacja/paleta-barw.md`](../../01-baza-wiedzy/identyfikacja/paleta-barw.md).
+> Oznaczone przy scaleniu gałęzi `claude/irin-visual-identity-vq9ddw`.
+
 # Pilot: papier firmowy i wizytówka — tekst gotowy do wklejenia w Claude Design
 
 Ten plik istnieje z jednego powodu: **Claude Design nie widzi dysku właściciela**. Pracuje wyłącznie

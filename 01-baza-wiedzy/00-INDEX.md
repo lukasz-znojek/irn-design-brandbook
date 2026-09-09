@@ -10,7 +10,7 @@ Szablony do pisania kart tej warstwy, nie dokumentów wydawanych na zewnątrz.
 ## identyfikacja/
 Zatwierdzone specyfikacje identyfikacji wizualnej: wartości, nie kompozycja.
 
-- [`identyfikacja/paleta-barw.md`](./identyfikacja/paleta-barw.md) - obowiązująca paleta „Kaszmir Wyciszony”: 14 kolorów z nazwami i tokenami semantycznymi, zmierzone kontrasty WCAG, reguła 80/15/5, przypisanie trzech dziedzin.
+- [`identyfikacja/paleta-barw.md`](./identyfikacja/paleta-barw.md) - obowiązująca paleta **„Regalia” (wariant B, 2026-09-03)**: siedem barw nośnych, siedem funkcjonalnych, cztery tinty dziedzinowe 12 procent, kontrasty przeliczone 2026-09-04, reguła 80/15/5, trzy barwy dziedzinowe. Zastąpiła w całości paletę „Kaszmir Wyciszony”.
 - [`identyfikacja/siatka-a4.md`](./identyfikacja/siatka-a4.md) - siatka A4: 6 kolumn, moduł 25 mm, gutter 4 mm; ze sprawdzeniem dopasowania do strony i rozstrzygnięciem roli jednostki bazowej 6 mm (jednostka odstępu między blokami, nie siatka linii bazowych tekstu).
 - [`identyfikacja/typografia.md`](./identyfikacja/typografia.md) - Manrope 200-800 i Inconsolata, dziesięciopoziomowa skala, zasada różnicowania wagą zamiast rodziną, pomiar maszynowy pokrycia polskich diakrytyków w paczce systemu projektowego (18/18 w obu krojach, 2026-09-06).
 - [`identyfikacja/logotyp.md`](./identyfikacja/logotyp.md) - logotyp: trzy warianty z proporcjami odczytanymi z plików źródłowych, minimalny rozmiar 18 mm / 90 px, przestrzeń ochronna x, cztery wiążące zakazy modyfikacji.
