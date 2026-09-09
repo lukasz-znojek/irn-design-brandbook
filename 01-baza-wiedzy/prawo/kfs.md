@@ -93,6 +93,8 @@ Do wniosku idzie też program kształcenia (§ 2 ust. 2 pkt 2): nazwa kształcen
 
 Zastrzeżenie, które zostaje: to ustalenie dotyczy przepisów powszechnie obowiązujących. Poszczególne urzędy pracy publikują własne zasady naboru i ogłaszają w nich „zasady i kryteria wyboru" (§ 3 ust. 1 rozporządzenia), więc konkretny urząd może poprosić o więcej. Sprawdzenie przy pierwszym realnym kliencie: regulamin naboru PUP właściwego dla siedziby tego klienta.
 
+Pierwszy taki odczyt, dla siedziby IRIN: ogłoszenie PUP Kielce o uzupełniającym naborze KFS 07-14.08.2026 (opublikowane 23.07.2026, odczytane 2026-09-02, kopia w `./zrodla/pup-kielce-nabor-kfs-2026-08-ogloszenie.txt`). Urząd nie wymaga karty usługi w BUR. Przy rozpatrywaniu wniosków „bierze pod uwagę” między innymi: wpis realizatora kursu do rejestru PARP („wpis do BUR”), posiadane przez realizatora certyfikaty jakości usług kształcenia ustawicznego, koszt usługi na tle podobnych usług na rynku oraz zgodność z priorytetami krajowymi i regionalnymi na dany rok. Wniosek wyłącznie elektronicznie przez praca.gov.pl; urząd zaleca start szkolenia nie wcześniej niż 50 dni po zamknięciu naboru. Dla oferty IRIN oznacza to dwie rzeczy do pokazania klientowi bez pytania: numer wpisu do BUR i posiadane certyfikaty jakości. Granica ustalenia: jedno ogłoszenie jednego urzędu, dla innego PUP odczyt trzeba powtórzyć.
+
 ## Co z tego jest prawnie wiążące dla dokumentów IRIN
 
 Dla karty specyfikacji zaświadczenia w warstwie 2 (`/02-szablony-dokumentow/certyfikat.md`):
