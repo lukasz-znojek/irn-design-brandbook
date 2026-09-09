@@ -44,6 +44,14 @@ jobs:
             Uwagi ogólne: `gh pr comment`. Uwagi do konkretnych wierszy:
             `mcp__github_inline_comment__create_inline_comment` (z `confirmed: true`).
             Publikuj wyłącznie komentarze w GitHub.
+          # --max-turns podniesione z 20 na 40 (2026-09-09). Recenzja czyta CLAUDE.md,
+          # cztery specyfikacje z 01-baza-wiedzy/identyfikacja/, karty warstwy 2 i diff,
+          # a kazdy odczyt to jedna tura. Pierwszy przebieg, ktory faktycznie ruszyl
+          # (run 32, PR 76), padl na "Reached maximum number of turns (20)" po 156
+          # sekundach, nie zdazywszy nic zglosic. Wczesniejszych 31 przebiegow ma
+          # status skipped, bo tamte PR-y byly szkicami, wiec limit nigdy nie byl
+          # sprawdzony na prawdziwej recenzji. Limit zostaje, tylko przestaje
+          # gwarantowac porazke.
           claude_args: |
-            --max-turns 20
+            --max-turns 40
             --allowedTools "mcp__github_inline_comment__create_inline_comment,Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*),Read,Grep,Glob"
