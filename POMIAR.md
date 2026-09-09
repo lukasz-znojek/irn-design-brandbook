@@ -12,6 +12,11 @@ rachunek albo komenda. Skrypty pomiarowe są jednorazowe i leżą poza repozytor
 
 ## 1. Werdykt jednym zdaniem
 
+> **Uzupełnione 2026-09-09, rozdz. 9.** Po tym werdykcie uzyskałem dostęp do projektu Claude Design
+> i zmierzyłem go. Paleta „Regalia” istnieje i jest zatwierdzona; rekomendacja B w pytaniu 1 była
+> błędna. Rozdziały 3.2, 3.3 i 7 zostają jako zapis stanu wiedzy sprzed tego odczytu - ich zdania
+> o repozytorium są nadal prawdziwe, zdania o stronie projektowej rozstrzyga rozdz. 9.
+
 **Paczka jest wewnętrznie spójna w wartościach, które sama deklaruje - 25 z 25 kontrastów
 i cała arytmetyka siatki odtworzyły się co do setnej - ale rozjeżdża się z rzeczywistością
 na 8 pozycjach, z czego najpoważniejsza jest ta, że raport ze strony projektowej opisuje
@@ -100,6 +105,10 @@ tylko trzy ostatnie wpisy (`.mcp.json`, `.agentsroom/`, `.DS_Store`).
 
 ### 3.2 Siedem pozycji zgłoszonych przez stronę projektową - weryfikacja
 
+> **Zakres tej tabeli: wyłącznie repozytorium.** Wszystkie werdykty niżej są prawdziwe wobec plików
+> w tym repozytorium i pozostają w mocy. Po stronie projektowej te same pozycje mają inne
+> rozstrzygnięcie - zmierzone w rozdz. 9.2 i 9.5.
+
 Prompt kazał zweryfikować każdą własnym pomiarem przed wykonaniem. Wynik:
 
 | Pozycja z rozdz. 6 raportu projektowego | Werdykt | Dowód |
@@ -127,6 +136,10 @@ w pierwszych ~75 wierszach `tokens.css`.
 | `_ds_bundle.js` | **0**, poza zdaniem „Bez `_ds_bundle.js`" w konfiguracji |
 | blok poprzedniej palety w `tokens.css` | **nie istnieje** - plik ma 41 wierszy, w tym 28 zmiennych bieżącej palety i ani jednej archiwalnej |
 | brak tokenów stanu (`success`, `warning`, `error`) | **przeciwnie: wszystkie trzy są**, `tokens.css:20-25`, z nazwami Werdykt, Rubryka, Karmin |
+
+> **Rozstrzygnięte w rozdz. 9.** Regalia istnieje - po stronie projektowej, dopisana do
+> `tokens/tokens.css` 2026-09-06. Wniosek niżej („strona projektowa opisuje inną paczkę”) był
+> błędny; poprawny brzmi: **strona projektowa opisuje paczkę nowszą o dwa pokolenia palety.**
 
 To nie jest siedem drobnych rozbieżności, tylko jedna duża: **strona projektowa opisuje inną
 paczkę.** Obowiązująca tu paleta nazywa się **„Kaszmir Wyciszony"**, wersja `v2`, zatwierdzona
@@ -324,7 +337,7 @@ jest tu odwrotna niż w hipotezie ze strony projektowej - tokeny i karty zmienio
 commitem**, o 24 minuty **później** niż specyfikacje warstwy 1, więc karty są młodsze od źródła
 prawdy, nie starsze. Zmierzone w przeglądarce, rozdz. 3.2.
 
-**Ślady palet wycofanych.** Nazw „Oliwin", „Kość Słoniowa", „Atrament" (jako koloru), „Regalia"
+**Ślady palet wycofanych.** Nazw „Oliwin", „Kość Słoniowa", „Atrament" (jako koloru), „Regalia”
 w repozytorium **nie ma ani razu**. Nazwy Muślin, Espresso, Popiół, Aksamit, Miedź, Onyks
 i Pergamin występują 427 razy łącznie, ale to nie są ślady palety wycofanej - **to jest paleta
 obowiązująca**. Wycofanych hexów żywych jest dokładnie jeden przypadek: `#938978` w trzech
@@ -348,7 +361,7 @@ Rozdział najważniejszy. Poniżej wszystko, czego ten raport **nie** rozstrzyga
    wzorcowych, ani pliku `_robocze/wykonanie-decyzji-2026-09-09.md`, do którego prompt odsyła
    jako do wejścia w etap 3. **Wszystkie zdania tego raportu o stronie projektowej opierają się
    wyłącznie na treści promptu**, a prompt sam każe traktować takie treści jak hipotezy.
-   Konsekwencja: nie wiem, czy „Regalia" to paleta nowsza od „Kaszmiru Wyciszonego", czy raport
+   Konsekwencja: nie wiem, czy „Regalia” to paleta nowsza od „Kaszmiru Wyciszonego", czy raport
    projektowy opisuje inne repozytorium. **Bez tej odpowiedzi etap 3 nie ma na czym stanąć.**
 
 2. **Nie było wydruku.** Trzy falsyfikatory zostają otwarte i muszą być tak oznaczone:
@@ -394,7 +407,7 @@ więc wniosek z tego pomiaru wolno wyciągać.
 ## 8. Pytania do właściciela
 
 Otwarte decyzje w jednym zdaniu każda, w kolejności zależności:
-(1) czym jest „Regalia" wobec „Kaszmiru Wyciszonego"; (2) czy 8,5 px wchodzi jako poziom skali;
+(1) czym jest „Regalia” wobec „Kaszmiru Wyciszonego"; (2) czy 8,5 px wchodzi jako poziom skali;
 (3) czy 5 % to limit samego złota, czy pasma pięciu kolorów; (4) czy karty podglądu mają być
 w manifeście; (5) czy paczka dostaje reguły druku; (6) czy poprawiam wariant 1 księgi marki;
 (7) którą krawędź znaku mierzy minimum 18 mm.
@@ -404,11 +417,11 @@ paleta, część pozostałych pytań przestaje mieć sens.
 
 ---
 
-**1. Czym jest paleta „Regalia" wobec obowiązującego tu „Kaszmiru Wyciszonego"?**
+**1. Czym jest paleta „Regalia” wobec obowiązującego tu „Kaszmiru Wyciszonego"?**
 W repozytorium nie ma jej ani razu; prefiks `--irin-r-`, `_ds_manifest.json`, `_ds_bundle.js`
 i blok poprzedniej palety w `tokens.css` też nie istnieją (rozdz. 3.3).
 
-- **A. „Regalia" to nowsza paleta, którą strona projektowa już przyjęła.** Wtedy tu brakuje
+- **A. „Regalia” to nowsza paleta, którą strona projektowa już przyjęła.** Wtedy tu brakuje
   całej decyzji: 14 nowych hexów, nowy prefiks, nowe kontrasty do przeliczenia od zera.
 - **B. Raport projektowy opisuje inną paczkę albo inne repozytorium.** Wtedy niczego nie
   zmieniam, a lista siedmiu pozycji do `/design-sync` odpada w całości.
@@ -518,3 +531,197 @@ też jawnie, bo dziś tego nie widać nigdzie.
 Zgodnie z poleceniem: **zatrzymuję się.** Nie przechodzę do etapu 2 i nie zmieniam żadnego
 pliku poza tym raportem. Etap 2 zaczyna się od Twojej odpowiedzi na pytanie 1 - reszta
 od niej zależy.
+
+---
+
+# 9. Uzupełnienie z 2026-09-09: paleta Regalia, po odczycie projektu Claude Design
+
+Właściciel wskazał plik `irn-design-ksiega-koloru.html` jako miejsce, w którym leży paleta
+obowiązująca, i polecił sprawdzić, czy właściwe pliki jej używają. Dostęp do projektu
+`System projektowy IRIN` (`1a22ce64-0e1c-43a6-bd60-eef9241ef73b`) okazał się możliwy przez
+`DesignSync`, metody `list_files` i `get_file`. Ten rozdział zastępuje domysły z rozdz. 3.3 i 7
+pomiarem.
+
+## 9.0 Korekta
+
+**Rekomendacja B w pytaniu 1 rozdz. 8 była błędna.** Postawiłem tam, że raport projektowy opisuje
+inne repozytorium, i podałem falsyfikator: „pokaż mi 14 hexów Regalii albo commit, w którym tu
+weszły”. **Falsyfikator zadziałał.** Regalia istnieje, jest zatwierdzona 2026-09-03 i dopisana do
+`tokens/tokens.css` po stronie projektowej 2026-09-06. Obowiązuje odpowiedź **A**: to jest paleta
+nowsza, a repozytorium za nią nie nadąża.
+
+Cztery pozycje, które w rozdz. 3.2 nazwałem fałszywymi, były prawdziwe **wobec repozytorium**
+i pozostają prawdziwe w tym zakresie - ale opisywały stan strony projektowej, nie tego
+repozytorium, i tam mają inne rozstrzygnięcie. Rozbicie w rozdz. 9.5.
+
+## 9.1 Regalia - 14 wartości, sprawdzone od zera
+
+Paleta leży w dwóch miejscach po stronie projektowej: jako drugi blok `:root` w `tokens/tokens.css`
+(prefiks `--irin-r-*`, dopisany 2026-09-06) i jako dokument `irn-design-ksiega-koloru.html`.
+
+| # | Nazwa | Hex | Rola | na Kości Słoniowej |
+|---|---|---|---|---|
+| 01 | Szafir Nocny | `#132246` | kolor marki, CTA, pas nagłówkowy | 14,09 |
+| 02 | Atrament | `#07090C` | typografia główna | **17,99** |
+| 03 | Kość Słoniowa | `#F7F3E9` | tło strony | tło |
+| 04 | Aksamit Nocy | `#080F1F` | tło ciemne, stopka, okładka | 17,25 (odwrócone) |
+| 05 | Alabaster | `#E4E1D8` | tła kart, tekst drugi na ciemnym | 1,18 |
+| 06 | Grafit Jedwabny | `#606369` | tekst drugi na jasnym, linie 0,25 mm | 5,44 |
+| 07 | Złoto Szampańskie | `#C4B790` | akcent do 5 %, wyłącznie linia i tłoczenie | **1,80 - zakaz tekstu** |
+| 08 | Ametyst Dworski | `#331F41` | materiał przekrojowy | 13,41 |
+| 09 | Muszla Różana | `#E8D6D6` | cytaty, podświetlenia | 1,26 |
+| 10 | Lapis Stonowany | `#305686` | odnośniki, focus | 6,77 |
+| 11 | Złoto Antyczne | `#75674B` | metadane | 4,99 |
+| 12 | Rubin Głęboki | `#541319` | barwa dostępna, nieprzypisana | 12,77 |
+| 13 | Zieleń Butelkowa | `#0B3627` | barwa dostępna, nieprzypisana | 12,06 |
+| 14 | Bursztyn Wyciszony | `#9B5E30` | barwa dostępna, nieprzypisana | 4,69 |
+
+Plus cztery tinty 12 %: `#DCDAD5` (Szafir), `#E3D8D0` (Rubin), `#DBDCD2` (Zieleń), `#DFDAD5` (Ametyst).
+
+**Wynik weryfikacji (`regalia.py`, `reg2.py`): 30 z 30 zadeklarowanych wartości odtworzyło się
+co do setnej.** 23 kontrasty z `tokens.css`, 7 z `irn-design-paleta-kolorow.html`, zero rozjazdów
+powyżej 0,05. Cztery tinty odtworzyły się **co do bajtu** z mieszania 12 % barwy na Kości Słoniowej.
+Limit złota: 170 × 251 mm = 426,70 cm², 5 % = 21,34 cm² - zgodne z `--irin-r-limit-zlota-cm2`.
+
+**Regalia jest paletą zmierzoną, nie deklarowaną.** To jest jej mocna strona i trzeba to powiedzieć
+przed listą rozjazdów.
+
+## 9.2 Odpowiedź na pytanie właściciela: które pliki jej używają
+
+Pokrycie pełne, bez próbkowania: **16 z 16 szablonów, 8 z 8 kart, 4 z 4 dokumentów, oba arkusze,
+oba pliki tokenów. Pozycji niesklasyfikowanych: 0, czyli 0 %.**
+
+### Po stronie projektowej - na Regalii
+
+| Plik | Jak używa |
+|---|---|
+| `tokens/tokens.css`, drugi blok `:root` | 14 barw + 4 tinty + gniazdo `--irin-r-dziedzina` + limit |
+| `irn-design-ksiega-koloru.html` | 325 wystąpień hexów Regalii, zero obcych |
+| `irn-design-brandbook.html` | 97 wystąpień; 4 hexy palety v2 stoją wyłącznie w prozie o historii |
+| `irn-design-ksiega-znaku.html` | 188 wystąpień; 10 obcych, wszystkie w prozie o historii |
+| `irn-design-paleta-kolorow.html` | pełna tabela 14 wartości z CMYK i OKLCH |
+| **16 z 16 szablonów w `templates/`** | hexy Regalii wprost; 6 z nich czyta obszar z `--irin-r-dziedzina` |
+
+### Po stronie projektowej - NIE na Regalii
+
+| Plik | Co niesie | Skutek |
+|---|---|---|
+| `styles.css` | wyłącznie `var(--irin-*)`, zero `--irin-r-*` | arkusz bazowy, wpisany w `_ds_manifest.json` jako globalny, rozwiązuje się do palety v5.1 |
+| **8 z 8 kart** w `components/` | `var(--irin-*)` plus hexy v2 wpisane wprost | patrz 9.5 |
+| `tokens/palette-irin.json` | v5.1.0 „Kaszmir Wyciszony - siedem kolorów głównych” | dane maszynowe **nie znają Regalii w ogóle** |
+
+### W repozytorium - zero Regalii
+
+`grep` po całym repozytorium: **„Regalia” 0 wystąpień, prefiks `--irin-r-` 0 wystąpień, żaden
+z 14 hexów Regalii nie występuje ani razu.** Wszystkie cztery specyfikacje warstwy 1,
+`tokens.css`, `styles.css`, `palette-irin.json`, 8 kart i pilot papieru firmowego niosą paletę
+**v2 „Kaszmir Wyciszony”** z 2026-09-02.
+
+**Odpowiedź brzmi: nie, repozytorium nie jest zaktualizowane - i jest za Regalią nie o jeden krok,
+tylko o dwa.**
+
+```
+repozytorium         v2   (2026-09-02)  Aksamit #452430 · Miedź #7A5638 · Onyks #33474F · 3 dziedziny
+projekt, --irin-*    v5.1 (2026-09-03)  Aksamit #752F3F · Bursztyn #9F6631 · Onyks #005A80 · 6 dziedzin
+projekt, --irin-r-*  Regalia (2026-09-03, dopisana 2026-09-06)  Szafir #132246 · gniazdo dziedziny
+```
+
+Repozytorium nie zna ani v3, ani v4, ani v4.1, ani v5, ani v5.1, ani Regalii. Po stronie
+projektowej `_archiwum/iteracje-palety/` niesie ślady wszystkich sześciu iteracji.
+
+## 9.3 Odwołanie w kółko - najpoważniejszy skutek
+
+Komentarz otwierający blok Regalii w projektowym `tokens/tokens.css` brzmi:
+
+> „Zrodlo prawdy: 01-baza-wiedzy/identyfikacja/paleta-barw.md w repozytorium.”
+
+**Ten plik w repozytorium nie zawiera Regalii.** Zawiera 14 kolorów v2, nagłówek
+„Status: ZATWIERDZONA przez foundera (2026-09-02)” i zdanie „To jest jedyne źródło prawdy dla
+kolorów IRIN”. Ta sama deklaracja stoi w `tokens/palette-irin.json` po stronie projektowej,
+w kluczu `specyfikacja-obowiazujaca`.
+
+Skutek praktyczny: **każdy, kto pójdzie za wskazaniem źródła prawdy, wyląduje na palecie sprzed
+sześciu dni i dwóch pokoleń.** To nie jest rozjazd wartości, tylko rozjazd samego wskaźnika, i on
+psuje wszystkie pozostałe: dopóki repozytorium nie zna Regalii, `/design-sync` z repozytorium do
+projektu **nadpisze Regalię paletą v2**.
+
+## 9.4 Reguła synchronizacji została złamana w drugą stronę
+
+`/CLAUDE.md` i prompt etapu 3 mówią zgodnie: hex, token, arkusz i komponent zmienia się
+**w repozytorium**, a potem idzie sync; po stronie projektowej wszystko poza `templates/` jest
+tylko do odczytu.
+
+Zmierzony stan: `tokens/tokens.css` i `tokens/palette-irin.json` po stronie projektowej zostały
+zmienione **tam**, nie tu - repozytorium nie ma ani bloku Regalii, ani żadnej z wersji v3-v5.1.
+To są dokładnie te pliki, których reguła zabrania edytować po tamtej stronie.
+
+Nie oceniam tej decyzji - praca w tamtym oknie była zmierzona i udokumentowana. Nazywam skutek:
+**dwa źródła tokenów rozeszły się i żadne nie wie o drugim.**
+
+## 9.5 Rozjazdy zmierzone przy tej okazji
+
+| # | Rozjazd | Jest | Ma być | Podstawa |
+|---|---|---|---|---|
+| R7 | `quaternary` (Rubin `#905E88`) na Kaszmirze, `tokens/palette-irin.json`, tablica `kontrasty` | **10,62** | **4,78** | 10,62 to kontrast **wycofanego Oliwinu** `#3D3D00` (odtworzone co do setnej). Etykieta wiersza nadal brzmi „quaternary (Oliwin)”. Wymiana Oliwin → Rubin w v5.1 nie pociągnęła przeliczenia. |
+| R8 | etykieta Pergamin na `quaternary`, tamże | **8,51** | **3,83** | ta sama przyczyna (8,51 to Pergamin na Oliwinie). **3,83 jest poniżej progu 4,5 dla tekstu.** Klucz `tokeny.quaternary` podaje inną etykietę - biel, 5,07 - i ta liczba jest poprawna. Dwa miejsca w jednym pliku podają dwie różne etykiety dla tego samego wypełnienia. |
+| R9 | etykieta biel na `warning`, tamże | **8,04** | **8,52** | 8,04 to wartość wiersza sąsiedniego („warning na surface”, odtworzone dokładnie). Liczba przepisana z sąsiedztwa. |
+| R10 | `error` (Karmin) na Kaszmirze, tamże | **5,94** | **6,99** | Karmin na czterech tłach palety daje 6,99 / 6,63 / 5,60 / 7,41. **Wartości 5,94 nie odtworzyłem z żadnej pary** - pochodzenia nie ustaliłem. |
+| R11 | 8 kart w `components/` po stronie projektowej | próbki i liczby palety v2 | wartości tokena, który te karty rozwiązują | `Paleta.html` wpisuje 14 hexów wprost; **6 z 14 nie zgadza się z `tokens.css` po tamtej stronie (42,9 %)**. `PlakietkaStatusu.html` renderuje `var(--irin-success/warning/info)`, czyli v5.1, a wypisuje obok liczby v2: Werdykt 6,62 wobec 7,36 · Rubryka 5,53 wobec 8,52 · Onyks 7,37 wobec 5,73. Karmin 5,60 zgodny, bo hex się nie zmienił. |
+| R12 | `--irin-r-link` (Lapis `#305686`) na Aksamicie Nocy | **2,55** | brak pozycji na liście par zabronionych | Zmierzone. Aksamit Nocy jest zadeklarowanym tłem („sekcje, stopki, okładki wewnętrzne”), Lapis jest tokenem odnośnika. 2,55 jest **gorsze niż trzy z czterech par już wpisanych na listę** (3,17 · 3,46 · 3,68). Reguła **istnieje**, ale mieszka w prozie jednego szablonu (`templates/podpis-mailowy`), nie w tabeli par zabronionych w `tokens.css` ani w Księdze koloru. |
+| R13 | `templates/okladka` - domyślny obszar | `'Szkolenia zawodowe'` (Rubin) | `'Bez obszaru'` (Szafir) | Decyzja z 2026-09-09: obszary są wymienne, gniazdo domyślnie neutralne. `karta-uslugi`, `karta-uslugi-bur` i `tabela-danych` mają domyślnie `'Bez obszaru'`; `okladka` i `slajd-16-9` mają `'Szkolenia zawodowe'`. Dwa szablony na szesnaście odstają od decyzji. |
+| R14 | `templates/zestaw-drobnych`, kafel 01 | dwa akapity, drugi przeczy pierwszemu | jeden akapit | Pierwszy: „Stan niesie słowo, nie barwa - wszystkie cztery plakietki mają jedno wykonanie”. Drugi: „Każdy stan ma słowo **obok barwy**… Zieleń i Rubin schodzą do 70 % K”. Drugi opisuje wycofane wykonanie barwne i został przy poprawce. |
+| R15 | `templates/okladka-wydawnicza`, protokół pomiaru | „znak … **95 mm** od góry” | 96 mm | Kod ustawia `top:96mm`, a punkt o rytmie w tym samym pliku wywodzi 96 mm i nazywa 95 mm wartością poprawioną. Trzeci punkt nie został przepisany. |
+
+**Bilans weryfikacji tablicy `kontrasty` w projektowym `palette-irin.json` (v5.1): sprawdzonych 30,
+rozjazdów powyżej 0,05 - cztery.** Dla porównania: Regalia 30 z 30 zgodnych, repozytorium 25 z 25
+zgodnych. Wadliwa jest wyłącznie warstwa pośrednia v5.1, i to w wierszach, które przeżyły wymianę
+koloru bez przeliczenia - dokładnie ten błąd, przed którym ostrzega zasada „nie przepisuj cudzych liczb”.
+
+## 9.6 Czego w tym uzupełnieniu nie zmierzyłem
+
+1. **Nie czytałem `_robocze/*.md` po stronie projektowej** - ani audytu z 2026-09-09, ani
+   `wykonanie-decyzji-2026-09-09.md`, do którego odsyła prompt. Rozjazdy R7-R15 znalazłem własnym
+   pomiarem; **nie wiem, które z nich tamte raporty już opisują.** Możliwe, że część jest tam
+   zgłoszona i moja lista je powiela.
+2. **Nie sprawdziłem `_archiwum/iteracje-palety/`** (v3 do v7, 20 plików). Wiem, że istnieją;
+   nie wiem, czy któryś jest nadal cytowany jako obowiązujący.
+3. **Nadal nie było wydruku.** Regalia dokłada własne falsyfikatory, wprost w niej zapisane:
+   CMYK bez proofu, Złoto Szampańskie na papierze niepowlekanym (83 % krycia przy L\* 78),
+   przypisanie barw do obszarów. Żadnego z nich ten pomiar nie zamyka.
+4. **Nie renderowałem niczego po stronie projektowej** - wszystkie liczby pochodzą z odczytu
+   plików i przeliczenia, nie z otwarcia kanwy.
+5. **Nie ruszyłem ani jednego pliku** - ani tu, ani tam. To nadal jest etap 1.
+
+## 9.7 Pytanie 1 postawione na nowo
+
+Pytanie „czym jest Regalia” jest **zamknięte**: nowszą paletą, zatwierdzoną 2026-09-03. Na jego
+miejsce wchodzi pytanie o kierunek naprawy, i ono jest teraz jedyne blokujące.
+
+**Jak repozytorium ma dogonić Regalię?**
+
+- **A. Repozytorium przyjmuje Regalię jako paletę obowiązującą warstwy 1.** Cztery specyfikacje,
+  `tokens.css`, `styles.css`, `palette-irin.json` i 8 kart przechodzą na 14 wartości Regalii;
+  paleta v2 zostaje w pliku jako historia, tak jak dziś zostaje historia palety 12-kolorowej.
+  Po tym `/design-sync` znów działa w jedną stronę i niczego nie nadpisuje.
+- **B. Repozytorium przyjmuje najpierw v5.1, potem Regalię.** Dwa kroki, dwa przeliczenia
+  kontrastów, dwa wpisy w rejestrze decyzji.
+
+**Rekomendacja: A.** Powód nie jest wygodą, tylko liczbą: v5.1 to warstwa, w której **cztery z 30
+kontrastów są błędne** (R7-R10), z czego jeden - etykieta na wypełnieniu Rubinu, 3,83 wobec progu
+4,5 - jest defektem dostępności, a nie literówką. Przejście przez tę warstwę oznacza wpisanie do
+warstwy 1 wartości, które i tak trzeba by natychmiast poprawić. Regalia przeszła pełną weryfikację
+w tej sesji: 30 z 30 kontrastów i 4 z 4 tinty odtworzone co do setnej.
+
+**Falsyfikator tej rekomendacji:** jeżeli istnieje wydany materiał na palecie v5.1, którego nie
+wolno przebarwić, to v5.1 musi zostać w repozytorium jako warstwa równoległa i odpowiedź brzmi B.
+Po stronie projektowej taki materiał jest - `_archiwum/wydania-01/` niesie cztery pliki wydania 01,
+a komentarz w `tokens.css` mówi wprost, że stary blok `--irin-*` zostaje właśnie dla nich.
+**Czego nie wiem: czy któryś z nich jest w obiegu poza projektem.** To jedno zdanie od Ciebie
+rozstrzyga A czy B.
+
+**Pozostałe sześć pytań z rozdz. 8 zmienia adresata, nie treść.** Pytania 2 (8,5 px), 3 (limit
+5 %), 6 (Popiół w wariancie księgi marki) i 7 (którą krawędź mierzy minimum 18 mm) są po stronie
+projektowej **już rozstrzygnięte** decyzjami z 2026-09-09 - 8,5 px wszedł jako jedenasty poziom,
+limit liczy się od 426,70 cm², minimum mierzy obwiednię znaku widocznego ze współczynnikami
+0,655 i 0,561. Do repozytorium żadna z tych decyzji nie dotarła. Wejdą razem z Regalią, tym samym
+ruchem - albo nie wejdą wcale.
