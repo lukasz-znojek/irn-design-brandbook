@@ -6,9 +6,16 @@ zostało po tamtej stronie, żeby nie zginęło po cichu. Treść jest odzyskiwa
 jednym poleceniem:
 
 ```bash
-git show origin/claude/irin-visual-identity-vq9ddw:01-baza-wiedzy/identyfikacja/paleta-barw.md
-git show origin/claude/irin-visual-identity-vq9ddw:01-baza-wiedzy/identyfikacja/logotyp.md
+git show 961011d:01-baza-wiedzy/identyfikacja/paleta-barw.md
+git show 961011d:01-baza-wiedzy/identyfikacja/logotyp.md
 ```
+
+**Poprawka 2026-09-09, druga tura.** Pierwotnie stało tu odwołanie przez nazwę gałęzi,
+`git show origin/claude/irin-visual-identity-vq9ddw:...`. Ta ścieżka **cicho zwraca zły
+plik**: gałąź została po scaleniu skasowana, a potem założona od nowa pod tą samą nazwą,
+więc polecenie oddaje dzisiejszy stan zamiast odzyskiwanego. Trwałym adresem jest drugi
+rodzic scalenia, `961011d` (czyli `7a7fa3d^2`) - commit nie zmienia treści przy żadnym
+przełożeniu gałęzi.
 
 ## Dlaczego wygrał `main`
 
