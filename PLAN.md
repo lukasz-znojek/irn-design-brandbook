@@ -186,7 +186,7 @@ niczego.
   liczbę sprawdzonych twierdzeń i listę rozjazdów. Zadania 2-12 wołają ją bez
   argumentu.
 
-- [ ] **Krok 1: Napisz bramkę**
+- [x] **Krok 1: Napisz bramkę**
 
 Treść pliku `_robocze/narzedzia/sprawdz-palete.py`:
 
@@ -436,7 +436,7 @@ if __name__ == "__main__":
     sys.exit(main())
 ```
 
-- [ ] **Krok 2: Uruchom bramkę na obecnym pliku - musi ODMÓWIĆ**
+- [x] **Krok 2: Uruchom bramkę na obecnym pliku - musi ODMÓWIĆ**
 
 ```bash
 python3 _robocze/narzedzia/sprawdz-palete.py; echo "kod wyjścia: $?"
@@ -446,7 +446,7 @@ Oczekiwane: `BRAMKA: brak wymaganego klucza 'barwy'` i **kod wyjścia 1**.
 Obecny plik niesie paletę v2 o innej strukturze - bramka nie ma czego sprawdzać
 i mówi to wprost. To jest dowód, że bramka nie przechodzi „na wszystkim".
 
-- [ ] **Krok 3: Sprawdź, że bramka łapie podmianę - osiem prób**
+- [x] **Krok 3: Sprawdź, że bramka łapie podmianę - osiem prób**
 
 Bramka bez tego kroku jest ozdobą. Zapisz `/tmp/proba-bramki.py`:
 
@@ -475,7 +475,7 @@ probuj("8 poziom skali pod podłogą", lambda d: d["typografia"]["skala"].__seti
 
 Uruchomienie odłóż do kroku 3 zadania 2 - potrzebuje poprawnego pliku jako bazy.
 
-- [ ] **Krok 4: Commit**
+- [x] **Krok 4: Commit**
 
 ```bash
 git add _robocze/narzedzia/sprawdz-palete.py
