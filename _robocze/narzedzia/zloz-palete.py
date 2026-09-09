@@ -169,7 +169,7 @@ SKALA = [
 OBWIEDNIE = {
     "logo_irin_poziom.svg": {"viewbox": [281.333, 158.667], "obwiednia": [48.561, 59.907, 184.213, 38.854],
                              "zastosowanie": "wariant podstawowy"},
-    "logo_irin_pion.svg":   {"viewbox": [184.837, 162.834], "obwiednia": [40.555, 37.593, 103.728, 87.312],
+    "logo_irin_pion.svg":   {"viewbox": [184.837, 162.834], "obwiednia": [40.555, 37.761, 103.728, 87.312],
                              "zastosowanie": "pola wąskie i wysokie"},
     "logo_irin_sygnet.svg": {"viewbox": [184.837, 162.834], "obwiednia": [40.555, 61.991, 103.728, 38.853],
                              "zastosowanie": "znak samodzielny"},

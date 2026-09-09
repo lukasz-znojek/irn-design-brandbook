@@ -1428,7 +1428,7 @@ Przy odczycie „pole pliku" znak poziomy wstawiony w 18 mm ma faktycznie
 - Konsumuje: `palette-irin.json`, klucz `logotyp`; trzy pliki SVG w korzeniu.
 - Produkuje: plik specyfikacji plus skrypt odtwarzający obwiednie.
 
-- [ ] **Krok 1: Napisz skrypt pomiaru obwiedni**
+- [x] **Krok 1: Napisz skrypt pomiaru obwiedni**
 
 `_robocze/narzedzia/zmierz-znak.mjs`. Pomiar wymaga przeglądarki, więc **nie
 wchodzi do bramki** - odtwarza wartości wpisane do generatora, na żądanie.
@@ -1474,7 +1474,7 @@ for (const nazwa of PLIKI) {
 await b.close();
 ```
 
-- [ ] **Krok 2: Uruchom pomiar i porównaj z generatorem**
+- [x] **Krok 2: Uruchom pomiar i porównaj z generatorem**
 
 ```bash
 NODE_PATH=/opt/node22/lib/node_modules node _robocze/narzedzia/zmierz-znak.mjs
@@ -1492,7 +1492,7 @@ Jeżeli którakolwiek liczba się różni, **nie poprawiaj skryptu** - popraw ta
 `OBWIEDNIE` w generatorze i złóż paletę na nowo. Pomiar jest źródłem, wpisana
 wartość jest kopią.
 
-- [ ] **Krok 3: Napisz `logotyp.md`**
+- [x] **Krok 3: Napisz `logotyp.md`**
 
 1. Nagłówek, status, zdanie o wywiedzeniu z JSON-a.
 2. `## Trzy pliki źródłowe` - tabela: plik · viewBox · obwiednia znaku
@@ -1528,7 +1528,7 @@ wartość jest kopią.
 9. `## Falsyfikator otwarty` - minimalny rozmiar samodzielnego sygnetu czeka
    na wydruk.
 
-- [ ] **Krok 4: Bramka i kontrola**
+- [x] **Krok 4: Bramka i kontrola**
 
 ```bash
 python3 _robocze/narzedzia/sprawdz-zgodnosc-md.py; echo "kod wyjścia: $?"
@@ -1538,7 +1538,7 @@ Oczekiwane po zadaniach 4-7: **kod wyjścia 0** dla czterech specyfikacji
 warstwy 1. Pliki `guidelines/`, karty i `styles.css` nadal będą zgłaszane -
 to zadania 8, 9 i 10.
 
-- [ ] **Krok 5: Commit**
+- [x] **Krok 5: Commit**
 
 ```bash
 git add 01-baza-wiedzy/identyfikacja/logotyp.md _robocze/narzedzia/zmierz-znak.mjs
