@@ -110,6 +110,9 @@ Progi: tekst normalny AA 4,5:1, AAA 7:1; element interfejsu i grafika znacząca 
 | Atrament | tint Rubin 12 % | 14,24:1 | tekst | AAA | karta i pas tabeli na tincie Rubin 12 % |
 | Atrament | tint Zieleń 12 % | 14,41:1 | tekst | AAA | karta i pas tabeli na tincie Zieleń 12 % |
 | Atrament | tint Ametyst 12 % | 14,36:1 | tekst | AAA | karta i pas tabeli na tincie Ametyst 12 % |
+| Lapis Stonowany | tint 12 %, każdy z czterech | 5,35-5,42:1 | tekst | AA | odnośnik na karcie dziedzinowej |
+| Lapis Stonowany | Muszla Różana | 5,36:1 | tekst | AA | odnośnik w cytacie albo wyróżnieniu |
+| Szafir Nocny | tint 12 %, każdy z czterech | 11,15-11,29:1 | tekst | AAA | nagłówek karty na tincie własnego obszaru |
 
 ## Pary zabronione
 
@@ -123,6 +126,24 @@ Każdy wiersz ma zamiennik. Zakaz bez zamiennika jest przeszkodą, nie regułą.
 | Bursztyn Wyciszony | Aksamit Nocy | **3,68:1** | 4,5:1 | ostrzeżenie na ciemnym: wypełnienie bursztynowe z etykietą Kością Słoniową |
 | Złoto Antyczne | Aksamit Nocy | **3,46:1** | 4,5:1 | na ciemnym wchodzi Złoto Szampańskie |
 | Grafit Jedwabny | Aksamit Nocy | **3,17:1** | 4,5:1 | tekst drugi na ciemnym: Alabaster |
+| Grafit Jedwabny | tint 12 %, każdy z czterech | **4,30-4,35:1** | 4,5:1 | na tincie tekst drugi idzie Atramentem (14,24-14,41:1) albo Lapisem Stonowanym (5,35-5,42:1) |
+| Złoto Antyczne | tint 12 %, każdy z czterech | **3,95-4,00:1** | 4,5:1 | jak wyżej; metadanych nie stawia się na tincie |
+| Bursztyn Wyciszony | tint 12 %, każdy z czterech | **3,72-3,76:1** | 4,5:1 | jak wyżej; Bursztyn ma jedno tło, Kość Słoniową |
+| Grafit Jedwabny | Muszla Różana | **4,31:1** | 4,5:1 | w cytacie tekst drugi idzie Atramentem (14,26:1) albo Lapisem (5,36:1) |
+| Złoto Antyczne | Muszla Różana | **3,95:1** | 4,5:1 | jak wyżej |
+| Bursztyn Wyciszony | Muszla Różana | **3,72:1** | 4,5:1 | jak wyżej |
+| Złoto Antyczne | Alabaster | **4,23:1** | 4,5:1 | na karcie metadane idą Grafitem Jedwabnym (4,61:1) |
+
+Siedem wierszy o tincie, Muszli Różanej i Złocie Antycznym na Alabastrze wchodzi tu
+z **przeliczenia wszystkich par palety**, nie z obserwacji pojedynczego składu. Rachunek:
+18 barw daje 153 pary, z czego **94 leży poniżej 4,5:1**, a obie tabele wypisywały 15.
+Większość reszty to pary, których nikt nie złoży (ciemna na ciemnej, tint na tincie), ale
+trzynaście z nich to realne układy: tekst drugorzędny na tle karty. Luka wzięła się stąd,
+że tinty i Muszla Różana miały policzony wyłącznie **Atrament na sobie** - jedyną barwę,
+która na nich przechodzi z ogromnym zapasem - a nie trzy barwy, które faktycznie pełnią
+rolę tekstu drugiego. Skutek praktyczny: karta na tincie z metadanymi w Złocie Antycznym
+i pas tabeli na tincie z tekstem drugim w Grafcie były poniżej AA, a żadna tabela tego
+nie mówiła.
 
 Wiersz Lapisu Stonowanego na Aksamicie Nocy (2,55:1) wchodzi tu z pomiaru: reguła istniała, ale mieszkała w prozie jednego szablonu po stronie projektowej i nie było jej w żadnej specyfikacji, choć para jest gorsza od trzech już wpisanych. Zapis w specyfikacji jest kontekstem; blokadą jest bramka, która nie przepuści pary pod progiem bez wiersza w jednej z dwóch tabel.
 
@@ -165,6 +186,49 @@ Poza budżetem akcentu, bo niosą funkcję, nie ozdobę: Lapis Stonowany, Złoto
 Poniżej tych wartości o widoczności decyduje raster drukarki, nie luminancja. NIEPOTWIERDZONE NA WYDRUKU - falsyfikator otwarty.
 
 Na ekranie 0,25 mm renderuje się jako 1 px (0,94 px przy 96 dpi, przeglądarka zaokrągla obramowanie w górę). Wartość drukarska jest poprawna; ekran nie jest miejscem pomiaru grubości linii.
+
+## Wykresy - jedna barwa, cztery stopnie krycia
+
+Serie różni **jasność, nie odcień**, więc wykres działa w mono i przy zaburzeniach widzenia
+barw. Jedna barwa na wykres, najwyżej cztery serie, oś Y od zera, każda oś podpisana słowem.
+Barwą jest ta z gniazda obszaru; materiał przekrojowy bierze Szafir Nocny.
+
+Stopnie są **komponowane z tłem**, bo wypełnienie w arkuszu i w druku jest kryjące, nie
+półprzezroczyste. Dla Szafiru Nocnego na Kości Słoniowej:
+
+| Krycie | Hex | Do tła | Próg 3:1 |
+|---|---|---|---|
+| 100 % | `#132246` | 14,09:1 | tak |
+| 72 % | `#535D74` | 5,95:1 | tak |
+| 50 % | `#858B98` | 3,08:1 | tak |
+| 30 % | `#B3B4B8` | **1,87:1** | **nie** |
+
+**Sama reguła stopni nie wystarcza.** Mówi, jak odróżnić serie od siebie, i nie mówi, czy
+seria odróżnia się od tła - a WCAG 1.4.11 stawia grafice znaczącej próg 3:1. Skala nie jest
+przy tym równa dla czterech barw gniazda: Szafir i Rubin tracą jeden stopień, Zieleń dwa
+(50 % daje 2,88:1), a **Bursztyn Wyciszony trzy z czterech** - nad progiem zostaje mu tylko
+pełne krycie.
+
+**Reguła, która to domyka: każda seria dostaje obrys Atramentem `#07090C`, grubość 0,25 mm**,
+czyli wartość linii niosącej strukturę z sekcji wyżej. Atrament ma wobec tła 17,99:1, więc
+krawędź kształtu zawsze przekracza próg. Wobec własnego wypełnienia obrys daje 3,02 do 9,62:1
+na każdym stopniu poza pełnym kryciem, a tam granicę niesie samo wypełnienie (14,09:1).
+**Grafit Jedwabny na obrys serii nie wchodzi:** na stopniu 72 % daje 1,09:1 i znika
+w wypełnieniu.
+
+**Wykres liniowy jest wyjątkiem: trzy serie, nie cztery.** Linia nie ma wypełnienia, więc
+obrys nie ma czego obrysować, a stopień 30 % zostaje sam ze swoim 1,87:1. Trzy stopnie
+(100 / 72 / 50) mają 14,09, 5,95 i 3,11:1, wszystkie nad progiem. Grubość linii serii 0,5 mm,
+czyli dwukrotność minimum dla linii niosącej strukturę - nie nowa wartość, tylko zapas
+nad podłogą.
+
+**Dlaczego to tu stoi:** arkusz `_robocze/arkusz-wzorcowy/arkusz-irin.xlsx` z pięcioma
+wykresami jest w repozytorium od 2026-09-09 i do tej pory nie miał w warstwie 1 reguły,
+która nim rządzi.
+
+**Falsyfikator:** wypełnienie na tle innym niż Kość Słoniowa. Na Alabastrze, na tincie albo
+na Aksamicie Nocy cała tabela liczy się od nowa, bo stopnie są komponowane z tłem, nie
+niezależne od niego.
 
 ## Falsyfikatory otwarte
 

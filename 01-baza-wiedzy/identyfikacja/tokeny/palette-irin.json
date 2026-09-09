@@ -298,12 +298,36 @@
       "uwaga": "linia struktury od 0,25 mm"
     },
     {
+      "tekst": "lapis-stonowany",
+      "tlo": "muszla-rozana",
+      "kontrast": 5.36,
+      "rodzaj": "tekst",
+      "ocena": "AA",
+      "uwaga": "odnośnik w cytacie albo wyróżnieniu"
+    },
+    {
       "tekst": "atrament",
       "tlo": "tint-szafir",
       "kontrast": 14.27,
       "rodzaj": "tekst",
       "ocena": "AAA",
       "uwaga": "karta i pas tabeli na tincie Szafir 12 %"
+    },
+    {
+      "tekst": "lapis-stonowany",
+      "tlo": "tint-szafir",
+      "kontrast": 5.37,
+      "rodzaj": "tekst",
+      "ocena": "AA",
+      "uwaga": "odnośnik na karcie na tincie Szafir 12 %"
+    },
+    {
+      "tekst": "szafir-nocny",
+      "tlo": "tint-szafir",
+      "kontrast": 11.18,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "nagłówek karty na tincie Szafir 12 %"
     },
     {
       "tekst": "atrament",
@@ -314,6 +338,22 @@
       "uwaga": "karta i pas tabeli na tincie Rubin 12 %"
     },
     {
+      "tekst": "lapis-stonowany",
+      "tlo": "tint-rubin",
+      "kontrast": 5.35,
+      "rodzaj": "tekst",
+      "ocena": "AA",
+      "uwaga": "odnośnik na karcie na tincie Rubin 12 %"
+    },
+    {
+      "tekst": "szafir-nocny",
+      "tlo": "tint-rubin",
+      "kontrast": 11.15,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "nagłówek karty na tincie Rubin 12 %"
+    },
+    {
       "tekst": "atrament",
       "tlo": "tint-zielen",
       "kontrast": 14.41,
@@ -322,12 +362,44 @@
       "uwaga": "karta i pas tabeli na tincie Zieleń 12 %"
     },
     {
+      "tekst": "lapis-stonowany",
+      "tlo": "tint-zielen",
+      "kontrast": 5.42,
+      "rodzaj": "tekst",
+      "ocena": "AA",
+      "uwaga": "odnośnik na karcie na tincie Zieleń 12 %"
+    },
+    {
+      "tekst": "szafir-nocny",
+      "tlo": "tint-zielen",
+      "kontrast": 11.29,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "nagłówek karty na tincie Zieleń 12 %"
+    },
+    {
       "tekst": "atrament",
       "tlo": "tint-ametyst",
       "kontrast": 14.36,
       "rodzaj": "tekst",
       "ocena": "AAA",
       "uwaga": "karta i pas tabeli na tincie Ametyst 12 %"
+    },
+    {
+      "tekst": "lapis-stonowany",
+      "tlo": "tint-ametyst",
+      "kontrast": 5.4,
+      "rodzaj": "tekst",
+      "ocena": "AA",
+      "uwaga": "odnośnik na karcie na tincie Ametyst 12 %"
+    },
+    {
+      "tekst": "szafir-nocny",
+      "tlo": "tint-ametyst",
+      "kontrast": 11.25,
+      "rodzaj": "tekst",
+      "ocena": "AAA",
+      "uwaga": "nagłówek karty na tincie Ametyst 12 %"
     }
   ],
   "kontrasty-zabronione": [
@@ -384,8 +456,298 @@
       "ocena": "PONIŻEJ PROGU",
       "uwaga": "para zabroniona",
       "zamiast": "tekst drugi na ciemnym: Alabaster"
+    },
+    {
+      "tekst": "grafit-jedwabny",
+      "tlo": "muszla-rozana",
+      "kontrast": 4.31,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "w cytacie tekst drugi idzie Atramentem albo Lapisem Stonowanym"
+    },
+    {
+      "tekst": "zloto-antyczne",
+      "tlo": "muszla-rozana",
+      "kontrast": 3.95,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "w cytacie metadane idą Atramentem albo Lapisem Stonowanym"
+    },
+    {
+      "tekst": "bursztyn-wyciszony",
+      "tlo": "muszla-rozana",
+      "kontrast": 3.72,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "Bursztyn ma jedno dopuszczone tło: Kość Słoniowa"
+    },
+    {
+      "tekst": "zloto-antyczne",
+      "tlo": "alabaster",
+      "kontrast": 4.23,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "na karcie metadane idą Grafitem Jedwabnym"
+    },
+    {
+      "tekst": "grafit-jedwabny",
+      "tlo": "tint-szafir",
+      "kontrast": 4.31,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "na tincie tekst drugi idzie Atramentem albo Lapisem Stonowanym"
+    },
+    {
+      "tekst": "zloto-antyczne",
+      "tlo": "tint-szafir",
+      "kontrast": 3.96,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "na tincie metadane idą Atramentem albo Lapisem Stonowanym"
+    },
+    {
+      "tekst": "bursztyn-wyciszony",
+      "tlo": "tint-szafir",
+      "kontrast": 3.72,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "Bursztyn ma jedno dopuszczone tło: Kość Słoniowa"
+    },
+    {
+      "tekst": "grafit-jedwabny",
+      "tlo": "tint-rubin",
+      "kontrast": 4.3,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "na tincie tekst drugi idzie Atramentem albo Lapisem Stonowanym"
+    },
+    {
+      "tekst": "zloto-antyczne",
+      "tlo": "tint-rubin",
+      "kontrast": 3.95,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "na tincie metadane idą Atramentem albo Lapisem Stonowanym"
+    },
+    {
+      "tekst": "bursztyn-wyciszony",
+      "tlo": "tint-rubin",
+      "kontrast": 3.72,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "Bursztyn ma jedno dopuszczone tło: Kość Słoniowa"
+    },
+    {
+      "tekst": "grafit-jedwabny",
+      "tlo": "tint-zielen",
+      "kontrast": 4.35,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "na tincie tekst drugi idzie Atramentem albo Lapisem Stonowanym"
+    },
+    {
+      "tekst": "zloto-antyczne",
+      "tlo": "tint-zielen",
+      "kontrast": 4.0,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "na tincie metadane idą Atramentem albo Lapisem Stonowanym"
+    },
+    {
+      "tekst": "bursztyn-wyciszony",
+      "tlo": "tint-zielen",
+      "kontrast": 3.76,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "Bursztyn ma jedno dopuszczone tło: Kość Słoniowa"
+    },
+    {
+      "tekst": "grafit-jedwabny",
+      "tlo": "tint-ametyst",
+      "kontrast": 4.34,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "na tincie tekst drugi idzie Atramentem albo Lapisem Stonowanym"
+    },
+    {
+      "tekst": "zloto-antyczne",
+      "tlo": "tint-ametyst",
+      "kontrast": 3.98,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "na tincie metadane idą Atramentem albo Lapisem Stonowanym"
+    },
+    {
+      "tekst": "bursztyn-wyciszony",
+      "tlo": "tint-ametyst",
+      "kontrast": 3.75,
+      "rodzaj": "tekst",
+      "ocena": "PONIŻEJ PROGU",
+      "uwaga": "para zabroniona",
+      "zamiast": "Bursztyn ma jedno dopuszczone tło: Kość Słoniowa"
     }
   ],
+  "stopnie-serii-wykresu": {
+    "tlo-kompozycji": "kosc-sloniowa",
+    "krycia": [
+      1.0,
+      0.72,
+      0.5,
+      0.3
+    ],
+    "obrys": {
+      "barwa": "atrament",
+      "grubosc-mm": 0.25
+    },
+    "prog-grafiki": 3.0,
+    "serie": {
+      "szafir-nocny": {
+        "100": {
+          "hex": "#132246",
+          "do-tla": 14.09,
+          "nad-progiem-grafiki": true,
+          "obrys-na-wypelnieniu": 1.28,
+          "grafit-na-wypelnieniu": 2.59
+        },
+        "72": {
+          "hex": "#535D74",
+          "do-tla": 5.95,
+          "nad-progiem-grafiki": true,
+          "obrys-na-wypelnieniu": 3.02,
+          "grafit-na-wypelnieniu": 1.09
+        },
+        "50": {
+          "hex": "#858B98",
+          "do-tla": 3.08,
+          "nad-progiem-grafiki": true,
+          "obrys-na-wypelnieniu": 5.83,
+          "grafit-na-wypelnieniu": 1.76
+        },
+        "30": {
+          "hex": "#B3B4B8",
+          "do-tla": 1.87,
+          "nad-progiem-grafiki": false,
+          "obrys-na-wypelnieniu": 9.62,
+          "grafit-na-wypelnieniu": 2.91
+        }
+      },
+      "rubin-gleboki": {
+        "100": {
+          "hex": "#541319",
+          "do-tla": 12.77,
+          "nad-progiem-grafiki": true,
+          "obrys-na-wypelnieniu": 1.41,
+          "grafit-na-wypelnieniu": 2.35
+        },
+        "72": {
+          "hex": "#825253",
+          "do-tla": 5.78,
+          "nad-progiem-grafiki": true,
+          "obrys-na-wypelnieniu": 3.11,
+          "grafit-na-wypelnieniu": 1.06
+        },
+        "50": {
+          "hex": "#A68381",
+          "do-tla": 3.06,
+          "nad-progiem-grafiki": true,
+          "obrys-na-wypelnieniu": 5.87,
+          "grafit-na-wypelnieniu": 1.77
+        },
+        "30": {
+          "hex": "#C6B0AB",
+          "do-tla": 1.86,
+          "nad-progiem-grafiki": false,
+          "obrys-na-wypelnieniu": 9.68,
+          "grafit-na-wypelnieniu": 2.93
+        }
+      },
+      "zielen-butelkowa": {
+        "100": {
+          "hex": "#0B3627",
+          "do-tla": 12.06,
+          "nad-progiem-grafiki": true,
+          "obrys-na-wypelnieniu": 1.49,
+          "grafit-na-wypelnieniu": 2.22
+        },
+        "72": {
+          "hex": "#4D6B5D",
+          "do-tla": 5.3,
+          "nad-progiem-grafiki": true,
+          "obrys-na-wypelnieniu": 3.4,
+          "grafit-na-wypelnieniu": 1.03
+        },
+        "50": {
+          "hex": "#819588",
+          "do-tla": 2.88,
+          "nad-progiem-grafiki": false,
+          "obrys-na-wypelnieniu": 6.25,
+          "grafit-na-wypelnieniu": 1.89
+        },
+        "30": {
+          "hex": "#B0BAAF",
+          "do-tla": 1.81,
+          "nad-progiem-grafiki": false,
+          "obrys-na-wypelnieniu": 9.96,
+          "grafit-na-wypelnieniu": 3.01
+        }
+      },
+      "bursztyn-wyciszony": {
+        "100": {
+          "hex": "#9B5E30",
+          "do-tla": 4.69,
+          "nad-progiem-grafiki": true,
+          "obrys-na-wypelnieniu": 3.83,
+          "grafit-na-wypelnieniu": 1.16
+        },
+        "72": {
+          "hex": "#B58864",
+          "do-tla": 2.84,
+          "nad-progiem-grafiki": false,
+          "obrys-na-wypelnieniu": 6.33,
+          "grafit-na-wypelnieniu": 1.91
+        },
+        "50": {
+          "hex": "#C9A98D",
+          "do-tla": 1.99,
+          "nad-progiem-grafiki": false,
+          "obrys-na-wypelnieniu": 9.06,
+          "grafit-na-wypelnieniu": 2.74
+        },
+        "30": {
+          "hex": "#DBC6B2",
+          "do-tla": 1.49,
+          "nad-progiem-grafiki": false,
+          "obrys-na-wypelnieniu": 12.09,
+          "grafit-na-wypelnieniu": 3.65
+        }
+      }
+    },
+    "wyjatek-wykres-liniowy": {
+      "serii-najwyzej": 3,
+      "krycia": [
+        1.0,
+        0.72,
+        0.5
+      ],
+      "grubosc-linii-mm": 0.5,
+      "powod": "linia nie ma wypełnienia, więc obrys nie ma czego obrysować; stopień 30 % zostaje ze swoim kontrastem do tła pod progiem"
+    }
+  },
   "pary-nieuzywane": [
     [
       "szafir-nocny",

@@ -98,6 +98,7 @@ poniżej progu 3:1 z WCAG 1.4.11. Tytuł wykresu mówi to wprost.
 | Brak Manrope u odbiorcy | Excel podstawi krój systemowy i cała skala się przesunie. Excel nie zna listy zastępczej jak CSS, więc nie da się tego zabezpieczyć w pliku |
 | Wagi Manrope | Excel zna tylko regular i bold, tak samo jak Word; wagi 500 i 600 ze skali nie są dostępne |
 | `openpyxl` i kanał alfa | przy podaniu sześciu znaków hex openpyxl dopisuje alfę `00`, czyli pełną przezroczystość. Generator prefiksuje wszystkie barwy funkcją `A()` na `FF` |
+| Motyw Office w pliku | plik niesie domyślny motyw pakietu (`4F81BD`, `C0504D`, `9BBB59`, `8064A2`, `4BACC6`, `F79646`). To rusztowanie openpyxl, nie wybór projektowy, ale „kolory motywu" w interfejsie Excela pokażą tę szóstkę, nie paletę IRIN |
 | Format liczb | `#,##0.00` renderuje się według ustawień regionalnych odbiorcy; na polskim Excelu daje `1 585,50`, na angielskim `1,585.50`. Wartość w pliku jest jedna, wygląd zależy od maszyny |
 | Szerokość kolumn | Excel liczy ją w znakach domyślnego kroju, nie w milimetrach, więc siatka 25 mm nie przenosi się na arkusz i nie jest tu odwzorowana |
 | Ochrona komórek | ustawiona (`locked`), ale **arkusz nie jest chroniony hasłem** - blokada zadziała po włączeniu ochrony arkusza w Excelu |

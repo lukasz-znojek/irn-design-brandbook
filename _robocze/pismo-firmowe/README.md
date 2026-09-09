@@ -231,3 +231,8 @@ Zapisane, żeby następna sesja nie powtarzała pomiarów:
    Pełne 170 mm przy 10 pt daje wiersz około 96 znaków, czyli powyżej zakresu czytelności
    45-75; 112 mm daje około 64 znaki. Zmiana to jedna linia w `buduj-pismo.js`
    (`KORPUS_SZER = KOL(4)` na `KOL(6)`), po niej trzeba powtórzyć pomiar zapasu strony.
+
+## Motyw pakietu w pliku
+
+| Motyw Worda w pliku | plik niesie domyślny motyw pakietu: błękity nagłówków `2E74B5` i `1F4D78` oraz hiperłącze `0563C1`. To rusztowanie biblioteki, nie wybór projektowy, ale kto sięgnie po wbudowany styl „Nagłówek 1" zamiast po styl `irinTemat`, wyjdzie z palety bez ostrzeżenia. Ośmiu stylów `irin*` to nie dotyczy |
+

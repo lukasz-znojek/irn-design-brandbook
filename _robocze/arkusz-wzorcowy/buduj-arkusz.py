@@ -264,7 +264,7 @@ for i, k in enumerate(('100','72','50','30')):
     c.fill = tlo(ST[k]['hex'].lstrip('#')); c.alignment = Alignment(horizontal='center')
     lg.cell(row=rr, column=4, value=f"{ST[k]['do-tla']:.2f}:1".replace('.', ',')).font = f(PT_META, GRAFIT, mono=True)
     lg.cell(row=rr, column=5,
-            value=('nad progiem 3:1 dla grafiki' if ST[k]['nad-progiem-3']
+            value=('nad progiem 3:1 dla grafiki' if ST[k]['nad-progiem-grafiki']
                    else 'PONIŻEJ 3:1 - granicę niesie obrys Atramentem i podpis serii')
             ).font = f(PT_META, GRAFIT)
 

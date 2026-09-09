@@ -64,6 +64,13 @@ def main():
     liczby |= {f"{k:.2f}".replace(".", ",")
                for wiersz in d["macierz-na-tlach-nosnych"].values()
                for k in wiersz.values() if k is not None}
+    # stopnie serii wykresu: hexy komponowane z tłem i ich dwa kontrasty
+    for seria in d.get("stopnie-serii-wykresu", {}).get("serie", {}).values():
+        for st in seria.values():
+            hexy.add(st["hex"].upper())
+            liczby |= {f"{st['do-tla']:.2f}".replace(".", ","),
+                       f"{st['obrys-na-wypelnieniu']:.2f}".replace(".", ","),
+                       f"{st['grafit-na-wypelnieniu']:.2f}".replace(".", ",")}
 
     bledy, sprawdzonych = [], 0
     for p in pliki():

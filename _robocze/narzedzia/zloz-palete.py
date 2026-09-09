@@ -109,6 +109,7 @@ DOPUSZCZONE = [
     ("zloto-antyczne", "kosc-sloniowa", "tekst", "podpowiedzi, metadane"),
     ("bursztyn-wyciszony", "kosc-sloniowa", "tekst", "jedyne dopuszczone tło Bursztynu"),
     ("grafit-jedwabny", "kosc-sloniowa", "grafika", "linia struktury od 0,25 mm"),
+    ("lapis-stonowany", "muszla-rozana", "tekst", "odnośnik w cytacie albo wyróżnieniu"),
 ]
 
 # Pary zabronione. Każda z zamiennikiem. Wiersz Lapisu to R12 z POMIAR.md -
@@ -126,6 +127,16 @@ ZABRONIONE = [
      "na ciemnym wchodzi Złoto Szampańskie"),
     ("grafit-jedwabny", "aksamit-nocy", "tekst",
      "tekst drugi na ciemnym: Alabaster"),
+    # Muszla Różana i Alabaster pełnią rolę tła (cytaty, wyróżnienia, karty),
+    # a nie były sprawdzane wobec trzech barw tekstu drugiego. Dopisane 2026-09-09.
+    ("grafit-jedwabny", "muszla-rozana", "tekst",
+     "w cytacie tekst drugi idzie Atramentem albo Lapisem Stonowanym"),
+    ("zloto-antyczne", "muszla-rozana", "tekst",
+     "w cytacie metadane idą Atramentem albo Lapisem Stonowanym"),
+    ("bursztyn-wyciszony", "muszla-rozana", "tekst",
+     "Bursztyn ma jedno dopuszczone tło: Kość Słoniowa"),
+    ("zloto-antyczne", "alabaster", "tekst",
+     "na karcie metadane idą Grafitem Jedwabnym"),
 ]
 
 # Pary pod progiem 3, które nigdy nie wchodzą do składu, bo nikt by ich nie
@@ -211,7 +222,41 @@ def zloz():
     for n in tinty:
         dopuszczone.append(para("atrament", f"tint-{n}", "tekst",
                                 f"karta i pas tabeli na tincie {NAZWY_TINTOW[n]} 12 %"))
+        dopuszczone.append(para("lapis-stonowany", f"tint-{n}", "tekst",
+                                f"odnośnik na karcie na tincie {NAZWY_TINTOW[n]} 12 %"))
+        dopuszczone.append(para("szafir-nocny", f"tint-{n}", "tekst",
+                                f"nagłówek karty na tincie {NAZWY_TINTOW[n]} 12 %"))
     zabronione = [para(a, b, r, "para zabroniona", z) for a, b, r, z in ZABRONIONE]
+    # Tint jest tłem karty i pasa tabeli, więc trzy barwy tekstu drugiego muszą
+    # mieć wobec niego wiersz. Wszystkie trzy są pod progiem 4,5. Dopisane 2026-09-09.
+    for n in tinty:
+        zabronione.append(para("grafit-jedwabny", f"tint-{n}", "tekst", "para zabroniona",
+                               "na tincie tekst drugi idzie Atramentem albo Lapisem Stonowanym"))
+        zabronione.append(para("zloto-antyczne", f"tint-{n}", "tekst", "para zabroniona",
+                               "na tincie metadane idą Atramentem albo Lapisem Stonowanym"))
+        zabronione.append(para("bursztyn-wyciszony", f"tint-{n}", "tekst", "para zabroniona",
+                               "Bursztyn ma jedno dopuszczone tło: Kość Słoniowa"))
+
+    # Stopnie serii wykresu: jedna barwa, cztery krycia, komponowane z tłem,
+    # bo wypełnienie w arkuszu i w druku jest kryjące. Dopisane 2026-09-09,
+    # bo arkusz z pięcioma wykresami leżał w repozytorium bez reguły w warstwie 1.
+    KRYCIA_SERII = [1.0, 0.72, 0.50, 0.30]
+    TLO_SERII = "kosc-sloniowa"
+    OBRYS_SERII = "atrament"
+    serie = {}
+    for k in ("szafir-nocny", "rubin-gleboki", "zielen-butelkowa", "bursztyn-wyciszony"):
+        stopnie = {}
+        for kr in KRYCIA_SERII:
+            h = mieszaj(hexy[k], hexy[TLO_SERII], kr)
+            do_tla = kontrast(h, hexy[TLO_SERII])
+            stopnie[f"{int(kr * 100)}"] = {
+                "hex": h,
+                "do-tla": do_tla,
+                "nad-progiem-grafiki": do_tla >= 3.0,
+                "obrys-na-wypelnieniu": kontrast(hexy[OBRYS_SERII], h),
+                "grafit-na-wypelnieniu": kontrast(hexy["grafit-jedwabny"], h),
+            }
+        serie[k] = stopnie
 
     # macierz pełna: 14 barw x 3 tła nośne, do wglądu
     macierz = {}
@@ -348,6 +393,20 @@ def zloz():
         },
         "kontrasty-dopuszczone": dopuszczone,
         "kontrasty-zabronione": zabronione,
+        "stopnie-serii-wykresu": {
+            "tlo-kompozycji": TLO_SERII,
+            "krycia": KRYCIA_SERII,
+            "obrys": {"barwa": OBRYS_SERII, "grubosc-mm": 0.25},
+            "prog-grafiki": 3.0,
+            "serie": serie,
+            "wyjatek-wykres-liniowy": {
+                "serii-najwyzej": 3,
+                "krycia": [1.0, 0.72, 0.50],
+                "grubosc-linii-mm": 0.5,
+                "powod": "linia nie ma wypełnienia, więc obrys nie ma czego obrysować; "
+                         "stopień 30 % zostaje ze swoim kontrastem do tła pod progiem",
+            },
+        },
         "pary-nieuzywane": [list(p) for p in NIEUZYWANE],
         "pary-nieuzywane-uzasadnienie":
             "Pary pod progiem 3, które nie wchodzą do składu, bo są barwą ciemną na ciemnym "
@@ -472,10 +531,19 @@ def zloz_css(d):
           "", "  /* --- limit akcentu: " + d["regula-proporcji"]["limit-akcentu"]["rachunek"] + " --- */",
           f"  --irin-r-limit-zlota-cm2: {d['regula-proporcji']['limit-akcentu']['limit-cm2']};",
           "}", ""]
+    def nazwa_barwy(klucz):
+        # tło bywa tintem, a tinty nie mieszkają w "barwy"
+        if klucz in d["barwy"]:
+            return d["barwy"][klucz]["nazwa"]
+        if klucz.startswith("tint-") and klucz[5:] in d["tinty"]:
+            t = d["tinty"][klucz[5:]]
+            return f"tint {t.get('nazwa') or d['barwy'][t['podstawa']]['nazwa']} 12 %"
+        raise KeyError(f"nieznana barwa w parze zabronionej: {klucz}")
+
     L += ["/* PARY ZABRONIONE, każda z liczbą i zamiennikiem:"]
     for w in d["kontrasty-zabronione"]:
-        L.append(f" *   {d['barwy'][w['tekst']]['nazwa']} na "
-                 f"{d['barwy'][w['tlo']]['nazwa']}: {pl(w['kontrast'])} -> {w['zamiast']}")
+        L.append(f" *   {nazwa_barwy(w['tekst'])} na "
+                 f"{nazwa_barwy(w['tlo'])}: {pl(w['kontrast'])} -> {w['zamiast']}")
     L += [" */", ""]
     return "\n".join(L)
 
