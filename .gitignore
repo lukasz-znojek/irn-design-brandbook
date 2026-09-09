@@ -30,3 +30,7 @@ TestResults.xml
 
 # macOS
 .DS_Store
+
+# Cache interpretera Python - narzędzia w _robocze/narzedzia/
+__pycache__/
+*.pyc
