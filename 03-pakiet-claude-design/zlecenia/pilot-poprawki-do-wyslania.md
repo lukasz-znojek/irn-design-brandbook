@@ -19,7 +19,7 @@ od zatwierdzonych specyfikacji, z podaniem czym każda została zmierzona.
 przekładem tamtego na tekst bez ścieżek; po każdej zmianie tam trzeba go przełożyć od nowa.
 
 **Czego ta tura nie robi.** Nie rozstrzyga przebarwienia znaku filtrem CSS - właściciel odłożył tę
-decyzję do obejrzenia całości pracy. Nie zmienia sygnetu na rewersie: 22 mm to jego polecenie.
+decyzję do obejrzenia całości pracy. Nie zmienia rewersu wizytówki ponad to, co niżej: rewers to `logo_irin_poziom.svg` 50 mm na Aksamicie Nocy, a sygnet 10 mm stoi wyłącznie na awersie, w bloku koloru dziedziny 22 mm.
 Nie zamawia nowych artboardów.
 
 ## Jak tego użyć
