@@ -65,3 +65,5 @@ Pod tabelą jedno zdanie liczbami dla segmentu głównego: ile osób, ile dni za
 ## Elementy wizualne
 
 Elementy wizualne i formatowanie należy stosować zgodnie z aktualnym brandbookiem IRIN.
+
+Rozstrzygnięcie 2026-09-11 dla slajdu tytułowego: `logo_irin_poziom.svg` w prawym górnym rogu, szerokość 140 px = 7,3 % kanwy 1920, w wersji odwróconej (Kość Słoniowa na Aksamicie Nocy), z zachowaniem przestrzeni ochronnej x = 21,09 % × 140 px = 29,53 px z każdej strony.
