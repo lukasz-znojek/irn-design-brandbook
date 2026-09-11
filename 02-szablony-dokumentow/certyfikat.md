@@ -31,7 +31,7 @@ Dostawca ma też obowiązek wystawić korektę zaświadczenia w ciągu 7 dni od 
 
 Układ graficzny, typografia, kolorystyka w ramach palety IRIN, sposób wyeksponowania pieczęci/panelu metryk, format papieru — rozstrzyga się w Claude Design.
 
-Rozstrzygnięcie 2026-09-11: znak jako `logo_irin_poziom.svg` 26 mm w prawym górnym rogu nagłówka; funkcję centralnego sygnetu przejmuje komponent Pieczęć (okrąg 38 mm w prawym dolnym rogu) z kodem BUR i liczbą godzin - nie sygnet samodzielny.
+Rozstrzygnięcie 2026-09-11: znak jako `logo_irin_poziom.svg` 26 mm w prawym górnym rogu nagłówka; funkcję centralnego sygnetu przejmuje komponent Pieczęć (okrąg 38 mm w prawym dolnym rogu) z tekstem obwodowym INSTYTUT ROZWOJU I NAUKI / ZAŚWIADCZENIE · KIELCE; kod BUR i liczba godzin stoją w osobnej siatce danych na tincie, nie w pieczęci - nie sygnet samodzielny.
 
 ## Dane wejściowe wymagane przed przekazaniem do Claude Design
 
