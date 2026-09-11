@@ -196,10 +196,7 @@ od zera. Numer rozdziału podaję, żebyś nie szukał.
 | `templates/podpis-mailowy/` | Podpis mailowy | 15 | 1 |
 | `templates/favicon/` | Favicon i awatar, komplet 16 / 32 / 180 / 512 px | 23 | 1 komplet |
 
-**Sygnet na rewersie wizytówki: podnieś do 30 mm.** Zmierzone: mieści się na 85 × 55 mm z zapasem -
-po 27,5 mm marginesu bocznego, przy przestrzeni ochronnej x = 11,24 mm. Dotychczasowe 22 mm było
-wartością bez uzasadnienia, a właściciel prosił o powiększenie dwa razy. Podaj zmierzoną szerokość
-przy oddaniu.
+**Rewers: `logo_irin_poziom.svg` w szerokości 24 mm, wyśrodkowany na Kości Słoniowej, blok tekstowy nadawcy pod znakiem. Wycofano polecenia sygnetu (22 mm i 30 mm) - poziomy wariant utrzymuje regułę jednorazowego użycia sygnetu na karcie (awers, blok koloru dziedziny).**
 
 **Favicon 16 i 32 px jest falsyfikatorem minimum sygnetu 10 mm / 44 px.** Napisz wprost, co
 w sygnecie przestaje się czytać poniżej 44 px, i czy komplet wymaga uproszczonego rysunku znaku.

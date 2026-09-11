@@ -54,7 +54,7 @@ Skopiuj `../prompt-bazowy.md` w całości i zastąp jego ostatnią sekcję „Zl
 
 **Kolor wiodący:** Aksamit w roli `primary`, zgodnie z tabelą w `paleta-barw.md`. Papier firmowy jest dokumentem całej firmy, nie jednej dziedziny; nie sygnalizuj żadnej z trzech dziedzin. Jeżeli w trakcie pracy uznasz, że dokument bez koloru dziedzinowego wypada niejednoznacznie wobec reguły 80/15/5, zapisz to jako uwagę do foundera, nie wybieraj dziedziny samodzielnie.
 
-**Znak:** na papierze wariant poziomy `logo_irin_poziom.svg`; na wizytówce wariant do Twojego wyboru między poziomym a pionowym na awersie, a na rewersie sygnet `logo_irin_sygnet.svg` samodzielnie, w szerokości ustalonej z właścicielem (na kanwie z 2026-09-03 stoi w 22 mm z jego polecenia). Zmierz i zapisz, w jakiej szerokości sygnet stoi na rewersie; to potrzebne do protokołu pomiaru.
+**Znak:** na papierze wariant poziomy `logo_irin_poziom.svg`; na wizytówce wariant do Twojego wyboru między poziomym a pionowym na awersie. Rewers: `logo_irin_poziom.svg` w szerokości 24 mm, wyśrodkowany na Kości Słoniowej, blok tekstowy nadawcy pod znakiem. Wycofano polecenia sygnetu (22 mm i 30 mm) - poziomy wariant utrzymuje regułę jednorazowego użycia sygnetu na karcie (awers, blok koloru dziedziny).
 
 **Siatkę wolno Ci dopracować - ale jako propozycję obok, nie po cichu w dokumencie.** Wartości
 z `/01-baza-wiedzy/identyfikacja/siatka-a4.md` są zatwierdzone i artboard główny trzyma je bez zmian: A4 pion, sześć kolumn,
