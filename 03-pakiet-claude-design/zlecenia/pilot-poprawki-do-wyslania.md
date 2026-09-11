@@ -157,7 +157,7 @@ Twoja lista jest wejściem do tej decyzji.
 
 ### Czego nie zmieniamy w tej turze
 
-- **Rewers: `logo_irin_poziom.svg` w szerokości 24 mm, wyśrodkowany na Kości Słoniowej, blok tekstowy nadawcy pod znakiem. Wycofano polecenia sygnetu (22 mm i 30 mm) - poziomy wariant utrzymuje regułę jednorazowego użycia sygnetu na karcie (awers, blok koloru dziedziny).**
+- **Rewers: `logo_irin_poziom.svg` w szerokości 50 mm, wyśrodkowany w obu osiach na tle Aksamit Nocy (`--irin-r-aksamit-nocy` `#1B1A17`), znak w Kości Słoniowej przez `currentColor`; bloku tekstowego nadawcy na rewersie nie ma. Wycofano polecenia sygnetu (22 mm i 30 mm) - poziomy wariant utrzymuje regułę jednorazowego użycia sygnetu na karcie (awers: sygnet 10 mm w bloku koloru dziedziny 22 mm, karta 85 × 55 mm).**
 - **Marginesy strony:** 18 mm góra, 20 mm lewy, 20 mm prawy, 28 mm dół. Zatwierdzone.
 - **Sześć kolumn, moduł 25 mm, gutter 4 mm, format A4 pion.** Poza dyskusją.
 - **Kolor wiodący Aksamit, bez sygnału dziedziny.** Papier firmowy jest dokumentem całej firmy.
