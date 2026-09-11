@@ -196,7 +196,7 @@ od zera. Numer rozdziału podaję, żebyś nie szukał.
 | `templates/podpis-mailowy/` | Podpis mailowy | 15 | 1 |
 | `templates/favicon/` | Favicon i awatar, komplet 16 / 32 / 180 / 512 px | 23 | 1 komplet |
 
-**Rewers: `logo_irin_poziom.svg` w szerokości 50 mm, wyśrodkowany w obu osiach na tle Aksamit Nocy (`--irin-r-aksamit-nocy` `#1B1A17`), znak w Kości Słoniowej przez `currentColor`; bloku tekstowego nadawcy na rewersie nie ma. Wycofano polecenia sygnetu (22 mm i 30 mm) - poziomy wariant utrzymuje regułę jednorazowego użycia sygnetu na karcie (awers: sygnet 10 mm w bloku koloru dziedziny 22 mm, karta 85 × 55 mm).**
+**Rewers: `logo_irin_poziom.svg` w szerokości 50 mm mierzonej po obwiedni znaku widocznego (komponent Logotyp przycina `viewBox` do obwiedni, pole ochronne wypada) - powyżej minimum 18 mm w druku, wyśrodkowany w obu osiach na tle Aksamit Nocy (`--irin-r-aksamit-nocy` `#1B1A17`), znak w Kości Słoniowej przez `currentColor`; bloku tekstowego nadawcy na rewersie nie ma. Wycofano polecenia sygnetu (22 mm i 30 mm) - poziomy wariant utrzymuje regułę jednorazowego użycia sygnetu na karcie (awers: sygnet 10 mm w bloku koloru dziedziny 22 mm, karta 85 × 55 mm).**
 
 **Favicon 16 i 32 px jest falsyfikatorem minimum sygnetu 10 mm / 44 px.** Napisz wprost, co
 w sygnecie przestaje się czytać poniżej 44 px, i czy komplet wymaga uproszczonego rysunku znaku.

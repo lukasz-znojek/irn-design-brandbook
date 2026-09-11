@@ -26,7 +26,7 @@ Obie pozycje niżej mają status **otwarte do pierwszego zlecenia viewbooka**: t
 
 Format (drukowany / PDF / oba), liczba stron, układ okładki, sposób prezentacji poszczególnych szkoleń w środku (siatka, lista, karty), typografia i kolorystyka w ramach specyfikacji z `/01-baza-wiedzy/identyfikacja/` (zasady użycia: `/03-pakiet-claude-design/format-paczki.md`) — wszystko to rozstrzyga się w Claude Design, nie w tym pliku.
 
-Rozstrzygnięcie 2026-09-11: okładka jako pojedyncza strona A4 z `.irin-display` w dolnej trzeciej i `logo_irin_poziom.svg` 26 mm w prawym górnym rogu; wersja rozkładówki otwierającej rozważona i odrzucona ze względu na 9-stronicową paginację bez siodła centralnego.
+Rozstrzygnięcie 2026-09-11: okładka jako pojedyncza strona A4 z `.irin-display` w dolnej trzeciej i `logo_irin_poziom.svg` 26 mm mierzone po obwiedni znaku widocznego (komponent Logotyp przycina `viewBox` do obwiedni, pole ochronne wypada) - powyżej minimum 18 mm w druku, w prawym górnym rogu; wersja rozkładówki otwierającej rozważona i odrzucona ze względu na 9-stronicową paginację bez siodła centralnego.
 
 ## Treść merytoryczna do zebrania przed przekazaniem do Claude Design
 
