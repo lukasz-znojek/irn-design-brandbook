@@ -66,4 +66,4 @@ Pod tabelą jedno zdanie liczbami dla segmentu głównego: ile osób, ile dni za
 
 Elementy wizualne i formatowanie należy stosować zgodnie z aktualnym brandbookiem IRIN.
 
-Rozstrzygnięcie 2026-09-11 dla slajdu tytułowego **[WYBÓR]**: `logo_irin_poziom.svg` w prawym górnym rogu, szerokość 140 px = 7,3 % kanwy 1920 mierzona po obwiedni znaku widocznego (komponent Logotyp przycina `viewBox` do obwiedni, pole ochronne wypada) - powyżej minimum 90 px na ekranie, w wersji odwróconej (Kość Słoniowa na Aksamicie Nocy), pozycja absolutna top 48 px, right 96 px przy szerokości 140 px - oba odstępy przekraczają minimum przestrzeni ochronnej 29,53 px.
+Rozstrzygnięcie 2026-09-11 dla slajdu tytułowego **[WYBÓR]**: znak w wersji odwróconej, Kość Słoniowa na Aksamicie Nocy. Wymiary i pozycje rozstrzyga warstwa 3.
