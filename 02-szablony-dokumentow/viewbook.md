@@ -26,6 +26,8 @@ Obie pozycje niżej mają status **otwarte do pierwszego zlecenia viewbooka**: t
 
 Format (drukowany / PDF / oba), liczba stron, układ okładki, sposób prezentacji poszczególnych szkoleń w środku (siatka, lista, karty), typografia i kolorystyka w ramach specyfikacji z `/01-baza-wiedzy/identyfikacja/` (zasady użycia: `/03-pakiet-claude-design/format-paczki.md`) — wszystko to rozstrzyga się w Claude Design, nie w tym pliku.
 
+Rozstrzygnięcie 2026-09-11: okładka jako pojedyncza strona, nie rozkładówka otwierająca - wersja rozkładówki rozważona i odrzucona, bo paginacja tego wydania nie ma siodła centralnego. Wymiary i pozycje rozstrzyga warstwa 3.
+
 ## Treść merytoryczna do zebrania przed przekazaniem do Claude Design
 
 - Lista szkoleń/dziedzin do zaprezentowania w danej edycji (dane wejściowe od foundera — nie ma ich w tym repozytorium).

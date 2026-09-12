@@ -19,7 +19,7 @@ od zatwierdzonych specyfikacji, z podaniem czym każda została zmierzona.
 przekładem tamtego na tekst bez ścieżek; po każdej zmianie tam trzeba go przełożyć od nowa.
 
 **Czego ta tura nie robi.** Nie rozstrzyga przebarwienia znaku filtrem CSS - właściciel odłożył tę
-decyzję do obejrzenia całości pracy. Nie zmienia sygnetu na rewersie: 22 mm to jego polecenie.
+decyzję do obejrzenia całości pracy. Nie zmienia rewersu wizytówki ponad to, co niżej: rewers to `logo_irin_poziom.svg` 50 mm na Aksamicie Nocy, a sygnet 10 mm stoi wyłącznie na awersie, w bloku koloru dziedziny 22 mm.
 Nie zamawia nowych artboardów.
 
 ## Jak tego użyć
@@ -157,7 +157,7 @@ Twoja lista jest wejściem do tej decyzji.
 
 ### Czego nie zmieniamy w tej turze
 
-- **Sygnet na rewersie zostaje w 22 mm.** To polecenie właściciela, nie odstępstwo.
+- **Rewers: `logo_irin_poziom.svg` w szerokości 50 mm mierzonej po obwiedni znaku widocznego (komponent Logotyp przycina `viewBox` do obwiedni, pole ochronne wypada) - powyżej minimum 18 mm w druku, wyśrodkowany w obu osiach na tle Aksamit Nocy (`--irin-r-aksamit-nocy` `#1B1A17`), znak w Kości Słoniowej przez `currentColor`; bloku tekstowego nadawcy na rewersie nie ma. Wycofano polecenia sygnetu (22 mm i 30 mm) - poziomy wariant utrzymuje regułę jednorazowego użycia sygnetu na karcie (awers: sygnet 10 mm w bloku koloru dziedziny 22 mm, karta 85 × 55 mm).**
 - **Marginesy strony:** 18 mm góra, 20 mm lewy, 20 mm prawy, 28 mm dół. Zatwierdzone.
 - **Sześć kolumn, moduł 25 mm, gutter 4 mm, format A4 pion.** Poza dyskusją.
 - **Kolor wiodący Aksamit, bez sygnału dziedziny.** Papier firmowy jest dokumentem całej firmy.

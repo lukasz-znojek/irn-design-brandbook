@@ -214,12 +214,29 @@ certyfikat, potwierdzenie, podziękowanie.
 dystrybucji, a tej reguły jeszcze nie ma. Kryterium będzie pomiarem: czy numer i kod zostają
 czytelne po kopii mono.
 
+**Rozstrzygnięcie 2026-09-11 dla certyfikatu, zmierzone w kodzie projektu**
+(`templates/certyfikat/Certyfikat.dc.html`): Logotyp wariant poziom, `width` **26 mm** mierzone
+po obwiedni znaku widocznego (komponent przycina `viewBox` do obwiedni, pole ochronne wypada),
+w **prawym górnym rogu nagłówka**; komponent Pieczęć `srednicaMm="38"` w **prawym dolnym rogu**,
+`gornyTekst="INSTYTUT ROZWOJU I NAUKI"`, `dolnyTekst="ZAŚWIADCZENIE · KIELCE"`. Kod BUR i liczba
+godzin stoją w osobnej siatce danych na tincie, **nie w pieczęci**. **Wymiary i pozycje** przeniesione z
+`02-szablony-dokumentow/certyfikat.md`, bo warstwa 2 nie niesie układu graficznego; samo
+rozstrzygnięcie merytoryczne zostaje w karcie.
+
 **3. Tabela danych regulowanych.** Dla: harmonogram, ramowy program, lista efektów uczenia się,
 cennik. Strefy: nagłówek tabeli, wiersze danych, wiersz sumy wyróżniony, przypis pod tabelą.
 Pokaż tabelę na tyle długą, żeby było widać, co się dzieje przy przejściu na drugą stronę.
 
 **4. Okładka.** Dla: viewbook, program, raport, oferta. Strefy: display, kicker, oznaczenie edycji
 `[EDYCJA RRRR/RRRR]`, znak, jedno pole na obraz albo płaską plamę koloru.
+
+**Rozstrzygnięcie 2026-09-11 dla okładki viewbooka, zmierzone w kodzie projektu:** okładka to
+**strona 1 z 9 stron A4**; Logotyp wariant poziom **26 mm** mierzone po obwiedni znaku widocznego,
+w **prawym górnym rogu**; `.irin-display` dociśnięty do dołu strony przez
+`justify-content: flex-end` i `padding-bottom: 36mm`. Wersja rozkładówki otwierającej rozważona
+i odrzucona - paginacja dziewięciu stron nie ma siodła centralnego. **Wymiary i pozycje** przeniesione z
+`02-szablony-dokumentow/viewbook.md`, bo warstwa 2 nie niesie układu graficznego; samo
+rozstrzygnięcie merytoryczne zostaje w karcie.
 
 **5. Rozkładówka katalogowa.** Dla: katalog usług, lista szkoleń. Siatka kart na sześciu kolumnach -
 pokaż co najmniej sześć kart, żeby było widać rytm i to, co się dzieje z kartą o dłuższym tytule.
@@ -498,6 +515,14 @@ co do jednostki. Pierwszy artboard tury niech będzie **propozycją siatki slajd
 wypisanym.
 
 Warianty slajdu do przygotowania, każdy jako osobny slajd:
+
+**Rozstrzygnięcie 2026-09-11 dla slajdu tytułowego, zmierzone w kodzie projektu**
+(`templates/prezentacja-sprzedazowa/PrezentacjaSprzedazowa.dc.html`): Logotyp wariant poziom
+`width: 140px`, pozycja absolutna `top: 48px`, `right: 96px`; slajd stoi w klasie `odwrocony` -
+tło `--irin-r-surface-dark` = `--irin-r-aksamit-nocy` `#1B1A17`, znak `--irin-r-text-invert`
+= `--irin-r-kosc-sloniowa` `#E6E1D6`. **Wymiary i pozycje** przeniesione z
+`02-szablony-dokumentow/prezentacja-sprzedazowa.md`, bo warstwa 2 nie niesie układu graficznego; samo
+rozstrzygnięcie merytoryczne zostaje w karcie.
 
 1. tytułowy
 2. tytułowy w wersji roboczej, z oznaczeniem `SZKIC - KONSULTACJA WEWNĘTRZNA`

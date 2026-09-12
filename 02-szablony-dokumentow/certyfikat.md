@@ -31,6 +31,8 @@ Dostawca ma też obowiązek wystawić korektę zaświadczenia w ciągu 7 dni od 
 
 Układ graficzny, typografia, kolorystyka w ramach palety IRIN, sposób wyeksponowania pieczęci/panelu metryk, format papieru — rozstrzyga się w Claude Design.
 
+Rozstrzygnięcie 2026-09-11: funkcję centralnego sygnetu przejmuje komponent Pieczęć z tekstem obwodowym INSTYTUT ROZWOJU I NAUKI / ZAŚWIADCZENIE · KIELCE, nie sygnet samodzielny; kod BUR i liczba godzin stoją w osobnej siatce danych. Wymiary i pozycje rozstrzyga warstwa 3.
+
 ## Dane wejściowe wymagane przed przekazaniem do Claude Design
 
 Dla konkretnego zaświadczenia: dane uczestnika, nazwa i zakres szkolenia, liczba godzin, data i miejsce, kod usługi BUR (jeśli dotyczy), efekty uczenia się, dane osoby podpisującej w imieniu IRIN. Którą z dwóch wersji wdrożeniowych użyć: rozstrzygnięcie foundera przy pierwszym zleceniu, jak wyżej.

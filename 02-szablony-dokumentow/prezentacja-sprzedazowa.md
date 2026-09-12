@@ -65,3 +65,5 @@ Pod tabelą jedno zdanie liczbami dla segmentu głównego: ile osób, ile dni za
 ## Elementy wizualne
 
 Elementy wizualne i formatowanie należy stosować zgodnie z aktualnym brandbookiem IRIN.
+
+Rozstrzygnięcie 2026-09-11 dla slajdu tytułowego **[WYBÓR]**: znak w wersji odwróconej, Kość Słoniowa na Aksamicie Nocy. Wymiary i pozycje rozstrzyga warstwa 3.
